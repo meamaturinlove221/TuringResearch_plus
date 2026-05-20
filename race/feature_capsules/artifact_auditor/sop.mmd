@@ -1,0 +1,10 @@
+flowchart TD
+  A[Receive explicit bundle or fixture path] --> B[Resolve read-only path]
+  B --> C[Scan manifest and sidecars]
+  C --> D[Compute sha256 metadata]
+  D --> E[Check zip/json/csv/png/npz presence]
+  E --> F[Build board inventory]
+  F --> G[Detect missing or inconsistent items]
+  G --> H[Emit ArtifactAuditReport]
+  H --> I[Do not write into VGGT project]
+

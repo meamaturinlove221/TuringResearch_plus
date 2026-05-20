@@ -1,0 +1,35 @@
+feature_name: pdf_phase_b_figure_table_extraction
+project: TulingResearch Plus
+status: capsule_draft
+release_target: v0.2.0_sprint_1
+implementation_status: skeleton_only
+source_inputs:
+  - docs/pdf_phase_b_plan.md
+  - docs/pdf_converter_matrix.md
+  - contracts/pdf_markdown.yaml
+proposed_command: tuling pdf extract-assets
+proposed_tools:
+  - name: pdf.extract_figures
+    status: contract_only_existing
+    input_model: PDFFigureExtractInput
+    output_model: PDFFigureExtractOutput
+  - name: pdf.extract_tables
+    status: contract_only_existing
+    input_model: PDFTableExtractInput
+    output_model: PDFTableExtractOutput
+data_models:
+  - PDFAssetExtractionReport
+  - PDFFigureAsset
+  - PDFTableAsset
+  - PDFAssetProvenance
+  - PDFExtractionWarning
+required_tests:
+  - tests/unit/test_pdf_phase_b_asset_extraction.py
+  - tests/contract/test_pdf_asset_extraction_contract.py
+network_behavior: none
+local_path_behavior: local fixture PDFs and explicit user PDF paths only
+future_sync_adapters: non_goal
+notes:
+  - OCR remains out of scope.
+  - Do not implement cross-machine sync in Sprint 1.
+

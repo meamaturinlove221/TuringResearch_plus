@@ -1,0 +1,11 @@
+flowchart TD
+  A[Read ArtifactAuditReport board inventory] --> B[Load visual sidecars]
+  B --> C{Visual inventory present?}
+  C -- no --> D[Mark readiness requires-human-review]
+  C -- yes --> E[Classify visual evidence level]
+  E --> F[Assign region labels]
+  D --> G[Build VisualEvidenceAuditReport]
+  F --> G
+  G --> H[Check no proxy-as-closeup overclaim]
+  H --> I[Emit advisor readiness summary]
+

@@ -1,0 +1,31 @@
+feature_name: visual_evidence_auditor
+project: TulingResearch Plus
+status: capsule_draft
+release_target: v0.2.0_sprint_1
+implementation_status: skeleton_only
+source_inputs:
+  - docs/vggt-smplx-visual-evidence-taxonomy.md
+  - docs/v0.2.0-sprint-1-test-plan.md
+  - examples/vggt-human-prior-survey/local_scan_missing_items.md
+proposed_command: tuling audit visual
+proposed_tool:
+  name: visual.audit_evidence
+  status: proposed_not_public_api
+  input_model: VisualEvidenceAuditInput
+  output_model: VisualEvidenceAuditReport
+data_models:
+  - VisualEvidenceAuditReport
+  - VisualEvidenceItem
+  - VisualEvidenceLevel
+  - VisualRegionLabel
+  - VisualReadinessGate
+required_tests:
+  - tests/unit/test_visual_evidence_auditor.py
+  - tests/contract/test_visual_evidence_contract.py
+network_behavior: none
+local_path_behavior: read ArtifactAuditReport outputs and explicit visual fixtures only
+future_sync_adapters: non_goal
+notes:
+  - Missing local visual inventory blocks visual readiness.
+  - Do not implement cross-machine sync in Sprint 1.
+

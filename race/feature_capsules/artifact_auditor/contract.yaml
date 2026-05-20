@@ -1,0 +1,31 @@
+feature_name: artifact_auditor
+project: TulingResearch Plus
+status: capsule_draft
+release_target: v0.2.0_sprint_1
+implementation_status: skeleton_only
+source_inputs:
+  - docs/v0.2.0-sprint-1-final-scope.md
+  - docs/v0.2.0-sprint-1-test-plan.md
+  - examples/vggt-human-prior-survey/local_scan_artifact_index.md
+proposed_command: tuling audit artifact
+proposed_tool:
+  name: artifact.audit
+  status: proposed_not_public_api
+  input_model: ArtifactAuditInput
+  output_model: ArtifactAuditReport
+data_models:
+  - ArtifactAuditReport
+  - ArtifactRecord
+  - ArtifactBundleManifest
+  - ArtifactSidecar
+  - BundleDiff
+required_tests:
+  - tests/unit/test_artifact_auditor.py
+  - tests/contract/test_artifact_audit_contract.py
+network_behavior: none
+local_path_behavior: read-only explicit paths and fixtures only
+future_sync_adapters: non_goal
+notes:
+  - Never infer VGGT success from file presence alone.
+  - Do not implement cross-machine sync in Sprint 1.
+

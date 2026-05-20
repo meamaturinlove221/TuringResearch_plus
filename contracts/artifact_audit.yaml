@@ -1,0 +1,53 @@
+name: tulingresearch.artifact_audit
+version: 0.2.0
+status: draft
+description: Capsule-local artifact audit contract for TulingResearch Plus.
+mcp_server: tulingresearch-plus
+project: TulingResearch Plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+api_status: capsule_local_not_public_mcp
+proposed_tools:
+  artifact.audit:
+    command: tuling audit artifact
+    input_model: ArtifactAuditInput
+    output_model: ArtifactAuditReport
+    implementation_status: implemented_minimal
+    public_api_status: proposed_not_frozen
+models:
+  ArtifactRecord:
+    required:
+      - path
+      - file_type
+      - included
+      - safety_flags
+  ArtifactAuditReport:
+    required:
+      - report_id
+      - source_path
+      - records
+      - included_count
+      - omitted_count
+      - warnings
+      - safety_flags
+  NPZArraySummary:
+    required:
+      - key
+      - shape
+      - dtype
+      - file_size
+      - summary_status
+rules:
+  - Artifact Auditor is read-only by default.
+  - Private or external VGGT paths must not be read in default tests.
+  - NPZ summary must not load large arrays.
+  - This contract does not add a public MCP namespace in Round 38.

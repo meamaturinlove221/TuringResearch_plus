@@ -1,0 +1,11 @@
+flowchart TD
+  A[Read Round 36 scope] --> B[Load committed scan summaries]
+  B --> C{Local evidence ledger present?}
+  C -- no --> D[Mark V120/V121 requires-human-review]
+  C -- yes --> E[Validate EvidenceRef rows]
+  D --> F[Build VGGTEvidenceLedger draft]
+  E --> F
+  F --> G[Check no promotion wording]
+  G --> H[Export markdown and json]
+  H --> I[Record missing evidence report]
+

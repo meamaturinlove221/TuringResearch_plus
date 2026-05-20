@@ -64,6 +64,22 @@ Source hygiene that does not pass forces P0/P1 candidates down to P2.
 - Race Mode implementation promotion remains gated by Source Hygiene.
 - Later versions must keep OCR, layout parsing, optional LLM, and cloud/GPU work opt-in and quality-gated.
 
+## v0.2.0 Sprint 1 Feature Capsules
+
+Round 37 creates capsule skeletons for the VGGT dogfooding Top 5. These are P0
+planning inputs, not implemented features.
+
+| Priority | Capsule | Proposed command | Proposed tool | Status | Dependency |
+| --- | --- | --- | --- | --- | --- |
+| P0 | `vggt_smplx_evidence_ledger` | `tuling vggt ledger build` | `vggt.evidence_ledger_build` | skeleton | Round 36 scope |
+| P0 | `artifact_auditor` | `tuling audit artifact` | `artifact.audit` | skeleton | Evidence Ledger |
+| P0 | `visual_evidence_auditor` | `tuling audit visual` | `visual.audit_evidence` | skeleton | Artifact Auditor |
+| P0 | `advisor_pack_builder` | `tuling advisor pack` | `advisor.pack_build` | skeleton | Evidence Ledger and auditors |
+| P0 | `pdf_phase_b_figure_table_extraction` | `tuling pdf extract-assets` | `pdf.extract_figures`, `pdf.extract_tables` | skeleton | PDF Phase B contracts |
+
+The non-PDF proposed tool namespaces are capsule-local and must not be treated
+as public API until a later contracts-first round accepts them.
+
 ## Watch Items
 
 - Provider schema and rate-limit changes for scholarly APIs.

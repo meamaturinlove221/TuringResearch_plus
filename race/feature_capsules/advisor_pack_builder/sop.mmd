@@ -1,0 +1,12 @@
+flowchart TD
+  A[Load VGGTEvidenceLedger] --> B[Load ArtifactAuditReport]
+  B --> C[Load VisualEvidenceAuditReport]
+  C --> D[Assemble advisor sections]
+  D --> E{Missing critical evidence?}
+  E -- yes --> F[Mark pack not ready]
+  E -- no --> G[Mark review-ready-proxy only]
+  F --> H[Run no-promotion wording gate]
+  G --> H
+  H --> I[Export AdvisorPack markdown]
+  I --> J[Append missing evidence appendix]
+

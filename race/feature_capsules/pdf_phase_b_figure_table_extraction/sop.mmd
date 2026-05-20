@@ -1,0 +1,11 @@
+flowchart TD
+  A[Read local fixture PDF] --> B[Inspect PDF metadata]
+  B --> C[Run figure extraction adapter]
+  B --> D[Run table extraction adapter]
+  C --> E[Attach page provenance]
+  D --> E
+  E --> F[Emit warnings for empty or unsupported outputs]
+  F --> G[Build PDFAssetExtractionReport]
+  G --> H[Align with paper figure registry]
+  H --> I[Do not fabricate captions or claims]
+

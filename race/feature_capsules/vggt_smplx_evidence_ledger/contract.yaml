@@ -1,0 +1,32 @@
+feature_name: vggt_smplx_evidence_ledger
+project: TulingResearch Plus
+status: capsule_draft
+release_target: v0.2.0_sprint_1
+implementation_status: skeleton_only
+source_inputs:
+  - docs/v0.2.0-sprint-1-final-scope.md
+  - docs/v0.2.0-sprint-1-implementation-order.md
+  - docs/v0.2.0-sprint-1-test-plan.md
+  - docs/dogfooding-vggt-smplx.md
+proposed_command: tuling vggt ledger build
+proposed_tool:
+  name: vggt.evidence_ledger_build
+  status: proposed_not_public_api
+  input_model: VGGTEvidenceLedgerBuildInput
+  output_model: VGGTEvidenceLedger
+data_models:
+  - VGGTEvidenceLedger
+  - VGGTEvidenceRow
+  - VGGTEvidenceStatus
+  - VGGTMilestone
+  - EvidenceRef
+required_tests:
+  - tests/unit/test_vggt_smplx_evidence_ledger.py
+  - tests/contract/test_vggt_evidence_ledger_contract.py
+network_behavior: none
+local_path_behavior: read committed summaries only unless user supplies opt-in local config
+future_sync_adapters: non_goal
+notes:
+  - Do not mark V120 or V121 local-observed without local evidence.
+  - Do not implement cross-machine sync in Sprint 1.
+

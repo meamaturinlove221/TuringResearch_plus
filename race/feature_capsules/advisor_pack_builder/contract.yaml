@@ -1,0 +1,31 @@
+feature_name: advisor_pack_builder
+project: TulingResearch Plus
+status: capsule_draft
+release_target: v0.2.0_sprint_1
+implementation_status: skeleton_only
+source_inputs:
+  - docs/dogfooding-vggt-smplx.md
+  - docs/v0.2.0-sprint-1-final-scope.md
+  - docs/v0.2.0-sprint-1-test-plan.md
+proposed_command: tuling advisor pack
+proposed_tool:
+  name: advisor.pack_build
+  status: proposed_not_public_api
+  input_model: AdvisorPackBuildInput
+  output_model: AdvisorPack
+data_models:
+  - AdvisorPack
+  - AdvisorPackSection
+  - AdvisorReadinessStatus
+  - AdvisorMissingEvidenceItem
+  - EvidenceRef
+required_tests:
+  - tests/unit/test_advisor_pack_builder.py
+  - tests/contract/test_advisor_pack_contract.py
+network_behavior: none
+local_path_behavior: consume prior reports, do not scan private paths directly
+future_sync_adapters: non_goal
+notes:
+  - Review-ready is not promotion.
+  - Do not implement cross-machine sync in Sprint 1.
+

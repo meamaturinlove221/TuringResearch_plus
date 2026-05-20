@@ -1,0 +1,62 @@
+name: tulingresearch.vggt_evidence
+version: 0.2.0
+status: draft
+description: Capsule-local VGGT / SMPL-X evidence ledger contract for TulingResearch Plus.
+mcp_server: tulingresearch-plus
+project: TulingResearch Plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+api_status: capsule_local_not_public_mcp
+proposed_tools:
+  vggt.evidence_ledger_build:
+    command: tuling vggt ledger build
+    input_model: VGGTEvidenceLedgerBuildInput
+    output_model: VGGTEvidenceLedger
+    implementation_status: implemented_minimal
+    public_api_status: proposed_not_frozen
+models:
+  VGGTEvidenceStatus:
+    values:
+      - observed
+      - local-observed
+      - planned
+      - fake-data
+      - failed
+      - hard-blocked
+      - requires-real-paper
+      - requires-real-experiment
+      - requires-human-review
+      - not-enough-evidence
+  VGGTEvidenceRow:
+    required:
+      - run_id
+      - version_label
+      - claim
+      - status
+      - evidence_refs
+      - source_files
+      - limitations
+      - blockers
+      - next_actions
+  VGGTEvidenceLedger:
+    required:
+      - ledger_id
+      - run_id
+      - rows
+      - generated_from
+      - missing_inputs
+      - warnings
+rules:
+  - V120 and V121 must remain requires-human-review when local evidence is missing.
+  - SparseConv3D success must remain not-enough-evidence or hard-blocked without real evidence.
+  - The ledger must not fabricate VGGT experiment results.
+  - This contract does not add a public MCP namespace in Round 38.
