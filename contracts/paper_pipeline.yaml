@@ -1,0 +1,154 @@
+name: tulingresearch.paper_pipeline
+version: 0.2.0
+status: draft
+description: Paper MCP namespace contracts for TulingResearch Plus.
+mcp_server: tulingresearch-plus
+project: TulingResearch Plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+tools:
+  paper.docflow_status:
+    tool_name: paper.docflow_status
+    namespace: paper
+    input_model: PaperDocflowStatusInput
+    output_model: PaperDocflowStatusOutput
+    cache_behavior: stores paper blocks, figures, captions, drafts, and SOP graph metadata locally
+    network_behavior: none
+    error_behavior: typed paper pipeline error; draft blocked without ExperimentReport
+    evidence_requirement: EvidenceRef required for article blocks, captions, and drafts
+    required_tests:
+      - contract
+      - blocked draft test
+      - local artifact test
+    implementation_status: implemented_minimal
+  paper.article_block_update:
+    tool_name: paper.article_block_update
+    namespace: paper
+    input_model: PaperArticleBlockUpdateInput
+    output_model: PaperArticleBlockUpdateOutput
+    cache_behavior: stores paper blocks, figures, captions, drafts, and SOP graph metadata locally
+    network_behavior: none
+    error_behavior: typed paper pipeline error; draft blocked without ExperimentReport
+    evidence_requirement: EvidenceRef required for article blocks, captions, and drafts
+    required_tests:
+      - contract
+      - blocked draft test
+      - local artifact test
+    implementation_status: implemented_minimal
+  paper.sop_graph_generate:
+    tool_name: paper.sop_graph_generate
+    namespace: paper
+    input_model: PaperSopGraphGenerateInput
+    output_model: PaperSopGraphGenerateOutput
+    cache_behavior: stores paper blocks, figures, captions, drafts, and SOP graph metadata locally
+    network_behavior: none
+    error_behavior: typed paper pipeline error; draft blocked without ExperimentReport
+    evidence_requirement: EvidenceRef required for article blocks, captions, and drafts
+    required_tests:
+      - contract
+      - blocked draft test
+      - local artifact test
+    implementation_status: implemented_minimal
+  paper.figure_register:
+    tool_name: paper.figure_register
+    namespace: paper
+    input_model: PaperFigureRegisterInput
+    output_model: PaperFigureRegisterOutput
+    cache_behavior: stores paper blocks, figures, captions, drafts, and SOP graph metadata locally
+    network_behavior: none
+    error_behavior: typed paper pipeline error; draft blocked without ExperimentReport
+    evidence_requirement: EvidenceRef required for article blocks, captions, and drafts
+    required_tests:
+      - contract
+      - blocked draft test
+      - local artifact test
+    implementation_status: implemented_minimal
+  paper.caption_generate:
+    tool_name: paper.caption_generate
+    namespace: paper
+    input_model: PaperCaptionGenerateInput
+    output_model: PaperCaptionGenerateOutput
+    cache_behavior: stores paper blocks, figures, captions, drafts, and SOP graph metadata locally
+    network_behavior: none
+    error_behavior: typed paper pipeline error; draft blocked without ExperimentReport
+    evidence_requirement: EvidenceRef required for article blocks, captions, and drafts
+    required_tests:
+      - contract
+      - blocked draft test
+      - local artifact test
+    implementation_status: implemented_minimal
+  paper.draft_generate:
+    tool_name: paper.draft_generate
+    namespace: paper
+    input_model: PaperDraftGenerateInput
+    output_model: PaperDraftGenerateOutput
+    cache_behavior: stores paper blocks, figures, captions, drafts, and SOP graph metadata locally
+    network_behavior: none
+    error_behavior: typed paper pipeline error; draft blocked without ExperimentReport
+    evidence_requirement: EvidenceRef required for article blocks, captions, and drafts
+    required_tests:
+      - contract
+      - blocked draft test
+      - local artifact test
+    implementation_status: implemented_dry_run
+  paper.missing_evidence:
+    tool_name: paper.missing_evidence
+    namespace: paper
+    input_model: PaperMissingEvidenceInput
+    output_model: PaperMissingEvidenceOutput
+    cache_behavior: stores paper blocks, figures, captions, drafts, and SOP graph metadata locally
+    network_behavior: none
+    error_behavior: typed paper pipeline error; draft blocked without ExperimentReport
+    evidence_requirement: EvidenceRef required for article blocks, captions, and drafts
+    required_tests:
+      - contract
+      - blocked draft test
+      - local artifact test
+    implementation_status: implemented_dry_run
+  paper.latex_export:
+    tool_name: paper.latex_export
+    namespace: paper
+    input_model: PaperLatexExportInput
+    output_model: PaperLatexExportOutput
+    cache_behavior: stores paper blocks, figures, captions, drafts, and SOP graph metadata locally
+    network_behavior: none
+    error_behavior: typed paper pipeline error; draft blocked without ExperimentReport
+    evidence_requirement: EvidenceRef required for article blocks, captions, and drafts
+    required_tests:
+      - contract
+      - blocked draft test
+      - local artifact test
+    implementation_status: implemented_minimal
+  ExperimentReport:
+    required: [report_id, title, evidence]
+    fields:
+      report_id: string
+      title: string
+      metrics: object
+      evidence: list[EvidenceRef]
+  ArticleBlock:
+    required: [block_id, section, text, evidence]
+    fields:
+      block_id: string
+      section: enum[abstract,introduction,methods,results,discussion,conclusion]
+      text: string
+      evidence: list[EvidenceRef]
+  PaperDraftRequest:
+    required: [draft_id, experiment_report]
+    fields:
+      draft_id: string
+      experiment_report: ExperimentReport?
+      dry_run: boolean
+rules:
+  - Paper Draft is blocked when ExperimentReport is absent.
+  - Article blocks must preserve EvidenceRef.
+  - Paper tools are v0.1.0 minimal or dry-run implementations according to implementation_status.

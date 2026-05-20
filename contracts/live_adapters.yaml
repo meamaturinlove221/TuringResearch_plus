@@ -1,0 +1,120 @@
+name: tulingresearch.live_adapters
+version: 0.1.0
+status: draft
+description: Live adapter protocol contracts for TulingResearch Plus v0.2.0 planning.
+mcp_server: tulingresearch-plus
+project: TulingResearch Plus
+tool_contract_fields:
+  - protocol
+  - input_model
+  - output_model
+  - timeout_policy
+  - retry_policy
+  - rate_limit_policy
+  - error_model
+  - cache_integration
+  - live_test_marker
+  - fake_adapter_equivalent
+adapters:
+  SemanticScholarAdapter:
+    protocol: tuling_research_plus.adapters.protocols.SemanticScholarAdapter
+    input_model: SemanticScholarPaperLookup
+    output_model: SemanticScholarPaperResult
+    timeout_policy: AdapterTimeoutPolicy
+    retry_policy: AdapterRetryPolicy
+    rate_limit_policy: RateLimitPolicy
+    error_model: AdapterError
+    cache_integration: AdapterCachePolicy namespace semantic_scholar/paper_lookup
+    live_test_marker: live
+    fake_adapter_equivalent: FakeSemanticScholarAdapter
+    implementation_status: protocol_only
+  ArxivAdapter:
+    protocol: tuling_research_plus.adapters.protocols.ArxivAdapter
+    input_model: ArxivQuery
+    output_model: ArxivSearchResult
+    timeout_policy: AdapterTimeoutPolicy
+    retry_policy: AdapterRetryPolicy
+    rate_limit_policy: RateLimitPolicy
+    error_model: AdapterError
+    cache_integration: AdapterCachePolicy namespace arxiv/search
+    live_test_marker: live
+    fake_adapter_equivalent: FakeArxivAdapter
+    implementation_status: protocol_only
+  ApifyWebAdapter:
+    protocol: tuling_research_plus.adapters.protocols.ApifyWebAdapter
+    input_model: WebFetchRequest
+    output_model: WebFetchResult
+    timeout_policy: AdapterTimeoutPolicy
+    retry_policy: AdapterRetryPolicy
+    rate_limit_policy: RateLimitPolicy
+    error_model: AdapterError
+    cache_integration: AdapterCachePolicy namespace apify/web_fetch
+    live_test_marker: live
+    fake_adapter_equivalent: FakeApifyWebAdapter
+    implementation_status: protocol_only
+  OpenAICompatibleLLMAdapter:
+    protocol: tuling_research_plus.adapters.protocols.OpenAICompatibleLLMAdapter
+    input_model: LLMCompletionRequest
+    output_model: LLMCompletionResult
+    timeout_policy: AdapterTimeoutPolicy
+    retry_policy: AdapterRetryPolicy
+    rate_limit_policy: RateLimitPolicy
+    error_model: AdapterError
+    cache_integration: AdapterCachePolicy namespace openai_compatible/completion write_through false
+    live_test_marker: live
+    fake_adapter_equivalent: FakeOpenAICompatibleLLMAdapter
+    implementation_status: protocol_only
+  PDFConverterAdapter:
+    protocol: tuling_research_plus.adapters.protocols.PDFConverterAdapter
+    input_model: PDFConversionRequest
+    output_model: PDFConversionResult
+    timeout_policy: AdapterTimeoutPolicy
+    retry_policy: AdapterRetryPolicy
+    rate_limit_policy: RateLimitPolicy
+    error_model: AdapterError
+    cache_integration: AdapterCachePolicy namespace pdf/converter
+    live_test_marker: manual
+    fake_adapter_equivalent: FakePDFConverterAdapter
+    implementation_status: protocol_only
+types:
+  AdapterTimeoutPolicy:
+    required: [connect_seconds, read_seconds, total_seconds]
+    fields:
+      connect_seconds: float
+      read_seconds: float
+      total_seconds: float
+  AdapterRetryPolicy:
+    required: [max_attempts, backoff_seconds, retry_on]
+    fields:
+      max_attempts: integer
+      backoff_seconds: float
+      retry_on: list[string]
+  RateLimitPolicy:
+    required: [on_limit]
+    fields:
+      requests_per_minute: integer?
+      provider_quota_label: string?
+      on_limit: string
+  AdapterError:
+    required: [code, message, retryable]
+    fields:
+      code: enum[missing_api_key,timeout,rate_limited,retry_exhausted,provider_error,invalid_response,unsupported,source_hygiene_blocked]
+      message: string
+      retryable: boolean
+      provider: string?
+      status_code: integer?
+      details: object
+  AdapterCachePolicy:
+    required: [namespace, cache_key_fields, write_through]
+    fields:
+      namespace: string
+      ttl_seconds: integer?
+      cache_key_fields: list[string]
+      write_through: boolean
+rules:
+  - This contract defines protocols only and does not mark live adapters done.
+  - No live adapter may run in default tests.
+  - Live tests must use the live or manual pytest marker and require explicit environment opt-in.
+  - Missing API keys must produce typed AdapterError data, not default test failures.
+  - Fake adapter equivalents must exist before live adapter behavior is wired into workflows.
+  - Adapter outputs that feed research conclusions must preserve EvidenceRef-compatible metadata.

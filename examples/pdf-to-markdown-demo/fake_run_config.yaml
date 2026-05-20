@@ -1,0 +1,10 @@
+mode: local fixture dry run
+network: disabled
+requires_api_keys: false
+converter: pymupdf_local
+ocr: disabled
+expected_artifacts:
+  - PDFMarkdownOutput
+  - markdown artifact
+  - quality report
+  - cache hit test

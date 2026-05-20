@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+
+# Test and type caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Build artifacts
+dist/
+build/
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Local secrets and private data
+.env
+.env.*
+!.env.example
+private_data/
+secrets/
+*.pem
+*.key
+
+# Local caches and generated smoke output
+.cache/
+tmp/
+temp/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

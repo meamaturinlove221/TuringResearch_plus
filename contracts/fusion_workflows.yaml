@@ -1,0 +1,634 @@
+name: tulingresearch.fusion_workflows
+version: 0.2.0
+status: draft
+description: Fusion, graph, research, and context MCP namespace contracts for TulingResearch Plus.
+mcp_server: tulingresearch-plus
+project: TulingResearch Plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+services:
+  FusionWorkflow:
+    boundary: workflow_protocol
+    methods:
+      run:
+        input: WorkflowRunRequest
+        output: WorkflowRunResult
+
+  SemanticGraphAdapter:
+    boundary: adapter_protocol
+    methods:
+      paper_lookup:
+        input: PaperLookupInput
+        output: PaperLookupOutput
+      paper_batch:
+        input: PaperBatchInput
+        output: PaperBatchOutput
+      references:
+        input: PaperListInput
+        output: PaperListOutput
+      citations:
+        input: PaperListInput
+        output: PaperListOutput
+      recommendations:
+        input: RecommendationInput
+        output: RecommendationOutput
+      author:
+        input: AuthorInput
+        output: AuthorOutput
+      author_papers:
+        input: AuthorInput
+        output: AuthorPapersOutput
+tools:
+  graph.paper_lookup:
+    tool_name: graph.paper_lookup
+    namespace: graph
+    input_model: GraphPaperLookupInput
+    output_model: GraphPaperLookupOutput
+    cache_behavior: adapter-level cache; service accepts fake adapter in tests
+    network_behavior: adapterized; tests mocked; no real network in unit tests
+    error_behavior: typed graph adapter or unavailable error
+    evidence_requirement: EvidenceRef required when graph outputs become ResearchArtifact
+    required_tests:
+      - contract
+      - mocked adapter test
+      - fake-service test
+    implementation_status: implemented_minimal
+  graph.paper_batch:
+    tool_name: graph.paper_batch
+    namespace: graph
+    input_model: GraphPaperBatchInput
+    output_model: GraphPaperBatchOutput
+    cache_behavior: adapter-level cache; service accepts fake adapter in tests
+    network_behavior: adapterized; tests mocked; no real network in unit tests
+    error_behavior: typed graph adapter or unavailable error
+    evidence_requirement: EvidenceRef required when graph outputs become ResearchArtifact
+    required_tests:
+      - contract
+      - mocked adapter test
+      - fake-service test
+    implementation_status: implemented_minimal
+  graph.references:
+    tool_name: graph.references
+    namespace: graph
+    input_model: GraphReferencesInput
+    output_model: GraphReferencesOutput
+    cache_behavior: adapter-level cache; service accepts fake adapter in tests
+    network_behavior: adapterized; tests mocked; no real network in unit tests
+    error_behavior: typed graph adapter or unavailable error
+    evidence_requirement: EvidenceRef required when graph outputs become ResearchArtifact
+    required_tests:
+      - contract
+      - mocked adapter test
+      - fake-service test
+    implementation_status: implemented_minimal
+  graph.citations:
+    tool_name: graph.citations
+    namespace: graph
+    input_model: GraphCitationsInput
+    output_model: GraphCitationsOutput
+    cache_behavior: adapter-level cache; service accepts fake adapter in tests
+    network_behavior: adapterized; tests mocked; no real network in unit tests
+    error_behavior: typed graph adapter or unavailable error
+    evidence_requirement: EvidenceRef required when graph outputs become ResearchArtifact
+    required_tests:
+      - contract
+      - mocked adapter test
+      - fake-service test
+    implementation_status: implemented_minimal
+  graph.recommendations:
+    tool_name: graph.recommendations
+    namespace: graph
+    input_model: GraphRecommendationsInput
+    output_model: GraphRecommendationsOutput
+    cache_behavior: adapter-level cache; service accepts fake adapter in tests
+    network_behavior: adapterized; tests mocked; no real network in unit tests
+    error_behavior: typed graph adapter or unavailable error
+    evidence_requirement: EvidenceRef required when graph outputs become ResearchArtifact
+    required_tests:
+      - contract
+      - mocked adapter test
+      - fake-service test
+    implementation_status: implemented_minimal
+  graph.author:
+    tool_name: graph.author
+    namespace: graph
+    input_model: GraphAuthorInput
+    output_model: GraphAuthorOutput
+    cache_behavior: adapter-level cache; service accepts fake adapter in tests
+    network_behavior: adapterized; tests mocked; no real network in unit tests
+    error_behavior: typed graph adapter or unavailable error
+    evidence_requirement: EvidenceRef required when graph outputs become ResearchArtifact
+    required_tests:
+      - contract
+      - mocked adapter test
+      - fake-service test
+    implementation_status: implemented_minimal
+  graph.author_papers:
+    tool_name: graph.author_papers
+    namespace: graph
+    input_model: GraphAuthorPapersInput
+    output_model: GraphAuthorPapersOutput
+    cache_behavior: adapter-level cache; service accepts fake adapter in tests
+    network_behavior: adapterized; tests mocked; no real network in unit tests
+    error_behavior: typed graph adapter or unavailable error
+    evidence_requirement: EvidenceRef required when graph outputs become ResearchArtifact
+    required_tests:
+      - contract
+      - mocked adapter test
+      - fake-service test
+    implementation_status: implemented_minimal
+  graph.citation_graph_expand:
+    tool_name: graph.citation_graph_expand
+    namespace: graph
+    input_model: GraphCitationGraphExpandInput
+    output_model: GraphCitationGraphExpandOutput
+    cache_behavior: adapter-level cache; service accepts fake adapter in tests
+    network_behavior: adapterized; tests mocked; no real network in unit tests
+    error_behavior: typed graph adapter or unavailable error
+    evidence_requirement: EvidenceRef required when graph outputs become ResearchArtifact
+    required_tests:
+      - contract
+      - mocked adapter test
+      - fake-service test
+    implementation_status: implemented_minimal
+  graph.author_network:
+    tool_name: graph.author_network
+    namespace: graph
+    input_model: GraphAuthorNetworkInput
+    output_model: GraphAuthorNetworkOutput
+    cache_behavior: adapter-level cache; service accepts fake adapter in tests
+    network_behavior: adapterized; tests mocked; no real network in unit tests
+    error_behavior: typed graph adapter or unavailable error
+    evidence_requirement: EvidenceRef required when graph outputs become ResearchArtifact
+    required_tests:
+      - contract
+      - mocked adapter test
+      - fake-service test
+    implementation_status: implemented_minimal
+  research.north_star_init:
+    tool_name: research.north_star_init
+    namespace: research
+    input_model: ResearchNorthStarInitInput
+    output_model: ResearchNorthStarInitOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.research_brief_generate:
+    tool_name: research.research_brief_generate
+    namespace: research
+    input_model: ResearchResearchBriefGenerateInput
+    output_model: ResearchResearchBriefGenerateOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.survey_plan:
+    tool_name: research.survey_plan
+    namespace: research
+    input_model: ResearchSurveyPlanInput
+    output_model: ResearchSurveyPlanOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.survey_run:
+    tool_name: research.survey_run
+    namespace: research
+    input_model: ResearchSurveyRunInput
+    output_model: ResearchSurveyRunOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.survey_status:
+    tool_name: research.survey_status
+    namespace: research
+    input_model: ResearchSurveyStatusInput
+    output_model: ResearchSurveyStatusOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.survey_export:
+    tool_name: research.survey_export
+    namespace: research
+    input_model: ResearchSurveyExportInput
+    output_model: ResearchSurveyExportOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.gap_analyze:
+    tool_name: research.gap_analyze
+    namespace: research
+    input_model: ResearchGapAnalyzeInput
+    output_model: ResearchGapAnalyzeOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.insight_generate:
+    tool_name: research.insight_generate
+    namespace: research
+    input_model: ResearchInsightGenerateInput
+    output_model: ResearchInsightGenerateOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.boundary_map:
+    tool_name: research.boundary_map
+    namespace: research
+    input_model: ResearchBoundaryMapInput
+    output_model: ResearchBoundaryMapOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.sensitivity_probe:
+    tool_name: research.sensitivity_probe
+    namespace: research
+    input_model: ResearchSensitivityProbeInput
+    output_model: ResearchSensitivityProbeOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.problem_reformulate:
+    tool_name: research.problem_reformulate
+    namespace: research
+    input_model: ResearchProblemReformulateInput
+    output_model: ResearchProblemReformulateOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.gap_prioritize:
+    tool_name: research.gap_prioritize
+    namespace: research
+    input_model: ResearchGapPrioritizeInput
+    output_model: ResearchGapPrioritizeOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.hypothesis_generate:
+    tool_name: research.hypothesis_generate
+    namespace: research
+    input_model: ResearchHypothesisGenerateInput
+    output_model: ResearchHypothesisGenerateOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.hypothesis_operationalize:
+    tool_name: research.hypothesis_operationalize
+    namespace: research
+    input_model: ResearchHypothesisOperationalizeInput
+    output_model: ResearchHypothesisOperationalizeOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.research_question_formulate:
+    tool_name: research.research_question_formulate
+    namespace: research
+    input_model: ResearchResearchQuestionFormulateInput
+    output_model: ResearchResearchQuestionFormulateOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.idea_generate:
+    tool_name: research.idea_generate
+    namespace: research
+    input_model: ResearchIdeaGenerateInput
+    output_model: ResearchIdeaGenerateOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.idea_quality_diversity_filter:
+    tool_name: research.idea_quality_diversity_filter
+    namespace: research
+    input_model: ResearchIdeaQualityDiversityFilterInput
+    output_model: ResearchIdeaQualityDiversityFilterOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.candidate_score:
+    tool_name: research.candidate_score
+    namespace: research
+    input_model: ResearchCandidateScoreInput
+    output_model: ResearchCandidateScoreOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.portfolio_optimize:
+    tool_name: research.portfolio_optimize
+    namespace: research
+    input_model: ResearchPortfolioOptimizeInput
+    output_model: ResearchPortfolioOptimizeOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.artifact_stress_test:
+    tool_name: research.artifact_stress_test
+    namespace: research
+    input_model: ResearchArtifactStressTestInput
+    output_model: ResearchArtifactStressTestOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.experiment_design:
+    tool_name: research.experiment_design
+    namespace: research
+    input_model: ResearchExperimentDesignInput
+    output_model: ResearchExperimentDesignOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  research.implementation_plan:
+    tool_name: research.implementation_plan
+    namespace: research
+    input_model: ResearchImplementationPlanInput
+    output_model: ResearchImplementationPlanOutput
+    cache_behavior: stores derived ResearchArtifact and StateLedger references
+    network_behavior: none by default; any external adapter must be mocked
+    error_behavior: typed workflow error with BudgetGate and StateLedger context
+    evidence_requirement: EvidenceRef required for every conclusion
+    required_tests:
+      - contract
+      - dry-run test
+      - fake-service test
+    implementation_status: implemented_dry_run
+  context.init:
+    tool_name: context.init
+    namespace: context
+    input_model: ContextInitInput
+    output_model: ContextInitOutput
+    cache_behavior: reads or writes local context checkpoint/index cache
+    network_behavior: none
+    error_behavior: typed context recovery or checkpoint error
+    evidence_requirement: EvidenceRef preserved in summaries and checkpoints
+    required_tests:
+      - contract
+      - local checkpoint fake test
+    implementation_status: implemented_minimal
+  context.checkpoint:
+    tool_name: context.checkpoint
+    namespace: context
+    input_model: ContextCheckpointInput
+    output_model: ContextCheckpointOutput
+    cache_behavior: reads or writes local context checkpoint/index cache
+    network_behavior: none
+    error_behavior: typed context recovery or checkpoint error
+    evidence_requirement: EvidenceRef preserved in summaries and checkpoints
+    required_tests:
+      - contract
+      - local checkpoint fake test
+    implementation_status: implemented_minimal
+  context.recover:
+    tool_name: context.recover
+    namespace: context
+    input_model: ContextRecoverInput
+    output_model: ContextRecoverOutput
+    cache_behavior: reads or writes local context checkpoint/index cache
+    network_behavior: none
+    error_behavior: typed context recovery or checkpoint error
+    evidence_requirement: EvidenceRef preserved in summaries and checkpoints
+    required_tests:
+      - contract
+      - local checkpoint fake test
+    implementation_status: implemented_minimal
+  context.index:
+    tool_name: context.index
+    namespace: context
+    input_model: ContextIndexInput
+    output_model: ContextIndexOutput
+    cache_behavior: reads or writes local context checkpoint/index cache
+    network_behavior: none
+    error_behavior: typed context recovery or checkpoint error
+    evidence_requirement: EvidenceRef preserved in summaries and checkpoints
+    required_tests:
+      - contract
+      - local checkpoint fake test
+    implementation_status: implemented_minimal
+  context.summarize:
+    tool_name: context.summarize
+    namespace: context
+    input_model: ContextSummarizeInput
+    output_model: ContextSummarizeOutput
+    cache_behavior: reads or writes local context checkpoint/index cache
+    network_behavior: none
+    error_behavior: typed context recovery or checkpoint error
+    evidence_requirement: EvidenceRef preserved in summaries and checkpoints
+    required_tests:
+      - contract
+      - local checkpoint fake test
+    implementation_status: implemented_minimal
+  WorkflowRunRequest:
+    required: [workflow_id, dry_run, budget_gate, state_ledger]
+    fields:
+      workflow_id: string
+      dry_run: boolean
+      fake_service: boolean
+      budget_gate: BudgetGate
+      state_ledger: StateLedger
+      inputs: object
+  WorkflowRunResult:
+    required: [workflow_id, status, artifacts, ledger_updates]
+    fields:
+      workflow_id: string
+      status: enum[planned,running,blocked,completed,failed]
+      artifacts: list[ResearchArtifact]
+      ledger_updates: list[LedgerEvent]
+      blocked_reason: string?
+  GraphToolInput:
+    required: [query]
+    fields:
+      query: object
+      dry_run: boolean
+      fake_service: boolean
+  GraphToolOutput:
+    required: [status, artifacts, evidence]
+    fields:
+      status: enum[ok,blocked,error]
+      artifacts: list[ResearchArtifact]
+      evidence: list[EvidenceRef]
+  ResearchWorkflowInput:
+    required: [campaign_id, budget_gate, state_ledger]
+    fields:
+      campaign_id: string
+      budget_gate: BudgetGate
+      state_ledger: StateLedger
+      dry_run: boolean
+      fake_service: boolean
+      inputs: object
+  ResearchWorkflowOutput:
+    required: [status, artifacts, ledger_updates]
+    fields:
+      status: enum[ok,blocked,error]
+      artifacts: list[ResearchArtifact]
+      ledger_updates: list[LedgerEvent]
+      errors: list[TulingResearchError]
+rules:
+  - Fusion cannot depend on Core internals.
+  - Workflows must support dry-run and fake-service mode.
+  - All conclusions require EvidenceRef.
+  - Graph tools are implemented through fake-adapter minimal services in v0.1.0.
+  - Research tools listed here are dry-run/fake-service workflows in v0.1.0.
+
+  CitationGraphExpandInput:
+    required: [seed_paper_ids]
+    fields:
+      seed_paper_ids: list[string]
+      direction: enum[backward,forward,both]
+      depth_limit: integer
+      max_nodes: integer
+      min_year: integer?
+      max_year: integer?
+      min_citation_count: integer?
+      open_access_only: boolean
+      recommendation_limit: integer
+  CitationGraphOutput:
+    required: [status, nodes, edges, frontier_nodes, recommended_next_reads]
+    fields:
+      status: enum[ok,error]
+      nodes: list[PaperNode]
+      edges: list[CitationEdge]
+      frontier_nodes: list[PaperNode]
+      recommended_next_reads: list[PaperNode]
+  AuthorNetworkInput:
+    required: [seed_author_ids]
+    fields:
+      seed_author_ids: list[string]
+      max_depth: integer
+      max_authors: integer
+  AuthorNetworkOutput:
+    required: [status, authors, edges, frontier_authors]
+    fields:
+      status: enum[ok,error]
+      authors: list[AuthorNode]
+      edges: list[AuthorEdge]
+      frontier_authors: list[AuthorNode]

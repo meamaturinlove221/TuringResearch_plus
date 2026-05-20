@@ -1,0 +1,12 @@
+# TulingResearch Plus local Codex MCP example.
+# Copy values into your local Codex config as needed; do not store real API keys here.
+
+[mcp_servers.tulingresearch-plus]
+command = "python"
+args = ["-m", "tuling_research.mcp_server"]
+
+[mcp_servers.tulingresearch-plus.env]
+TULINGRESEARCH_CACHE_DIR = ".tulingresearch/cache"
+TULINGRESEARCH_SESSION_REGISTRY_PATH = ".tulingresearch/session_registry.json"
+TULINGRESEARCH_FAKE_SERVICE = "1"
+TULINGRESEARCH_API_KEY = "replace-with-local-secret-outside-repo"

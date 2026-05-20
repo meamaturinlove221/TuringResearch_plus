@@ -1,0 +1,6 @@
+{
+  "example_id": "pdf-to-markdown-demo",
+  "fixture_title": "TulingResearch Plus Fixture PDF",
+  "fixture_text": "Introduction\\nThis tiny local PDF fixture validates dry-run markdown conversion.",
+  "output_dir": "expected_outputs/generated"
+}

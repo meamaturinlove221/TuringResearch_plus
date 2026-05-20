@@ -1,0 +1,54 @@
+name: tulingresearch.artifact_schema
+version: 0.2.0
+status: draft
+description: TulingResearch Plus research artifact and evidence schema.
+mcp_server: tulingresearch-plus
+project: TulingResearch Plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+types:
+  EvidenceRef:
+    required: [source_id, locator, quote]
+    fields:
+      source_id: string
+      locator: string
+      quote: string
+      url: string?
+      confidence: float?
+  ResearchArtifact:
+    required: [artifact_id, kind, title, created_by, evidence]
+    fields:
+      artifact_id: string
+      kind: enum[note,pdf_markdown,idea_card,feature_capsule,experiment_report,article_block,draft,workflow_state]
+      title: string
+      created_by: string
+      content: object
+      evidence: list[EvidenceRef]
+      tags: list[string]
+      metadata: object
+  MCPToolContract:
+    required: [tool_name, namespace, input_model, output_model, cache_behavior, network_behavior, error_behavior, evidence_requirement, required_tests, implementation_status]
+    fields:
+      tool_name: string
+      namespace: string
+      input_model: string
+      output_model: string
+      cache_behavior: string
+      network_behavior: string
+      error_behavior: string
+      evidence_requirement: string
+      required_tests: list[string]
+      implementation_status: enum[implemented_minimal,implemented_dry_run,contract_only,blocked]
+rules:
+  - All important workflow outputs must be representable as ResearchArtifact.
+  - Any conclusion stored in content must be supported by at least one EvidenceRef.
+  - Every MCP tool contract must include all MCPToolContract fields.

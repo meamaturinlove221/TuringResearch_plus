@@ -1,0 +1,11 @@
+name: tulingresearch.paper_asset_registry
+project: TulingResearch Plus
+version: 0.1.0
+status: draft
+rules:
+  - No orphan figure.
+  - Every paper figure must have caption.
+  - Every figure must link to at least one ArticleBlock.
+  - Generated diagrams use stable filenames under paper/figures/.
+  - PDF extracted figures must record original_pdf_source.
+assets: []

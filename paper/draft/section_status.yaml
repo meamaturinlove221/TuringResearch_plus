@@ -1,0 +1,39 @@
+sections:
+  - section: abstract
+    status: blocked
+    missing_items:
+      - ExperimentReport
+  - section: introduction
+    status: blocked
+    missing_items:
+      - EvidenceRef
+  - section: related_work
+    status: blocked
+    missing_items:
+      - LiteratureSurveyArtifact
+  - section: method
+    status: blocked
+    missing_items:
+      - MethodDesign
+      - architecture figure
+  - section: experiments
+    status: blocked
+    missing_items:
+      - ExperimentPlan
+      - ExperimentReport
+  - section: results
+    status: blocked
+    missing_items:
+      - ExperimentReport
+  - section: limitations
+    status: blocked
+    missing_items:
+      - StressTestReport
+  - section: conclusion
+    status: blocked
+    missing_items:
+      - ExperimentReport
+  - section: appendix
+    status: blocked
+    missing_items:
+      - FigureAssetRegistry

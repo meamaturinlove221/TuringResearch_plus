@@ -1,0 +1,12 @@
+flowchart TD
+    research_brief[Research Brief]
+    related_work[Related Work]
+    method_design[Method Design]
+    experiments[Experiments]
+    paper_draft[Paper Draft]
+    research_brief --> related_work
+    research_brief --> method_design
+    related_work --> method_design
+    method_design --> experiments
+    experiments --> paper_draft
+    ExperimentReport{{ExperimentReport Gate}} --> paper_draft

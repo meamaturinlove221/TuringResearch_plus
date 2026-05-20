@@ -1,0 +1,45 @@
+name: lint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  ruff:
+    name: ruff
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install lint dependencies
+        run: python -m pip install -e ".[dev]"
+
+      - name: Ruff check
+        run: python -m ruff check .
+
+  mypy:
+    name: mypy optional
+    runs-on: ubuntu-latest
+    continue-on-error: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install type-check dependencies
+        run: python -m pip install -e ".[dev,pdf,mcp]"
+
+      - name: Mypy optional
+        run: python -m mypy src

@@ -1,0 +1,16 @@
+flowchart TD
+    docflow(["paper.docflow_status"])
+    research_brief[("research_brief")]
+    related_work[("related_work")]
+    method_design[("method_design")]
+    experiments[("experiments")]
+    paper_draft[("paper_draft")]
+    evidence_gate{"EvidenceRef Gate"}
+    draft_gate{{"ExperimentReport Gate"}}
+    docflow --> research_brief
+    research_brief --> related_work
+    related_work --> method_design
+    method_design --> experiments
+    experiments --> paper_draft
+    paper_draft --> evidence_gate
+    evidence_gate --> draft_gate

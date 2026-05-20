@@ -1,0 +1,38 @@
+name: tulingresearch.error_schema
+version: 0.2.0
+status: draft
+description: Shared error schema for MCP contracts and workflow results.
+mcp_server: tulingresearch-plus
+project: TulingResearch Plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+types:
+  TulingResearchError:
+    required: [code, message, severity]
+    fields:
+      code: string
+      message: string
+      severity: enum[info,warning,error,fatal]
+      retryable: boolean
+      details: object
+      tool_name: string?
+      namespace: string?
+  ErrorBehavior:
+    required: [typed_error, boundary_conversion]
+    fields:
+      typed_error: boolean
+      boundary_conversion: string
+      retryable: boolean
+rules:
+  - Errors crossing MCP boundaries must use this schema.
+  - Internal exceptions must be converted before leaving service adapters.
+  - STDIO MCP mode must not write logs to stdout.

@@ -1,0 +1,143 @@
+name: tulingresearch.race_features
+version: 0.2.0
+status: draft
+description: Race Mode MCP namespace contracts for TulingResearch Plus.
+mcp_server: tulingresearch-plus
+project: TulingResearch Plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+tools:
+  race.idea_extract:
+    tool_name: race.idea_extract
+    namespace: race
+    input_model: RaceIdeaExtractInput
+    output_model: RaceIdeaExtractOutput
+    cache_behavior: stores Race Mode artifacts and gate state through StateLedger
+    network_behavior: none by default; upstream adapters mocked
+    error_behavior: typed race gate or source hygiene error
+    evidence_requirement: EvidenceRef and SourceHygieneGate required before implementation tasks
+    required_tests:
+      - contract
+      - source hygiene gate test
+      - dry-run test
+    implementation_status: implemented_minimal
+  race.source_hygiene_check:
+    tool_name: race.source_hygiene_check
+    namespace: race
+    input_model: RaceSourceHygieneCheckInput
+    output_model: RaceSourceHygieneCheckOutput
+    cache_behavior: stores Race Mode artifacts and gate state through StateLedger
+    network_behavior: none by default; upstream adapters mocked
+    error_behavior: typed race gate or source hygiene error
+    evidence_requirement: EvidenceRef and SourceHygieneGate required before implementation tasks
+    required_tests:
+      - contract
+      - source hygiene gate test
+      - dry-run test
+    implementation_status: implemented_minimal
+  race.priority_score:
+    tool_name: race.priority_score
+    namespace: race
+    input_model: RacePriorityScoreInput
+    output_model: RacePriorityScoreOutput
+    cache_behavior: stores Race Mode artifacts and gate state through StateLedger
+    network_behavior: none by default; upstream adapters mocked
+    error_behavior: typed race gate or source hygiene error
+    evidence_requirement: EvidenceRef and SourceHygieneGate required before implementation tasks
+    required_tests:
+      - contract
+      - source hygiene gate test
+      - dry-run test
+    implementation_status: implemented_minimal
+  race.feature_capsule_create:
+    tool_name: race.feature_capsule_create
+    namespace: race
+    input_model: RaceFeatureCapsuleCreateInput
+    output_model: RaceFeatureCapsuleCreateOutput
+    cache_behavior: stores Race Mode artifacts and gate state through StateLedger
+    network_behavior: none by default; upstream adapters mocked
+    error_behavior: typed race gate or source hygiene error
+    evidence_requirement: EvidenceRef and SourceHygieneGate required before implementation tasks
+    required_tests:
+      - contract
+      - source hygiene gate test
+      - dry-run test
+    implementation_status: implemented_minimal
+  race.architecture_box_build:
+    tool_name: race.architecture_box_build
+    namespace: race
+    input_model: RaceArchitectureBoxBuildInput
+    output_model: RaceArchitectureBoxBuildOutput
+    cache_behavior: stores Race Mode artifacts and gate state through StateLedger
+    network_behavior: none by default; upstream adapters mocked
+    error_behavior: typed race gate or source hygiene error
+    evidence_requirement: EvidenceRef and SourceHygieneGate required before implementation tasks
+    required_tests:
+      - contract
+      - source hygiene gate test
+      - dry-run test
+    implementation_status: implemented_minimal
+  race.upstream_watch:
+    tool_name: race.upstream_watch
+    namespace: race
+    input_model: RaceUpstreamWatchInput
+    output_model: RaceUpstreamWatchOutput
+    cache_behavior: stores Race Mode artifacts and gate state through StateLedger
+    network_behavior: none by default; upstream adapters mocked
+    error_behavior: typed race gate or source hygiene error
+    evidence_requirement: EvidenceRef and SourceHygieneGate required before implementation tasks
+    required_tests:
+      - contract
+      - source hygiene gate test
+      - dry-run test
+    implementation_status: implemented_minimal
+  race.launch_gate_status:
+    tool_name: race.launch_gate_status
+    namespace: race
+    input_model: RaceLaunchGateStatusInput
+    output_model: RaceLaunchGateStatusOutput
+    cache_behavior: stores Race Mode artifacts and gate state through StateLedger
+    network_behavior: none by default; upstream adapters mocked
+    error_behavior: typed race gate or source hygiene error
+    evidence_requirement: EvidenceRef and SourceHygieneGate required before implementation tasks
+    required_tests:
+      - contract
+      - source hygiene gate test
+      - dry-run test
+    implementation_status: contract_only
+  SourceHygieneGate:
+    required: [status, checked_sources]
+    fields:
+      status: enum[passed,blocked]
+      checked_sources: list[EvidenceRef]
+      blocked_reason: string?
+  IdeaCard:
+    required: [idea_id, title, hypothesis, evidence, hygiene_gate]
+    fields:
+      idea_id: string
+      title: string
+      hypothesis: string
+      evidence: list[EvidenceRef]
+      hygiene_gate: SourceHygieneGate
+      tags: list[string]
+  FeatureCapsule:
+    required: [feature_id, title, idea_cards, evidence, hygiene_gate]
+    fields:
+      feature_id: string
+      title: string
+      idea_cards: list[string]
+      evidence: list[EvidenceRef]
+      hygiene_gate: SourceHygieneGate
+rules:
+  - Race Mode must pass Source Hygiene Gate before creating implementation tasks.
+  - Non-public, private, or unauthorized sources block feature generation.
+  - Race tools are v0.1.0 minimal implementations except launch-gate status, which remains contract-only.

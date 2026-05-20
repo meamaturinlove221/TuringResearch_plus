@@ -1,0 +1,358 @@
+name: tulingresearch.pdf_markdown
+version: 0.2.0
+status: draft
+description: PDF MCP namespace contracts for TulingResearch Plus.
+mcp_server: tulingresearch-plus
+project: TulingResearch Plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+services:
+  PdfMarkdownService:
+    boundary: service_protocol
+    methods:
+      inspect:
+        input: PDFInspectInput
+        output: PDFInspectOutput
+      convert:
+        input: PDFMarkdownInput
+        output: PDFMarkdownOutput
+      cache_lookup:
+        input: PDFCacheLookupInput
+        output: PDFMarkdownOutput?
+      markdown_content:
+        input: PDFMarkdownContentInput
+        output: PDFMarkdownContentOutput
+tools:
+  pdf.inspect:
+    tool_name: pdf.inspect
+    namespace: pdf
+    input_model: PDFInspectInput
+    output_model: PDFInspectOutput
+    cache_behavior: metadata only; no content cache write
+    network_behavior: none
+    error_behavior: typed missing_file/invalid_pdf/converter_unavailable
+    evidence_requirement: none
+    required_tests:
+      - local PDF inspect
+      - invalid PDF inspect
+    implementation_status: implemented_minimal
+  pdf.to_markdown:
+    tool_name: pdf.to_markdown
+    namespace: pdf
+    input_model: PDFMarkdownInput
+    output_model: PDFMarkdownOutput
+    cache_behavior: read_write CacheManager pdf/markdown namespace
+    network_behavior: none
+    error_behavior: typed PDFMarkdownError
+    evidence_requirement: page evidence locators available through page map
+    required_tests:
+      - fixture PDF conversion
+      - cache hit
+      - invalid PDF
+      - empty PDF warning
+    implementation_status: implemented_minimal
+  pdf.batch_to_markdown:
+    tool_name: pdf.batch_to_markdown
+    namespace: pdf
+    input_model: PDFBatchMarkdownInput
+    output_model: PDFBatchMarkdownOutput
+    cache_behavior: read_write CacheManager pdf/markdown namespace per file
+    network_behavior: none
+    error_behavior: per-item typed PDFMarkdownError
+    evidence_requirement: page evidence locators available per output
+    required_tests:
+      - contract
+      - fake batch test
+    implementation_status: contract_only
+  pdf.extract_figures:
+    tool_name: pdf.extract_figures
+    namespace: pdf
+    input_model: PDFFigureExtractInput
+    output_model: PDFFigureExtractOutput
+    cache_behavior: writes local asset metadata cache under pdf/assets with hashed source identity
+    network_behavior: none
+    error_behavior: typed unsupported or extraction error
+    evidence_requirement: figure provenance required with source PDF, page, and optional bbox
+    required_tests:
+      - contract
+      - fixture fake test
+      - provenance metadata test
+      - paper.figure_register integration contract
+    implementation_status: contract_only
+  pdf.extract_tables:
+    tool_name: pdf.extract_tables
+    namespace: pdf
+    input_model: PDFTableExtractInput
+    output_model: PDFTableExtractOutput
+    cache_behavior: writes local table metadata cache under pdf/tables with hashed source identity
+    network_behavior: none
+    error_behavior: typed unsupported or extraction error
+    evidence_requirement: table provenance required with source PDF, page, and optional bbox
+    required_tests:
+      - contract
+      - fixture fake test
+      - markdown or csv serialization test
+      - vault.ingest_source integration contract
+    implementation_status: contract_only
+  pdf.ocr_pages:
+    tool_name: pdf.ocr_pages
+    namespace: pdf
+    input_model: PDFOCRPagesInput
+    output_model: PDFOCRPagesOutput
+    cache_behavior: writes OCR result cache when enabled
+    network_behavior: adapterized; tests mocked; disabled in Phase A
+    error_behavior: typed unsupported or adapter error
+    evidence_requirement: page evidence locators required
+    required_tests:
+      - contract
+      - mocked adapter test
+    implementation_status: contract_only
+  pdf.sectionize:
+    tool_name: pdf.sectionize
+    namespace: pdf
+    input_model: PDFSectionizeInput
+    output_model: PDFSectionizeOutput
+    cache_behavior: derived markdown section cache
+    network_behavior: none
+    error_behavior: typed parsing error
+    evidence_requirement: section-to-page map and section tree evidence locators required
+    required_tests:
+      - contract
+      - section heading fixture
+      - section tree fixture
+      - page map compatibility regression
+    implementation_status: contract_only
+  pdf.cache_lookup:
+    tool_name: pdf.cache_lookup
+    namespace: pdf
+    input_model: PDFCacheLookupInput
+    output_model: PDFMarkdownOutput
+    cache_behavior: read CacheManager pdf/markdown namespace
+    network_behavior: none
+    error_behavior: miss returns null or typed cache miss by wrapper
+    evidence_requirement: none
+    required_tests:
+      - cache lookup hit
+      - cache lookup miss
+    implementation_status: implemented_minimal
+  pdf.markdown_content:
+    tool_name: pdf.markdown_content
+    namespace: pdf
+    input_model: PDFMarkdownContentInput
+    output_model: PDFMarkdownContentOutput
+    cache_behavior: read CacheManager pdf/markdown namespace and markdown file
+    network_behavior: none
+    error_behavior: typed cache miss or unreadable markdown file
+    evidence_requirement: page evidence locators available through cached output
+    required_tests:
+      - cached content read
+    implementation_status: implemented_minimal
+  PDFToolStatus:
+    values: [ok,error]
+  PDFErrorCode:
+    values: [invalid_pdf,missing_file,cache_miss,converter_unavailable,unsupported]
+  PDFMarkdownError:
+    required: [code, message]
+    fields:
+      code: PDFErrorCode
+      message: string
+  PDFInspectInput:
+    required: [pdf_path]
+    fields:
+      pdf_path: local_path
+  PDFInspectOutput:
+    required: [status, pdf_path, exists, warnings]
+    fields:
+      status: PDFToolStatus
+      pdf_path: local_path
+      exists: boolean
+      title: string?
+      page_count: integer?
+      warnings: list[string]
+      error: PDFMarkdownError?
+  PDFMarkdownInput:
+    required: [pdf_path]
+    fields:
+      pdf_path: local_path
+      output_dir: local_path?
+      force: boolean
+  PDFMarkdownOutput:
+    required: [title, markdown_path, markdown_chars, converter_used, assets, page_map_path, quality_score, warnings, cache_hit]
+    fields:
+      status: PDFToolStatus
+      title: string
+      markdown_path: local_path
+      markdown_chars: integer
+      converter_used: string
+      assets: list[local_path]
+      page_map_path: local_path
+      quality_score: float
+      warnings: list[string]
+      cache_hit: boolean
+      error: PDFMarkdownError?
+      quality_report_path: local_path?
+      section_tree_path: local_path?
+  PDFBatchMarkdownInput:
+    required: [pdf_paths]
+    fields:
+      pdf_paths: list[local_path]
+      output_dir: local_path?
+      force: boolean
+  PDFBatchMarkdownOutput:
+    required: [items]
+    fields:
+      items: list[PDFMarkdownOutput]
+  PDFCacheLookupInput:
+    required: [pdf_path]
+    fields:
+      pdf_path: local_path
+  PDFMarkdownContentInput:
+    required: [pdf_path]
+    fields:
+      pdf_path: local_path
+  PDFMarkdownContentOutput:
+    required: [status]
+    fields:
+      status: PDFToolStatus
+      markdown: string?
+      output: PDFMarkdownOutput?
+      error: PDFMarkdownError?
+  PdfMarkdownRequest:
+    required: [source, options]
+    fields:
+      source: PdfSource
+      options: PdfMarkdownOptions
+      dry_run: boolean
+  PdfSource:
+    required: [source_id, uri]
+    fields:
+      source_id: string
+      uri: string
+      sha256: string?
+  PdfMarkdownOptions:
+    required: [route]
+    fields:
+      route: enum[pymupdf_local]
+      include_page_markers: boolean
+      extract_images: boolean
+      max_pages: integer?
+  PdfMarkdownResult:
+    required: [source_id, pages, route, warnings]
+    fields:
+      source_id: string
+      pages: list[MarkdownPage]
+      route: enum[pymupdf_local]
+      warnings: list[string]
+      metadata: object
+  MarkdownPage:
+    required: [page_number, markdown]
+    fields:
+      page_number: integer
+      markdown: string
+      evidence_locator: string
+  PDFAssetKind:
+    values: [figure,table,page_image,other]
+  PDFAssetRecord:
+    required: [asset_id, kind, source_pdf_sha256, page_number, output_path]
+    fields:
+      asset_id: string
+      kind: PDFAssetKind
+      source_pdf_sha256: string
+      page_number: integer
+      output_path: local_path
+      bbox: list[float]?
+      caption: string?
+      confidence: float?
+      warnings: list[string]
+  PDFTableRecord:
+    required: [table_id, source_pdf_sha256, page_number]
+    fields:
+      table_id: string
+      source_pdf_sha256: string
+      page_number: integer
+      markdown: string?
+      csv_path: local_path?
+      rows: list[object]
+      bbox: list[float]?
+      confidence: float?
+      warnings: list[string]
+  PDFSectionNode:
+    required: [section_id, title, level, page_start, page_end]
+    fields:
+      section_id: string
+      title: string
+      level: integer
+      page_start: integer
+      page_end: integer
+      parent_id: string?
+      child_ids: list[string]
+      evidence_locator: string?
+      confidence: float?
+  PDFQualityReportV2:
+    required: [score, text_coverage, page_map_completeness, warnings]
+    fields:
+      score: float
+      text_coverage: float
+      section_confidence: float?
+      page_map_completeness: float
+      figure_confidence: float?
+      table_confidence: float?
+      empty_page_ratio: float?
+      warning_severity: object
+      warnings: list[string]
+  PDFFigureExtractInput:
+    required: [pdf_path]
+    fields:
+      pdf_path: local_path
+      output_dir: local_path?
+      route: enum[pymupdf,pdfplumber,marker_optional,mineru_optional]
+  PDFFigureExtractOutput:
+    required: [status, assets, warnings]
+    fields:
+      status: PDFToolStatus
+      assets: list[PDFAssetRecord]
+      warnings: list[string]
+      error: PDFMarkdownError?
+  PDFTableExtractInput:
+    required: [pdf_path]
+    fields:
+      pdf_path: local_path
+      output_dir: local_path?
+      route: enum[pymupdf,pdfplumber,marker_optional,mineru_optional]
+  PDFTableExtractOutput:
+    required: [status, tables, warnings]
+    fields:
+      status: PDFToolStatus
+      tables: list[PDFTableRecord]
+      warnings: list[string]
+      error: PDFMarkdownError?
+  PDFSectionizeInput:
+    required: [markdown_path, page_map_path]
+    fields:
+      markdown_path: local_path
+      page_map_path: local_path
+  PDFSectionizeOutput:
+    required: [status, sections, warnings]
+    fields:
+      status: PDFToolStatus
+      sections: list[PDFSectionNode]
+      section_tree_path: local_path?
+      warnings: list[string]
+      error: PDFMarkdownError?
+rules:
+  - Phase A only supports local PDF paths for implemented tools.
+  - Phase A uses PyMuPDF through a replaceable converter adapter.
+  - Phase B plans figure extraction, table extraction, section tree, page map upgrades, and quality score v2.
+  - Heavy OCR remains future work and must not enter the default dependency path.
+  - Complex layout understanding, figure extraction, and table extraction remain contract-only unless explicitly implemented later.
+  - PDF assets should be registerable through paper.figure_register and ingestible through vault.ingest_source after implementation.
+  - Real external APIs are out of scope.

@@ -1,0 +1,15 @@
+mode: fake-service dry run
+network: disabled
+requires_api_keys: false
+services:
+  paper_service: fake
+  pdf_markdown_service: fake
+  semantic_graph_service: fake
+  vault_service: disabled
+  context_service: disabled
+expected_artifacts:
+  - ResearchBrief
+  - LiteratureSurveyArtifact
+  - GapReport
+  - HypothesisPortfolio
+  - ExperimentPlan

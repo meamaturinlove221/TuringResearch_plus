@@ -1,0 +1,10 @@
+flowchart TD
+    input[("Input artifacts")]
+    tool(["campaign.runner"])
+    quality{"BudgetGate passes"}
+    failure{{"StateLedger blocker"}}
+    output[("Output artifacts")]
+    input --> tool
+    tool --> quality
+    quality -- passed --> output
+    quality -- failed --> failure

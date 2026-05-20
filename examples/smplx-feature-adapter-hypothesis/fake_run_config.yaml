@@ -1,0 +1,20 @@
+mode: fake-service dry run
+network: disabled
+requires_api_keys: false
+services:
+  hypothesis_service: fake
+  ideation_service: deterministic_fake
+  convergence_service: deterministic_fake
+  stress_service: deterministic_fake
+source_hygiene:
+  allowed_sources:
+    - public README
+    - user-owned notes
+  blocked_sources:
+    - private repo content
+    - leaked roadmap
+expected_artifacts:
+  - HypothesisPortfolio
+  - IdeaPortfolio
+  - DecisionReport
+  - StressTestReport

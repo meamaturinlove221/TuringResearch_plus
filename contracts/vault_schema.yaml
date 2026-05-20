@@ -1,0 +1,154 @@
+name: tulingresearch.vault_schema
+version: 0.3.0
+status: draft
+description: Vault MCP namespace and memory schema contracts for TulingResearch Plus.
+mcp_server: tulingresearch-plus
+project: TulingResearch Plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+tools:
+  vault.search:
+    tool_name: vault.search
+    namespace: vault
+    input_model: VaultSearchInput
+    output_model: VaultSearchOutput
+    cache_behavior: reads local markdown vault index
+    network_behavior: none
+    error_behavior: typed vault schema or storage error
+    evidence_requirement: search results preserve page evidence
+    required_tests: [search page]
+    implementation_status: implemented_minimal
+  vault.ingest_source:
+    tool_name: vault.ingest_source
+    namespace: vault
+    input_model: VaultIngestSourceInput
+    output_model: VaultPage
+    cache_behavior: writes local markdown source page
+    network_behavior: none
+    error_behavior: typed vault schema or storage error
+    evidence_requirement: source pages keep EvidenceRef
+    required_tests: [create page]
+    implementation_status: implemented_minimal
+  vault.compile_page:
+    tool_name: vault.compile_page
+    namespace: vault
+    input_model: VaultPage
+    output_model: local_path
+    cache_behavior: writes local markdown page
+    network_behavior: none
+    error_behavior: typed vault schema or storage error
+    evidence_requirement: page evidence preserved in frontmatter
+    required_tests: [create page]
+    implementation_status: implemented_minimal
+  vault.add_edge:
+    tool_name: vault.add_edge
+    namespace: vault
+    input_model: VaultEdge
+    output_model: VaultEdge
+    cache_behavior: writes local edges.json graph
+    network_behavior: none
+    error_behavior: duplicate edge rejected
+    evidence_requirement: supported_by edges require evidence
+    required_tests: [add edge, duplicate edge rejected]
+    implementation_status: implemented_minimal
+  vault.query_graph:
+    tool_name: vault.query_graph
+    namespace: vault
+    input_model: VaultQueryGraphInput
+    output_model: VaultQueryGraphOutput
+    cache_behavior: reads local edges.json graph
+    network_behavior: none
+    error_behavior: typed vault schema or storage error
+    evidence_requirement: graph traversal preserves edge evidence in audit
+    required_tests: [graph traversal]
+    implementation_status: implemented_minimal
+  vault.graph_stats:
+    tool_name: vault.graph_stats
+    namespace: vault
+    input_model: VaultGraphStatsInput
+    output_model: VaultGraphStats
+    cache_behavior: reads local markdown pages and edges
+    network_behavior: none
+    error_behavior: typed vault schema or storage error
+    evidence_requirement: none
+    required_tests: [orphan detection]
+    implementation_status: implemented_minimal
+  vault.lint:
+    tool_name: vault.lint
+    namespace: vault
+    input_model: VaultLintInput
+    output_model: list[VaultLintIssue]
+    cache_behavior: reads local markdown pages and edges
+    network_behavior: none
+    error_behavior: lint issues returned as data
+    evidence_requirement: lint checks evidence-linked graph health
+    required_tests: [orphan detection, lint missing frontmatter]
+    implementation_status: implemented_minimal
+  vault.edge_audit:
+    tool_name: vault.edge_audit
+    namespace: vault
+    input_model: VaultEdgeAuditInput
+    output_model: list[VaultEdge]
+    cache_behavior: reads local edges.json graph
+    network_behavior: none
+    error_behavior: typed vault schema or storage error
+    evidence_requirement: edge evidence returned for audit
+    required_tests: [add edge]
+    implementation_status: implemented_minimal
+types:
+  VaultEntityType:
+    values: [source,concept,entity,claim,relation,question,evidence,failure,topic]
+  VaultEdgeType:
+    values:
+      - component_of
+      - instance_of
+      - supported_by
+      - contradicts
+      - supersedes
+      - derived_from
+      - addresses
+      - raises
+      - failed_for
+      - related_to
+  VaultPage:
+    required: [page_id, title, entity_type]
+    fields:
+      page_id: string
+      title: string
+      entity_type: VaultEntityType
+      body: string
+      evidence: list[EvidenceRef]
+      artifact_id: string?
+      tags: list[string]
+      metadata: object
+  VaultEdge:
+    required: [source_id, target_id, edge_type]
+    fields:
+      source_id: string
+      target_id: string
+      edge_type: VaultEdgeType
+      evidence: list[EvidenceRef]
+      metadata: object
+  VaultSearchResult:
+    required: [page_id, title, score, path]
+    fields:
+      page_id: string
+      title: string
+      score: float
+      path: local_path
+rules:
+  - ResearchArtifact can be ingested as claim and evidence vault pages.
+  - Claim pages must connect to evidence pages with supported_by edges.
+  - Duplicate edges must be rejected.
+  - Orphan pages must be lint-detectable.
+  - Vault search uses a simple replaceable BM25-like local index by default.
+  - Vault never performs real network calls.

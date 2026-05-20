@@ -1,0 +1,9 @@
+{
+  "example_id": "citation-graph-demo",
+  "seed_paper_ids": ["seed-vggt-1"],
+  "direction": "both",
+  "depth_limit": 1,
+  "max_nodes": 5,
+  "recommendation_limit": 2,
+  "open_access_only": false
+}

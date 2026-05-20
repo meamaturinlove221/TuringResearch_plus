@@ -1,0 +1,57 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pytest:
+    name: pytest py${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install package
+        run: python -m pip install -e ".[dev,pdf,mcp]"
+
+      - name: Run unit tests
+        run: python -m pytest tests/unit
+
+      - name: Run contract tests
+        run: python -m pytest tests/contract
+
+      - name: Run workflow dry-run tests
+        run: python -m pytest tests/workflow
+
+      - name: Run full default suite
+        run: python -m pytest
+
+  examples:
+    name: examples fake mode
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install package
+        run: python -m pip install -e ".[dev,pdf]"
+
+      - name: Run example dry-runs
+        run: python -m pytest tests/workflow -m "not live and not manual"

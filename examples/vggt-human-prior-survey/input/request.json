@@ -1,0 +1,10 @@
+{
+  "example_id": "vggt-human-prior-survey",
+  "topic": "human priors for VGGT-style reconstruction",
+  "strategy": "scoping_survey",
+  "year_range": [2021, 2026],
+  "min_papers": 3,
+  "full_text_ratio": 0.67,
+  "seed_papers": ["vggt-seed-1", "human-prior-seed-1"],
+  "research_goal": "Identify evidence-backed gaps for injecting human priors into geometry reconstruction workflows."
+}

@@ -1,0 +1,8 @@
+{
+  "example_id": "smplx-feature-adapter-hypothesis",
+  "topic": "SMPL-X feature adapter for reconstruction workflows",
+  "source_hygiene": "public_or_user_owned",
+  "hypothesis_prompt": "A compact adapter can improve body-prior alignment without copying proprietary implementation details.",
+  "strategic_fit": 0.86,
+  "constraints": ["clean-room implementation", "fake-service dry run", "no private source material"]
+}

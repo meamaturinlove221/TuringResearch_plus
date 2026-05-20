@@ -1,0 +1,12 @@
+flowchart TD
+    idea[("Source IdeaCard")]
+    hygiene{"Source Hygiene Gate"}
+    capsule[("Feature Capsule")]
+    contract["Contract Review"]
+    tests{"Unit Tests"}
+    blocked{{"Do not implement unsafe source"}}
+    idea --> hygiene
+    hygiene -- passed --> capsule
+    hygiene -- blocked --> blocked
+    capsule --> contract
+    contract --> tests

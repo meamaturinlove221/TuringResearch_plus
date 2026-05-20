@@ -1,0 +1,192 @@
+name: tulingresearch.core_tools
+version: 0.2.0
+status: draft
+description: Core MCP namespace contracts for TulingResearch Plus.
+mcp_server: tulingresearch-plus
+project: TulingResearch Plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+services:
+  CoreToolService:
+    boundary: service_protocol
+    methods:
+      health:
+        input: CoreHealthCheckInput
+        output: CoreHealthCheckOutput
+      describe_tools:
+        input: {}
+        output:
+          tools: list[CoreToolDescriptor]
+tools:
+  core.health_check:
+    tool_name: core.health_check
+    namespace: core
+    input_model: CoreHealthCheckInput
+    output_model: CoreHealthCheckOutput
+    cache_behavior: none
+    network_behavior: none
+    error_behavior: errors use TulingResearchError
+    evidence_requirement: none
+    required_tests:
+      - contract: status ok/degraded/unavailable
+    implementation_status: implemented_minimal
+  core.paper_searching:
+    tool_name: core.paper_searching
+    namespace: core
+    input_model: PaperSearchingInput
+    output_model: PaperSearchResult
+    cache_behavior: read_write through adapter cache
+    network_behavior: adapterized; tests mocked; no real network in unit tests
+    error_behavior: typed unavailable or adapter error
+    evidence_requirement: EvidenceRef required for returned claims
+    required_tests:
+      - contract
+      - mocked adapter test
+    implementation_status: contract_only
+  core.paper_fetching:
+    tool_name: core.paper_fetching
+    namespace: core
+    input_model: PaperFetchingInput
+    output_model: PaperFetchResult
+    cache_behavior: read_write through adapter cache
+    network_behavior: adapterized; tests mocked; no real network in unit tests
+    error_behavior: typed unavailable or adapter error
+    evidence_requirement: EvidenceRef required for fetched metadata claims
+    required_tests:
+      - contract
+      - mocked adapter test
+    implementation_status: contract_only
+  core.paper_content:
+    tool_name: core.paper_content
+    namespace: core
+    input_model: PaperContentInput
+    output_model: PaperContentOutput
+    cache_behavior: local cache read for markdown content
+    network_behavior: none
+    error_behavior: cache miss returns typed error
+    evidence_requirement: EvidenceRef required when content is cited downstream
+    required_tests:
+      - local cache hit
+      - local cache miss
+    implementation_status: implemented_minimal
+  core.paper_reference:
+    tool_name: core.paper_reference
+    namespace: core
+    input_model: PaperReferenceInput
+    output_model: PaperReferenceOutput
+    cache_behavior: read cache or adapter cache
+    network_behavior: adapterized; tests mocked
+    error_behavior: typed unavailable or adapter error
+    evidence_requirement: EvidenceRef required for references
+    required_tests:
+      - contract
+      - mocked adapter test
+    implementation_status: contract_only
+  core.paper_reading:
+    tool_name: core.paper_reading
+    namespace: core
+    input_model: PaperReadingInput
+    output_model: PaperReadingOutput
+    cache_behavior: read cache or derived artifact cache
+    network_behavior: none by default; adapters mocked if used
+    error_behavior: typed cache or parsing error
+    evidence_requirement: EvidenceRef required for reading notes
+    required_tests:
+      - contract
+      - fake-service test
+    implementation_status: contract_only
+  core.web_fetching:
+    tool_name: core.web_fetching
+    namespace: core
+    input_model: WebFetchingInput
+    output_model: WebFetchResult
+    cache_behavior: read_write through adapter cache
+    network_behavior: adapterized; tests mocked; no real network in unit tests
+    error_behavior: typed unavailable or adapter error
+    evidence_requirement: EvidenceRef required for fetched source facts
+    required_tests:
+      - contract
+      - mocked adapter test
+    implementation_status: contract_only
+  core.web_content:
+    tool_name: core.web_content
+    namespace: core
+    input_model: WebContentInput
+    output_model: WebContentOutput
+    cache_behavior: local cache read for markdown content
+    network_behavior: none
+    error_behavior: cache miss returns typed error
+    evidence_requirement: EvidenceRef required when content is cited downstream
+    required_tests:
+      - local cache hit
+      - local cache miss
+    implementation_status: implemented_minimal
+  core.session_export:
+    tool_name: core.session_export
+    namespace: core
+    input_model: SessionExportInput
+    output_model: SessionExportOutput
+    cache_behavior: writes local session export artifact
+    network_behavior: none
+    error_behavior: typed filesystem error
+    evidence_requirement: EvidenceRef preserved in exported artifacts
+    required_tests:
+      - contract
+      - filesystem fake test
+    implementation_status: contract_only
+  core.session_import:
+    tool_name: core.session_import
+    namespace: core
+    input_model: SessionImportInput
+    output_model: SessionImportOutput
+    cache_behavior: reads local session export artifact
+    network_behavior: none
+    error_behavior: typed filesystem or schema error
+    evidence_requirement: EvidenceRef preserved from imported artifacts
+    required_tests:
+      - contract
+      - filesystem fake test
+    implementation_status: contract_only
+  core.session_list:
+    tool_name: core.session_list
+    namespace: core
+    input_model: SessionListInput
+    output_model: SessionListOutput
+    cache_behavior: reads local session registry
+    network_behavior: none
+    error_behavior: missing registry returns empty list
+    evidence_requirement: none
+    required_tests:
+      - empty registry test
+    implementation_status: implemented_minimal
+  CoreToolDescriptor:
+    required: [name, description, input_schema, output_schema]
+    fields:
+      name: string
+      description: string
+      input_schema: object
+      output_schema: object
+  CoreHealthCheckInput:
+    required: []
+    fields: {}
+  CoreHealthCheckOutput:
+    required: [status, package, version, tools]
+    fields:
+      status: enum[ok,degraded,unavailable]
+      package: string
+      version: string
+      tools: list[string]
+rules:
+  - Plus workflows depend on Core service protocols, not Core internals.
+  - External APIs used by Core tools must be adapterized.
+  - Network tests must be mocked.
+  - Round 3 defines paper_searching, paper_fetching, web_fetching, graph-facing lookups, and session import/export contracts only; complex implementations are out of scope.

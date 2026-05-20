@@ -1,0 +1,8 @@
+mode: fake adapter
+network: disabled
+requires_api_keys: false
+adapter: fake_semantic_graph
+expected_artifacts:
+  - CitationGraph
+  - recommended_next_reads
+  - frontier nodes
