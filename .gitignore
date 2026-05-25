@@ -25,10 +25,17 @@ env/
 .env
 .env.*
 !.env.example
+.codex/config.toml
 private_data/
 secrets/
 *.pem
 *.key
+examples/vggt-human-prior-survey/local_project_links.yaml
+examples/vggt-human-prior-survey/**/*.npz
+examples/vggt-human-prior-survey/**/*.ply
+examples/vggt-human-prior-survey/**/*.zip
+examples/vggt-human-prior-survey/raw_data/
+examples/vggt-human-prior-survey/smplx_models/
 
 # Local caches and generated smoke output
 .cache/
