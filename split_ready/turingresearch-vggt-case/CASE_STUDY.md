@@ -1,57 +1,27 @@
 # VGGT Human Prior Dogfooding Case Study
 
-Status: public-safe draft / requires human review.
+Status: public-safe draft / requires human review
+Round: Optional 338.5 integrated on newer cloud baseline
 
-This case study demonstrates how TuringResearch organized a VGGT
-human-prior research workflow. It is not a VGGT experiment source repository
-and does not claim experiment success.
+This split-ready draft describes how TuringResearch Plus organizes a VGGT human-prior research workflow. It is not a VGGT experiment source repository, not a data package, and does not claim experiment success.
+
+The main TuringResearch Plus repository remains flagship. This split case is a small, reviewable artifact for explaining the VGGT dogfooding workflow and claim-safety boundaries.
 
 ## Problem Background
 
-The VGGT dogfooding line explored how human-prior structure could be organized
-for future VGGT-side experiment planning. The safest public framing is the
-shift from direct SMPL-X replacement toward SMPL-X feature encoding for VGGT.
+The safest public framing is the shift from direct SMPL-X replacement toward SMPL-X feature encoding for VGGT. This case study explains the workflow and evidence controls around that shift.
 
-This draft is public-demo material, not a final research result.
+## Evidence Summary
 
-## Why TuringResearch Was Useful
-
-TuringResearch organized evidence states, artifacts, visual readiness, routes,
-related work, advisor notes, and public communication boundaries into reviewable
-artifacts.
-
-It kept planned routes separate from observed engineering context and made
-missing evidence visible before public-facing writing.
-
-## Route Changes
-
-- The route moved away from direct replacement toward feature encoding and
-  hard-gated experiment planning.
-- V260 remains hard-blocked.
-- Modal SparseConv3D remains planned / requires-real-experiment.
-- V999-SparseConv3D remains not-enough-evidence.
-
-## Evidence Management
-
-Evidence buckets distinguish observed engineering context, local-observed
-context, planned routes, hard-blocked states, and not-enough-evidence states.
-
-No workspace index, dashboard, or graph view is treated as evidence by itself.
-
-## Failures And Blockers
-
-The dogfooding workflow records missing assets, fallback-only paths,
-insufficient visual proof, and not-enough-evidence states.
-
-Failures are presented as research learning, not as successful results.
-
-## Advisor Pack
-
-Advisor-ready material can state what is organized, what is missing, and what
-should be run next.
-
-The recommended advisor ask is whether the planned route and hard gates are
-acceptable before larger experiment investment.
+| Evidence area | Status | Public-safe summary |
+| --- | --- | --- |
+| Case-study workflow | observed | TuringResearch Plus generated public-safe case-study documentation. |
+| Local scan summaries | local-observed | Local scan metadata informs the draft but does not become public observed evidence without review. |
+| VGGT report metadata | local-observed | Lightweight report and manifest evidence existed for selected work streams. |
+| Visual inventory metadata | local-observed | Visual evidence classes were inventoried without copying images or pointclouds. |
+| SparseConv3D success | requires-human-review | The current evidence does not support a success claim. |
+| Advisor approval | requires-human-review | No advisor approval is claimed. |
+| Public release readiness | requires-human-review | This directory is a draft that needs human approval. |
 
 ## What Remains Human Work
 
@@ -60,17 +30,15 @@ acceptable before larger experiment investment.
 - Interpret failures and approve final claims.
 - Review privacy, license, and publication boundaries before release.
 
-## What Not To Claim
+## Exclusions
 
-- Do not claim SparseConv3D success.
-- Do not describe planned routes as executed or observed.
-- Do not claim final paper conclusions.
-- Do not include private local paths, restricted datasets, model files,
-  non-public advisor notes, or non-public artifacts.
+- No raw data.
+- No SMPL-X model files.
+- No private paths.
+- No huge artifacts.
+- No VGGT experiment archives.
+- No unsupported success claims.
 
-## Included Safety Reports
+## Release Posture
 
-- Redaction report: no public skeleton redactions required.
-- Claim safety report: no unsupported experiment claims are included.
-
-Human review remains required.
+This case is ready for human review, not public release. A maintainer must review the claim safety report and privacy report before any package is published or linked externally.

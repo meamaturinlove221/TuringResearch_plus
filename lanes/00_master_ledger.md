@@ -30,8 +30,11 @@ This ledger coordinates all single-window lane work for TuringResearch Plus.
 | 12 | `lanes/12_rc_final_verification.md` | complete | Verified v0.1.0 release candidate gates and GO decision. |
 | 13 | `lanes/13_v0.2_planning.md` | complete | Broke v0.2.0 roadmap into backlog, milestones, and risks. |
 | 337.5 | `lanes/337_5_vggt_local_freshness_scan.md` | complete | Refreshed read-only VGGT local freshness scan metadata for public split review. |
+| 338.5 | `lanes/338_5_vggt_case_study_refresh.md` | complete | Refreshed public-safe VGGT case study and split-ready draft from local scan metadata. |
 
 ## Latest Update
+
+2026-05-25: Optional Round 338.5 migrated VGGT Case Study Refresh from Local Scan onto the newer TuringResearch Plus cloud baseline. Read the latest local scan summary, artifact index, missing-items report, evidence ledger, and visual inventory; refreshed public-safe case-study draft, redaction report, claim-safety report, and `split_ready/turingresearch-vggt-case` documentation package; kept SparseConv3D success, advisor approval, promotion, and public release readiness as `requires-human-review`; and kept the main TuringResearch Plus repository as flagship. No raw data, SMPL-X model files, private paths, huge artifacts, VGGT experiment bundles, or unsupported claims were added. Validation from the original round: case study/release tests passed with 11 tests, privacy/compliance gate passed, and `git diff --check` passed with only an LF-to-CRLF working-copy warning.
 
 2026-05-25: Optional Round 337.5 migrated VGGT Local Freshness Scan metadata onto the newer TuringResearch Plus cloud baseline. Refreshed `examples/vggt-human-prior-survey/local_scan_summary.md`, `local_scan_artifact_index.md`, `local_scan_missing_items.md`, `local_scan_evidence_ledger.json`, and `local_scan_visual_inventory.md`; added `docs/vggt-local-freshness-scan-v1.5.md` and `lanes/337_5_vggt_local_freshness_scan.md`; kept Modal/spconv success, advisor readiness, promotion, and public split update decisions as `requires-human-review`; and preserved the no VGGT experiment, no raw data, no SMPL-X model file, no huge artifact, and no fake-result boundary. Validation from the original round: focused workflow/release tests passed with 11 tests, privacy gate passed, and `git diff --check` passed with only LF-to-CRLF working-copy warnings.
 
