@@ -29,8 +29,11 @@ This ledger coordinates all single-window lane work for TuringResearch Plus.
 | 11 | `lanes/11_skills_lockdown.md` | complete | Locked repo-scoped skills before release freeze. |
 | 12 | `lanes/12_rc_final_verification.md` | complete | Verified v0.1.0 release candidate gates and GO decision. |
 | 13 | `lanes/13_v0.2_planning.md` | complete | Broke v0.2.0 roadmap into backlog, milestones, and risks. |
+| 337.5 | `lanes/337_5_vggt_local_freshness_scan.md` | complete | Refreshed read-only VGGT local freshness scan metadata for public split review. |
 
 ## Latest Update
+
+2026-05-25: Optional Round 337.5 migrated VGGT Local Freshness Scan metadata onto the newer TuringResearch Plus cloud baseline. Refreshed `examples/vggt-human-prior-survey/local_scan_summary.md`, `local_scan_artifact_index.md`, `local_scan_missing_items.md`, `local_scan_evidence_ledger.json`, and `local_scan_visual_inventory.md`; added `docs/vggt-local-freshness-scan-v1.5.md` and `lanes/337_5_vggt_local_freshness_scan.md`; kept Modal/spconv success, advisor readiness, promotion, and public split update decisions as `requires-human-review`; and preserved the no VGGT experiment, no raw data, no SMPL-X model file, no huge artifact, and no fake-result boundary. Validation from the original round: focused workflow/release tests passed with 11 tests, privacy gate passed, and `git diff --check` passed with only LF-to-CRLF working-copy warnings.
 
 2026-05-20: Round 33 planned TuringResearch Plus PDF Markdown Phase B. Added `docs/pdf_phase_b_plan.md`, `docs/pdf_converter_matrix.md`, and `tests/fixtures/pdf/README.md`; updated `contracts/pdf_markdown.yaml`, `lanes/03_pdf_markdown.md`, and `lanes/13_v0.2_planning.md`; planned `pdf.extract_figures`, `pdf.extract_tables`, `pdf.sectionize`, page map compatibility, section tree, quality score v2, PDF assets registration, `paper.figure_register` integration, and `vault.ingest_source` integration; and kept OCR, heavy dependencies, external services, and contract-only tools out of implementation scope. Validation: contract/name focused checks pass with 10 tests, PDF focused tests pass with 9 tests, `python -m ruff check .` passes, `python -m pytest tests/contract` passes with 72 tests, `python -m mypy src` passes, and forbidden naming scan has no hits.
 

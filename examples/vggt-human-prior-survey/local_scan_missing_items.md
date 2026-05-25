@@ -1,17 +1,34 @@
-# VGGT Local Reader Missing Items
+# VGGT Local Scan Missing Items
 
+Round: Optional 337.5
+Date: 2026-05-25
 
+## Missing Or Private Inputs
 
-Missing items are non-fatal in local co-location mode.
-
-
-
-| Item | Status | Notes |
-
+| Item | Status | Impact |
 | --- | --- | --- |
+| `examples/vggt-human-prior-survey/local_project_links.yaml` | private/missing | Private config is intentionally not committed. |
+| exact local VGGT path inventory | redacted | Current cloud baseline keeps public-safe summaries instead of private paths. |
+| public release approval | requires-human-review | Split readiness cannot be promoted automatically. |
 
-| `D:/TuringResearch_plus/examples/vggt-human-prior-survey/local_project_links.yaml` | missing | Missing private local_project_links.yaml; using the example config only to generate dry-run guidance. |
+## Missing Or Unconfirmed VGGT Evidence
 
-| `examples/vggt-human-prior-survey/local_scan_evidence_ledger.json` | missing | Round 33.6 local evidence intake is incomplete; V120/V121 cannot be local-observed. |
+| Claim or marker | Status | Notes |
+| --- | --- | --- |
+| Modal real spconv backend success | requires-human-review | V120/V121-related files exist, but this scan did not confirm backend success. |
+| Advisor final approval | requires-human-review | No local file should be interpreted as final advisor acceptance. |
+| Promotion decision | requires-human-review | Local reports distinguish review-ready or ready-not-promoted states from promotion. |
+| True public split readiness | requires-human-review | Requires public safety review, claim safety review, and maintainer approval. |
 
-| `examples/vggt-human-prior-survey/local_scan_visual_inventory.md` | missing | Round 33.6 local visual intake is incomplete; true pointcloud closeup readiness requires-human-review. |
+## Current Cloud Baseline Note
+
+The newer TuringResearch Plus cloud branch includes public case-study builder docs, original-repo replication docs, and split-ready/manual pack scaffolding. Those files make the repo more complete than the original Round 337.5 scan-time branch, but they do not upgrade any local-only claim to public observed status.
+
+## Out Of Scope By Policy
+
+- planned: no VGGT experiment execution.
+- planned: no VGGT code execution.
+- planned: no raw data copy.
+- planned: no SMPL-X model file copy.
+- planned: no huge npz, ply, zip, or VGGT bundle copy.
+- planned: no external child repository creation or push.

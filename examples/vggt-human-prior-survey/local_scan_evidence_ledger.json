@@ -1,0 +1,164 @@
+{
+  "schema_version": "local_scan_evidence_ledger.v1.5",
+  "round": "Optional 337.5",
+  "generated_date": "2026-05-25",
+  "mode": "local-colocation-read-only-freshness-scan",
+  "project": "TuringResearch Plus VGGT dogfooding",
+  "safety": {
+    "no_vggt_code_executed": true,
+    "no_vggt_experiment_run": true,
+    "no_vggt_files_modified": true,
+    "no_vggt_files_deleted": true,
+    "no_raw_data_copied": true,
+    "no_smplx_model_files_copied": true,
+    "no_huge_npz_copied": true,
+    "network_used_for_scan": false,
+    "fake_result_produced": false
+  },
+  "root_status": [
+    {
+      "evidence_ref": "redacted-local-vggt-parent",
+      "status": "local-observed",
+      "evidence_kind": "directory-presence"
+    },
+    {
+      "evidence_ref": "redacted-local-main-checkout",
+      "status": "local-observed",
+      "evidence_kind": "directory-presence"
+    },
+    {
+      "evidence_ref": "redacted-local-feature-adapter-checkout",
+      "status": "local-observed",
+      "evidence_kind": "directory-presence"
+    },
+    {
+      "evidence_ref": "redacted-local-vggt-live-highres-crop",
+      "status": "local-observed",
+      "evidence_kind": "directory-presence"
+    }
+  ],
+  "missing_inputs": [
+    {
+      "path": "examples/vggt-human-prior-survey/local_project_links.yaml",
+      "status": "missing",
+      "impact": "Private local config absent; fallback candidate roots used."
+    },
+    {
+      "path": "examples/vggt-human-prior-survey/local_project_links.example.yaml",
+      "status": "missing",
+      "impact": "Example fallback absent on this branch."
+    },
+    {
+      "path": "docs/vggt-public-case-study-builder.md",
+      "status": "missing",
+      "impact": "Cannot compare freshness against public case-study builder instructions."
+    },
+    {
+      "path": "docs/original-repo-replication-progress-report.md",
+      "status": "missing",
+      "impact": "Cannot compare freshness against original-repo replication progress."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "v600-quality-rebuild-final-status",
+      "label": "local-observed",
+      "evidence_ref": "redacted-v600-quality-rebuild-final-status",
+      "modified": "2026-05-25 01:10:21",
+      "claim_scope": "local report content says observation-verified human surface ready-not-promoted; no promotion inferred",
+      "requires_human_review": true
+    },
+    {
+      "id": "v600-completion-audit",
+      "label": "local-observed",
+      "evidence_ref": "redacted-v600-completion-audit",
+      "modified": "2026-05-25 01:10:21",
+      "claim_scope": "local audit report exists and was read as lightweight text",
+      "requires_human_review": true
+    },
+    {
+      "id": "v44-visual-pre-promotion-gate",
+      "label": "local-observed",
+      "evidence_ref": "redacted-v44-visual-pre-promotion-gate",
+      "modified": "2026-05-09 05:47:46",
+      "claim_scope": "local report claims visual pre-promotion gate pass; no advisor approval inferred",
+      "requires_human_review": true
+    },
+    {
+      "id": "v32-open3d-review",
+      "label": "local-observed",
+      "evidence_ref": "redacted-v32-open3d-review",
+      "modified": "2026-05-09 05:44:29",
+      "claim_scope": "local report references sampled point review; no pointcloud copied",
+      "requires_human_review": true
+    },
+    {
+      "id": "v900-readiness-review-not-promotion",
+      "label": "local-observed",
+      "evidence_ref": "redacted-v900-readiness-review-not-promotion",
+      "modified": "2026-05-19 12:55:44",
+      "claim_scope": "local report states readiness review ready and candidate_promoted false",
+      "requires_human_review": true
+    },
+    {
+      "id": "v930-process-modal-scan",
+      "label": "local-observed",
+      "evidence_ref": "redacted-v930-process-modal-scan",
+      "modified": "2026-05-19 12:55:44",
+      "claim_scope": "local report says no residual training or Modal worker detected at scan time",
+      "requires_human_review": true
+    },
+    {
+      "id": "v999-controller-file",
+      "label": "local-observed",
+      "evidence_ref": "redacted-v999-controller-file",
+      "modified": "2026-05-19 17:07:56",
+      "claim_scope": "controller file exists; not executed",
+      "requires_human_review": true
+    },
+    {
+      "id": "v120-goal-manifest",
+      "label": "local-observed",
+      "evidence_ref": "redacted-v120-goal-manifest",
+      "modified": "2026-05-23 23:36:23",
+      "claim_scope": "V120-series goal manifest exists; not proof of spconv backend success",
+      "requires_human_review": true
+    },
+    {
+      "id": "v121-goal-manifest",
+      "label": "local-observed",
+      "evidence_ref": "redacted-v121-goal-manifest",
+      "modified": "2026-05-22 15:28:00",
+      "claim_scope": "V121-series goal manifest exists; not proof of advisor readiness",
+      "requires_human_review": true
+    }
+  ],
+  "missing_or_unconfirmed": [
+    {
+      "id": "split-ready-case-marker",
+      "label": "missing",
+      "query": "split_ready|turingresearch-vggt-case",
+      "reason": "No explicit file-name marker found in the local VGGT scan."
+    },
+    {
+      "id": "modal-real-spconv-success",
+      "label": "requires-human-review",
+      "reason": "V120/V121 file evidence exists, but this scan did not confirm real backend success."
+    },
+    {
+      "id": "public-case-study-builder-doc",
+      "label": "missing",
+      "reason": "Required input doc is absent in this branch."
+    },
+    {
+      "id": "original-repo-replication-progress-doc",
+      "label": "missing",
+      "reason": "Required input doc is absent in this branch."
+    }
+  ],
+  "split_ready_assessment": {
+    "requested_case": "split_ready/turingresearch-vggt-case",
+    "status": "requires-human-review",
+    "reason": "Fresh local VGGT evidence exists, but no explicit split-ready case marker was observed and required public-case docs are missing."
+  }
+}
