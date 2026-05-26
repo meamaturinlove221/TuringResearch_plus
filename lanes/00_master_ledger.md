@@ -5848,3 +5848,37 @@ Validation:
 - v1.5 security/privacy and public release hygiene tests passed with 18 tests.
 - `python -m ruff check .` passed.
 - `git diff --check` passed with only LF-to-CRLF working-copy warning.
+
+## Round 370 - Split Repo URL Placeholder Policy
+
+Status: completed.
+
+Summary:
+- Added `docs/split-repo-url-placeholder-policy.md`.
+- Added `docs/split-repo-url-update-after-creation.md`.
+- Added `tests/contract/test_split_repo_url_placeholders.py`.
+- Added `lanes/348_split_repo_url_placeholder_policy.md`.
+- Locked URL placeholder rules for planned split repositories before any future
+  manual child repository creation.
+
+Rules:
+- before creation, split repo docs may only use approved placeholders;
+- fake GitHub URLs are forbidden;
+- real URLs may be inserted only after manual repository creation and human
+  approval;
+- the main README must not imply that planned split repositories already exist;
+- child README files must point back to the flagship TuringResearch repository;
+- main repo linked as flagship placeholder remains required until the real URL
+  is approved.
+
+Safety:
+- No GitHub repository was created.
+- No external child repository was pushed.
+- No real URL was inserted.
+- No fake GitHub URL was added.
+
+Validation:
+- URL placeholder and split creation pack tests passed with 18 tests.
+- v1.5 security/privacy and public release hygiene tests passed with 18 tests.
+- `python -m ruff check .` passed.
+- `git diff --check` passed with only LF-to-CRLF working-copy warning.

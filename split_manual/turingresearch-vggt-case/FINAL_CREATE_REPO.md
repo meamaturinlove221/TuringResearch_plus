@@ -34,6 +34,15 @@ Initial public-safe VGGT case study
 Do not replace this placeholder until a maintainer confirms that the external
 repository exists and the URL is real.
 
+## Flagship Link Placeholder
+
+```text
+TuringResearch main repository URL goes here after human publication approval
+```
+
+The main TuringResearch repository remains the flagship install, docs, release,
+public API, and star entry.
+
 ## Manual GitHub Creation Steps
 
 1. Review `split_ready/turingresearch-vggt-case/`.
