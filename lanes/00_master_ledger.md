@@ -6405,3 +6405,38 @@ Recommendation:
   changes before release-line integration.
 - Decide separately whether to merge or cherry-pick release handoff content into
   `main`.
+
+## Round 393 - Community Idea / Skill Intake Gate
+
+Status: completed.
+
+Summary:
+- Reviewed PR #2 community intake files from fetched git refs / `origin/main`.
+- Confirmed PR #2 is docs-only and already an ancestor of `origin/main`.
+- Confirmed current `release/v1.6.0-rc` branch does not contain `community/`.
+- Added `docs/community-idea-skill-intake-gate-report.md`.
+- Added `docs/community-contributor-onboarding.md`.
+- Added `docs/community-intake-public-readiness.md`.
+- Added `lanes/393_community_idea_skill_intake_gate.md`.
+
+Gate result:
+- `GO FOR DOCS-ONLY COMMUNITY INTAKE / NO-GO FOR CODE OR RELEASE-SURFACE CONTRIBUTIONS`.
+
+Safety checks:
+- Community PRs are Markdown-only.
+- Code changes are forbidden.
+- `src/`, `tests/`, CI, package metadata, README, changelog, and version changes
+  are forbidden for community intake PRs.
+- Secrets, raw data, private logs, model files, and unlicensed third-party
+  PDFs/images are forbidden.
+- Idea template maps to feature capsule, SOP, campaign, docs example, or
+  roadmap item.
+- Skill template maps to `.agents/skills/` after maintainer review.
+- Intake log supports contributor credit.
+
+Recommendation:
+- PR #2 is acceptable from this gate perspective.
+- Do not merge anything in this round.
+- If a friend submits first, ask for one Markdown-only idea or skill proposal
+  under `community/ideas/<github-username>/` or
+  `community/skills/<github-username>/`.
