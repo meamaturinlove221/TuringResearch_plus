@@ -5846,3 +5846,39 @@ Validation:
 - `python -m ruff check .`: passed.
 - `python -m mypy src`: passed.
 - `git diff --check`: passed with only LF-to-CRLF working-copy warning.
+
+## Round 360.3 - README First Public Version
+
+Status: completed.
+
+Summary:
+- Rewrote `README.md` as the first open-source-facing public version for
+  TuringResearch.
+- Added `docs/readme-first-public-version-report.md`.
+- Added `docs/readme-public-section-checklist.md`.
+- Added `lanes/360_3_readme_first_public_version.md`.
+- Kept runtime compatibility names documented only as compatibility surfaces.
+
+Decision:
+- public project name: TuringResearch;
+- no GitHub Pages URL until a real deployment exists;
+- no split-repo URL until a real repository exists;
+- ARIS remains deferred;
+- fake/live and privacy boundaries stay explicit in the README.
+
+Non-actions:
+- No release.
+- No tag.
+- No PyPI publication.
+- No GitHub Pages deployment.
+- No GitHub repository creation.
+- No package, CLI, MCP, or import rename.
+
+Validation:
+- README-focused checks passed.
+- Public name integrity and public release hygiene checks passed.
+- Privacy/security gate passed.
+- Full test suite passed: `2013 passed, 10 deselected`.
+- `python -m ruff check .` passed.
+- `python -m mypy src` passed.
+- `git diff --check` passed with only LF-to-CRLF working-copy warning.
