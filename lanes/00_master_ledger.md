@@ -5811,3 +5811,40 @@ Validation:
 - v1.5 security/privacy and public release hygiene tests passed with 18 tests.
 - `python -m ruff check .` passed.
 - `git diff --check` passed.
+
+## Round 369 - Examples Repo Creation Pack
+
+Status: completed.
+
+Summary:
+- Added `split_manual/turingresearch-examples/FINAL_CREATE_REPO.md`.
+- Added `split_manual/turingresearch-examples/FINAL_PUSH_COMMANDS.md`.
+- Added `split_manual/turingresearch-examples/FINAL_RELEASE_CHECKLIST.md`.
+- Added `split_manual/turingresearch-examples/FINAL_PRIVACY_CHECK.md`.
+- Added `docs/examples-repo-creation-pack-final.md`.
+- Added `tests/workflow/test_examples_repo_creation_pack.py`.
+- Added `lanes/347_examples_repo_creation_pack.md`.
+- Finalized the human-only creation pack for the optional
+  `turingresearch-examples` child repository.
+
+Creation metadata:
+- repo name suggestion: `turingresearch-examples`;
+- initial branch: `main`;
+- initial commit message: `Initial public-safe examples bundle`;
+- remote URL placeholder: `<approved-real-repository-url>`;
+- main TuringResearch repository remains the flagship.
+
+Safety:
+- No GitHub repository was created.
+- No external child repository was pushed.
+- No `git init` was run.
+- No real URL was inserted.
+- No raw data, private path, API key, or huge artifact was added.
+- No fake URL or unsupported claim was added.
+- No demo output was promoted to observed evidence.
+
+Validation:
+- Creation pack and split safety tests passed with 20 tests.
+- v1.5 security/privacy and public release hygiene tests passed with 18 tests.
+- `python -m ruff check .` passed.
+- `git diff --check` passed with only LF-to-CRLF working-copy warning.
