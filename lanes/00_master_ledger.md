@@ -5913,3 +5913,42 @@ Validation:
 - v1.5 security/privacy and public release hygiene tests passed with 18 tests.
 - `python -m ruff check .` passed.
 - `git diff --check` passed with only LF-to-CRLF working-copy warning.
+
+## Round 372 - Physical Split Manual Gate
+
+Status: completed.
+
+Summary:
+- Added `docs/v1.6.0-physical-split-manual-gate-report.md`.
+- Added `docs/v1.6.0-split-manual-go-no-go.md`.
+- Added `tests/workflow/test_v1_6_physical_split_manual_gate.py`.
+- Added `lanes/350_physical_split_manual_gate.md`.
+- Integrated Round 368 through Round 371 into a v1.6 physical split manual
+  gate.
+
+Gate decision:
+- GO FOR HUMAN REVIEW.
+- NO-GO FOR AUTOMATIC SPLIT EXECUTION.
+
+Gate checks:
+- vggt-case creation pack pass;
+- examples creation pack pass;
+- URL placeholder policy pass;
+- main repo patch pass;
+- no secrets;
+- no raw data;
+- no fake URL;
+- no unsupported claims.
+
+Safety:
+- No GitHub repository was created.
+- No external child repository was pushed.
+- No `git init` was run for split packs.
+- No real public URL was written.
+- No private data, raw data, secrets, or unsupported claims were added.
+
+Validation:
+- Split manual gate and supporting split tests passed with 24 tests.
+- v1.5 security/privacy and public release hygiene tests passed with 18 tests.
+- `python -m ruff check .` passed.
+- `git diff --check` passed with only LF-to-CRLF working-copy warning.
