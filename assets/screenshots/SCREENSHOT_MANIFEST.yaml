@@ -1,0 +1,85 @@
+schema_version: 1
+round: 384
+status: placeholder_manifest
+project: TuringResearch
+policy:
+  no_fake_screenshots: true
+  no_real_public_url: true
+  no_private_paths: true
+  no_raw_data: true
+  no_secrets: true
+  no_vggt_success_claim: true
+  capture_requires_human_review: true
+assets:
+  - id: readme-first-screen
+    title: README first screen
+    source: README.md
+    intended_file: assets/screenshots/readme-first-screen.png
+    status: placeholder_pending_capture
+    capture_notes: Capture the repository README top viewport after final human review.
+    public_safe_checks:
+      - TuringResearch public name visible
+      - local-first Research OS visible
+      - fake/live boundary visible
+      - no fake GitHub URL
+  - id: docs-site
+    title: Docs site
+    source: docs-site/release_bundle/site/index.html
+    intended_file: assets/screenshots/docs-site.png
+    status: placeholder_pending_capture
+    capture_notes: Capture local release bundle or docs-site dry-run output, not a fake public URL.
+    public_safe_checks:
+      - no analytics
+      - no deployed URL claim
+      - no private path
+      - no secrets
+  - id: dashboard-landing
+    title: Dashboard landing
+    source: examples/public_demo/dashboard_showcase/landing.html
+    intended_file: assets/screenshots/dashboard-landing.png
+    status: placeholder_pending_capture
+    capture_notes: Capture local static dashboard showcase landing page.
+    public_safe_checks:
+      - static local page
+      - safety boundary visible
+      - no live provider claim
+  - id: parity-showcase
+    title: Parity showcase
+    source: examples/public_demo/dashboard_showcase/parity.html
+    intended_file: assets/screenshots/parity-showcase.png
+    status: placeholder_pending_capture
+    capture_notes: Capture local parity showcase page.
+    public_safe_checks:
+      - original repo production parity shown
+      - ARIS deferred visible
+      - no live-provider proof claim
+  - id: interview-demo-view
+    title: Interview demo view
+    source: examples/public_demo/dashboard_showcase/interview.html
+    intended_file: assets/screenshots/interview-demo-view.png
+    status: placeholder_pending_capture
+    capture_notes: Capture local interview demo page for a 3-10 minute walkthrough.
+    public_safe_checks:
+      - architecture visible
+      - safety gates visible
+      - ARIS deferred visible
+  - id: split-manual-pack
+    title: Split manual pack
+    source: split_manual/
+    intended_file: assets/screenshots/split-manual-pack.png
+    status: placeholder_pending_capture
+    capture_notes: Capture file tree or README view only after confirming no real child repo URL is shown.
+    public_safe_checks:
+      - manual-ready wording visible
+      - no fake GitHub URL
+      - main repository remains flagship
+  - id: optional-live-policy
+    title: Optional live policy
+    source: docs/optional-live-safety-policy.md
+    intended_file: assets/screenshots/optional-live-policy.png
+    status: placeholder_pending_capture
+    capture_notes: Capture policy excerpt showing live disabled by default.
+    public_safe_checks:
+      - live disabled by default
+      - no credentials
+      - no network by default

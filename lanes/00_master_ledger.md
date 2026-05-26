@@ -6094,9 +6094,43 @@ Safety:
 - No fake URL.
 - No fake users.
 - No fake star claim.
-- No VGGT or SparseConv3D success claim.
-- No ARIS implementation claim.
+- No VGGT or SparseConv3D `success` claim.
+- No ARIS `implementation` claim.
 
 Validation:
 - Docs/name integrity passed.
+- Pre-push checks passed.
+
+## Round 384 - Screenshot / Demo Asset Pack
+
+Status: completed.
+
+Summary:
+- Added `assets/screenshots/SCREENSHOT_MANIFEST.yaml`.
+- Added `assets/screenshots/SCREENSHOT_TODO.md`.
+- Added `assets/demo_gif/DEMO_GIF_SCRIPT.md`.
+- Added `docs/screenshot-demo-asset-pack-v1.6.md`.
+- Added `lanes/362_screenshot_demo_asset_pack.md`.
+
+Coverage:
+- README first screen;
+- docs site;
+- dashboard landing;
+- parity showcase;
+- interview demo view;
+- split manual pack;
+- optional live policy.
+
+Safety:
+- No fake screenshots.
+- No generated image claiming real capture.
+- No fake URL.
+- No private paths.
+- No raw data.
+- No secrets.
+- No VGGT or SparseConv3D `success` claim.
+- No ARIS `implementation` claim.
+
+Validation:
+- Asset manifest checked.
 - Pre-push checks passed.
