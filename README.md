@@ -11,6 +11,7 @@ TuringResearch is fake/demo-first by default.
 
 It is not an autonomous scientist, not a hosted SaaS product, not a final-paper
 generator, and not proof that any VGGT or SparseConv3D experiment succeeded.
+It does not write final paper conclusions.
 
 ```text
 Default mode: fake/local
@@ -23,11 +24,14 @@ Public release actions: require maintainer approval
 Start here:
 
 - [Quickstart](docs/quickstart.md)
+- [v1.0 Public Quickstart](docs/v1.0.0-quickstart.md)
 - [Public demo walkthrough](docs/v1.0.0-public-demo-walkthrough.md)
 - [Docs index](docs/docs-index.md)
 - [Public showcase](docs/public-showcase.md)
 - [Original repo parity dashboard](docs/original-repo-parity-dashboard-v2.md)
+- [v1.1 final scope](docs/v1.1.0-final-scope.md)
 - [v1.6 final handoff](docs/v1.6.0-handoff.md)
+- [Visual tour plan](docs/readme-visual-asset-plan.md)
 
 ## What Is TuringResearch?
 
@@ -45,6 +49,8 @@ research work inspectable, replayable, and honest while humans make the
 scientific decisions.
 
 ## Why It Exists
+
+## Problem
 
 Research projects often spread across notebooks, papers, run folders, remote
 machines, advisor notes, dashboards, and half-remembered claims. The hard part
@@ -84,6 +90,8 @@ The default path should run without API keys, live network access, Modal,
 SSH/SFTP, private project folders, raw datasets, or restricted body-model files.
 
 ## Core Modules
+
+## Core Capabilities
 
 | Area | What it does | Default boundary |
 | --- | --- | --- |
@@ -150,8 +158,36 @@ The demo shows evidence ledger inspection, artifact review, static dashboards,
 advisor-pack material, and benchmark replay. It does not run real experiments,
 does not generate real research results, and does not turn fake/demo material
 into observed evidence.
+TuringResearch does not turn fake/demo material into observed evidence.
+
+## VGGT Case Study
+
+The VGGT-style case material is a public-safe review/demo surface only. It is
+not proof that any VGGT experiment succeeded, does not claim VGGT experiment
+success or SparseConv3D success, and does not turn fake/demo material into
+observed evidence.
+This README does not claim VGGT experiment success or SparseConv3D success.
 
 ## Original Repo Production Parity
+
+## v1.3 Original Reference Parity
+
+v1.3 Original Reference Parity covered Neocortica Session parity, Neocortica
+Neocortica Scholar parity, Neocortica Web parity, yogsoth parity, ARIS
+deferral, no automatic remote execution, the Fake / Live Boundary, and
+Privacy-first public docs.
+
+ARIS | deferred and reference-only. There is no cross-model review, no
+proof-checker, no meta-optimize, no paper-claim-audit, and no default network.
+
+## v1.4 Original Repo Production Parity
+
+v1.4 Original Repo Production Parity kept Neocortica Session, Neocortica
+Scholar, Neocortica Web, and yogsoth-ai production parity in fake/default mode.
+It preserved no default network, no remote command execution, the Fake / Live
+Boundary, and Privacy-first release gates. See
+`docs/original-repo-production-parity-summary.md` and
+`docs/original-repo-parity-dashboard-v2.md`.
 
 TuringResearch has replicated the stable, public, production-relevant ideas
 from the original reference repositories into local fake/default workflows. It
@@ -217,6 +253,16 @@ repository remains the only install, test, release, docs, issue, and star
 entry. Child repositories, if created later by a human, are optional case/demo
 spokes and must point back to the flagship repository.
 
+The main TuringResearch repository remains the only install entry. Split-ready
+bundles are local export bundles, not published GitHub repositories, and not
+install targets. The main repository remains the star entry.
+
+## Planned Split Repositories
+
+Planned split repositories are manual-ready case/demo spokes only. They are not
+published GitHub repositories and are not install targets before a maintainer
+creates and reviews them.
+
 Manual pack surfaces:
 
 - `split_ready/`
@@ -276,6 +322,12 @@ Source Hygiene blocks unsafe or unauthorized source material. Plugin tools,
 live providers, SSH/SFTP transfer, and network access require explicit private
 opt-in and human review.
 
+## Plugin Safety
+
+Plugin tools are local-review surfaces by default. They do not get shell,
+secret, network, remote-write, or live-provider access unless a maintainer
+explicitly enables a reviewed private configuration.
+
 ## Privacy-first
 
 ## Safety And Privacy Boundary
@@ -305,6 +357,8 @@ See:
 
 ## What It Is Not
 
+## Limitations
+
 TuringResearch does not:
 
 - automatically complete research;
@@ -319,7 +373,9 @@ TuringResearch does not:
 - default to SSH/SFTP or remote execution;
 - execute unknown plugins by default;
 - upload private data by default;
-- guarantee publication, stars, users, or adoption.
+- guarantee publication, stars, users, adoption, or benchmark outcomes;
+- guarantee star growth;
+- rely on invented users, invented social proof, or invented benchmark claims.
 
 ## v1.6 Release Candidate Status
 

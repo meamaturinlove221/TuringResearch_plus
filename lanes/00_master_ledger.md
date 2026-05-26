@@ -6175,3 +6175,46 @@ Safety:
 Validation:
 - Public launch docs updated.
 - Pre-push checks passed.
+
+## Round 386 - v1.6 Full Regression
+
+Status: completed.
+
+Summary:
+- Added `docs/v1.6.0-full-regression-report.md`.
+- Added `docs/v1.6.0-regression-failures.md`.
+- Added `tests/contract/test_v1_6_release_contracts.py`.
+- Added `tests/workflow/test_v1_6_full_replay.py`.
+- Added `lanes/364_v1.6_full_regression.md`.
+
+Coverage:
+- docs deployment;
+- split manual pack;
+- optional live smoke;
+- package readiness;
+- dashboard showcase;
+- release artifact;
+- privacy/security;
+- ARIS deferred.
+
+Decision:
+- `PASS WITH REVIEW / NO-GO FOR AUTOMATIC PUBLICATION`.
+
+Safety:
+- No automatic release.
+- No tag.
+- No GitHub release publication.
+- No PyPI publication.
+- No GitHub Pages deployment.
+- No split repository creation.
+- No live provider execution.
+- No remote command execution.
+- No ARIS implementation.
+
+Validation:
+- Full regression tests passed.
+- Full test suite passed.
+- `python -m mypy src` passed.
+- Name integrity passed.
+- Privacy gate passed.
+- Pre-push checks passed.
