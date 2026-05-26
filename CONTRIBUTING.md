@@ -1,13 +1,13 @@
-# Contributing To TulingResearch Plus
+# Contributing To TuringResearch Plus
 
-Thank you for considering a contribution to TulingResearch Plus.
+Thank you for considering a contribution to TuringResearch Plus.
 
 ## Ground Rules
 
-- Keep the project name as TulingResearch Plus.
-- Keep package names as `tuling_research` and `tuling_research_plus`.
-- Keep the MCP server name as `tulingresearch-plus`.
-- Keep repo-scoped skill names under the `tulingresearch-` prefix.
+- Keep the project name as TuringResearch Plus.
+- Keep package names as `turing_research` and `turing_research_plus`.
+- Keep the MCP server name as `turingresearch-plus`.
+- Keep repo-scoped skill names under the `turingresearch-` prefix.
 - Do not add live network behavior to default tests.
 - Do not submit private, leaked, NDA, proprietary, or unauthorized source material.
 - Do not submit real API keys, credentials, private papers, restricted datasets, or secrets.
@@ -30,6 +30,17 @@ python -m mypy src
 ```
 
 Default tests must not require real network access or live API keys.
+
+## Public Release Hygiene
+
+Before proposing release-facing changes, check:
+
+- no `.env` file is included;
+- no real API key or token is included;
+- no `local_project_links.yaml` is included;
+- no raw data, restricted dataset, private paper, or private model file is included;
+- public examples are fake/demo or fully authorized;
+- limitations and evidence boundaries are documented.
 
 ## Pull Requests
 

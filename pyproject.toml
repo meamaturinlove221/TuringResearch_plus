@@ -3,14 +3,14 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tulingresearch-plus"
-version = "0.1.0"
-description = "TulingResearch Plus MCP-first research workflow engine skeleton."
+name = "turingresearch-plus"
+version = "1.5.0rc0"
+description = "TuringResearch Plus MCP-first research workflow engine skeleton."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "Proprietary" }
 authors = [
-  { name = "TulingResearch" }
+  { name = "TuringResearch" }
 ]
 dependencies = [
   "pydantic>=2.7",
@@ -19,8 +19,9 @@ dependencies = [
 ]
 
 [project.scripts]
-tulingresearch-plus = "tuling_research.mcp_server:main"
-tulingresearch-plus-mcp = "tuling_research.mcp_server:main"
+turingresearch-plus = "turing_research.mcp_server:main"
+turingresearch-plus-mcp = "turing_research.mcp_server:main"
+turingresearch-session = "turing_research_plus.session_runtime.cli:main"
 
 [project.optional-dependencies]
 dev = [
@@ -49,12 +50,22 @@ package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["tuling_research*", "tuling_research_plus*"]
+include = [
+  "turing_research*",
+  "turing_research_plus*",
+  "turing_research_core*",
+  "turing_research_paper*",
+  "turing_research_artifact*",
+  "turing_research_experiment*",
+  "turing_research_dashboard*",
+  "turing_research_plugins*",
+  "turing_research_cases*"
+]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
-addopts = "-q -m 'not live and not manual'"
+addopts = "--import-mode=importlib -q -m 'not live and not manual'"
 markers = [
   "unit: unit tests for local deterministic behavior",
   "contract: contract and release-surface tests",
@@ -76,7 +87,17 @@ ignore = []
 [tool.mypy]
 python_version = "3.11"
 mypy_path = "src"
-packages = ["tuling_research", "tuling_research_plus"]
+packages = [
+  "turing_research",
+  "turing_research_plus",
+  "turing_research_core",
+  "turing_research_paper",
+  "turing_research_artifact",
+  "turing_research_experiment",
+  "turing_research_dashboard",
+  "turing_research_plugins",
+  "turing_research_cases"
+]
 plugins = ["pydantic.mypy"]
 strict = false
 warn_unreachable = true

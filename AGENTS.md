@@ -1,15 +1,15 @@
-# TulingResearch Plus Agent Guide
+# TuringResearch Plus Agent Guide
 
-TulingResearch Plus is developed as a single-window, single-repository, MCP-first research workflow engine. Parallel work is coordinated through `lanes/`, `contracts/`, and `.agents/skills/` in this repository.
+TuringResearch Plus is developed as a single-window, single-repository, MCP-first research workflow engine. Parallel work is coordinated through `lanes/`, `contracts/`, and `.agents/skills/` in this repository.
 
 ## Naming
 
-- Project display name: TulingResearch Plus
-- Repository root: `TulingResearch/TulingResearch_plus`
-- Core package: `tuling_research`
-- Plus package: `tuling_research_plus`
-- MCP server name: `tulingresearch-plus`
-- Skill names must start with `tulingresearch-`
+- Project display name: TuringResearch Plus
+- Repository root: `TuringResearch/TuringResearch_plus`
+- Core package: `turing_research`
+- Plus package: `turing_research_plus`
+- MCP server name: `turingresearch-plus`
+- Skill names must start with `turingresearch-`
 
 Do not create legacy reference-project directories, legacy reference-project package
 names, or use any reference project name as this project name.

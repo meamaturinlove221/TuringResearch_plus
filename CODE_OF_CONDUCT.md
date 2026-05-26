@@ -1,4 +1,4 @@
-# TulingResearch Plus Code Of Conduct
+# TuringResearch Plus Code Of Conduct
 
 ## Expected Behavior
 
@@ -11,6 +11,7 @@
 
 - Harassment or personal attacks.
 - Posting credentials, tokens, private data, or restricted source material.
+- Posting raw datasets, private model files, or private project paths.
 - Pressuring maintainers to bypass Source Hygiene rules.
 - Presenting unauthorized or private content as public implementation material.
 
@@ -20,4 +21,4 @@ Report conduct or safety concerns through the repository security or maintainer 
 
 ## Enforcement
 
-Maintainers may edit, hide, or remove content that violates this code of conduct or the TulingResearch Plus Source Hygiene policy.
+Maintainers may edit, hide, or remove content that violates this code of conduct or the TuringResearch Plus Source Hygiene policy.

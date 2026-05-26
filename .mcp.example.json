@@ -1,0 +1,238 @@
+{
+  "description": "Safe local MCP config template. Fake/default mode only; live adapters are opt-in.",
+  "schema_version": "1.2-mcp-config-parity",
+  "status": "public-safe-template",
+  "mcpServers": {
+    "turingresearch-plus": {
+      "description": "TuringResearch Plus local-first MCP server. Fake/default mode is safe without API keys.",
+      "command": "turingresearch-plus-mcp",
+      "args": ["--manifest"],
+      "env": {
+        "TURINGRESEARCH_MODE": "fake",
+        "TURINGRESEARCH_ENABLE_LIVE_TESTS": "0",
+        "TURINGRESEARCH_ENABLE_SEMANTIC_SCHOLAR_LIVE": "0",
+        "TURINGRESEARCH_ENABLE_APIFY_LIVE": "0",
+        "TURINGRESEARCH_ENABLE_WEB_LIVE": "0",
+        "TURINGRESEARCH_ENABLE_PLUGINS": "0",
+        "TURINGRESEARCH_ENABLE_PLUGIN_LIVE_MODE": "0",
+        "SEMANTIC_SCHOLAR_API_KEY": "",
+        "APIFY_TOKEN": "",
+        "OPENAI_API_KEY": "",
+        "GITHUB_TOKEN": ""
+      },
+      "capabilities": {
+        "semantic_scholar": "optional-live-disabled-by-default",
+        "apify": "optional-live-disabled-by-default",
+        "web_fetch": "optional-live-disabled-by-default",
+        "plugins": "disabled-by-default"
+      },
+      "tool_surface_v1_3": {
+        "status": "documentation-contract-only",
+        "default_mode": "fake",
+        "starts_mcp_server": false,
+        "live_disabled_by_default": true,
+        "tools": [
+          {
+            "name": "scholar.paper_searching",
+            "group": "scholar",
+            "module": "turing_research_plus.scholar_tools.paper_searching",
+            "status": "documented-local-surface",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "scholar.paper_content",
+            "group": "scholar",
+            "module": "turing_research_plus.scholar_tools.paper_content",
+            "status": "documented-local-surface",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "scholar.paper_reference",
+            "group": "scholar",
+            "module": "turing_research_plus.scholar_tools.paper_reference",
+            "status": "documented-local-surface",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "scholar.paper_reading",
+            "group": "scholar",
+            "module": "turing_research_plus.scholar_tools.paper_reading",
+            "status": "documented-local-surface",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "web.web_fetching",
+            "group": "web",
+            "module": "turing_research_plus.web_tools.web_fetching",
+            "status": "documented-local-surface",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "web.web_content",
+            "group": "web",
+            "module": "turing_research_plus.web_tools.web_content",
+            "status": "documented-local-surface",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "web.cache",
+            "group": "web",
+            "module": "turing_research_plus.web_tools.web_cache",
+            "status": "documented-local-surface",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "web.source_metadata",
+            "group": "web",
+            "module": "turing_research_plus.web_tools.source_metadata",
+            "status": "documented-local-surface",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "web.apify_optional",
+            "group": "web",
+            "module": "turing_research_plus.web.apify_usage_export",
+            "status": "optional-live-disabled-by-default",
+            "mcp_enabled_by_default": false,
+            "requires_live": true
+          },
+          {
+            "name": "session.preflight",
+            "group": "session",
+            "module": "turing_research_plus.session_runtime.preflight_runner",
+            "status": "fake-runnable-local",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "session.context_pack",
+            "group": "session",
+            "module": "turing_research_plus.session_runtime.context_pack_builder",
+            "status": "fake-runnable-local",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "session.fake_transfer",
+            "group": "session",
+            "module": "turing_research_plus.session_runtime.fake_transfer",
+            "status": "fake-runnable-local",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "session.return_verifier",
+            "group": "session",
+            "module": "turing_research_plus.session_runtime.return_verifier",
+            "status": "fake-runnable-local",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "session.workflow_replay",
+            "group": "session",
+            "module": "turing_research_plus.session_runtime.workflow_replay",
+            "status": "fake-runnable-local",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "campaign.catalog",
+            "group": "campaign",
+            "module": "turing_research_plus.campaigns.strategy_book",
+            "status": "review-only-local",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "campaign.preconditions",
+            "group": "campaign",
+            "module": "turing_research_plus.campaigns.preconditions",
+            "status": "review-only-local",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "campaign.execution_plan",
+            "group": "campaign",
+            "module": "turing_research_plus.campaigns.execution_plan",
+            "status": "review-only-local",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "vault.wiki_export",
+            "group": "vault",
+            "module": "turing_research_plus.vault_graph.wiki_export",
+            "status": "review-only-local",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "vault.backlinks",
+            "group": "vault",
+            "module": "turing_research_plus.vault_graph.backlink_index",
+            "status": "review-only-local",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "vault.edge_quality",
+            "group": "vault",
+            "module": "turing_research_plus.vault_graph.edge_quality",
+            "status": "review-only-local",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "vault.ontology_sop",
+            "group": "vault",
+            "module": "turing_research_plus.vault_graph.ontology_sop_runner",
+            "status": "review-only-local",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "stress.scenario_catalog",
+            "group": "stress",
+            "module": "turing_research_plus.stress_test.scenarios",
+            "status": "review-only-local",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "stress.runner",
+            "group": "stress",
+            "module": "turing_research_plus.stress_test.runner",
+            "status": "review-only-local",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          },
+          {
+            "name": "stress.report",
+            "group": "stress",
+            "module": "turing_research_plus.stress_test.report",
+            "status": "review-only-local",
+            "mcp_enabled_by_default": false,
+            "requires_live": false
+          }
+        ]
+      },
+      "notes": [
+        "No real API keys are required for fake/default mode.",
+        "Semantic Scholar, Apify, and web live adapters are disabled by default.",
+        "Plugin tools are disabled by default.",
+        "Live tests require TURINGRESEARCH_ENABLE_LIVE_TESTS=1 in a private local config.",
+        "Set live/test credentials only in a private local config, never in this example file."
+      ]
+    }
+  }
+}
