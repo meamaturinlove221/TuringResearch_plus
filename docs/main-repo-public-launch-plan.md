@@ -4,7 +4,7 @@ Status: planning draft.
 
 Round: 163.
 
-This plan prepares the flagship TuringResearch Plus repository for a future
+This plan prepares the flagship TuringResearch repository for a future
 public launch. It does not publish the repository, create a release, tag a
 commit, or make any claims about expected stars.
 
@@ -94,9 +94,9 @@ VGGT should be framed as dogfooding:
 
 ## Comparison With Ordinary Literature Tools
 
-TuringResearch Plus is broader than a literature summarizer:
+TuringResearch is broader than a literature summarizer:
 
-| Ordinary literature tool | TuringResearch Plus |
+| Ordinary literature tool | TuringResearch |
 | --- | --- |
 | summarizes papers | organizes evidence, artifacts, routes, paper review, dashboards, and release gates |
 | focuses on text output | tracks status, missing evidence, and unsafe claims |

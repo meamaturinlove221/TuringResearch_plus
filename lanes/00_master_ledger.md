@@ -6019,3 +6019,53 @@ Validation:
 - `python -m ruff check .` passed.
 - `python -m mypy src` passed.
 - `git diff --check` passed.
+
+## Round 360.8 - Open Source Preflight Gate
+
+Status: completed.
+
+Summary:
+- Added `docs/open-source-preflight-gate-report.md`.
+- Added `docs/open-source-go-no-go.md`.
+- Added `docs/open-source-next-actions.md`.
+- Added `tests/workflow/test_open_source_preflight_gate.py`.
+- Added `lanes/360_8_open_source_preflight_gate.md`.
+- Updated GitHub readiness docs to use TuringResearch public naming.
+
+Decision:
+- GO for v1.6 public release execution line;
+- NO-GO for automatic publication;
+- human approval remains required for license, release, repository, Pages, PyPI,
+  split-repo, and security contact decisions.
+
+Checks:
+- naming policy pass;
+- public naming sweep pass;
+- README public version pass;
+- license/citation/security files present with license review blocker recorded;
+- MCP public hygiene pass;
+- no secrets;
+- no raw data;
+- no private path;
+- no fake URL;
+- GitHub repo readiness docs present.
+
+Non-actions:
+- No release.
+- No tag.
+- No PyPI publication.
+- No GitHub Pages deployment.
+- No GitHub repository creation.
+- No child repository creation.
+- No live provider execution.
+- No remote execution.
+
+Validation:
+- Open source preflight tests passed.
+- Full smoke passed.
+- Privacy/security gate passed.
+- Name integrity passed.
+- Full test suite passed: `2030 passed, 10 deselected`.
+- `python -m ruff check .` passed.
+- `python -m mypy src` passed.
+- `git diff --check` passed with only LF-to-CRLF working-copy warning.
