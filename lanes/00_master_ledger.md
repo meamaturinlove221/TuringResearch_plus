@@ -6184,3 +6184,42 @@ Safety:
 Validation:
 - Install smoke tests passed.
 - Pre-push checks passed.
+
+## Round 380 - Release Artifact Build
+
+Status: completed.
+
+Summary:
+- Added `docs/release-artifact-build-v1.6.md`.
+- Added `docs/release-artifact-manifest-v1.6.md`.
+- Added `tests/workflow/test_release_artifact_manifest.py`.
+- Added `lanes/358_release_artifact_build.md`.
+- Built a local wheel artifact under ignored `dist/`.
+- Recorded graceful sdist skip because `python -m build` is unavailable.
+
+Build results:
+- Wheel built locally with
+  `python -m pip wheel --no-deps --no-build-isolation -w dist .`.
+- sdist skipped with reason recorded.
+- No artifact was committed or published.
+
+Local wheel:
+- `dist/turingresearch_plus-1.5.0rc0-py3-none-any.whl`
+- size: `745087`
+- sha256: `012b7b289386b5c2eae4e059c990ae8af56e16d5b983f32eada6e7ab318bc744`
+- zip entries: `666`
+
+Safety:
+- No PyPI publish.
+- No package upload.
+- No tag creation.
+- No secrets.
+- No raw data.
+- No SMPL-X model files.
+- No docs-site private data.
+- No VGGT read.
+- No live provider request.
+
+Validation:
+- Release artifact manifest tests passed.
+- Pre-push checks passed.
