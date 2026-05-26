@@ -18,6 +18,7 @@ The committed `.mcp.example.json` must contain:
 - an explicit `env` block;
 - blank credential placeholders;
 - provider live flags disabled by default;
+- SFTP live flag disabled by default;
 - plugin tools disabled by default;
 - notes that live mode belongs only in private local config.
 
@@ -30,20 +31,25 @@ The committed `.mcp.example.json` must contain:
   "TURINGRESEARCH_ENABLE_SEMANTIC_SCHOLAR_LIVE": "0",
   "TURINGRESEARCH_ENABLE_APIFY_LIVE": "0",
   "TURINGRESEARCH_ENABLE_WEB_LIVE": "0",
+  "TURINGRESEARCH_ENABLE_SFTP_LIVE": "0",
   "TURINGRESEARCH_ENABLE_PLUGINS": "0",
   "TURINGRESEARCH_ENABLE_PLUGIN_LIVE_MODE": "0",
   "SEMANTIC_SCHOLAR_API_KEY": "",
   "APIFY_TOKEN": "",
   "OPENAI_API_KEY": "",
-  "GITHUB_TOKEN": ""
+  "GITHUB_TOKEN": "",
+  "TURINGRESEARCH_SFTP_CREDENTIAL": "",
+  "TURINGRESEARCH_SFTP_KEY_PATH": "",
+  "TURINGRESEARCH_SFTP_TARGET": ""
 }
 ```
 
 ## Optional Live Providers
 
-Semantic Scholar, Apify, and Web fetch are optional live surfaces. Enabling any
-of them requires a private local config, `TURINGRESEARCH_ENABLE_LIVE_TESTS=1`,
-the provider-specific live flag, and a private credential where applicable.
+Semantic Scholar, Apify, Web fetch, and SFTP are optional live surfaces.
+Enabling any of them requires a private local config,
+`TURINGRESEARCH_ENABLE_LIVE_TESTS=1`, the provider-specific live flag, and a
+private credential where applicable.
 
 Live output remains retrieved context. It is not observed evidence, not a paper
 claim, and not a release result without human review.

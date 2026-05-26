@@ -37,6 +37,7 @@ def test_mcp_config_parity_keeps_fake_mode_default_and_live_opt_in() -> None:
     assert env["TURINGRESEARCH_ENABLE_SEMANTIC_SCHOLAR_LIVE"] == "0"
     assert env["TURINGRESEARCH_ENABLE_APIFY_LIVE"] == "0"
     assert env["TURINGRESEARCH_ENABLE_WEB_LIVE"] == "0"
+    assert env["TURINGRESEARCH_ENABLE_SFTP_LIVE"] == "0"
 
 
 def test_mcp_config_parity_keeps_optional_providers_and_plugins_disabled() -> None:
@@ -47,6 +48,7 @@ def test_mcp_config_parity_keeps_optional_providers_and_plugins_disabled() -> No
     assert capabilities["semantic_scholar"] == "optional-live-disabled-by-default"
     assert capabilities["apify"] == "optional-live-disabled-by-default"
     assert capabilities["web_fetch"] == "optional-live-disabled-by-default"
+    assert capabilities["sftp"] == "optional-live-disabled-by-default"
     assert capabilities["plugins"] == "disabled-by-default"
     assert env["TURINGRESEARCH_ENABLE_PLUGINS"] == "0"
     assert env["TURINGRESEARCH_ENABLE_PLUGIN_LIVE_MODE"] == "0"
@@ -56,7 +58,15 @@ def test_mcp_config_parity_has_no_real_key_or_old_name() -> None:
     text = CONFIG_PATH.read_text(encoding="utf-8")
     env = _server()["env"]
 
-    for key in ["SEMANTIC_SCHOLAR_API_KEY", "APIFY_TOKEN", "OPENAI_API_KEY", "GITHUB_TOKEN"]:
+    for key in [
+        "SEMANTIC_SCHOLAR_API_KEY",
+        "APIFY_TOKEN",
+        "OPENAI_API_KEY",
+        "GITHUB_TOKEN",
+        "TURINGRESEARCH_SFTP_CREDENTIAL",
+        "TURINGRESEARCH_SFTP_KEY_PATH",
+        "TURINGRESEARCH_SFTP_TARGET",
+    ]:
         assert env[key] == ""
 
     token_like = re.compile(

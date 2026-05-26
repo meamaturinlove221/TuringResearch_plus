@@ -13,17 +13,22 @@
         "TURINGRESEARCH_ENABLE_SEMANTIC_SCHOLAR_LIVE": "0",
         "TURINGRESEARCH_ENABLE_APIFY_LIVE": "0",
         "TURINGRESEARCH_ENABLE_WEB_LIVE": "0",
+        "TURINGRESEARCH_ENABLE_SFTP_LIVE": "0",
         "TURINGRESEARCH_ENABLE_PLUGINS": "0",
         "TURINGRESEARCH_ENABLE_PLUGIN_LIVE_MODE": "0",
         "SEMANTIC_SCHOLAR_API_KEY": "",
         "APIFY_TOKEN": "",
         "OPENAI_API_KEY": "",
-        "GITHUB_TOKEN": ""
+        "GITHUB_TOKEN": "",
+        "TURINGRESEARCH_SFTP_CREDENTIAL": "",
+        "TURINGRESEARCH_SFTP_KEY_PATH": "",
+        "TURINGRESEARCH_SFTP_TARGET": ""
       },
       "capabilities": {
         "semantic_scholar": "optional-live-disabled-by-default",
         "apify": "optional-live-disabled-by-default",
         "web_fetch": "optional-live-disabled-by-default",
+        "sftp": "optional-live-disabled-by-default",
         "plugins": "disabled-by-default"
       },
       "tool_surface_v1_3": {
@@ -228,7 +233,7 @@
       },
       "notes": [
         "No real API keys are required for fake/default mode.",
-        "Semantic Scholar, Apify, and web live adapters are disabled by default.",
+        "Semantic Scholar, Apify, web, and SFTP live adapters are disabled by default.",
         "Plugin tools are disabled by default.",
         "Live tests require TURINGRESEARCH_ENABLE_LIVE_TESTS=1 in a private local config.",
         "Set live/test credentials only in a private local config, never in this example file."

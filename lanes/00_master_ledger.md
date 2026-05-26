@@ -5925,3 +5925,45 @@ Validation:
 - `python -m ruff check .` passed.
 - `python -m mypy src` passed.
 - `git diff --check` passed with only LF-to-CRLF working-copy warning.
+
+## Round 360.5 - MCP Example / Env Block Public Hygiene
+
+Status: completed.
+
+Summary:
+- Updated `.mcp.example.json` to include explicit SFTP live disabled defaults
+  and blank SFTP placeholders.
+- Updated `.env.example` public naming.
+- Updated `README.md` fake/live env block.
+- Updated `docs/mcp-config-parity.md`.
+- Updated `docs/mcp-env-block-policy.md`.
+- Added `docs/mcp-public-config-guide.md`.
+- Added `docs/env-block-public-hygiene.md`.
+- Added `docs/no-dotenv-public-policy.md`.
+- Added `tests/contract/test_mcp_public_hygiene.py`.
+- Added `tests/contract/test_no_secrets_in_public_config.py`.
+- Added `lanes/360_5_mcp_env_public_hygiene.md`.
+
+Decision:
+- public MCP config remains fake/default;
+- Scholar, Web, Apify, SFTP, plugins, and live tests remain disabled by
+  default;
+- committed credential fields are blank placeholders only;
+- live mode requires explicit private env;
+- `.env` remains forbidden outside explicit fixtures.
+
+Non-actions:
+- No `.env` file committed.
+- No token or real API key committed.
+- No live provider enabled.
+- No SFTP connection enabled.
+- No package, CLI, MCP, or import rename.
+
+Validation:
+- MCP public hygiene tests passed.
+- Secret scan passed.
+- Regression gate passed.
+- Full test suite passed: `2023 passed, 10 deselected`.
+- `python -m ruff check .` passed.
+- `python -m mypy src` passed.
+- `git diff --check` passed with only LF-to-CRLF working-copy warning.
