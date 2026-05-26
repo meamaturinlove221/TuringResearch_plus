@@ -6295,3 +6295,44 @@ Safety:
 Validation:
 - Release draft updated.
 - Pre-push checks passed.
+
+## Round 389 - v1.7 Roadmap
+
+Status: completed.
+
+Summary:
+- Added `docs/v1.7.0-roadmap.md`.
+- Added `docs/v1.7.0-candidates.md`.
+- Added `docs/v1.7.0-risk-register.md`.
+- Added `docs/v1.7.0-non-goals.md`.
+- Added `docs/v1.7.0-sprint-1-recommendation.md`.
+- Added `docs/v1.7.0-aris-status.md`.
+- Added `lanes/367_v1.7_roadmap.md`.
+
+Candidate scope:
+- actual GitHub Pages enablement;
+- actual split repo creation after human confirmation;
+- PyPI release preparation;
+- optional live guarded runner;
+- plugin ecosystem polish;
+- dashboard UX polish;
+- ARIS study only, not implementation.
+
+Recommendation:
+- Start with public release follow-through.
+- Keep package/import compatibility stable until a migration decision.
+- Keep optional live private, explicit, redacted, and disabled by default.
+- Keep ARIS study-only.
+
+Safety:
+- No automatic deployment.
+- No automatic GitHub release publication.
+- No automatic PyPI publication.
+- No automatic split repository creation.
+- No default live network.
+- No remote command execution.
+- No ARIS implementation.
+
+Validation:
+- Roadmap updated.
+- Pre-push checks passed.
