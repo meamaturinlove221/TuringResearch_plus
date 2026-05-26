@@ -1,8 +1,8 @@
 # GitHub Release Draft - v1.6.0
 
-Status: draft only.
+Status: final draft for maintainer review.
 
-Round: 387.
+Round: 388.
 
 Do not publish this draft automatically. Do not create a tag, GitHub release,
 PyPI package, public docs deployment, or child repository from this file without
@@ -34,12 +34,29 @@ ARIS remains intentionally deferred and reference-only.
 - Dashboard / demo asset pack.
 - Public launch checklist.
 
-## Quickstart
+## Install
 
-Use the main repository:
+Use the main TuringResearch repository as the install target:
 
 ```bash
 python -m pip install -e .[dev]
+```
+
+For MCP-oriented local checks:
+
+```bash
+python -m pip install -e .[dev,mcp]
+```
+
+Compatibility package and import names remain stable in this release
+candidate. Package renaming and PyPI publication are separate maintainer
+decisions.
+
+## Quickstart
+
+Run the focused v1.6 release-candidate checks:
+
+```bash
 python -m pytest tests/contract/test_v1_6_release_contracts.py tests/workflow/test_v1_6_full_replay.py -q
 ```
 
@@ -52,6 +69,8 @@ For the v1.6 public release execution overview, start with:
 - `examples/public_demo/dashboard_showcase/landing.html`
 
 ## Docs Deployment Ready
+
+## Docs Site Bundle
 
 v1.6 includes a local docs release bundle and a GitHub Pages-ready dry-run
 workflow draft. It is not a public deployment.
@@ -164,8 +183,32 @@ See `docs/v1.6.0-aris-still-deferred.md`.
 
 ## Safety Note
 
+## Security Note
+
 All v1.6 public demo surfaces are fake/demo, dry-run, manual-pack,
 placeholder-manifest, or review-only. They must not be treated as observed
 evidence. Human review remains required before release-facing claims, live
 provider use, live SSH/SFTP use, child repository creation, public deployment,
 package upload, or publication.
+
+Security and privacy boundaries:
+
+- no committed secrets or API keys;
+- no `.env` release payload;
+- no raw data or restricted model payload publication;
+- no private paths in public release materials;
+- no live provider execution by default;
+- no remote command execution;
+- no automatic evidence-ledger mutation.
+
+## Next Roadmap
+
+After maintainer review, possible next steps are:
+
+- decide whether to create a Git tag;
+- decide whether to publish a GitHub release;
+- decide whether to enable GitHub Pages manually;
+- decide whether to publish to PyPI or defer package publication;
+- decide whether to create split repositories manually;
+- review optional live smoke in a private environment only;
+- keep ARIS as a separately scoped future study track.

@@ -6259,3 +6259,39 @@ Validation:
 - Release docs updated.
 - CHANGELOG / VERSION updated.
 - Pre-push checks passed.
+
+## Round 388 - GitHub Release Draft Final
+
+Status: completed.
+
+Summary:
+- Updated `docs/github-release-draft-v1.6.0.md` as final draft for maintainer review.
+- Added `docs/github-release-final-checklist-v1.6.0.md`.
+- Added `docs/post-release-verification-v1.6.0.md`.
+- Added `lanes/366_github_release_draft_final.md`.
+
+Draft coverage:
+- highlights;
+- install;
+- quickstart;
+- docs site bundle;
+- original repo parity;
+- split manual packs;
+- optional live policy;
+- limitations;
+- security note;
+- ARIS deferred;
+- next roadmap.
+
+Safety:
+- No tag.
+- No GitHub release publication.
+- No PyPI publication.
+- No GitHub Pages deployment.
+- No split repository creation.
+- No live provider execution.
+- No remote command execution.
+
+Validation:
+- Release draft updated.
+- Pre-push checks passed.
