@@ -5967,3 +5967,55 @@ Validation:
 - `python -m ruff check .` passed.
 - `python -m mypy src` passed.
 - `git diff --check` passed with only LF-to-CRLF working-copy warning.
+
+## Round 360.6 - Open Source Hygiene Gate
+
+Status: completed.
+
+Summary:
+- Added `docs/open-source-hygiene-gate-report.md`.
+- Added `docs/open-source-blockers.md`.
+- Added `tests/contract/test_open_source_hygiene_gate.py`.
+- Added `lanes/360_6_open_source_hygiene_gate.md`.
+- Ran a consolidated open-source hygiene gate before continuing the v1.6
+  release line.
+
+Gate coverage:
+- public project name is TuringResearch;
+- README exists and is public-ready;
+- no prior public-name residue on current public surfaces;
+- no fake GitHub URL;
+- no secrets;
+- no committed `.env` outside explicit test fixture;
+- no raw data payload in public release surfaces;
+- no restricted model payload in public release surfaces;
+- no private paths;
+- license, citation, contributing, conduct, and security files exist;
+- `.mcp.example.json` remains fake/default and placeholder-only;
+- live adapters remain disabled by default;
+- ARIS remains deferred.
+
+Decision:
+- GO to continue public-readiness and v1.6 release-prep work;
+- human license review remains pending;
+- no release or publication action is authorized by this gate.
+
+Non-actions:
+- No feature implementation.
+- No release.
+- No tag.
+- No PyPI publication.
+- No GitHub repository creation.
+- No GitHub Pages deployment.
+- No live provider execution.
+- No remote execution.
+
+Validation:
+- Open source hygiene tests passed.
+- Privacy/security gate passed.
+- Name integrity passed.
+- Regression gate passed.
+- Full test suite passed: `2025 passed, 10 deselected`.
+- `python -m ruff check .` passed.
+- `python -m mypy src` passed.
+- `git diff --check` passed.
