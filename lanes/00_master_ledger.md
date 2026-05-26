@@ -6019,3 +6019,50 @@ Validation:
 - `python -m ruff check .` passed.
 - `python -m mypy src` passed.
 - `git diff --check` passed.
+
+## Round 390 - v1.6 Final Handoff
+
+Status: completed.
+
+Summary:
+- Added `docs/v1.6.0-final-archive.md`.
+- Added `docs/v1.6.0-handoff.md`.
+- Added `docs/v1.6.0-what-is-ready.md`.
+- Added `docs/v1.6.0-what-is-not-ready.md`.
+- Added `docs/v1.6.0-next-human-actions.md`.
+- Added `lanes/368_v1.6_final_handoff.md`.
+- Prepared the release-candidate handoff on `release/v1.6.0-rc`.
+
+Handoff coverage:
+- docs deployment ready status;
+- split manual pack status;
+- optional live smoke status;
+- package readiness status;
+- release artifact status;
+- public launch checklist status;
+- ARIS deferred status;
+- next human actions.
+
+Decision:
+- v1.6 is ready for human release-candidate review;
+- no automatic publication is authorized;
+- all public actions remain maintainer-controlled.
+
+Non-actions:
+- No feature implementation.
+- No release.
+- No tag.
+- No PyPI publication.
+- No GitHub Pages deployment.
+- No child repository creation.
+- No live provider execution.
+- No remote execution.
+
+Validation:
+- Final smoke tests passed.
+- Open-source hygiene/name/privacy checks passed.
+- Regression/quality smoke passed.
+- Full test suite passed in pre-push.
+- `python -m ruff check .` passed.
+- `python -m mypy src` passed.
+- `git diff --check` passed.
