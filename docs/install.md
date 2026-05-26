@@ -28,6 +28,18 @@ For all optional local extras:
 python -m pip install -e .[dev,all]
 ```
 
+## pipx / uv Local Checks
+
+Round 379 adds local install checks for pipx and uv without requiring a
+published PyPI package:
+
+- [pipx Install Guide](pipx-install-guide.md)
+- [uv Install Guide](uv-install-guide.md)
+- [Install Smoke Test](install-smoke-test.md)
+
+These checks support local editable installs and local wheel artifact installs.
+They do not require API keys, VGGT data, or live network adapters.
+
 ## Console Scripts
 
 - `turingresearch-plus`

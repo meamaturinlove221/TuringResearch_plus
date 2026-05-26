@@ -6150,3 +6150,37 @@ Safety:
 Validation:
 - Package metadata tests passed.
 - Pre-push checks passed.
+
+## Round 379 - pipx / uv Install Check
+
+Status: completed.
+
+Summary:
+- Added `docs/pipx-install-guide.md`.
+- Added `docs/uv-install-guide.md`.
+- Added `docs/install-smoke-test.md`.
+- Added `tests/workflow/test_install_smoke_fake.py`.
+- Added `lanes/357_pipx_uv_install_check.md`.
+- Updated `docs/install.md` with pipx / uv local install check links.
+
+Coverage:
+- pipx local editable install guidance.
+- pipx local wheel artifact install guidance.
+- uv local editable install guidance.
+- uv local wheel artifact install guidance.
+- fake MCP health-check and manifest smoke commands.
+- no PyPI requirement.
+- no API key requirement.
+- no VGGT requirement.
+
+Safety:
+- No PyPI publish.
+- No package upload.
+- No tag creation.
+- No live network request.
+- No VGGT read.
+- No remote execution.
+
+Validation:
+- Install smoke tests passed.
+- Pre-push checks passed.
