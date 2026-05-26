@@ -1,0 +1,11 @@
+{
+  "mode": "fake",
+  "paper_id": "fake-scholar-smoke-001",
+  "query": "fake scholar optional live smoke",
+  "cached_markdown": "../fake_paper_content.md",
+  "requires_api_key": false,
+  "live_mode_enabled": false,
+  "paper_download_enabled": false,
+  "citation_verified": false,
+  "requires_human_review": true
+}

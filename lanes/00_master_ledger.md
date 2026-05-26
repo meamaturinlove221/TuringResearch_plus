@@ -5952,3 +5952,35 @@ Validation:
 - v1.5 security/privacy and public release hygiene tests passed with 18 tests.
 - `python -m ruff check .` passed.
 - `git diff --check` passed with only LF-to-CRLF working-copy warning.
+
+## Round 373 - Scholar Optional Live Smoke
+
+Status: completed.
+
+Summary:
+- Added `docs/scholar-optional-live-smoke.md`.
+- Added `examples/scholar_demo/live_smoke/`.
+- Added `tests/workflow/test_scholar_fake_smoke.py`.
+- Added `tests/live/test_scholar_live_smoke_skipped_by_default.py`.
+- Added `lanes/351_scholar_optional_live_smoke.md`.
+- Added Scholar fake smoke and skipped-live coverage for v1.6 optional live
+  smoke readiness.
+
+Safety:
+- Fake smoke passes without API keys.
+- Live smoke is skipped by default.
+- Live smoke requires explicit environment opt-in.
+- No API key is committed.
+- No paper download is enabled by default.
+- No fake citation is marked verified.
+- No live Scholar request is made in default tests.
+
+Validation:
+- Scholar fake smoke passed with 3 tests.
+- Scholar live smoke skipped as expected with 1 skipped live test selected via
+  `-m live`.
+- Scholar live env/skipped policy passed with 4 tests.
+- v1.5 security/privacy, public release hygiene, and scholar live env tests
+  passed with 22 tests.
+- `python -m ruff check .` passed.
+- `git diff --check` passed with only LF-to-CRLF working-copy warning.
