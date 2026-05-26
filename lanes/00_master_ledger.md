@@ -5984,3 +5984,35 @@ Validation:
   passed with 22 tests.
 - `python -m ruff check .` passed.
 - `git diff --check` passed with only LF-to-CRLF working-copy warning.
+
+## Round 374 - Web / Apify Optional Live Smoke
+
+Status: completed.
+
+Summary:
+- Added `docs/web-apify-optional-live-smoke.md`.
+- Added `examples/apify_workflows/live_smoke/`.
+- Added `tests/workflow/test_web_apify_fake_smoke.py`.
+- Added `tests/live/test_web_apify_live_smoke_skipped_by_default.py`.
+- Added `lanes/352_web_apify_optional_live_smoke.md`.
+- Added Web / Apify fake smoke and skipped-live coverage for v1.6 optional
+  live smoke readiness.
+
+Safety:
+- Fake smoke passes without `APIFY_TOKEN`.
+- Live smoke is skipped by default.
+- Live smoke requires explicit environment opt-in.
+- No token is committed.
+- No private scraping is allowed.
+- No login bypass is allowed.
+- No live Web or Apify request is made in default tests.
+
+Validation:
+- Web / Apify fake smoke passed with 3 tests.
+- Web / Apify live smoke skipped as expected with 1 skipped live test selected
+  via `-m live`.
+- Apify live env/skipped policy passed with 4 tests.
+- v1.5 security/privacy, public release hygiene, and Apify live env tests
+  passed with 22 tests.
+- `python -m ruff check .` passed.
+- `git diff --check` passed with only LF-to-CRLF working-copy warning.

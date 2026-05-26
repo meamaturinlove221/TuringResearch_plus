@@ -1,0 +1,15 @@
+{
+  "mode": "fake",
+  "actor_id": "fake/web-apify-smoke",
+  "url": "https://public-fixture.invalid/project-page",
+  "requires_token": false,
+  "live_mode_enabled": false,
+  "network_used": false,
+  "private_scraping": false,
+  "login_bypass": false,
+  "paywall_bypass": false,
+  "cookie_storage": false,
+  "requires_human_review": true,
+  "human_verified": false,
+  "automatic_evidence_promotion": false
+}
