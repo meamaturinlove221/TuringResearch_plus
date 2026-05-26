@@ -2,7 +2,7 @@
 
 Status: planned / manual-ready documentation.
 
-TuringResearch Plus remains the flagship repository. Future split repositories
+TuringResearch remains the flagship repository. Future split repositories
 are planned or manual-ready spokes, not current GitHub repositories and not
 installation targets.
 
@@ -36,6 +36,11 @@ TuringResearch main repository URL goes here after human publication approval.
 The current local bundles are under `split_ready/`; manual creation packets are
 under `split_manual/`. Both are local review materials, not published
 repositories.
+
+See also:
+
+- [`split-repo-url-placeholder-policy.md`](split-repo-url-placeholder-policy.md)
+- [`split-repo-url-update-after-creation.md`](split-repo-url-update-after-creation.md)
 
 ## Sync Policy
 
@@ -71,6 +76,8 @@ These remain in the flagship repository:
 - Spoke README files must point back to the flagship above the fold.
 - The flagship remains the only install, quickstart, release, and star entry.
 - Split spokes should not disperse star attention away from the flagship.
+- Main README language must stay planned / manual-ready until a child repository
+  actually exists.
 
 ## Safety Boundaries
 

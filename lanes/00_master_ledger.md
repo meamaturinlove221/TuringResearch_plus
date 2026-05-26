@@ -5882,3 +5882,34 @@ Validation:
 - v1.5 security/privacy and public release hygiene tests passed with 18 tests.
 - `python -m ruff check .` passed.
 - `git diff --check` passed with only LF-to-CRLF working-copy warning.
+
+## Round 371 - Main Repo Split Link Patch
+
+Status: completed.
+
+Summary:
+- Updated `README.md` with v1.6 planned / manual-ready split repository
+  language.
+- Updated `docs/future-split-repos.md`.
+- Updated `docs/split-manual-packs.md`.
+- Added `docs/main-repo-split-link-patch-v1.6.md`.
+- Added `lanes/349_main_repo_split_link_patch.md`.
+
+Split status:
+- `turingresearch-vggt-case` remains planned / manual-ready.
+- `turingresearch-examples` remains planned / manual-ready.
+- `turingresearch-plugins` remains deferred.
+
+Safety:
+- No fake URL was added.
+- No real child repository URL was inserted.
+- The main TuringResearch repository remains the only install entry.
+- Child repositories are documented only as case/demo spokes.
+- Star focus remains with the flagship repository.
+
+Validation:
+- Docs deployment preflight/gate tests passed with 11 tests.
+- URL placeholder tests passed with 6 tests.
+- v1.5 security/privacy and public release hygiene tests passed with 18 tests.
+- `python -m ruff check .` passed.
+- `git diff --check` passed with only LF-to-CRLF working-copy warning.

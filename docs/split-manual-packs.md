@@ -15,6 +15,9 @@ not create repositories, push remotes, publish releases, or write real URLs.
 | `split_manual/turingresearch-vggt-case/` | `split_ready/turingresearch-vggt-case/` | manual-ready | public-safe case study spoke |
 | `split_manual/turingresearch-examples/` | `split_ready/turingresearch-examples/` | manual-ready | public-safe examples spoke |
 
+These are local manual packs, not published repositories and not external
+install targets.
+
 ## Pack Contents
 
 Each manual-ready pack may include:
@@ -25,6 +28,10 @@ Each manual-ready pack may include:
 - `SAFETY_CHECKLIST.md`
 - `GIT_INIT_DRY_RUN.md`
 - `RELEASE_CHECKLIST.md`
+- `FINAL_CREATE_REPO.md`
+- `FINAL_PUSH_COMMANDS.md`
+- `FINAL_RELEASE_CHECKLIST.md`
+- `FINAL_PRIVACY_CHECK.md`
 - `manifest.yaml`
 
 ## Publication Boundary
@@ -39,6 +46,7 @@ Required boundaries:
 - no automatic GitHub repository creation;
 - no automatic external push;
 - no automatic release publication;
+- no nonexistent real GitHub URL;
 - no private data, raw data, secrets, private paths, or huge artifacts;
 - no unsupported observed-result claims.
 
@@ -55,6 +63,20 @@ The main TuringResearch repository remains:
 
 Child repositories are only case/demo spokes. They should point readers back to
 the flagship rather than replacing it.
+
+They must not disperse star focus away from the flagship repository.
+
+## URL Placeholder Boundary
+
+Before a child repository exists, split manual packs may only use:
+
+- `<approved-real-repository-url>`
+- `TuringResearch main repository URL goes here after human publication approval`
+
+See:
+
+- [`split-repo-url-placeholder-policy.md`](split-repo-url-placeholder-policy.md)
+- [`split-repo-url-update-after-creation.md`](split-repo-url-update-after-creation.md)
 
 ## Human Release Flow
 

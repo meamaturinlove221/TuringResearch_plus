@@ -1,8 +1,8 @@
-# TuringResearch Plus
+# TuringResearch
 
 Local-first Research OS for evidence-led research work.
 
-TuringResearch Plus helps researchers manage complex research state without
+TuringResearch helps researchers manage complex research state without
 pretending to automate research judgment. It keeps evidence, artifacts, route
 plans, paper notes, dashboards, advisor packs, plugin manifests, privacy checks,
 and replay gates in one local workflow.
@@ -74,7 +74,7 @@ just generating more text. The hard part is keeping the project honest:
 - which claims are unsafe;
 - what still requires human review.
 
-TuringResearch Plus makes those boundaries explicit.
+TuringResearch makes those boundaries explicit.
 
 ## Core Capabilities
 
@@ -214,7 +214,7 @@ Start here:
 - `examples/vggt-human-prior-survey/public_case_study/redaction_report.md`
 - `examples/vggt-human-prior-survey/public_case_study/claim_safety_report.md`
 
-The case study shows how TuringResearch Plus helped organize:
+The case study shows how TuringResearch helped organize:
 
 - north star and problem background;
 - route changes;
@@ -323,21 +323,22 @@ Near-term v1.1 stabilization focuses on:
 - maintaining the main repository as the flagship entry point.
 
 Longer term, optional satellite repositories may be created for public-safe case
-studies and examples. For v1.5 these remain planned / manual-ready spokes with
+studies and examples. For v1.6 these remain planned / manual-ready spokes with
 local export bundles under `split_ready/` and human execution packs under
 `split_manual/`; they are not published GitHub repositories and they are not
 install targets. Core runtime, install path, public API, release gates, and star
 focus remain centered in the flagship repository. See
 [Future Split Repositories](docs/future-split-repos.md),
-[Split-ready Bundles](docs/split-ready-bundles.md), and
-[Split Manual Packs](docs/split-manual-packs.md).
+[Split-ready Bundles](docs/split-ready-bundles.md),
+[Split Manual Packs](docs/split-manual-packs.md), and
+[Split Repo URL Placeholder Policy](docs/split-repo-url-placeholder-policy.md).
 
 ## Planned / Manual-ready Split Repositories
 
-Planned Split Repositories remain manual-ready only.
+Planned split repositories remain manual-ready only.
 
-The following split repositories are planned or manual-ready, but not
-published:
+The following split repositories are planned or manual-ready, but not published
+and not linked as real external repositories:
 
 - `turingresearch-vggt-case`: public-safe VGGT dogfooding case bundle.
 - `turingresearch-examples`: public demo and project-template bundle.
@@ -346,22 +347,25 @@ published:
 No real GitHub URLs are listed until a maintainer manually creates and approves
 the repositories. The local `split_ready/` directory contains export-ready
 bundles, and `split_manual/` contains human-only creation packs, git-init
-dry-run notes, and release checklists. Neither directory is a published
-repository. The main TuringResearch repository remains the only install,
-quickstart, public API, release, and star entry.
+dry-run notes, release checklists, and final creation packs. Neither directory
+is a published repository. The main TuringResearch repository remains the only
+install, quickstart, public API, release, and star entry; child repositories are
+only optional case/demo spokes and must not disperse star focus away from the
+flagship.
 
 See:
 
 - [`docs/future-split-repos.md`](docs/future-split-repos.md)
 - [`docs/split-ready-bundles.md`](docs/split-ready-bundles.md)
 - [`docs/split-manual-packs.md`](docs/split-manual-packs.md)
+- [`docs/split-repo-url-placeholder-policy.md`](docs/split-repo-url-placeholder-policy.md)
 - [`docs/main-repo-post-split-patch-v2.md`](docs/main-repo-post-split-patch-v2.md)
 - [`docs/v1.1.0-split-repo-sync-policy.md`](docs/v1.1.0-split-repo-sync-policy.md)
 - [`split_ready/split_manifest.yaml`](split_ready/split_manifest.yaml)
 
 ## Limitations
 
-TuringResearch Plus does not:
+TuringResearch does not:
 
 - automatically complete research;
 - automatically run real experiments;
