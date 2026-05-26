@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from tuling_research.session.models import SessionInfo, SessionListResult
+from turing_research.session.models import SessionInfo, SessionListResult
 
 
 class SessionRegistry:

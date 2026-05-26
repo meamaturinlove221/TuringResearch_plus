@@ -1,13 +1,13 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.ideation.diversity import quality_diversity_filter
-from tuling_research_plus.ideation.models import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.ideation.diversity import quality_diversity_filter
+from turing_research_plus.ideation.models import (
     IdeaCandidate,
     IdeaClusterKey,
     IdeaGenerationResult,
     IdeaRisk,
 )
-from tuling_research_plus.ideation.service import CreativeIdeationService
-from tuling_research_plus.ideation.tools import research_idea_quality_diversity_filter
+from turing_research_plus.ideation.service import CreativeIdeationService
+from turing_research_plus.ideation.tools import research_idea_quality_diversity_filter
 
 
 def evidence(source_id: str = "paper-1") -> EvidenceRef:

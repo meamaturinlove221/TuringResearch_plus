@@ -1,13 +1,13 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.hypothesis.falsifiability import build_hypothesis, is_falsifiable
-from tuling_research_plus.hypothesis.models import GapPriority
-from tuling_research_plus.hypothesis.scoring import score_hypothesis
-from tuling_research_plus.hypothesis.service import HypothesisFormationService
-from tuling_research_plus.hypothesis.tools import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.hypothesis.falsifiability import build_hypothesis, is_falsifiable
+from turing_research_plus.hypothesis.models import GapPriority
+from turing_research_plus.hypothesis.scoring import score_hypothesis
+from turing_research_plus.hypothesis.service import HypothesisFormationService
+from turing_research_plus.hypothesis.tools import (
     research_hypothesis_generate,
     research_hypothesis_operationalize,
 )
-from tuling_research_plus.insight.models import GapValidation, GapValidationReport
+from turing_research_plus.insight.models import GapValidation, GapValidationReport
 
 
 def evidence() -> EvidenceRef:

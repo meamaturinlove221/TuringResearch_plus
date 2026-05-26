@@ -1,8 +1,8 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.convergence.models import CandidateKind, ConvergenceCandidate
-from tuling_research_plus.convergence.scoring import score_candidate, scoring_matrix
-from tuling_research_plus.convergence.service import ConvergenceService
-from tuling_research_plus.convergence.tools import research_candidate_score
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.convergence.models import CandidateKind, ConvergenceCandidate
+from turing_research_plus.convergence.scoring import score_candidate, scoring_matrix
+from turing_research_plus.convergence.service import ConvergenceService
+from turing_research_plus.convergence.tools import research_candidate_score
 
 
 def evidence() -> EvidenceRef:

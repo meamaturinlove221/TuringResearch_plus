@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.insight.models import GapValidation, GapValidationReport
-from tuling_research_plus.survey.models import LiteratureSurveyArtifact
+from turing_research_plus.insight.models import GapValidation, GapValidationReport
+from turing_research_plus.survey.models import LiteratureSurveyArtifact
 
 
 def analyze_gaps(

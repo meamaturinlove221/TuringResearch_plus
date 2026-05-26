@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.hypothesis.models import Hypothesis
-from tuling_research_plus.ideation.models import MorphologicalAxis, MorphologicalMatrix
+from turing_research_plus.hypothesis.models import Hypothesis
+from turing_research_plus.ideation.models import MorphologicalAxis, MorphologicalMatrix
 
 
 def build_morphological_matrix(

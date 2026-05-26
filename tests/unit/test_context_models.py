@@ -1,8 +1,8 @@
 import pytest
 from pydantic import ValidationError
 
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
-from tuling_research_plus.context.models import ContextCheckpoint, ContextSession
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.context.models import ContextCheckpoint, ContextSession
 
 
 def artifact() -> ResearchArtifact:

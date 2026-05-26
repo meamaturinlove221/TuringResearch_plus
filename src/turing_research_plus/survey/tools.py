@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from typing import Any
 
-from tuling_research_plus.survey.models import SurveyInput, SurveyResult
-from tuling_research_plus.survey.service import LiteratureSurveyService
+from turing_research_plus.survey.models import SurveyInput, SurveyResult
+from turing_research_plus.survey.service import LiteratureSurveyService
 
 
 def research_survey_plan(

@@ -1,6 +1,6 @@
-"""TulingResearch Plus Experiment Execution workflow."""
+"""TuringResearch Plus Experiment Execution workflow."""
 
-from tuling_research_plus.experiment.models import (
+from turing_research_plus.experiment.models import (
     ComputeBudget,
     ConstraintAnalysis,
     ExperimentPlan,
@@ -11,7 +11,7 @@ from tuling_research_plus.experiment.models import (
     ScenarioPlan,
     StatisticalComparisonPlan,
 )
-from tuling_research_plus.experiment.service import ExperimentExecutionService
+from turing_research_plus.experiment.service import ExperimentExecutionService
 
 __all__ = [
     "ComputeBudget",

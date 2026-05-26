@@ -1,4 +1,4 @@
-from tuling_research_plus.paper.latex_export import (
+from turing_research_plus.paper.latex_export import (
     LatexExportInput,
     export_latex,
     paper_latex_export,
@@ -6,7 +6,7 @@ from tuling_research_plus.paper.latex_export import (
 
 
 def markdown() -> str:
-    return """# TulingResearch Plus Paper Draft
+    return """# TuringResearch Plus Paper Draft
 
 ## Abstract
 Evidence-backed summary.

@@ -1,9 +1,9 @@
 import pytest
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.vault.graph import DuplicateEdgeError
-from tuling_research_plus.vault.models import VaultEdge, VaultEdgeType, VaultEntityType, VaultPage
-from tuling_research_plus.vault.service import VaultService
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.vault.graph import DuplicateEdgeError
+from turing_research_plus.vault.models import VaultEdge, VaultEdgeType, VaultEntityType, VaultPage
+from turing_research_plus.vault.service import VaultService
 
 
 def evidence() -> EvidenceRef:

@@ -6,14 +6,14 @@ import json
 from hashlib import sha256
 from pathlib import Path
 
-from tuling_research.cache.keys import CacheKey, build_cache_key
-from tuling_research.cache.manager import CacheManager
-from tuling_research.pdf.converters.pymupdf_converter import (
+from turing_research.cache.keys import CacheKey, build_cache_key
+from turing_research.cache.manager import CacheManager
+from turing_research.pdf.converters.pymupdf_converter import (
     ConverterUnavailableError,
     PyMuPDFConverter,
 )
-from tuling_research.pdf.extractors.sectionizer import sectionize_text
-from tuling_research.pdf.models import (
+from turing_research.pdf.extractors.sectionizer import sectionize_text
+from turing_research.pdf.models import (
     PDFCacheLookupInput,
     PDFErrorCode,
     PDFMarkdownContentInput,
@@ -24,7 +24,7 @@ from tuling_research.pdf.models import (
     PDFPageMapEntry,
     PDFToolStatus,
 )
-from tuling_research.pdf.quality import score_markdown
+from turing_research.pdf.quality import score_markdown
 
 
 class PDFMarkdownPipeline:

@@ -1,10 +1,10 @@
-from tuling_research_plus.semantic_graph.models import (
+from turing_research_plus.semantic_graph.models import (
     AuthorNetworkInput,
     AuthorNode,
     GraphStatus,
     PaperNode,
 )
-from tuling_research_plus.semantic_graph.service import SemanticGraphService
+from turing_research_plus.semantic_graph.service import SemanticGraphService
 
 
 class FakeAuthorAdapter:

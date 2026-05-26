@@ -1,8 +1,8 @@
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
-from tuling_research_plus.stress.claim_red_team import red_team_claim
-from tuling_research_plus.stress.models import Claim, PassFail, Severity
-from tuling_research_plus.stress.service import StressTestService
-from tuling_research_plus.stress.tools import research_artifact_stress_test, research_claim_red_team
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.stress.claim_red_team import red_team_claim
+from turing_research_plus.stress.models import Claim, PassFail, Severity
+from turing_research_plus.stress.service import StressTestService
+from turing_research_plus.stress.tools import research_artifact_stress_test, research_claim_red_team
 
 
 def evidence() -> EvidenceRef:

@@ -2,13 +2,13 @@ from __future__ import annotations
 
 from tests.workflow.example_helpers import assert_example_contract, read_json, to_pretty_json
 
-from tuling_research_plus.semantic_graph.models import (
+from turing_research_plus.semantic_graph.models import (
     CitationGraphExpandInput,
     GraphDirection,
     GraphStatus,
     PaperNode,
 )
-from tuling_research_plus.semantic_graph.service import SemanticGraphService
+from turing_research_plus.semantic_graph.service import SemanticGraphService
 
 
 class FakeSemanticGraphAdapter:

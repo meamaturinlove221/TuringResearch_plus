@@ -1,5 +1,5 @@
-from tuling_research_plus.semantic_graph.client import SemanticGraphAdapterError
-from tuling_research_plus.semantic_graph.models import (
+from turing_research_plus.semantic_graph.client import SemanticGraphAdapterError
+from turing_research_plus.semantic_graph.models import (
     AuthorNode,
     CitationGraphExpandInput,
     GraphDirection,
@@ -7,7 +7,7 @@ from tuling_research_plus.semantic_graph.models import (
     GraphStatus,
     PaperNode,
 )
-from tuling_research_plus.semantic_graph.service import SemanticGraphService
+from turing_research_plus.semantic_graph.service import SemanticGraphService
 
 
 class FakeSemanticScholarAdapter:

@@ -4,10 +4,10 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from tuling_research.cache.keys import build_cache_key
-from tuling_research.cache.manager import CacheManager
-from tuling_research.errors import CoreError, ErrorCode
-from tuling_research.web.models import WebContentRequest, WebContentResult
+from turing_research.cache.keys import build_cache_key
+from turing_research.cache.manager import CacheManager
+from turing_research.errors import CoreError, ErrorCode
+from turing_research.web.models import WebContentRequest, WebContentResult
 
 
 class WebContentService:

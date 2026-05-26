@@ -39,18 +39,18 @@ def test_missing_live_api_keys_do_not_break_default_health_check(
     ):
         monkeypatch.delenv(env_name, raising=False)
 
-    from tuling_research.mcp_server import core_health_check
+    from turing_research.mcp_server import core_health_check
 
     result = core_health_check()
 
     assert result["status"] == "ok"
-    assert result["package"] == "tuling_research"
+    assert result["package"] == "turing_research"
 
 
 def test_pymupdf_missing_does_not_break_pdf_package_import(monkeypatch: pytest.MonkeyPatch) -> None:
-    pdf_module = importlib.import_module("tuling_research.pdf")
+    pdf_module = importlib.import_module("turing_research.pdf")
     converter_module = importlib.import_module(
-        "tuling_research.pdf.converters.pymupdf_converter"
+        "turing_research.pdf.converters.pymupdf_converter"
     )
 
     original_import = builtins.__import__
@@ -78,7 +78,7 @@ def test_local_install_docs_and_troubleshooting_docs_exist() -> None:
 
     for doc in required_docs:
         content = doc.read_text(encoding="utf-8")
-        assert "TulingResearch Plus" in content
+        assert "TuringResearch Plus" in content
         assert "python -m pip install -e" in content
 
 

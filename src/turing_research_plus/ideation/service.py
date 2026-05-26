@@ -2,16 +2,16 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.hypothesis.models import Hypothesis, HypothesisSet
-from tuling_research_plus.ideation.diversity import quality_diversity_filter
-from tuling_research_plus.ideation.generators import generate_cross_domain_ideas, generate_ideas
-from tuling_research_plus.ideation.models import (
+from turing_research_plus.hypothesis.models import Hypothesis, HypothesisSet
+from turing_research_plus.ideation.diversity import quality_diversity_filter
+from turing_research_plus.ideation.generators import generate_cross_domain_ideas, generate_ideas
+from turing_research_plus.ideation.models import (
     DiversityFilterReport,
     IdeaGenerationResult,
     IdeaPortfolio,
     MorphologicalMatrix,
 )
-from tuling_research_plus.ideation.morphological_matrix import build_morphological_matrix
+from turing_research_plus.ideation.morphological_matrix import build_morphological_matrix
 
 
 class CreativeIdeationService:

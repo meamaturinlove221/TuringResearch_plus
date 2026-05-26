@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
-from tuling_research_plus.subtask.models import (
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.subtask.models import (
     SubtaskError,
     SubtaskErrorCode,
     SubtaskExecutionMode,
@@ -12,8 +12,8 @@ from tuling_research_plus.subtask.models import (
     SubtaskStatus,
     TaskProfile,
 )
-from tuling_research_plus.subtask.prompts import render_role_prompt
-from tuling_research_plus.subtask.quality import evaluate_quality_gate
+from turing_research_plus.subtask.prompts import render_role_prompt
+from turing_research_plus.subtask.quality import evaluate_quality_gate
 
 
 class SubtaskRunner:

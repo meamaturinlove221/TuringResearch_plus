@@ -1,6 +1,6 @@
-"""TulingResearch Plus Deep Insight workflow."""
+"""TuringResearch Plus Deep Insight workflow."""
 
-from tuling_research_plus.insight.models import (
+from turing_research_plus.insight.models import (
     AssumptionSensitivity,
     BoundaryCondition,
     BoundaryConditionType,
@@ -14,7 +14,7 @@ from tuling_research_plus.insight.models import (
     ReformulatedProblemSet,
     SensitivityReport,
 )
-from tuling_research_plus.insight.service import DeepInsightService
+from turing_research_plus.insight.service import DeepInsightService
 
 __all__ = [
     "AssumptionSensitivity",

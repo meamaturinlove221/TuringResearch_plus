@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.subtask.models import SubtaskResult, SubtaskStatus, TaskProfile
+from turing_research_plus.subtask.models import SubtaskResult, SubtaskStatus, TaskProfile
 
 
 def evaluate_quality_gate(result: SubtaskResult, profile: TaskProfile) -> bool:

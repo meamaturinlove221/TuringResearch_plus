@@ -4,12 +4,12 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from tuling_research_plus.artifacts.models import EvidenceRef, ResearchArtifact
-from tuling_research_plus.vault.graph import DuplicateEdgeError, VaultGraph
-from tuling_research_plus.vault.index import VaultIndex
-from tuling_research_plus.vault.lint import lint_vault
-from tuling_research_plus.vault.markdown_io import read_page, write_page
-from tuling_research_plus.vault.models import (
+from turing_research_plus.artifacts.models import EvidenceRef, ResearchArtifact
+from turing_research_plus.vault.graph import DuplicateEdgeError, VaultGraph
+from turing_research_plus.vault.index import VaultIndex
+from turing_research_plus.vault.lint import lint_vault
+from turing_research_plus.vault.markdown_io import read_page, write_page
+from turing_research_plus.vault.models import (
     VaultEdge,
     VaultEdgeType,
     VaultEntityType,

@@ -1,9 +1,9 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.hypothesis.falsifiability import build_hypothesis
-from tuling_research_plus.hypothesis.models import GapPriority, HypothesisSet
-from tuling_research_plus.ideation.generators import generate_cross_domain_ideas, generate_ideas
-from tuling_research_plus.ideation.service import CreativeIdeationService
-from tuling_research_plus.ideation.tools import research_idea_cross_domain, research_idea_generate
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.hypothesis.falsifiability import build_hypothesis
+from turing_research_plus.hypothesis.models import GapPriority, HypothesisSet
+from turing_research_plus.ideation.generators import generate_cross_domain_ideas, generate_ideas
+from turing_research_plus.ideation.service import CreativeIdeationService
+from turing_research_plus.ideation.tools import research_idea_cross_domain, research_idea_generate
 
 
 def evidence() -> EvidenceRef:

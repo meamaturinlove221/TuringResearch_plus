@@ -1,5 +1,5 @@
-from tuling_research_plus.subtask.models import SubtaskSpec, SubtaskStatus, TaskProfile
-from tuling_research_plus.subtask.runner import SubtaskRunner
+from turing_research_plus.subtask.models import SubtaskSpec, SubtaskStatus, TaskProfile
+from turing_research_plus.subtask.runner import SubtaskRunner
 
 
 def test_task_profile_accepts_dry_run_without_tools() -> None:

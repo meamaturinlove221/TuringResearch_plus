@@ -1,8 +1,8 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.hypothesis.portfolio import build_portfolio
-from tuling_research_plus.hypothesis.service import HypothesisFormationService
-from tuling_research_plus.hypothesis.tools import research_hypothesis_portfolio_build
-from tuling_research_plus.insight.models import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.hypothesis.portfolio import build_portfolio
+from turing_research_plus.hypothesis.service import HypothesisFormationService
+from turing_research_plus.hypothesis.tools import research_hypothesis_portfolio_build
+from turing_research_plus.insight.models import (
     GapValidation,
     GapValidationReport,
     InsightItem,

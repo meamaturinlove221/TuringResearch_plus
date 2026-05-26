@@ -4,7 +4,7 @@ from enum import StrEnum
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
 
 
 class BoundaryConditionType(StrEnum):
@@ -42,7 +42,7 @@ class GapValidationReport(BaseModel):
             artifact_id=f"gap-validation-{self.report_id}",
             kind=ArtifactKind.WORKFLOW_STATE,
             title=f"Gap Validation: {self.topic}",
-            created_by="TulingResearch Plus insight",
+            created_by="TuringResearch Plus insight",
             content=self.model_dump(mode="json"),
             evidence=[evidence for gap in self.gaps for evidence in gap.evidence],
             tags=["deep_insight", "gap_validation"],
@@ -82,7 +82,7 @@ class InsightReport(BaseModel):
             artifact_id=f"insight-{self.report_id}",
             kind=ArtifactKind.WORKFLOW_STATE,
             title=f"Insight Report: {self.topic}",
-            created_by="TulingResearch Plus insight",
+            created_by="TuringResearch Plus insight",
             content=self.model_dump(mode="json"),
             evidence=evidence,
             tags=["deep_insight", "insight_report"],

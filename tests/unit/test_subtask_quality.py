@@ -1,12 +1,12 @@
-from tuling_research_plus.subtask.models import (
+from turing_research_plus.subtask.models import (
     SubtaskErrorCode,
     SubtaskExecutionMode,
     SubtaskSpec,
     SubtaskStatus,
     TaskProfile,
 )
-from tuling_research_plus.subtask.quality import evaluate_quality_gate
-from tuling_research_plus.subtask.runner import SubtaskRunner
+from turing_research_plus.subtask.quality import evaluate_quality_gate
+from turing_research_plus.subtask.runner import SubtaskRunner
 
 
 def test_quality_gate_failure_detected() -> None:

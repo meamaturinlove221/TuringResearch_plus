@@ -1,4 +1,4 @@
-from tuling_research_plus.stress.models import (
+from turing_research_plus.stress.models import (
     FailureMode,
     PassFail,
     Severity,

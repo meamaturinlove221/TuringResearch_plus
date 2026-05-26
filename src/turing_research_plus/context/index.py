@@ -6,7 +6,7 @@ import json
 from datetime import UTC, datetime
 from pathlib import Path
 
-from tuling_research_plus.context.models import ContextIndex, ContextIndexEntry
+from turing_research_plus.context.models import ContextIndex, ContextIndexEntry
 
 
 def index_path(root: str | Path) -> Path:

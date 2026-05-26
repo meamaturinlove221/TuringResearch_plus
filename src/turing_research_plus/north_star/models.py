@@ -5,7 +5,7 @@ from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from tuling_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.artifacts.models import EvidenceRef
 
 
 class StartMode(StrEnum):

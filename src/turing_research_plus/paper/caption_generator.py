@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.paper.figure_registry import FigureAsset
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.paper.figure_registry import FigureAsset
 
 
 class CaptionGenerateInput(BaseModel):

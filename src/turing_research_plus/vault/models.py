@@ -1,4 +1,4 @@
-"""Wiki Vault models for TulingResearch Plus."""
+"""Wiki Vault models for TuringResearch Plus."""
 
 from enum import StrEnum
 from pathlib import Path
@@ -6,7 +6,7 @@ from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from tuling_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.artifacts.models import EvidenceRef
 
 
 class VaultEntityType(StrEnum):

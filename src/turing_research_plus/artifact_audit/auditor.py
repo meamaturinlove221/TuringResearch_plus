@@ -6,15 +6,15 @@ import hashlib
 from pathlib import Path
 from typing import Any
 
-from tuling_research_plus.artifact_audit.manifest import infer_file_type, load_manifest_like_index
-from tuling_research_plus.artifact_audit.models import (
+from turing_research_plus.artifact_audit.manifest import infer_file_type, load_manifest_like_index
+from turing_research_plus.artifact_audit.models import (
     ArtifactAuditInput,
     ArtifactAuditReport,
     ArtifactFileType,
     ArtifactRecord,
     ArtifactSafetyFlag,
 )
-from tuling_research_plus.artifact_audit.npz_summary import summarize_npz
+from turing_research_plus.artifact_audit.npz_summary import summarize_npz
 
 
 def audit_artifacts(request: ArtifactAuditInput) -> ArtifactAuditReport:

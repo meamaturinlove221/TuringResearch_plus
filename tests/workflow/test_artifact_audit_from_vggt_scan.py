@@ -1,7 +1,7 @@
 from pathlib import Path
 
-from tuling_research_plus.artifact_audit.auditor import audit_artifacts
-from tuling_research_plus.artifact_audit.models import ArtifactAuditInput, ArtifactSafetyFlag
+from turing_research_plus.artifact_audit.auditor import audit_artifacts
+from turing_research_plus.artifact_audit.models import ArtifactAuditInput, ArtifactSafetyFlag
 
 
 def test_artifact_audit_from_empty_vggt_local_scan() -> None:

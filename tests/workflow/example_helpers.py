@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from tuling_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.artifacts.models import EvidenceRef
 
 ROOT = Path(__file__).resolve().parents[2]
 EXAMPLES = ROOT / "examples"

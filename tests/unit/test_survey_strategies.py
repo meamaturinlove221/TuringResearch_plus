@@ -1,5 +1,5 @@
-from tuling_research_plus.survey.models import SurveyInput, SurveyStrategy
-from tuling_research_plus.survey.strategies import create_survey_plan, strategy_defaults
+from turing_research_plus.survey.models import SurveyInput, SurveyStrategy
+from turing_research_plus.survey.strategies import create_survey_plan, strategy_defaults
 
 
 def test_strategy_routing_and_budget_defaults() -> None:

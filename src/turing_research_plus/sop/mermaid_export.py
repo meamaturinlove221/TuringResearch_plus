@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import re
 
-from tuling_research_plus.sop.models import SOPGraph, SOPNodeKind
+from turing_research_plus.sop.models import SOPGraph, SOPNodeKind
 
 
 def export_mermaid(graph: SOPGraph) -> str:
@@ -27,7 +27,7 @@ def export_sop_markdown(graph: SOPGraph, mermaid_text: str) -> str:
     """Render an SOP graph as a compact Markdown SOP document."""
 
     lines = [
-        f"# TulingResearch Plus SOP: {graph.title}",
+        f"# TuringResearch Plus SOP: {graph.title}",
         "",
         f"- Graph ID: `{graph.graph_id}`",
         f"- Graph type: `{graph.graph_type}`",

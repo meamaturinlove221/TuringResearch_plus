@@ -1,6 +1,6 @@
-"""TulingResearch Plus Creative Ideation workflow."""
+"""TuringResearch Plus Creative Ideation workflow."""
 
-from tuling_research_plus.ideation.models import (
+from turing_research_plus.ideation.models import (
     DiversityFilterReport,
     IdeaCandidate,
     IdeaClusterKey,
@@ -10,7 +10,7 @@ from tuling_research_plus.ideation.models import (
     MorphologicalAxis,
     MorphologicalMatrix,
 )
-from tuling_research_plus.ideation.service import CreativeIdeationService
+from turing_research_plus.ideation.service import CreativeIdeationService
 
 __all__ = [
     "CreativeIdeationService",

@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.hypothesis.finer import formulate_research_question
-from tuling_research_plus.hypothesis.models import (
+from turing_research_plus.hypothesis.finer import formulate_research_question
+from turing_research_plus.hypothesis.models import (
     HypothesisPortfolio,
     HypothesisSet,
     ResearchQuestion,

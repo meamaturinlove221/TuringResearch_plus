@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from typing import Any
 
-from tuling_research_plus.north_star.models import NorthStarInput, NorthStarStatement, ResearchBrief
-from tuling_research_plus.north_star.service import NorthStarService
+from turing_research_plus.north_star.models import NorthStarInput, NorthStarStatement, ResearchBrief
+from turing_research_plus.north_star.service import NorthStarService
 
 
 def research_north_star_init(

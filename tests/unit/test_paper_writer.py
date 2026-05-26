@@ -1,16 +1,16 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.paper.figure_registry import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.paper.figure_registry import (
     FigureAsset,
     FigureAssetKind,
     FigureAssetRegistry,
 )
-from tuling_research_plus.paper.models import (
+from turing_research_plus.paper.models import (
     ArticleBlock,
     ArticleBlockKind,
     ArticleSection,
     ExperimentReport,
 )
-from tuling_research_plus.paper.paper_writer import (
+from turing_research_plus.paper.paper_writer import (
     PaperDraftInput,
     PaperSection,
     SectionReadinessStatus,
@@ -115,7 +115,7 @@ def test_paper_draft_generate_tool_returns_json_payload() -> None:
     payload = paper_draft_generate(complete_input())
 
     assert payload["blocked"] is False
-    assert payload["draft_markdown"].startswith("# TulingResearch Plus Paper Draft")
+    assert payload["draft_markdown"].startswith("# TuringResearch Plus Paper Draft")
 
 
 def test_section_status_ready_when_complete() -> None:

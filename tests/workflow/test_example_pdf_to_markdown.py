@@ -4,8 +4,8 @@ from pathlib import Path
 
 from tests.workflow.example_helpers import assert_example_contract, read_json, to_pretty_json
 
-from tuling_research.pdf.models import PDFMarkdownInput, PDFToolStatus
-from tuling_research.pdf.pipeline import PDFMarkdownPipeline
+from turing_research.pdf.models import PDFMarkdownInput, PDFToolStatus
+from turing_research.pdf.pipeline import PDFMarkdownPipeline
 
 
 def create_fixture_pdf(path: Path, text: str) -> None:

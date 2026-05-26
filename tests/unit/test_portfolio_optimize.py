@@ -1,8 +1,8 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.convergence.models import CandidateKind, ConvergenceCandidate
-from tuling_research_plus.convergence.portfolio import optimize_portfolio
-from tuling_research_plus.convergence.service import ConvergenceService
-from tuling_research_plus.convergence.tools import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.convergence.models import CandidateKind, ConvergenceCandidate
+from turing_research_plus.convergence.portfolio import optimize_portfolio
+from turing_research_plus.convergence.service import ConvergenceService
+from turing_research_plus.convergence.tools import (
     research_decision_steelman,
     research_portfolio_optimize,
 )

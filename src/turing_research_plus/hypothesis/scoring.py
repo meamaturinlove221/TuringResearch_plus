@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.hypothesis.models import GapPriority, GapPriorityReport, Hypothesis
-from tuling_research_plus.insight.models import GapValidationReport
+from turing_research_plus.hypothesis.models import GapPriority, GapPriorityReport, Hypothesis
+from turing_research_plus.insight.models import GapValidationReport
 
 
 def prioritize_gaps(

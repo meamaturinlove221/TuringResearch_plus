@@ -1,6 +1,6 @@
 from datetime import UTC, datetime, timedelta
 
-from tuling_research.cache.failure_ledger import FailureLedger, FailureRecord
+from turing_research.cache.failure_ledger import FailureLedger, FailureRecord
 
 
 def test_failure_ledger_appends_retry_after_record(tmp_path) -> None:

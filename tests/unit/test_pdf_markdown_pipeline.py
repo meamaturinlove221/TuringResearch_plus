@@ -1,9 +1,9 @@
 from pathlib import Path
 
-from tuling_research.pdf.models import PDFErrorCode, PDFMarkdownInput, PDFToolStatus
-from tuling_research.pdf.pipeline import PDFMarkdownPipeline
-from tuling_research.pdf.tools import pdf_markdown_content
-from tuling_research.settings import CoreSettings
+from turing_research.pdf.models import PDFErrorCode, PDFMarkdownInput, PDFToolStatus
+from turing_research.pdf.pipeline import PDFMarkdownPipeline
+from turing_research.pdf.tools import pdf_markdown_content
+from turing_research.settings import CoreSettings
 
 
 def create_pdf(path: Path, text: str | None = None) -> None:

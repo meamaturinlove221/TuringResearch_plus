@@ -1,6 +1,6 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.race.models import IdeaCard, SourceHygieneGate, SourceHygieneStatus
-from tuling_research_plus.race.priority_elevator import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.race.models import IdeaCard, SourceHygieneGate, SourceHygieneStatus
+from turing_research_plus.race.priority_elevator import (
     RacePriority,
     priority_score,
     race_priority_score,

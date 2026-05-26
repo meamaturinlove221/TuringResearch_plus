@@ -1,6 +1,6 @@
-"""Scholar content services for TulingResearch Core."""
+"""Scholar content services for TuringResearch Core."""
 
-from tuling_research.scholar.content_service import PaperContentService
-from tuling_research.scholar.models import PaperContentRequest, PaperContentResult
+from turing_research.scholar.content_service import PaperContentService
+from turing_research.scholar.models import PaperContentRequest, PaperContentResult
 
 __all__ = ["PaperContentRequest", "PaperContentResult", "PaperContentService"]

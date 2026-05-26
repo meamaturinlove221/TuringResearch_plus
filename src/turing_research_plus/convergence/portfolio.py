@@ -2,16 +2,16 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.convergence.feasibility import assess_feasibilities
-from tuling_research_plus.convergence.models import (
+from turing_research_plus.convergence.feasibility import assess_feasibilities
+from turing_research_plus.convergence.models import (
     CandidateScore,
     ConvergenceCandidate,
     DecisionReport,
     PromotionDecision,
     PromotionDecisionResult,
 )
-from tuling_research_plus.convergence.pairwise import pairwise_rank
-from tuling_research_plus.convergence.scoring import score_candidates, scoring_matrix
+from turing_research_plus.convergence.pairwise import pairwise_rank
+from turing_research_plus.convergence.scoring import score_candidates, scoring_matrix
 
 
 def optimize_portfolio(

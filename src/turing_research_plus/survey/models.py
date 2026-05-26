@@ -4,7 +4,7 @@ from enum import StrEnum
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
 
 
 class SurveyStrategy(StrEnum):
@@ -221,7 +221,7 @@ class LiteratureSurveyArtifact(BaseModel):
             artifact_id=f"survey-{self.survey_id}",
             kind=ArtifactKind.WORKFLOW_STATE,
             title=f"Literature Survey: {self.topic}",
-            created_by="TulingResearch Plus survey",
+            created_by="TuringResearch Plus survey",
             content=self.model_dump(mode="json"),
             evidence=evidence,
             tags=["literature_survey", self.strategy],

@@ -1,6 +1,6 @@
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
-from tuling_research_plus.ledger.models import LedgerEvent, LedgerEventType, StateLedger
-from tuling_research_plus.ledger.state_ledger import append_artifact, append_blocker, append_event
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.ledger.models import LedgerEvent, LedgerEventType, StateLedger
+from turing_research_plus.ledger.state_ledger import append_artifact, append_blocker, append_event
 
 
 def evidence() -> EvidenceRef:

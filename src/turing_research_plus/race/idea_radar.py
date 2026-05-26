@@ -7,8 +7,8 @@ from hashlib import sha256
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from tuling_research_plus.race.models import IdeaCard, IdeaPriority, RecommendedAction
-from tuling_research_plus.race.source_hygiene import (
+from turing_research_plus.race.models import IdeaCard, IdeaPriority, RecommendedAction
+from turing_research_plus.race.source_hygiene import (
     SourceHygieneCheckResult,
     SourceHygieneDecision,
     SourceMaterial,

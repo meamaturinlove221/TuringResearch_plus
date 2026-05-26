@@ -7,12 +7,12 @@ from tests.workflow.example_helpers import (
     to_pretty_json,
 )
 
-from tuling_research_plus.convergence.models import CandidateKind, ConvergenceCandidate
-from tuling_research_plus.convergence.service import ConvergenceService
-from tuling_research_plus.hypothesis.models import GapPriorityReport
-from tuling_research_plus.hypothesis.service import HypothesisFormationService
-from tuling_research_plus.ideation.service import CreativeIdeationService
-from tuling_research_plus.stress.models import (
+from turing_research_plus.convergence.models import CandidateKind, ConvergenceCandidate
+from turing_research_plus.convergence.service import ConvergenceService
+from turing_research_plus.hypothesis.models import GapPriorityReport
+from turing_research_plus.hypothesis.service import HypothesisFormationService
+from turing_research_plus.ideation.service import CreativeIdeationService
+from turing_research_plus.stress.models import (
     FailureMode,
     PassFail,
     Severity,

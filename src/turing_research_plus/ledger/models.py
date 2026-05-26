@@ -5,7 +5,7 @@ from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from tuling_research_plus.artifacts.models import EvidenceRef, ResearchArtifact
+from turing_research_plus.artifacts.models import EvidenceRef, ResearchArtifact
 
 
 class LedgerEventType(StrEnum):

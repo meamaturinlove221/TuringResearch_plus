@@ -1,6 +1,6 @@
-"""Session registry services for TulingResearch Core."""
+"""Session registry services for TuringResearch Core."""
 
-from tuling_research.session.models import SessionInfo, SessionListResult
-from tuling_research.session.registry import SessionRegistry
+from turing_research.session.models import SessionInfo, SessionListResult
+from turing_research.session.registry import SessionRegistry
 
 __all__ = ["SessionInfo", "SessionListResult", "SessionRegistry"]

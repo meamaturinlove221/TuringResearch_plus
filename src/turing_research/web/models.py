@@ -2,7 +2,7 @@
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from tuling_research.errors import CoreError
+from turing_research.errors import CoreError
 
 
 class WebContentRequest(BaseModel):

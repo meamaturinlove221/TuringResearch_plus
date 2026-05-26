@@ -1,6 +1,6 @@
-"""Campaign models for TulingResearch Plus."""
+"""Campaign models for TuringResearch Plus."""
 
-from tuling_research_plus.campaign.models import (
+from turing_research_plus.campaign.models import (
     CampaignMode,
     CampaignResult,
     CampaignRun,
@@ -12,9 +12,9 @@ from tuling_research_plus.campaign.models import (
     TacticSpec,
     WorkflowStatus,
 )
-from tuling_research_plus.campaign.registry import CampaignRegistry
-from tuling_research_plus.campaign.router import CampaignRouter
-from tuling_research_plus.campaign.runner import CampaignRunner
+from turing_research_plus.campaign.registry import CampaignRegistry
+from turing_research_plus.campaign.router import CampaignRouter
+from turing_research_plus.campaign.runner import CampaignRunner
 
 __all__ = [
     "CampaignMode",

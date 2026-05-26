@@ -2,10 +2,10 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.insight.boundary import build_boundary_map
-from tuling_research_plus.insight.gap_analysis import analyze_gaps
-from tuling_research_plus.insight.models import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.insight.boundary import build_boundary_map
+from turing_research_plus.insight.gap_analysis import analyze_gaps
+from turing_research_plus.insight.models import (
     BoundaryMap,
     DeepInsightResult,
     GapValidationReport,
@@ -14,9 +14,9 @@ from tuling_research_plus.insight.models import (
     ReformulatedProblemSet,
     SensitivityReport,
 )
-from tuling_research_plus.insight.reformulation import reformulate_problems
-from tuling_research_plus.insight.sensitivity import probe_sensitivity
-from tuling_research_plus.survey.models import LiteratureSurveyArtifact
+from turing_research_plus.insight.reformulation import reformulate_problems
+from turing_research_plus.insight.sensitivity import probe_sensitivity
+from turing_research_plus.survey.models import LiteratureSurveyArtifact
 
 
 class DeepInsightService:

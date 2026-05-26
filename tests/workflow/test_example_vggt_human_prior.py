@@ -7,12 +7,12 @@ from tests.workflow.example_helpers import (
     to_pretty_json,
 )
 
-from tuling_research_plus.experiment.design import design_experiment
-from tuling_research_plus.hypothesis.service import HypothesisFormationService
-from tuling_research_plus.insight.models import GapValidation, GapValidationReport
-from tuling_research_plus.north_star.models import ResearchBrief
-from tuling_research_plus.survey.models import PaperRecord, SurveyInput, SurveyStrategy
-from tuling_research_plus.survey.service import LiteratureSurveyService
+from turing_research_plus.experiment.design import design_experiment
+from turing_research_plus.hypothesis.service import HypothesisFormationService
+from turing_research_plus.insight.models import GapValidation, GapValidationReport
+from turing_research_plus.north_star.models import ResearchBrief
+from turing_research_plus.survey.models import PaperRecord, SurveyInput, SurveyStrategy
+from turing_research_plus.survey.service import LiteratureSurveyService
 
 
 class FakePaperService:

@@ -1,5 +1,5 @@
-from tuling_research_plus.survey.depth_gate import evaluate_depth_gates, full_text_ratio
-from tuling_research_plus.survey.models import (
+from turing_research_plus.survey.depth_gate import evaluate_depth_gates, full_text_ratio
+from turing_research_plus.survey.models import (
     PaperScreeningDecision,
     PaperScreeningRow,
     PaperScreeningTable,

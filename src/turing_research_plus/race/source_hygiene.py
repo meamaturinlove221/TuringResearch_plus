@@ -4,8 +4,8 @@ from enum import StrEnum
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.race.models import SourceHygieneGate, SourceHygieneStatus
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.race.models import SourceHygieneGate, SourceHygieneStatus
 
 
 class SourceKind(StrEnum):

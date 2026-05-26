@@ -7,7 +7,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 
 class ArtifactKind(StrEnum):
-    """Stable artifact kinds emitted by TulingResearch Plus workflows."""
+    """Stable artifact kinds emitted by TuringResearch Plus workflows."""
 
     NOTE = "note"
     PDF_MARKDOWN = "pdf_markdown"

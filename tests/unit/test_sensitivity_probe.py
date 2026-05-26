@@ -1,12 +1,12 @@
 import pytest
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.insight.gap_analysis import analyze_gaps
-from tuling_research_plus.insight.models import AssumptionSensitivity, SensitivityReport
-from tuling_research_plus.insight.sensitivity import probe_sensitivity
-from tuling_research_plus.insight.service import DeepInsightService
-from tuling_research_plus.insight.tools import research_sensitivity_probe
-from tuling_research_plus.survey.models import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.insight.gap_analysis import analyze_gaps
+from turing_research_plus.insight.models import AssumptionSensitivity, SensitivityReport
+from turing_research_plus.insight.sensitivity import probe_sensitivity
+from turing_research_plus.insight.service import DeepInsightService
+from turing_research_plus.insight.tools import research_sensitivity_probe
+from turing_research_plus.survey.models import (
     EvidenceMatrix,
     GapItem,
     GapList,

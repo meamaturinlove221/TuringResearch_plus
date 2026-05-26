@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from typing import Any
 
-from tuling_research_plus.semantic_graph.client import SemanticGraphAdapter
-from tuling_research_plus.semantic_graph.models import (
+from turing_research_plus.semantic_graph.client import SemanticGraphAdapter
+from turing_research_plus.semantic_graph.models import (
     AuthorInput,
     AuthorNetworkInput,
     CitationGraphExpandInput,
@@ -14,7 +14,7 @@ from tuling_research_plus.semantic_graph.models import (
     PaperLookupInput,
     RecommendationInput,
 )
-from tuling_research_plus.semantic_graph.service import SemanticGraphService
+from turing_research_plus.semantic_graph.service import SemanticGraphService
 
 
 def _service(adapter: SemanticGraphAdapter | None = None) -> SemanticGraphService:

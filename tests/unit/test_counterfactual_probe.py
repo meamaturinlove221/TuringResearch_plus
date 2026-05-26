@@ -1,7 +1,7 @@
-from tuling_research_plus.stress.counterfactual import counterfactual_probe, failure_mode_analyze
-from tuling_research_plus.stress.models import FailureMode, PassFail, Severity
-from tuling_research_plus.stress.service import StressTestService
-from tuling_research_plus.stress.tools import (
+from turing_research_plus.stress.counterfactual import counterfactual_probe, failure_mode_analyze
+from turing_research_plus.stress.models import FailureMode, PassFail, Severity
+from turing_research_plus.stress.service import StressTestService
+from turing_research_plus.stress.tools import (
     research_counterfactual_probe,
     research_failure_mode_analyze,
 )

@@ -5,36 +5,36 @@ SKILLS_ROOT = ROOT / ".agents" / "skills"
 SKILLS_INDEX = ROOT / "docs" / "skills-index.md"
 
 REQUIRED_SKILLS = [
-    "tulingresearch-master-orchestrator",
-    "tulingresearch-architecture-contracts",
-    "tulingresearch-cache-and-ledger",
-    "tulingresearch-qa-release",
-    "tulingresearch-core-reproduction",
-    "tulingresearch-pdf-markdown-core",
-    "tulingresearch-yogsoth-module-audit",
-    "tulingresearch-fusion-campaign-engine",
-    "tulingresearch-fusion-semantic-graph",
-    "tulingresearch-fusion-literature-survey",
-    "tulingresearch-fusion-north-star",
-    "tulingresearch-fusion-deep-insight",
-    "tulingresearch-fusion-hypothesis-formation",
-    "tulingresearch-fusion-creative-ideation",
-    "tulingresearch-fusion-convergence",
-    "tulingresearch-fusion-stress-test",
-    "tulingresearch-fusion-experiment-execution",
-    "tulingresearch-fusion-wiki-vault",
-    "tulingresearch-fusion-context-management",
-    "tulingresearch-fusion-subtask-runtime",
-    "tulingresearch-race-source-hygiene",
-    "tulingresearch-race-idea-radar",
-    "tulingresearch-race-priority-elevator",
-    "tulingresearch-race-feature-capsule-factory",
-    "tulingresearch-race-architecture-box-builder",
-    "tulingresearch-race-upstream-watch",
-    "tulingresearch-paper-docflow-article-blocks",
-    "tulingresearch-paper-sop-graph-generator",
-    "tulingresearch-paper-figure-asset-pipeline",
-    "tulingresearch-paper-writing-pipeline",
+    "turingresearch-master-orchestrator",
+    "turingresearch-architecture-contracts",
+    "turingresearch-cache-and-ledger",
+    "turingresearch-qa-release",
+    "turingresearch-core-reproduction",
+    "turingresearch-pdf-markdown-core",
+    "turingresearch-yogsoth-module-audit",
+    "turingresearch-fusion-campaign-engine",
+    "turingresearch-fusion-semantic-graph",
+    "turingresearch-fusion-literature-survey",
+    "turingresearch-fusion-north-star",
+    "turingresearch-fusion-deep-insight",
+    "turingresearch-fusion-hypothesis-formation",
+    "turingresearch-fusion-creative-ideation",
+    "turingresearch-fusion-convergence",
+    "turingresearch-fusion-stress-test",
+    "turingresearch-fusion-experiment-execution",
+    "turingresearch-fusion-wiki-vault",
+    "turingresearch-fusion-context-management",
+    "turingresearch-fusion-subtask-runtime",
+    "turingresearch-race-source-hygiene",
+    "turingresearch-race-idea-radar",
+    "turingresearch-race-priority-elevator",
+    "turingresearch-race-feature-capsule-factory",
+    "turingresearch-race-architecture-box-builder",
+    "turingresearch-race-upstream-watch",
+    "turingresearch-paper-docflow-article-blocks",
+    "turingresearch-paper-sop-graph-generator",
+    "turingresearch-paper-figure-asset-pipeline",
+    "turingresearch-paper-writing-pipeline",
 ]
 
 REQUIRED_SECTIONS = [
@@ -59,17 +59,17 @@ FORBIDDEN_PARTS = [
 ]
 
 CORE_SKILLS = {
-    "tulingresearch-master-orchestrator",
-    "tulingresearch-architecture-contracts",
-    "tulingresearch-cache-and-ledger",
-    "tulingresearch-core-reproduction",
-    "tulingresearch-pdf-markdown-core",
-    "tulingresearch-qa-release",
+    "turingresearch-master-orchestrator",
+    "turingresearch-architecture-contracts",
+    "turingresearch-cache-and-ledger",
+    "turingresearch-core-reproduction",
+    "turingresearch-pdf-markdown-core",
+    "turingresearch-qa-release",
 }
 
 RELEASE_CRITICAL_PREFIXES = (
-    "tulingresearch-race-",
-    "tulingresearch-paper-",
+    "turingresearch-race-",
+    "turingresearch-paper-",
 )
 
 
@@ -111,7 +111,7 @@ def test_skills_index_matches_actual_folders() -> None:
     content = SKILLS_INDEX.read_text(encoding="utf-8")
     indexed = []
     for line in content.splitlines():
-        if line.startswith("| `tulingresearch-"):
+        if line.startswith("| `turingresearch-"):
             indexed.append(line.split("`", maxsplit=2)[1])
 
     assert sorted(indexed) == sorted(REQUIRED_SKILLS)

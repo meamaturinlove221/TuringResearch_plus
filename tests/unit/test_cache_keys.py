@@ -1,4 +1,4 @@
-from tuling_research.cache.keys import build_cache_key, is_sha256_key
+from turing_research.cache.keys import build_cache_key, is_sha256_key
 
 
 def test_cache_key_is_sha256_digest() -> None:

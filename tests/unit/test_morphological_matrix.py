@@ -1,9 +1,9 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.hypothesis.falsifiability import build_hypothesis
-from tuling_research_plus.hypothesis.models import GapPriority, Hypothesis
-from tuling_research_plus.ideation.morphological_matrix import build_morphological_matrix
-from tuling_research_plus.ideation.service import CreativeIdeationService
-from tuling_research_plus.ideation.tools import research_idea_morphological_matrix
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.hypothesis.falsifiability import build_hypothesis
+from turing_research_plus.hypothesis.models import GapPriority, Hypothesis
+from turing_research_plus.ideation.morphological_matrix import build_morphological_matrix
+from turing_research_plus.ideation.service import CreativeIdeationService
+from turing_research_plus.ideation.tools import research_idea_morphological_matrix
 
 
 def evidence() -> EvidenceRef:

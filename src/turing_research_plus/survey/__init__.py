@@ -1,9 +1,9 @@
-"""Literature survey workflow for TulingResearch Plus."""
+"""Literature survey workflow for TuringResearch Plus."""
 
-from tuling_research_plus.survey.depth_gate import evaluate_depth_gates, full_text_ratio
-from tuling_research_plus.survey.evidence_matrix import build_evidence_matrix
-from tuling_research_plus.survey.gap_extractor import extract_gaps
-from tuling_research_plus.survey.models import (
+from turing_research_plus.survey.depth_gate import evaluate_depth_gates, full_text_ratio
+from turing_research_plus.survey.evidence_matrix import build_evidence_matrix
+from turing_research_plus.survey.gap_extractor import extract_gaps
+from turing_research_plus.survey.models import (
     EvidenceMatrix,
     GapList,
     LiteratureSurveyArtifact,
@@ -16,8 +16,8 @@ from tuling_research_plus.survey.models import (
     SurveyStatus,
     SurveyStrategy,
 )
-from tuling_research_plus.survey.service import LiteratureSurveyService
-from tuling_research_plus.survey.strategies import create_survey_plan, strategy_defaults
+from turing_research_plus.survey.service import LiteratureSurveyService
+from turing_research_plus.survey.strategies import create_survey_plan, strategy_defaults
 
 __all__ = [
     "EvidenceMatrix",

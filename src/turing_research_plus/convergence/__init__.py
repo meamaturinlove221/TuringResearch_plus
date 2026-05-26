@@ -1,6 +1,10 @@
-"""TulingResearch Plus Convergence workflow."""
+"""TuringResearch Plus Convergence workflow."""
 
-from tuling_research_plus.convergence.models import (
+from turing_research_plus.convergence.decision_report import (
+    build_convergence_decision_report,
+    render_convergence_decision_report,
+)
+from turing_research_plus.convergence.models import (
     CandidateKind,
     CandidateScore,
     ConvergenceCandidate,
@@ -10,7 +14,7 @@ from tuling_research_plus.convergence.models import (
     PromotionDecision,
     PromotionDecisionResult,
 )
-from tuling_research_plus.convergence.service import ConvergenceService
+from turing_research_plus.convergence.service import ConvergenceService
 
 __all__ = [
     "CandidateKind",
@@ -22,5 +26,6 @@ __all__ = [
     "PairwisePreference",
     "PromotionDecision",
     "PromotionDecisionResult",
+    "build_convergence_decision_report",
+    "render_convergence_decision_report",
 ]
-

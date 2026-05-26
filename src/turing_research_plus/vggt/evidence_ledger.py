@@ -6,8 +6,8 @@ import json
 from pathlib import Path
 from typing import Any
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.vggt.evidence_models import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.vggt.evidence_models import (
     VGGTEvidenceLedger,
     VGGTEvidenceLedgerBuildInput,
     VGGTEvidenceRow,

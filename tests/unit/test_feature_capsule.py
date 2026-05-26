@@ -2,13 +2,13 @@ from pathlib import Path
 
 import pytest
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.race.feature_capsule import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.race.feature_capsule import (
     FeatureCapsuleRequest,
     create_feature_capsule,
     race_feature_capsule_create,
 )
-from tuling_research_plus.race.models import IdeaCard, SourceHygieneGate, SourceHygieneStatus
+from turing_research_plus.race.models import IdeaCard, SourceHygieneGate, SourceHygieneStatus
 
 
 def evidence() -> EvidenceRef:
@@ -60,7 +60,7 @@ def test_feature_capsule_factory_writes_required_skeleton_files(tmp_path: Path) 
         tmp_path / "race" / "feature_capsules" / "priority_capsule" / "FEATURE.md",
         tmp_path / "race" / "feature_capsules" / "priority_capsule" / "contract.yaml",
         tmp_path / "race" / "feature_capsules" / "priority_capsule" / "SKILL.md",
-        tmp_path / "src" / "tuling_research_plus" / "race" / "priority_capsule.py",
+        tmp_path / "src" / "turing_research_plus" / "race" / "priority_capsule.py",
         tmp_path / "tests" / "unit" / "test_priority_capsule.py",
         tmp_path / "docs" / "features" / "priority_capsule.md",
         tmp_path / "sop_graphs" / "feature_graphs" / "priority_capsule.mmd",

@@ -1,7 +1,7 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.race.idea_radar import IdeaRadarInput, extract_idea, race_idea_extract
-from tuling_research_plus.race.models import IdeaPriority, RecommendedAction
-from tuling_research_plus.race.source_hygiene import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.race.idea_radar import IdeaRadarInput, extract_idea, race_idea_extract
+from turing_research_plus.race.models import IdeaPriority, RecommendedAction
+from turing_research_plus.race.source_hygiene import (
     SourceKind,
     SourceMaterial,
 )

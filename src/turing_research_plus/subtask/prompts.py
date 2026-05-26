@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 
-from tuling_research_plus.subtask.models import SubtaskSpec, TaskProfile
+from turing_research_plus.subtask.models import SubtaskSpec, TaskProfile
 
 
 def render_role_prompt(spec: SubtaskSpec, profile: TaskProfile) -> str:

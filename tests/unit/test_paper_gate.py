@@ -1,7 +1,7 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.paper.figure_registry import FigureAssetRegistry
-from tuling_research_plus.paper.models import ArticleBlock, ArticleBlockKind, ArticleSection
-from tuling_research_plus.paper.paper_writer import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.paper.figure_registry import FigureAssetRegistry
+from turing_research_plus.paper.models import ArticleBlock, ArticleBlockKind, ArticleSection
+from turing_research_plus.paper.paper_writer import (
     PaperDraftInput,
     PaperSection,
     SectionReadinessStatus,

@@ -5,7 +5,7 @@ from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from tuling_research_plus.artifacts.models import ResearchArtifact
+from turing_research_plus.artifacts.models import ResearchArtifact
 
 
 class SubtaskStatus(StrEnum):

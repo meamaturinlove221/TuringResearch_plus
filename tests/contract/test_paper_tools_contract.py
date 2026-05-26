@@ -1,20 +1,20 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.paper.caption_generator import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.paper.caption_generator import (
     CaptionGenerateInput,
     paper_caption_generate,
 )
-from tuling_research_plus.paper.docflow import paper_docflow_status
-from tuling_research_plus.paper.figure_registry import (
+from turing_research_plus.paper.docflow import paper_docflow_status
+from turing_research_plus.paper.figure_registry import (
     FigureAsset,
     FigureAssetKind,
     FigureRegisterInput,
     paper_figure_register,
 )
-from tuling_research_plus.paper.latex_export import LatexExportInput, paper_latex_export
-from tuling_research_plus.paper.models import DocflowStatusInput, ExperimentReport
-from tuling_research_plus.paper.paper_writer import PaperDraftInput, paper_draft_generate
-from tuling_research_plus.sop.models import SOPGenerationRequest, SOPGraphType
-from tuling_research_plus.sop.sop_graph import paper_sop_graph_generate
+from turing_research_plus.paper.latex_export import LatexExportInput, paper_latex_export
+from turing_research_plus.paper.models import DocflowStatusInput, ExperimentReport
+from turing_research_plus.paper.paper_writer import PaperDraftInput, paper_draft_generate
+from turing_research_plus.sop.models import SOPGenerationRequest, SOPGraphType
+from turing_research_plus.sop.sop_graph import paper_sop_graph_generate
 
 
 def evidence() -> EvidenceRef:

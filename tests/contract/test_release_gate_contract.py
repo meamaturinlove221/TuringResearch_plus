@@ -14,8 +14,8 @@ def test_public_release_docs_exist_and_name_project_correctly() -> None:
 
     for relative in required:
         content = (ROOT / relative).read_text(encoding="utf-8")
-        assert "TulingResearch Plus" in content
-        assert "tulingresearch-plus" in content or relative.endswith("examples.md")
+        assert "TuringResearch Plus" in content
+        assert "turingresearch-plus" in content or relative.endswith("examples.md")
 
 
 def test_mcp_tools_document_marks_implemented_release_tools() -> None:

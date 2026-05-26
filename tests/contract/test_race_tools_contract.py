@@ -1,17 +1,17 @@
 from pathlib import Path
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.race.architecture_box import race_architecture_box_build
-from tuling_research_plus.race.feature_capsule import FeatureCapsuleRequest, create_feature_capsule
-from tuling_research_plus.race.idea_radar import IdeaRadarInput, race_idea_extract
-from tuling_research_plus.race.models import IdeaCard, SourceHygieneGate, SourceHygieneStatus
-from tuling_research_plus.race.priority_elevator import race_priority_score
-from tuling_research_plus.race.source_hygiene import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.race.architecture_box import race_architecture_box_build
+from turing_research_plus.race.feature_capsule import FeatureCapsuleRequest, create_feature_capsule
+from turing_research_plus.race.idea_radar import IdeaRadarInput, race_idea_extract
+from turing_research_plus.race.models import IdeaCard, SourceHygieneGate, SourceHygieneStatus
+from turing_research_plus.race.priority_elevator import race_priority_score
+from turing_research_plus.race.source_hygiene import (
     SourceKind,
     SourceMaterial,
     race_source_hygiene_check,
 )
-from tuling_research_plus.race.upstream_watch import (
+from turing_research_plus.race.upstream_watch import (
     UpstreamSnapshot,
     UpstreamWatchInput,
     race_upstream_watch,

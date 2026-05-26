@@ -4,10 +4,10 @@ from __future__ import annotations
 
 from typing import Any
 
-from tuling_research_plus.experiment.constraints import analyze_constraints
-from tuling_research_plus.experiment.design import design_experiment
-from tuling_research_plus.experiment.implementation import build_implementation_plan
-from tuling_research_plus.experiment.models import (
+from turing_research_plus.experiment.constraints import analyze_constraints
+from turing_research_plus.experiment.design import design_experiment
+from turing_research_plus.experiment.implementation import build_implementation_plan
+from turing_research_plus.experiment.models import (
     ConstraintAnalysis,
     ExperimentPlan,
     ExperimentResultAnalysis,
@@ -15,9 +15,9 @@ from tuling_research_plus.experiment.models import (
     ResultSchema,
     ScenarioPlan,
 )
-from tuling_research_plus.experiment.result_schema import analyze_result, generate_result_schema
-from tuling_research_plus.experiment.scenario import plan_scenarios
-from tuling_research_plus.hypothesis.models import Hypothesis
+from turing_research_plus.experiment.result_schema import analyze_result, generate_result_schema
+from turing_research_plus.experiment.scenario import plan_scenarios
+from turing_research_plus.hypothesis.models import Hypothesis
 
 
 class ExperimentExecutionService:

@@ -1,8 +1,8 @@
 import pytest
 from pydantic import ValidationError
 
-from tuling_research.cache.keys import build_cache_key
-from tuling_research.cache.manager import CacheEntry, CacheManager
+from turing_research.cache.keys import build_cache_key
+from turing_research.cache.manager import CacheEntry, CacheManager
 
 
 def test_cache_manager_writes_sha256_filename(tmp_path) -> None:

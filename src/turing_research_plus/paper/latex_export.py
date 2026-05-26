@@ -1,4 +1,4 @@
-"""Minimal LaTeX export for TulingResearch Plus paper drafts."""
+"""Minimal LaTeX export for TuringResearch Plus paper drafts."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ class LatexExportInput(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     draft_markdown: str = Field(min_length=1)
-    title: str = "TulingResearch Plus Paper Draft"
+    title: str = "TuringResearch Plus Paper Draft"
 
 
 class LatexExportOutput(BaseModel):

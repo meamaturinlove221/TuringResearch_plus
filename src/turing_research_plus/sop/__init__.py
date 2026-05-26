@@ -1,7 +1,7 @@
-"""SOP graph generation for TulingResearch Plus."""
+"""SOP graph generation for TuringResearch Plus."""
 
-from tuling_research_plus.sop.mermaid_export import export_mermaid, export_sop_markdown
-from tuling_research_plus.sop.models import (
+from turing_research_plus.sop.mermaid_export import export_mermaid, export_sop_markdown
+from turing_research_plus.sop.models import (
     SOPEdge,
     SOPGenerationRequest,
     SOPGenerationResult,
@@ -10,7 +10,7 @@ from tuling_research_plus.sop.models import (
     SOPNode,
     SOPNodeKind,
 )
-from tuling_research_plus.sop.sop_graph import (
+from turing_research_plus.sop.sop_graph import (
     generate_campaign_sop_graph,
     generate_experiment_sop_graph,
     generate_feature_sop_graph,

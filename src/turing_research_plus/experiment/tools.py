@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from tuling_research_plus.experiment.models import ExperimentPlan, ResultSchema
-from tuling_research_plus.experiment.service import ExperimentExecutionService
-from tuling_research_plus.hypothesis.models import Hypothesis
+from turing_research_plus.experiment.models import ExperimentPlan, ResultSchema
+from turing_research_plus.experiment.service import ExperimentExecutionService
+from turing_research_plus.hypothesis.models import Hypothesis
 
 
 def research_experiment_design(

@@ -1,5 +1,5 @@
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
-from tuling_research_plus.context.service import ContextService
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.context.service import ContextService
 
 
 def artifact(artifact_id: str = "artifact-1") -> ResearchArtifact:

@@ -1,6 +1,6 @@
-"""North Star workflow for TulingResearch Plus."""
+"""North Star workflow for TuringResearch Plus."""
 
-from tuling_research_plus.north_star.models import (
+from turing_research_plus.north_star.models import (
     DirectionCandidate,
     DirectionCandidates,
     GoalNode,
@@ -13,7 +13,7 @@ from tuling_research_plus.north_star.models import (
     ResearchBrief,
     StartMode,
 )
-from tuling_research_plus.north_star.service import NorthStarService
+from turing_research_plus.north_star.service import NorthStarService
 
 __all__ = [
     "DirectionCandidate",

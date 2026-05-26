@@ -1,8 +1,8 @@
 import pytest
 from pydantic import ValidationError
 
-from tuling_research_plus.budget.models import BudgetGate, BudgetLimit, BudgetUnit
-from tuling_research_plus.campaign.models import (
+from turing_research_plus.budget.models import BudgetGate, BudgetLimit, BudgetUnit
+from turing_research_plus.campaign.models import (
     CampaignMode,
     CampaignSpec,
     QualityGateSpec,
@@ -12,9 +12,9 @@ from tuling_research_plus.campaign.models import (
     TacticSpec,
     WorkflowStatus,
 )
-from tuling_research_plus.campaign.runner import CampaignRunner
-from tuling_research_plus.ledger.models import LedgerEventType, StateLedger
-from tuling_research_plus.subtask.models import TaskProfile
+from turing_research_plus.campaign.runner import CampaignRunner
+from turing_research_plus.ledger.models import LedgerEventType, StateLedger
+from turing_research_plus.subtask.models import TaskProfile
 
 
 def budget_gate(

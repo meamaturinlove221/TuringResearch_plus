@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.hypothesis.falsifiability import build_hypothesis, is_falsifiable
-from tuling_research_plus.hypothesis.finer import formulate_research_question
-from tuling_research_plus.hypothesis.models import (
+from turing_research_plus.hypothesis.falsifiability import build_hypothesis, is_falsifiable
+from turing_research_plus.hypothesis.finer import formulate_research_question
+from turing_research_plus.hypothesis.models import (
     GapPriorityReport,
     Hypothesis,
     HypothesisPortfolio,
@@ -12,9 +12,9 @@ from tuling_research_plus.hypothesis.models import (
     OperationalizedHypothesis,
     ResearchQuestion,
 )
-from tuling_research_plus.hypothesis.portfolio import build_portfolio
-from tuling_research_plus.hypothesis.scoring import prioritize_gaps, score_hypothesis
-from tuling_research_plus.insight.models import GapValidationReport, InsightReport
+from turing_research_plus.hypothesis.portfolio import build_portfolio
+from turing_research_plus.hypothesis.scoring import prioritize_gaps, score_hypothesis
+from turing_research_plus.insight.models import GapValidationReport, InsightReport
 
 
 class HypothesisFormationService:

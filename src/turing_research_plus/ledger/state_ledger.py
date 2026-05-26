@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from uuid import uuid4
 
-from tuling_research_plus.artifacts.models import ResearchArtifact
-from tuling_research_plus.ledger.models import LedgerEvent, LedgerEventType, StateLedger
+from turing_research_plus.artifacts.models import ResearchArtifact
+from turing_research_plus.ledger.models import LedgerEvent, LedgerEventType, StateLedger
 
 
 def append_event(ledger: StateLedger, event: LedgerEvent) -> StateLedger:

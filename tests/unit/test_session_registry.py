@@ -1,4 +1,4 @@
-from tuling_research.session.registry import SessionRegistry
+from turing_research.session.registry import SessionRegistry
 
 
 def test_session_list_empty_registry(tmp_path) -> None:

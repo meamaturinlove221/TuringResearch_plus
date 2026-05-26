@@ -1,6 +1,6 @@
 """PDF converter adapters."""
 
-from tuling_research.pdf.converters.pymupdf_converter import (
+from turing_research.pdf.converters.pymupdf_converter import (
     ConvertedPDF,
     ConverterUnavailableError,
     PDFPageText,

@@ -7,8 +7,8 @@ from pathlib import Path
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from tuling_research_plus.race.models import FeatureCapsule, IdeaCard, SourceHygieneStatus
-from tuling_research_plus.race.priority_elevator import RacePriority, priority_score
+from turing_research_plus.race.models import FeatureCapsule, IdeaCard, SourceHygieneStatus
+from turing_research_plus.race.priority_elevator import RacePriority, priority_score
 
 
 class FeatureCapsuleRequest(BaseModel):
@@ -94,7 +94,7 @@ def _planned_paths(root: Path, domain: str, feature_name: str) -> list[Path]:
         capsule_dir / "FEATURE.md",
         capsule_dir / "contract.yaml",
         capsule_dir / "SKILL.md",
-        root / "src" / "tuling_research_plus" / domain / f"{feature_name}.py",
+        root / "src" / "turing_research_plus" / domain / f"{feature_name}.py",
         root / "tests" / "unit" / f"test_{feature_name}.py",
         root / "docs" / "features" / f"{feature_name}.md",
         root / "sop_graphs" / "feature_graphs" / f"{feature_name}.mmd",
@@ -117,7 +117,7 @@ def _write_capsule_files(root: Path, domain: str, feature_name: str, idea: IdeaC
             feature_name,
             idea,
         ),
-        root / "src" / "tuling_research_plus" / domain / f"{feature_name}.py": _module_py(
+        root / "src" / "turing_research_plus" / domain / f"{feature_name}.py": _module_py(
             feature_name,
         ),
         root / "tests" / "unit" / f"test_{feature_name}.py": _test_py(feature_name, domain),
@@ -131,13 +131,13 @@ def _write_capsule_files(root: Path, domain: str, feature_name: str, idea: IdeaC
 
 
 def _feature_md(feature_name: str, idea: IdeaCard) -> str:
-    return f"""# TulingResearch Plus Feature Capsule: {feature_name}
+    return f"""# TuringResearch Plus Feature Capsule: {feature_name}
 
 ## Problem
 {idea.normalized_summary}
 
 ## User story
-As a TulingResearch Plus maintainer, I need a reviewed feature skeleton before implementation.
+As a TuringResearch Plus maintainer, I need a reviewed feature skeleton before implementation.
 
 ## Input
 - Source IdeaCard: `{idea.idea_id}`
@@ -169,7 +169,7 @@ As a TulingResearch Plus maintainer, I need a reviewed feature skeleton before i
 
 def _contract_yaml(feature_name: str, idea: IdeaCard) -> str:
     return f"""feature_name: {feature_name}
-project: TulingResearch Plus
+project: TuringResearch Plus
 source_idea_card: {idea.idea_id}
 implementation_status: skeleton
 tools: []
@@ -180,11 +180,11 @@ tests:
 
 def _skill_md(feature_name: str, idea: IdeaCard) -> str:
     return f"""---
-name: tulingresearch-{feature_name}
+name: turingresearch-{feature_name}
 description: Use when reviewing the {feature_name} feature capsule.
 ---
 
-# TulingResearch Plus Feature Capsule Skill
+# TuringResearch Plus Feature Capsule Skill
 
 Source IdeaCard: `{idea.idea_id}`
 
@@ -204,7 +204,7 @@ def feature_status() -> str:
 
 
 def _test_py(feature_name: str, domain: str) -> str:
-    return f'''from tuling_research_plus.{domain}.{feature_name} import feature_status
+    return f'''from turing_research_plus.{domain}.{feature_name} import feature_status
 
 
 def test_{feature_name}_feature_status() -> None:
@@ -213,7 +213,7 @@ def test_{feature_name}_feature_status() -> None:
 
 
 def _docs_md(feature_name: str, idea: IdeaCard) -> str:
-    return f"""# TulingResearch Plus Feature: {feature_name}
+    return f"""# TuringResearch Plus Feature: {feature_name}
 
 Source IdeaCard: `{idea.idea_id}`
 

@@ -1,4 +1,4 @@
-from tuling_research_plus.race.architecture_box import (
+from turing_research_plus.race.architecture_box import (
     build_architecture_boxes,
     race_architecture_box_build,
 )
@@ -31,7 +31,7 @@ def test_default_architecture_has_16_boxes() -> None:
 def test_every_box_has_owner_skill() -> None:
     result = build_architecture_boxes()
 
-    assert all(box.owner_skill.startswith("tulingresearch-") for box in result.boxes)
+    assert all(box.owner_skill.startswith("turingresearch-") for box in result.boxes)
     assert all(box.public_tools for box in result.boxes)
     assert all(box.internal_modules for box in result.boxes)
     assert all(box.input_artifacts for box in result.boxes)
@@ -61,5 +61,5 @@ def test_tool_wrapper_returns_json_payload() -> None:
     payload = race_architecture_box_build()
 
     assert len(payload["boxes"]) == 16
-    assert payload["boxes"][0]["owner_skill"] == "tulingresearch-race-idea-radar"
+    assert payload["boxes"][0]["owner_skill"] == "turingresearch-race-idea-radar"
     assert payload["mermaid_graph"].startswith("flowchart TD")

@@ -1,12 +1,12 @@
 import pytest
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.paper.caption_generator import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.paper.caption_generator import (
     CaptionGenerateInput,
     generate_caption,
     paper_caption_generate,
 )
-from tuling_research_plus.paper.figure_registry import FigureAsset
+from turing_research_plus.paper.figure_registry import FigureAsset
 
 
 def evidence() -> EvidenceRef:

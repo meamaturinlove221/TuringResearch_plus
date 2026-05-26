@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.hypothesis.models import (
+from turing_research_plus.hypothesis.models import (
     ExperimentRequirement,
     FalsifiabilityCriteria,
     GapPriority,

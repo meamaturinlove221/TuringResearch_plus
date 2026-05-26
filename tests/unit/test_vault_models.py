@@ -1,8 +1,8 @@
 import pytest
 from pydantic import ValidationError
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.vault.models import VaultEdge, VaultEdgeType, VaultEntityType, VaultPage
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.vault.models import VaultEdge, VaultEdgeType, VaultEntityType, VaultPage
 
 
 def evidence() -> EvidenceRef:

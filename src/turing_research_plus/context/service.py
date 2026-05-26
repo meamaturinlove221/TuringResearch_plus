@@ -6,9 +6,9 @@ import json
 from pathlib import Path
 from uuid import uuid4
 
-from tuling_research_plus.artifacts.models import ResearchArtifact
-from tuling_research_plus.context.index import load_index, upsert_index_entry
-from tuling_research_plus.context.models import (
+from turing_research_plus.artifacts.models import ResearchArtifact
+from turing_research_plus.context.index import load_index, upsert_index_entry
+from turing_research_plus.context.models import (
     ContextCheckpoint,
     ContextIndex,
     ContextIndexEntry,

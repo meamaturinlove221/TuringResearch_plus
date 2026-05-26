@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.survey.models import EvidenceMatrix, GapItem, GapList
+from turing_research_plus.survey.models import EvidenceMatrix, GapItem, GapList
 
 
 def extract_gaps(matrix: EvidenceMatrix, max_gaps: int = 3) -> GapList:

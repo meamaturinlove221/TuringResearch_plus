@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from tuling_research.pdf.models import PDFMarkdownOutput
+from turing_research.pdf.models import PDFMarkdownOutput
 
 
 def test_pdf_to_markdown_demo_uses_fixture_style_output(tmp_path: Path) -> None:

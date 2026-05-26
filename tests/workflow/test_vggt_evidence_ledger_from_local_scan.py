@@ -1,7 +1,7 @@
 from pathlib import Path
 
-from tuling_research_plus.vggt.evidence_ledger import build_vggt_evidence_ledger
-from tuling_research_plus.vggt.evidence_models import (
+from turing_research_plus.vggt.evidence_ledger import build_vggt_evidence_ledger
+from turing_research_plus.vggt.evidence_models import (
     VGGTEvidenceLedgerBuildInput,
     VGGTEvidenceStatus,
 )

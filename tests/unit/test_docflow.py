@@ -1,12 +1,12 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.paper.docflow import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.paper.docflow import (
     article_block_update,
     build_docflow_graph,
     docflow_status,
     missing_evidence,
     paper_docflow_status,
 )
-from tuling_research_plus.paper.models import (
+from turing_research_plus.paper.models import (
     ArticleBlockKind,
     ArticleBlockUpdateInput,
     DocflowStatusInput,

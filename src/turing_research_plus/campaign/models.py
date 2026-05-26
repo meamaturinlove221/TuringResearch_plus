@@ -5,9 +5,9 @@ from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from tuling_research_plus.artifacts.models import ResearchArtifact
-from tuling_research_plus.budget.models import BudgetGate
-from tuling_research_plus.ledger.models import LedgerEvent, StateLedger
+from turing_research_plus.artifacts.models import ResearchArtifact
+from turing_research_plus.budget.models import BudgetGate
+from turing_research_plus.ledger.models import LedgerEvent, StateLedger
 
 
 class CampaignMode(StrEnum):

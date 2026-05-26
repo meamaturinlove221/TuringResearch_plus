@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from tuling_research_plus.hypothesis.models import GapPriorityReport, Hypothesis, HypothesisSet
-from tuling_research_plus.hypothesis.service import HypothesisFormationService
-from tuling_research_plus.insight.models import GapValidationReport, InsightReport
+from turing_research_plus.hypothesis.models import GapPriorityReport, Hypothesis, HypothesisSet
+from turing_research_plus.hypothesis.service import HypothesisFormationService
+from turing_research_plus.insight.models import GapValidationReport, InsightReport
 
 
 def research_gap_prioritize(

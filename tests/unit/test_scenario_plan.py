@@ -1,10 +1,10 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.experiment.design import design_experiment
-from tuling_research_plus.experiment.scenario import plan_scenarios
-from tuling_research_plus.experiment.service import ExperimentExecutionService
-from tuling_research_plus.experiment.tools import research_scenario_plan
-from tuling_research_plus.hypothesis.falsifiability import build_hypothesis
-from tuling_research_plus.hypothesis.models import GapPriority, Hypothesis
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.experiment.design import design_experiment
+from turing_research_plus.experiment.scenario import plan_scenarios
+from turing_research_plus.experiment.service import ExperimentExecutionService
+from turing_research_plus.experiment.tools import research_scenario_plan
+from turing_research_plus.hypothesis.falsifiability import build_hypothesis
+from turing_research_plus.hypothesis.models import GapPriority, Hypothesis
 
 
 def evidence() -> EvidenceRef:

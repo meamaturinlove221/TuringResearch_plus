@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.insight.models import (
+from turing_research_plus.insight.models import (
     BoundaryCondition,
     BoundaryConditionType,
     BoundaryMap,

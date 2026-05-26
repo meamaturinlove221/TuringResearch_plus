@@ -1,16 +1,16 @@
 import pytest
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.insight.boundary import build_boundary_map
-from tuling_research_plus.insight.gap_analysis import analyze_gaps
-from tuling_research_plus.insight.models import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.insight.boundary import build_boundary_map
+from turing_research_plus.insight.gap_analysis import analyze_gaps
+from turing_research_plus.insight.models import (
     BoundaryCondition,
     BoundaryConditionType,
     BoundaryMap,
 )
-from tuling_research_plus.insight.service import DeepInsightService
-from tuling_research_plus.insight.tools import research_boundary_map
-from tuling_research_plus.survey.models import (
+from turing_research_plus.insight.service import DeepInsightService
+from turing_research_plus.insight.tools import research_boundary_map
+from turing_research_plus.survey.models import (
     EvidenceMatrix,
     GapItem,
     GapList,

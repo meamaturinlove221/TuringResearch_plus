@@ -1,5 +1,5 @@
-"""Artifact models for TulingResearch Plus."""
+"""Artifact models for TuringResearch Plus."""
 
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
 
 __all__ = ["ArtifactKind", "EvidenceRef", "ResearchArtifact"]

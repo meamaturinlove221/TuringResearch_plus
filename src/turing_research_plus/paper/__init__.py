@@ -1,12 +1,12 @@
-"""Paper pipeline models for TulingResearch Plus."""
+"""Paper pipeline models for TuringResearch Plus."""
 
-from tuling_research_plus.paper.caption_generator import (
+from turing_research_plus.paper.caption_generator import (
     CaptionGenerateInput,
     CaptionGenerateOutput,
     generate_caption,
     paper_caption_generate,
 )
-from tuling_research_plus.paper.docflow import (
+from turing_research_plus.paper.docflow import (
     article_block_update,
     docflow_status,
     missing_evidence,
@@ -14,7 +14,7 @@ from tuling_research_plus.paper.docflow import (
     paper_docflow_status,
     paper_missing_evidence,
 )
-from tuling_research_plus.paper.figure_registry import (
+from turing_research_plus.paper.figure_registry import (
     FigureAsset,
     FigureAssetKind,
     FigureAssetRegistry,
@@ -26,13 +26,13 @@ from tuling_research_plus.paper.figure_registry import (
     paper_figure_register,
     register_figure,
 )
-from tuling_research_plus.paper.latex_export import (
+from turing_research_plus.paper.latex_export import (
     LatexExportInput,
     LatexExportOutput,
     export_latex,
     paper_latex_export,
 )
-from tuling_research_plus.paper.models import (
+from turing_research_plus.paper.models import (
     ArticleBlock,
     ArticleBlockKind,
     ArticleBlockRegistry,
@@ -50,7 +50,7 @@ from tuling_research_plus.paper.models import (
     PaperDraftRequest,
     PaperReadinessReport,
 )
-from tuling_research_plus.paper.paper_writer import (
+from turing_research_plus.paper.paper_writer import (
     MissingEvidenceReport,
     PaperDraftInput,
     PaperDraftOutput,

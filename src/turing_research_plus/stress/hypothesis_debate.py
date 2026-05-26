@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.hypothesis.falsifiability import is_falsifiable
-from tuling_research_plus.hypothesis.models import Hypothesis
-from tuling_research_plus.stress.models import (
+from turing_research_plus.hypothesis.falsifiability import is_falsifiable
+from turing_research_plus.hypothesis.models import Hypothesis
+from turing_research_plus.stress.models import (
     FailureMode,
     Severity,
     StressTestReport,

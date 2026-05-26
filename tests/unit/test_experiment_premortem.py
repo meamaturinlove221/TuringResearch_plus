@@ -1,8 +1,8 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.stress.models import ExperimentPlan, PassFail, Severity
-from tuling_research_plus.stress.premortem import experiment_premortem
-from tuling_research_plus.stress.service import StressTestService
-from tuling_research_plus.stress.tools import research_experiment_premortem
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.stress.models import ExperimentPlan, PassFail, Severity
+from turing_research_plus.stress.premortem import experiment_premortem
+from turing_research_plus.stress.service import StressTestService
+from turing_research_plus.stress.tools import research_experiment_premortem
 
 
 def evidence() -> EvidenceRef:

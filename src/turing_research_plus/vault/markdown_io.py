@@ -6,8 +6,8 @@ import json
 from pathlib import Path
 from typing import Any
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.vault.models import VaultEntityType, VaultPage
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.vault.models import VaultEntityType, VaultPage
 
 
 def page_path(root: str | Path, page_id: str) -> Path:

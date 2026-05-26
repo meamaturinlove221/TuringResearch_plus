@@ -1,6 +1,6 @@
-"""Subtask models for TulingResearch Plus."""
+"""Subtask models for TuringResearch Plus."""
 
-from tuling_research_plus.subtask.models import (
+from turing_research_plus.subtask.models import (
     SubtaskError,
     SubtaskErrorCode,
     SubtaskExecutionMode,
@@ -9,9 +9,9 @@ from tuling_research_plus.subtask.models import (
     SubtaskStatus,
     TaskProfile,
 )
-from tuling_research_plus.subtask.prompts import render_role_prompt
-from tuling_research_plus.subtask.quality import evaluate_quality_gate
-from tuling_research_plus.subtask.runner import SubtaskRunner
+from turing_research_plus.subtask.prompts import render_role_prompt
+from turing_research_plus.subtask.quality import evaluate_quality_gate
+from turing_research_plus.subtask.runner import SubtaskRunner
 
 __all__ = [
     "SubtaskError",

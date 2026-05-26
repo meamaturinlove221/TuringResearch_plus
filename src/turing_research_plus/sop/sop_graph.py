@@ -1,13 +1,13 @@
-"""SOP graph builders for TulingResearch Plus."""
+"""SOP graph builders for TuringResearch Plus."""
 
 from __future__ import annotations
 
-from tuling_research_plus.campaign.models import CampaignSpec
-from tuling_research_plus.experiment.models import ExperimentPlan
-from tuling_research_plus.paper.models import ArticleBlock
-from tuling_research_plus.race.models import FeatureCapsule
-from tuling_research_plus.sop.mermaid_export import export_mermaid, export_sop_markdown
-from tuling_research_plus.sop.models import (
+from turing_research_plus.campaign.models import CampaignSpec
+from turing_research_plus.experiment.models import ExperimentPlan
+from turing_research_plus.paper.models import ArticleBlock
+from turing_research_plus.race.models import FeatureCapsule
+from turing_research_plus.sop.mermaid_export import export_mermaid, export_sop_markdown
+from turing_research_plus.sop.models import (
     SOPEdge,
     SOPGenerationRequest,
     SOPGenerationResult,
@@ -16,8 +16,8 @@ from tuling_research_plus.sop.models import (
     SOPNode,
     SOPNodeKind,
 )
-from tuling_research_plus.sop.prompt_generator import generate_codex_prompt
-from tuling_research_plus.sop.skill_skeleton import generate_skill_skeleton
+from turing_research_plus.sop.prompt_generator import generate_codex_prompt
+from turing_research_plus.sop.skill_skeleton import generate_skill_skeleton
 
 
 def generate_campaign_sop_graph(campaign: CampaignSpec) -> SOPGraph:

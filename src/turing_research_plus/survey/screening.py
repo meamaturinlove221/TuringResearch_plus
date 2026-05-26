@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.survey.models import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.survey.models import (
     PaperRecord,
     PaperScreeningDecision,
     PaperScreeningRow,

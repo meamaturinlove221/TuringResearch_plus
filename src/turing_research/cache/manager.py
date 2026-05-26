@@ -9,7 +9,7 @@ from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from tuling_research.cache.keys import CacheKey, is_sha256_key
+from turing_research.cache.keys import CacheKey, is_sha256_key
 
 
 class CacheEntry(BaseModel):

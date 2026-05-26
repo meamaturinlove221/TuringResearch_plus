@@ -1,7 +1,7 @@
 import pytest
 from pydantic import ValidationError
 
-from tuling_research_plus.semantic_graph.models import (
+from turing_research_plus.semantic_graph.models import (
     AuthorEdge,
     CitationGraphExpandInput,
     GraphDirection,

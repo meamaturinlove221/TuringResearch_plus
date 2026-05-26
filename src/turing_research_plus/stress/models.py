@@ -4,7 +4,7 @@ from enum import StrEnum
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
 
 
 class Severity(StrEnum):
@@ -115,7 +115,7 @@ class StressTestReport(BaseModel):
             artifact_id=f"stress-{self.artifact_id}",
             kind=ArtifactKind.WORKFLOW_STATE,
             title=f"Stress Test: {self.artifact_id}",
-            created_by="TulingResearch Plus stress",
+            created_by="TuringResearch Plus stress",
             content=self.model_dump(mode="json"),
             evidence=evidence,
             tags=["stress_test", self.pass_fail],

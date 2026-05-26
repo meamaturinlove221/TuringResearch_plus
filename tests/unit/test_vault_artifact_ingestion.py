@@ -1,6 +1,6 @@
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
-from tuling_research_plus.vault.models import VaultEntityType
-from tuling_research_plus.vault.service import VaultService
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.vault.models import VaultEntityType
+from turing_research_plus.vault.service import VaultService
 
 
 def test_artifact_ingestion_creates_claim_and_evidence_pages(tmp_path) -> None:

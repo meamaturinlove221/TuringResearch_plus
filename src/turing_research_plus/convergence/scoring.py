@@ -2,13 +2,13 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.convergence.models import (
+from turing_research_plus.convergence.models import (
     CandidateKind,
     CandidateScore,
     ConvergenceCandidate,
 )
-from tuling_research_plus.hypothesis.models import Hypothesis, RiskLevel
-from tuling_research_plus.ideation.models import IdeaCandidate, IdeaRisk
+from turing_research_plus.hypothesis.models import Hypothesis, RiskLevel
+from turing_research_plus.ideation.models import IdeaCandidate, IdeaRisk
 
 
 def from_idea(candidate: IdeaCandidate) -> ConvergenceCandidate:

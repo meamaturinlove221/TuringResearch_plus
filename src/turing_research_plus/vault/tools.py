@@ -5,9 +5,9 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-from tuling_research_plus.artifacts.models import EvidenceRef, ResearchArtifact
-from tuling_research_plus.vault.models import VaultEdge, VaultPage
-from tuling_research_plus.vault.service import VaultService
+from turing_research_plus.artifacts.models import EvidenceRef, ResearchArtifact
+from turing_research_plus.vault.models import VaultEdge, VaultPage
+from turing_research_plus.vault.service import VaultService
 
 
 def _service(root: str | Path) -> VaultService:

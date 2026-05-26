@@ -1,14 +1,14 @@
 import pytest
 
-from tuling_research_plus.subtask.models import (
+from turing_research_plus.subtask.models import (
     SubtaskErrorCode,
     SubtaskExecutionMode,
     SubtaskSpec,
     SubtaskStatus,
     TaskProfile,
 )
-from tuling_research_plus.subtask.prompts import render_role_prompt
-from tuling_research_plus.subtask.runner import SubtaskRunner
+from turing_research_plus.subtask.prompts import render_role_prompt
+from turing_research_plus.subtask.runner import SubtaskRunner
 
 
 def profile(quality_gate: str | None = "artifact_required") -> TaskProfile:

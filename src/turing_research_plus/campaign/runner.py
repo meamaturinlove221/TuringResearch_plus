@@ -5,8 +5,8 @@ from __future__ import annotations
 from collections.abc import Callable
 from uuid import uuid4
 
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
-from tuling_research_plus.campaign.models import (
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.campaign.models import (
     CampaignResult,
     CampaignRun,
     CampaignSpec,
@@ -15,10 +15,10 @@ from tuling_research_plus.campaign.models import (
     StrategySpec,
     WorkflowStatus,
 )
-from tuling_research_plus.campaign.router import CampaignRouter
-from tuling_research_plus.ledger.models import LedgerEvent, LedgerEventType, StateLedger
-from tuling_research_plus.subtask.models import SubtaskSpec, TaskProfile
-from tuling_research_plus.subtask.runner import SubtaskRunner
+from turing_research_plus.campaign.router import CampaignRouter
+from turing_research_plus.ledger.models import LedgerEvent, LedgerEventType, StateLedger
+from turing_research_plus.subtask.models import SubtaskSpec, TaskProfile
+from turing_research_plus.subtask.runner import SubtaskRunner
 
 SOPHandler = Callable[[SOPSpec, CampaignRun], list[ResearchArtifact]]
 QualityGate = Callable[[CampaignRun], bool]
@@ -26,7 +26,7 @@ CheckpointHook = Callable[[CampaignRun], None]
 
 
 class CampaignRunner:
-    """Run abstract TulingResearch Plus campaigns."""
+    """Run abstract TuringResearch Plus campaigns."""
 
     def __init__(
         self,
@@ -129,7 +129,7 @@ class CampaignRunner:
             )
             profile = TaskProfile(
                 name=f"profile-{sop.sop_id}",
-                role="tulingresearch-subtask",
+                role="turingresearch-subtask",
                 goal=f"Execute SOP {sop.sop_id} in fake-service mode.",
                 input_schema={"type": "object"},
                 output_schema={"type": "object"},

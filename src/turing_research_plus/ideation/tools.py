@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from tuling_research_plus.hypothesis.models import Hypothesis, HypothesisSet
-from tuling_research_plus.ideation.models import IdeaGenerationResult
-from tuling_research_plus.ideation.service import CreativeIdeationService
+from turing_research_plus.hypothesis.models import Hypothesis, HypothesisSet
+from turing_research_plus.ideation.models import IdeaGenerationResult
+from turing_research_plus.ideation.service import CreativeIdeationService
 
 
 def research_idea_generate(

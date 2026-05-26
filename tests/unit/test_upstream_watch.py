@@ -1,9 +1,9 @@
 from pathlib import Path
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.race.models import RecommendedAction
-from tuling_research_plus.race.source_hygiene import SourceKind, SourceMaterial
-from tuling_research_plus.race.upstream_watch import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.race.models import RecommendedAction
+from turing_research_plus.race.source_hygiene import SourceKind, SourceMaterial
+from turing_research_plus.race.upstream_watch import (
     UpstreamSnapshot,
     UpstreamWatchInput,
     WatchDimension,

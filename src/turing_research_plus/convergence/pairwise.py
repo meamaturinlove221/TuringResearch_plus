@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.convergence.models import CandidateScore, PairwisePreference
+from turing_research_plus.convergence.models import CandidateScore, PairwisePreference
 
 
 def pairwise_rank(scores: list[CandidateScore]) -> list[PairwisePreference]:

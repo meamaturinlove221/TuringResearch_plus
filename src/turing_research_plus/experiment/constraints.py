@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.experiment.models import ConstraintAnalysis, ExperimentPlan
+from turing_research_plus.experiment.models import ConstraintAnalysis, ExperimentPlan
 
 
 def analyze_constraints(plan: ExperimentPlan) -> ConstraintAnalysis:

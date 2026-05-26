@@ -1,6 +1,6 @@
-"""PDF input models for TulingResearch Plus Core."""
+"""PDF input models for TuringResearch Plus Core."""
 
-from tuling_research.pdf.models import (
+from turing_research.pdf.models import (
     MarkdownPage,
     PDFCacheLookupInput,
     PDFErrorCode,

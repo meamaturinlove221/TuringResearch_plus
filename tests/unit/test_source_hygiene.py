@@ -1,6 +1,6 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.race.models import SourceHygieneStatus
-from tuling_research_plus.race.source_hygiene import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.race.models import SourceHygieneStatus
+from turing_research_plus.race.source_hygiene import (
     SafeImplementationMode,
     SourceHygieneDecision,
     SourceKind,

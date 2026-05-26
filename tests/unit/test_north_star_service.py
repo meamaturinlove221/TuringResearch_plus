@@ -1,6 +1,6 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.north_star.models import NorthStarInput, StartMode
-from tuling_research_plus.north_star.service import NorthStarService
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.north_star.models import NorthStarInput, StartMode
+from turing_research_plus.north_star.service import NorthStarService
 
 
 class FakePaperService:

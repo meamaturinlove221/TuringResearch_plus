@@ -1,9 +1,9 @@
 import pytest
 from pydantic import ValidationError
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.hypothesis.falsifiability import build_hypothesis
-from tuling_research_plus.hypothesis.models import GapPriority, Hypothesis
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.hypothesis.falsifiability import build_hypothesis
+from turing_research_plus.hypothesis.models import GapPriority, Hypothesis
 
 
 def evidence() -> EvidenceRef:

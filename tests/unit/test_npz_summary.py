@@ -2,7 +2,7 @@ import struct
 import zipfile
 from pathlib import Path
 
-from tuling_research_plus.artifact_audit.npz_summary import summarize_npz
+from turing_research_plus.artifact_audit.npz_summary import summarize_npz
 
 
 def write_npy_member(path: Path, name: str = "arr.npy") -> None:

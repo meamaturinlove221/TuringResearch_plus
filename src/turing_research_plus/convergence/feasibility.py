@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.convergence.models import ConvergenceCandidate, FeasibilityAssessment
+from turing_research_plus.convergence.models import ConvergenceCandidate, FeasibilityAssessment
 
 
 def assess_feasibility(candidate: ConvergenceCandidate) -> FeasibilityAssessment:

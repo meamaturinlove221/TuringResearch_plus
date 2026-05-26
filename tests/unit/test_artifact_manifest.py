@@ -1,7 +1,7 @@
 from pathlib import Path
 
-from tuling_research_plus.artifact_audit.manifest import infer_file_type, load_manifest_like_index
-from tuling_research_plus.artifact_audit.models import ArtifactFileType
+from turing_research_plus.artifact_audit.manifest import infer_file_type, load_manifest_like_index
+from turing_research_plus.artifact_audit.models import ArtifactFileType
 
 
 def test_infer_file_type() -> None:

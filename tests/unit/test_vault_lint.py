@@ -1,6 +1,6 @@
-from tuling_research_plus.vault.lint import lint_vault
-from tuling_research_plus.vault.models import VaultEntityType, VaultPage
-from tuling_research_plus.vault.service import VaultService
+from turing_research_plus.vault.lint import lint_vault
+from turing_research_plus.vault.models import VaultEntityType, VaultPage
+from turing_research_plus.vault.service import VaultService
 
 
 def test_orphan_detection(tmp_path) -> None:

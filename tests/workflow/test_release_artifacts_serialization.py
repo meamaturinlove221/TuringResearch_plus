@@ -1,8 +1,8 @@
 import json
 
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
-from tuling_research_plus.campaign.models import CampaignResult, WorkflowStatus
-from tuling_research_plus.ledger.models import StateLedger
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.campaign.models import CampaignResult, WorkflowStatus
+from turing_research_plus.ledger.models import StateLedger
 
 
 def evidence() -> EvidenceRef:

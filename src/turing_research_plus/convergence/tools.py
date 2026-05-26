@@ -4,12 +4,12 @@ from __future__ import annotations
 
 from typing import Any
 
-from tuling_research_plus.convergence.models import (
+from turing_research_plus.convergence.models import (
     CandidateScore,
     ConvergenceCandidate,
     DecisionReport,
 )
-from tuling_research_plus.convergence.service import ConvergenceService
+from turing_research_plus.convergence.service import ConvergenceService
 
 
 def research_candidate_score(

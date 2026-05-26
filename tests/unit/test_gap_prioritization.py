@@ -1,8 +1,8 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.hypothesis.scoring import prioritize_gaps
-from tuling_research_plus.hypothesis.service import HypothesisFormationService
-from tuling_research_plus.hypothesis.tools import research_gap_prioritize
-from tuling_research_plus.insight.models import GapValidation, GapValidationReport
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.hypothesis.scoring import prioritize_gaps
+from turing_research_plus.hypothesis.service import HypothesisFormationService
+from turing_research_plus.hypothesis.tools import research_gap_prioritize
+from turing_research_plus.insight.models import GapValidation, GapValidationReport
 
 
 def evidence(source_id: str = "paper-1") -> EvidenceRef:

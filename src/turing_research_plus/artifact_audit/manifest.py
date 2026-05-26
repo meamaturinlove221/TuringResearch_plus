@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from tuling_research_plus.artifact_audit.models import (
+from turing_research_plus.artifact_audit.models import (
     ArtifactBundleManifest,
     ArtifactFileType,
     ArtifactRecord,

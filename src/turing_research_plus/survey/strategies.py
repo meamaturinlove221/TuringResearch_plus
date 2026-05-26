@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.survey.models import SurveyInput, SurveyPlan, SurveyStrategy
+from turing_research_plus.survey.models import SurveyInput, SurveyPlan, SurveyStrategy
 
 
 def strategy_defaults(strategy: SurveyStrategy) -> tuple[int, int, float]:

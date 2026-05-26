@@ -1,7 +1,7 @@
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
-from tuling_research_plus.context.index import load_index
-from tuling_research_plus.context.service import ContextService
-from tuling_research_plus.context.tools import (
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.context.index import load_index
+from turing_research_plus.context.service import ContextService
+from turing_research_plus.context.tools import (
     context_checkpoint,
     context_index,
     context_init,

@@ -113,7 +113,7 @@ class ArtifactAuditReport(BaseModel):
         """Serialize the audit report as Markdown."""
 
         lines = [
-            f"# TulingResearch Plus Artifact Audit: {self.report_id}",
+            f"# TuringResearch Plus Artifact Audit: {self.report_id}",
             "",
             "| Path | Type | Included | Size | Safety flags | Omitted reason |",
             "| --- | --- | --- | ---: | --- | --- |",

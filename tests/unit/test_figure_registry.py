@@ -1,7 +1,7 @@
 import pytest
 from pydantic import ValidationError
 
-from tuling_research_plus.paper.figure_registry import (
+from turing_research_plus.paper.figure_registry import (
     FigureAsset,
     FigureAssetKind,
     FigureAssetRegistry,
@@ -17,7 +17,7 @@ def test_registry_validates() -> None:
         figure_id="fig-1",
         title="Architecture Diagram",
         source_file="docs/architecture_16box.mmd",
-        caption="TulingResearch Plus 16-box architecture.",
+        caption="TuringResearch Plus 16-box architecture.",
         used_in_blocks=["method_design"],
         asset_kind=FigureAssetKind.MERMAID,
     )

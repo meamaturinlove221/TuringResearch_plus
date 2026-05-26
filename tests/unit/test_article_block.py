@@ -1,5 +1,5 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.paper.models import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.paper.models import (
     ArticleBlock,
     ArticleBlockKind,
     ArticleBlockState,

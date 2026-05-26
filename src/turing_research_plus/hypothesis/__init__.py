@@ -1,6 +1,6 @@
-"""TulingResearch Plus Hypothesis Formation workflow."""
+"""TuringResearch Plus Hypothesis Formation workflow."""
 
-from tuling_research_plus.hypothesis.models import (
+from turing_research_plus.hypothesis.models import (
     ExperimentRequirement,
     FalsifiabilityCriteria,
     FINERAssessment,
@@ -13,7 +13,7 @@ from tuling_research_plus.hypothesis.models import (
     ResearchQuestion,
     RiskLevel,
 )
-from tuling_research_plus.hypothesis.service import HypothesisFormationService
+from turing_research_plus.hypothesis.service import HypothesisFormationService
 
 __all__ = [
     "ExperimentRequirement",

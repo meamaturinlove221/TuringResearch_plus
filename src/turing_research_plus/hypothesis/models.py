@@ -4,7 +4,7 @@ from enum import StrEnum
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
 
 
 class RiskLevel(StrEnum):
@@ -154,7 +154,7 @@ class HypothesisPortfolio(BaseModel):
             artifact_id=f"hypothesis-portfolio-{self.portfolio_id}",
             kind=ArtifactKind.WORKFLOW_STATE,
             title=f"Hypothesis Portfolio: {self.topic}",
-            created_by="TulingResearch Plus hypothesis",
+            created_by="TuringResearch Plus hypothesis",
             content=self.model_dump(mode="json"),
             evidence=[
                 evidence

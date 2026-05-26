@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from tuling_research.pdf.models import (
+from turing_research.pdf.models import (
     PDFErrorCode,
     PDFInspectOutput,
     PDFMarkdownError,

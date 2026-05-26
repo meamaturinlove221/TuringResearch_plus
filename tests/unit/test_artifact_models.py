@@ -1,7 +1,7 @@
 import pytest
 from pydantic import ValidationError
 
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
 
 
 def evidence() -> EvidenceRef:

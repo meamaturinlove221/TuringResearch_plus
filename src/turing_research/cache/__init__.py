@@ -1,8 +1,8 @@
-"""Shared cache primitives for TulingResearch Plus Core."""
+"""Shared cache primitives for TuringResearch Plus Core."""
 
-from tuling_research.cache.failure_ledger import FailureLedger, FailureRecord
-from tuling_research.cache.keys import CacheKey, build_cache_key
-from tuling_research.cache.manager import CacheEntry, CacheManager
+from turing_research.cache.failure_ledger import FailureLedger, FailureRecord
+from turing_research.cache.keys import CacheKey, build_cache_key
+from turing_research.cache.manager import CacheEntry, CacheManager
 
 __all__ = [
     "CacheEntry",

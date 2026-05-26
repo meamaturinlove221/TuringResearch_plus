@@ -4,7 +4,7 @@ from enum import StrEnum
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from tuling_research_plus.race.models import IdeaCard, SourceHygieneStatus
+from turing_research_plus.race.models import IdeaCard, SourceHygieneStatus
 
 
 class RacePriority(StrEnum):

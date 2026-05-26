@@ -1,5 +1,13 @@
-from tuling_research_plus.sop.mermaid_export import export_mermaid, export_sop_markdown
-from tuling_research_plus.sop.models import (
+from turing_research_plus.architecture.mermaid_export import export_architecture_mermaid
+from turing_research_plus.architecture.models import (
+    ArchitectureDiagramSpec,
+    ArchitectureEdge,
+    ArchitectureGroup,
+    ArchitectureNode,
+    ArchitectureSourceType,
+)
+from turing_research_plus.sop.mermaid_export import export_mermaid, export_sop_markdown
+from turing_research_plus.sop.models import (
     SOPEdge,
     SOPGraph,
     SOPGraphType,
@@ -44,7 +52,28 @@ def test_sop_markdown_contains_graph_and_gates() -> None:
     mermaid = export_mermaid(graph())
     markdown = export_sop_markdown(graph(), mermaid)
 
-    assert "# TulingResearch Plus SOP: Test Graph" in markdown
+    assert "# TuringResearch Plus SOP: Test Graph" in markdown
     assert "```mermaid" in markdown
     assert "EvidenceRef Gate" in markdown
     assert "Missing Evidence" in markdown
+
+
+def test_architecture_mermaid_export_supports_flowchart_tb_and_subgraph() -> None:
+    spec = ArchitectureDiagramSpec(
+        diagram_id="arch",
+        title="Architecture",
+        source_type=ArchitectureSourceType.METHOD_CARD,
+        source_ref="fixture",
+        nodes=[
+            ArchitectureNode(node_id="a", label="A", group="Group One"),
+            ArchitectureNode(node_id="b", label="B", group="Group One"),
+        ],
+        edges=[ArchitectureEdge(source="a", target="b", label="flows")],
+        groups=[ArchitectureGroup(group_id="group_one", label="Group One")],
+    )
+
+    mermaid = export_architecture_mermaid(spec)
+
+    assert mermaid.startswith("flowchart TB")
+    assert "subgraph group_one[Group One]" in mermaid
+    assert "a -- flows --> b" in mermaid

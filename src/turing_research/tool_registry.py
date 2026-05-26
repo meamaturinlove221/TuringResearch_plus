@@ -1,10 +1,10 @@
-"""Tool registry for the minimal TulingResearch Plus MCP smoke surface."""
+"""Tool registry for the minimal TuringResearch Plus MCP smoke surface."""
 
 from __future__ import annotations
 
 from pydantic import BaseModel, ConfigDict, Field
 
-MCP_SERVER_NAME = "tulingresearch-plus"
+MCP_SERVER_NAME = "turingresearch-plus"
 
 
 class ToolDescriptor(BaseModel):

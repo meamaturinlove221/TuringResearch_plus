@@ -1,6 +1,6 @@
 """Budget gate helpers."""
 
-from tuling_research_plus.budget.models import BudgetGate, BudgetGateStatus
+from turing_research_plus.budget.models import BudgetGate, BudgetGateStatus
 
 
 def evaluate_budget_gate(gate: BudgetGate) -> BudgetGateStatus:

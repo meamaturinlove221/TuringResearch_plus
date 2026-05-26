@@ -4,14 +4,13 @@ import inspect
 import tomllib
 from pathlib import Path
 
-from tuling_research_plus.adapters.protocols import (
+from turing_research_plus.adapters.protocols import (
     AdapterCachePolicy,
     AdapterError,
     AdapterErrorCode,
     AdapterRequestContext,
     AdapterRetryPolicy,
     AdapterTimeoutPolicy,
-    ApifyWebAdapter,
     ArxivAdapter,
     ArxivQuery,
     LLMCompletionRequest,
@@ -21,7 +20,10 @@ from tuling_research_plus.adapters.protocols import (
     RateLimitPolicy,
     SemanticScholarAdapter,
     SemanticScholarPaperLookup,
+    WebFetchAdapter,
     WebFetchRequest,
+    WebSearchAdapter,
+    WebSearchRequest,
 )
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -33,13 +35,15 @@ def test_live_adapter_contract_exists_and_is_protocol_only() -> None:
     for adapter_name in (
         "SemanticScholarAdapter",
         "ArxivAdapter",
-        "ApifyWebAdapter",
+        "WebSearchAdapter",
+        "WebFetchAdapter",
         "OpenAICompatibleLLMAdapter",
         "PDFConverterAdapter",
     ):
         assert adapter_name in content
 
-    assert "implementation_status: protocol_only" in content
+    assert "implementation_status: fake_adapter_ready_live_not_implemented" in content
+    assert "default_enabled: false" in content
     assert "fake_adapter_equivalent" in content
     assert "live_test_marker" in content
 
@@ -85,17 +89,26 @@ def test_semantic_scholar_request_declares_live_policy_and_fake_adapter() -> Non
 def test_arxiv_request_declares_live_policy_and_fake_adapter() -> None:
     request = ArxivQuery(query="test")
 
-    assert request.context.api_key_env == "ARXIV_API_KEY"
+    assert request.context.api_key_env is None
+    assert request.context.required_env_vars == []
     assert request.context.cache.namespace == "arxiv/search"
     assert request.context.fake_adapter_name == "FakeArxivAdapter"
 
 
-def test_apify_request_declares_source_hygiene_and_fake_adapter() -> None:
+def test_web_search_request_declares_source_hygiene_and_fake_adapter() -> None:
+    request = WebSearchRequest(query="test")
+
+    assert request.source_hygiene_required is True
+    assert request.context.api_key_env == "APIFY_TOKEN"
+    assert request.context.fake_adapter_name == "FakeWebSearchAdapter"
+
+
+def test_web_fetch_request_declares_source_hygiene_and_fake_adapter() -> None:
     request = WebFetchRequest(url="https://example.com")
 
     assert request.source_hygiene_required is True
     assert request.context.api_key_env == "APIFY_TOKEN"
-    assert request.context.fake_adapter_name == "FakeApifyWebAdapter"
+    assert request.context.fake_adapter_name == "FakeWebFetchAdapter"
 
 
 def test_openai_compatible_request_is_optional_and_fakeable() -> None:
@@ -118,7 +131,8 @@ def test_protocol_methods_are_declared_without_implementing_network_clients() ->
     protocols = [
         (SemanticScholarAdapter, "paper_lookup"),
         (ArxivAdapter, "search"),
-        (ApifyWebAdapter, "fetch"),
+        (WebSearchAdapter, "search"),
+        (WebFetchAdapter, "fetch"),
         (OpenAICompatibleLLMAdapter, "complete"),
         (PDFConverterAdapter, "convert"),
     ]

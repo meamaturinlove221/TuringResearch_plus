@@ -1,9 +1,9 @@
 import pytest
 
-from tuling_research_plus.budget.models import BudgetGate, BudgetLimit, BudgetUnit
-from tuling_research_plus.campaign.models import CampaignSpec
-from tuling_research_plus.campaign.registry import CampaignRegistry
-from tuling_research_plus.ledger.models import StateLedger
+from turing_research_plus.budget.models import BudgetGate, BudgetLimit, BudgetUnit
+from turing_research_plus.campaign.models import CampaignSpec
+from turing_research_plus.campaign.registry import CampaignRegistry
+from turing_research_plus.ledger.models import StateLedger
 
 
 def campaign_spec(campaign_id: str = "campaign-1") -> CampaignSpec:

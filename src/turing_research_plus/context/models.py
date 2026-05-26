@@ -1,4 +1,4 @@
-"""Context management models for TulingResearch Plus."""
+"""Context management models for TuringResearch Plus."""
 
 from datetime import UTC, datetime
 from pathlib import Path
@@ -6,7 +6,7 @@ from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from tuling_research_plus.artifacts.models import EvidenceRef, ResearchArtifact
+from turing_research_plus.artifacts.models import EvidenceRef, ResearchArtifact
 
 
 class ContextSession(BaseModel):

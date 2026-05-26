@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.convergence.feasibility import assess_feasibility
-from tuling_research_plus.convergence.models import (
+from turing_research_plus.convergence.feasibility import assess_feasibility
+from turing_research_plus.convergence.models import (
     CandidateScore,
     ConvergenceCandidate,
     DecisionReport,
@@ -11,9 +11,9 @@ from tuling_research_plus.convergence.models import (
     PairwisePreference,
     PromotionDecisionResult,
 )
-from tuling_research_plus.convergence.pairwise import pairwise_rank
-from tuling_research_plus.convergence.portfolio import decide_promotion, optimize_portfolio
-from tuling_research_plus.convergence.scoring import score_candidate, score_candidates
+from turing_research_plus.convergence.pairwise import pairwise_rank
+from turing_research_plus.convergence.portfolio import decide_promotion, optimize_portfolio
+from turing_research_plus.convergence.scoring import score_candidate, score_candidates
 
 
 class ConvergenceService:

@@ -1,7 +1,7 @@
-"""Budget models for TulingResearch Plus."""
+"""Budget models for TuringResearch Plus."""
 
-from tuling_research_plus.budget.gate import evaluate_budget_gate
-from tuling_research_plus.budget.models import (
+from turing_research_plus.budget.gate import evaluate_budget_gate
+from turing_research_plus.budget.models import (
     BudgetGate,
     BudgetGateStatus,
     BudgetLimit,

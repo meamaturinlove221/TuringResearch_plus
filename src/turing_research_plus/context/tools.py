@@ -5,8 +5,8 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-from tuling_research_plus.artifacts.models import ResearchArtifact
-from tuling_research_plus.context.service import ContextService
+from turing_research_plus.artifacts.models import ResearchArtifact
+from turing_research_plus.context.service import ContextService
 
 
 def _service(root: str | Path) -> ContextService:

@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from tuling_research_plus.insight.models import GapValidationReport
-from tuling_research_plus.insight.service import DeepInsightService
-from tuling_research_plus.survey.models import LiteratureSurveyArtifact
+from turing_research_plus.insight.models import GapValidationReport
+from turing_research_plus.insight.service import DeepInsightService
+from turing_research_plus.survey.models import LiteratureSurveyArtifact
 
 
 def research_gap_analyze(

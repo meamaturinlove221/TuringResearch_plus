@@ -27,22 +27,22 @@ def test_console_scripts_point_to_mcp_server_main() -> None:
     scripts = project["scripts"]
     assert isinstance(scripts, dict)
 
-    assert scripts["tulingresearch-plus"] == "tuling_research.mcp_server:main"
-    assert scripts["tulingresearch-plus-mcp"] == "tuling_research.mcp_server:main"
+    assert scripts["turingresearch-plus"] == "turing_research.mcp_server:main"
+    assert scripts["turingresearch-plus-mcp"] == "turing_research.mcp_server:main"
 
     for target in scripts.values():
         assert resolve_entry_point(target).__name__ == "main"
 
 
 def test_mcp_entry_point_can_emit_manifest_without_network(capsys) -> None:
-    main = resolve_entry_point("tuling_research.mcp_server:main")
+    main = resolve_entry_point("turing_research.mcp_server:main")
 
     result = main(["--manifest"])
     captured = capsys.readouterr()
 
     assert result == 0
     assert captured.err == ""
-    assert '"server_name": "tulingresearch-plus"' in captured.out
+    assert '"server_name": "turingresearch-plus"' in captured.out
     assert '"transport": "stdio"' in captured.out
 
 

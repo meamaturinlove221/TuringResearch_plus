@@ -4,10 +4,10 @@ from __future__ import annotations
 
 from typing import Protocol
 
-from tuling_research_plus.survey.depth_gate import evaluate_depth_gates
-from tuling_research_plus.survey.evidence_matrix import build_evidence_matrix
-from tuling_research_plus.survey.gap_extractor import extract_gaps
-from tuling_research_plus.survey.models import (
+from turing_research_plus.survey.depth_gate import evaluate_depth_gates
+from turing_research_plus.survey.evidence_matrix import build_evidence_matrix
+from turing_research_plus.survey.gap_extractor import extract_gaps
+from turing_research_plus.survey.models import (
     CitationLineage,
     LiteratureSurveyArtifact,
     PaperRecord,
@@ -18,8 +18,8 @@ from tuling_research_plus.survey.models import (
     SurveyStatus,
     SurveyStrategy,
 )
-from tuling_research_plus.survey.screening import screen_papers
-from tuling_research_plus.survey.strategies import create_survey_plan
+from turing_research_plus.survey.screening import screen_papers
+from turing_research_plus.survey.strategies import create_survey_plan
 
 
 class PaperService(Protocol):
@@ -144,7 +144,7 @@ class LiteratureSurveyService:
         return list(merged.values())
 
     def _method_taxonomy(self, papers: list[PaperRecord]) -> object:
-        from tuling_research_plus.survey.models import MethodTaxonomy
+        from turing_research_plus.survey.models import MethodTaxonomy
 
         methods: dict[str, list[str]] = {}
         for paper in papers:

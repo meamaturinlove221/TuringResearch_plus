@@ -1,9 +1,9 @@
 import pytest
 from pydantic import ValidationError
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.survey.gap_extractor import extract_gaps
-from tuling_research_plus.survey.models import EvidenceMatrix, EvidenceMatrixRow
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.survey.gap_extractor import extract_gaps
+from turing_research_plus.survey.models import EvidenceMatrix, EvidenceMatrixRow
 
 
 def test_gap_extraction_requires_evidence() -> None:

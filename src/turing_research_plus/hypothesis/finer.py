@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.hypothesis.models import FINERAssessment, Hypothesis, ResearchQuestion
+from turing_research_plus.hypothesis.models import FINERAssessment, Hypothesis, ResearchQuestion
 
 
 def assess_finer(hypothesis: Hypothesis) -> FINERAssessment:

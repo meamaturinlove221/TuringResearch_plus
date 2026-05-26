@@ -4,10 +4,10 @@ from __future__ import annotations
 
 from typing import Any
 
-from tuling_research_plus.artifacts.models import ResearchArtifact
-from tuling_research_plus.hypothesis.models import Hypothesis
-from tuling_research_plus.stress.models import Claim, ExperimentPlan, FailureMode
-from tuling_research_plus.stress.service import StressTestService
+from turing_research_plus.artifacts.models import ResearchArtifact
+from turing_research_plus.hypothesis.models import Hypothesis
+from turing_research_plus.stress.models import Claim, ExperimentPlan, FailureMode
+from turing_research_plus.stress.service import StressTestService
 
 
 def research_artifact_stress_test(

@@ -5,7 +5,7 @@ from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
 
 
 class CandidateKind(StrEnum):
@@ -128,7 +128,7 @@ class DecisionReport(BaseModel):
             artifact_id=f"decision-{self.report_id}",
             kind=ArtifactKind.WORKFLOW_STATE,
             title="Convergence Decision Report",
-            created_by="TulingResearch Plus convergence",
+            created_by="TuringResearch Plus convergence",
             content=self.model_dump(mode="json"),
             evidence=evidence,
             tags=["convergence", "decision_report"],

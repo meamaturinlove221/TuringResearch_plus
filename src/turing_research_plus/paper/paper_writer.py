@@ -1,4 +1,4 @@
-"""Paper writing gate for TulingResearch Plus."""
+"""Paper writing gate for TuringResearch Plus."""
 
 from __future__ import annotations
 
@@ -6,13 +6,13 @@ from enum import StrEnum
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.paper.figure_registry import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.paper.figure_registry import (
     FigureAsset,
     FigureAssetRegistry,
     FigureAssetStatus,
 )
-from tuling_research_plus.paper.models import ArticleBlock, ExperimentReport
+from turing_research_plus.paper.models import ArticleBlock, ExperimentReport
 
 
 class PaperSection(StrEnum):
@@ -59,7 +59,7 @@ class MissingEvidenceReport(BaseModel):
     def to_markdown(self) -> str:
         """Render the missing evidence report as Markdown."""
 
-        lines = ["# TulingResearch Plus Missing Evidence Report", ""]
+        lines = ["# TuringResearch Plus Missing Evidence Report", ""]
         if self.blocked_reason:
             lines.append(f"- Blocked reason: {self.blocked_reason}")
         lines.extend(["", "## Missing Artifacts"])
@@ -231,7 +231,7 @@ def _draft_markdown(input_data: PaperDraftInput) -> str:
     stress = "; ".join(input_data.stress_test_results)
     return "\n".join(
         [
-            "# TulingResearch Plus Paper Draft",
+            "# TuringResearch Plus Paper Draft",
             "",
             "## Abstract",
             f"Evidence-backed summary using {len(evidence)} EvidenceRef entries.",

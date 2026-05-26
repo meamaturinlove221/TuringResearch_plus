@@ -8,10 +8,10 @@ from pathlib import Path
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.race.idea_radar import IdeaRadarInput, extract_idea
-from tuling_research_plus.race.models import IdeaCard
-from tuling_research_plus.race.source_hygiene import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.race.idea_radar import IdeaRadarInput, extract_idea
+from turing_research_plus.race.models import IdeaCard
+from turing_research_plus.race.source_hygiene import (
     SourceHygieneCheckResult,
     SourceHygieneDecision,
     SourceMaterial,
@@ -98,7 +98,7 @@ class UpstreamWatchReport(BaseModel):
         """Render the report as Markdown."""
 
         lines = [
-            f"# TulingResearch Plus Upstream Watch: {self.project_name}",
+            f"# TuringResearch Plus Upstream Watch: {self.project_name}",
             "",
             f"- Report ID: `{self.report_id}`",
             f"- Source hygiene: `{self.source_hygiene.decision}`",

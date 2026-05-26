@@ -5,8 +5,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from tuling_research_plus.vault.markdown_io import list_page_paths, read_page
-from tuling_research_plus.vault.models import VaultEdge, VaultGraphStats
+from turing_research_plus.vault.markdown_io import list_page_paths, read_page
+from turing_research_plus.vault.models import VaultEdge, VaultGraphStats
 
 
 class DuplicateEdgeError(ValueError):

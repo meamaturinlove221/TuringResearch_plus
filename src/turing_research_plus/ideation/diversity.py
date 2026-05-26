@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.ideation.models import (
+from turing_research_plus.ideation.models import (
     DiversityFilterReport,
     IdeaCandidate,
     IdeaGenerationResult,

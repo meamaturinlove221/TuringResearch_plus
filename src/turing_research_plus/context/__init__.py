@@ -1,7 +1,7 @@
-"""Context management for TulingResearch Plus."""
+"""Context management for TuringResearch Plus."""
 
-from tuling_research_plus.context.index import load_index, save_index, upsert_index_entry
-from tuling_research_plus.context.models import (
+from turing_research_plus.context.index import load_index, save_index, upsert_index_entry
+from turing_research_plus.context.models import (
     ContextCheckpoint,
     ContextIndex,
     ContextIndexEntry,
@@ -9,7 +9,7 @@ from tuling_research_plus.context.models import (
     ContextSession,
     ContextSummary,
 )
-from tuling_research_plus.context.service import ContextService
+from turing_research_plus.context.service import ContextService
 
 __all__ = [
     "ContextCheckpoint",

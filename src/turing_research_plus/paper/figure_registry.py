@@ -1,4 +1,4 @@
-"""Figure asset registry for TulingResearch Plus paper outputs."""
+"""Figure asset registry for TuringResearch Plus paper outputs."""
 
 from __future__ import annotations
 

@@ -7,8 +7,8 @@ import re
 from collections import Counter
 from pathlib import Path
 
-from tuling_research_plus.vault.markdown_io import list_page_paths, read_page
-from tuling_research_plus.vault.models import VaultPage, VaultSearchResult
+from turing_research_plus.vault.markdown_io import list_page_paths, read_page
+from turing_research_plus.vault.models import VaultPage, VaultSearchResult
 
 TOKEN_RE = re.compile(r"[a-zA-Z0-9_]+")
 

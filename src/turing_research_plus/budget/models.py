@@ -41,7 +41,7 @@ class BudgetUsage(BaseModel):
 
 
 class BudgetGate(BaseModel):
-    """Budget gate required by TulingResearch Plus workflows."""
+    """Budget gate required by TuringResearch Plus workflows."""
 
     model_config = ConfigDict(extra="forbid")
 

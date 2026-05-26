@@ -1,4 +1,4 @@
-"""SOP graph boundary models for TulingResearch Plus."""
+"""SOP graph boundary models for TuringResearch Plus."""
 
 from enum import StrEnum
 

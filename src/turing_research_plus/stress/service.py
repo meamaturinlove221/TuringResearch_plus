@@ -2,18 +2,18 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.artifacts.models import ResearchArtifact
-from tuling_research_plus.hypothesis.models import Hypothesis
-from tuling_research_plus.stress.claim_red_team import red_team_claim
-from tuling_research_plus.stress.counterfactual import counterfactual_probe, failure_mode_analyze
-from tuling_research_plus.stress.hypothesis_debate import debate_hypothesis
-from tuling_research_plus.stress.models import (
+from turing_research_plus.artifacts.models import ResearchArtifact
+from turing_research_plus.hypothesis.models import Hypothesis
+from turing_research_plus.stress.claim_red_team import red_team_claim
+from turing_research_plus.stress.counterfactual import counterfactual_probe, failure_mode_analyze
+from turing_research_plus.stress.hypothesis_debate import debate_hypothesis
+from turing_research_plus.stress.models import (
     Claim,
     ExperimentPlan,
     FailureMode,
     StressTestReport,
 )
-from tuling_research_plus.stress.premortem import experiment_premortem
+from turing_research_plus.stress.premortem import experiment_premortem
 
 
 class StressTestService:

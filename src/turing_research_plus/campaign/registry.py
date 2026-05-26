@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.campaign.models import CampaignSpec
+from turing_research_plus.campaign.models import CampaignSpec
 
 
 class CampaignRegistry:

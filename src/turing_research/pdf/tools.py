@@ -5,14 +5,14 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-from tuling_research.pdf.models import (
+from turing_research.pdf.models import (
     PDFCacheLookupInput,
     PDFInspectInput,
     PDFMarkdownContentInput,
     PDFMarkdownInput,
 )
-from tuling_research.pdf.service import PDFService
-from tuling_research.settings import CoreSettings, get_settings
+from turing_research.pdf.service import PDFService
+from turing_research.settings import CoreSettings, get_settings
 
 
 def _service(settings: CoreSettings | None = None) -> PDFService:

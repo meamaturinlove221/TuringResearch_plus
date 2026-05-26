@@ -1,6 +1,6 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.budget.models import BudgetGate, BudgetLimit, BudgetUnit
-from tuling_research_plus.campaign.models import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.budget.models import BudgetGate, BudgetLimit, BudgetUnit
+from turing_research_plus.campaign.models import (
     CampaignMode,
     CampaignSpec,
     QualityGateSpec,
@@ -9,10 +9,10 @@ from tuling_research_plus.campaign.models import (
     StrategySpec,
     TacticSpec,
 )
-from tuling_research_plus.ledger.models import StateLedger
-from tuling_research_plus.race.models import FeatureCapsule, SourceHygieneGate, SourceHygieneStatus
-from tuling_research_plus.sop.models import SOPGenerationRequest, SOPGraphType
-from tuling_research_plus.sop.sop_graph import (
+from turing_research_plus.ledger.models import StateLedger
+from turing_research_plus.race.models import FeatureCapsule, SourceHygieneGate, SourceHygieneStatus
+from turing_research_plus.sop.models import SOPGenerationRequest, SOPGraphType
+from turing_research_plus.sop.sop_graph import (
     generate_campaign_sop_graph,
     generate_feature_sop_graph,
     paper_sop_graph_generate,
@@ -115,7 +115,7 @@ def test_sop_graph_generate_renders_mermaid_and_optional_outputs() -> None:
     )
 
     assert result.mermaid_text.startswith("flowchart TD")
-    assert result.sop_markdown.startswith("# TulingResearch Plus SOP: Release SOP")
+    assert result.sop_markdown.startswith("# TuringResearch Plus SOP: Release SOP")
     assert result.skill_skeleton is not None
     assert result.codex_prompt is not None
 

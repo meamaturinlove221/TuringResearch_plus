@@ -16,4 +16,4 @@ def test_examples_are_fake_mode_and_documented() -> None:
         content = readme.read_text(encoding="utf-8").lower()
         assert "mode:" in content
         assert "no real network" in content or "no semantic scholar api key" in content
-        assert "tulingresearch plus" in content
+        assert "turingresearch plus" in content

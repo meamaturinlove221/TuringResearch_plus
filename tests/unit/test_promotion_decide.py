@@ -1,8 +1,8 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.convergence.models import CandidateScore, PromotionDecision
-from tuling_research_plus.convergence.portfolio import decide_promotion
-from tuling_research_plus.convergence.service import ConvergenceService
-from tuling_research_plus.convergence.tools import research_promotion_decide
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.convergence.models import CandidateScore, PromotionDecision
+from turing_research_plus.convergence.portfolio import decide_promotion
+from turing_research_plus.convergence.service import ConvergenceService
+from turing_research_plus.convergence.tools import research_promotion_decide
 
 
 def evidence() -> EvidenceRef:

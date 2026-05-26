@@ -7,7 +7,7 @@ import struct
 import zipfile
 from pathlib import Path
 
-from tuling_research_plus.artifact_audit.models import NPZArraySummary
+from turing_research_plus.artifact_audit.models import NPZArraySummary
 
 
 def summarize_npz(path: Path, max_arrays: int = 20) -> list[NPZArraySummary]:

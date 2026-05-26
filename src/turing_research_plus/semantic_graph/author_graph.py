@@ -5,8 +5,8 @@ from __future__ import annotations
 from collections import deque
 from itertools import combinations
 
-from tuling_research_plus.semantic_graph.client import SemanticGraphAdapter
-from tuling_research_plus.semantic_graph.models import (
+from turing_research_plus.semantic_graph.client import SemanticGraphAdapter
+from turing_research_plus.semantic_graph.models import (
     AuthorEdge,
     AuthorNetworkInput,
     AuthorNetworkOutput,

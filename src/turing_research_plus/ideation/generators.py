@@ -2,14 +2,14 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.hypothesis.models import Hypothesis, HypothesisSet
-from tuling_research_plus.ideation.models import (
+from turing_research_plus.hypothesis.models import Hypothesis, HypothesisSet
+from turing_research_plus.ideation.models import (
     IdeaCandidate,
     IdeaClusterKey,
     IdeaGenerationResult,
     IdeaRisk,
 )
-from tuling_research_plus.ideation.morphological_matrix import build_morphological_matrix
+from turing_research_plus.ideation.morphological_matrix import build_morphological_matrix
 
 
 def generate_ideas(

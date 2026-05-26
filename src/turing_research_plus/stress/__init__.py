@@ -1,6 +1,6 @@
-"""TulingResearch Plus Stress Test workflow."""
+"""TuringResearch Plus Stress Test workflow."""
 
-from tuling_research_plus.stress.models import (
+from turing_research_plus.stress.models import (
     Claim,
     ExperimentPlan,
     FailureMode,
@@ -9,7 +9,7 @@ from tuling_research_plus.stress.models import (
     StressTestReport,
     StressWeakness,
 )
-from tuling_research_plus.stress.service import StressTestService
+from turing_research_plus.stress.service import StressTestService
 
 __all__ = [
     "Claim",

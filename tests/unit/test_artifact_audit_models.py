@@ -1,6 +1,6 @@
 import pytest
 
-from tuling_research_plus.artifact_audit.models import (
+from turing_research_plus.artifact_audit.models import (
     ArtifactAuditReport,
     ArtifactFileType,
     ArtifactRecord,

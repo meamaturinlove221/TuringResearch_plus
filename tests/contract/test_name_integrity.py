@@ -6,13 +6,19 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 TEXT_EXTENSIONS = {".py", ".md", ".yaml", ".toml"}
+OLD_NAME_ALLOWED_FILES = {
+    Path("docs/rename-tuling-to-turing-report.md"),
+    Path("docs/round38-pre-rename-checkpoint.md"),
+    Path("docs/round38-rename-risk-register.md"),
+    Path("lanes/18_round38_pre_rename_checkpoint.md"),
+}
 IGNORED_PARTS = {
     ".git",
     ".mypy_cache",
     ".pytest_cache",
     ".ruff_cache",
     "__pycache__",
-    "tulingresearch_plus.egg-info",
+    "turingresearch_plus.egg-info",
 }
 
 
@@ -42,6 +48,22 @@ def forbidden_skill_pattern() -> re.Pattern[str]:
     return re.compile(rf"\b{bad_prefix}-[A-Za-z0-9_-]+\b")
 
 
+def old_name_terms() -> list[str]:
+    display = "Tul" + "ingResearch"
+    root = display + "_plus"
+    core = "tul" + "ing_research"
+    plus = core + "_plus"
+    slug = "tul" + "ingresearch"
+    return [
+        display,
+        root,
+        core,
+        plus,
+        slug + "-plus",
+        slug + "-",
+    ]
+
+
 def test_repository_text_does_not_contain_forbidden_project_names() -> None:
     offenders: list[str] = []
     skill_pattern = forbidden_skill_pattern()
@@ -57,22 +79,36 @@ def test_repository_text_does_not_contain_forbidden_project_names() -> None:
     assert offenders == []
 
 
-def test_required_tulingresearch_names_are_present_in_project_metadata() -> None:
+def test_prior_project_names_only_appear_in_rename_checkpoint_docs() -> None:
+    offenders: list[str] = []
+    for path in iter_text_files():
+        relative = path.relative_to(ROOT)
+        if relative in OLD_NAME_ALLOWED_FILES:
+            continue
+        content = path.read_text(encoding="utf-8")
+        for term in old_name_terms():
+            if term in content:
+                offenders.append(f"{relative} contains prior project name term")
+
+    assert offenders == []
+
+
+def test_required_turingresearch_names_are_present_in_project_metadata() -> None:
     pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
     agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     mcp_docs = (ROOT / "docs" / "mcp-tools.md").read_text(encoding="utf-8")
 
-    assert "TulingResearch Plus" in agents
-    assert "TulingResearch/TulingResearch_plus" in agents
-    assert "tuling_research" in pyproject
-    assert "tuling_research_plus" in pyproject
-    assert "tulingresearch-plus" in pyproject
-    assert "tulingresearch-plus" in mcp_docs
+    assert "TuringResearch Plus" in agents
+    assert "TuringResearch/TuringResearch_plus" in agents
+    assert "turing_research" in pyproject
+    assert "turing_research_plus" in pyproject
+    assert "turingresearch-plus" in pyproject
+    assert "turingresearch-plus" in mcp_docs
 
 
 def test_python_imports_do_not_reference_legacy_or_unknown_local_packages() -> None:
     bad_prefix = "neo" + "cortica"
-    allowed_local_roots = {"tuling_research", "tuling_research_plus"}
+    allowed_local_roots = {"turing_research", "turing_research_plus"}
     offenders: list[str] = []
 
     for path in sorted((ROOT / "src").rglob("*.py")) + sorted((ROOT / "tests").rglob("*.py")):

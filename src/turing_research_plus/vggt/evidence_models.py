@@ -8,7 +8,7 @@ from typing import Self
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from tuling_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.artifacts.models import EvidenceRef
 
 
 class VGGTEvidenceStatus(StrEnum):
@@ -108,7 +108,7 @@ class VGGTEvidenceLedger(BaseModel):
         """Serialize the ledger to a compact Markdown table."""
 
         lines = [
-            f"# TulingResearch Plus VGGT Evidence Ledger: {self.run_id}",
+            f"# TuringResearch Plus VGGT Evidence Ledger: {self.run_id}",
             "",
             "| Version | Status | Claim | Limitations | Blockers | Next actions |",
             "| --- | --- | --- | --- | --- | --- |",

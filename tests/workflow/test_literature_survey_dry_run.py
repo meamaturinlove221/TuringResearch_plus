@@ -1,12 +1,12 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.survey.models import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.survey.models import (
     PaperRecord,
     SurveyInput,
     SurveyStatus,
     SurveyStrategy,
 )
-from tuling_research_plus.survey.service import LiteratureSurveyService
-from tuling_research_plus.survey.tools import (
+from turing_research_plus.survey.service import LiteratureSurveyService
+from turing_research_plus.survey.tools import (
     research_survey_export,
     research_survey_plan,
     research_survey_run,

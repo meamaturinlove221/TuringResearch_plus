@@ -1,4 +1,4 @@
-"""Semantic graph models for TulingResearch Plus."""
+"""Semantic graph models for TuringResearch Plus."""
 
 from enum import StrEnum
 from typing import Any

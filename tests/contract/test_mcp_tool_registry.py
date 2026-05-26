@@ -3,8 +3,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-from tuling_research.mcp_server import build_stdio_manifest, dry_run_tool, list_registered_tools
-from tuling_research.tool_registry import MCP_SERVER_NAME, get_tool_descriptor, list_mcp_tools
+from turing_research.mcp_server import build_stdio_manifest, dry_run_tool, list_registered_tools
+from turing_research.tool_registry import MCP_SERVER_NAME, get_tool_descriptor, list_mcp_tools
 
 ROOT = Path(__file__).resolve().parents[2]
 MINIMAL_TOOLS = {
@@ -21,7 +21,7 @@ MINIMAL_TOOLS = {
 def test_mcp_server_name_and_minimal_tools_are_registered() -> None:
     tools = {tool.name: tool for tool in list_mcp_tools()}
 
-    assert MCP_SERVER_NAME == "tulingresearch-plus"
+    assert MCP_SERVER_NAME == "turingresearch-plus"
     assert MINIMAL_TOOLS <= set(tools)
     for tool_name in MINIMAL_TOOLS:
         descriptor = tools[tool_name]
@@ -35,7 +35,7 @@ def test_registry_lookup_and_manifest_are_serializable() -> None:
 
     assert descriptor is not None
     assert descriptor.name == "core.health_check"
-    assert manifest["server_name"] == "tulingresearch-plus"
+    assert manifest["server_name"] == "turingresearch-plus"
     assert {tool["name"] for tool in manifest["tools"]} == {
         tool["name"] for tool in list_registered_tools()
     }

@@ -1,8 +1,8 @@
-from tuling_research.cache.keys import build_cache_key
-from tuling_research.cache.manager import CacheManager
-from tuling_research.errors import ErrorCode
-from tuling_research.scholar.content_service import PaperContentService
-from tuling_research.scholar.models import PaperContentRequest
+from turing_research.cache.keys import build_cache_key
+from turing_research.cache.manager import CacheManager
+from turing_research.errors import ErrorCode
+from turing_research.scholar.content_service import PaperContentService
+from turing_research.scholar.models import PaperContentRequest
 
 
 def test_paper_content_local_hit(tmp_path) -> None:

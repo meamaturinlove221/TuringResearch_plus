@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from tuling_research_plus.vault.graph import VaultGraph
-from tuling_research_plus.vault.markdown_io import list_page_paths, read_page, split_frontmatter
-from tuling_research_plus.vault.models import VaultLintIssue
+from turing_research_plus.vault.graph import VaultGraph
+from turing_research_plus.vault.markdown_io import list_page_paths, read_page, split_frontmatter
+from turing_research_plus.vault.models import VaultLintIssue
 
 
 def lint_vault(root: str | Path) -> list[VaultLintIssue]:

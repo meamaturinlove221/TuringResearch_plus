@@ -1,14 +1,14 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.hypothesis.falsifiability import build_hypothesis
-from tuling_research_plus.hypothesis.models import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.hypothesis.falsifiability import build_hypothesis
+from turing_research_plus.hypothesis.models import (
     FalsifiabilityCriteria,
     GapPriority,
     Hypothesis,
 )
-from tuling_research_plus.stress.hypothesis_debate import debate_hypothesis
-from tuling_research_plus.stress.models import PassFail, Severity
-from tuling_research_plus.stress.service import StressTestService
-from tuling_research_plus.stress.tools import research_hypothesis_debate
+from turing_research_plus.stress.hypothesis_debate import debate_hypothesis
+from turing_research_plus.stress.models import PassFail, Severity
+from turing_research_plus.stress.service import StressTestService
+from turing_research_plus.stress.tools import research_hypothesis_debate
 
 
 def evidence() -> EvidenceRef:

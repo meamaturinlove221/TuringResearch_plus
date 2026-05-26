@@ -1,8 +1,8 @@
-from tuling_research.cache.keys import build_cache_key
-from tuling_research.cache.manager import CacheManager
-from tuling_research.errors import ErrorCode
-from tuling_research.web.content_service import WebContentService
-from tuling_research.web.models import WebContentRequest
+from turing_research.cache.keys import build_cache_key
+from turing_research.cache.manager import CacheManager
+from turing_research.errors import ErrorCode
+from turing_research.web.content_service import WebContentService
+from turing_research.web.models import WebContentRequest
 
 
 def test_web_content_local_hit(tmp_path) -> None:

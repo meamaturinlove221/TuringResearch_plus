@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.experiment.models import ExperimentPlan, ImplementationPlan
+from turing_research_plus.experiment.models import ExperimentPlan, ImplementationPlan
 
 
 def build_implementation_plan(plan: ExperimentPlan) -> ImplementationPlan:

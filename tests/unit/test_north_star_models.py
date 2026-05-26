@@ -1,8 +1,8 @@
 import pytest
 from pydantic import ValidationError
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.north_star.models import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.north_star.models import (
     DirectionCandidate,
     DirectionCandidates,
     NorthStarStatement,

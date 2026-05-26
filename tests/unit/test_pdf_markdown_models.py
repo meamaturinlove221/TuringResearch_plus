@@ -1,7 +1,7 @@
 import pytest
 from pydantic import ValidationError
 
-from tuling_research.pdf.models import (
+from turing_research.pdf.models import (
     MarkdownPage,
     PdfMarkdownOptions,
     PdfMarkdownRequest,

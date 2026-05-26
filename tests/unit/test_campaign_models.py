@@ -1,6 +1,6 @@
-from tuling_research_plus.budget.models import BudgetGate, BudgetLimit, BudgetUnit
-from tuling_research_plus.campaign.models import CampaignMode, CampaignSpec
-from tuling_research_plus.ledger.models import StateLedger
+from turing_research_plus.budget.models import BudgetGate, BudgetLimit, BudgetUnit
+from turing_research_plus.campaign.models import CampaignMode, CampaignSpec
+from turing_research_plus.ledger.models import StateLedger
 
 
 def test_campaign_defaults_to_dry_run_mode() -> None:

@@ -1,5 +1,5 @@
-from tuling_research_plus.semantic_graph.models import CitationGraphExpandInput, GraphDirection
-from tuling_research_plus.semantic_graph.tools import (
+from turing_research_plus.semantic_graph.models import CitationGraphExpandInput, GraphDirection
+from turing_research_plus.semantic_graph.tools import (
     graph_author,
     graph_author_network,
     graph_author_papers,

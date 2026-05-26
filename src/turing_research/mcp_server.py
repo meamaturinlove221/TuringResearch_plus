@@ -1,4 +1,4 @@
-"""STDIO-safe MCP smoke server surface for TulingResearch Plus."""
+"""STDIO-safe MCP smoke server surface for TuringResearch Plus."""
 
 from __future__ import annotations
 
@@ -9,15 +9,15 @@ from typing import Any
 
 from pydantic import BaseModel, ConfigDict
 
-from tuling_research import __version__
-from tuling_research.pdf.tools import pdf_inspect, pdf_markdown_content
-from tuling_research.scholar.content_service import PaperContentService
-from tuling_research.scholar.models import PaperContentRequest
-from tuling_research.session.registry import SessionRegistry
-from tuling_research.settings import CoreSettings, get_settings
-from tuling_research.tool_registry import MCP_SERVER_NAME, list_core_tools, list_mcp_tools
-from tuling_research.web.content_service import WebContentService
-from tuling_research.web.models import WebContentRequest
+from turing_research import __version__
+from turing_research.pdf.tools import pdf_inspect, pdf_markdown_content
+from turing_research.scholar.content_service import PaperContentService
+from turing_research.scholar.models import PaperContentRequest
+from turing_research.session.registry import SessionRegistry
+from turing_research.settings import CoreSettings, get_settings
+from turing_research.tool_registry import MCP_SERVER_NAME, list_core_tools, list_mcp_tools
+from turing_research.web.content_service import WebContentService
+from turing_research.web.models import WebContentRequest
 
 
 class HealthCheckResult(BaseModel):
@@ -36,7 +36,7 @@ def core_health_check() -> dict[str, Any]:
 
     result = HealthCheckResult(
         status="ok",
-        package="tuling_research",
+        package="turing_research",
         version=__version__,
         tools=[tool.name for tool in list_core_tools()],
     )
@@ -123,7 +123,7 @@ def build_stdio_manifest() -> dict[str, Any]:
 
     return {
         "server_name": MCP_SERVER_NAME,
-        "package": "tuling_research",
+        "package": "turing_research",
         "version": __version__,
         "transport": "stdio",
         "tools": list_registered_tools(),
@@ -137,7 +137,7 @@ def main(argv: list[str] | None = None) -> int:
     Operational logs go to stderr to preserve STDIO MCP safety.
     """
 
-    parser = argparse.ArgumentParser(description="TulingResearch Plus local MCP smoke server.")
+    parser = argparse.ArgumentParser(description="TuringResearch Plus local MCP smoke server.")
     parser.add_argument(
         "--manifest",
         action="store_true",
@@ -158,7 +158,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     sys.stderr.write(
-        "tulingresearch-plus local stdio smoke module imported; no network server started.\n"
+        "turingresearch-plus local stdio smoke module imported; no network server started.\n"
     )
     return 0
 

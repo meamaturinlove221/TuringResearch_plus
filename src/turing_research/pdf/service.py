@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from tuling_research.pdf.inspector import inspect_pdf
-from tuling_research.pdf.models import (
+from turing_research.pdf.inspector import inspect_pdf
+from turing_research.pdf.models import (
     PDFCacheLookupInput,
     PDFInspectInput,
     PDFInspectOutput,
@@ -14,7 +14,7 @@ from tuling_research.pdf.models import (
     PDFMarkdownInput,
     PDFMarkdownOutput,
 )
-from tuling_research.pdf.pipeline import PDFMarkdownPipeline
+from turing_research.pdf.pipeline import PDFMarkdownPipeline
 
 
 class PDFService:

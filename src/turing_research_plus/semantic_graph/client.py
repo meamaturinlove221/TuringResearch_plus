@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Protocol
 
-from tuling_research_plus.semantic_graph.models import AuthorNode, PaperNode
+from turing_research_plus.semantic_graph.models import AuthorNode, PaperNode
 
 
 class SemanticGraphAdapterError(RuntimeError):

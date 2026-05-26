@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from tuling_research_plus.experiment.models import (
+from turing_research_plus.experiment.models import (
     ExperimentPlan,
     ExperimentResultAnalysis,
     ResultSchema,

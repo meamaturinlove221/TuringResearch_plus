@@ -4,14 +4,14 @@ from __future__ import annotations
 
 from collections.abc import Callable
 
-from tuling_research_plus.semantic_graph.author_graph import AuthorGraphBuilder
-from tuling_research_plus.semantic_graph.citation_graph import CitationGraphBuilder
-from tuling_research_plus.semantic_graph.client import (
+from turing_research_plus.semantic_graph.author_graph import AuthorGraphBuilder
+from turing_research_plus.semantic_graph.citation_graph import CitationGraphBuilder
+from turing_research_plus.semantic_graph.client import (
     EmptySemanticGraphAdapter,
     SemanticGraphAdapter,
     SemanticGraphAdapterError,
 )
-from tuling_research_plus.semantic_graph.models import (
+from turing_research_plus.semantic_graph.models import (
     AuthorInput,
     AuthorNetworkInput,
     AuthorNetworkOutput,

@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 
-from tuling_research_plus.experiment.models import (
+from turing_research_plus.experiment.models import (
     ComputeBudget,
     ExperimentPlan,
     StatisticalComparisonPlan,
 )
-from tuling_research_plus.hypothesis.models import Hypothesis
+from turing_research_plus.hypothesis.models import Hypothesis
 
 
 def design_experiment(hypothesis: Hypothesis, plan_id: str = "experiment-plan-1") -> ExperimentPlan:

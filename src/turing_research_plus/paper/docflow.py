@@ -1,11 +1,11 @@
-"""DocFlow Article Blocks for TulingResearch Plus."""
+"""DocFlow Article Blocks for TuringResearch Plus."""
 
 from __future__ import annotations
 
 from dataclasses import dataclass
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.paper.models import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.paper.models import (
     ArticleBlockKind,
     ArticleBlockRegistry,
     ArticleBlockState,

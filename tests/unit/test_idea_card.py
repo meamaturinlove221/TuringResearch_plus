@@ -1,8 +1,8 @@
 import pytest
 from pydantic import ValidationError
 
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.race.models import (
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.race.models import (
     IdeaCard,
     IdeaPriority,
     RecommendedAction,

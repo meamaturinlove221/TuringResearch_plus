@@ -4,8 +4,8 @@ from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from tuling_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
-from tuling_research_plus.hypothesis.models import Hypothesis
+from turing_research_plus.artifacts.models import ArtifactKind, EvidenceRef, ResearchArtifact
+from turing_research_plus.hypothesis.models import Hypothesis
 
 
 class ComputeBudget(BaseModel):
@@ -57,7 +57,7 @@ class ExperimentPlan(BaseModel):
             artifact_id=f"experiment-plan-{self.plan_id}",
             kind=ArtifactKind.WORKFLOW_STATE,
             title=f"Experiment Plan: {self.hypothesis.hypothesis_id}",
-            created_by="TulingResearch Plus experiment",
+            created_by="TuringResearch Plus experiment",
             content=self.model_dump(mode="json"),
             evidence=self.evidence_refs,
             tags=["experiment_execution", "experiment_plan"],
@@ -97,7 +97,7 @@ class ImplementationPlan(BaseModel):
     steps: list[str] = Field(min_length=1)
     artifacts_to_create: list[str] = Field(min_length=1)
     dry_run: bool = True
-    owner: str = Field(default="TulingResearch Plus")
+    owner: str = Field(default="TuringResearch Plus")
 
 
 class ResultSchemaField(BaseModel):

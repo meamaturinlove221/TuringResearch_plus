@@ -1,6 +1,6 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.vault.markdown_io import read_page, write_page
-from tuling_research_plus.vault.models import VaultEntityType, VaultPage
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.vault.markdown_io import read_page, write_page
+from turing_research_plus.vault.models import VaultEntityType, VaultPage
 
 
 def test_create_page_round_trip(tmp_path) -> None:

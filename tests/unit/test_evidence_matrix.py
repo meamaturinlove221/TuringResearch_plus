@@ -1,7 +1,7 @@
-from tuling_research_plus.artifacts.models import EvidenceRef
-from tuling_research_plus.survey.evidence_matrix import build_evidence_matrix
-from tuling_research_plus.survey.models import PaperRecord, SurveyInput, SurveyStrategy
-from tuling_research_plus.survey.screening import screen_papers
+from turing_research_plus.artifacts.models import EvidenceRef
+from turing_research_plus.survey.evidence_matrix import build_evidence_matrix
+from turing_research_plus.survey.models import PaperRecord, SurveyInput, SurveyStrategy
+from turing_research_plus.survey.screening import screen_papers
 
 
 def test_paper_screening_and_evidence_matrix() -> None:
