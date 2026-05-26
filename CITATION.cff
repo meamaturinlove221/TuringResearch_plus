@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use TuringResearch in research or engineering work, please cite it using this metadata."
+title: "TuringResearch"
+version: "1.5.0rc0"
+date-released: "2026-05-26"
+abstract: "TuringResearch is a local-first, fake/demo-first research workflow infrastructure project for auditable evidence, artifacts, routes, paper notes, dashboards, plugins, and release gates."
+authors:
+  - name: "TuringResearch maintainers"
+license: "Proprietary"
+keywords:
+  - research-workflow
+  - evidence-ledger
+  - local-first
+  - privacy-first
+  - public-demo

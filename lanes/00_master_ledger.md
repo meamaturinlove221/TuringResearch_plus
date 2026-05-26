@@ -5882,3 +5882,46 @@ Validation:
 - `python -m ruff check .` passed.
 - `python -m mypy src` passed.
 - `git diff --check` passed with only LF-to-CRLF working-copy warning.
+
+## Round 360.4 - License / Citation / Conduct Decision
+
+Status: completed.
+
+Summary:
+- Updated `LICENSE` to use the TuringResearch public project name while keeping
+  the current proprietary license posture.
+- Added `CITATION.cff`.
+- Updated `CONTRIBUTING.md`.
+- Updated `CODE_OF_CONDUCT.md`.
+- Updated `SECURITY.md`.
+- Updated `docs/license-review.md`.
+- Added `docs/open-source-license-decision.md`.
+- Added `docs/open-source-compliance-checklist.md`.
+- Added `lanes/360_4_license_citation_conduct.md`.
+- Linked citation and governance files from the README.
+
+Decision:
+- current license remains proprietary and consistent with `pyproject.toml`;
+- open source license choice requires later human approval;
+- no legal advice is provided;
+- no upstream license text was copied;
+- citation metadata uses TuringResearch;
+- contributing and security docs preserve fake/live and no-private-data
+  boundaries.
+
+Non-actions:
+- No open source license selected.
+- No PyPI publication.
+- No GitHub release publication.
+- No tag creation.
+- No GitHub repository creation.
+- No package, CLI, MCP, or import rename.
+
+Validation:
+- License/docs checks passed.
+- Public name integrity and public release hygiene checks passed.
+- Security/privacy checks passed.
+- Full test suite passed: `2013 passed, 10 deselected`.
+- `python -m ruff check .` passed.
+- `python -m mypy src` passed.
+- `git diff --check` passed with only LF-to-CRLF working-copy warning.

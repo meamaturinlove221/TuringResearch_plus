@@ -3,8 +3,20 @@ Proprietary License
 Copyright (c) 2026 TuringResearch.
 All rights reserved.
 
-TuringResearch Plus is provided for review, evaluation, and internal development only unless a separate written license grants additional rights.
+TuringResearch is provided for review, evaluation, and internal development
+only unless a separate written license grants additional rights.
 
-No permission is granted to copy, modify, distribute, sublicense, sell, host, or provide the software or substantial portions of it to third parties without prior written authorization from the copyright holder.
+No permission is granted to copy, modify, distribute, sublicense, sell, host, or
+provide the software or substantial portions of it to third parties without
+prior written authorization from the copyright holder.
 
-This license reflects the current `pyproject.toml` license metadata. If TuringResearch Plus is later released under an open source license, update this file, `pyproject.toml`, `docs/license-review.md`, and the public release checklist together.
+This file reflects the current `pyproject.toml` license metadata:
+
+```toml
+license = { text = "Proprietary" }
+```
+
+If TuringResearch is later released under an open source license, maintainers
+must update this file, `pyproject.toml`, `docs/license-review.md`,
+`docs/open-source-license-decision.md`, and public release checklists together
+after explicit human approval. This file is not legal advice.

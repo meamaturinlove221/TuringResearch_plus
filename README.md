@@ -360,9 +360,22 @@ a default implementation line.
 ## License
 
 The current repository license is proprietary. See [LICENSE](LICENSE) and
-[license review](docs/license-review.md). Do not assume PyPI publication,
-third-party redistribution, or public release approval until maintainers make a
-separate explicit release decision.
+[license review](docs/license-review.md). The open source license decision is
+still pending human approval; see
+[open source license decision](docs/open-source-license-decision.md) and
+[open source compliance checklist](docs/open-source-compliance-checklist.md).
+Do not assume PyPI publication, third-party redistribution, or public release
+approval until maintainers make a separate explicit release decision.
+
+## Citation And Governance
+
+- [Citation metadata](CITATION.cff)
+- [Contributing guide](CONTRIBUTING.md)
+- [Code of conduct](CODE_OF_CONDUCT.md)
+- [Security policy](SECURITY.md)
+
+These files are public-review drafts. They do not replace maintainer license,
+privacy, security, or compliance review.
 
 ## Acknowledgements And References
 
