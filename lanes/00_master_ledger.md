@@ -6048,3 +6048,32 @@ Validation:
   with 22 tests.
 - `python -m ruff check .` passed.
 - `git diff --check` passed with only LF-to-CRLF working-copy warning.
+
+## Round 376 - Live Output Redaction Gate
+
+Status: completed.
+
+Summary:
+- Added `src/turing_research_plus/live_safety/`.
+- Added `contracts/live_output_redaction_gate.yaml`.
+- Added `tests/unit/test_live_output_redaction.py`.
+- Added `tests/unit/test_live_report_guard.py`.
+- Added `tests/contract/test_live_output_redaction_gate.py`.
+- Added `docs/live-output-redaction-gate.md`.
+- Added `lanes/354_live_output_redaction_gate.md`.
+
+Safety:
+- API keys, tokens, passwords, private paths, SSH host aliases, local
+  usernames, cookies, and raw private content are redacted.
+- No raw live output is retained.
+- No automatic Evidence Ledger write is allowed.
+- Human review is required.
+- Live providers remain disabled by default.
+
+Validation:
+- Live redaction tests passed with 7 tests.
+- v1.5 security/privacy, public release hygiene, and optional live safety tests
+  passed with 23 tests.
+- `python -m ruff check .` passed.
+- `python -m mypy src/turing_research_plus/live_safety` passed.
+- `git diff --check` passed with only LF-to-CRLF working-copy warning.

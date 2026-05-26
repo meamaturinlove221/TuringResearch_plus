@@ -1,0 +1,31 @@
+schema_version: 1
+contract_id: live_output_redaction_gate
+status: active
+owner: turingresearch
+default_mode: fake
+purpose: Redact optional live output before any report or artifact write.
+must_redact:
+  - API keys
+  - tokens
+  - passwords
+  - private paths
+  - SSH host aliases
+  - local usernames
+  - cookies
+  - raw private content
+rules:
+  no_raw_output_retained: true
+  no_automatic_evidence_write: true
+  requires_human_review: true
+  live_disabled_by_default: true
+  block_when_redactions_present: true
+outputs:
+  sanitized_text: required
+  redactions: required
+  blocked: required
+  warnings: required
+non_goals:
+  - running live providers
+  - storing raw live payloads
+  - writing evidence ledger entries automatically
+  - proving live provider correctness
