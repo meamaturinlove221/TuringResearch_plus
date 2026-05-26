@@ -9,80 +9,80 @@ source_dist: docs-site/dist
 files:
   - path: deployment_dry_run_report.md
     kind: report
-    size_bytes: 2084
-    sha256: 3880ce2b383a10d60c413a015d1044f592ba9ae1e9a9d669fb351dd421bf3eb1
+    size_bytes: 2037
+    sha256: a7b058aa89203e9eeacb61991ffeec08180371a5818940536e64a459bf891200
   - path: dist_manifest.yaml
     kind: manifest
-    size_bytes: 2428
-    sha256: 172b22de950f9364ed976402f3563f226472272c11f577b7a5c7a7865cd3a7f7
+    size_bytes: 2355
+    sha256: 9b23725969473b598b724b874cd7743bc39b0d62bb137e7739a9d216eaefdd42
   - path: nav.yaml
     kind: manifest
-    size_bytes: 2935
-    sha256: ae72cc906d201d3e717fec0218be27ee47c36451bc1d2a6e4aa0cd233022e861
+    size_bytes: 2847
+    sha256: 32d746ab8abc90be81a1e8ee18c5e070f6cfd9937236c16dbf821956b3e1503a
   - path: preflight_report.md
     kind: report
-    size_bytes: 1321
-    sha256: 25bae66673793c296a9dfe3a4a6f61d19d66d869ae04b629cb88405fb5a23980
+    size_bytes: 1254
+    sha256: 33d96464893d6933bddf976902ab58229a72cbafa60acc8fe39ca5e46621cc15
   - path: site/case-study-gallery.html
     kind: html
     size_bytes: 1740
-    sha256: e1591fe175352db8261f80cd7097874176c6a5c2ac63ddec854839a202ec2f8e
+    sha256: 610323d5e64b71582d37b95000973795f01d813a8035ca2c2e22f146ab49e858
   - path: site/concepts.html
     kind: html
     size_bytes: 2293
-    sha256: 9868ef7873ed1e1069a22cb598e8b25ead276d7f75baa35c6e8606cfe6d4eb55
+    sha256: 8e30357a18dc9db232c40e7a280dea66ade1325a9ebd54523a917c85a28cd582
   - path: site/dashboard.html
     kind: html
     size_bytes: 1965
-    sha256: afaa76d7f6997221d8c1179e9b3c0b9a5a877f984eefc78ea4652376b8e8da58
+    sha256: a8e03132c055af65d5d67f0f391db6812af03159049e51249b89d01d58d1b22d
   - path: site/faq.html
     kind: html
     size_bytes: 2106
-    sha256: 9610c98d4a8fc383c77061661b7315bb2c05b71388a36f8eaad3d58f39f67346
+    sha256: 56d426d0a559af01987b15ec26e1ede4c7d16cfe3bdd750ddbf8e45613314b1c
   - path: site/index.html
     kind: html
     size_bytes: 2315
-    sha256: 52f39fdc13373795d6625b2ad54f93cd2db00143b919ee3d9d42d23551ddf4f5
+    sha256: f04278744ff15bd9de2eef909ad4c40ec78d814c257421cca9f46f14031cdaed
   - path: site/original-repo-parity.html
     kind: html
     size_bytes: 2564
-    sha256: 7dcf2ab971f6ee5bdf1495f82d3e161ac852f297133aeeb7fc7bc561e3169e9f
+    sha256: 3ddf8fc6bc3567d4a41d306a02f68013a8e359063beb007a81718a15e269371d
   - path: site/plugins.html
     kind: html
     size_bytes: 1688
-    sha256: 1eeb59f0828053570c2be3c81567de756307a08e7f88a0266dee835031d90f99
+    sha256: 4ef066483a7a6a481d75971547f6e6c3fb67f081f72c0bbac92652701c96cf7e
   - path: site/privacy.html
     kind: html
     size_bytes: 1731
-    sha256: 6d49e56bb236488fcadc92a67a6dab496627a515a7aea3b3d34fd19bc6d9fd7e
+    sha256: 01bd2727841582d0f45e7372ba4a1c25175a6b8b243fddf727d5cc968a5dabb1
   - path: site/public-demo.html
     kind: html
     size_bytes: 2317
-    sha256: 0a48c2589ae7fff0b514cac7ebb8d331f3f6892caf42e324339a424bc1d2c8cb
+    sha256: e9aed2cbe3eafcea25b43eb668acd844bc6492b96b38e590be6fe5db74459500
   - path: site/quickstart.html
     kind: html
     size_bytes: 2206
-    sha256: 69cd75bade09b3a2a69511b3e8e7545e3695fe06d4898a160974d9049f1a02ef
+    sha256: fd73792fea62757889291ff8fbba74b59cc8560b45e91c8dc145431baf78e0f5
   - path: site/roadmap.html
     kind: html
     size_bytes: 2118
-    sha256: 0b6599e4ab1e51beb153108d51ee9b6792793c9d1e5febbc36733982fd3f9d07
+    sha256: 9f2a43ee9b68bc236acd46e9914cf8dd9370641185e51aaa4a7503a9e0abdced
   - path: site/showcase.html
     kind: html
     size_bytes: 1666
-    sha256: ede74c91a2039c598f8101c00d6a3f743efec85d8e03fe692d7af7eb33ae1212
+    sha256: c136bf579400c276ff14ee09fdc9fe211ef03e57c192c0f97bcec54a10a642a1
   - path: site/site.css
     kind: css
     size_bytes: 1174
-    sha256: cbfdea921f3473152c816d3e9e8c2a7864f686b8b23da855e76cac727916b143
+    sha256: d4a9650b1d033682c1c026a56163aac2578dfd432db5eba93d6136a923742d8f
   - path: site/split-repos.html
     kind: html
     size_bytes: 2259
-    sha256: a2994b47ced8f182cd044a4d7d1494bd10d52dbd183b07fce988fbb3f8f67c18
+    sha256: 7dd700ce762f603c2068cbc2a04e73ce2f3a618364758c5975db391001db238d
   - path: site_manifest.yaml
     kind: manifest
-    size_bytes: 912
-    sha256: 301434a1f2e4f17a6d11122eb42de806898a11f2047821f1650b6ca732eb2871
+    size_bytes: 873
+    sha256: 13d013695dd351b29e4cda5e998237d68a3132895b7a10b847958340df4344c9
 safety:
   no_secrets: true
   no_private_paths: true

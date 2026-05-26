@@ -28,7 +28,7 @@ def test_local_mount_reader_indexes_fixture_without_mounting() -> None:
     assert report.scan_status == SharedStoreScanStatus.INDEXED
     assert any(item.relative_path == "review/final_status.json" for item in report.selected_files)
     assert any(item.relative_path == "review/failure_report.md" for item in report.selected_files)
-    assert all(item.relative_path != ".env" for item in report.unsafe_files)
+    assert any(item.relative_path == ".env" for item in report.unsafe_files)
     assert any(item.relative_path == "private/SMPLX_model.pkl" for item in report.unsafe_files)
     assert any(item.relative_path == "large/predictions.npz" for item in report.large_files)
     assert report.manifest["review/final_status.json"]

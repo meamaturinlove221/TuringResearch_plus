@@ -12,10 +12,11 @@ DOC = ROOT / "docs" / "docs-release-bundle.md"
 
 
 def _sha256(path: Path) -> str:
+    data = path.read_bytes()
+    if path.suffix.lower() in {".css", ".html", ".json", ".md", ".txt", ".yaml", ".yml"}:
+        data = data.replace(b"\r\n", b"\n")
     digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
+    digest.update(data)
     return digest.hexdigest()
 
 
