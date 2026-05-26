@@ -279,7 +279,7 @@ unknown third-party code by default.
 
 ## Public API And Packages
 
-v1.0 keeps `turing_research_plus` as the compatibility namespace and recommends
+TuringResearch keeps `turing_research_plus` as the compatibility namespace and recommends
 domain facade namespaces for new imports:
 
 - `turing_research_core`
@@ -390,7 +390,9 @@ python -m pytest tests/workflow/test_v1_demo_refresh.py tests/workflow/test_v1_b
 
 ## Status
 
-Current prepared package metadata is `1.3.0rc0`. The v1.4 production parity
-docs and replay reports are release-candidate preparation material, not a
-published release, live provider proof, remote execution proof, or experiment
-success claim.
+Current package metadata reports `1.5.0rc0` and is under v1.6 packaging
+readiness review. The `turingresearch-plus` distribution name and
+`turing_research_plus` import namespace remain compatibility surfaces for this
+round; public documentation uses TuringResearch as the project name. This is
+release-candidate preparation material, not a PyPI publish, public release,
+live provider proof, remote execution proof, or experiment success claim.

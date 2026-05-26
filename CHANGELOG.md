@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to TuringResearch Plus are documented in this file.
+All notable changes to TuringResearch are documented in this file.
 
 The format follows Keep a Changelog style.
 
@@ -286,7 +286,7 @@ The format follows Keep a Changelog style.
 ### Changed
 
 - Package version advanced to `0.7.0rc0` for release candidate preparation.
-- README and public docs now position TuringResearch Plus as a local-first
+- README and public docs now position TuringResearch as a local-first
   research OS with fake/demo-first defaults, optional live adapters, human
   review requirements, and sensitive-file exclusion.
 - v0.7 release docs now separate release notes, feature list, known
@@ -564,7 +564,7 @@ The format follows Keep a Changelog style.
 - Handoff bundles exclude raw data and SMPL-X model files.
 - NAS, SSH, GitHub sync, and cloud artifact stores are not implemented yet.
 - OCR heavy pipeline is not complete.
-- TuringResearch Plus does not automatically generate final paper conclusions.
+- TuringResearch does not automatically generate final paper conclusions.
 
 ## [0.2.0-alpha] - 2026-05-20
 
@@ -615,7 +615,7 @@ The format follows Keep a Changelog style.
 
 ### Known limitations
 
-- TuringResearch Plus does not default to network access.
+- TuringResearch does not default to network access.
 - Live Semantic Scholar adapter is not complete.
 - Real citation graph expansion is not complete.
 - OCR heavy pipeline is not complete.
@@ -634,7 +634,7 @@ The format follows Keep a Changelog style.
 - Single-window multi-agent lane architecture using `lanes/`, `contracts/`, and `.agents/skills/`.
 - Contracts-first MCP tool design for `turingresearch-plus`.
 - TuringResearch Core local tools in `turing_research`.
-- TuringResearch Plus workflow package in `turing_research_plus`.
+- TuringResearch workflow compatibility package in `turing_research_plus`.
 - PDF input to Markdown Phase A for local PDF inspection, conversion, cache lookup, and markdown content.
 - Semantic Graph dry-run and fake-adapter graph tools.
 - Depth-gated Literature Survey dry-run workflows.
@@ -652,7 +652,7 @@ The format follows Keep a Changelog style.
 
 ### Changed
 
-- Public docs now use the TuringResearch Plus naming system consistently.
+- Public docs now use the TuringResearch naming system consistently.
 - Packaging exposes `turingresearch-plus` and `turingresearch-plus-mcp` entry points.
 - Pytest defaults skip `live` and `manual` tests.
 - Mypy is configured for release-candidate typed-boundary checks.
@@ -678,4 +678,4 @@ The format follows Keep a Changelog style.
 - `v0.1.0` mainly demonstrates architecture, contracts, dry-run workflow, and local tools.
 - Contract-only tools are planned interfaces, not complete live implementations.
 - Public release requires final human review.
-- TuringResearch Plus does not copy incompatible-license project code.
+- TuringResearch does not copy incompatible-license project code.

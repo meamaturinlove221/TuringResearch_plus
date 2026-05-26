@@ -6117,3 +6117,36 @@ Validation:
   passed with 23 tests.
 - `python -m ruff check .` passed.
 - `git diff --check` passed with only LF-to-CRLF working-copy warning.
+
+## Round 378 - Packaging Readiness
+
+Status: completed.
+
+Summary:
+- Added `docs/packaging-readiness-v1.6.md`.
+- Added `docs/package-metadata-audit.md`.
+- Added `docs/package-release-non-goals.md`.
+- Added `tests/contract/test_package_metadata_v1_6.py`.
+- Added `lanes/356_packaging_readiness.md`.
+- Updated package-facing public description and install docs to use
+  TuringResearch as the public project name.
+
+Decision:
+- TuringResearch is ready for local package metadata review and
+  release-candidate packaging preparation.
+- NO-GO for PyPI publication in Round 378.
+- Distribution name `turingresearch-plus` and import namespace
+  `turing_research_plus` remain compatibility surfaces for v1.6.
+
+Safety:
+- No PyPI publish.
+- No GitHub release publish.
+- No tag creation.
+- No package upload.
+- No package distribution rename.
+- No import namespace removal.
+- No live adapter execution.
+
+Validation:
+- Package metadata tests passed.
+- Pre-push checks passed.

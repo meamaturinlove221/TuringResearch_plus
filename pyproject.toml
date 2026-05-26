@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "turingresearch-plus"
 version = "1.5.0rc0"
-description = "TuringResearch Plus MCP-first research workflow engine skeleton."
+description = "TuringResearch local-first research workflow engine."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "Proprietary" }
