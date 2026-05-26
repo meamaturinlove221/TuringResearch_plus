@@ -1,4 +1,4 @@
-# TulingResearch Plus License Decision Needed
+# TuringResearch Plus License Decision Needed
 
 The current project metadata declares a proprietary license:
 
@@ -6,7 +6,7 @@ The current project metadata declares a proprietary license:
 license = { text = "Proprietary" }
 ```
 
-Round 28 created a `LICENSE` file that matches this existing metadata. If TulingResearch Plus should be released publicly under an open source license, maintainers must make an explicit license decision before publication.
+Round 28 created a `LICENSE` file that matches this existing metadata. If TuringResearch Plus should be released publicly under an open source license, maintainers must make an explicit license decision before publication.
 
 ## Required Updates For A License Change
 

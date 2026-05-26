@@ -1,4 +1,4 @@
-# TulingResearch Plus SOP: Campaign Graph
+# TuringResearch Plus SOP: Campaign Graph
 
 Graph type: `campaign`
 

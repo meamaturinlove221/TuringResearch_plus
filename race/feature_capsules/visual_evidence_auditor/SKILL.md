@@ -1,9 +1,9 @@
 ---
-name: tulingresearch-visual-evidence-auditor
+name: turingresearch-visual-evidence-auditor
 description: Use when planning or implementing the visual evidence auditor capsule.
 ---
 
-# TulingResearch Plus Skill: visual_evidence_auditor
+# TuringResearch Plus Skill: visual_evidence_auditor
 
 ## Role
 

@@ -1,10 +1,10 @@
-# TulingResearch Plus RC Final Verification v0.1.0
+# TuringResearch Plus RC Final Verification v0.1.0
 
 Date: 2026-05-20
 
 ## Scope
 
-This document records the final Release Candidate freeze verification for TulingResearch Plus `v0.1.0`. It verifies the frozen scope, public interfaces, naming, docs, tests, examples, repo-scoped skills, and contracts without adding new features.
+This document records the final Release Candidate freeze verification for TuringResearch Plus `v0.1.0`. It verifies the frozen scope, public interfaces, naming, docs, tests, examples, repo-scoped skills, and contracts without adding new features.
 
 ## Frozen Release Scope
 
@@ -41,11 +41,11 @@ Status: PASS.
 
 Verified naming:
 
-- Project display name: TulingResearch Plus.
-- Core package: `tuling_research`.
-- Plus package: `tuling_research_plus`.
-- MCP server: `tulingresearch-plus`.
-- Repo-scoped skill prefix: `tulingresearch-`.
+- Project display name: TuringResearch Plus.
+- Core package: `turing_research`.
+- Plus package: `turing_research_plus`.
+- MCP server: `turingresearch-plus`.
+- Repo-scoped skill prefix: `turingresearch-`.
 
 Checks:
 
@@ -87,7 +87,7 @@ Status: PASS.
 
 Findings:
 
-- All required `.agents/skills/tulingresearch-*/SKILL.md` files exist.
+- All required `.agents/skills/turingresearch-*/SKILL.md` files exist.
 - `docs/skills-index.md` is aligned with the actual skill folders.
 - Release-critical skills are locked.
 - Core skills are locked.
@@ -180,11 +180,11 @@ Status: PASS.
 
 Findings:
 
-- Distribution name: `tulingresearch-plus`.
+- Distribution name: `turingresearch-plus`.
 - Version: `0.1.0`.
 - Python requirement: `>=3.11`.
-- Package discovery covers `tuling_research*` and `tuling_research_plus*`.
-- Entry points `tulingresearch-plus` and `tulingresearch-plus-mcp` target `tuling_research.mcp_server:main`.
+- Package discovery covers `turing_research*` and `turing_research_plus*`.
+- Entry points `turingresearch-plus` and `turingresearch-plus-mcp` target `turing_research.mcp_server:main`.
 - MCP import and stdio safety are covered by contract tests.
 
 ## Freeze Compliance
@@ -210,4 +210,4 @@ No new feature implementation was added during this verification. The round crea
 
 GO.
 
-TulingResearch Plus `v0.1.0` is ready for final human review and release tagging preparation. The remaining work is operational: review release notes, confirm license posture, choose tag timing, and publish only after human approval.
+TuringResearch Plus `v0.1.0` is ready for final human review and release tagging preparation. The remaining work is operational: review release notes, confirm license posture, choose tag timing, and publish only after human approval.

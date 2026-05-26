@@ -1,6 +1,6 @@
-# TulingResearch Plus MCP Tools
+# TuringResearch Plus MCP Tools
 
-MCP server name: `tulingresearch-plus`.
+MCP server name: `turingresearch-plus`.
 
 Round 3 defined the interface surface for all planned MCP namespaces. Later rounds added deterministic minimal implementations or dry-run paths for Core, PDF Markdown, Semantic Graph, North Star, Literature Survey, Vault, Context, Race Mode, SOP, and Paper pipeline tools. No default test requires real networking or API keys.
 
@@ -29,10 +29,10 @@ Every tool contract includes `tool_name`, `namespace`, `input_model`, `output_mo
 | `pdf.inspect` | `PDFInspectInput` | `PDFInspectOutput` | `implemented_minimal` |
 | `pdf.to_markdown` | `PDFMarkdownInput` | `PDFMarkdownOutput` | `implemented_minimal` |
 | `pdf.batch_to_markdown` | `PDFBatchMarkdownInput` | `PDFBatchMarkdownOutput` | `contract_only` |
-| `pdf.extract_figures` | `PDFFigureExtractInput` | `PDFFigureExtractOutput` | `contract_only` |
-| `pdf.extract_tables` | `PDFTableExtractInput` | `PDFTableExtractOutput` | `contract_only` |
+| `pdf.extract_figures` | `PDFFigureExtractInput` | `PDFAssetExtractionReport` | `implemented_minimal` |
+| `pdf.extract_tables` | `PDFTableExtractInput` | `PDFAssetExtractionReport` | `implemented_minimal` |
 | `pdf.ocr_pages` | `PDFOCRPagesInput` | `PDFOCRPagesOutput` | `contract_only` |
-| `pdf.sectionize` | `PDFSectionizeInput` | `PDFSectionizeOutput` | `contract_only` |
+| `pdf.sectionize` | `PDFSectionizeInput` | `PDFAssetExtractionReport` | `implemented_minimal` |
 | `pdf.cache_lookup` | `PDFCacheLookupInput` | `PDFMarkdownOutput` | `implemented_minimal` |
 | `pdf.markdown_content` | `PDFMarkdownContentInput` | `PDFMarkdownContentOutput` | `implemented_minimal` |
 
@@ -76,6 +76,10 @@ Every tool contract includes `tool_name`, `namespace`, `input_model`, `output_mo
 | `research.artifact_stress_test` | `ResearchArtifactStressTestInput` | `ResearchArtifactStressTestOutput` | `implemented_dry_run` |
 | `research.experiment_design` | `ResearchExperimentDesignInput` | `ResearchExperimentDesignOutput` | `implemented_dry_run` |
 | `research.implementation_plan` | `ResearchImplementationPlanInput` | `ResearchImplementationPlanOutput` | `implemented_dry_run` |
+| `research.collision_risk_detect` | `PaperComparisonInput` | `CollisionRiskReport` | `implemented_minimal` |
+| `research.run_ingest` | `RunIngestRequest` | `RunIngestReport` | `implemented_minimal` |
+| `research.handoff_bundle_export` | `HandoffExportRequest` | `HandoffBundleManifest` | `implemented_minimal` |
+| `research.handoff_bundle_import` | `HandoffImportRequest` | `HandoffBundleImportReport` | `implemented_minimal` |
 
 ## vault.*
 
@@ -124,10 +128,13 @@ Every tool contract includes `tool_name`, `namespace`, `input_model`, `output_mo
 | `paper.draft_generate` | `PaperDraftGenerateInput` | `PaperDraftGenerateOutput` | `implemented_dry_run` |
 | `paper.missing_evidence` | `PaperMissingEvidenceInput` | `PaperMissingEvidenceOutput` | `implemented_dry_run` |
 | `paper.latex_export` | `PaperLatexExportInput` | `PaperLatexExportOutput` | `implemented_minimal` |
+| `paper.search_pipeline` | `ScholarPipelineRequest` | `ScholarPipelineResult` | `implemented_minimal` |
+| `paper.reference_pipeline` | `ReferencePipelineRequest` | `ReferencePipelineResult` | `implemented_minimal` |
+| `paper.three_pass_reading_plan` | `ThreePassReadingPlanInput` | `ThreePassReadingPlan` | `implemented_minimal` |
 
 ## Round 6 Semantic Graph
 
-Round 6 implements `graph.*` through `src/tuling_research_plus/semantic_graph/`. The service uses an adapter protocol and tests use a fake Semantic Scholar adapter. No real network calls or API keys are included.
+Round 6 implements `graph.*` through `src/turing_research_plus/semantic_graph/`. The service uses an adapter protocol and tests use a fake Semantic Scholar adapter. No real network calls or API keys are included.
 
 Citation graph expansion supports backward references, forward citations, both directions, depth limits, max node limits, year filters, citation-count filters, open-access filters, duplicate node merge, frontier nodes, and recommended next reads.
 

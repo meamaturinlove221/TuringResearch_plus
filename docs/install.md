@@ -1,12 +1,14 @@
-# TulingResearch Plus Install Guide
+# TuringResearch Plus Install Guide
 
-TulingResearch Plus is packaged as `tulingresearch-plus` with Python packages `tuling_research` and `tuling_research_plus`.
+TuringResearch Plus is packaged as `turingresearch-plus` with Python packages
+`turing_research` and `turing_research_plus`.
 
 ## Requirements
 
-- Python 3.11 or newer
-- No real API key is required for tests, examples, or local MCP smoke checks
-- Optional local PDF conversion uses PyMuPDF through the `pdf` extra
+- Python 3.11 or newer.
+- No real API key is required for tests, examples, or local MCP smoke checks.
+- Optional PDF/PPTX/export helpers are best-effort and skip gracefully when a
+  backend is unavailable.
 
 ## Editable Install
 
@@ -28,30 +30,37 @@ python -m pip install -e .[dev,all]
 
 ## Console Scripts
 
-The release candidate exposes:
+- `turingresearch-plus`
+- `turingresearch-plus-mcp`
 
-- `tulingresearch-plus`
-- `tulingresearch-plus-mcp`
-
-Both scripts point to `tuling_research.mcp_server:main`.
+Both scripts point to `turing_research.mcp_server:main`.
 
 Smoke commands:
 
 ```powershell
-python -m tuling_research.mcp_server --manifest
-python -m tuling_research.mcp_server --health-check
-tulingresearch-plus-mcp --manifest
+python -m turing_research.mcp_server --manifest
+python -m turing_research.mcp_server --health-check
+turingresearch-plus-mcp --manifest
 ```
 
 ## MCP Server
 
-- Server name: `tulingresearch-plus`
-- Module: `tuling_research.mcp_server`
+- Server name: `turingresearch-plus`
+- Module: `turing_research.mcp_server`
 - Transport target: STDIO
-- Default tests use fake services and local fixtures
+- Default mode: fake/local
 
-The STDIO entry point does not start network services on import and does not write logs to stdout. Human-readable status goes to stderr unless JSON output is explicitly requested.
+The STDIO entry point does not start network services on import and does not
+write logs to stdout. Human-readable status goes to stderr unless JSON output
+is explicitly requested.
+
+## Live Features
+
+Live adapters are optional and disabled by default. Do not enable live features
+unless the project owner has reviewed credentials, data boundaries, and
+network policy.
 
 ## Release Boundary
 
-This repository is not published to PyPI in `v0.1.0`. Packaging validation is local only.
+This repository is in public release-candidate review. Installation validation
+is local only until maintainers explicitly publish a package.

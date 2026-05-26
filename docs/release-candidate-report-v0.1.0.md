@@ -1,16 +1,16 @@
-# TulingResearch Plus v0.1.0 Release Candidate Report
+# TuringResearch Plus v0.1.0 Release Candidate Report
 
 Date: 2026-05-20
 
 ## 1. Project Summary
 
-TulingResearch Plus is a Python MCP-first research workflow engine. It provides local Core tools, PDF Markdown conversion, fake-adapter semantic graph workflows, depth-gated literature survey, claim-evidence Vault, hypothesis-to-experiment workflows, Race Mode idea capture, Feature Capsule skeletons, SOP graphs, and paper/figure pipeline dry-runs.
+TuringResearch Plus is a Python MCP-first research workflow engine. It provides local Core tools, PDF Markdown conversion, fake-adapter semantic graph workflows, depth-gated literature survey, claim-evidence Vault, hypothesis-to-experiment workflows, Race Mode idea capture, Feature Capsule skeletons, SOP graphs, and paper/figure pipeline dry-runs.
 
 Packages:
 
-- Core: `tuling_research`
-- Plus: `tuling_research_plus`
-- MCP server: `tulingresearch-plus`
+- Core: `turing_research`
+- Plus: `turing_research_plus`
+- MCP server: `turingresearch-plus`
 
 ## 2. Current Version Scope
 
@@ -170,14 +170,14 @@ Summary by implementation status:
 
 | Contract file | Contract name | Version | Status | Tool count | Test status |
 | --- | --- | --- | --- | --- | --- |
-| contracts/artifact_schema.yaml | tulingresearch.artifact_schema | 0.2.0 | draft | 0 | covered by contract/schema integrity tests |
-| contracts/core_tools.yaml | tulingresearch.core_tools | 0.2.0 | draft | 11 | covered by contract/schema integrity tests |
-| contracts/error_schema.yaml | tulingresearch.error_schema | 0.2.0 | draft | 0 | covered by contract/schema integrity tests |
-| contracts/fusion_workflows.yaml | tulingresearch.fusion_workflows | 0.2.0 | draft | 36 | covered by contract/schema integrity tests |
-| contracts/paper_pipeline.yaml | tulingresearch.paper_pipeline | 0.2.0 | draft | 8 | covered by contract/schema integrity tests |
-| contracts/pdf_markdown.yaml | tulingresearch.pdf_markdown | 0.2.0 | draft | 9 | covered by contract/schema integrity tests |
-| contracts/race_features.yaml | tulingresearch.race_features | 0.2.0 | draft | 7 | covered by contract/schema integrity tests |
-| contracts/vault_schema.yaml | tulingresearch.vault_schema | 0.3.0 | draft | 8 | covered by contract/schema integrity tests |
+| contracts/artifact_schema.yaml | turingresearch.artifact_schema | 0.2.0 | draft | 0 | covered by contract/schema integrity tests |
+| contracts/core_tools.yaml | turingresearch.core_tools | 0.2.0 | draft | 11 | covered by contract/schema integrity tests |
+| contracts/error_schema.yaml | turingresearch.error_schema | 0.2.0 | draft | 0 | covered by contract/schema integrity tests |
+| contracts/fusion_workflows.yaml | turingresearch.fusion_workflows | 0.2.0 | draft | 36 | covered by contract/schema integrity tests |
+| contracts/paper_pipeline.yaml | turingresearch.paper_pipeline | 0.2.0 | draft | 8 | covered by contract/schema integrity tests |
+| contracts/pdf_markdown.yaml | turingresearch.pdf_markdown | 0.2.0 | draft | 9 | covered by contract/schema integrity tests |
+| contracts/race_features.yaml | turingresearch.race_features | 0.2.0 | draft | 7 | covered by contract/schema integrity tests |
+| contracts/vault_schema.yaml | turingresearch.vault_schema | 0.3.0 | draft | 8 | covered by contract/schema integrity tests |
 
 ## 7. Tests Summary
 
@@ -216,7 +216,7 @@ Paper pipeline basics are included: DocFlow Article Blocks, SOP graph generation
 
 ## 12. Source Hygiene Policy
 
-TulingResearch Plus allows public repos, public READMEs, public issues, public release notes, user-owned notes, and authorized transcripts. It blocks private repository content, leaked roadmap material, NDA content, proprietary code, and copied implementation details from incompatible licenses.
+TuringResearch Plus allows public repos, public READMEs, public issues, public release notes, user-owned notes, and authorized transcripts. It blocks private repository content, leaked roadmap material, NDA content, proprietary code, and copied implementation details from incompatible licenses.
 
 Safe modes are independent clean-room implementation, concept-level reimplementation, compatible-license reuse, and documentation-only watch.
 

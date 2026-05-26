@@ -1,4 +1,4 @@
-# TulingResearch Plus Method Design Block
+# TuringResearch Plus Method Design Block
 
 Block kind: `method_design`
 

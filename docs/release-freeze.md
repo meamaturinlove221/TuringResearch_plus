@@ -1,19 +1,19 @@
-# TulingResearch Plus Release Freeze
+# TuringResearch Plus Release Freeze
 
 Version: `v0.1.0`
 
-Project: TulingResearch Plus
+Project: TuringResearch Plus
 
 Packages:
 
-- `tuling_research`
-- `tuling_research_plus`
+- `turing_research`
+- `turing_research_plus`
 
-MCP server: `tulingresearch-plus`
+MCP server: `turingresearch-plus`
 
 ## Freeze Status
 
-TulingResearch Plus is in Release Candidate freeze for `v0.1.0`.
+TuringResearch Plus is in Release Candidate freeze for `v0.1.0`.
 
 Allowed changes after this freeze:
 
@@ -83,8 +83,8 @@ python -m mypy src
 
 All release files must use:
 
-- Project name: TulingResearch Plus
-- Core package: `tuling_research`
-- Plus package: `tuling_research_plus`
-- MCP server: `tulingresearch-plus`
-- Skill prefix: `tulingresearch-`
+- Project name: TuringResearch Plus
+- Core package: `turing_research`
+- Plus package: `turing_research_plus`
+- MCP server: `turingresearch-plus`
+- Skill prefix: `turingresearch-`

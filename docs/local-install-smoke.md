@@ -1,6 +1,6 @@
-# TulingResearch Plus Local Install Smoke
+# TuringResearch Plus Local Install Smoke
 
-This smoke guide verifies that TulingResearch Plus can be installed locally, imported, used through the local MCP smoke entry point, and run with fake-mode examples.
+This smoke guide verifies that TuringResearch Plus can be installed locally, imported, used through the local MCP smoke entry point, and run with fake-mode examples.
 
 ## Scope
 
@@ -41,8 +41,8 @@ python -m pip install -e ".[dev,mcp]"
 ## Import Smoke
 
 ```powershell
-python -c "import tuling_research, tuling_research.pdf, tuling_research_plus"
-python -c "import tuling_research_plus.artifacts, tuling_research_plus.campaign, tuling_research_plus.race, tuling_research_plus.paper"
+python -c "import turing_research, turing_research.pdf, turing_research_plus"
+python -c "import turing_research_plus.artifacts, turing_research_plus.campaign, turing_research_plus.race, turing_research_plus.paper"
 ```
 
 Expected result: imports succeed without starting network services or requiring live API keys.
@@ -50,23 +50,23 @@ Expected result: imports succeed without starting network services or requiring 
 ## MCP Smoke
 
 ```powershell
-python -m tuling_research.mcp_server --manifest
-python -m tuling_research.mcp_server --health-check
+python -m turing_research.mcp_server --manifest
+python -m turing_research.mcp_server --health-check
 ```
 
 Expected result:
 
-- Server name is `tulingresearch-plus`.
+- Server name is `turingresearch-plus`.
 - Transport is `stdio`.
 - `core.health_check` is registered.
-- Importing `tuling_research.mcp_server` does not start a server.
+- Importing `turing_research.mcp_server` does not start a server.
 - Human-readable default status is written to stderr, not stdout.
 
 ## Optional Dependency Behavior
 
 PyMuPDF is optional through the `pdf` extra. Without that extra:
 
-- `import tuling_research.pdf` must still work.
+- `import turing_research.pdf` must still work.
 - Package imports must not fail.
 - Local PDF conversion must return or raise a clear converter-unavailable error instead of breaking import.
 

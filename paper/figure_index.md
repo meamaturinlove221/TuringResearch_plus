@@ -1,4 +1,4 @@
-# TulingResearch Plus Figure Index
+# TuringResearch Plus Figure Index
 
 This index tracks paper-ready figures, tables, captions, and diagram assets.
 

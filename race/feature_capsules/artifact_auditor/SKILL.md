@@ -1,9 +1,9 @@
 ---
-name: tulingresearch-artifact-auditor
+name: turingresearch-artifact-auditor
 description: Use when planning or implementing the local artifact auditor capsule.
 ---
 
-# TulingResearch Plus Skill: artifact_auditor
+# TuringResearch Plus Skill: artifact_auditor
 
 ## Role
 

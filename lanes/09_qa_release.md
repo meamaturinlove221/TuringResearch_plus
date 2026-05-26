@@ -15,7 +15,7 @@ Phase 1 complete. Unit tests pass with `python -m pytest`.
 
 ## Round 15B Update
 
-2026-05-19: Completed QA + Public Release preparation for TulingResearch Plus.
+2026-05-19: Completed QA + Public Release preparation for TuringResearch Plus.
 
 Created release documentation:
 

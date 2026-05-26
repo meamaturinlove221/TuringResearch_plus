@@ -1,4 +1,4 @@
-# TulingResearch Plus Troubleshooting
+# TuringResearch Plus Troubleshooting
 
 ## Package Import Fails
 
@@ -29,7 +29,7 @@ The package should still import without PyMuPDF. Only local conversion through t
 Use the module entry point from an installed editable environment:
 
 ```powershell
-python -m tuling_research.mcp_server --manifest
+python -m turing_research.mcp_server --manifest
 ```
 
 The default MCP smoke command writes human-readable status to stderr so STDIO protocol payloads are not mixed with logs.
@@ -62,4 +62,4 @@ Default tests use temporary directories where possible. For manual local smoke r
 
 ## Package Is Not On PyPI
 
-TulingResearch Plus `v0.1.0` release preparation validates local packaging only. Automatic PyPI publication is outside the `v0.1.0` scope.
+TuringResearch Plus `v0.1.0` release preparation validates local packaging only. Automatic PyPI publication is outside the `v0.1.0` scope.

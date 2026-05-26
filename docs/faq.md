@@ -1,8 +1,8 @@
-# TulingResearch Plus FAQ
+# TuringResearch Plus FAQ
 
-## What is TulingResearch Plus?
+## What is TuringResearch Plus?
 
-TulingResearch Plus is a Python MCP-first research workflow engine. It turns research intent, sources, and intermediate findings into typed, evidence-backed artifacts.
+TuringResearch Plus is a Python MCP-first research workflow engine. It turns research intent, sources, and intermediate findings into typed, evidence-backed artifacts.
 
 ## Is it a live web research agent?
 
@@ -10,12 +10,12 @@ Not by default in `v0.1.0`. Default tests and examples use fake services, dry-ru
 
 ## What is the MCP server name?
 
-`tulingresearch-plus`.
+`turingresearch-plus`.
 
 ## Which Python packages are used?
 
-- `tuling_research` for Core tools and PDF Markdown.
-- `tuling_research_plus` for workflow layers.
+- `turing_research` for Core tools and PDF Markdown.
+- `turing_research_plus` for workflow layers.
 
 ## Does it require API keys?
 
@@ -39,4 +39,4 @@ Source Hygiene blocks private, leaked, NDA, proprietary, or incompatible-license
 
 ## Is this inspired by other public projects?
 
-TulingResearch Plus references public research-tooling ideas, including Neocortica and Yogsoth AI references. They are references only; this project uses TulingResearch naming, packages, tools, docs, and skills.
+TuringResearch Plus references public research-tooling ideas, including Neocortica and Yogsoth AI references. They are references only; this project uses TuringResearch naming, packages, tools, docs, and skills.

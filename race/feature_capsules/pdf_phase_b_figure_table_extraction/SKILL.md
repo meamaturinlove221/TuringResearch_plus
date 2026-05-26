@@ -1,9 +1,9 @@
 ---
-name: tulingresearch-pdf-phase-b-figure-table-extraction
+name: turingresearch-pdf-phase-b-figure-table-extraction
 description: Use when planning or implementing the PDF Phase B figure/table extraction capsule.
 ---
 
-# TulingResearch Plus Skill: pdf_phase_b_figure_table_extraction
+# TuringResearch Plus Skill: pdf_phase_b_figure_table_extraction
 
 ## Role
 

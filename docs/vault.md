@@ -1,6 +1,6 @@
-# TulingResearch Plus Vault
+# TuringResearch Plus Vault
 
-TulingResearch Plus Vault is a local markdown knowledge graph memory. It stores typed pages, evidence-preserving frontmatter, typed graph edges, and a simple replaceable BM25-like index.
+TuringResearch Plus Vault is a local markdown knowledge graph memory. It stores typed pages, evidence-preserving frontmatter, typed graph edges, and a simple replaceable BM25-like index.
 
 ## Tools
 

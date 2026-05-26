@@ -1,4 +1,4 @@
-# TulingResearch Plus VGGT Evidence Ledger
+# TuringResearch Plus VGGT Evidence Ledger
 
 The VGGT Evidence Ledger is a v0.2.0 Sprint 1 minimal implementation for
 recording VGGT / SMPL-X dogfooding evidence without overclaiming results.

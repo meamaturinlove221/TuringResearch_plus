@@ -2,13 +2,13 @@
 
 ## Scope
 
-Create the TulingResearch Core package skeleton under `src/tuling_research/`.
+Create the TuringResearch Core package skeleton under `src/turing_research/`.
 
 ## Outputs
 
-- `src/tuling_research/__init__.py`
-- `src/tuling_research/pdf/__init__.py`
-- `src/tuling_research/pdf/models.py`
+- `src/turing_research/__init__.py`
+- `src/turing_research/pdf/__init__.py`
+- `src/turing_research/pdf/models.py`
 
 ## Status
 

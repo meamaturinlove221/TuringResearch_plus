@@ -1,4 +1,4 @@
-# TulingResearch Plus Related Work Block
+# TuringResearch Plus Related Work Block
 
 Block kind: `related_work`
 

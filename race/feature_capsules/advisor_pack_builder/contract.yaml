@@ -1,5 +1,5 @@
 feature_name: advisor_pack_builder
-project: TulingResearch Plus
+project: TuringResearch Plus
 status: capsule_draft
 release_target: v0.2.0_sprint_1
 implementation_status: skeleton_only

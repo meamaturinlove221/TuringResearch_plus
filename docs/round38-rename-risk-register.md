@@ -1,10 +1,10 @@
-# TulingResearch Plus Round 38 Rename Risk Register
+# Round 38 Rename Risk Register: TulingResearch To TuringResearch
 
 Status: pre-rename checkpoint risk register.
 
-The future rename from TulingResearch to TuringResearch is high risk because the
-project has package names, skill names, MCP names, contracts, docs, examples,
-and tests that all encode the old name.
+The future rename from TulingResearch to TuringResearch is high risk because
+the project has package names, skill names, MCP names, contracts, docs,
+examples, and tests that all encode the old name.
 
 | Risk ID | Area | Risk | Severity | Mitigation for rename round |
 | --- | --- | --- | --- | --- |
@@ -25,4 +25,3 @@ and tests that all encode the old name.
 - Do not change public MCP namespace without contract and docs updates.
 - Do not read VGGT local paths while renaming.
 - Do not rewrite Round 38 behavior while doing mechanical rename.
-

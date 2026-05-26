@@ -1,4 +1,4 @@
-# TulingResearch Plus Release Blockers
+# TuringResearch Plus Release Blockers
 
 Date: 2026-05-20
 

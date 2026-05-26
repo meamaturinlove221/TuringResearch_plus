@@ -1,4 +1,4 @@
-# TulingResearch Plus Feature Capsule: artifact_auditor
+# TuringResearch Plus Feature Capsule: artifact_auditor
 
 ## Problem
 
@@ -14,7 +14,7 @@ files, full archives, thin bundles, visual boards, and Modal-like sidecars.
 
 ## User story
 
-As a TulingResearch Plus maintainer, I need an artifact auditor that can inspect
+As a TuringResearch Plus maintainer, I need an artifact auditor that can inspect
 local evidence bundles and report completeness without running VGGT or writing
 into VGGT directories.
 
@@ -59,9 +59,9 @@ round.
 
 ## Related skills
 
-- `tulingresearch-race-feature-capsule-factory`
-- `tulingresearch-fusion-wiki-vault`
-- `tulingresearch-cache-and-ledger`
+- `turingresearch-race-feature-capsule-factory`
+- `turingresearch-fusion-wiki-vault`
+- `turingresearch-cache-and-ledger`
 
 ## Required tests
 

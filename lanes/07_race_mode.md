@@ -8,7 +8,7 @@ Define Source Hygiene Gate, IdeaCard, and FeatureCapsule boundaries.
 
 - `docs/race_mode.md`
 - `contracts/race_features.yaml`
-- `src/tuling_research_plus/race/models.py`
+- `src/turing_research_plus/race/models.py`
 - `tests/unit/test_idea_card.py`
 
 ## Status
@@ -17,7 +17,7 @@ Phase 1 complete. Race Mode blocks feature output when source hygiene fails.
 
 ## Round 12A Update
 
-2026-05-19: Implemented deterministic `race.source_hygiene_check` under `src/tuling_research_plus/race/source_hygiene.py`.
+2026-05-19: Implemented deterministic `race.source_hygiene_check` under `src/turing_research_plus/race/source_hygiene.py`.
 
 Allowed source classes:
 
@@ -47,7 +47,7 @@ Unknown source material becomes documentation-only watch and cannot become an im
 
 ## Round 12B Update
 
-2026-05-19: Implemented deterministic Idea Radar extraction with `race.idea_extract` under `src/tuling_research_plus/race/idea_radar.py`.
+2026-05-19: Implemented deterministic Idea Radar extraction with `race.idea_extract` under `src/turing_research_plus/race/idea_radar.py`.
 
 `IdeaCard` now records:
 
@@ -70,7 +70,7 @@ Created Race workspace files:
 
 ## Round 12C Update
 
-2026-05-19: Implemented deterministic Priority Elevator scoring with `race.priority_score` under `src/tuling_research_plus/race/priority_elevator.py`.
+2026-05-19: Implemented deterministic Priority Elevator scoring with `race.priority_score` under `src/turing_research_plus/race/priority_elevator.py`.
 
 Scoring formula:
 
@@ -87,14 +87,14 @@ Source hygiene that does not pass prevents P0/P1 and forces those candidates to 
 
 ## Round 12D Update
 
-2026-05-19: Implemented Feature Capsule Factory with `race.feature_capsule_create` under `src/tuling_research_plus/race/feature_capsule.py`.
+2026-05-19: Implemented Feature Capsule Factory with `race.feature_capsule_create` under `src/turing_research_plus/race/feature_capsule.py`.
 
 The factory generates the minimum capsule skeleton:
 
 - `race/feature_capsules/<feature_name>/FEATURE.md`
 - `race/feature_capsules/<feature_name>/contract.yaml`
 - `race/feature_capsules/<feature_name>/SKILL.md`
-- `src/tuling_research_plus/<domain>/<feature_name>.py`
+- `src/turing_research_plus/<domain>/<feature_name>.py`
 - `tests/unit/test_<feature_name>.py`
 - `docs/features/<feature_name>.md`
 - `sop_graphs/feature_graphs/<feature_name>.mmd`
@@ -109,7 +109,7 @@ Created directory roots:
 
 ## Round 12E Update
 
-2026-05-19: Implemented the 16-Box Architecture Builder with `race.architecture_box_build` under `src/tuling_research_plus/race/architecture_box.py`.
+2026-05-19: Implemented the 16-Box Architecture Builder with `race.architecture_box_build` under `src/turing_research_plus/race/architecture_box.py`.
 
 Default architecture boxes:
 
@@ -142,7 +142,7 @@ Tests cover 16 default boxes, owner skill assignment, dependency closure, graph 
 
 ## Round 15A Update
 
-2026-05-19: Implemented Upstream Watch with `race.upstream_watch` under `src/tuling_research_plus/race/upstream_watch.py`.
+2026-05-19: Implemented Upstream Watch with `race.upstream_watch` under `src/turing_research_plus/race/upstream_watch.py`.
 
 Watch dimensions:
 

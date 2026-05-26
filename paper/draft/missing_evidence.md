@@ -1,4 +1,4 @@
-# TulingResearch Plus Missing Evidence Report
+# TuringResearch Plus Missing Evidence Report
 
 Draft generation is blocked until required artifacts, EvidenceRef links, figures, captions, tables, metrics, and stress test results exist.
 

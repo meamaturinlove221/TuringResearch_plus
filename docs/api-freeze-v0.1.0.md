@@ -1,33 +1,33 @@
-# TulingResearch Plus API Freeze v0.1.0
+# TuringResearch Plus API Freeze v0.1.0
 
-This document freezes the public Python package structure and stable API surface for TulingResearch Plus `v0.1.0`.
+This document freezes the public Python package structure and stable API surface for TuringResearch Plus `v0.1.0`.
 
 ## Package Structure
 
 Frozen packages:
 
-- `tuling_research`
-- `tuling_research.pdf`
-- `tuling_research_plus`
-- `tuling_research_plus.artifacts`
-- `tuling_research_plus.budget`
-- `tuling_research_plus.campaign`
-- `tuling_research_plus.context`
-- `tuling_research_plus.convergence`
-- `tuling_research_plus.experiment`
-- `tuling_research_plus.hypothesis`
-- `tuling_research_plus.ideation`
-- `tuling_research_plus.insight`
-- `tuling_research_plus.ledger`
-- `tuling_research_plus.north_star`
-- `tuling_research_plus.paper`
-- `tuling_research_plus.race`
-- `tuling_research_plus.semantic_graph`
-- `tuling_research_plus.sop`
-- `tuling_research_plus.stress`
-- `tuling_research_plus.subtask`
-- `tuling_research_plus.survey`
-- `tuling_research_plus.vault`
+- `turing_research`
+- `turing_research.pdf`
+- `turing_research_plus`
+- `turing_research_plus.artifacts`
+- `turing_research_plus.budget`
+- `turing_research_plus.campaign`
+- `turing_research_plus.context`
+- `turing_research_plus.convergence`
+- `turing_research_plus.experiment`
+- `turing_research_plus.hypothesis`
+- `turing_research_plus.ideation`
+- `turing_research_plus.insight`
+- `turing_research_plus.ledger`
+- `turing_research_plus.north_star`
+- `turing_research_plus.paper`
+- `turing_research_plus.race`
+- `turing_research_plus.semantic_graph`
+- `turing_research_plus.sop`
+- `turing_research_plus.stress`
+- `turing_research_plus.subtask`
+- `turing_research_plus.survey`
+- `turing_research_plus.vault`
 
 ## Frozen Model Families
 

@@ -1,4 +1,4 @@
-# TulingResearch Plus Paper Draft
+# TuringResearch Plus Paper Draft
 
 Status: blocked until all writing gates pass.
 

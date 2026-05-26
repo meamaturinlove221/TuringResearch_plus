@@ -7,7 +7,7 @@ Define ExperimentReport, ArticleBlock, and PaperDraftRequest boundaries.
 ## Outputs
 
 - `contracts/paper_pipeline.yaml`
-- `src/tuling_research_plus/paper/models.py`
+- `src/turing_research_plus/paper/models.py`
 - `tests/unit/test_article_block.py`
 
 ## Status
@@ -16,7 +16,7 @@ Phase 1 complete. Paper draft requests are blocked without ExperimentReport.
 
 ## Round 13A Update
 
-2026-05-19: Implemented DocFlow Article Blocks for TulingResearch Plus under `src/tuling_research_plus/paper/`.
+2026-05-19: Implemented DocFlow Article Blocks for TuringResearch Plus under `src/turing_research_plus/paper/`.
 
 Article blocks:
 
@@ -58,7 +58,7 @@ Thin wrappers now cover `paper.docflow_status`, `paper.article_block_update`, an
 
 ## Round 13B Update
 
-2026-05-19: Implemented the SOP Graph Generator under `src/tuling_research_plus/sop/`.
+2026-05-19: Implemented the SOP Graph Generator under `src/turing_research_plus/sop/`.
 
 Supported graph types:
 
@@ -83,7 +83,7 @@ Thin wrapper `paper.sop_graph_generate` now returns a JSON payload with graph, M
 
 ## Round 14A Update
 
-2026-05-19: Implemented the Figure Asset Pipeline under `src/tuling_research_plus/paper/`.
+2026-05-19: Implemented the Figure Asset Pipeline under `src/turing_research_plus/paper/`.
 
 Managed asset inputs:
 
@@ -119,7 +119,7 @@ Thin wrappers now cover `paper.figure_register` and `paper.caption_generate`. Te
 
 ## Round 14B Update
 
-2026-05-19: Implemented the Paper Writing Pipeline Gate under `src/tuling_research_plus/paper/`.
+2026-05-19: Implemented the Paper Writing Pipeline Gate under `src/turing_research_plus/paper/`.
 
 Hard gate inputs:
 

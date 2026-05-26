@@ -1,9 +1,9 @@
 ---
-name: tulingresearch-vggt-smplx-evidence-ledger
+name: turingresearch-vggt-smplx-evidence-ledger
 description: Use when planning or implementing the VGGT/SMPL-X evidence ledger capsule.
 ---
 
-# TulingResearch Plus Skill: vggt_smplx_evidence_ledger
+# TuringResearch Plus Skill: vggt_smplx_evidence_ledger
 
 ## Role
 

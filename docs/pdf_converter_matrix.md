@@ -1,12 +1,14 @@
-# TulingResearch Plus PDF Converter Matrix
+# TuringResearch Plus PDF Converter Matrix
 
-This matrix compares candidate converter routes for PDF Markdown Phase B. It does not add dependencies or implement converters.
+This matrix compares candidate converter routes for PDF Markdown Phase B.
+Round 41 implements only the lightweight PyMuPDF route for figures, simple text
+tables, page maps, and section trees.
 
 ## Converter Summary
 
 | Converter | Use case | Dependency weight | Phase B role |
 | --- | --- | --- | --- |
-| PyMuPDF | Existing local text extraction and basic asset access | light | default local route |
+| PyMuPDF | Existing local text extraction and basic asset access | light | implemented lightweight Phase B route |
 | pdfplumber | Tables and layout hints for digital PDFs | medium | optional table/layout route |
 | Marker optional | Higher quality document-to-markdown route | heavy | optional future route |
 | MinerU optional | Rich paper layout understanding | heavy | optional future route |
@@ -20,6 +22,8 @@ This matrix compares candidate converter routes for PDF Markdown Phase B. It doe
 - Dependency weight: light optional `pdf` extra.
 - Test strategy: tiny generated fixture PDFs, invalid PDF tests, empty PDF warnings, cache-hit tests.
 - Fallback behavior: if unavailable, return typed `converter_unavailable` error without breaking package import.
+- Round 41 status: implemented for embedded figures, simple text tables, page
+  map, and heading-based section tree.
 
 ## pdfplumber
 

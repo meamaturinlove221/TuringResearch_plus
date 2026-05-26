@@ -1,6 +1,6 @@
-# TulingResearch Plus Public Repo Hygiene
+# TuringResearch Plus Public Repo Hygiene
 
-Round 28 prepares TulingResearch Plus for public GitHub repository presentation without adding business features.
+Round 28 prepares TuringResearch Plus for public GitHub repository presentation without adding business features.
 
 ## Added Repository Files
 

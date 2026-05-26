@@ -1,4 +1,4 @@
-# TulingResearch Plus Experiments Block
+# TuringResearch Plus Experiments Block
 
 Block kind: `experiments`
 

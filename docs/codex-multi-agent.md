@@ -1,6 +1,6 @@
-# TulingResearch Plus Codex Multi-Agent Workflow
+# TuringResearch Plus Codex Multi-Agent Workflow
 
-TulingResearch Plus uses one Codex window and one repository. Parallel work is represented by lane files, contracts, and skills inside the same project context.
+TuringResearch Plus uses one Codex window and one repository. Parallel work is represented by lane files, contracts, and skills inside the same project context.
 
 ## Lane Rules
 
@@ -12,12 +12,12 @@ TulingResearch Plus uses one Codex window and one repository. Parallel work is r
 
 ## Skill Rules
 
-- Local skill names must start with `tulingresearch-`.
+- Local skill names must start with `turingresearch-`.
 - Skills support coordination only; they do not create a second repository or second Codex window.
 
 ## Subtask Runtime
 
-TulingResearch Plus uses `TaskProfile` and `SubtaskRunner` to simulate multi-agent roles inside the single Codex window.
+TuringResearch Plus uses `TaskProfile` and `SubtaskRunner` to simulate multi-agent roles inside the single Codex window.
 
 Execution modes:
 

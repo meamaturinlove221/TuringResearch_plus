@@ -1,6 +1,6 @@
-# TulingResearch Plus Source Hygiene Policy
+# TuringResearch Plus Source Hygiene Policy
 
-TulingResearch Plus uses Source Hygiene Gate rules to prevent unsafe or unauthorized material from becoming implementation work.
+TuringResearch Plus uses Source Hygiene Gate rules to prevent unsafe or unauthorized material from becoming implementation work.
 
 ## Allowed Sources
 
@@ -37,7 +37,7 @@ Race Mode may create implementation work only when source material is public or 
 
 ## Paper And Research Rule
 
-Research conclusions, paper sections, claims, gaps, hypotheses, and experiments must preserve EvidenceRef where applicable. TulingResearch Plus must not fabricate results or treat unauthorized material as evidence.
+Research conclusions, paper sections, claims, gaps, hypotheses, and experiments must preserve EvidenceRef where applicable. TuringResearch Plus must not fabricate results or treat unauthorized material as evidence.
 
 ## Reporting Rule
 

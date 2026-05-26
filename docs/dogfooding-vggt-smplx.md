@@ -4,7 +4,7 @@ Status legend: `observed`, `local-observed`, `planned`, `fake-data`,
 `requires-real-paper`, `requires-real-experiment`, `requires-human-review`,
 `missing`.
 
-Round 34 makes TulingResearch Plus the planning surface for local VGGT / SMPL-X
+Round 34 makes TuringResearch Plus the planning surface for local VGGT / SMPL-X
 feature-adapter dogfooding. It is a planning round only: no VGGT experiment is
 executed, no VGGT file is changed, no network source is queried, and no paper or
 advisor conclusion is fabricated.

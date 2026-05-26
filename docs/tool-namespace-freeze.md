@@ -1,10 +1,10 @@
-# TulingResearch Plus Tool Namespace Freeze
+# TuringResearch Plus Tool Namespace Freeze
 
-MCP server: `tulingresearch-plus`
+MCP server: `turingresearch-plus`
 
 Version: `v0.1.0`
 
-This document freezes the MCP tool namespace surface for TulingResearch Plus.
+This document freezes the MCP tool namespace surface for TuringResearch Plus.
 
 ## Frozen Namespaces
 

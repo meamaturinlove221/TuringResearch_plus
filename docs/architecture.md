@@ -1,17 +1,17 @@
-# TulingResearch Plus Architecture
+# TuringResearch Plus Architecture
 
-TulingResearch Plus is organized around contract-first services. The Plus workflow layer calls stable service protocols and adapters; it does not call Core internals directly.
+TuringResearch Plus is organized around contract-first services. The Plus workflow layer calls stable service protocols and adapters; it does not call Core internals directly.
 
 ```mermaid
 flowchart TD
-    Client[MCP Client] --> Server[tulingresearch-plus MCP Server]
-    Server --> Workflows[TulingResearch Plus Workflows]
+    Client[MCP Client] --> Server[turingresearch-plus MCP Server]
+    Server --> Workflows[TuringResearch Plus Workflows]
     Workflows --> Budget[BudgetGate]
     Workflows --> Ledger[StateLedger]
     Workflows --> Artifacts[ResearchArtifact + EvidenceRef]
     Workflows --> Protocols[Service Protocols]
-    Protocols --> CorePDF[tuling_research.pdf PDF Markdown Service]
-    Protocols --> CoreTools[tuling_research Core Tool Services]
+    Protocols --> CorePDF[turing_research.pdf PDF Markdown Service]
+    Protocols --> CoreTools[turing_research Core Tool Services]
     Protocols --> Vault[Vault Memory Service]
     Protocols --> Adapters[External API Adapters]
     CorePDF --> LocalPyMuPDF[Minimal Local PyMuPDF Route]
@@ -24,9 +24,9 @@ flowchart TD
 
 ## Layers
 
-- Core layer: stable local tools under `src/tuling_research/`.
-- PDF layer: Phase 1 PDF input and Markdown result models under `src/tuling_research/pdf/`.
-- Plus layer: workflow-facing models under `src/tuling_research_plus/`.
+- Core layer: stable local tools under `src/turing_research/`.
+- PDF layer: Phase 1 PDF input and Markdown result models under `src/turing_research/pdf/`.
+- Plus layer: workflow-facing models under `src/turing_research_plus/`.
 - Contracts: YAML interface contracts under `contracts/`.
 - Lanes: single-window parallel work state under `lanes/`.
 
@@ -41,7 +41,7 @@ flowchart TD
 
 ## MCP Namespaces
 
-TulingResearch Plus exposes planned MCP tools through `tulingresearch-plus` using these namespaces:
+TuringResearch Plus exposes planned MCP tools through `turingresearch-plus` using these namespaces:
 
 - `core.*`: Core health, local content, session, and future adapter-backed paper/web tools.
 - `pdf.*`: Local PDF inspection, Markdown conversion, cache lookup, and future extraction/OCR contracts.

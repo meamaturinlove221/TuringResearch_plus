@@ -1,4 +1,4 @@
-# TulingResearch Plus Known Limitations
+# TuringResearch Plus Known Limitations
 
 Date: 2026-05-20
 
@@ -16,4 +16,4 @@ Date: 2026-05-20
 
 ## User Expectations
 
-TulingResearch Plus `v0.1.0` is a release-candidate foundation for contracts, local tools, dry-run workflows, fake adapters, examples, CI, and documentation. It is not a production live research crawler or fully automatic paper writer.
+TuringResearch Plus `v0.1.0` is a release-candidate foundation for contracts, local tools, dry-run workflows, fake adapters, examples, CI, and documentation. It is not a production live research crawler or fully automatic paper writer.

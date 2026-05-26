@@ -1,71 +1,66 @@
-# TulingResearch Plus Examples
+# TuringResearch Plus Examples
 
-The `examples/` tree contains release-candidate dry-run fixtures for TulingResearch Plus. Every example runs in fake mode or local fixture mode and does not require real network access, a Semantic Scholar key, an Apify token, private repositories, or large PDF files.
+The `examples/` tree contains fake/demo and local fixture material for
+TuringResearch Plus. Examples are designed for public-safe walkthroughs and
+regression tests. They are not experiment results.
 
-## Directory Contract
+## Public Demo
 
-Every example contains:
+`examples/public_demo/` is the recommended public walkthrough.
 
-- `input/`
-- `expected_outputs/`
-- `README.md`
-- `fake_run_config.yaml`
-- `expected_outputs/artifact_list.json`
+It includes:
 
-Workflow tests read these fixtures and verify that expected outputs can serialize to Markdown and JSON.
+- a root demo suite;
+- expanded demo projects for VGGT-like, paper survey, and software tooling
+  workflows;
+- a public demo workspace;
+- a static dashboard index.
 
-## `examples/vggt-human-prior-survey/`
+See [Public Demo Guide](public-demo-guide.md).
 
-Mode: fake-service dry run.
+For the v1 public path, also see:
 
-Expected artifacts:
+- [v1.0 Public Quickstart](v1.0.0-quickstart.md)
+- [v1.0 Public Demo Walkthrough](v1.0.0-public-demo-walkthrough.md)
+- `examples/public_demo/QUICKSTART.md`
+- `examples/public_demo/WALKTHROUGH.md`
+- `examples/public_demo/EXPECTED_OUTPUTS.md`
 
-- ResearchBrief
-- LiteratureSurveyArtifact
-- GapReport
-- HypothesisPortfolio
-- ExperimentPlan
+## VGGT Dogfooding Case
 
-Coverage: `tests/workflow/test_example_vggt_human_prior.py`
+`examples/vggt-human-prior-survey/` is a dogfooding case. It demonstrates how
+the system organizes evidence, routes, failures, advisor material, compliance
+notes, and case-study drafts.
 
-## `examples/smplx-feature-adapter-hypothesis/`
+It is not proof of experiment success. See
+[VGGT Public Case Study](vggt-case-study-public.md).
 
-Mode: fake-service dry run.
+## Workspace Demo
 
-Expected artifacts:
+`examples/workspaces/demo_workspace/` demonstrates multi-project workspace
+indexing and cross-project graph summaries with fake/demo projects.
 
-- HypothesisPortfolio
-- IdeaPortfolio
-- DecisionReport
-- StressTestReport
+## Benchmark Replay
 
-Coverage: `tests/workflow/test_example_smplx_feature_adapter.py`
+`examples/benchmarks/` contains fake/default replay scenario declarations.
 
-## `examples/citation-graph-demo/`
+## Legacy Release Examples
 
-Mode: fake semantic graph adapter.
+The older release-candidate dry-run examples remain for regression coverage:
 
-Expected artifacts:
+- `examples/citation-graph-demo/`
+- `examples/pdf-to-markdown-demo/`
+- `examples/smplx-feature-adapter-hypothesis/`
+- `examples/vggt-human-prior-survey/`
 
-- CitationGraph
-- recommended_next_reads
-- frontier nodes
+## Rules
 
-Coverage: `tests/workflow/test_example_citation_graph.py`
+Examples must not require real API keys, live network calls, private sources,
+private project folders, private model files, or data payloads. Planned or demo
+items must not be marked as observed evidence.
 
-## `examples/pdf-to-markdown-demo/`
+## Split-ready Bundles
 
-Mode: generated local fixture PDF.
-
-Expected artifacts:
-
-- PDFMarkdownOutput
-- markdown artifact
-- quality report
-- cache hit test
-
-Coverage: `tests/workflow/test_example_pdf_to_markdown.py`
-
-## Release Rule
-
-Examples must remain runnable in fake mode or local fixture mode. They must not require real API keys, real network calls, private sources, or private datasets.
+`split_ready/` contains local export bundles for future human-approved spoke
+repositories. These bundles are not published GitHub repositories and are not
+install targets. See [Split-ready Bundles](split-ready-bundles.md).

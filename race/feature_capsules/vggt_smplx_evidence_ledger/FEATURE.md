@@ -1,4 +1,4 @@
-# TulingResearch Plus Feature Capsule: vggt_smplx_evidence_ledger
+# TuringResearch Plus Feature Capsule: vggt_smplx_evidence_ledger
 
 ## Problem
 
@@ -15,7 +15,7 @@ missing.
 
 ## User story
 
-As a TulingResearch Plus maintainer, I need a structured evidence ledger so
+As a TuringResearch Plus maintainer, I need a structured evidence ledger so
 Sprint 1 tools can record VGGT/SMPL-X evidence without overstating experiment
 success, promotion readiness, or advisor approval.
 
@@ -60,9 +60,9 @@ round.
 
 ## Related skills
 
-- `tulingresearch-cache-and-ledger`
-- `tulingresearch-fusion-wiki-vault`
-- `tulingresearch-race-feature-capsule-factory`
+- `turingresearch-cache-and-ledger`
+- `turingresearch-fusion-wiki-vault`
+- `turingresearch-race-feature-capsule-factory`
 
 ## Required tests
 

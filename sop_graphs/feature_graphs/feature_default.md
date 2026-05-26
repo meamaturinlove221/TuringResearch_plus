@@ -1,4 +1,4 @@
-# TulingResearch Plus SOP: Feature Graph
+# TuringResearch Plus SOP: Feature Graph
 
 Graph type: `feature`
 

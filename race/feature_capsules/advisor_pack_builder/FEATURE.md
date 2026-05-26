@@ -1,4 +1,4 @@
-# TulingResearch Plus Feature Capsule: advisor_pack_builder
+# TuringResearch Plus Feature Capsule: advisor_pack_builder
 
 ## Problem
 
@@ -14,7 +14,7 @@ missing evidence instead of presenting a successful experiment.
 
 ## User story
 
-As a TulingResearch Plus maintainer, I need an advisor pack builder that turns
+As a TuringResearch Plus maintainer, I need an advisor pack builder that turns
 Evidence Ledger, Artifact Auditor, and Visual Evidence Auditor outputs into a
 clear review package without fabricating results.
 
@@ -59,9 +59,9 @@ round.
 
 ## Related skills
 
-- `tulingresearch-paper-writing-pipeline`
-- `tulingresearch-paper-docflow-article-blocks`
-- `tulingresearch-race-feature-capsule-factory`
+- `turingresearch-paper-writing-pipeline`
+- `turingresearch-paper-docflow-article-blocks`
+- `turingresearch-race-feature-capsule-factory`
 
 ## Required tests
 

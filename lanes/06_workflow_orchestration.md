@@ -6,10 +6,10 @@ Define workflow support models for BudgetGate, StateLedger, campaigns, and subta
 
 ## Outputs
 
-- `src/tuling_research_plus/budget/models.py`
-- `src/tuling_research_plus/ledger/models.py`
-- `src/tuling_research_plus/campaign/models.py`
-- `src/tuling_research_plus/subtask/models.py`
+- `src/turing_research_plus/budget/models.py`
+- `src/turing_research_plus/ledger/models.py`
+- `src/turing_research_plus/campaign/models.py`
+- `src/turing_research_plus/subtask/models.py`
 
 ## Status
 
@@ -17,7 +17,7 @@ Phase 1 complete. No workflow engine is implemented.
 
 ## Round 5A Update
 
-2026-05-19: Implemented the abstract TulingResearch Plus Campaign Runtime:
+2026-05-19: Implemented the abstract TuringResearch Plus Campaign Runtime:
 
 - `CampaignSpec`
 - `StrategySpec`
@@ -64,7 +64,7 @@ No concrete survey, hypothesis, or network behavior was implemented.
 - reserved `llm_client` mode with explicit unsupported behavior
 - quality gate evaluation
 
-This replaces Claude Code specific subagent-spawning assumptions with TulingResearch Plus models that work inside one Codex window.
+This replaces Claude Code specific subagent-spawning assumptions with TuringResearch Plus models that work inside one Codex window.
 
 No LLM client calls, network calls, or external agent-tool dependencies were added.
 

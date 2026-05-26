@@ -21,7 +21,7 @@ results.
 ## Expected Use
 
 Round 34 may use the private config to inspect allow-listed local files and build
-a status summary. It should keep all summaries under TulingResearch Plus, use
+a status summary. It should keep all summaries under TuringResearch Plus, use
 `summary-only` handling for `.npz`, and mark any claim that needs real evidence
 as `requires-real-experiment` or `requires-human-review`.
 

@@ -14,7 +14,7 @@ Phase 1 complete. No storage engine is implemented.
 
 ## Round 8A Update
 
-2026-05-19: Implemented the local TulingResearch Plus Wiki Vault:
+2026-05-19: Implemented the local TuringResearch Plus Wiki Vault:
 
 - Markdown vault pages with typed frontmatter.
 - Entity types: `source`, `concept`, `entity`, `claim`, `relation`, `question`, `evidence`, `failure`, `topic`.
@@ -29,7 +29,7 @@ No network behavior was added.
 
 ## Round 8B Update
 
-2026-05-19: Implemented TulingResearch Plus Context Management:
+2026-05-19: Implemented TuringResearch Plus Context Management:
 
 - `context.init`
 - `context.checkpoint`
@@ -39,4 +39,4 @@ No network behavior was added.
 
 Each campaign run creates one local context file. Strategy completion can append checkpoints, and checkpoints must preserve artifact links and evidence refs. The context index can recover the latest summary and artifact list.
 
-Unlike write-only context logs, TulingResearch Plus context files support recovery. No network or LLM behavior was added.
+Unlike write-only context logs, TuringResearch Plus context files support recovery. No network or LLM behavior was added.

@@ -2,7 +2,7 @@
 
 ## Scope
 
-Round 15C reconciles repo-scoped skills for TulingResearch Plus before Release Freeze.
+Round 15C reconciles repo-scoped skills for TuringResearch Plus before Release Freeze.
 
 ## Check Range
 
@@ -13,16 +13,16 @@ Round 15C reconciles repo-scoped skills for TulingResearch Plus before Release F
 
 ## Created Skills
 
-All required TulingResearch Plus skills exist and contain `SKILL.md` files with frontmatter, owner lane, related contracts, required tests, rules, and done criteria.
+All required TuringResearch Plus skills exist and contain `SKILL.md` files with frontmatter, owner lane, related contracts, required tests, rules, and done criteria.
 
 ## Fixed Naming
 
 Removed obsolete repo-scoped skill aliases that were not part of the locked skill set:
 
-- `tulingresearch-architecture`
-- `tulingresearch-contracts`
+- `turingresearch-architecture`
+- `turingresearch-contracts`
 
-All locked skills use the `tulingresearch-` prefix and TulingResearch Plus naming system.
+All locked skills use the `turingresearch-` prefix and TuringResearch Plus naming system.
 
 ## Still Not Locked
 

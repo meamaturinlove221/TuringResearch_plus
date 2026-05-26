@@ -1,4 +1,4 @@
-# TulingResearch Plus Security And Source Hygiene
+# TuringResearch Plus Security And Source Hygiene
 
 Date: 2026-05-20
 

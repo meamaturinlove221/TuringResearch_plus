@@ -1,32 +1,32 @@
-# TulingResearch Plus Package Structure
+# TuringResearch Plus Package Structure
 
-TulingResearch Plus uses a `src/` layout.
+TuringResearch Plus uses a `src/` layout.
 
 ## Distribution
 
-- Distribution name: `tulingresearch-plus`
+- Distribution name: `turingresearch-plus`
 - Python requirement: `>=3.11`
-- MCP server name: `tulingresearch-plus`
+- MCP server name: `turingresearch-plus`
 
 ## Packages
 
 | Package | Purpose |
 | --- | --- |
-| `tuling_research` | Core tools, cache, session registry, web/paper local content, PDF Markdown Phase A, MCP smoke server |
-| `tuling_research_plus` | Fusion workflows, semantic graph, survey, vault, context, Race Mode, SOP, experiment, paper pipeline |
+| `turing_research` | Core tools, cache, session registry, web/paper local content, PDF Markdown Phase A, MCP smoke server |
+| `turing_research_plus` | Fusion workflows, semantic graph, survey, vault, context, Race Mode, SOP, experiment, paper pipeline |
 
 Package discovery includes:
 
 ```toml
-include = ["tuling_research*", "tuling_research_plus*"]
+include = ["turing_research*", "turing_research_plus*"]
 ```
 
 ## Entry Points
 
 | Script | Target |
 | --- | --- |
-| `tulingresearch-plus` | `tuling_research.mcp_server:main` |
-| `tulingresearch-plus-mcp` | `tuling_research.mcp_server:main` |
+| `turingresearch-plus` | `turing_research.mcp_server:main` |
+| `turingresearch-plus-mcp` | `turing_research.mcp_server:main` |
 
 ## Extras
 
@@ -41,9 +41,9 @@ include = ["tuling_research*", "tuling_research_plus*"]
 
 Release tests verify:
 
-- `import tuling_research`
-- `import tuling_research_plus`
-- `import tuling_research.pdf`
-- `import tuling_research.mcp_server` is side-effect safe
+- `import turing_research`
+- `import turing_research_plus`
+- `import turing_research.pdf`
+- `import turing_research.mcp_server` is side-effect safe
 - package metadata can be read from `pyproject.toml`
 - entry point targets resolve to callable functions

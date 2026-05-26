@@ -1,6 +1,6 @@
 # Local Project Links
 
-Local project links describe read-only relationships between TulingResearch Plus
+Local project links describe read-only relationships between TuringResearch Plus
 and nearby research project folders on the same machine. They are intended for
 dogfooding and evidence collection, not for controlling the external project.
 
@@ -8,7 +8,7 @@ dogfooding and evidence collection, not for controlling the external project.
 
 - Commit `local_project_links.example.yaml` as a safe template.
 - Keep `local_project_links.yaml` machine-private and ignored by Git.
-- Keep imported summaries in TulingResearch Plus, not inside the linked project.
+- Keep imported summaries in TuringResearch Plus, not inside the linked project.
 
 The VGGT dogfood example lives at:
 

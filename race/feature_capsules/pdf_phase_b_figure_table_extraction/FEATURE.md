@@ -1,4 +1,4 @@
-# TulingResearch Plus Feature Capsule: pdf_phase_b_figure_table_extraction
+# TuringResearch Plus Feature Capsule: pdf_phase_b_figure_table_extraction
 
 ## Problem
 
@@ -14,7 +14,7 @@ must not fabricate citations, captions, or paper claims.
 
 ## User story
 
-As a TulingResearch Plus maintainer, I need local fixture-driven PDF figure and
+As a TuringResearch Plus maintainer, I need local fixture-driven PDF figure and
 table extraction that records page provenance and warnings for later paper and
 vault ingestion.
 
@@ -58,9 +58,9 @@ capsule plans the Sprint 1 implementation slice without changing public API.
 
 ## Related skills
 
-- `tulingresearch-pdf-markdown-core`
-- `tulingresearch-paper-figure-asset-pipeline`
-- `tulingresearch-race-feature-capsule-factory`
+- `turingresearch-pdf-markdown-core`
+- `turingresearch-paper-figure-asset-pipeline`
+- `turingresearch-race-feature-capsule-factory`
 
 ## Required tests
 

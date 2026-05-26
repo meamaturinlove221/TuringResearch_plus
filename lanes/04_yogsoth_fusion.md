@@ -2,13 +2,13 @@
 
 ## Scope
 
-Map public research workflow ideas into TulingResearch Plus Fusion concepts while preserving TulingResearch naming.
+Map public research workflow ideas into TuringResearch Plus Fusion concepts while preserving TuringResearch naming.
 
 ## Outputs
 
 - `docs/yogsoth-module-map.md`
 - `contracts/fusion_workflows.yaml`
-- `src/tuling_research_plus/campaign/models.py`
+- `src/turing_research_plus/campaign/models.py`
 
 ## Status
 
@@ -29,12 +29,12 @@ Key decisions:
 - Reuse architecture ideas, workflow patterns, contracts, quality gates, and data-model concepts only.
 - Do not copy external code, prompt text, repository structure, or names.
 - Prioritize `context`, `subtask`, `survey`, `semantic_graph`, and `vault` as P0.
-- Keep all future Python module names under `src/tuling_research_plus/`.
+- Keep all future Python module names under `src/turing_research_plus/`.
 - Treat all external APIs as adapter protocols with mocked tests.
 
 ## Round 6 Update
 
-2026-05-19: Implemented the TulingResearch Plus Semantic Graph layer under `src/tuling_research_plus/semantic_graph/`.
+2026-05-19: Implemented the TuringResearch Plus Semantic Graph layer under `src/turing_research_plus/semantic_graph/`.
 
 Implemented graph tools through a service and adapter boundary:
 
@@ -54,7 +54,7 @@ Tests use fake Semantic Scholar adapters only. No API keys, real network calls, 
 
 ## Round 7 Update
 
-2026-05-19: Implemented the TulingResearch Plus Literature Survey workflow under `src/tuling_research_plus/survey/`.
+2026-05-19: Implemented the TuringResearch Plus Literature Survey workflow under `src/turing_research_plus/survey/`.
 
 Supported strategies:
 
@@ -77,7 +77,7 @@ All service dependencies are Protocol boundaries with fake services in tests. No
 
 ## Round 9A Update
 
-2026-05-19: Implemented the TulingResearch Plus North Star workflow under `src/tuling_research_plus/north_star/`.
+2026-05-19: Implemented the TuringResearch Plus North Star workflow under `src/turing_research_plus/north_star/`.
 
 Implemented outputs:
 
@@ -99,7 +99,7 @@ The workflow supports cold-start, warm-start, and hot-start intent shaping, uses
 
 ## Round 9B Update
 
-2026-05-19: Implemented the TulingResearch Plus Deep Insight workflow under `src/tuling_research_plus/insight/`.
+2026-05-19: Implemented the TuringResearch Plus Deep Insight workflow under `src/turing_research_plus/insight/`.
 
 Implemented outputs:
 
@@ -123,7 +123,7 @@ The workflow uses fake survey artifacts in tests and does not call a network ser
 
 ## Round 9C Update
 
-2026-05-19: Implemented the TulingResearch Plus Hypothesis Formation workflow under `src/tuling_research_plus/hypothesis/`.
+2026-05-19: Implemented the TuringResearch Plus Hypothesis Formation workflow under `src/turing_research_plus/hypothesis/`.
 
 Implemented outputs:
 
@@ -147,7 +147,7 @@ The workflow uses fake `GapValidationReport` inputs in tests and does not call a
 
 ## Round 10A Update
 
-2026-05-19: Implemented the TulingResearch Plus Creative Ideation workflow under `src/tuling_research_plus/ideation/`.
+2026-05-19: Implemented the TuringResearch Plus Creative Ideation workflow under `src/turing_research_plus/ideation/`.
 
 Implemented outputs:
 
@@ -170,7 +170,7 @@ The workflow uses deterministic fake generators, keeps evidence refs on every id
 
 ## Round 10B Update
 
-2026-05-19: Implemented the TulingResearch Plus Convergence workflow under `src/tuling_research_plus/convergence/`.
+2026-05-19: Implemented the TuringResearch Plus Convergence workflow under `src/turing_research_plus/convergence/`.
 
 Implemented outputs:
 
@@ -196,7 +196,7 @@ The workflow is deterministic and can rank hypotheses, select experiment candida
 
 ## Round 10C Update
 
-2026-05-19: Implemented the TulingResearch Plus Stress Test workflow under `src/tuling_research_plus/stress/`.
+2026-05-19: Implemented the TuringResearch Plus Stress Test workflow under `src/turing_research_plus/stress/`.
 
 Implemented outputs:
 
@@ -221,7 +221,7 @@ Quality gates now flag unsupported claims, unfalsifiable hypotheses, and weak ex
 
 ## Round 11 Update
 
-2026-05-19: Implemented the TulingResearch Plus Experiment Execution workflow under `src/tuling_research_plus/experiment/`.
+2026-05-19: Implemented the TuringResearch Plus Experiment Execution workflow under `src/turing_research_plus/experiment/`.
 
 Implemented outputs:
 

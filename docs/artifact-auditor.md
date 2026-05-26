@@ -1,4 +1,4 @@
-# TulingResearch Plus Artifact Auditor
+# TuringResearch Plus Artifact Auditor
 
 The Artifact Auditor is a v0.2.0 Sprint 1 minimal implementation for local,
 read-only artifact evidence checks.

@@ -1,9 +1,9 @@
 ---
-name: tulingresearch-advisor-pack-builder
+name: turingresearch-advisor-pack-builder
 description: Use when planning or implementing the VGGT advisor pack builder capsule.
 ---
 
-# TulingResearch Plus Skill: advisor_pack_builder
+# TuringResearch Plus Skill: advisor_pack_builder
 
 ## Role
 

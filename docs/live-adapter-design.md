@@ -1,88 +1,82 @@
-# TulingResearch Plus Live Adapter Design
+# TuringResearch Plus Live Adapter Design
 
-Round 32 defines the v0.2.0 live adapter architecture. This is design and protocol work only. It does not perform real network calls and does not mark live adapters as implemented.
+Status: beta contract draft with fake adapters.
+
+Round 55 defined the live adapter contract surface for v0.2 beta. Round 56 adds
+the first optional live client for Semantic Scholar while keeping fake mode as
+the default.
 
 ## Goals
 
-- Prepare opt-in live adapters for Semantic Scholar, arXiv, Apify, OpenAI-compatible LLMs, and replaceable PDF converters.
-- Preserve fake-mode and dry-run behavior as the default path.
-- Keep all external services behind protocols.
-- Keep cache, timeout, retry, rate limit, and error handling explicit.
-- Keep live tests skipped by default.
+- Keep every external service behind an adapter Protocol.
+- Keep fake mode as the default test and workflow path.
+- Make timeout, retry, rate limit, cache, source metadata, and error behavior
+  explicit.
+- Require a fake adapter equivalent before any live adapter is accepted.
+- Prevent live search results from becoming human-verified evidence by default.
 
 ## Adapter Families
 
-| Adapter | Purpose | Protocol | Fake equivalent |
+| Adapter | Purpose | Fake equivalent | Default enabled |
 | --- | --- | --- | --- |
-| SemanticScholarAdapter | Paper lookup and citation graph metadata | `SemanticScholarAdapter` | `FakeSemanticScholarAdapter` |
-| ArxivAdapter | arXiv search and metadata fetch | `ArxivAdapter` | `FakeArxivAdapter` |
-| ApifyWebAdapter | Optional public web content adapter | `ApifyWebAdapter` | `FakeApifyWebAdapter` |
-| OpenAICompatibleLLMAdapter | Optional LLM completion adapter | `OpenAICompatibleLLMAdapter` | `FakeOpenAICompatibleLLMAdapter` |
-| PDFConverterAdapter | Replaceable local PDF converter | `PDFConverterAdapter` | `FakePDFConverterAdapter` |
+| `SemanticScholarAdapter` | Optional live paper lookup and citation metadata. | `FakeSemanticScholarAdapter` | false |
+| `ArxivAdapter` | Optional arXiv search and metadata. | `FakeArxivAdapter` | false |
+| `WebSearchAdapter` | Optional public web search. | `FakeWebSearchAdapter` | false |
+| `WebFetchAdapter` | Optional public web fetch with source hygiene metadata. | `FakeWebFetchAdapter` | false |
+| `OpenAICompatibleLLMAdapter` | Optional OpenAI-compatible LLM completion. | `FakeOpenAICompatibleLLMAdapter` | false |
+| `PDFConverterAdapter` | Replaceable local PDF converter backend. | `FakePDFConverterAdapter` | false |
 
-## Shared Policy Models
+`ApifyWebAdapter` and `FakeApifyWebAdapter` remain compatibility aliases for
+older planning docs. New code should use `WebFetchAdapter` and
+`FakeWebFetchAdapter`.
+
+## Module Layout
+
+- `src/turing_research_plus/adapters/models.py`
+- `src/turing_research_plus/adapters/errors.py`
+- `src/turing_research_plus/adapters/protocols.py`
+- `src/turing_research_plus/adapters/fake.py`
+- `src/turing_research_plus/adapters/semantic_scholar.py`
+- `src/turing_research_plus/adapters/cache.py`
+- `src/turing_research_plus/adapters/rate_limit.py`
+- `src/turing_research_plus/adapters/live_test_markers.py`
+- `contracts/live_adapters.yaml`
+
+## Shared Policies
 
 Every adapter request carries:
 
-- timeout policy
-- retry policy
-- rate limit policy
-- cache policy
-- live test marker
-- fake adapter equivalent
-- dry-run/live-enabled flags
-- optional API key environment variable name
+- timeout policy;
+- retry policy;
+- rate limit policy;
+- cache policy;
+- live test marker;
+- fake adapter equivalent;
+- required env vars;
+- dry-run/live-enabled flags;
+- `default_enabled: false`.
 
-Shared model module:
+## Source Metadata
 
-`src/tuling_research_plus/adapters/protocols.py`
+Every live or fake result must include source metadata when it returns source
+records:
 
-Contract:
+- provider;
+- source id or URL when available;
+- retrieval time;
+- `human_verified: false` by default;
+- optional license label.
 
-`contracts/live_adapters.yaml`
+Live retrieval does not imply human verification.
 
-## Timeout Policy
+## Cache Policy
 
-Adapters declare:
+Adapters declare cache namespaces and cache-key fields. Implementations must
+hash cache keys and must not use raw URLs or raw prompts as filenames.
 
-- connect timeout
-- read timeout
-- total timeout
+## Error Policy
 
-Timeouts must produce typed adapter errors and must be retryable only when the retry policy allows it.
-
-## Retry Policy
-
-Retries are explicit:
-
-- maximum attempts
-- backoff seconds
-- retryable error codes
-
-Retries must not hide final failures. Exhaustion returns `AdapterError` with `retry_exhausted` or the final provider error.
-
-## Rate Limit Policy
-
-Rate limit behavior is explicit:
-
-- optional requests-per-minute value
-- provider quota label
-- on-limit behavior
-
-Default behavior is to return a typed error, not sleep indefinitely.
-
-## Error Model
-
-All adapter errors use `AdapterError` with:
-
-- code
-- message
-- retryable flag
-- provider
-- optional status code
-- details
-
-Canonical codes:
+Errors use `AdapterError` with stable codes:
 
 - `missing_api_key`
 - `timeout`
@@ -92,22 +86,11 @@ Canonical codes:
 - `invalid_response`
 - `unsupported`
 - `source_hygiene_blocked`
+- `live_disabled`
 
-## Cache Integration
-
-Every adapter declares an `AdapterCachePolicy`:
-
-- namespace
-- TTL
-- cache key fields
-- write-through behavior
-
-Adapters must not use raw URLs or raw prompts directly as filenames. Cache implementations should hash keys through the existing cache key utilities.
-
-## Source Hygiene
-
-Adapters that fetch public or upstream material must preserve enough source metadata for Source Hygiene checks. Unknown or unauthorized sources must not become implementation tasks.
+Missing API keys must not fail default tests.
 
 ## Implementation Status
 
-All live adapters are `protocol_only` in Round 32. Future implementation rounds must add fake adapter parity and mocked contract tests before enabling optional live behavior.
+Round 56 status: Semantic Scholar has an optional minimal live adapter. Other
+adapter families remain fake-adapter ready and live-not-implemented.

@@ -2,7 +2,7 @@
 
 ## Scope
 
-Round 26 performs final Release Candidate freeze verification for TulingResearch Plus `v0.1.0`.
+Round 26 performs final Release Candidate freeze verification for TuringResearch Plus `v0.1.0`.
 
 ## Checked Sources
 
@@ -29,9 +29,9 @@ Round 26 performs final Release Candidate freeze verification for TulingResearch
 
 | Gate | Result | Notes |
 | --- | --- | --- |
-| Naming Gate | PASS | TulingResearch Plus naming is consistent; forbidden naming scan had no hits. |
+| Naming Gate | PASS | TuringResearch Plus naming is consistent; forbidden naming scan had no hits. |
 | Contract Gate | PASS | Public tools are covered by contracts and `docs/mcp-tools.md` drift tests. |
-| Skill Gate | PASS | Required `tulingresearch-*` skills exist and are locked in `docs/skills-index.md`. |
+| Skill Gate | PASS | Required `turingresearch-*` skills exist and are locked in `docs/skills-index.md`. |
 | Test Gate | PASS | Unit, contract, workflow, focused gates, full pytest, ruff, and mypy passed. |
 | Docs Gate | PASS | Required release, install, testing, examples, limitations, and license docs exist. |
 | Examples Gate | PASS | Four fake-mode examples passed focused workflow tests. |
@@ -71,7 +71,7 @@ None.
 
 ## Decision
 
-GO for TulingResearch Plus `v0.1.0` final human review and release tag preparation.
+GO for TuringResearch Plus `v0.1.0` final human review and release tag preparation.
 
 ## Round 27 Local Install Smoke
 
@@ -87,14 +87,14 @@ Created or updated:
 
 Checks covered:
 
-- `import tuling_research`
-- `import tuling_research.pdf`
-- `import tuling_research_plus`
-- `import tuling_research_plus.artifacts`
-- `import tuling_research_plus.campaign`
-- `import tuling_research_plus.race`
-- `import tuling_research_plus.paper`
-- `tuling_research.mcp_server` imports without starting network services or writing stdio.
+- `import turing_research`
+- `import turing_research.pdf`
+- `import turing_research_plus`
+- `import turing_research_plus.artifacts`
+- `import turing_research_plus.campaign`
+- `import turing_research_plus.race`
+- `import turing_research_plus.paper`
+- `turing_research.mcp_server` imports without starting network services or writing stdio.
 - Tool registry is testable.
 - `core.health_check` can dry-run.
 - PyMuPDF remains optional and missing converter dependency produces a clear error path.
@@ -114,7 +114,7 @@ Validation:
 
 ## Round 28 Public Repo Hygiene
 
-Round 28 prepares TulingResearch Plus for public GitHub repository presentation without adding business features.
+Round 28 prepares TuringResearch Plus for public GitHub repository presentation without adding business features.
 
 Created or updated:
 
@@ -150,7 +150,7 @@ Validation:
 
 ## Round 29 Release Notes Final
 
-Round 29 finalizes TulingResearch Plus `v0.1.0` release notes, feature list, limitations, known issues, public announcement draft, and changelog.
+Round 29 finalizes TuringResearch Plus `v0.1.0` release notes, feature list, limitations, known issues, public announcement draft, and changelog.
 
 Created or updated:
 
@@ -163,7 +163,7 @@ Created or updated:
 
 Notes:
 
-- Release notes now cover what TulingResearch Plus is, `v0.1.0` scope, main features, fake/dry-run mode, excluded capabilities, PDF Markdown Phase A, MCP tool status, skills status, examples status, limitations, Source Hygiene, and roadmap.
+- Release notes now cover what TuringResearch Plus is, `v0.1.0` scope, main features, fake/dry-run mode, excluded capabilities, PDF Markdown Phase A, MCP tool status, skills status, examples status, limitations, Source Hygiene, and roadmap.
 - Feature list explicitly includes single-window lanes, contracts-first design, Core local tools, PDF Markdown Phase A, Semantic Graph dry-run, Literature Survey dry-run, Vault/Context, Race Mode, Feature Capsule skeleton, DocFlow, SOP Graph Generator, Figure Asset Registry, Paper Draft Gate, and Codex-compatible skills.
 - Limitations clearly state that live adapters are not enabled by default, OCR and advanced PDF layout parsing are incomplete, paper draft does not fabricate experiment results, GPU execution is not included, API keys are future live-mode only, and `v0.1.0` mainly demonstrates architecture, contracts, dry-run workflow, and local tools.
 - Announcement draft is conservative and avoids claiming full automatic research or live capability.
@@ -177,7 +177,7 @@ Validation:
 
 ## Round 30 v0.1.0 Tag / Release Plan
 
-Round 30 creates the final release operation plan for TulingResearch Plus `v0.1.0` without publishing, pushing tags, creating a remote release, changing public API, or adding features.
+Round 30 creates the final release operation plan for TuringResearch Plus `v0.1.0` without publishing, pushing tags, creating a remote release, changing public API, or adding features.
 
 Created:
 
@@ -189,7 +189,7 @@ Created:
 Planned release identity:
 
 - Tag suggestion: `v0.1.0`
-- Release title: `TulingResearch Plus v0.1.0`
+- Release title: `TuringResearch Plus v0.1.0`
 - Release description source: `docs/release-notes-v0.1.0.md`
 
 Validation:

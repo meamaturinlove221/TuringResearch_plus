@@ -1,4 +1,4 @@
-# TulingResearch Plus Feature Capsule: visual_evidence_auditor
+# TuringResearch Plus Feature Capsule: visual_evidence_auditor
 
 ## Problem
 
@@ -13,7 +13,7 @@ V121 true region pointcloud visual readiness remains `requires-human-review`.
 
 ## User story
 
-As a TulingResearch Plus maintainer, I need visual evidence classification so
+As a TuringResearch Plus maintainer, I need visual evidence classification so
 advisor packs can explain what each image proves and what it does not prove.
 
 ## Inputs
@@ -56,9 +56,9 @@ round.
 
 ## Related skills
 
-- `tulingresearch-paper-figure-asset-pipeline`
-- `tulingresearch-race-feature-capsule-factory`
-- `tulingresearch-cache-and-ledger`
+- `turingresearch-paper-figure-asset-pipeline`
+- `turingresearch-race-feature-capsule-factory`
+- `turingresearch-cache-and-ledger`
 
 ## Required tests
 

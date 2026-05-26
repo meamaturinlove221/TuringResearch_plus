@@ -1,10 +1,10 @@
-# TulingResearch Plus Release Plan
+# TuringResearch Plus Release Plan
 
 ## Release Scope
 
 This release packages a Python MCP-first research workflow engine with deterministic local tests and fake-service workflows.
 
-MCP server name: `tulingresearch-plus`.
+MCP server name: `turingresearch-plus`.
 
 ## Release Stages
 
@@ -31,4 +31,4 @@ Known limits:
 - Examples run in fake mode or dry-run mode.
 - Packaging entry points resolve locally.
 - CI test/lint workflows are present.
-- Public docs use TulingResearch Plus naming consistently.
+- Public docs use TuringResearch Plus naming consistently.

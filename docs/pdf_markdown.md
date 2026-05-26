@@ -1,6 +1,6 @@
-# TulingResearch Plus PDF Markdown
+# TuringResearch Plus PDF Markdown
 
-Phase A implements the minimal local PDF to Markdown route for TulingResearch Plus. It supports local PDF paths, a replaceable PyMuPDF converter adapter, Markdown file output, simple section heading detection, local page maps, and CacheManager entries under the `pdf/markdown` namespace.
+Phase A implements the minimal local PDF to Markdown route for TuringResearch Plus. It supports local PDF paths, a replaceable PyMuPDF converter adapter, Markdown file output, simple section heading detection, local page maps, and CacheManager entries under the `pdf/markdown` namespace.
 
 It does not include heavy OCR, complex layout understanding, paper fetching, paper search, fusion workflows, or external APIs in `v0.1.0`.
 
@@ -12,6 +12,9 @@ The stable interface is described in `contracts/pdf_markdown.yaml`.
 
 - `pdf.inspect`: inspect a local PDF path and return page count, title, warnings, or a typed error.
 - `pdf.to_markdown`: convert a local PDF path to Markdown and cache the `PDFMarkdownOutput`.
+- `pdf.extract_figures`: lightweight local embedded-image extraction metadata via Phase B.
+- `pdf.extract_tables`: lightweight local text-table extraction via Phase B.
+- `pdf.sectionize`: lightweight local section tree and page map output via Phase B.
 - `pdf.cache_lookup`: return cached `PDFMarkdownOutput` for a local PDF path.
 - `pdf.markdown_content`: read cached Markdown text for a local PDF path.
 
@@ -31,7 +34,7 @@ The conversion output includes:
 
 ## Model Boundary
 
-The Core model package is `tuling_research.pdf`. It describes:
+The Core model package is `turing_research.pdf`. It describes:
 
 - PDF source location or bytes reference.
 - Conversion options.
@@ -46,3 +49,17 @@ The Plus workflow layer wraps PDF Markdown outputs as `ResearchArtifact` records
 ## Local Demo
 
 The release example `examples/pdf-to-markdown-demo/` generates a tiny local fixture PDF, converts it to Markdown, reads the cached Markdown, and verifies cache-hit behavior. It does not require a large PDF, OCR service, or network access.
+
+## Phase B
+
+Round 41 adds `PDFAssetExtractionReport` for lightweight figure/table
+extraction, page maps, and section trees. The implementation stays local and
+fixture-safe:
+
+- PyMuPDF embedded image extraction for figures.
+- Simple pipe-delimited or tab-delimited text table detection.
+- Page-level metadata map.
+- Heading-based section tree.
+- Paper figure registry import for extracted figures and tables.
+
+It does not implement OCR, MinerU, Marker, or complex paper layout parsing.

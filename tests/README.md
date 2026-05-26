@@ -1,4 +1,4 @@
-# TulingResearch Plus Tests
+# TuringResearch Plus Tests
 
 The test suite is split into deterministic local groups:
 

@@ -1,17 +1,17 @@
-# TulingResearch Plus v0.1.0 Release Notes
+# TuringResearch Plus v0.1.0 Release Notes
 
 Date: 2026-05-20
 
-## 1. What Is TulingResearch Plus
+## 1. What Is TuringResearch Plus
 
-TulingResearch Plus is a Python MCP-first research workflow engine for evidence-backed research planning, literature workflow dry-runs, idea capture, experiment planning, and paper pipeline gating.
+TuringResearch Plus is a Python MCP-first research workflow engine for evidence-backed research planning, literature workflow dry-runs, idea capture, experiment planning, and paper pipeline gating.
 
 It is organized as one repository with two Python packages:
 
-- `tuling_research`: Core local tools, cache, sessions, PDF Markdown, and the local MCP smoke server.
-- `tuling_research_plus`: Plus workflows for survey, semantic graph, vault, context, Race Mode, SOP, experiment, and paper pipelines.
+- `turing_research`: Core local tools, cache, sessions, PDF Markdown, and the local MCP smoke server.
+- `turing_research_plus`: Plus workflows for survey, semantic graph, vault, context, Race Mode, SOP, experiment, and paper pipelines.
 
-MCP server name: `tulingresearch-plus`.
+MCP server name: `turingresearch-plus`.
 
 ## 2. v0.1.0 Scope
 
@@ -37,7 +37,7 @@ Included:
 
 - Single-window multi-agent lane architecture.
 - Contracts-first design.
-- TulingResearch Core local tools.
+- TuringResearch Core local tools.
 - PDF input to Markdown Phase A.
 - Semantic Graph dry-run.
 - Literature Survey dry-run.
@@ -124,12 +124,12 @@ The release candidate report records 79 MCP tools across approved namespaces.
 
 ## 8. Skills Status
 
-Repo-scoped skills live in `.agents/skills/tulingresearch-*/SKILL.md`.
+Repo-scoped skills live in `.agents/skills/turingresearch-*/SKILL.md`.
 
 Status:
 
 - Required skills exist.
-- Skills use the `tulingresearch-` prefix.
+- Skills use the `turingresearch-` prefix.
 - Skills are indexed in `docs/skills-index.md`.
 - Release-critical skills are locked.
 
@@ -156,7 +156,7 @@ Examples do not require real API keys, live network access, private papers, or r
 
 ## 11. Safety And Source Hygiene
 
-TulingResearch Plus blocks implementation work from private repository content, leaked roadmap material, NDA content, proprietary code, copied incompatible-license implementation details, private papers without authorization, restricted datasets, and secrets.
+TuringResearch Plus blocks implementation work from private repository content, leaked roadmap material, NDA content, proprietary code, copied incompatible-license implementation details, private papers without authorization, restricted datasets, and secrets.
 
 Allowed sources include public repositories, public README files, public issues, public release notes, user-owned notes, and authorized transcripts.
 

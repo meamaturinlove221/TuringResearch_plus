@@ -8,7 +8,7 @@ Define PDF input to Markdown models and contract for a minimal local PyMuPDF rou
 
 - `contracts/pdf_markdown.yaml`
 - `docs/pdf_markdown.md`
-- `src/tuling_research/pdf/models.py`
+- `src/turing_research/pdf/models.py`
 - `tests/unit/test_pdf_markdown_models.py`
 
 ## Status

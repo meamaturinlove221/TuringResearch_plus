@@ -1,4 +1,4 @@
-# TulingResearch Plus Research Brief Block
+# TuringResearch Plus Research Brief Block
 
 Block kind: `research_brief`
 

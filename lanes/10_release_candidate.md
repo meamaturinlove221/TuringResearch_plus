@@ -2,14 +2,14 @@
 
 ## Scope
 
-Round 16 freezes TulingResearch Plus `v0.1.0` public API, MCP tool namespace, contracts, artifact schemas, package structure, and release boundaries.
+Round 16 freezes TuringResearch Plus `v0.1.0` public API, MCP tool namespace, contracts, artifact schemas, package structure, and release boundaries.
 
 ## Frozen Version
 
 - Version: `v0.1.0`
-- Project: TulingResearch Plus
-- Packages: `tuling_research`, `tuling_research_plus`
-- MCP server: `tulingresearch-plus`
+- Project: TuringResearch Plus
+- Packages: `turing_research`, `turing_research_plus`
+- MCP server: `turingresearch-plus`
 
 ## Included In v0.1.0
 
@@ -87,19 +87,19 @@ Created or updated:
 Findings:
 
 - No forbidden legacy project/package/skill naming remains in scanned `.py`, `.md`, `.yaml`, or `.toml` files.
-- Python local import roots are limited to `tuling_research` and `tuling_research_plus`.
+- Python local import roots are limited to `turing_research` and `turing_research_plus`.
 - Contracts and `docs/mcp-tools.md` both declare 79 frozen MCP tools.
 - Approved namespaces remain `core`, `pdf`, `graph`, `research`, `vault`, `context`, `race`, and `paper`.
 - Contract `implementation_status` values now match public tool docs.
 
 ## Round 18 MCP Local Smoke Test
 
-Round 18 added the local STDIO smoke surface for `tulingresearch-plus`.
+Round 18 added the local STDIO smoke surface for `turingresearch-plus`.
 
 Created or updated:
 
-- `src/tuling_research/mcp_server.py`
-- `src/tuling_research/tool_registry.py`
+- `src/turing_research/mcp_server.py`
+- `src/turing_research/tool_registry.py`
 - `docs/mcp-local-smoke-test.md`
 - `.codex/config.example.toml`
 - `tests/contract/test_mcp_server_import.py`
@@ -108,7 +108,7 @@ Created or updated:
 
 Findings:
 
-- Importing `tuling_research.mcp_server` does not start network services or write stdout/stderr.
+- Importing `turing_research.mcp_server` does not start network services or write stdout/stderr.
 - Default module execution writes no stdout logs; human-readable status goes to stderr.
 - Explicit `--manifest` and `--health-check` modes write JSON payloads to stdout.
 - Minimal tools registered for smoke testing: `core.health_check`, `core.paper_content`, `core.web_content`, `core.session_list`, `pdf.inspect`, `pdf.to_markdown`, and `pdf.markdown_content`.
@@ -146,8 +146,8 @@ Created or updated:
 
 - `pyproject.toml`
 - `README.md`
-- `src/tuling_research/__init__.py`
-- `src/tuling_research_plus/__init__.py`
+- `src/turing_research/__init__.py`
+- `src/turing_research_plus/__init__.py`
 - `docs/install.md`
 - `docs/package-structure.md`
 - `tests/contract/test_package_imports.py`
@@ -155,10 +155,10 @@ Created or updated:
 
 Findings:
 
-- Distribution name is `tulingresearch-plus`.
+- Distribution name is `turingresearch-plus`.
 - Python requirement is `>=3.11`.
-- Package discovery covers `tuling_research*` and `tuling_research_plus*`.
-- Console scripts `tulingresearch-plus` and `tulingresearch-plus-mcp` both target `tuling_research.mcp_server:main`.
+- Package discovery covers `turing_research*` and `turing_research_plus*`.
+- Console scripts `turingresearch-plus` and `turingresearch-plus-mcp` both target `turing_research.mcp_server:main`.
 - Extras are declared for `dev`, `pdf`, `mcp`, and `all`.
 
 ## Round 21 CI / Lint / Test Matrix
@@ -207,7 +207,7 @@ Created or updated:
 Findings:
 
 - README now covers the project purpose, Python MCP-first design, single-window multi-lane workflow, Core tools, PDF Markdown, survey, semantic graph, Vault, hypothesis-to-experiment flow, Race Mode, Feature Capsules, SOP graphs, paper/figure pipeline, skills, quickstart, examples, safety, roadmap, and references.
-- Public docs consistently use TulingResearch Plus, `tuling_research`, `tuling_research_plus`, and `tulingresearch-plus`.
+- Public docs consistently use TuringResearch Plus, `turing_research`, `turing_research_plus`, and `turingresearch-plus`.
 - Reference projects are mentioned only in references/inspiration context.
 
 ## Round 23 Release Candidate Report

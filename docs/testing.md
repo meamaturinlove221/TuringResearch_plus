@@ -1,6 +1,6 @@
-# TulingResearch Plus Testing Guide
+# TuringResearch Plus Testing Guide
 
-TulingResearch Plus tests are designed to run without real network access, real API keys, private datasets, or live external services.
+TuringResearch Plus tests are designed to run without real network access, real API keys, private datasets, or live external services.
 
 ## Default Command
 

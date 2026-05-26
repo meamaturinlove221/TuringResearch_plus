@@ -1,6 +1,6 @@
-# TulingResearch Plus Workflows
+# TuringResearch Plus Workflows
 
-TulingResearch Plus workflows are dry-run and fake-service friendly by default. They use `BudgetGate`, `StateLedger`, `ResearchArtifact`, and `EvidenceRef` boundaries.
+TuringResearch Plus workflows are dry-run and fake-service friendly by default. They use `BudgetGate`, `StateLedger`, `ResearchArtifact`, and `EvidenceRef` boundaries.
 
 ## Campaign Runtime
 

@@ -1,4 +1,4 @@
-# TulingResearch Plus PDF Markdown Phase B Plan
+# TuringResearch Plus PDF Markdown Phase B Plan
 
 Round 33 plans PDF Markdown Phase B. This is design and backlog work only; it does not implement OCR, add heavy dependencies, or call external services.
 

@@ -1,4 +1,4 @@
-# TulingResearch Plus Round 38 Implemented Surface
+# TuringResearch Plus Round 38 Implemented Surface
 
 Status: pre-rename checkpoint surface.
 
@@ -6,7 +6,7 @@ Status: pre-rename checkpoint surface.
 
 | Surface | Details |
 | --- | --- |
-| Package | `tuling_research_plus.vggt` |
+| Package | `turing_research_plus.vggt` |
 | Models | `VGGTEvidenceStatus`, `VGGTEvidenceRow`, `VGGTEvidenceLedger`, `VGGTEvidenceLedgerBuildInput` |
 | Builder | `build_vggt_evidence_ledger()` |
 | Tool wrapper | `vggt_evidence_ledger_build()` |
@@ -36,7 +36,7 @@ Known boundaries:
 
 | Surface | Details |
 | --- | --- |
-| Package | `tuling_research_plus.artifact_audit` |
+| Package | `turing_research_plus.artifact_audit` |
 | Models | `ArtifactAuditInput`, `ArtifactAuditReport`, `ArtifactRecord`, `ArtifactBundleManifest`, `NPZArraySummary` |
 | Auditor | `audit_artifacts()` |
 | Tool wrapper | `artifact_audit()` |

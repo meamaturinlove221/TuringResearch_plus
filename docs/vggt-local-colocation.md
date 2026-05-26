@@ -1,6 +1,6 @@
 # VGGT Local Co-location Mode
 
-Round 33.5 prepares TulingResearch Plus to dogfood against a VGGT checkout that
+Round 33.5 prepares TuringResearch Plus to dogfood against a VGGT checkout that
 lives on the same Windows machine. The mode is documentation and configuration
 only: it defines how a later workflow can discover local VGGT paths and summarize
 readable files without modifying VGGT or running real experiments.
@@ -31,13 +31,13 @@ metrics unless a real experiment report and human review support that claim.
 
 ## Write Boundary
 
-TulingResearch Plus must not write inside a VGGT repository or output directory.
+TuringResearch Plus must not write inside a VGGT repository or output directory.
 The local policy keeps these invariants explicit:
 
 - never modify VGGT files
 - never delete VGGT files
 - never write inside a VGGT repository
-- keep generated summaries inside TulingResearch Plus
+- keep generated summaries inside TuringResearch Plus
 
 Any path that is absent, unreadable, too large, or outside the allow-list should
 be recorded as `missing`, `failed`, or `requires-human-review` instead of causing

@@ -2,7 +2,7 @@
 
 ## Scope
 
-Round 37 creates TulingResearch Plus Feature Capsule skeletons for the v0.2.0
+Round 37 creates TuringResearch Plus Feature Capsule skeletons for the v0.2.0
 Sprint 1 VGGT dogfooding Top 5. This lane is planning-only until a later
 implementation round starts.
 

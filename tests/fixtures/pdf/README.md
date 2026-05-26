@@ -1,4 +1,4 @@
-# TulingResearch Plus PDF Fixtures
+# TuringResearch Plus PDF Fixtures
 
 This directory is reserved for tiny local PDF fixtures used by PDF Markdown tests.
 

@@ -1,4 +1,4 @@
-# TulingResearch Plus Race Mode
+# TuringResearch Plus Race Mode
 
 Race Mode turns public, authorized source material into idea cards and feature capsules. It cannot create implementation tasks until Source Hygiene Gate passes.
 
@@ -51,7 +51,7 @@ Round 12B adds `race.idea_extract` for deterministic Idea Radar extraction from 
 Idea Radar rules:
 
 - Do not blindly preserve TTS errors.
-- Recover likely terms from TulingResearch Plus context.
+- Recover likely terms from TuringResearch Plus context.
 - Put uncertain terms in `uncertain_terms`.
 - Do not invent proper nouns when confidence is low.
 - Distinguish high-confidence ideas from speculative ideas.

@@ -3,7 +3,7 @@
 ## Scope
 
 This lane records the old TulingResearch Plus Round 38 implementation surface
-before a future rename to TuringResearch. It is a checkpoint only.
+before the rename to TuringResearch. It is a checkpoint only.
 
 ## Confirmed Present
 
@@ -60,4 +60,4 @@ Old Round 38 focused tests:
 
 ## Outcome
 
-Ready to commit to `pre-rename-round38-checkpoint` before any rename work.
+Committed to `pre-rename-round38-checkpoint` before any rename work.

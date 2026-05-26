@@ -4,8 +4,8 @@
 - Mode: local-colocation
 - Read-only: true
 - Config status: missing
-- Config source: D:/TulingResearch_plus/examples/vggt-human-prior-survey/local_project_links.example.yaml
-- Requested private config: D:/TulingResearch_plus/examples/vggt-human-prior-survey/local_project_links.yaml
+- Config source: D:/TuringResearch_plus/examples/vggt-human-prior-survey/local_project_links.example.yaml
+- Requested private config: D:/TuringResearch_plus/examples/vggt-human-prior-survey/local_project_links.yaml
 
 Safety boundary: no VGGT code was run, no network access was used, no VGGT files were modified or deleted, and no experiment result is claimed.
 

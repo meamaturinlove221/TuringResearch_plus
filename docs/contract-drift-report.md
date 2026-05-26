@@ -1,4 +1,4 @@
-# TulingResearch Plus Contract Drift Report
+# TuringResearch Plus Contract Drift Report
 
 Round 17 audited the frozen MCP tool namespace and contract/docs alignment for `v0.1.0`.
 

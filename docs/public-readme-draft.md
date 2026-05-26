@@ -1,13 +1,13 @@
-# TulingResearch Plus
+# TuringResearch Plus
 
-TulingResearch Plus is a Python, MCP-first research workflow engine for evidence-backed research workflows, Race Mode feature planning, and paper pipeline dry-runs.
+TuringResearch Plus is a Python, MCP-first research workflow engine for evidence-backed research workflows, Race Mode feature planning, and paper pipeline dry-runs.
 
 Packages:
 
-- Core: `tuling_research`
-- Plus workflows: `tuling_research_plus`
+- Core: `turing_research`
+- Plus workflows: `turing_research_plus`
 
-MCP server name: `tulingresearch-plus`.
+MCP server name: `turingresearch-plus`.
 
 ## What It Does
 
@@ -20,7 +20,7 @@ MCP server name: `tulingresearch-plus`.
 - Race Mode idea capture with Source Hygiene Gate, Priority Elevator, Feature Capsule skeletons, architecture boxes, and Upstream Watch.
 - SOP graph generator for campaign, feature, paper, experiment, and release workflows.
 - Paper / Figure pipeline with DocFlow Article Blocks, figure registry, captions, draft gate, missing evidence reports, and LaTeX export.
-- Codex-compatible repo-scoped skills under `.agents/skills/tulingresearch-*`.
+- Codex-compatible repo-scoped skills under `.agents/skills/turingresearch-*`.
 
 ## Quickstart
 
@@ -29,7 +29,7 @@ python -m pip install -e .[dev,pdf,mcp]
 python -m pytest
 python -m ruff check .
 python -m mypy src
-python -m tuling_research.mcp_server --manifest
+python -m turing_research.mcp_server --manifest
 ```
 
 Default tests run without real API keys or live network access. Examples use fake services, dry-run workflows, and local fixtures.
@@ -53,4 +53,4 @@ See `docs/examples.md`.
 
 ## References
 
-TulingResearch Plus is inspired by public research-tooling patterns, including Neocortica and Yogsoth AI references. These are references only; project names, packages, tools, docs, and skills use the TulingResearch naming system.
+TuringResearch Plus is inspired by public research-tooling patterns, including Neocortica and Yogsoth AI references. These are references only; project names, packages, tools, docs, and skills use the TuringResearch naming system.

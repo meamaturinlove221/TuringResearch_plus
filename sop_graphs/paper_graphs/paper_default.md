@@ -1,4 +1,4 @@
-# TulingResearch Plus SOP: Paper Graph
+# TuringResearch Plus SOP: Paper Graph
 
 Graph type: `paper`
 

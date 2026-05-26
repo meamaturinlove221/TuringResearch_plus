@@ -1,4 +1,4 @@
-# TulingResearch Plus Paper Draft Block
+# TuringResearch Plus Paper Draft Block
 
 Block kind: `paper_draft`
 

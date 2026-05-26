@@ -1,11 +1,11 @@
-# TulingResearch Plus Round 38 Pre-Rename Checkpoint
+# Round 38 Pre-Rename Checkpoint: TulingResearch To TuringResearch
 
 Status: pre-rename checkpoint.
 
-This checkpoint freezes the completed old Round 38 surface before any project
-rename from TulingResearch to TuringResearch. This round does not rename files,
-packages, skills, MCP server names, docs, or workflow references. It does not
-implement new features, access the network, or read VGGT local paths.
+This checkpoint freezes the completed old Round 38 TulingResearch surface before
+the project rename to TuringResearch. Round 38.1 did not rename files, packages,
+skills, MCP server names, docs, or workflow references. It did not implement new
+features, access the network, or read VGGT local paths.
 
 ## Completed Old Round 38 Files
 
@@ -13,10 +13,10 @@ implement new features, access the network, or read VGGT local paths.
 
 | Path | Status |
 | --- | --- |
-| `src/tuling_research_plus/vggt/` | present |
-| `src/tuling_research_plus/vggt/evidence_models.py` | present |
-| `src/tuling_research_plus/vggt/evidence_ledger.py` | present |
-| `src/tuling_research_plus/vggt/tools.py` | present |
+| `src/tuling_research_plus/vggt/` | present before rename |
+| `src/tuling_research_plus/vggt/evidence_models.py` | present before rename |
+| `src/tuling_research_plus/vggt/evidence_ledger.py` | present before rename |
+| `src/tuling_research_plus/vggt/tools.py` | present before rename |
 | `contracts/vggt_evidence.yaml` | present |
 | `tests/unit/test_vggt_evidence_models.py` | present |
 | `tests/unit/test_vggt_evidence_ledger.py` | present |
@@ -26,12 +26,12 @@ implement new features, access the network, or read VGGT local paths.
 
 | Path | Status |
 | --- | --- |
-| `src/tuling_research_plus/artifact_audit/` | present |
-| `src/tuling_research_plus/artifact_audit/models.py` | present |
-| `src/tuling_research_plus/artifact_audit/auditor.py` | present |
-| `src/tuling_research_plus/artifact_audit/npz_summary.py` | present |
-| `src/tuling_research_plus/artifact_audit/manifest.py` | present |
-| `src/tuling_research_plus/artifact_audit/tools.py` | present |
+| `src/tuling_research_plus/artifact_audit/` | present before rename |
+| `src/tuling_research_plus/artifact_audit/models.py` | present before rename |
+| `src/tuling_research_plus/artifact_audit/auditor.py` | present before rename |
+| `src/tuling_research_plus/artifact_audit/npz_summary.py` | present before rename |
+| `src/tuling_research_plus/artifact_audit/manifest.py` | present before rename |
+| `src/tuling_research_plus/artifact_audit/tools.py` | present before rename |
 | `contracts/artifact_audit.yaml` | present |
 | `tests/unit/test_artifact_audit_models.py` | present |
 | `tests/unit/test_artifact_manifest.py` | present |
@@ -51,10 +51,10 @@ completed old Round 38 implementation currently in the repository:
 
 ## Rename Candidate Paths
 
-These paths are likely to be touched by the future rename, but Round 38.1 does
+These paths were likely to be touched by the future rename, but Round 38.1 did
 not rename them:
 
-| Current path or name | Future rename concern |
+| Old path or name | Rename concern |
 | --- | --- |
 | `src/tuling_research/` | Core package import path. |
 | `src/tuling_research_plus/` | Plus package import path. |

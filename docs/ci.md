@@ -1,6 +1,6 @@
-# TulingResearch Plus CI
+# TuringResearch Plus CI
 
-TulingResearch Plus uses GitHub Actions for release-candidate smoke validation.
+TuringResearch Plus uses GitHub Actions for release-candidate smoke validation.
 
 ## Workflows
 

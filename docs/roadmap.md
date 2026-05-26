@@ -1,11 +1,11 @@
-# TulingResearch Plus Roadmap
+# TuringResearch Plus Roadmap
 
-This roadmap starts after the TulingResearch Plus v0.1.0 release preparation baseline. It keeps the project MCP-first, contracts-first, source-hygiene gated, and fake-mode testable by default.
+This roadmap starts after the TuringResearch Plus v0.1.0 release preparation baseline. It keeps the project MCP-first, contracts-first, source-hygiene gated, and fake-mode testable by default.
 
 ## Roadmap Principles
 
-- Public APIs stay under the `tuling_research` and `tuling_research_plus` packages.
-- MCP server identity remains `tulingresearch-plus`.
+- Public APIs stay under the `turing_research` and `turing_research_plus` packages.
+- MCP server identity remains `turingresearch-plus`.
 - Live adapters are opt-in and must not make default tests require network access or API keys.
 - Research claims, gaps, decisions, and paper sections continue to require EvidenceRef-backed artifacts.
 - Race Mode can only promote public or authorized sources that pass Source Hygiene.
@@ -193,7 +193,7 @@ This roadmap starts after the TulingResearch Plus v0.1.0 release preparation bas
 
 ### Goals
 
-- Ship TulingResearch Plus as a stable, full research workflow engine.
+- Ship TuringResearch Plus as a stable, full research workflow engine.
 - Stabilize public Python APIs, MCP tool namespaces, contracts, and artifact schemas.
 - Provide tested examples and complete documentation for local, fake, and opt-in live workflows.
 - Support optional LLM and cloud/GPU adapters through explicit protocols.
@@ -202,7 +202,7 @@ This roadmap starts after the TulingResearch Plus v0.1.0 release preparation bas
 
 - Full research workflow engine from intent to survey, hypothesis, experiment planning, evidence vault, and paper artifacts.
 - Live MCP adapters with clear configuration, rate-limit handling, and fake-mode parity.
-- Stable public API for `tuling_research` and `tuling_research_plus`.
+- Stable public API for `turing_research` and `turing_research_plus`.
 - Full docs, release notes, API references, and operator guides.
 - Tested examples covering core, PDF, graph, survey, Race Mode, Vault, Context, SOP, and Paper Pipeline.
 - Optional LLM integrations through protocol adapters.

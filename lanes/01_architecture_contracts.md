@@ -2,7 +2,7 @@
 
 ## Scope
 
-Define TulingResearch Plus architecture, Mermaid diagram, 16-box overview, and stable YAML contracts.
+Define TuringResearch Plus architecture, Mermaid diagram, 16-box overview, and stable YAML contracts.
 
 ## Outputs
 
@@ -16,7 +16,7 @@ Phase 1 complete. Contracts are draft interfaces and contain no complex business
 
 ## Round 3 Update
 
-2026-05-19: Added the full TulingResearch Plus MCP namespace contract surface for:
+2026-05-19: Added the full TuringResearch Plus MCP namespace contract surface for:
 
 - `core.*`
 - `pdf.*`

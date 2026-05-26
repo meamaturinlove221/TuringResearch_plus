@@ -1,37 +1,24 @@
-# TulingResearch Plus License Review
+# License Review
 
-Date: 2026-05-20
+Status: current license is proprietary.
 
-## Scope
+## Current Status
 
-This review covers the `v0.1.0` release candidate source tree, examples, contracts, and documentation.
+`LICENSE` and `pyproject.toml` currently state a proprietary license. Public
+release preparation must not imply open-source rights unless the license is
+changed deliberately.
 
-## Current Project License Metadata
+## Required If License Changes
 
-`pyproject.toml` currently declares:
+- Update `LICENSE`.
+- Update `pyproject.toml`.
+- Update this document.
+- Update `NOTICE.md`.
+- Re-run source hygiene review for third-party references.
+- Review public examples for redistributable content.
 
-```toml
-license = {{ text = "Proprietary" }}
-```
+## Source Reuse Boundary
 
-## Dependency Notes
-
-Runtime dependencies declared in `pyproject.toml`:
-
-- `pydantic`
-- `pydantic-settings`
-- `httpx`
-
-Optional extras:
-
-- `pdf`: `pymupdf`
-- `dev`: `pytest`, `pytest-asyncio`, `ruff`, `mypy`
-- `mcp`: `httpx`, `typer`, `rich`
-
-## Source Reuse Policy
-
-TulingResearch Plus may reference public project ideas at concept/workflow level, but it must not copy incompatible-license implementation code. References to Neocortica and Yogsoth AI are inspiration/reference context only.
-
-## Release Decision
-
-No incompatible copied code is recorded in the release candidate. Before public distribution under a non-proprietary license, perform a formal dependency and repository license review.
+TuringResearch Plus can reference public ideas and workflow patterns, but must
+not copy incompatible-license implementation code, private source material,
+leaked roadmaps, NDA content, private papers, or restricted datasets.

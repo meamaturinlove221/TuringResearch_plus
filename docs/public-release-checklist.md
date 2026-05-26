@@ -1,10 +1,10 @@
-# TulingResearch Plus Public Release Checklist
+# TuringResearch Plus Public Release Checklist
 
 ## Gates
 
-- [x] Project name is TulingResearch Plus.
-- [x] Python packages are `tuling_research` and `tuling_research_plus`.
-- [x] MCP server name is `tulingresearch-plus`.
+- [x] Project name is TuringResearch Plus.
+- [x] Python packages are `turing_research` and `turing_research_plus`.
+- [x] MCP server name is `turingresearch-plus`.
 - [x] Public tools have contract tests or contract coverage checks.
 - [x] Workflows have dry-run or fake-service tests.
 - [x] No real API key or live network is required for tests.

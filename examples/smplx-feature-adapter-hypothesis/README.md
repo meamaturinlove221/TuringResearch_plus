@@ -1,4 +1,4 @@
-# TulingResearch Plus Example: SMPL-X Feature Adapter Hypothesis
+# TuringResearch Plus Example: SMPL-X Feature Adapter Hypothesis
 
 Mode: fake-service dry run.
 
