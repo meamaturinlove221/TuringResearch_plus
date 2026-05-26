@@ -6134,3 +6134,44 @@ Safety:
 Validation:
 - Asset manifest checked.
 - Pre-push checks passed.
+
+## Round 385 - Public Launch Checklist
+
+Status: completed.
+
+Summary:
+- Added `docs/public-launch-checklist-v1.6.md`.
+- Added `docs/public-launch-go-no-go-v1.6.md`.
+- Added `docs/public-launch-human-actions-v1.6.md`.
+- Added `lanes/363_public_launch_checklist.md`.
+
+Decision:
+- `GO FOR HUMAN LAUNCH REVIEW / NO-GO FOR AUTOMATIC PUBLICATION`.
+
+Checklist coverage:
+- README reviewed;
+- docs bundle reviewed;
+- split manual packs reviewed;
+- release artifact reviewed;
+- security/privacy pass;
+- no secrets;
+- no fake URL;
+- no raw data;
+- tag decision;
+- GitHub release decision;
+- PyPI decision;
+- split repo creation decision.
+
+Safety:
+- No automatic release.
+- No tag.
+- No GitHub release publication.
+- No PyPI publication.
+- No GitHub Pages deployment.
+- No split repository creation.
+- No live provider execution.
+- No private data upload.
+
+Validation:
+- Public launch docs updated.
+- Pre-push checks passed.
