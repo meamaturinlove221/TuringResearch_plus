@@ -14,7 +14,7 @@ def test_public_release_docs_exist_and_name_project_correctly() -> None:
 
     for relative in required:
         content = (ROOT / relative).read_text(encoding="utf-8")
-        assert "TuringResearch Plus" in content
+        assert "TuringResearch" in content
         assert "turingresearch-plus" in content or relative.endswith("examples.md")
 
 

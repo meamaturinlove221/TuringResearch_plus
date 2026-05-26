@@ -4,7 +4,7 @@ Status: replay only.
 
 Round: 97.
 
-This replay stitches together existing TuringResearch Plus VGGT review
+This replay stitches together existing TuringResearch VGGT review
 artifacts. It does not run VGGT, does not run Modal, does not read private VGGT
 paths, and does not create new experiment results.
 
@@ -47,7 +47,7 @@ paths, and does not create new experiment results.
 
 Safe replay wording:
 
-> TuringResearch Plus can replay the current VGGT review chain from intent to
+> TuringResearch can replay the current VGGT review chain from intent to
 > next action using existing local artifacts.
 
 Unsafe wording:

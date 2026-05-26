@@ -5811,3 +5811,38 @@ Validation:
 - `python -m ruff check .` passed.
 - `python -m mypy src` passed.
 - `git diff --check` passed with only LF-to-CRLF working-copy warning.
+
+## Round 360.2 - Public Naming Sweep
+
+Status: completed.
+
+Summary:
+- Added `docs/public-naming-sweep-report.md`.
+- Added `docs/public-facing-old-name-inventory.md`.
+- Added `docs/public-name-replacement-log.md`.
+- Added `tests/contract/test_public_name_integrity_turingresearch.py`.
+- Added `lanes/360_2_public_naming_sweep.md`.
+- Updated README, current docs entry points, examples, split-ready bundles,
+  split-manual packs, MCP/package display descriptions, and docs-site manifest
+  paths for public TuringResearch naming.
+
+Decision:
+- public display name: TuringResearch;
+- compatibility package name, CLI names, MCP server key, and Python import
+  namespace remain unchanged until separate compatibility audits.
+
+Non-actions:
+- No package distribution rename.
+- No Python import removal.
+- No CLI or MCP command rename.
+- No PyPI publication.
+- No tag or GitHub release publication.
+- No GitHub repository creation.
+- No fake GitHub URL.
+
+Validation:
+- Public name integrity tests: passed.
+- Docs tests: passed.
+- `python -m ruff check .`: passed.
+- `python -m mypy src`: passed.
+- `git diff --check`: passed with only LF-to-CRLF working-copy warning.

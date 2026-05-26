@@ -1,7 +1,7 @@
 repo_id: turingresearch-examples
 status: split-repo-skeleton-only
 flagship_repo: turingresearch
-purpose: public-safe examples for TuringResearch Plus
+purpose: public-safe examples for TuringResearch
 requires_human_review: true
 intended_example_groups:
   - public_demo

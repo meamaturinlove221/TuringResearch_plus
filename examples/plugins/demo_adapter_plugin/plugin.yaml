@@ -19,5 +19,5 @@ inputs:
   - DemoFixtureRequest
 outputs:
   - DemoFixtureResult
-author: TuringResearch Plus Demo
+author: TuringResearch Demo
 license: Proprietary demo fixture

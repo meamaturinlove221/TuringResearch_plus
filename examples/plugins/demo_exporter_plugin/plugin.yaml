@@ -20,5 +20,5 @@ inputs:
   - AdvisorMarkdownBundle
 outputs:
   - ExportManifest
-author: TuringResearch Plus Demo
+author: TuringResearch Demo
 license: Proprietary demo fixture

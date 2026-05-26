@@ -1,8 +1,8 @@
-# TuringResearch Plus FAQ
+# TuringResearch FAQ
 
-## What is TuringResearch Plus?
+## What is TuringResearch?
 
-TuringResearch Plus is a Python MCP-first research workflow engine. It turns research intent, sources, and intermediate findings into typed, evidence-backed artifacts.
+TuringResearch is a Python MCP-first research workflow engine. It turns research intent, sources, and intermediate findings into typed, evidence-backed artifacts.
 
 ## Is it a live web research agent?
 
@@ -39,4 +39,4 @@ Source Hygiene blocks private, leaked, NDA, proprietary, or incompatible-license
 
 ## Is this inspired by other public projects?
 
-TuringResearch Plus references public research-tooling ideas, including Neocortica and Yogsoth AI references. They are references only; this project uses TuringResearch naming, packages, tools, docs, and skills.
+TuringResearch references public research-tooling ideas, including Neocortica and Yogsoth AI references. They are references only; this project uses TuringResearch naming, packages, tools, docs, and skills.

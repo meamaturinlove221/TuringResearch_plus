@@ -1,6 +1,6 @@
 repo_id: turingresearch-vggt-case
 status: split-repo-skeleton-only
-purpose: public-safe dogfooding case study for TuringResearch Plus
+purpose: public-safe dogfooding case study for TuringResearch
 flagship_repo: turingresearch
 not_a_vggt_experiment_source_repo: true
 requires_human_review: true

@@ -17,7 +17,7 @@ This draft is public-demo material and not a final research result.
 
 ## Why TuringResearch Was Useful
 
-TuringResearch Plus organized evidence states, artifacts, visual readiness, routes, related work, advisor notes, and public communication boundaries into reviewable artifacts.
+TuringResearch organized evidence states, artifacts, visual readiness, routes, related work, advisor notes, and public communication boundaries into reviewable artifacts.
 
 It kept planned routes separate from observed engineering context and made missing evidence visible before public-facing writing.
 

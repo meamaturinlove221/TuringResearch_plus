@@ -53,7 +53,7 @@ def test_split_ready_matches_round_338_public_safe_baseline() -> None:
 
     assert "Round: Optional 338.5" in combined
     assert "requires-human-review" in combined
-    assert "main TuringResearch Plus repository remains flagship" in combined
+    assert "main TuringResearch repository remains flagship" in combined
 
 
 def test_split_pack_freshness_files_are_public_safe_and_guarded() -> None:
@@ -70,4 +70,4 @@ def test_split_pack_freshness_files_are_public_safe_and_guarded() -> None:
     assert "fresh-manual-draft" in combined
     assert "requires-human-review" in combined
     assert "not created and not pushed" in combined
-    assert "main TuringResearch Plus repository" in combined
+    assert "main TuringResearch repository" in combined

@@ -3,7 +3,7 @@
   "round": "Optional 337.5",
   "generated_date": "2026-05-25",
   "mode": "local-colocation-read-only-freshness-scan",
-  "project": "TuringResearch Plus VGGT dogfooding",
+  "project": "TuringResearch VGGT dogfooding",
   "safety": {
     "no_vggt_code_executed": true,
     "no_vggt_experiment_run": true,

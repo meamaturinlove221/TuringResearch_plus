@@ -1,6 +1,6 @@
-# TuringResearch Plus Local Install Smoke
+# TuringResearch Local Install Smoke
 
-This smoke guide verifies that TuringResearch Plus can be installed locally, imported, used through the local MCP smoke entry point, and run with fake-mode examples.
+This smoke guide verifies that TuringResearch can be installed locally, imported, used through the local MCP smoke entry point, and run with fake-mode examples.
 
 ## Scope
 

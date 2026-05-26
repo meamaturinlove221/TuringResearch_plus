@@ -1,6 +1,6 @@
 # VGGT Handoff Fixture
 
-This is a review-only TuringResearch Plus handoff fixture.
+This is a review-only TuringResearch handoff fixture.
 
 It contains small summaries only. It does not include raw datasets, secrets,
 SMPL-X body model files, cache folders, or private VGGT paths.

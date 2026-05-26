@@ -3,11 +3,11 @@
 Status: draft guardrail / requires human review
 Round: Optional 338.5 integrated on newer cloud baseline
 
-This future split repository is a TuringResearch Plus dogfooding case study. It is not a VGGT experiment source repository and does not claim experiment success.
+This future split repository is a TuringResearch dogfooding case study. It is not a VGGT experiment source repository and does not claim experiment success.
 
 ## Allowed Claims
 
-- observed: TuringResearch Plus organized a public-safe case-study draft.
+- observed: TuringResearch organized a public-safe case-study draft.
 - local-observed: local scan summaries report file-level evidence for VGGT work streams.
 - local-observed: visual evidence classes are known by metadata only.
 - requires-human-review: SparseConv3D backend success.

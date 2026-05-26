@@ -6,7 +6,7 @@ north_star: SMPL-X direct replacement -> SMPL-X feature encoding for VGGT
 goal: Plan a Modal Real SparseConv3D route using SMPL-X voxel feature encoding without claiming execution.
 context:
   project: VGGT / SMPL-X Human Prior dogfooding
-  planning_surface: TuringResearch Plus
+  planning_surface: TuringResearch
   source_route_fixture: examples/vggt-human-prior-survey/route_specs/modal_sparseconv_v0.yaml
   local_scan_status:
     local_project_links_yaml: missing

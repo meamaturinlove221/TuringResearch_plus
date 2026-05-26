@@ -44,7 +44,7 @@ results.
 
 Round 34 may use the private config to inspect allow-listed local files and build
 
-a status summary. It should keep all summaries under TuringResearch Plus, use
+a status summary. It should keep all summaries under TuringResearch, use
 
 `summary-only` handling for `.npz`, and mark any claim that needs real evidence
 

@@ -2,7 +2,7 @@
 
 Status: v1.1 post-v1 stabilization navigation.
 
-This index points to the recommended documents for current TuringResearch Plus
+This index points to the recommended documents for current TuringResearch
 usage. Older version-specific planning documents remain in `docs/` for audit
 history.
 

@@ -1,6 +1,6 @@
 # Internship Value
 
-TuringResearch Plus is useful as an internship portfolio project because it
+TuringResearch is useful as an internship portfolio project because it
 shows more than a single feature. It shows system design across research
 workflow modules, safety and privacy judgment, contract testing, release
 gating, documentation discipline, and public positioning.

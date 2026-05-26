@@ -1,4 +1,4 @@
-# TuringResearch Plus Example: VGGT Human Prior Survey
+# TuringResearch Example: VGGT Human Prior Survey
 
 Mode: fake-service dry run.
 

@@ -1,4 +1,4 @@
-# TuringResearch Plus Final Showcase Pack
+# TuringResearch Final Showcase Pack
 
 Status: final showcase draft.
 
@@ -20,6 +20,6 @@ future public launch warmup. It is not a release package.
 
 ## Boundary
 
-The showcase describes TuringResearch Plus as a local-first, review-first
+The showcase describes TuringResearch as a local-first, review-first
 Research OS. It does not claim automatic research completion, final paper
 writing, VGGT experiment success, or legal compliance approval.

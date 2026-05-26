@@ -2,7 +2,7 @@
 
 Round: 39B
 Mode: local visual evidence dry-run
-Project: TuringResearch Plus
+Project: TuringResearch
 
 This report reads only committed local scan outputs under
 `examples/vggt-human-prior-survey/`. It does not modify the VGGT project, does

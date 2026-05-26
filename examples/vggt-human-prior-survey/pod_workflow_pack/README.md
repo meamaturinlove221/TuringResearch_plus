@@ -2,7 +2,7 @@
 
 
 
-This is a TuringResearch Plus pod workflow pack for future operator-controlled
+This is a TuringResearch pod workflow pack for future operator-controlled
 
 VGGT / Modal / RunPod work.
 

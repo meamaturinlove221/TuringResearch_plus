@@ -2,7 +2,7 @@
 
 
 
-TuringResearch Plus is preparing a review-only context package for a future
+TuringResearch is preparing a review-only context package for a future
 
 VGGT-side Modal SparseConv3D experiment route.
 

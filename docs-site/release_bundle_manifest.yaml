@@ -13,8 +13,8 @@ files:
     sha256: a7b058aa89203e9eeacb61991ffeec08180371a5818940536e64a459bf891200
   - path: dist_manifest.yaml
     kind: manifest
-    size_bytes: 2355
-    sha256: 9b23725969473b598b724b874cd7743bc39b0d62bb137e7739a9d216eaefdd42
+    size_bytes: 2317
+    sha256: a7c10540380fb41572666663941988d4cb1cd466436a8f4648a128a3471ba3df
   - path: nav.yaml
     kind: manifest
     size_bytes: 2847

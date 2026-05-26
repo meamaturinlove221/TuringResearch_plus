@@ -8,7 +8,7 @@ Evidence-led research workflow for a fictional geometry-aware model adapter.
 
 ## North Star
 
-Show how TuringResearch Plus organizes research intent, evidence, artifacts,
+Show how TuringResearch organizes research intent, evidence, artifacts,
 visual readiness, method notes, routes, failures, advisor outputs, and a static
 dashboard without using private data.
 

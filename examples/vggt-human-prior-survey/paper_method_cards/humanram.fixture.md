@@ -3,7 +3,7 @@
 Source status: fake-or-manual-note / requires-real-paper-review.
 
 This fixture is a local method-card test sample. It does not claim that
-TuringResearch Plus has fully read the HumanRAM paper.
+TuringResearch has fully read the HumanRAM paper.
 
 core method: Human reconstruction and memory/representation note for testing
 method card extraction.

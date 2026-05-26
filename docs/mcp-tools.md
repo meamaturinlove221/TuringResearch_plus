@@ -1,4 +1,4 @@
-# TuringResearch Plus MCP Tools
+# TuringResearch MCP Tools
 
 MCP server name: `turingresearch-plus`.
 

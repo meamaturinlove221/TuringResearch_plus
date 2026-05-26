@@ -78,7 +78,7 @@ def test_local_install_docs_and_troubleshooting_docs_exist() -> None:
 
     for doc in required_docs:
         content = doc.read_text(encoding="utf-8")
-        assert "TuringResearch Plus" in content
+        assert "TuringResearch" in content
         assert "python -m pip install -e" in content
 
 

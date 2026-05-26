@@ -73,4 +73,4 @@ def test_vggt_public_case_study_files_are_public_safe() -> None:
 
     assert "requires-human-review" in combined
     assert "local-observed" in combined
-    assert "main TuringResearch Plus repository remains flagship" in combined
+    assert "main TuringResearch repository remains flagship" in combined

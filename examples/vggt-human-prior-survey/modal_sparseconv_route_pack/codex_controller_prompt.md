@@ -1,6 +1,6 @@
 # Codex Controller Prompt: Modal Real SparseConv3D Route
 
-You are working inside the VGGT project, not inside TuringResearch Plus.
+You are working inside the VGGT project, not inside TuringResearch.
 
 Goal: run or prepare the Modal Real SparseConv3D + SMPL-X voxel feature
 encoding route for VGGT, producing evidence-backed artifacts. Do not treat this

@@ -1,6 +1,6 @@
 # Why It Is Worth A Star
 
-TuringResearch Plus is worth a star if someone wants to follow local-first
+TuringResearch is worth a star if someone wants to follow local-first
 research tooling that treats evidence, artifacts, routes, paper work,
 dashboards, advisor communication, plugins, privacy, and release checks as one
 system.

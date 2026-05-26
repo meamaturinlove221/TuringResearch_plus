@@ -5,7 +5,7 @@ Status: split-repo skeleton / not a real repository.
 This skeleton shows what a future `turingresearch-plugins` repository could
 look like.
 
-The flagship TuringResearch Plus repository keeps the core plugin framework,
+The flagship TuringResearch repository keeps the core plugin framework,
 runtime policy, package install path, release gates, and safety tests.
 
 ## Purpose

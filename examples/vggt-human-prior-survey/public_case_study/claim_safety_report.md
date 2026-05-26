@@ -10,7 +10,7 @@ Round: Optional 338.5 integrated on newer cloud baseline
 
 | Claim area | Status | Allowed wording | Blocked wording |
 | --- | --- | --- | --- |
-| Case-study workflow | observed | "TuringResearch Plus organized a public-safe case-study draft." | "The public case proves the VGGT result." |
+| Case-study workflow | observed | "TuringResearch organized a public-safe case-study draft." | "The public case proves the VGGT result." |
 | VGGT work-stream evidence | local-observed | "File-level evidence exists for selected work streams." | "The experiments were rerun and validated." |
 | Visual evidence | local-observed | "Visual evidence metadata exists and needs review." | "The advisor-ready visual package is accepted." |
 | V120/V121 | requires-human-review | "Goal manifests and tool evidence need review." | "SparseConv3D success is confirmed." |

@@ -18,11 +18,11 @@ Status legend: `observed`, `local-observed`, `planned`, `fake-data`,
 
 | --- | --- | --- |
 
-| Project | observed | VGGT / SMPL-X Human Prior dogfooding inside TuringResearch Plus. |
+| Project | observed | VGGT / SMPL-X Human Prior dogfooding inside TuringResearch. |
 
 | North Star | observed | Shift from SMPL-X direct replacement to SMPL-X feature encoding for VGGT. |
 
-| Local mode | local-observed | TuringResearch Plus and VGGT roots are co-located on this machine, but private artifact scan config is missing. |
+| Local mode | local-observed | TuringResearch and VGGT roots are co-located on this machine, but private artifact scan config is missing. |
 
 | Real experiment boundary | requires-real-experiment | Round 34 does not run VGGT or claim experiment results. |
 

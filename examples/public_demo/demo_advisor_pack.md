@@ -6,7 +6,7 @@ Requires human review before use in any research claim.
 
 ## Concise Summary
 
-This public demo shows how TuringResearch Plus can package evidence, artifacts,
+This public demo shows how TuringResearch can package evidence, artifacts,
 visual readiness, related work notes, routes, failures, and next actions for a
 fictional research project.
 

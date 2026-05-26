@@ -3,7 +3,7 @@
 Round: Optional 367.5
 Date: 2026-05-26
 Mode: VGGT desktop local freshness recheck, read-only
-Repository: TuringResearch Plus
+Repository: TuringResearch
 
 ## Safety Envelope
 
@@ -11,7 +11,7 @@ Repository: TuringResearch Plus
 - observed: only lightweight file metadata and small report summaries were inspected.
 - observed: no VGGT code, training, viewer, evaluator, or experiment command was run.
 - observed: no local VGGT workspace file was written, deleted, renamed, or copied.
-- observed: no raw dataset, restricted body-model payload, large array, point-cloud, archive, checkpoint, or experiment bundle was copied into TuringResearch Plus.
+- observed: no raw dataset, restricted body-model payload, large array, point-cloud, archive, checkpoint, or experiment bundle was copied into TuringResearch.
 - observed: no network action was required for the local scan itself.
 - local-private: the machine-local project-links config remains intentionally untracked and absent from the repository checkout.
 

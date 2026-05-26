@@ -1,8 +1,8 @@
-# TuringResearch Plus
+# TuringResearch
 
 Local-first Research OS for evidence-led research work.
 
-TuringResearch Plus helps researchers manage complex research state without
+TuringResearch helps researchers manage complex research state without
 pretending to automate research judgment. It keeps evidence, artifacts, route
 plans, paper notes, dashboards, advisor packs, plugin manifests, privacy checks,
 and replay gates in one local workflow.
@@ -74,7 +74,7 @@ just generating more text. The hard part is keeping the project honest:
 - which claims are unsafe;
 - what still requires human review.
 
-TuringResearch Plus makes those boundaries explicit.
+TuringResearch makes those boundaries explicit.
 
 ## Core Capabilities
 
@@ -214,7 +214,7 @@ Start here:
 - `examples/vggt-human-prior-survey/public_case_study/redaction_report.md`
 - `examples/vggt-human-prior-survey/public_case_study/claim_safety_report.md`
 
-The case study shows how TuringResearch Plus helped organize:
+The case study shows how TuringResearch helped organize:
 
 - north star and problem background;
 - route changes;
@@ -361,7 +361,7 @@ See:
 
 ## Limitations
 
-TuringResearch Plus does not:
+TuringResearch does not:
 
 - automatically complete research;
 - automatically run real experiments;

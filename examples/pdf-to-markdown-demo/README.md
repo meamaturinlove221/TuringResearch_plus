@@ -1,4 +1,4 @@
-# TuringResearch Plus Example: PDF to Markdown Demo
+# TuringResearch Example: PDF to Markdown Demo
 
 Mode: local fixture dry run.
 

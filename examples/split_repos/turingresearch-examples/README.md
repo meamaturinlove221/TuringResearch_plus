@@ -5,13 +5,13 @@ Status: split-repo skeleton / not a real repository.
 This skeleton shows what a future `turingresearch-examples` repository could
 look like.
 
-The flagship TuringResearch Plus repository remains the install, docs, release,
+The flagship TuringResearch repository remains the install, docs, release,
 and star entry point.
 
 ## Purpose
 
 This future examples repo would provide public-safe walkthrough material for
-TuringResearch Plus:
+TuringResearch:
 
 - public demo suite;
 - project template examples;

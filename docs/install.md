@@ -1,6 +1,6 @@
-# TuringResearch Plus Install Guide
+# TuringResearch Install Guide
 
-TuringResearch Plus is packaged as `turingresearch-plus` with Python packages
+TuringResearch is packaged as `turingresearch-plus` with Python packages
 `turing_research` and `turing_research_plus`.
 
 ## Requirements

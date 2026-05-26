@@ -1,4 +1,4 @@
-﻿# Artifact Index
+# Artifact Index
 
 - review/final_status.json
 - review/failure_report.md

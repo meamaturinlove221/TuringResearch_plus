@@ -1,7 +1,7 @@
-# TuringResearch Plus Examples
+# TuringResearch Examples
 
 The `examples/` tree contains fake/demo and local fixture material for
-TuringResearch Plus. Examples are designed for public-safe walkthroughs and
+TuringResearch. Examples are designed for public-safe walkthroughs and
 regression tests. They are not experiment results.
 
 ## Public Demo

@@ -28,7 +28,7 @@ Status: review pack / requires human review.
 
 
 
-This pack organizes the current TuringResearch Plus materials for the VGGT /
+This pack organizes the current TuringResearch materials for the VGGT /
 
 SMPL-X Human Prior line. It is designed for planning, advisor discussion, and
 

@@ -1,7 +1,7 @@
-# TuringResearch Plus Docs
+# TuringResearch Docs
 
 This directory contains user guides, developer guides, contracts, feature
-notes, examples, and release-gate reports for TuringResearch Plus.
+notes, examples, and release-gate reports for TuringResearch.
 
 Use these entry points first:
 
@@ -18,7 +18,7 @@ Use these entry points first:
 
 ## Current Positioning
 
-TuringResearch Plus is a local-first research OS. It is fake/demo first by
+TuringResearch is a local-first research OS. It is fake/demo first by
 default, with optional live adapters disabled unless explicitly enabled. It
 does not automatically run experiments, execute unknown plugins, upload private
 data, or generate final paper conclusions.

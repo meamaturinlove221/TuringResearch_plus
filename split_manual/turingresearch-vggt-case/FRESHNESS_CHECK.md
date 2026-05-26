@@ -14,7 +14,7 @@ The manual split package exists in the newer cloud baseline. This file records i
 
 | Baseline item | Status | Notes |
 | --- | --- | --- |
-| Public-safe case refresh v1.5 | observed | Round 338.5 refresh docs exist in the main TuringResearch Plus repository. |
+| Public-safe case refresh v1.5 | observed | Round 338.5 refresh docs exist in the main TuringResearch repository. |
 | Split-ready case draft | observed | The split-ready draft exists and remains documentation-only. |
 | Manual pack report | observed | The manual pack report exists in the cloud baseline. |
 | Manual package contents | observed | Manual pack instructions and safety files exist in the cloud baseline. |
@@ -35,4 +35,4 @@ The manual split package exists in the newer cloud baseline. This file records i
 2. Add or restore the manual pack report.
 3. Rerun split pack tests.
 4. Rerun privacy and compliance gates.
-5. Keep the main TuringResearch Plus repository as flagship.
+5. Keep the main TuringResearch repository as flagship.

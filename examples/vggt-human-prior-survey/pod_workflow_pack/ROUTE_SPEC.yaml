@@ -24,7 +24,7 @@ context:
 
   project: VGGT / SMPL-X Human Prior dogfooding
 
-  planning_surface: TuringResearch Plus
+  planning_surface: TuringResearch
 
   source_route_fixture: examples/vggt-human-prior-survey/route_specs/modal_sparseconv_v0.yaml
 

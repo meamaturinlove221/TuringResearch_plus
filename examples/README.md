@@ -1,6 +1,6 @@
-# TuringResearch Plus Examples
+# TuringResearch Examples
 
-These examples are end-to-end dry-run fixtures for the TuringResearch Plus `v0.1.0` release candidate. They do not require real network access, a Semantic Scholar key, an Apify token, or large private PDF files.
+These examples are end-to-end dry-run fixtures for the TuringResearch `v0.1.0` release candidate. They do not require real network access, a Semantic Scholar key, an Apify token, or large private PDF files.
 
 ## Examples
 

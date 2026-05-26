@@ -12,7 +12,7 @@ FIXTURE = Path("examples") / "vggt-human-prior-survey" / "handoff_bundle_fixture
 def test_vggt_handoff_fixture_manifest_is_review_only() -> None:
     manifest = manifest_from_yaml((FIXTURE / "handoff_manifest.yaml").read_text(encoding="utf-8"))
 
-    assert manifest.project_name == "TuringResearch Plus"
+    assert manifest.project_name == "TuringResearch"
     assert manifest.manual_review_required is True
     assert "requires-human-review" in {str(item) for item in manifest.status_labels}
     assert manifest.omitted_files

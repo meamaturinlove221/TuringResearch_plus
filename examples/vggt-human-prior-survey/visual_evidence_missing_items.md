@@ -1,7 +1,7 @@
 # VGGT Visual Evidence Missing Items
 
 Round: 39B
-Project: TuringResearch Plus
+Project: TuringResearch
 
 These missing items are non-fatal for the local dry-run. They block advisor-ready
 visual proof and must not be replaced by inferred or fabricated conclusions.

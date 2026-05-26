@@ -2,7 +2,7 @@
 
 Status: public-safe draft / requires human review.
 
-This case study demonstrates how TuringResearch Plus organized a VGGT
+This case study demonstrates how TuringResearch organized a VGGT
 human-prior research workflow. It is not a VGGT experiment source repository
 and does not claim experiment success.
 
@@ -16,7 +16,7 @@ This draft is public-demo material, not a final research result.
 
 ## Why TuringResearch Was Useful
 
-TuringResearch Plus organized evidence states, artifacts, visual readiness,
+TuringResearch organized evidence states, artifacts, visual readiness,
 routes, related work, advisor notes, and public communication boundaries into
 reviewable artifacts.
 

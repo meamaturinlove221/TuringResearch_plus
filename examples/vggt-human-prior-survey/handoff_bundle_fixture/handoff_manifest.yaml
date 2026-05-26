@@ -1,6 +1,6 @@
 {
   "bundle_id": "handoff_bundle_fixture",
-  "project_name": "TuringResearch Plus",
+  "project_name": "TuringResearch",
   "source_machine_label": "fixture-vggt-machine",
   "export_time": "2026-05-20T00:00:00Z",
   "bundle_type": "run_review",
@@ -8,8 +8,8 @@
     {
       "relative_path": "HANDOFF_README.md",
       "included": true,
-      "sha256": "a6ea78900a61069e3a3ee0e8484281e8c3f976623d63fb1698743a93f94a0a85",
-      "file_size": 399,
+      "sha256": "fbf1d344b66789ad1fc7c56531224719ce57082823c643ea7ddac37519587baf",
+      "file_size": 394,
       "omitted_reason": null,
       "safety_warnings": []
     },

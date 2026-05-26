@@ -1,4 +1,4 @@
-# TuringResearch Plus Troubleshooting
+# TuringResearch Troubleshooting
 
 ## Package Import Fails
 
@@ -62,4 +62,4 @@ Default tests use temporary directories where possible. For manual local smoke r
 
 ## Package Is Not On PyPI
 
-TuringResearch Plus `v0.1.0` release preparation validates local packaging only. Automatic PyPI publication is outside the `v0.1.0` scope.
+TuringResearch `v0.1.0` release preparation validates local packaging only. Automatic PyPI publication is outside the `v0.1.0` scope.

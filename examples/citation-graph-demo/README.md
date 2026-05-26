@@ -1,4 +1,4 @@
-# TuringResearch Plus Example: Citation Graph Demo
+# TuringResearch Example: Citation Graph Demo
 
 Mode: fake adapter.
 

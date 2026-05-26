@@ -6,7 +6,7 @@ Index mode: metadata-only, no artifact copy
 
 This index records lightweight local file evidence from the VGGT desktop
 freshness recheck. It intentionally uses redacted evidence labels instead of
-machine paths and does not copy VGGT artifacts into TuringResearch Plus.
+machine paths and does not copy VGGT artifacts into TuringResearch.
 
 ## Root Candidates
 
@@ -53,6 +53,6 @@ machine paths and does not copy VGGT artifacts into TuringResearch Plus.
 
 ## Large Artifact Handling
 
-- planned: large arrays, point clouds, archives, raw datasets, checkpoints, and restricted body-model files remain outside TuringResearch Plus.
+- planned: large arrays, point clouds, archives, raw datasets, checkpoints, and restricted body-model files remain outside TuringResearch.
 - local-observed: local metadata can describe hashes, sizes, or omitted payload categories.
 - requires-human-review: any selected public asset must pass claim safety, privacy, and maintainer review before inclusion.

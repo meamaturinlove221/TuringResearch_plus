@@ -1,8 +1,8 @@
-# TuringResearch Plus One-Page Portfolio
+# TuringResearch One-Page Portfolio
 
 ## What It Is
 
-TuringResearch Plus is a local-first Research OS for evidence-led research
+TuringResearch is a local-first Research OS for evidence-led research
 workflows. It helps organize evidence, artifacts, routes, paper review,
 dashboards, advisor packs, plugins, privacy gates, and replay checks.
 

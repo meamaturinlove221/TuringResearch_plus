@@ -10,7 +10,7 @@ Status legend: `observed`, `local-observed`, `planned`, `fake-data`,
 
 
 
-Round 34 plans how TuringResearch Plus will dogfood against the local VGGT /
+Round 34 plans how TuringResearch will dogfood against the local VGGT /
 
 SMPL-X human-prior and feature-adapter line. It does not run VGGT, does not
 
@@ -30,7 +30,7 @@ does not make promotion decisions.
 
 | Research pivot | observed | Move from SMPL-X direct replacement / patch completion to SMPL-X feature encoding that VGGT can consume. |
 
-| Dogfooding goal | planned | Use TuringResearch Plus to organize local evidence, literature questions, hypotheses, and Round 35 sprint selection. |
+| Dogfooding goal | planned | Use TuringResearch to organize local evidence, literature questions, hypotheses, and Round 35 sprint selection. |
 
 | Paper conclusion | requires-real-paper | No real paper conclusion is claimed in this plan. |
 

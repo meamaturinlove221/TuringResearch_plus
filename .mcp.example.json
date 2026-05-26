@@ -4,7 +4,7 @@
   "status": "public-safe-template",
   "mcpServers": {
     "turingresearch-plus": {
-      "description": "TuringResearch Plus local-first MCP server. Fake/default mode is safe without API keys.",
+      "description": "TuringResearch local-first MCP server. Compatibility server key and command keep the existing package suffix. Fake/default mode is safe without API keys.",
       "command": "turingresearch-plus-mcp",
       "args": ["--manifest"],
       "env": {

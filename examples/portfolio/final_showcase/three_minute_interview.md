@@ -1,10 +1,10 @@
 # Three-minute Interview Version
 
-TuringResearch Plus is a portfolio-scale engineering project for research
+TuringResearch is a portfolio-scale engineering project for research
 workflow management.
 
 The problem is that research state gets scattered across papers, notes,
-artifacts, experiments, dashboards, and advisor feedback. TuringResearch Plus
+artifacts, experiments, dashboards, and advisor feedback. TuringResearch
 turns that into explicit local state: evidence ledgers, artifact audits, route
 DSL, paper scaffolds, advisor packs, dashboards, plugin manifests, privacy
 gates, and replay checks.

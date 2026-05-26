@@ -4,7 +4,7 @@ round: 335
 deployment_performed: false
 public_url: none
 requires_human_review: true
-dist_root: E:/TuringResearch/TuringResearch_plus/docs-site/dist
+dist_root: docs-site/dist
 build_status: pass_with_warnings
 files:
   - path: case-study-gallery.html

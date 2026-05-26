@@ -3,7 +3,7 @@
 Status: demo only.
 
 This directory contains fake, public-safe examples that demonstrate
-TuringResearch Plus workflows without exposing private data.
+TuringResearch workflows without exposing private data.
 
 ## Demo Coverage
 

@@ -3,7 +3,7 @@
 Source status: fake-or-manual-note / requires-real-paper-review.
 
 This fixture is a local method-card test sample. It does not claim that
-TuringResearch Plus has fully read the NeuralBody paper.
+TuringResearch has fully read the NeuralBody paper.
 
 core method: Neural human rendering method note for testing structured method
 card extraction.

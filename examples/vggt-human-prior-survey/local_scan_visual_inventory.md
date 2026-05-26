@@ -17,7 +17,7 @@ Inventory mode: metadata-only, no image or pointcloud analysis
 ## Notes
 
 - observed: image files were not opened or interpreted in this round.
-- observed: pointcloud, ply, and npz files were not copied into TuringResearch Plus.
+- observed: pointcloud, ply, and npz files were not copied into TuringResearch.
 - local-observed: V44 and V32 reports provide visual-gate and point-review file evidence.
 - requires-human-review: any advisor-facing pack must still distinguish proxy heatmaps, rendered boards, and true region pointcloud closeups.
 - missing: no explicit `split_ready/turingresearch-vggt-case` visual package marker was found.

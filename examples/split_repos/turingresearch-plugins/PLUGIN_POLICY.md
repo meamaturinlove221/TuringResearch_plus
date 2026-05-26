@@ -43,6 +43,6 @@ This policy applies to the future `turingresearch-plugins` split candidate.
 
 ## Flagship Boundary
 
-The main TuringResearch Plus repository keeps the core plugin framework and
+The main TuringResearch repository keeps the core plugin framework and
 policy implementation. This skeleton is a catalog and contribution surface
 only.
