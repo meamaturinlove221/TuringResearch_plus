@@ -4,7 +4,7 @@ from turing_research_plus.artifact_audit.auditor import audit_artifacts
 from turing_research_plus.artifact_audit.models import ArtifactAuditInput, ArtifactSafetyFlag
 
 
-def test_artifact_audit_from_empty_vggt_local_scan() -> None:
+def test_artifact_audit_from_metadata_only_vggt_local_scan() -> None:
     report = audit_artifacts(
         ArtifactAuditInput(
             source_path=Path("examples")
@@ -13,8 +13,13 @@ def test_artifact_audit_from_empty_vggt_local_scan() -> None:
         )
     )
 
-    assert report.records == []
-    assert "Artifact audit found no artifact records." in report.warnings
+    paths = {record.path for record in report.records}
+
+    assert "VGGT parent workspace" in paths
+    assert "Candidate" not in paths
+    assert report.included_count == len(report.records)
+    assert ArtifactSafetyFlag.LOCAL_ONLY in report.safety_flags
+    assert "Artifact audit found no artifact records." not in report.warnings
 
 
 def test_artifact_audit_does_not_read_private_vggt_paths(tmp_path: Path) -> None:

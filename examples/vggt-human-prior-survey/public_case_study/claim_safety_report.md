@@ -24,6 +24,12 @@ Round: Optional 338.5 integrated on newer cloud baseline
 - No claim may state advisor approval or promotion.
 - No claim may include private paths, raw data identifiers, SMPL-X model-file details, or huge artifact filenames.
 
+## Unsupported Experiment Claims
+
+- Do not claim experiment success from metadata-only local scan records.
+- Do not claim SparseConv3D success from V120/V121 goal manifests.
+- Do not claim advisor visual readiness without full-scene RGB pointcloud evidence.
+
 ## Current Decision
 
 The case study is safe as a draft and unsafe as a final public release. The next action is human review, not automatic promotion.

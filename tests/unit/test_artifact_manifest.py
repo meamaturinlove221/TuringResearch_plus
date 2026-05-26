@@ -10,13 +10,17 @@ def test_infer_file_type() -> None:
     assert infer_file_type("unknown.bin") == ArtifactFileType.UNKNOWN
 
 
-def test_markdown_index_with_no_artifacts_reports_warning() -> None:
+def test_markdown_index_with_metadata_records_is_local_only() -> None:
     manifest = load_manifest_like_index(
         Path("examples") / "vggt-human-prior-survey" / "local_scan_artifact_index.md"
     )
 
-    assert manifest.records == []
-    assert "No artifacts were scanned" in manifest.warnings[0]
+    paths = {record.path for record in manifest.records}
+
+    assert "VGGT parent workspace" in paths
+    assert "Candidate" not in paths
+    assert all(record.safety_flags for record in manifest.records)
+    assert manifest.warnings == []
 
 
 def test_json_manifest_records(tmp_path: Path) -> None:

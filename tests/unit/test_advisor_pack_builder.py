@@ -34,7 +34,8 @@ def test_build_advisor_pack_blocks_visual_readiness() -> None:
     assert any("SMPL-X feature encoding" in item for item in pack.what_changed_since_last_update)
     assert any("V260 is hard-blocked" in claim for claim in pack.not_ready_claims)
     assert any("SparseConv3D success is not complete" in claim for claim in pack.not_ready_claims)
-    assert any("local_scan_evidence_ledger.json" in item for item in pack.missing_inputs)
+    assert not any("local_scan_evidence_ledger.json" in item for item in pack.missing_inputs)
+    assert any("Full body" in item for item in pack.blockers)
     assert "direct SMPL-X replacement" in pack.current_route_summary
 
 

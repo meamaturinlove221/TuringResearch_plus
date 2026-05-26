@@ -49,8 +49,9 @@ def test_vggt_sprint1_end_to_end_fake_flow(tmp_path: Path) -> None:
     artifact_report = audit_artifacts(
         ArtifactAuditInput(source_path=ROOT / "local_scan_artifact_index.md")
     )
-    assert artifact_report.records == []
-    assert "No artifacts were scanned" in " ".join(artifact_report.warnings)
+    assert artifact_report.records
+    assert "VGGT parent workspace" in {record.path for record in artifact_report.records}
+    assert ArtifactSafetyFlag.LOCAL_ONLY in artifact_report.safety_flags
 
     manifest = tmp_path / "manifest.json"
     manifest.write_text(

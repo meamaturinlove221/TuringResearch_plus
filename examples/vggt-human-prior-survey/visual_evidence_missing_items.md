@@ -8,10 +8,11 @@ visual proof and must not be replaced by inferred or fabricated conclusions.
 
 | Missing item | Status | Impact |
 | --- | --- | --- |
-| `examples/vggt-human-prior-survey/local_project_links.yaml` | missing | The private local config is absent, so no VGGT project path was read. |
-| `examples/vggt-human-prior-survey/local_scan_visual_inventory.md` | missing | Visual evidence cannot be classified. |
-| `examples/vggt-human-prior-survey/local_scan_evidence_ledger.json` | missing | Visual claims cannot be tied to local ledger rows. |
-| Board inventory | missing | `local_scan_artifact_index.md` reports no scanned artifacts. |
+| Machine-local private config | missing | The private local config is absent, so no VGGT project path was read. |
+| Full-scene RGB pointcloud board | missing | Required as the mentor main visual evidence. |
+| Same-scene VGGT baseline / adapter / controls board | missing | Required before advisor visual readiness. |
+| Viewer-openable full-scene pointcloud artifact | missing | Required before pointcloud morphology can be inspected. |
+| Board inventory | metadata-only | `local_scan_artifact_index.md` records lightweight report metadata only. |
 | Full-body visual evidence | missing | Required for advisor visual readiness. |
 | Hairline visual evidence | missing | Required because hairline regression is a known risk. |
 | Hand close-up visual evidence | missing | Required because hand quality is a known failure area. |
@@ -23,6 +24,7 @@ visual proof and must not be replaced by inferred or fabricated conclusions.
 - Delta boards without provenance.
 - Heatmaps or proxy visualizations without a true visual evidence level.
 - Any absent board file.
+- Metadata-only report references without the underlying full-scene RGB pointcloud.
 
 ## Required Before Promotion
 

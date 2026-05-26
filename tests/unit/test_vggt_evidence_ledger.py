@@ -22,7 +22,8 @@ def test_build_default_ledger_keeps_v120_v121_human_review() -> None:
 
     assert ledger.row_for("V120").status == VGGTEvidenceStatus.REQUIRES_HUMAN_REVIEW
     assert ledger.row_for("V121").status == VGGTEvidenceStatus.REQUIRES_HUMAN_REVIEW
-    assert "local_scan_evidence_ledger.json" in " ".join(ledger.missing_inputs)
+    assert "local_scan_evidence_ledger.json" not in " ".join(ledger.missing_inputs)
+    assert ledger.row_for("V120").blockers
 
 
 def test_v999_sparseconv3d_success_is_not_enough_evidence() -> None:

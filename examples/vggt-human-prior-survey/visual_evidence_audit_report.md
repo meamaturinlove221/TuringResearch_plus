@@ -12,27 +12,27 @@ not run VGGT code, does not use network access, and does not infer image content
 
 | Input | Status | Notes |
 | --- | --- | --- |
-| `local_project_links.yaml` | missing | Private machine-local config is not committed. No VGGT project path was read. |
-| `local_scan_visual_inventory.md` | missing | No visual inventory is available for board or close-up classification. |
-| `local_scan_artifact_index.md` | local-observed | Present, but it says no artifacts were scanned in this dry run. |
-| `local_scan_evidence_ledger.json` | missing | No local JSON evidence ledger is available. |
+| Machine-local private config | missing | Private machine-local config is not committed. No VGGT project path was read. |
+| `local_scan_visual_inventory.md` | local-observed-metadata-only | Present, but it records metadata only and does not inspect image or pointcloud content. |
+| `local_scan_artifact_index.md` | local-observed | Present as lightweight metadata; no image, pointcloud, raw data, or model artifact was copied. |
+| `local_scan_evidence_ledger.json` | local-observed | Present, but it preserves `requires-human-review` boundaries for V120/V121 and promotion. |
 
 ## Visual Evidence Gate
 
 | Gate | Status | Reason |
 | --- | --- | --- |
-| Board inventory available | missing | `local_scan_artifact_index.md` contains no scanned artifacts. |
-| Visual inventory available | missing | `local_scan_visual_inventory.md` is absent. |
+| Board inventory available | metadata-only | `local_scan_artifact_index.md` records lightweight report metadata only. |
+| Visual inventory available | metadata-only | `local_scan_visual_inventory.md` exists, but no images or pointclouds were opened or interpreted. |
 | Full body evidence | missing | No full-body reconstruction board or source artifact is listed. |
 | Hairline evidence | missing | No hairline close-up or source artifact is listed. |
 | Hand close-up evidence | missing | No left/right hand close-up or source artifact is listed. |
-| Proxy-only board separation | requires-human-review | No board inventory exists, so proxy-vs-true visual classification cannot be performed. |
+| Proxy-only board separation | requires-human-review | Metadata-only report references cannot classify proxy-vs-true visual content. |
 | Advisor-ready visual proof | blocked | Missing required visual evidence; no advisor-ready visual claim is allowed. |
 
 ## Conservative Findings
 
-- No board file is present in the committed scan outputs.
-- No visual inventory is present.
+- No board file, image, pointcloud, or viewer artifact is present in the committed scan outputs.
+- Visual inventory is metadata-only; it does not provide full-scene RGB pointcloud proof.
 - No visual item can be promoted to `local-observed`.
 - Root candidate path observations in `local_scan_summary.md` are engineering
   context only; they are not visual evidence.
@@ -49,8 +49,8 @@ evidence.
 
 ## Next Actions
 
-1. Provide machine-local `local_project_links.yaml` on the VGGT computer only.
-2. Run the read-only local scanner to produce `local_scan_visual_inventory.md`.
+1. Provide machine-local private config on the VGGT computer only.
+2. Produce or attach a true full-scene RGB pointcloud inventory entry for human review.
 3. Ensure any board inventory distinguishes mask/delta/proxy boards from true
    pointcloud close-ups.
 4. Require full body, hairline, and hand close-up evidence before advisor visual

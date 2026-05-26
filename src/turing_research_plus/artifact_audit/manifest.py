@@ -89,6 +89,8 @@ def _load_markdown_index(path: Path) -> ArtifactBundleManifest:
         cells = [cell.strip() for cell in stripped.strip("|").split("|")]
         if not cells or not cells[0]:
             continue
+        if _looks_like_markdown_header(cells[0]):
+            continue
         record_path = cells[0].strip("`")
         included = len(cells) < 4 or cells[3].lower() not in {"false", "no", "omitted"}
         omitted_reason = None if included else "marked omitted in local scan index"
@@ -106,3 +108,14 @@ def _load_markdown_index(path: Path) -> ArtifactBundleManifest:
         source=str(path),
         records=records,
     )
+
+
+def _looks_like_markdown_header(first_cell: str) -> bool:
+    normalized = first_cell.strip().strip("`").lower()
+    return normalized in {
+        "candidate",
+        "class",
+        "evidence class",
+        "input",
+        "visual evidence",
+    }

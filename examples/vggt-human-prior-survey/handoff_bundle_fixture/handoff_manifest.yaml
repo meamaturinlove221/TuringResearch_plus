@@ -8,32 +8,32 @@
     {
       "relative_path": "HANDOFF_README.md",
       "included": true,
-      "sha256": "a6ea78900a61069e3a3ee0e8484281e8c3f976623d63fb1698743a93f94a0a85",
-      "file_size": 399,
+      "sha256": "aae3fd83de6ad0a2803887b076dd829e3fa2020afe0b91b9b44b2f8bb71c168e",
+      "file_size": 409,
       "omitted_reason": null,
       "safety_warnings": []
     },
     {
       "relative_path": "advisor_summary.md",
       "included": true,
-      "sha256": "1f1415006bf2dac7f07fa8394ee75793e801bd0fa378bc604a8c6db9a2d94a15",
-      "file_size": 217,
+      "sha256": "deae941aa45522534488bdee5fbc5c131bd73b61ff455fb344efdb1da95d765f",
+      "file_size": 223,
       "omitted_reason": null,
       "safety_warnings": []
     },
     {
       "relative_path": "ranked_candidates.csv",
       "included": true,
-      "sha256": "474dd3e4844e47d36c430503e6cf2753af0dc8d9c988b9ca7fa6e420406fdc61",
-      "file_size": 95,
+      "sha256": "0db1cc79745ed0975bbadd7f662e2775f1279130640c18a501b3c46b52657c29",
+      "file_size": 97,
       "omitted_reason": null,
       "safety_warnings": []
     },
     {
       "relative_path": "run_summary.json",
       "included": true,
-      "sha256": "fabe580c655e0ff9e1bcb39c23ce23c94f1e56763106e0ed13813761fde615a3",
-      "file_size": 185,
+      "sha256": "c5aa7f2241e3b47f5e0d9e30758dc3ec5dea3dbbf8b4e8c6472c4f1f0988b7fb",
+      "file_size": 191,
       "omitted_reason": null,
       "safety_warnings": []
     }

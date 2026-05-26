@@ -7,24 +7,24 @@
   "vggt_code_run": false,
   "vggt_project_modified": false,
   "inputs": {
-    "local_project_links.yaml": "missing",
-    "local_scan_visual_inventory.md": "missing",
+    "machine_local_private_config": "missing",
+    "local_scan_visual_inventory.md": "local-observed-metadata-only",
     "local_scan_artifact_index.md": "local-observed",
-    "local_scan_evidence_ledger.json": "missing"
+    "local_scan_evidence_ledger.json": "local-observed"
   },
   "required_visual_evidence": {
     "full_body": "missing",
     "hairline": "missing",
     "hand_close_up": "missing"
   },
-  "board_inventory_status": "missing",
-  "visual_inventory_status": "missing",
+  "board_inventory_status": "metadata-only",
+  "visual_inventory_status": "metadata-only",
   "advisor_ready_visual_proof": false,
   "overall_status": "requires-human-review",
   "blocked_reasons": [
-    "local_scan_visual_inventory.md is missing",
-    "local_scan_artifact_index.md says no artifacts were scanned",
-    "local_scan_evidence_ledger.json is missing",
+    "local_scan_visual_inventory.md is metadata-only and does not inspect image or pointcloud content",
+    "local_scan_artifact_index.md records lightweight metadata only and does not copy artifacts",
+    "local_scan_evidence_ledger.json exists but records requires-human-review boundaries",
     "full body visual evidence is missing",
     "hairline visual evidence is missing",
     "hand close-up visual evidence is missing"

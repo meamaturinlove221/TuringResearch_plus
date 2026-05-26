@@ -21,6 +21,7 @@ def test_vggt_visual_evidence_dry_run_outputs_are_conservative() -> None:
     assert scorecard["required_visual_evidence"]["hairline"] == "missing"
     assert scorecard["required_visual_evidence"]["hand_close_up"] == "missing"
     assert scorecard["claim_boundary"]["sparseconv3d_success"] == "not-enough-evidence"
+    assert scorecard["inputs"]["local_scan_evidence_ledger.json"] == "local-observed"
     assert "blocked" in report
     assert "advisor-ready visual claim is allowed" in report
     assert "Mask boards without provenance" in missing_items
@@ -28,5 +29,5 @@ def test_vggt_visual_evidence_dry_run_outputs_are_conservative() -> None:
 
 def test_vggt_visual_evidence_private_inputs_remain_uncommitted() -> None:
     assert not (EXAMPLE_ROOT / "local_project_links.yaml").exists()
-    assert not (EXAMPLE_ROOT / "local_scan_visual_inventory.md").exists()
-    assert not (EXAMPLE_ROOT / "local_scan_evidence_ledger.json").exists()
+    assert (EXAMPLE_ROOT / "local_scan_visual_inventory.md").exists()
+    assert (EXAMPLE_ROOT / "local_scan_evidence_ledger.json").exists()
