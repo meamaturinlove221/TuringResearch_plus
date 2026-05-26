@@ -1,0 +1,60 @@
+items:
+  - id: neocortica-session-workflow-summary
+    local_path: examples/original-author-showcase/neocortica-session/session_workflow_summary.md
+    upstream_repository: Pthahnix/Neocortica-Session
+    upstream_path: README.md and related session workflow docs
+    upstream_commit: to-be-filled-by-local-migration-pass
+    upstream_url: https://github.com/Pthahnix/Neocortica-Session
+    migration_type: summarized_with_attribution
+    authorization_status: user_reported_authorized_by_original_developer
+    attribution_required: true
+    license_note: preserve upstream license and authorization note before public release
+    public_safety_status: initial_public_safe_summary
+    private_data_risk: low
+    secrets_scan_status: not_applicable_for_summary
+    summary: Session/pod/Git-context workflow summarized as a TuringResearch showcase item.
+
+  - id: neocortica-scholar-tool-surface-summary
+    local_path: examples/original-author-showcase/neocortica-scholar/scholar_tool_surface_summary.md
+    upstream_repository: Pthahnix/Neocortica-Scholar
+    upstream_path: README.md and SKILL/tool surface docs
+    upstream_commit: to-be-filled-by-local-migration-pass
+    upstream_url: https://github.com/Pthahnix/Neocortica-Scholar
+    migration_type: summarized_with_attribution
+    authorization_status: user_reported_authorized_by_original_developer
+    attribution_required: true
+    license_note: preserve upstream license and authorization note before public release
+    public_safety_status: initial_public_safe_summary
+    private_data_risk: low
+    secrets_scan_status: not_applicable_for_summary
+    summary: Scholar MCP/paper-reading workflow summarized as a TuringResearch showcase item.
+
+  - id: neocortica-web-tool-surface-summary
+    local_path: examples/original-author-showcase/neocortica-web/web_tool_surface_summary.md
+    upstream_repository: Pthahnix/Neocortica-Web
+    upstream_path: README.md and web tool docs
+    upstream_commit: to-be-filled-by-local-migration-pass
+    upstream_url: https://github.com/Pthahnix/Neocortica-Web
+    migration_type: summarized_with_attribution
+    authorization_status: user_reported_authorized_by_original_developer
+    attribution_required: true
+    license_note: preserve upstream license and authorization note before public release
+    public_safety_status: initial_public_safe_summary
+    private_data_risk: low
+    secrets_scan_status: not_applicable_for_summary
+    summary: Web fetching/content/Apify workflow summarized as a TuringResearch showcase item.
+
+  - id: yogsoth-research-engine-summary
+    local_path: examples/original-author-showcase/yogsoth-research-engine/research_engine_summary.md
+    upstream_repository: yogsoth-ai/de-anthropocentric-research-engine and related org repositories
+    upstream_path: research catalog / campaign / strategy / workflow docs
+    upstream_commit: to-be-filled-by-local-migration-pass
+    upstream_url: https://github.com/orgs/yogsoth-ai/repositories
+    migration_type: summarized_with_attribution
+    authorization_status: user_reported_authorized_by_original_developer
+    attribution_required: true
+    license_note: preserve upstream license and authorization note before public release
+    public_safety_status: initial_public_safe_summary
+    private_data_risk: low
+    secrets_scan_status: not_applicable_for_summary
+    summary: Campaign/catalog/vault/stress/convergence research engine ideas summarized as a TuringResearch showcase item.
