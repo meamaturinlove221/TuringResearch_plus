@@ -6218,3 +6218,44 @@ Validation:
 - Name integrity passed.
 - Privacy gate passed.
 - Pre-push checks passed.
+
+## Round 387 - v1.6 Release Notes
+
+Status: completed.
+
+Summary:
+- Added `docs/v1.6.0-release-notes.md`.
+- Added `docs/v1.6.0-feature-list.md`.
+- Added `docs/v1.6.0-known-limitations.md`.
+- Added `docs/v1.6.0-test-summary.md`.
+- Added `docs/v1.6.0-upgrade-guide.md`.
+- Added `docs/github-release-draft-v1.6.0.md`.
+- Updated `CHANGELOG.md`.
+- Updated `VERSION` to `1.6.0rc0`.
+- Added `lanes/365_v1.6_release_notes.md`.
+
+Feature list:
+- docs deployment ready;
+- GitHub Pages workflow draft;
+- split repo creation packs;
+- optional live smoke;
+- live output redaction gate;
+- packaging readiness;
+- release artifact build;
+- dashboard / demo asset pack;
+- public launch checklist.
+
+Safety:
+- No automatic release.
+- No tag.
+- No GitHub release publication.
+- No PyPI publication.
+- No GitHub Pages deployment.
+- No split repository creation.
+- No live provider execution.
+- No ARIS implementation.
+
+Validation:
+- Release docs updated.
+- CHANGELOG / VERSION updated.
+- Pre-push checks passed.

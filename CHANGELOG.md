@@ -4,6 +4,49 @@ All notable changes to TuringResearch are documented in this file.
 
 The format follows Keep a Changelog style.
 
+## [1.6.0-rc] - 2026-05-26
+
+### Added
+
+- Docs deployment ready package.
+- GitHub Pages workflow draft.
+- Split repo creation packs.
+- Optional live smoke.
+- Live output redaction gate.
+- Packaging readiness.
+- Release artifact build.
+- Dashboard / demo asset pack.
+- Public launch checklist.
+- v1.6 full regression.
+
+### Changed
+
+- Public release-facing name is TuringResearch.
+- Package version marker advanced to `1.6.0rc0`.
+- Release docs now separate human launch decisions for tag, GitHub release,
+  PyPI, GitHub Pages, and split repository creation.
+- Package distribution and Python import compatibility names remain stable
+  pending maintainer package-name decisions.
+
+### Fixed
+
+- README release-candidate wording now preserves historical safety anchors while
+  keeping TuringResearch as the public project name.
+- VGGT handoff fixture manifest hash now matches the committed fixture README.
+
+### Known limitations
+
+- ARIS remains deferred.
+- No public docs deployment is performed.
+- No real public URL is written.
+- No Git tag is created automatically.
+- No GitHub release is published automatically.
+- No PyPI package is published automatically.
+- No child repository is created automatically.
+- No live provider is run by default.
+- No remote command execution is enabled.
+- No automatic experiment execution is included.
+
 ## [1.5.0-rc] - 2026-05-22
 
 ### Added
