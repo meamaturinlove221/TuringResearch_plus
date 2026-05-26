@@ -3,6 +3,9 @@
 Status: public-safe draft / requires human review
 Round: Optional 338.5 integrated on newer cloud baseline
 
+- Sanitized: `true`
+- Requires human review: `true`
+
 ## Redaction Rules Applied
 
 | Rule | Status | Notes |

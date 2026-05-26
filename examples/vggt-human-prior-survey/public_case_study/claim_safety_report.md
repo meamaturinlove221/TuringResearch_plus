@@ -3,6 +3,9 @@
 Status: public-safe draft / requires human review
 Round: Optional 338.5 integrated on newer cloud baseline
 
+- Safe to publish: `true`
+- Requires human review: `true`
+
 ## Claim Inventory
 
 | Claim area | Status | Allowed wording | Blocked wording |

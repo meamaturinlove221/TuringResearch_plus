@@ -7,7 +7,7 @@ Public demo only: true
 
 ## Safety Notice
 
-This draft is documentation-only. It does not include raw data, SMPL-X model files, private machine paths, huge artifacts, experiment archives, or copied VGGT outputs.
+This draft is documentation-only. It does not include source datasets, SMPL-X model files, private machine paths, huge artifacts, experiment archives, or copied VGGT outputs.
 
 ## Problem Background
 
