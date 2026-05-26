@@ -136,7 +136,3 @@ Each example has `input/`, `expected_outputs/`, `fake_run_config.yaml`, and work
 ## Roadmap
 
 `v0.1.0` focuses on local contracts, dry-run workflows, fake adapters, examples, CI, and release readiness. Future work can add live adapters, richer PDF parsing, heavier workflow automation, public package publishing, and production deployment after the current contracts remain stable.
-
-## References
-
-TulingResearch Plus is inspired by public research-tooling ideas and workflow patterns, including Neocortica and Yogsoth AI references. They are references only; this project, packages, MCP server, tools, skills, and documentation use the TulingResearch naming system.
