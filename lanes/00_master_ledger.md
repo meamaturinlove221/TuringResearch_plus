@@ -6257,3 +6257,44 @@ Safety:
 Validation:
 - Workflow config tests passed.
 - Pre-push checks passed.
+
+## Round 382 - Package / Docs / Split Integration Gate
+
+Status: completed.
+
+Summary:
+- Added `docs/v1.6.0-package-docs-split-integration-report.md`.
+- Added `tests/workflow/test_v1_6_package_docs_split_integration.py`.
+- Added `lanes/360_package_docs_split_integration_gate.md`.
+- Integrated docs deployment readiness, split manual packs, package readiness,
+  install smoke, and release artifact manifest readiness.
+
+Gate decision:
+- GO FOR V1.6 PUBLIC RELEASE EXECUTION REVIEW.
+- NO-GO FOR AUTOMATIC PUBLICATION.
+
+Required checks:
+- docs bundle pass;
+- split manual pack pass;
+- package metadata pass;
+- install smoke pass;
+- release artifact manifest pass;
+- no secrets;
+- no raw data;
+- no fake URL.
+
+Safety:
+- No PyPI publish.
+- No GitHub release publish.
+- No tag creation.
+- No docs deployment.
+- No child repository creation.
+- No external child repository push.
+- No private data upload.
+- No raw data upload.
+- No unsupported research-success claim.
+
+Validation:
+- Integration tests passed.
+- Privacy gate passed.
+- Pre-push checks passed.
