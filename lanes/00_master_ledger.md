@@ -5774,3 +5774,40 @@ Validation:
 - Compliance focused gate passed with 15 tests.
 - `python -m ruff check .` passed.
 - `git diff --check` passed with only LF-to-CRLF working-copy warning.
+
+## Round 368 - VGGT Case Repo Creation Pack
+
+Status: completed.
+
+Summary:
+- Added `split_manual/turingresearch-vggt-case/FINAL_CREATE_REPO.md`.
+- Added `split_manual/turingresearch-vggt-case/FINAL_PUSH_COMMANDS.md`.
+- Added `split_manual/turingresearch-vggt-case/FINAL_RELEASE_CHECKLIST.md`.
+- Added `split_manual/turingresearch-vggt-case/FINAL_PRIVACY_CHECK.md`.
+- Added `docs/vggt-case-repo-creation-pack-final.md`.
+- Added `tests/workflow/test_vggt_case_repo_creation_pack.py`.
+- Added `lanes/346_vggt_case_repo_creation_pack.md`.
+- Finalized the human-only creation pack for the optional
+  `turingresearch-vggt-case` child repository.
+
+Creation metadata:
+- repo name suggestion: `turingresearch-vggt-case`;
+- initial branch: `main`;
+- initial commit message: `Initial public-safe VGGT case study`;
+- remote URL placeholder: `<approved-real-repository-url>`;
+- main TuringResearch repository remains the flagship.
+
+Safety:
+- No GitHub repository was created.
+- No external child repository was pushed.
+- No `git init` was run.
+- No real URL was inserted.
+- No raw data or restricted model payload was copied.
+- No private path, secret, fake URL, or unsupported claim was added.
+- No VGGT or SparseConv3D success claim was added.
+
+Validation:
+- Creation pack and split safety tests passed with 20 tests.
+- v1.5 security/privacy and public release hygiene tests passed with 18 tests.
+- `python -m ruff check .` passed.
+- `git diff --check` passed.
