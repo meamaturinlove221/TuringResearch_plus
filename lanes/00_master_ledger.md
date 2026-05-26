@@ -6374,3 +6374,34 @@ Safety:
 Validation:
 - Final smoke tests passed.
 - Pre-push checks passed.
+
+## Round 391 - v390 Repo State Reconcile
+
+Status: completed.
+
+Summary:
+- Confirmed current branch is `release/v1.6.0-rc`.
+- Confirmed local `release/v1.6.0-rc` matches `origin/release/v1.6.0-rc`.
+- Confirmed Round 390 HEAD `92e74ef` is pushed to the release branch.
+- Confirmed Round 390 handoff files exist locally.
+- Confirmed `origin/main` has separate README/community-intake commits.
+- Confirmed PR #2 branch is an ancestor of `origin/main`.
+- Confirmed PR #1 branch is not an ancestor of `origin/main`.
+- Added `docs/round391-v390-repo-state-reconcile.md`.
+- Added `docs/v1.6.0-github-sync-status.md`.
+- Added `docs/open-pr-integration-status.md`.
+- Added `lanes/391_v390_repo_state_reconcile.md`.
+
+Decision:
+- No PR merge.
+- No public/private change.
+- No release action.
+- Push this reconciliation report to `release/v1.6.0-rc`.
+
+Recommendation:
+- Keep v1.6 handoff on `release/v1.6.0-rc`.
+- Review PR #1 separately before merge.
+- Treat PR #2 as merged into `origin/main` from git ancestry, but review main
+  changes before release-line integration.
+- Decide separately whether to merge or cherry-pick release handoff content into
+  `main`.
