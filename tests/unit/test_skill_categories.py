@@ -11,7 +11,9 @@ ROOT = Path(__file__).resolve().parents[2]
 def test_skill_categories_are_allowed_values() -> None:
     index = build_skill_marketplace_index(ROOT / ".agents" / "skills")
 
-    assert {entry.category for entry in index.entries}.issubset(set(SkillMarketCategory))
+    allowed = {category.value for category in SkillMarketCategory}
+
+    assert {entry.category for entry in index.entries}.issubset(allowed)
 
 
 def test_skill_categories_include_core_marketplace_axes() -> None:
