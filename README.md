@@ -1,56 +1,56 @@
 # TuringResearch
 
-Local-first Research OS infrastructure for keeping evidence, artifacts, routes,
-paper notes, dashboards, plugins, and release gates reviewable.
-
-TuringResearch is not an autonomous scientist. It is a fake/demo-first,
-privacy-first Research OS for humans who need complex research projects to stay
-auditable.
+Local-first Research OS infrastructure for keeping research evidence, artifacts,
+routes, paper notes, dashboards, plugins, and release gates reviewable.
 
 TuringResearch helps researchers keep complex research state auditable without
-pretending to automate judgment.
+pretending to automate judgment. It is fake/demo-first by default, privacy-first
+by design, and built for human review.
 
-TuringResearch is fake/demo-first by default. Live adapters are optional and
-disabled by default.
+TuringResearch is fake/demo-first by default.
+
+It is not an autonomous scientist, not a hosted SaaS product, not a final-paper
+generator, and not proof that any VGGT or SparseConv3D experiment succeeded.
 
 ```text
 Default mode: fake/local
 Live mode: optional, private, and disabled by default
 Remote execution: disabled by default
 Evidence updates: require human review
+Public release actions: require maintainer approval
 ```
 
 Start here:
 
-- [`docs/v1.0.0-quickstart.md`](docs/v1.0.0-quickstart.md)
-- [`docs/v1.0.0-public-demo-walkthrough.md`](docs/v1.0.0-public-demo-walkthrough.md)
-- [`docs/README.md`](docs/README.md)
-- [`docs/v1.1.0-final-scope.md`](docs/v1.1.0-final-scope.md)
+- [Quickstart](docs/quickstart.md)
+- [Public demo walkthrough](docs/v1.0.0-public-demo-walkthrough.md)
+- [Docs index](docs/docs-index.md)
+- [Public showcase](docs/public-showcase.md)
+- [Original repo parity dashboard](docs/original-repo-parity-dashboard-v2.md)
+- [v1.6 final handoff](docs/v1.6.0-handoff.md)
 
 ## What Is TuringResearch?
 
-TuringResearch helps organize research work as typed, reviewable state:
+TuringResearch organizes research work as typed, reviewable local state:
 
 - what is planned;
 - what has evidence;
 - what is missing;
 - which artifacts are safe to share;
-- which routes are blocked;
-- which claims still need human review.
+- which experiment routes are blocked;
+- which paper, web, and advisor claims still need human review.
 
-It combines local workflows, docs, contracts, demos, and static dashboards so a
-research project can be inspected without pretending that software has finished
-the science.
+The goal is not to make software declare research complete. The goal is to keep
+research work inspectable, replayable, and honest while humans make the
+scientific decisions.
 
 ## Why It Exists
-
-## Problem
 
 Research projects often spread across notebooks, papers, run folders, remote
 machines, advisor notes, dashboards, and half-remembered claims. The hard part
 is not just generating more text. The hard part is keeping the work honest.
 
-TuringResearch exists to make these boundaries explicit:
+TuringResearch makes these boundaries explicit:
 
 - planned work is not observed evidence;
 - fake/demo output is not a research result;
@@ -80,17 +80,10 @@ flowchart TD
     L --> M[Privacy, security, replay, and release gates]
 ```
 
-The repository is intentionally local-first. The default path should run
-without API keys, live network access, Modal, SSH/SFTP, private project
-folders, raw datasets, or restricted body-model files.
+The default path should run without API keys, live network access, Modal,
+SSH/SFTP, private project folders, raw datasets, or restricted body-model files.
 
-## Visual Tour
-
-The visual tour is the public demo, architecture diagram, static dashboard, and
-parity showcase material. These assets explain the workflow; they are not
-experiment evidence.
-
-## Core Capabilities
+## Core Modules
 
 | Area | What it does | Default boundary |
 | --- | --- | --- |
@@ -105,12 +98,6 @@ experiment evidence.
 | Dashboard | Static local HTML/Markdown views and public demo surfaces | no hosted service required |
 | MCP / plugins | Local MCP config, plugin manifests, compatibility reports | plugin/live tools disabled by default |
 | Privacy and release gates | Secret scans, name integrity, replay, regression checks | public-safe review first |
-
-## Core Modules
-
-The core modules are implemented as local Python packages plus docs, examples,
-contracts, dashboards, and replay tests. They are designed to be inspected and
-extended in small pieces instead of hidden behind a hosted service.
 
 ## Quickstart
 
@@ -127,7 +114,8 @@ python -m pytest -q
 python -m mypy src
 ```
 
-Default tests use fake services, local fixtures, and dry-run workflows. They do not require real API keys or live network access.
+Default tests use fake services, local fixtures, and dry-run workflows.
+They do not require real API keys or live network access.
 
 Try the public-safe quickstart path:
 
@@ -138,11 +126,10 @@ python -m pytest tests/workflow/test_v1_public_quickstart_fake.py -q
 
 Useful entry points:
 
-- [Quickstart](docs/quickstart.md)
-- [v1.0 Public Quickstart](docs/v1.0.0-quickstart.md)
 - [Install guide](docs/install.md)
-- [Docs home](docs/README.md)
+- [Local install smoke](docs/local-install-smoke.md)
 - [Examples](docs/examples.md)
+- [Docs home](docs/README.md)
 
 ## Public Demo
 
@@ -161,40 +148,14 @@ Open or inspect:
 
 The demo shows evidence ledger inspection, artifact review, static dashboards,
 advisor-pack material, and benchmark replay. It does not run real experiments,
-does not generate real research results, and does not turn fake/demo material into observed evidence.
+does not generate real research results, and does not turn fake/demo material
+into observed evidence.
 
-## VGGT Case Study
+## Original Repo Production Parity
 
-The VGGT-style case material is public-safe and demo-oriented. It is useful for
-showing how TuringResearch separates project intent, artifact review, advisor
-notes, and evidence status, but it is not proof that any VGGT experiment succeeded.
-It does not claim SparseConv3D success and does not package raw VGGT data,
-private project paths, or restricted model payloads.
-
-TuringResearch does not claim VGGT experiment success or SparseConv3D success,
-and does not claim VGGT or SparseConv3D experiment success.
-
-## Original Repo Parity
-
-TuringResearch replicated the stable, public, production-relevant ideas from
-the original reference repositories into local fake/default workflows. It did
-not copy unsafe behavior and does not claim live-provider proof.
-
-### v1.3 Original Reference Parity
-
-v1.3 established original reference parity for the public fake/default surface:
-Neocortica Session parity, Neocortica Scholar parity, Neocortica Web parity,
-yogsoth parity, MCP/tool parity, campaign traces, research catalog dashboards,
-and convergence reports. ARIS | deferred and reference-only: no cross-model
-review, no proof-checker, no meta-optimize, and no paper-claim-audit.
-
-### v1.4 Original Repo Production Parity
-
-v1.4 moved the same scope from structural parity into production parity for
-fake/default workflows: Session production parity, Scholar production parity,
-Web production parity, and yogsoth-ai production parity. This keeps no default
-network, no automatic remote execution, and no remote command execution as
-hard boundaries.
+TuringResearch has replicated the stable, public, production-relevant ideas
+from the original reference repositories into local fake/default workflows. It
+does not copy unsafe behavior and does not claim live-provider proof.
 
 | Reference area | Current status | Boundary |
 | --- | --- | --- |
@@ -208,19 +169,73 @@ Read more:
 
 - [Original repo replication progress report](docs/original-repo-replication-progress-report.md)
 - [Original repo replication scorecard](docs/original-repo-replication-scorecard.md)
-- [Reference parity dashboard](docs/reference-parity-dashboard.md)
 - [Original repo production parity summary](docs/original-repo-production-parity-summary.md)
 - [Original repo parity dashboard v2](docs/original-repo-parity-dashboard-v2.md)
 
+## Docs Site Ready
+
+The v1.6 docs site is GitHub Pages-ready for human review, but not deployed.
+
+Ready:
+
+- docs-site preflight;
+- GitHub Pages dry-run workflow draft;
+- local static release bundle;
+- release bundle manifest and hash report;
+- safety checklist and no-fake-URL boundary.
+
+Not implied: a public docs site exists.
+
+See:
+
+- [Docs deployment gate](docs/v1.6.0-docs-deployment-gate-report.md)
+- [Docs release bundle](docs/docs-release-bundle.md)
+- [GitHub Pages workflow draft](docs/github-pages-workflow-draft.md)
+
+## Dashboard Showcase
+
+The dashboard showcase is static/local-first and ready for review. It is not a
+hosted dashboard service and does not run live providers.
+
+Local showcase pages:
+
+- `examples/public_demo/dashboard_showcase/landing.html`
+- `examples/public_demo/dashboard_showcase/parity.html`
+- `examples/public_demo/dashboard_showcase/interview.html`
+
+See:
+
+- [Dashboard UX gate](docs/v1.5.0-dashboard-ux-gate-report.md)
+- [Dashboard landing page](docs/dashboard-landing-page.md)
+- [Parity showcase view](docs/parity-showcase-view.md)
+- [Interview demo view](docs/interview-demo-dashboard-view.md)
+
+## Split Manual Packs
+
+Split repositories are planned / manual-ready only. The main TuringResearch
+repository remains the only install, test, release, docs, issue, and star
+entry. Child repositories, if created later by a human, are optional case/demo
+spokes and must point back to the flagship repository.
+
+Manual pack surfaces:
+
+- `split_ready/`
+- `split_manual/turingresearch-vggt-case/`
+- `split_manual/turingresearch-examples/`
+
+No real GitHub URLs are listed until a maintainer manually creates and approves
+the repositories.
+
+See:
+
+- [Split final safety refresh](docs/split-final-safety-refresh-v1.6.md)
+- [Physical split execution policy](docs/physical-split-execution-policy.md)
+- [Split manual packs](docs/split-manual-packs.md)
+
 ## Fake / Live Boundary
 
-The fake/live boundary is intentionally loud:
-
-- fake/local is the default execution mode;
-- live scholar, web, Apify, SFTP, and plugin behavior require explicit opt-in;
-- live tests are skipped by default;
-- remote command execution is disabled by default;
-- return artifacts require human confirmation before ledger import.
+TuringResearch is fake/local by default. Live providers are private opt-in
+surfaces, not default release behavior.
 
 ## MCP, Plugins, And Optional Live
 
@@ -250,8 +265,8 @@ Live adapters are optional and disabled by default:
 TURINGRESEARCH_MODE=fake
 TURINGRESEARCH_ENABLE_LIVE_TESTS=0
 TURINGRESEARCH_ENABLE_SEMANTIC_SCHOLAR_LIVE=0
-TURINGRESEARCH_ENABLE_APIFY_LIVE=0
 TURINGRESEARCH_ENABLE_WEB_LIVE=0
+TURINGRESEARCH_ENABLE_APIFY_LIVE=0
 TURINGRESEARCH_ENABLE_SFTP_LIVE=0
 TURINGRESEARCH_ENABLE_PLUGINS=0
 TURINGRESEARCH_ENABLE_PLUGIN_LIVE_MODE=0
@@ -260,12 +275,6 @@ TURINGRESEARCH_ENABLE_PLUGIN_LIVE_MODE=0
 Source Hygiene blocks unsafe or unauthorized source material. Plugin tools,
 live providers, SSH/SFTP transfer, and network access require explicit private
 opt-in and human review.
-
-## Plugin Safety
-
-Plugins start from a deny-by-default policy. Code execution, shell access,
-secrets access, remote writes, and live mode require an explicit private review
-path. Unknown plugins are not executed by default.
 
 ## Privacy-first
 
@@ -287,32 +296,12 @@ Return artifacts and generated reports are review inputs. They are not
 automatically written to an evidence ledger and are not public claims until a
 human reviewer approves them.
 
-## Documentation
+See:
 
-The documentation is kept local-first and public-safe:
-
-- [Docs index](docs/docs-index.md)
-- [Quickstart](docs/quickstart.md)
-- [Public showcase](docs/public-showcase.md)
-- [MCP config parity](docs/mcp-config-parity.md)
+- [Open source hygiene gate](docs/open-source-hygiene-gate-report.md)
+- [Security policy](SECURITY.md)
 - [Optional live safety policy](docs/optional-live-safety-policy.md)
 - [Public naming policy](docs/turingresearch-public-naming-policy.md)
-
-No GitHub Pages URL is listed until a real deployment exists.
-
-## Planned Split Repositories
-
-Split repositories are planned / manual-ready only. The main TuringResearch repository remains the only install, test, release, and star entry. The main
-repository remains the flagship installation, test, and release source.
-Planned case/demo repositories must be created by a human, reviewed for
-privacy, and linked only after the real repositories exist.
-
-They are not published GitHub repositories and are not install targets.
-
-Manual split-pack references:
-
-- `split_ready/`
-- `split_manual/`
 
 ## What It Is Not
 
@@ -330,30 +319,53 @@ TuringResearch does not:
 - default to SSH/SFTP or remote execution;
 - execute unknown plugins by default;
 - upload private data by default;
-- guarantee star growth;
 - guarantee publication, stars, users, or adoption.
 
-It does not write final paper conclusions.
+## v1.6 Release Candidate Status
 
-## Limitations
+v1.6 is ready for human release-candidate review, not automatic publication.
 
-The current public version is strongest as local infrastructure, review
-workflow, demo surface, and release gate. It does not provide hosted services,
-default live integrations, automatic remote execution, automatic split-repo
-creation, PyPI publication, or public deployment. ARIS remains deferred.
+Ready with human review:
+
+- docs deployment-ready bundle;
+- dashboard showcase;
+- split manual packs;
+- optional live smoke policies and skipped-live tests;
+- local package/install readiness;
+- release artifact dry-run posture;
+- public launch checklist and hygiene gates.
+
+Not performed:
+
+- PyPI publication;
+- GitHub release publication;
+- tag creation;
+- GitHub Pages deployment;
+- child repository creation;
+- live provider execution;
+- remote command execution;
+- ARIS implementation.
+
+See:
+
+- [v1.6 final archive](docs/v1.6.0-final-archive.md)
+- [v1.6 handoff](docs/v1.6.0-handoff.md)
+- [What is ready](docs/v1.6.0-what-is-ready.md)
+- [What is not ready](docs/v1.6.0-what-is-not-ready.md)
+- [Next human actions](docs/v1.6.0-next-human-actions.md)
 
 ## Roadmap
 
-Near-term public-release work focuses on:
+Near-term public-release work focuses on maintainer review and manual public
+actions:
 
-1. README and public docs polish;
-2. docs deployment readiness without automatic public deployment;
-3. manual split-repo execution packs without fake repository URLs;
-4. optional live smoke checks with strict opt-in;
-5. package/install readiness;
-6. release artifact dry-runs;
-7. screenshot/demo asset packs;
-8. v1.6 full regression and public launch checklist.
+1. final README and public docs review;
+2. docs deployment approval without fake public URLs;
+3. split-repo creation approval, if desired;
+4. package naming and PyPI decision;
+5. release notes and GitHub release draft review;
+6. screenshot/demo asset review;
+7. post-release verification.
 
 ARIS remains deferred. It may return as a separately scoped study track, not as
 a default implementation line.
@@ -365,6 +377,7 @@ The current repository license is proprietary. See [LICENSE](LICENSE) and
 still pending human approval; see
 [open source license decision](docs/open-source-license-decision.md) and
 [open source compliance checklist](docs/open-source-compliance-checklist.md).
+
 Do not assume PyPI publication, third-party redistribution, or public release
 approval until maintainers make a separate explicit release decision.
 

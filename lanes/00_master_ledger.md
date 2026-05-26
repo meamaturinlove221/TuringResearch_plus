@@ -6066,3 +6066,37 @@ Validation:
 - `python -m ruff check .` passed.
 - `python -m mypy src` passed.
 - `git diff --check` passed.
+
+## Round 383 - README Launch Polish
+
+Status: completed.
+
+Summary:
+- Updated `README.md` into a v1.6 release-candidate launch front door.
+- Added `docs/readme-launch-polish-v1.6.md`.
+- Added `docs/readme-launch-checklist-v1.6.md`.
+- Added `lanes/361_readme_launch_polish.md`.
+
+README highlights:
+- local-first Research OS;
+- original repo production parity;
+- docs site ready for human review;
+- dashboard showcase;
+- split manual packs;
+- optional live disabled by default;
+- privacy/security gates;
+- ARIS deferred.
+
+Safety:
+- No automatic research-completion claim.
+- No automatic final-paper claim.
+- No fake benchmark claim.
+- No fake URL.
+- No fake users.
+- No fake star claim.
+- No VGGT or SparseConv3D success claim.
+- No ARIS implementation claim.
+
+Validation:
+- Docs/name integrity passed.
+- Pre-push checks passed.
