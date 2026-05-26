@@ -1,17 +1,17 @@
-# TulingResearch Plus
+# TuringResearch Plus
 
-TulingResearch Plus is a Python, MCP-first research workflow engine for evidence-backed literature work, idea capture, feature planning, experiment design, and paper pipeline dry-runs.
+TuringResearch Plus is a Python, MCP-first research workflow engine for evidence-backed literature work, idea capture, feature planning, experiment design, and paper pipeline dry-runs.
 
 It is built as one repository with two Python packages:
 
 - `tuling_research`: Core tools for local cache, sessions, content lookup, PDF Markdown, and the local MCP smoke server.
 - `tuling_research_plus`: Plus workflows for survey, semantic graph, vault, context, Race Mode, SOP, experiment, and paper pipelines.
 
-MCP server name: `tulingresearch-plus`.
+MCP server name: `TuringResearch-plus`.
 
 ## Python MCP-First Design
 
-TulingResearch Plus treats MCP tools as the public boundary. Contracts live in `contracts/`, Pydantic models define stable payloads, and implementations stay behind service protocols or adapters. External APIs are adapterized, network tests are mocked, and default workflows run in dry-run or fake-service mode.
+TuringResearch Plus treats MCP tools as the public boundary. Contracts live in `contracts/`, Pydantic models define stable payloads, and implementations stay behind service protocols or adapters. External APIs are adapterized, network tests are mocked, and default workflows run in dry-run or fake-service mode.
 
 The local MCP smoke module is:
 
@@ -21,8 +21,8 @@ python -m tuling_research.mcp_server --manifest
 
 Console entry points:
 
-- `tulingresearch-plus`
-- `tulingresearch-plus-mcp`
+- `TuringResearch-plus`
+- `TuringResearch-plus-mcp`
 
 Both call `tuling_research.mcp_server:main`.
 
@@ -32,7 +32,7 @@ The project is designed for single-window multi-agent style development. Paralle
 
 - `lanes/`: lane ledgers and release-candidate state.
 - `contracts/`: stable tool and artifact contracts.
-- `.agents/skills/`: Codex-compatible repo-scoped skills with `tulingresearch-` names.
+- `.agents/skills/`: Codex-compatible repo-scoped skills with `TuringResearch-` names.
 
 This keeps architecture, implementation, QA, and release work in one repository without splitting context or package ownership.
 
@@ -72,7 +72,7 @@ The Vault is a local markdown knowledge graph with typed entities, typed edges, 
 
 ## Hypothesis-To-Experiment Workflow
 
-TulingResearch Plus can dry-run a research chain from validated gaps to hypotheses, idea portfolios, convergence decisions, stress tests, experiment plans, constraint analysis, scenario plans, implementation plans, result schemas, and dry-run result analysis.
+TuringResearch Plus can dry-run a research chain from validated gaps to hypotheses, idea portfolios, convergence decisions, stress tests, experiment plans, constraint analysis, scenario plans, implementation plans, result schemas, and dry-run result analysis.
 
 ## Race Mode Idea Capture
 
@@ -92,7 +92,7 @@ The paper pipeline includes DocFlow Article Blocks, figure registry, caption gen
 
 ## Codex-Compatible Skills
 
-Repo-scoped skills live under `.agents/skills/tulingresearch-*/SKILL.md`. They document owner lanes, related contracts, required tests, constraints, and done criteria for single-window coordinated development.
+Repo-scoped skills live under `.agents/skills/TuringResearch-*/SKILL.md`. They document owner lanes, related contracts, required tests, constraints, and done criteria for single-window coordinated development.
 
 ## Quickstart
 
@@ -108,7 +108,7 @@ Optional local PDF and MCP extras:
 ```powershell
 python -m pip install -e .[dev,pdf,mcp]
 python -m tuling_research.mcp_server --manifest
-tulingresearch-plus-mcp --health-check
+TuringResearch-plus-mcp --health-check
 ```
 
 Default tests use fake services, dry-run workflows, and local fixtures. They do not require real API keys or live network access.
