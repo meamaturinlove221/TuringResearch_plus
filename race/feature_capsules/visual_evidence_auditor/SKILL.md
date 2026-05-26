@@ -62,4 +62,3 @@ or advisor pack visual summaries.
 - Visual evidence levels are deterministic.
 - Source artifact provenance is required.
 - Advisor readiness is blocked when evidence is missing.
-

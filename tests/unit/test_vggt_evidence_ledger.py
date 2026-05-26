@@ -50,4 +50,3 @@ def test_expected_vggt_versions_are_present() -> None:
     labels = {row.version_label for row in ledger.rows}
 
     assert {"V770", "V129", "V260", "V900", "V930", "V999", "V120", "V121"} <= labels
-

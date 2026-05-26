@@ -1,0 +1,55 @@
+{
+
+  "project_id": "multimodal_model_eval_demo",
+
+  "status": "demo-only",
+
+  "requires_human_review": true,
+
+  "entries": [
+
+    {
+
+      "evidence_id": "multimodal_model_eval_demo-intent",
+
+      "claim": "The project has a reviewable planning goal.",
+
+      "status": "planned",
+
+      "source": "public demo placeholder",
+
+      "notes": "Planning entry only; not a measured result."
+
+    },
+
+    {
+
+      "evidence_id": "multimodal_model_eval_demo-artifact-summary",
+
+      "claim": "Metadata-only artifacts can be inspected without private payloads.",
+
+      "status": "fake-data",
+
+      "source": "public demo fixture",
+
+      "notes": "Fake/demo metadata only."
+
+    },
+
+    {
+
+      "evidence_id": "multimodal_model_eval_demo-result-claim",
+
+      "claim": "A research result is established.",
+
+      "status": "not-enough-evidence",
+
+      "source": "public demo guard",
+
+      "notes": "The demo blocks unsupported success language."
+
+    }
+
+  ]
+
+}

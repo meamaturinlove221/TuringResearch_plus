@@ -1,0 +1,14 @@
+{
+  "updates": [
+    {
+      "update_id": "fake-return-proposed-update",
+      "claim": "Review the fake return package structure.",
+      "status": "proposed",
+      "evidence_refs": [
+        "RUN_STATUS.json",
+        "FINAL_STATUS.json"
+      ],
+      "requires_human_review": true
+    }
+  ]
+}

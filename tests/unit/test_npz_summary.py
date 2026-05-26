@@ -31,4 +31,3 @@ def test_summarize_missing_npz_returns_missing_status(tmp_path: Path) -> None:
     summary = summarize_npz(tmp_path / "missing.npz")
 
     assert summary[0].summary_status == "missing"
-

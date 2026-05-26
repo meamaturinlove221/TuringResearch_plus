@@ -1,0 +1,7 @@
+flowchart TD
+  A[Collect route, gate, evidence, and audit findings] --> B[Normalize labels]
+  B --> C[Map severity]
+  C --> D[Preserve blockers and limitations]
+  D --> E[Generate next actions]
+  E --> F[Emit FailureAttributionReport]
+  F --> G[Export Markdown and JSON]

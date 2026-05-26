@@ -1,0 +1,28 @@
+{
+  "project_id": "software_tooling_demo",
+  "status": "demo-only",
+  "requires_human_review": true,
+  "entries": [
+    {
+      "evidence_id": "tooling-demo-quality-gate",
+      "claim": "A quality gate can summarize release readiness.",
+      "status": "planned",
+      "source": "public demo placeholder",
+      "notes": "Demonstrates structure only."
+    },
+    {
+      "evidence_id": "tooling-demo-plugin-fixture",
+      "claim": "A fake plugin manifest can be checked without execution.",
+      "status": "fake-data",
+      "source": "public demo fixture",
+      "notes": "No plugin code is executed."
+    },
+    {
+      "evidence_id": "tooling-demo-production-ready",
+      "claim": "The tooling is production ready.",
+      "status": "not-enough-evidence",
+      "source": "public demo guard",
+      "notes": "The demo blocks release overclaim."
+    }
+  ]
+}

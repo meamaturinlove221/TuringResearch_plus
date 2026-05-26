@@ -1,0 +1,40 @@
+name: Docs check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  docs:
+    name: Docs and public entry checks
+    runs-on: ubuntu-latest
+
+    env:
+      TURINGRESEARCH_ENABLE_LIVE_TESTS: "0"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install docs check dependencies
+        run: python -m pip install -e ".[dev]"
+
+      - name: Build docs site fake
+        run: python -m pytest tests/workflow/test_docs_site_build_fake.py -q
+
+      - name: Run docs dashboard integration
+        run: python -m pytest tests/workflow/test_v1_1_docs_dashboard_integration.py -q
+
+      - name: Run public release hygiene
+        run: python -m pytest tests/contract/test_public_release_hygiene.py -q
+
+      - name: Run public demo walkthrough checks
+        run: python -m pytest tests/workflow/test_public_demo_walkthrough_files.py -q

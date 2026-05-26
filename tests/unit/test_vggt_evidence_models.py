@@ -71,4 +71,3 @@ def test_ledger_markdown_serialization_includes_missing_inputs() -> None:
 
     assert "V900" in markdown
     assert "`missing.json`" in markdown
-

@@ -1,0 +1,51 @@
+[
+
+  {
+
+    "run_id": "real-run-ingest-dry-run",
+
+    "version_label": "modal_sparseconv_v0",
+
+    "claim": "Run bundle is insufficient to claim SparseConv3D success.",
+
+    "status": "not-enough-evidence",
+
+    "evidence_refs": [
+
+      {
+
+        "source_id": "real-run-ingest-dry-run",
+
+        "locator": "final_status",
+
+        "quote": "ROUTE_EXHAUSTED_WITH_FAILURE_ANALYSIS",
+
+        "url": null,
+
+        "confidence": 0.6
+
+      }
+
+    ],
+
+    "blockers": [
+
+      "predictions.npz",
+
+      "board_inventory.md",
+
+      "sha256_manifest.txt",
+
+      "cleanup_report.md"
+
+    ],
+
+    "next_actions": [
+
+      "Review missing artifacts and hard gate failures."
+
+    ]
+
+  }
+
+]

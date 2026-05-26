@@ -1,0 +1,17 @@
+{
+
+  "execution_status": "not_executed_by_turingresearch",
+
+  "promotion_status": "not_promoted",
+
+  "requires_human_review": true,
+
+  "route_id": "modal_sparseconv_real_v0",
+
+  "run_id": "replace-with-run-id",
+
+  "sparseconv3d_success_claimed": false,
+
+  "status": "UNKNOWN"
+
+}

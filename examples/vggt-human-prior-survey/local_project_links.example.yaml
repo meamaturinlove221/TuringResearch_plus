@@ -1,54 +1,107 @@
 project:
+
   name: VGGT / SMPL-X Human Prior
+
   mode: local-colocation
+
   readonly: true
 
+
+
 paths:
+
   vggt_root_candidates:
+
     - D:/vggt
+
     - D:/vggt/vggt-main
+
     - D:/vggt/vggt-feature-adapter
+
     - D:/vggt/vggt-live-highres-crop
 
+
+
   output_candidates:
+
     - D:/vggt/output
+
     - D:/vggt/vggt-main/output
+
     - D:/vggt/vggt-feature-adapter/output
+
     - D:/vggt/vggt-live-highres-crop/output
 
+
+
   docs_candidates:
+
     - D:/vggt/docs
+
     - D:/vggt/vggt-main/docs
+
     - D:/vggt/vggt-feature-adapter/docs
+
     - D:/vggt/vggt-live-highres-crop/docs
 
+
+
 read_policy:
+
   allow_extensions:
+
     - .md
+
     - .txt
+
     - .json
+
     - .yaml
+
     - .yml
+
     - .csv
+
     - .png
+
     - .jpg
+
     - .jpeg
+
     - .npz
 
+
+
   default_npz_mode: summary-only
+
   max_file_size_mb_default: 200
+
   never_modify_vggt_files: true
+
   never_delete_vggt_files: true
+
   never_write_inside_vggt_repo: true
 
+
+
 status_policy:
+
   allowed_labels:
+
     - observed
+
     - planned
+
     - missing
+
     - fake-data
+
     - failed
+
     - hard-blocked
+
     - requires-real-paper
+
     - requires-real-experiment
+
     - requires-human-review

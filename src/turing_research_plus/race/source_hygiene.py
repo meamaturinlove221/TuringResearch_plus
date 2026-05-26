@@ -198,4 +198,3 @@ def _watch(
 
 def _normalize_license(license_name: str | None) -> str:
     return (license_name or "").strip().lower()
-

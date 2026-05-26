@@ -1,0 +1,26 @@
+{
+  "demo_id": "scholar-fake-paper-search",
+  "mode": "fake",
+  "requires_api_key": false,
+  "live_mode_enabled": false,
+  "automatic_full_paper_download": false,
+  "paywall_bypass_allowed": false,
+  "requires_human_review": true,
+  "query": "geometry-aware human reconstruction",
+  "selected_source": "fake_arxiv",
+  "status": "fake_result",
+  "papers": [
+    {
+      "paper_id": "fake-scholar-demo-001",
+      "title": "Fake Scholar Demo Paper",
+      "source": "fake_adapter",
+      "citation_verified": false,
+      "human_verified": false
+    }
+  ],
+  "limitations": [
+    "Fake search output is for walkthrough only.",
+    "No paper was downloaded.",
+    "No citation is human verified."
+  ]
+}

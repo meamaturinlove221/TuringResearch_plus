@@ -1,0 +1,41 @@
+flowchart TD
+    A[Research Project] --> B[Workspace Registry]
+    B --> C[Evidence Ledger]
+    B --> D[Artifact Audit]
+    B --> E[Route DSL]
+    B --> F[Paper Intelligence]
+
+    C --> G[Claim Safety]
+    D --> H[Readiness Reports]
+    E --> I[Hard Gates]
+    E --> J[Failure Taxonomy]
+    F --> K[Method Cards]
+    F --> L[Related Work]
+    F --> M[Paper Scaffold]
+
+    G --> N[Advisor Pack]
+    H --> N
+    I --> N
+    J --> N
+    K --> N
+    L --> N
+    M --> N
+
+    N --> O[Static Dashboard]
+    N --> P[Optional PDF/PPTX Export]
+    N --> Q[Quality Gate]
+
+    B --> R[Privacy Gate]
+    B --> S[Compliance Checklist]
+    B --> T[Plugin Manifest Registry]
+
+    T --> U[Sandbox Policy]
+    T --> V[Compatibility Harness]
+    T --> W[MCP Plugin Registry]
+
+    Q --> X[Fake Replay / Regression Gate]
+    R --> X
+    S --> X
+    V --> X
+
+    X --> Y[Public Demo / Case Study Review]

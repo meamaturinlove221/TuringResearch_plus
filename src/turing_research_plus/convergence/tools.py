@@ -60,4 +60,3 @@ def research_promotion_decide(
     feasible: bool = True,
 ) -> dict[str, Any]:
     return service.promotion_decide(score, feasible=feasible).model_dump(mode="json")
-

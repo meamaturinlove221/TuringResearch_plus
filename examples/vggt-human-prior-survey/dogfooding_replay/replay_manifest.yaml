@@ -1,0 +1,74 @@
+replay_id: vggt_dogfooding_replay_round_97
+status: replay-only
+round: 97
+requires_human_review: true
+network_used: false
+vggt_experiment_run: false
+modal_run: false
+private_vggt_path_read: false
+generated_new_results: false
+sparseconv3d_success_claimed: false
+status_labels:
+  observed:
+    - research intent artifacts
+    - research knowledge pack
+    - advisor pack review materials
+    - dashboard review materials
+  planned:
+    - modal_sparseconv_v0 route
+    - future real sparse backend probe
+    - future visual board collection
+  missing:
+    - local_scan_evidence_ledger.json
+    - local_scan_visual_inventory.md
+    - real sparse backend probe log
+    - predictions.npz or thin prediction summary
+    - board_inventory.md
+    - sha256_manifest.txt
+    - cleanup_report.md
+  not-enough-evidence:
+    - modal_sparseconv_v0
+    - V999-SparseConv3D
+    - visual readiness
+  requires-human-review:
+    - V120
+    - V121
+    - related work final claims
+    - vault graph ontology claims
+    - advisor readiness
+replay_chain:
+  - research intent
+  - evidence ledger
+  - artifact audit
+  - visual audit
+  - run ingest
+  - failure taxonomy
+  - route DSL
+  - related work
+  - vault graph
+  - advisor pack
+  - dashboard
+  - next action
+source_refs:
+  - examples/vggt-human-prior-survey/input_research_intent.md
+  - examples/vggt-human-prior-survey/research_knowledge_pack/manifest.yaml
+  - examples/vggt-human-prior-survey/local_scan_artifact_index.md
+  - examples/vggt-human-prior-survey/visual_evidence_audit_report.md
+  - examples/vggt-human-prior-survey/run_ingest_report.md
+  - examples/vggt-human-prior-survey/modal_sparseconv_route_pack/route_spec.yaml
+  - examples/vggt-human-prior-survey/related_work/related_work_positioning.md
+  - examples/vggt-human-prior-survey/vault_graph/vggt_related_work_graph.md
+  - examples/vggt-human-prior-survey/advisor_pack/next_actions.md
+  - examples/vggt-human-prior-survey/dashboard/run_dashboard.md
+outputs:
+  - replay_report.md
+  - replay_manifest.yaml
+  - replay_missing_items.md
+  - replay_next_actions.md
+boundaries:
+  - no_experiment_run
+  - no_modal_execution
+  - no_network_access
+  - no_private_vggt_path_read
+  - no_new_results
+  - no_sparseconv3d_success_claim

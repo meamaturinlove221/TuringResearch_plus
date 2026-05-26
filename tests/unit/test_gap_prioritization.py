@@ -46,4 +46,3 @@ def test_gap_prioritize_tool_returns_json_payload() -> None:
 
     assert payload["priorities"][0]["gap_id"] == "gap-high"
     assert payload["priorities"][0]["evidence"]
-

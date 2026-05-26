@@ -1,0 +1,21 @@
+# Local/private files must not be committed to this examples repository.
+.env
+.env.*
+local_project_links.yaml
+private_data/
+secrets/
+raw_data/
+data/
+datasets/
+logs/private/
+checkpoints/
+models/
+*.pkl
+*.npz
+[Ss][Mm][Pp][Ll][Xx]_*
+*.ckpt
+*.pt
+*.pth
+*.onnx
+__pycache__/
+.pytest_cache/

@@ -1,0 +1,54 @@
+{
+  "source_repo": "example/vggt-review-artifacts",
+  "source_ref": "modal-sparseconv-review",
+  "artifacts": [
+    {
+      "name": "final_status.json",
+      "path": "review/final_status.json",
+      "source_type": "workflow_artifact",
+      "size": 512,
+      "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "content_type": "application/json"
+    },
+    {
+      "name": "failure_report.md",
+      "path": "review/failure_report.md",
+      "source_type": "workflow_artifact",
+      "size": 2048,
+      "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+      "content_type": "text/markdown"
+    },
+    {
+      "name": "board_inventory.md",
+      "path": "review/board_inventory.md",
+      "source_type": "workflow_artifact",
+      "size": 4096,
+      "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+      "content_type": "text/markdown"
+    },
+    {
+      "name": "predictions.npz",
+      "path": "large/predictions.npz",
+      "source_type": "workflow_artifact",
+      "size": 250000000,
+      "sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "name": "SMPLX_model.pkl",
+      "path": "private/SMPLX_model.pkl",
+      "source_type": "workflow_artifact",
+      "size": 100000000,
+      "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "name": ".env",
+      "path": ".env",
+      "source_type": "private_repo_index",
+      "size": 128,
+      "sha256": "6666666666666666666666666666666666666666666666666666666666666666",
+      "content_type": "text/plain"
+    }
+  ]
+}

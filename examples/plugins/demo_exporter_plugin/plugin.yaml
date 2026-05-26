@@ -1,0 +1,24 @@
+plugin_id: demo_exporter_plugin
+name: Demo Exporter Plugin
+version: 0.1.0
+type: exporter
+entry_kind: manifest-only
+safety_level: public-demo
+status: disabled
+third_party: true
+executes_code: false
+required_permissions:
+  - read_demo_markdown
+  - write_demo_export_manifest
+config_schema:
+capabilities:
+  - capability_id: demo_markdown_export
+    name: Demo Markdown Export
+    category: exporter
+    description: Export demo Markdown bundle metadata only.
+inputs:
+  - AdvisorMarkdownBundle
+outputs:
+  - ExportManifest
+author: TuringResearch Plus Demo
+license: Proprietary demo fixture

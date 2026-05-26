@@ -1,0 +1,40 @@
+{
+  "paper_id": "fake-reference-e2e",
+  "title": "Fake Reference E2E Paper",
+  "source_status": "fake-demo",
+  "references": [
+    {
+      "reference_id": "fake-reference-e2e-ref-1",
+      "title": "Fake reference 1",
+      "source": "semantic_scholar",
+      "verified": false
+    },
+    {
+      "reference_id": "fake-reference-e2e-ref-2",
+      "title": "Fake reference 2",
+      "source": "semantic_scholar",
+      "verified": false
+    },
+    {
+      "reference_id": "fake-reference-e2e-ref-3",
+      "title": "Fake reference 3",
+      "source": "semantic_scholar",
+      "verified": false
+    }
+  ],
+  "citations": [
+    {
+      "citation_id": "fake-reference-e2e-cite-1",
+      "title": "Fake citation 1",
+      "source": "semantic_scholar",
+      "verified": false
+    },
+    {
+      "citation_id": "fake-reference-e2e-cite-2",
+      "title": "Fake citation 2",
+      "source": "semantic_scholar",
+      "verified": false
+    }
+  ],
+  "use": "related-work seed only; requires human review"
+}

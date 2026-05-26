@@ -1,0 +1,42 @@
+{
+  "report_id": "round-39b-vggt-local-visual-evidence-dry-run",
+  "project": "TuringResearch Plus",
+  "mode": "local-visual-evidence-dry-run",
+  "read_only": true,
+  "network_used": false,
+  "vggt_code_run": false,
+  "vggt_project_modified": false,
+  "inputs": {
+    "local_project_links.yaml": "missing",
+    "local_scan_visual_inventory.md": "missing",
+    "local_scan_artifact_index.md": "local-observed",
+    "local_scan_evidence_ledger.json": "missing"
+  },
+  "required_visual_evidence": {
+    "full_body": "missing",
+    "hairline": "missing",
+    "hand_close_up": "missing"
+  },
+  "board_inventory_status": "missing",
+  "visual_inventory_status": "missing",
+  "advisor_ready_visual_proof": false,
+  "overall_status": "requires-human-review",
+  "blocked_reasons": [
+    "local_scan_visual_inventory.md is missing",
+    "local_scan_artifact_index.md says no artifacts were scanned",
+    "local_scan_evidence_ledger.json is missing",
+    "full body visual evidence is missing",
+    "hairline visual evidence is missing",
+    "hand close-up visual evidence is missing"
+  ],
+  "rules": {
+    "proxy_boards_are_not_advisor_ready_proof": true,
+    "mask_delta_boards_are_not_advisor_ready_proof": true,
+    "missing_board_files_are_recorded_as_missing": true,
+    "no_visual_conclusions_are_fabricated": true
+  },
+  "claim_boundary": {
+    "v121_true_region_pointcloud_visual_gate": "requires-human-review",
+    "sparseconv3d_success": "not-enough-evidence"
+  }
+}

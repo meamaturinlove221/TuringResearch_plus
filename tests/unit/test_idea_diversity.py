@@ -80,4 +80,3 @@ def test_diversity_tool_returns_json_payload() -> None:
 
     assert payload["cluster_count"] == 2
     assert payload["rejected_duplicates"][0]["idea_id"] == "idea-low"
-

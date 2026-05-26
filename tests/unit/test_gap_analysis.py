@@ -84,4 +84,3 @@ def test_gap_and_insight_tools_return_json_payloads() -> None:
     assert gap_payload["topic"] == "research workflow quality gates"
     assert insight_payload["insights"][0]["supporting_evidence"]
     assert insight_payload["insights"][0]["contradicting_evidence"]
-

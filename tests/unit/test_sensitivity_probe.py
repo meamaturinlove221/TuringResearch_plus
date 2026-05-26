@@ -77,4 +77,3 @@ def test_sensitivity_tool_returns_json_payload() -> None:
     payload = research_sensitivity_probe(gap_report, DeepInsightService())
 
     assert payload["assumptions"][0]["load_bearing"] is True
-

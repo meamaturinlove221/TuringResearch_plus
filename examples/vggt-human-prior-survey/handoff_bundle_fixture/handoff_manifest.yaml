@@ -1,0 +1,69 @@
+{
+  "bundle_id": "handoff_bundle_fixture",
+  "project_name": "TuringResearch Plus",
+  "source_machine_label": "fixture-vggt-machine",
+  "export_time": "2026-05-20T00:00:00Z",
+  "bundle_type": "run_review",
+  "included_files": [
+    {
+      "relative_path": "HANDOFF_README.md",
+      "included": true,
+      "sha256": "a6ea78900a61069e3a3ee0e8484281e8c3f976623d63fb1698743a93f94a0a85",
+      "file_size": 399,
+      "omitted_reason": null,
+      "safety_warnings": []
+    },
+    {
+      "relative_path": "advisor_summary.md",
+      "included": true,
+      "sha256": "1f1415006bf2dac7f07fa8394ee75793e801bd0fa378bc604a8c6db9a2d94a15",
+      "file_size": 217,
+      "omitted_reason": null,
+      "safety_warnings": []
+    },
+    {
+      "relative_path": "ranked_candidates.csv",
+      "included": true,
+      "sha256": "474dd3e4844e47d36c430503e6cf2753af0dc8d9c988b9ca7fa6e420406fdc61",
+      "file_size": 95,
+      "omitted_reason": null,
+      "safety_warnings": []
+    },
+    {
+      "relative_path": "run_summary.json",
+      "included": true,
+      "sha256": "fabe580c655e0ff9e1bcb39c23ce23c94f1e56763106e0ed13813761fde615a3",
+      "file_size": 185,
+      "omitted_reason": null,
+      "safety_warnings": []
+    }
+  ],
+  "omitted_files": [
+    {
+      "relative_path": "SMPLX_NEUTRAL.npz",
+      "included": false,
+      "sha256": null,
+      "file_size": null,
+      "omitted_reason": "SMPL-X body model files and npz payloads require summary-only handoff",
+      "safety_warnings": [
+        "summary-only-required",
+        "forbidden-secret-or-body-model-pattern"
+      ]
+    }
+  ],
+  "sha256": "6dac76bc05af66df9045b472680cdc1cb67893fad8d4435863da6061ae0bd850",
+  "evidence_tags": [
+    "vggt",
+    "modal-sparseconv-route",
+    "review-only"
+  ],
+  "status_labels": [
+    "requires-human-review",
+    "not-enough-evidence"
+  ],
+  "safety_warnings": [
+    "summary-only-required",
+    "forbidden-secret-or-body-model-pattern"
+  ],
+  "manual_review_required": true
+}

@@ -334,6 +334,8 @@ focus remain centered in the flagship repository. See
 
 ## Planned / Manual-ready Split Repositories
 
+Planned Split Repositories remain manual-ready only.
+
 The following split repositories are planned or manual-ready, but not
 published:
 

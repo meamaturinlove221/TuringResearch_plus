@@ -77,4 +77,3 @@ def is_falsifiable(hypothesis: Hypothesis) -> bool:
             bool(hypothesis.failure_interpretation.strip()),
         ]
     )
-

@@ -1,0 +1,45 @@
+schema_version: 0.1.0
+
+status: draft
+
+feature: mcp_plugin_registry
+
+release_target: v0.6 Sprint 2
+
+purpose: >-
+
+  MCP-facing plugins need a registry format that stays honest about install state, compatibility, and safety.
+
+models:
+
+  primary: MCPPluginRegistry, MCPPluginEntry, RegistryValidationReport
+
+commands:
+
+  - command: turing mcp registry-check
+
+    tool: mcp.registry_check
+
+    output: RegistryValidationReport
+
+safety:
+
+  default_network: false
+
+  requires_human_review: true
+
+  no_secrets: true
+
+  no_raw_data: true
+
+  no_private_model_files: true
+
+  no_planned_as_observed: true
+
+non_goals:
+
+  - no marketplace publishing
+
+  - no automatic install
+
+  - no live plugin execution

@@ -1,0 +1,18 @@
+flowchart TB
+  evidence[Local evidence ledger]
+  route[Route DSL]
+  modal[Modal Linux GPU]
+  probe[Real sparse backend probe<br/>spconv / MinkowskiEngine / TorchSparse]
+  smplx[SMPL-X voxel feature encoding]
+  sparse[SparseConv3D latent field]
+  vggt[VGGT token / point residual integration]
+  eval[Strict evaluation / hard gates]
+  artifacts[Artifacts<br/>final_status / boards / NPZ diff / sha256 / cleanup]
+  failure[Failure taxonomy]
+  advisor[Advisor summary]
+  warning[planned / requires-real-experiment / not executed by TuringResearch]
+
+  evidence --> route --> modal --> probe --> smplx --> sparse --> vggt --> eval
+  eval --> artifacts --> advisor
+  eval --> failure --> advisor
+  warning --> route

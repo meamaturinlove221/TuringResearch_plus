@@ -1,0 +1,8 @@
+flowchart TD
+  A[Receive VGGT route intent] --> B[Load evidence and audit summaries]
+  B --> C[Bind hard gates]
+  C --> D[Compile route steps]
+  D --> E[Attach expected artifacts and stop conditions]
+  E --> F[Generate ControllerPromptDraft]
+  F --> G[Export ExperimentRouteSpec]
+  G --> H[Report missing evidence without execution]

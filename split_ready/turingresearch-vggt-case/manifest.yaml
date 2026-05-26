@@ -1,0 +1,59 @@
+repo_id: turingresearch-vggt-case
+status: final-public-safe-export-bundle
+purpose: public-safe dogfooding case study for TuringResearch Plus
+flagship_repo: turingresearch
+not_a_vggt_experiment_source_repo: true
+requires_human_review: true
+ready_to_create_after_human_approval: true
+included_files:
+  - path: README.md
+    role: repo positioning and flagship link
+    public_safe: true
+  - path: QUICKSTART.md
+    role: public-safe review path
+    public_safe: true
+  - path: CASE_STUDY.md
+    role: sanitized case-study draft
+    public_safe: true
+  - path: PRIVACY.md
+    role: privacy and claim boundary
+    public_safe: true
+  - path: CLAIM_SAFETY.md
+    role: unsupported-claim boundary
+    public_safe: true
+  - path: LICENSE_NOTE.md
+    role: license and reuse review note
+    public_safe: true
+  - path: manifest.yaml
+    role: final export manifest
+    public_safe: true
+  - path: safety_report.md
+    role: final export safety report
+    public_safe: true
+  - path: .gitignore
+    role: accidental local payload guardrail
+    public_safe: true
+safety:
+  no_private_paths: true
+  no_raw_data: true
+  no_smplx_files: true
+  no_api_keys: true
+  no_private_advisor_feedback: true
+  no_non_public_artifacts: true
+  no_huge_artifacts: true
+  fake_demo_artifacts_only: true
+claim_boundaries:
+  no_vggt_success_claim: true
+  no_sparseconv3d_success_claim: true
+  no_planned_as_observed: true
+  no_final_research_conclusion: true
+release_gate:
+  privacy_gate_required: true
+  compliance_review_required: true
+  claim_safety_review_required: true
+  maintainer_approval_required: true
+  github_repo_creation_approval_required: true
+repository_creation:
+  creates_github_repo: false
+  pushes_git: false
+  ready_for_manual_copy_after_review: true

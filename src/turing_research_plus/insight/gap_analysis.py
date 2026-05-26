@@ -32,4 +32,3 @@ def analyze_gaps(
         topic=survey_artifact.topic,
         gaps=gaps,
     )
-

@@ -1,0 +1,16 @@
+flowchart TB
+  subgraph inspired_fixture[NeuralBody-inspired fixture mapping]
+    smpl_latent[SMPL structured latent code]
+    sparse_voxel[sparse voxel / SparseConvNet]
+    latent_volume[latent volume]
+    query_decoder[query decoder]
+  end
+  subgraph turing_vggt[TuringResearch VGGT mapping]
+    smplx_voxel[SMPL-X voxel feature]
+    sparseconv3d[SparseConv3D]
+    geometry_latent[geometry latent field]
+    vggt_residual[VGGT token / point residual]
+  end
+  smpl_latent --> sparse_voxel --> latent_volume --> query_decoder
+  smplx_voxel --> sparseconv3d --> geometry_latent --> vggt_residual
+  review_notice[derived-from-fixture / requires-human-review]

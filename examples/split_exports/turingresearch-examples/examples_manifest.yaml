@@ -1,0 +1,40 @@
+repo_id: turingresearch-examples
+status: split-repo-skeleton-only
+flagship_repo: turingresearch
+purpose: public-safe examples for TuringResearch Plus
+requires_human_review: true
+intended_example_groups:
+  - public_demo
+  - project_templates
+  - demo_workspace
+  - dashboard_demo
+  - paper_demo
+  - advisor_pack_demo
+included_skeleton_files:
+  - path: README.md
+    role: public positioning and safety boundary
+    public_safe: true
+  - path: examples_manifest.yaml
+    role: examples inventory and sync policy metadata
+    public_safe: true
+excluded_content:
+  private_vggt_files: true
+  raw_data: true
+  model_files: true
+  api_keys: true
+  huge_artifacts: true
+  real_private_logs: true
+  private_advisor_feedback: true
+  unsupported_claims: true
+safety_gates:
+  public_demo_tests_required: true
+  privacy_gate_required: true
+  secret_scan_required: true
+  raw_data_scan_required: true
+  model_payload_scan_required: true
+  human_review_required: true
+sync_policy:
+  flagship_is_source_of_truth: true
+  examples_are_fake_demo_by_default: true
+  no_independent_release_version_until_approved: true
+  do_not_hide_flagship_api_drift: true

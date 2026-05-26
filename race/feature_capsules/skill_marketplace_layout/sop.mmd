@@ -1,0 +1,7 @@
+flowchart TD
+    A[Define scope] --> B[Collect allowed inputs]
+    B --> C[Apply safety policy]
+    C --> D[Build draft artifact]
+    D --> E[Run fake/default tests]
+    E --> F[Human review]
+    F --> G[Record limitations]

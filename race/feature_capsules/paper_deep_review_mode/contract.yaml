@@ -1,0 +1,23 @@
+schema_version: 0.1.0
+status: draft
+feature: paper_deep_review_mode
+release_target: v0.7
+purpose: >-
+  Track citation-grade review status for paper and related-work materials without fabricating citations.
+models:
+  primary: PaperDeepReviewReport, CitationGradeChecklist, RelatedWorkReviewDecision
+commands:
+  - command: turing paper deep-review
+    tool: paper.deep_review
+    output: PaperDeepReviewReport
+safety:
+  default_network: false
+  requires_human_review: true
+  no_citation_fabrication: true
+  fake_fixture_not_citation_grade: true
+  no_paywall_bypass: true
+  no_final_paper_text: true
+non_goals:
+  - no automatic final related-work prose
+  - no citation fabrication
+  - no paywall bypass

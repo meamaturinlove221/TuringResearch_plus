@@ -43,4 +43,3 @@ def formulate_research_question(
         finer_score=finer.overall,
         evidence_refs=hypothesis.evidence_refs,
     )
-

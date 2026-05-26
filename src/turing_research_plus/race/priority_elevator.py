@@ -90,4 +90,3 @@ def _rationale(priority: RacePriority, score: float, blocked: bool) -> str:
     if blocked:
         return "Source hygiene did not pass, so the idea cannot become P0/P1."
     return f"Priority {priority} assigned from weighted score {score}."
-

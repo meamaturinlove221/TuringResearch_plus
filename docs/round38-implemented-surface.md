@@ -60,4 +60,3 @@ Known boundaries:
 - `markdown_export.py`.
 - Cross-machine sync adapters.
 - Public MCP namespace registration for `vggt.*` or `artifact.*`.
-

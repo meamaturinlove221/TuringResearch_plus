@@ -1,0 +1,10 @@
+flowchart TB
+  A[Receive context package] --> B[Read route spec]
+  B --> C[Run external pod outside TuringResearch]
+  C --> D[Write structured outputs]
+  D --> E[Generate SHA256SUMS]
+  E --> F[Return via Git or handoff bundle]
+  F --> G[Run Ingestor]
+  G --> H[Artifact Auditor]
+  H --> I[Failure Taxonomy]
+  I --> J[Advisor Pack inputs]

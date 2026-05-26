@@ -1,0 +1,39 @@
+asset_manifest_id: turingresearch_readme_visual_assets
+status: planning-only
+round: 164
+requires_human_review: true
+assets:
+  - asset_id: architecture_diagram_final
+    path: docs/architecture-diagram-final.mmd
+    type: mermaid
+    purpose: README architecture overview with six required flows
+    public_safe: true
+  - asset_id: research_os_flow
+    path: docs/research-os-flow.mmd
+    type: mermaid
+    purpose: local-first Research OS workflow diagram
+    public_safe: true
+  - asset_id: vggt_case_flow
+    path: docs/vggt-case-flow.mmd
+    type: mermaid
+    purpose: VGGT dogfooding case flow with no success claim
+    public_safe: true
+  - asset_id: plugin_system_flow
+    path: docs/plugin-system-flow.mmd
+    type: mermaid
+    purpose: plugin manifest, sandbox, compatibility, MCP registry flow
+    public_safe: true
+planned_assets:
+  - dashboard_screenshots
+  - demo_gifs
+safety:
+  no_private_paths: true
+  no_raw_data: true
+  no_model_payloads: true
+  no_api_keys: true
+  no_unsupported_claims: true
+  no_vggt_success_claim: true
+  no_sparseconv3d_success_claim: true
+notes:
+  - Mermaid diagrams are planning assets and do not claim experiment results.
+  - Screenshots and GIFs require future privacy and claim-safety review.

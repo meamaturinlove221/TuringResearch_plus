@@ -27,4 +27,3 @@ def pairwise_rank(scores: list[CandidateScore]) -> list[PairwisePreference]:
                 )
             )
     return preferences
-

@@ -1,0 +1,85 @@
+candidate_id: turingresearch-vggt-case
+
+source_root: examples/split_repos/turingresearch-vggt-case
+
+export_time: "2026-05-21T08:51:37.760597Z"
+
+dry_run_only: true
+
+creates_github_repo: false
+
+pushes_git: false
+
+included_files:
+
+  -
+
+    relative_path: CASE_STUDY.md
+
+    included: true
+
+    file_size: 2698
+
+    sha256: 338b0ec3d9ba11ea62cb918528cfc4a3053d73b29c725379c7ab5a387e73e823
+
+    omitted_reason: null
+
+    safety_warnings:
+
+      []
+
+  -
+
+    relative_path: manifest.yaml
+
+    included: true
+
+    file_size: 1002
+
+    sha256: e29dd2eded5cdb7ae20dd58bc891219a93b8826b1dacf7246dc9ef18c0a1a8a8
+
+    omitted_reason: null
+
+    safety_warnings:
+
+      []
+
+  -
+
+    relative_path: PRIVACY.md
+
+    included: true
+
+    file_size: 951
+
+    sha256: bbdb0d6917772d18ae1a60dfd0aa6ad313743008539b747e3694b197a96fe612
+
+    omitted_reason: null
+
+    safety_warnings:
+
+      - "policy-mention:private_advisor_feedback"
+
+  -
+
+    relative_path: README.md
+
+    included: true
+
+    file_size: 1317
+
+    sha256: 5460b43164385080ff2eb39a3c0f068a81d42745074fcc4c39347b465c204bd5
+
+    omitted_reason: null
+
+    safety_warnings:
+
+      []
+
+omitted_files:
+
+  []
+
+safety_report_path: safety_report.md
+
+requires_human_review: true

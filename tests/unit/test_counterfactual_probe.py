@@ -62,4 +62,3 @@ def test_failure_mode_analyze_tool_returns_json_payload() -> None:
     assert report.residual_risk == Severity.LOW
     assert counterfactual_payload["pass_fail"] == "pass"
     assert failure_payload["mitigations"]
-

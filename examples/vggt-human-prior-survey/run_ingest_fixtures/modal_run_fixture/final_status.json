@@ -1,0 +1,29 @@
+﻿{
+  "run_id": "modal-sparseconv-fixture-001",
+  "route_id": "modal_sparseconv_v0",
+  "status": "ROUTE_EXHAUSTED_WITH_FAILURE_ANALYSIS",
+  "duration": "00:18:42",
+  "backend_status": "real_backend_missing",
+  "artifacts": [
+    "final_status.json",
+    "ranked_candidates.csv",
+    "advisor_summary.md",
+    "failure_report.md"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "fallback-proxy",
+      "score": 0.12,
+      "status": "rejected",
+      "notes": ["fallback backend used; not promotable"]
+    }
+  ],
+  "hard_gates": {
+    "not_report_only": true,
+    "not_fallback_only": false,
+    "real_backend_required": false,
+    "candidate_predictions_required": false,
+    "visual_board_required": false,
+    "cleanup_required": false
+  }
+}

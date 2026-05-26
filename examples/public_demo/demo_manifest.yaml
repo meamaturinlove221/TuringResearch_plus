@@ -1,0 +1,80 @@
+manifest_id: v1_public_demo_manifest
+status: demo-only
+round: 180
+requires_human_review: true
+network_required: false
+api_key_required: false
+private_data_included: false
+raw_data_included: false
+model_payload_included: false
+live_adapters_enabled: false
+generated_observed_results: false
+quickstart:
+  doc: docs/v1.0.0-quickstart.md
+  local_entry: examples/public_demo/QUICKSTART.md
+required_root_files:
+  - README.md
+  - QUICKSTART.md
+  - demo_research_intent.md
+  - demo_evidence_ledger.json
+  - demo_artifact_index.md
+  - demo_visual_inventory.md
+  - demo_related_work.md
+  - demo_advisor_pack.md
+  - demo_dashboard.html
+  - demo_dashboard_refined.html
+dashboard_outputs:
+  - dashboard/index.html
+  - projects/vggt_like_demo/dashboard.html
+  - projects/paper_survey_demo/dashboard.html
+  - projects/software_tooling_demo/dashboard.html
+advisor_bundle_outputs:
+  - demo_advisor_pack.md
+  - projects/vggt_like_demo/advisor_pack.md
+  - projects/paper_survey_demo/advisor_pack.md
+  - projects/software_tooling_demo/advisor_pack.md
+paper_related_work_outputs:
+  - demo_related_work.md
+  - projects/vggt_like_demo/related_work.md
+  - projects/paper_survey_demo/related_work.md
+  - projects/software_tooling_demo/related_work.md
+projects:
+  - project_id: vggt_like_demo
+    status: demo-only
+    files:
+      - README.md
+      - north_star.md
+      - evidence_ledger.json
+      - artifact_index.md
+      - related_work.md
+      - advisor_pack.md
+      - dashboard.html
+  - project_id: paper_survey_demo
+    status: demo-only
+    files:
+      - README.md
+      - north_star.md
+      - evidence_ledger.json
+      - artifact_index.md
+      - related_work.md
+      - advisor_pack.md
+      - dashboard.html
+  - project_id: software_tooling_demo
+    status: demo-only
+    files:
+      - README.md
+      - north_star.md
+      - evidence_ledger.json
+      - artifact_index.md
+      - related_work.md
+      - advisor_pack.md
+      - dashboard.html
+boundaries:
+  - demo only
+  - no secrets
+  - no raw data
+  - no private paths
+  - no model payloads
+  - no live networking
+  - no real experiment execution
+  - no observed result generation

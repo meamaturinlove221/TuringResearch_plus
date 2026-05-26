@@ -1,0 +1,33 @@
+{
+  "ledger_id": "public_demo_evidence_ledger",
+  "status": "demo-only",
+  "requires_human_review": true,
+  "entries": [
+    {
+      "evidence_id": "demo-intent-001",
+      "status": "planned",
+      "claim": "A demo project can be organized with evidence-first artifacts.",
+      "source_ref": "demo_research_intent.md",
+      "notes": "Fake/demo planning entry only."
+    },
+    {
+      "evidence_id": "demo-artifact-001",
+      "status": "fake-data",
+      "claim": "Artifact index can record selected and omitted files.",
+      "source_ref": "demo_artifact_index.md",
+      "notes": "No raw data or private files included."
+    },
+    {
+      "evidence_id": "demo-visual-001",
+      "status": "not-enough-evidence",
+      "claim": "Visual inventory can identify missing board views.",
+      "source_ref": "demo_visual_inventory.md",
+      "notes": "No image understanding or real visual proof."
+    }
+  ],
+  "limitations": [
+    "Demo data only.",
+    "No observed experiment result.",
+    "No private data or credentials."
+  ]
+}

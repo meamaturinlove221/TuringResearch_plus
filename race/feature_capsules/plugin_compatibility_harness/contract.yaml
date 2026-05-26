@@ -1,0 +1,23 @@
+schema_version: 0.1.0
+status: draft
+feature: plugin_compatibility_harness
+release_target: v0.7
+purpose: >-
+  Check plugin manifests against plugin, MCP, capability, and safety expectations without executing code.
+models:
+  primary: PluginCompatibilityReport, PluginCompatibilityFinding, PluginCompatibilityMatrix
+commands:
+  - command: turing plugin compatibility
+    tool: plugin.compatibility_check
+    output: PluginCompatibilityReport
+safety:
+  default_network: false
+  requires_human_review: true
+  no_plugin_execution: true
+  no_core_tool_override: true
+  no_secrets: true
+  no_raw_data: true
+non_goals:
+  - no plugin execution
+  - no automatic registry promotion
+  - no live service calls

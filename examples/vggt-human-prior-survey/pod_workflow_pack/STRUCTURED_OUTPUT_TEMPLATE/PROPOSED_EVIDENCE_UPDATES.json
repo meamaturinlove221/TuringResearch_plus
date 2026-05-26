@@ -1,0 +1,9 @@
+{
+
+  "policy": "proposed updates only; do not overwrite Evidence Ledger automatically",
+
+  "requires_human_review": true,
+
+  "updates": []
+
+}

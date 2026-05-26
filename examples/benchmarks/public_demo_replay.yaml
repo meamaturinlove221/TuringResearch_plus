@@ -1,0 +1,32 @@
+scenario_id: public_demo_replay
+name: Public Demo Replay
+root_path: examples/public_demo
+demo_only: true
+no_real_experiment: true
+network_required: false
+requires_human_review: true
+expected_outputs:
+  - README.md
+  - demo_research_intent.md
+  - demo_evidence_ledger.json
+  - demo_artifact_index.md
+  - demo_visual_inventory.md
+  - demo_related_work.md
+  - demo_advisor_pack.md
+  - demo_dashboard.html
+steps:
+  - step_id: public-demo-files
+    description: Check public demo fixture files.
+    expected_outputs:
+      - README.md
+      - demo_research_intent.md
+      - demo_evidence_ledger.json
+      - demo_artifact_index.md
+      - demo_visual_inventory.md
+      - demo_related_work.md
+      - demo_advisor_pack.md
+      - demo_dashboard.html
+boundaries:
+  - demo only
+  - no real experiment
+  - no observed evidence generation

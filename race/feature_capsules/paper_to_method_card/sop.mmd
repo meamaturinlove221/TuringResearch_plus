@@ -1,0 +1,9 @@
+flowchart TD
+  A[Receive paper metadata or PDF Phase B report] --> B[Check provenance]
+  B --> C{Real paper evidence present?}
+  C -->|no| D[Emit requires-real-paper]
+  C -->|yes| E[Extract method components]
+  E --> F[Attach EvidenceRefs]
+  F --> G[Record limitations and missing figures]
+  G --> H[Emit PaperMethodCard]
+  D --> H

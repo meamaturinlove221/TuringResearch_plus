@@ -163,4 +163,3 @@ class HypothesisPortfolio(BaseModel):
             ],
             tags=["hypothesis_formation", "portfolio"],
         )
-

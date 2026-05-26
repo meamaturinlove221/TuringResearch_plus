@@ -1,0 +1,35 @@
+feature_name: paper_to_method_card
+project: TuringResearch Plus
+status: capsule_draft
+release_target: v0.2.0_sprint_2
+implementation_status: skeleton_only
+source_inputs:
+  - docs/v0.2.0-sprint-2-final-scope.md
+  - docs/v0.2.0-sprint-2-test-plan.md
+  - docs/pdf_phase_b_figure_table_extraction.md
+proposed_command: turing paper method-card
+proposed_tool:
+  name: paper.method_card_extract
+  status: proposed_not_public_api
+  input_model: PaperMethodCardInput
+  output_model: PaperMethodCard
+data_models:
+  - PaperMethodCard
+  - MethodComponent
+  - MethodEvidenceRef
+  - MethodLimitation
+  - MethodArchitectureCue
+related_contracts:
+  - contracts/method_cards.yaml
+  - contracts/pdf_markdown.yaml
+  - contracts/paper_pipeline.yaml
+required_tests:
+  - tests/unit/test_method_card_models.py
+  - tests/unit/test_paper_to_method_card.py
+  - tests/workflow/test_paper_to_method_card_dry_run.py
+network_behavior: none
+local_path_behavior: fixture-only by default
+copyright_behavior: no copyrighted paper text copied into repo
+notes:
+  - Missing real paper input returns requires-real-paper.
+  - Do not fabricate method components.

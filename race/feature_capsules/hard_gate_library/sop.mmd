@@ -1,0 +1,13 @@
+flowchart TD
+  A[Receive gate validation input] --> B[Load GateSpec]
+  B --> C[Resolve EvidenceRefs and artifact refs]
+  C --> D[Evaluate conditions]
+  D --> E{Gate result}
+  E -->|pass| F[Emit pass with evidence]
+  E -->|block| G[Emit blocker reasons]
+  E -->|requires-human-review| H[Emit review requirements]
+  E -->|not-enough-evidence| I[Emit missing evidence]
+  F --> J[Write HardGateValidationReport]
+  G --> J
+  H --> J
+  I --> J

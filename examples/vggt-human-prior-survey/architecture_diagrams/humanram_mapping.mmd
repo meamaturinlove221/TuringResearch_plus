@@ -1,0 +1,15 @@
+flowchart TB
+  subgraph inspired_fixture[HumanRAM-inspired fixture mapping]
+    canonical_point[SMPL-X canonical point]
+    triplane_texture[tri-plane neural texture]
+    raster_pose[rasterized pose feature]
+    transformer_token[transformer token]
+  end
+  subgraph turing_vggt[TuringResearch VGGT mapping]
+    feature_raster[SMPL-X feature raster / tri-plane]
+    token_injection[VGGT token injection]
+    region_refinement[human-region geometry refinement]
+  end
+  canonical_point --> triplane_texture --> raster_pose --> transformer_token
+  feature_raster --> token_injection --> region_refinement
+  review_notice[derived-from-fixture / requires-human-review]

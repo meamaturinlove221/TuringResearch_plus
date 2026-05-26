@@ -1,0 +1,93 @@
+{
+  "route_id": "research-catalog-e2e-route",
+  "goal": "Plan a safe demo catalog review route.",
+  "context": "Demo-only Research Catalog E2E; not executed.",
+  "status": "planned",
+  "allowed_inputs": [
+    "demo workspace manifest",
+    "vault context",
+    "stress review"
+  ],
+  "forbidden_actions": [
+    "claim experiment completion",
+    "run remote command",
+    "publish release automatically"
+  ],
+  "stages": [
+    {
+      "id": "route",
+      "name": "Route Catalog Intent",
+      "purpose": "Route task intent to campaign and skill map.",
+      "inputs": [
+        "workspace_intent.md"
+      ],
+      "outputs": [
+        "campaign route",
+        "skill handoff"
+      ],
+      "hard_gates": [
+        "human_review_required"
+      ],
+      "failure_modes": [
+        "route_contradiction"
+      ],
+      "fallback": "north_star review",
+      "done_criteria": [
+        "campaign route recorded"
+      ]
+    },
+    {
+      "id": "catalog",
+      "name": "Build Catalog Report",
+      "purpose": "Combine dashboard groups, vault context, stress review, and runbook notes.",
+      "inputs": [
+        "dashboard.json",
+        "vault_context.md"
+      ],
+      "outputs": [
+        "catalog_report.md",
+        "catalog_report.json"
+      ],
+      "hard_gates": [
+        "no_evidence_promotion"
+      ],
+      "failure_modes": [
+        "fake_result_risk"
+      ],
+      "fallback": "manual catalog checklist",
+      "done_criteria": [
+        "report generated for review"
+      ]
+    }
+  ],
+  "hard_gates": [
+    "human_review_required",
+    "no_evidence_promotion"
+  ],
+  "fallback_routes": [
+    "north_star",
+    "stress_test"
+  ],
+  "final_states": [
+    "report ready for human review",
+    "blocked until unsafe claims are resolved"
+  ],
+  "artifact_requirements": [
+    "workspace manifest",
+    "vault context",
+    "catalog report",
+    "stress report",
+    "runbook summary"
+  ],
+  "cleanup_requirements": [
+    "remove temporary demo outputs"
+  ],
+  "advisor_outputs": [
+    "catalog summary",
+    "open review items"
+  ],
+  "metadata": {
+    "demo_only": true,
+    "network_required": false
+  }
+}

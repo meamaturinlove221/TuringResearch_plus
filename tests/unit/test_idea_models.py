@@ -70,4 +70,3 @@ def test_cluster_signature_normalizes_text() -> None:
     key = cluster_key().model_copy(update={"mechanism": "Evidence Gate"})
 
     assert key.signature()[0] == "evidence gate"
-

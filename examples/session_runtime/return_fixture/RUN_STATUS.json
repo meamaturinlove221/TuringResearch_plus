@@ -1,0 +1,6 @@
+{
+  "run_id": "fake-return-fixture",
+  "mode": "fake",
+  "status": "completed",
+  "requires_human_review": true
+}

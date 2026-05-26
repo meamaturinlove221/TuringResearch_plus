@@ -46,4 +46,3 @@ explicit local evidence ledger input.
 - No final experiment result.
 - No Visual Evidence Auditor.
 - No cross-machine sync.
-

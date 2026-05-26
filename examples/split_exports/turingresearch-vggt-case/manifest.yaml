@@ -1,0 +1,34 @@
+repo_id: turingresearch-vggt-case
+status: split-repo-skeleton-only
+purpose: public-safe dogfooding case study for TuringResearch Plus
+flagship_repo: turingresearch
+not_a_vggt_experiment_source_repo: true
+requires_human_review: true
+included_files:
+  - path: README.md
+    role: repo positioning and flagship link
+    public_safe: true
+  - path: CASE_STUDY.md
+    role: sanitized case-study draft
+    public_safe: true
+  - path: PRIVACY.md
+    role: privacy and claim boundary
+    public_safe: true
+safety:
+  no_private_paths: true
+  no_raw_data: true
+  no_smplx_files: true
+  no_api_keys: true
+  no_private_advisor_feedback: true
+  no_non_public_artifacts: true
+  fake_demo_artifacts_only: true
+claim_boundaries:
+  no_vggt_success_claim: true
+  no_sparseconv3d_success_claim: true
+  no_planned_as_observed: true
+  no_final_research_conclusion: true
+release_gate:
+  privacy_gate_required: true
+  compliance_review_required: true
+  claim_safety_review_required: true
+  maintainer_approval_required: true

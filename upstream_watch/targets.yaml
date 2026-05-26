@@ -1,0 +1,173 @@
+version: 2
+
+project: TuringResearch Plus
+
+policy: public-metadata-only
+
+notes:
+  - Pthahnix/Neocortica is retained only as a legacy alias / historical umbrella name.
+  - Pthahnix/Neocortica is not an active required scan target and unresolved status is not a failure.
+  - Round 175 v1 prelaunch refresh keeps Neocortica split repositories as the active targets.
+  - Yogsoth AI remains org-wide watch, with prelaunch focus on campaign routing, scholar/web MCP, knowledge structuring, wiki vault, convergence, stress test, and experiment execution.
+legacy_aliases:
+
+  - repository_full_name: Pthahnix/Neocortica
+
+    url: https://github.com/Pthahnix/Neocortica
+
+    status: legacy_alias_only
+
+    notes: Historical umbrella name; watch split repositories instead.
+
+targets:
+
+  - repository_full_name: Pthahnix/Neocortica-Scholar
+    url: https://github.com/Pthahnix/Neocortica-Scholar
+    group: pthahnix-reference-split
+    required: false
+    notes: Active Neocortica split target for scholar/paper pipeline, MCP config, source fallback, and paper ingestion signals.
+  - repository_full_name: Pthahnix/Neocortica-Web
+    url: https://github.com/Pthahnix/Neocortica-Web
+    group: pthahnix-reference-split
+    required: false
+    notes: Active Neocortica split target for web fetching, Apify adapter, MCP server, and .mcp env-block signals.
+  - repository_full_name: Pthahnix/Neocortica-Session
+    url: https://github.com/Pthahnix/Neocortica-Session
+    group: pthahnix-reference-split
+    required: false
+    notes: Active Neocortica split target for Git-based context handoff, pod lifecycle, durable context, and return metadata signals.
+  - repository_full_name: yogsoth-ai/de-anthropocentric-research-engine
+    url: https://github.com/yogsoth-ai/de-anthropocentric-research-engine
+    group: yogsoth-ai
+    required: false
+    notes: Public Yogsoth AI reference; v1 prelaunch focus for campaign routing, pre-conditions, strategy book, and orchestration rules.
+  - repository_full_name: yogsoth-ai/literature-engine
+    url: https://github.com/yogsoth-ai/literature-engine
+    group: yogsoth-ai
+    required: false
+    notes: Public Yogsoth AI reference; v1 prelaunch focus for literature workflow signals.
+  - repository_full_name: yogsoth-ai/.github
+
+    url: https://github.com/yogsoth-ai/.github
+
+    group: yogsoth-ai
+
+    required: false
+
+    notes: Public organization metadata.
+
+  - repository_full_name: yogsoth-ai/hypothesis-formation
+
+    url: https://github.com/yogsoth-ai/hypothesis-formation
+
+    group: yogsoth-ai
+
+    required: false
+
+    notes: Public Yogsoth AI reference.
+
+  - repository_full_name: yogsoth-ai/experiment-execution
+    url: https://github.com/yogsoth-ai/experiment-execution
+    group: yogsoth-ai
+    required: false
+    notes: Public Yogsoth AI reference; v1 prelaunch focus for future execution planning only.
+  - repository_full_name: yogsoth-ai/context-management
+
+    url: https://github.com/yogsoth-ai/context-management
+
+    group: yogsoth-ai
+
+    required: false
+
+    notes: Public Yogsoth AI reference.
+
+  - repository_full_name: yogsoth-ai/north-star-crystallization
+
+    url: https://github.com/yogsoth-ai/north-star-crystallization
+
+    group: yogsoth-ai
+
+    required: false
+
+    notes: Public Yogsoth AI reference.
+
+  - repository_full_name: yogsoth-ai/convergence
+    url: https://github.com/yogsoth-ai/convergence
+    group: yogsoth-ai
+    required: false
+    notes: Public Yogsoth AI reference; v1 prelaunch focus for strategy convergence patterns.
+  - repository_full_name: yogsoth-ai/web-browsing
+    url: https://github.com/yogsoth-ai/web-browsing
+    group: yogsoth-ai
+    required: false
+    notes: Public Yogsoth AI reference; v1 prelaunch focus for web browsing boundaries.
+  - repository_full_name: yogsoth-ai/knowledge-acquisition
+
+    url: https://github.com/yogsoth-ai/knowledge-acquisition
+
+    group: yogsoth-ai
+
+    required: false
+
+    notes: Public Yogsoth AI reference.
+
+  - repository_full_name: yogsoth-ai/literature-survey
+
+    url: https://github.com/yogsoth-ai/literature-survey
+
+    group: yogsoth-ai
+
+    required: false
+
+    notes: Public Yogsoth AI reference.
+
+  - repository_full_name: yogsoth-ai/stress-test
+    url: https://github.com/yogsoth-ai/stress-test
+    group: yogsoth-ai
+    required: false
+    notes: Public Yogsoth AI reference; v1 prelaunch focus for strategy stress-test planning.
+  - repository_full_name: yogsoth-ai/semantic-scholar-mcp
+    url: https://github.com/yogsoth-ai/semantic-scholar-mcp
+    group: yogsoth-ai
+    required: false
+    notes: Public Yogsoth AI reference; v1 prelaunch focus for scholar MCP config and tool surface patterns.
+  - repository_full_name: yogsoth-ai/creative-ideation
+
+    url: https://github.com/yogsoth-ai/creative-ideation
+
+    group: yogsoth-ai
+
+    required: false
+
+    notes: Public Yogsoth AI reference.
+
+  - repository_full_name: yogsoth-ai/deep-insight
+
+    url: https://github.com/yogsoth-ai/deep-insight
+
+    group: yogsoth-ai
+
+    required: false
+
+    notes: Public Yogsoth AI reference.
+
+  - repository_full_name: yogsoth-ai/subagent-spawning
+
+    url: https://github.com/yogsoth-ai/subagent-spawning
+
+    group: yogsoth-ai
+
+    required: false
+
+    notes: Public Yogsoth AI reference.
+
+  - repository_full_name: yogsoth-ai/knowledge-structuring
+    url: https://github.com/yogsoth-ai/knowledge-structuring
+    group: yogsoth-ai
+    required: false
+    notes: Public Yogsoth AI reference; v1 prelaunch focus for knowledge structuring and campaign catalog signals.
+  - repository_full_name: yogsoth-ai/wiki-vault
+    url: https://github.com/yogsoth-ai/wiki-vault
+    group: yogsoth-ai
+    required: false
+    notes: Public Yogsoth AI reference; v1 prelaunch focus for wiki vault and knowledge persistence signals.

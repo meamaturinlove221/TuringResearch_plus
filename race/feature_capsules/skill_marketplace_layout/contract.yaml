@@ -1,0 +1,45 @@
+schema_version: 0.1.0
+
+status: draft
+
+feature: skill_marketplace_layout
+
+release_target: v0.6 Sprint 2
+
+purpose: >-
+
+  Repo skills are useful, but future public skill distribution needs directory and metadata conventions before install flows expand.
+
+models:
+
+  primary: SkillMarketplaceIndex, SkillMarketplaceEntry, SkillReviewReport
+
+commands:
+
+  - command: turing skills marketplace-check
+
+    tool: skills.marketplace_check
+
+    output: SkillReviewReport
+
+safety:
+
+  default_network: false
+
+  requires_human_review: true
+
+  no_secrets: true
+
+  no_raw_data: true
+
+  no_private_model_files: true
+
+  no_planned_as_observed: true
+
+non_goals:
+
+  - no marketplace publishing
+
+  - no remote skill install
+
+  - no automatic agent runtime

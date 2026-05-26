@@ -1,0 +1,8 @@
+flowchart TD
+    A[Start: Advisor PDF / PPTX Export] --> B[Check source hygiene]
+    B --> C[Validate inputs]
+    C --> D[Apply safety denylist]
+    D --> E[Build review report]
+    E --> F[Mark limitations]
+    F --> G[Require human review]
+    G --> H[End: AdvisorExportReport]

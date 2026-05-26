@@ -1,0 +1,92 @@
+route_id: modal_sparseconv_real_v0
+status: planned
+execution_status: not_executed_by_turingresearch
+requires_real_experiment: true
+north_star: SMPL-X direct replacement -> SMPL-X feature encoding for VGGT
+goal: Plan a Modal Real SparseConv3D route using SMPL-X voxel feature encoding without claiming execution.
+context:
+  project: VGGT / SMPL-X Human Prior dogfooding
+  planning_surface: TuringResearch Plus
+  source_route_fixture: examples/vggt-human-prior-survey/route_specs/modal_sparseconv_v0.yaml
+  local_scan_status:
+    local_project_links_yaml: missing
+    local_scan_evidence_ledger_json: missing
+    local_scan_visual_inventory_md: missing
+allowed_inputs:
+  - Evidence Ledger summary
+  - Artifact Audit report
+  - Visual Evidence report
+  - Advisor Pack next actions
+  - Route DSL fixture
+forbidden_actions:
+  - run Modal from TuringResearch
+  - run VGGT from TuringResearch
+  - read private D:/vggt paths
+  - claim experiment completion
+  - promote planned SparseConv3D success to observed
+  - return report-only output
+  - bypass hard gates
+planned_route:
+  - id: modal_linux_gpu
+    description: Use Modal Linux GPU in the future execution environment.
+    status: planned
+  - id: sparse_backend_probe
+    description: Probe real spconv / MinkowskiEngine / TorchSparse availability.
+    status: planned
+    required_gate: real_sparse_backend_required
+  - id: smplx_voxel_feature_encoding
+    description: Encode SMPL-X-derived human geometry into voxel features.
+    status: planned
+  - id: sparseconv3d_latent_field
+    description: Produce sparse latent field through real SparseConv3D backend.
+    status: planned
+  - id: vggt_token_point_residual
+    description: Integrate sparse latent field into VGGT token / point residual path.
+    status: planned
+  - id: strict_evaluation
+    description: Evaluate candidate predictions, visual boards, NPZ diff, hashes, cleanup, and regressions.
+    status: planned
+  - id: advisor_pack_update
+    description: Update advisor-ready Markdown only after hard gates pass or failure analysis is complete.
+    status: planned
+hard_gates:
+  - real_backend_required
+  - sparse_backend_probe_required
+  - not_report_only
+  - not_fast_return
+  - not_identity_copy
+  - not_fallback_only
+  - no_promotion
+  - candidate_predictions_required
+  - visual_board_required
+  - npz_diff_required
+  - sha256_required
+  - zip_test_clean
+  - cleanup_required
+  - hairline_regression_checked
+  - hand_object_confusion_checked
+  - smplx_alignment_risk_logged
+artifact_requirements:
+  - final_status.json
+  - ranked_candidates.csv
+  - predictions.npz or thin summary
+  - board inventory
+  - advisor summary
+  - failure report
+  - sha256 manifest
+  - cleanup report
+failure_taxonomy:
+  - REAL_BACKEND_UNAVAILABLE
+  - SPARSE_BACKEND_UNAVAILABLE
+  - MISSING_ASSETS
+  - VISUAL_PROOF_INSUFFICIENT
+  - HAIRLINE_REGRESSION
+  - HAND_OBJECT_CONFUSION
+  - FALLBACK_ONLY
+  - REPORT_ONLY
+  - NOT_ENOUGH_EVIDENCE
+final_states:
+  - planned
+  - requires-real-experiment
+  - not executed by TuringResearch
+  - success only if real VGGT-side evidence exists

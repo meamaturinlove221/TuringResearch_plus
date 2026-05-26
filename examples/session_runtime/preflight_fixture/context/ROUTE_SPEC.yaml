@@ -1,0 +1,7 @@
+route_id: route-preflight-fixture
+mode: fake
+remote_execution: false
+live_network: false
+requires_human_review: true
+outputs:
+  - session_preflight_report

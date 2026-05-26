@@ -63,4 +63,3 @@ provenance, table metadata, or paper figure registry alignment.
 - Figure/table outputs have page provenance.
 - Empty or unsupported extraction emits warnings.
 - Existing PDF Markdown Phase A behavior remains compatible.
-

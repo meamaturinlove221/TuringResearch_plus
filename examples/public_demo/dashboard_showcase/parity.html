@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Original Repo Parity Showcase</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --text: #17202a;
+      --muted: #5f6b7a;
+      --line: #d7dde5;
+      --accent: #006b5f;
+      --warn: #8a5a00;
+      --soft: #edf4f3;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      padding: 32px 28px 24px;
+    }
+    .hero, main {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    main { padding: 24px; }
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 2.2rem;
+      line-height: 1.15;
+    }
+    h2, h3 { margin: 0 0 10px; }
+    p, li { line-height: 1.55; }
+    .subtitle { color: var(--muted); max-width: 820px; }
+    .badge {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      background: #fbfcfd;
+      padding: 6px 10px;
+      margin: 0 8px 8px 0;
+      font-size: 0.92rem;
+    }
+    .badge.warning { border-left-color: var(--warn); }
+    .matrix {
+      display: grid;
+      gap: 14px;
+    }
+    .row {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .row-grid {
+      display: grid;
+      grid-template-columns: minmax(180px, 0.8fr) minmax(240px, 1.2fr) minmax(220px, 1fr);
+      gap: 14px;
+    }
+    .label {
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 700;
+      margin: 0 0 4px;
+    }
+    .value { margin: 0 0 10px; }
+    .list { margin: 0 0 10px; padding-left: 18px; color: var(--muted); }
+    .safety {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      background: var(--soft);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      padding: 18px 28px;
+    }
+    @media (max-width: 860px) {
+      .row-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <p class="eyebrow">Parity showcase</p>
+      <h1>Original Repo Parity Showcase</h1>
+      <p class="subtitle">A static comparison of upstream capabilities, TuringResearch equivalents, tests, docs, safety enhancements, and deferred items.</p>
+      <span class="badge">static-local-first-demo</span>
+      <span class="badge">upstream capability</span>
+      <span class="badge">our equivalent</span>
+      <span class="badge warning">ARIS deferred</span>
+    </div>
+  </header>
+  <main>
+    <section aria-labelledby="parity-matrix">
+      <h2 id="parity-matrix">Replication Matrix</h2>
+      <div class="matrix">
+        <article class="row">
+          <div class="row-grid">
+            <div>
+              <p class="label">upstream capability</p>
+              <h3>Neocortica-Session</h3>
+              <p class="value">Git context, context packs, safe transfer planning, return review</p>
+              <p class="label">status</p>
+              <p class="value">production parity with live defaults disabled</p>
+            </div>
+            <div>
+              <p class="label">our equivalent</p>
+              <p class="value">Session CLI, context pack runtime, script export, archive hardening, remote dry-run plan, return confirmation, E2E gate</p>
+              <p class="label">safety enhancement</p>
+              <p class="value">No remote command, no automatic Evidence Ledger write, manual confirmation before import.</p>
+            </div>
+            <div>
+              <p class="label">tests</p>
+              <ul class="list">
+                <li>tests/workflow/test_session_production_parity_gate.py</li>
+                <li>tests/workflow/test_session_production_parity_e2e.py</li>
+              </ul>
+              <p class="label">docs</p>
+              <ul class="list">
+                <li>docs/session-production-parity-gate-report.md</li>
+                <li>docs/v1.4.0-session-parity-summary.md</li>
+              </ul>
+              <p class="label">deferred items</p>
+              <ul class="list">
+                <li>default live SSH/SFTP</li>
+                <li>remote command execution</li>
+                <li>automatic remote cleanup</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="row">
+          <div class="row-grid">
+            <div>
+              <p class="label">upstream capability</p>
+              <h3>Neocortica-Scholar</h3>
+              <p class="value">Paper search, content, reference, reading, README tool list</p>
+              <p class="label">status</p>
+              <p class="value">production parity in fake/default mode</p>
+            </div>
+            <div>
+              <p class="label">our equivalent</p>
+              <p class="value">Scholar tool surface, paper content/reference E2E, three-pass reading, optional heavy backend slot</p>
+              <p class="label">safety enhancement</p>
+              <p class="value">No paper download by default, no paywall bypass, no fake citation marked verified.</p>
+            </div>
+            <div>
+              <p class="label">tests</p>
+              <ul class="list">
+                <li>tests/workflow/test_scholar_production_parity_gate.py</li>
+                <li>tests/workflow/test_three_pass_reading_e2e_fake.py</li>
+              </ul>
+              <p class="label">docs</p>
+              <ul class="list">
+                <li>docs/scholar-production-parity-gate-report.md</li>
+                <li>docs/v1.4.0-scholar-production-summary.md</li>
+              </ul>
+              <p class="label">deferred items</p>
+              <ul class="list">
+                <li>MinerU implementation</li>
+                <li>OCR default</li>
+                <li>live provider proof</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="row">
+          <div class="row-grid">
+            <div>
+              <p class="label">upstream capability</p>
+              <h3>Neocortica-Web</h3>
+              <p class="value">Web fetching, content extraction, cache metadata, Apify optional</p>
+              <p class="label">status</p>
+              <p class="value">production parity in fake/default mode</p>
+            </div>
+            <div>
+              <p class="label">our equivalent</p>
+              <p class="value">URL normalization, cache manifest, content fixtures, Apify fake/live report, Web production gate</p>
+              <p class="label">safety enhancement</p>
+              <p class="value">No default network, no private scraping, no login bypass, no cookie storage.</p>
+            </div>
+            <div>
+              <p class="label">tests</p>
+              <ul class="list">
+                <li>tests/workflow/test_web_production_parity_gate.py</li>
+                <li>tests/workflow/test_web_content_extraction_fixtures.py</li>
+              </ul>
+              <p class="label">docs</p>
+              <ul class="list">
+                <li>docs/web-production-parity-gate-report.md</li>
+                <li>docs/v1.4.0-scholar-web-production-summary.md</li>
+              </ul>
+              <p class="label">deferred items</p>
+              <ul class="list">
+                <li>default live network</li>
+                <li>private scraping</li>
+                <li>live Apify proof</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="row">
+          <div class="row-grid">
+            <div>
+              <p class="label">upstream capability</p>
+              <h3>yogsoth-ai</h3>
+              <p class="value">Campaigns, catalog, vault, ontology, stress, convergence, runbooks</p>
+              <p class="label">status</p>
+              <p class="value">production parity with review boundary</p>
+            </div>
+            <div>
+              <p class="label">our equivalent</p>
+              <p class="value">Campaign trace E2E, Research Catalog E2E, Vault Wiki E2E, Ontology E2E, Stress/Convergence E2E, Experiment Runbook E2E</p>
+              <p class="label">safety enhancement</p>
+              <p class="value">No autonomous agent runtime, no automatic experiment execution, no fake result observed.</p>
+            </div>
+            <div>
+              <p class="label">tests</p>
+              <ul class="list">
+                <li>tests/workflow/test_yogsoth_production_parity_gate.py</li>
+                <li>tests/workflow/test_stress_convergence_e2e.py</li>
+              </ul>
+              <p class="label">docs</p>
+              <ul class="list">
+                <li>docs/yogsoth-production-parity-gate-report.md</li>
+                <li>docs/v1.4.0-yogsoth-production-summary.md</li>
+              </ul>
+              <p class="label">deferred items</p>
+              <ul class="list">
+                <li>autonomous agent runtime</li>
+                <li>automatic experiment execution</li>
+                <li>final paper automation</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="row">
+          <div class="row-grid">
+            <div>
+              <p class="label">upstream capability</p>
+              <h3>ARIS</h3>
+              <p class="value">Cross-model review, proof checking, meta optimization, claim audit</p>
+              <p class="label">status</p>
+              <p class="value">deferred</p>
+            </div>
+            <div>
+              <p class="label">our equivalent</p>
+              <p class="value">Deferred future-study references and explicit non-goal docs</p>
+              <p class="label">safety enhancement</p>
+              <p class="value">Kept out of default implementation because it would create research-automation and claim-authority risk.</p>
+            </div>
+            <div>
+              <p class="label">tests</p>
+              <ul class="list">
+                <li>tests/contract/test_v1_4_release_contracts.py</li>
+                <li>tests/workflow/test_v1_4_full_production_replay.py</li>
+              </ul>
+              <p class="label">docs</p>
+              <ul class="list">
+                <li>docs/aris-still-deferred-v1.4.md</li>
+                <li>docs/v1.5.0-aris-still-deferred.md</li>
+              </ul>
+              <p class="label">deferred items</p>
+              <ul class="list">
+                <li>cross-model review</li>
+                <li>proof-checker</li>
+                <li>meta-optimize</li>
+                <li>paper-claim-audit</li>
+                <li>ARIS runtime</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="safety" aria-labelledby="safety-enhancements">
+      <h2 id="safety-enhancements">Safety Enhancements</h2>
+      <ul>
+          <li>No default network access.</li>
+          <li>No live provider call.</li>
+          <li>No remote command execution.</li>
+          <li>No automatic experiment execution.</li>
+          <li>No automatic Evidence Ledger write.</li>
+          <li>No fake/demo result promotion.</li>
+          <li>ARIS remains deferred.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    Static/local-first parity showcase. It does not run providers, remote
+    commands, experiments, or claim verification.
+  </footer>
+</body>
+</html>

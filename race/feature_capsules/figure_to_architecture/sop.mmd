@@ -1,0 +1,8 @@
+flowchart TD
+  A[Receive Method Card and figure assets] --> B[Validate provenance]
+  B --> C[Map figures to method components]
+  C --> D[Build architecture nodes]
+  D --> E[Build supported edges]
+  E --> F[Flag unsupported edges]
+  F --> G[Export ArchitectureDiagramSpec]
+  G --> H[Render Mermaid draft]

@@ -1,0 +1,103 @@
+{
+  "dashboard_id": "session-production-parity-v2",
+  "status": "public-demo",
+  "round": 298,
+  "summary": "Session production parity dashboard for v1.4 fake/default workflow surfaces.",
+  "local_first": true,
+  "production_parity": true,
+  "requires_human_review": true,
+  "live_steps_disabled": true,
+  "no_live_ssh_required": true,
+  "no_remote_command_execution": true,
+  "no_automatic_ledger_write": true,
+  "no_automatic_observed_claim": true,
+  "e2e": {
+    "status": "fake-runnable",
+    "expected_gate": "pass-with-warnings-allowed",
+    "release_blocker_required": false,
+    "report": "examples/session_runtime/production_parity_e2e/SESSION_PRODUCTION_PARITY_E2E.md"
+  },
+  "capabilities": [
+    {
+      "id": "preflight",
+      "label": "Session preflight",
+      "production_status": "runnable",
+      "runtime_surface": "SessionPreflightRunner",
+      "evidence_doc": "docs/session-preflight-runner.md",
+      "safety_boundary": "local checks only; remote execution disabled"
+    },
+    {
+      "id": "context-pack",
+      "label": "Context pack",
+      "production_status": "runnable",
+      "runtime_surface": "ContextPackBuilder",
+      "evidence_doc": "docs/context-pack-builder-runtime.md",
+      "safety_boundary": "safe context files only; secrets and raw data excluded"
+    },
+    {
+      "id": "script-export",
+      "label": "Script export",
+      "production_status": "runnable",
+      "runtime_surface": "SessionScriptExporter",
+      "evidence_doc": "docs/session-shell-script-equivalent.md",
+      "safety_boundary": "scripts are exported for review and not executed"
+    },
+    {
+      "id": "fake-transfer",
+      "label": "Fake transfer",
+      "production_status": "runnable",
+      "runtime_surface": "FakeTransferRunner",
+      "evidence_doc": "docs/optional-ssh-sftp-transfer-runner.md",
+      "safety_boundary": "local copy only; no live SSH"
+    },
+    {
+      "id": "return-verifier",
+      "label": "Return verifier",
+      "production_status": "runnable",
+      "runtime_surface": "RemoteReturnVerifier",
+      "evidence_doc": "docs/remote-return-verifier-runtime.md",
+      "safety_boundary": "proposed updates only; no automatic ledger write"
+    },
+    {
+      "id": "human-confirmation",
+      "label": "Human confirmation",
+      "production_status": "runnable",
+      "runtime_surface": "HumanConfirmationPacket",
+      "evidence_doc": "docs/return-import-human-confirmation.md",
+      "safety_boundary": "remote claims are not trusted; human review required"
+    },
+    {
+      "id": "optional-live-transfer",
+      "label": "Optional live transfer",
+      "production_status": "deferred-opt-in",
+      "runtime_surface": "OptionalSFTPTransferGuard",
+      "evidence_doc": "docs/optional-ssh-sftp-transfer-runner.md",
+      "safety_boundary": "explicit live-test environment gates required"
+    },
+    {
+      "id": "remote-execution",
+      "label": "Remote execution",
+      "production_status": "disabled",
+      "runtime_surface": "none",
+      "evidence_doc": "docs/remote-execution-non-goals-v1.0.md",
+      "safety_boundary": "remote commands are unsafe by default and disabled"
+    }
+  ],
+  "safety_boundaries": [
+    "live steps disabled by default",
+    "no live SSH by default",
+    "no remote execution",
+    "no default network",
+    "no secrets",
+    "no raw data",
+    "no restricted model payloads",
+    "no automatic Evidence Ledger write",
+    "no automatic observed claim",
+    "fake/demo results remain proposed-only"
+  ],
+  "future_roadmap": [
+    "optional live transfer review in a dedicated live-test round",
+    "remote execution remains out of default scope",
+    "operator documentation polish"
+  ]
+}

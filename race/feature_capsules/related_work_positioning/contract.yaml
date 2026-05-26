@@ -1,0 +1,16 @@
+name: related_work_positioning
+status: scope_locked
+release_target: v0.3 Sprint 2
+proposed_tools:
+  - paper.related_work_position
+outputs:
+  - RelatedWorkPositioningReport
+required_tests:
+  - fake citation graph positioning
+  - unsafe claim rejection
+  - missing evidence report
+  - markdown export
+rules:
+  - no definitive novelty claim without evidence
+  - fake fixtures require human review
+  - every safe claim must be conservative

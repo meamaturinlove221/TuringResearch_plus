@@ -1,0 +1,6 @@
+{
+  "run_id": "modal_sparseconv_fixture",
+  "route_id": "modal_sparseconv_v0",
+  "status": "requires-human-review",
+  "note": "Fixture only. No real VGGT or Modal result is claimed."
+}

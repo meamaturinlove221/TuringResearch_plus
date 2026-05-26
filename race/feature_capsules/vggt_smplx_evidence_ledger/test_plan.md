@@ -28,4 +28,3 @@
 - No VGGT execution.
 - No cross-machine sync.
 - No private path reading by default.
-

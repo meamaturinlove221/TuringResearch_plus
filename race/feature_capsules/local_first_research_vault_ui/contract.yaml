@@ -1,0 +1,24 @@
+schema_version: 0.1.0
+status: draft
+feature: local_first_research_vault_ui
+release_target: v0.7
+purpose: >-
+  Build local static research vault views without uploading private data or turning graphs into final truth.
+models:
+  primary: ResearchVaultUIBundle, VaultNavigationIndex, VaultUISafetyReport
+commands:
+  - command: turing vault ui-build
+    tool: vault.ui_build_local
+    output: ResearchVaultUIBundle
+safety:
+  default_network: false
+  requires_human_review: true
+  no_upload: true
+  no_private_paths: true
+  graph_not_final_truth: true
+  no_secrets: true
+  no_raw_data: true
+non_goals:
+  - no SaaS
+  - no login
+  - no cloud deployment

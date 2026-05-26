@@ -1,0 +1,24 @@
+schema_version: 0.1.0
+status: draft
+feature: trusted_local_plugin_loading
+release_target: v0.7
+purpose: >-
+  Define a reviewed local-only plugin load plan without enabling unknown third-party code.
+models:
+  primary: TrustedPluginLoadPlan, PluginLoadDecision, PluginLoadSafetyReport
+commands:
+  - command: turing plugin trust-plan
+    tool: plugin.trusted_load_plan
+    output: TrustedPluginLoadPlan
+safety:
+  default_network: false
+  requires_human_review: true
+  no_unknown_plugin_execution: true
+  no_secrets: true
+  no_raw_data: true
+  no_private_model_files: true
+  no_planned_as_observed: true
+non_goals:
+  - no unknown third-party plugin execution
+  - no online marketplace install
+  - no automatic permission grant

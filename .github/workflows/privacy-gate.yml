@@ -1,0 +1,40 @@
+name: Privacy gate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  privacy:
+    name: Privacy and public safety gates
+    runs-on: ubuntu-latest
+
+    env:
+      TURINGRESEARCH_ENABLE_LIVE_TESTS: "0"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install privacy gate dependencies
+        run: python -m pip install -e ".[dev]"
+
+      - name: Run public demo privacy gate
+        run: python -m pytest tests/workflow/test_public_demo_privacy_gate.py -q
+
+      - name: Run v1 security privacy gate
+        run: python -m pytest tests/contract/test_v1_security_privacy_gate.py -q
+
+      - name: Run split bundle safety gate
+        run: python -m pytest tests/workflow/test_v1_1_split_ready_bundles.py -q
+
+      - name: Run paper demo integration safety gate
+        run: python -m pytest tests/workflow/test_v1_1_paper_demo_integration.py -q

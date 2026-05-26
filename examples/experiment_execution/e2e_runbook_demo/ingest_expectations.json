@@ -1,0 +1,31 @@
+{
+  "route_id": "experiment-runbook-e2e",
+  "accepted_source_types": [
+    "modal_fixture",
+    "modal_export",
+    "local_vggt_bundle",
+    "thin_review_bundle",
+    "manual_summary"
+  ],
+  "required_metadata": [
+    "run_id",
+    "route_id",
+    "source_type",
+    "run_status",
+    "duration",
+    "hard_gate_results",
+    "missing_artifacts"
+  ],
+  "required_artifacts": [
+    "intent summary",
+    "route DSL",
+    "hard gate checklist",
+    "artifact requirement table",
+    "runbook markdown",
+    "ingest expectation contract",
+    "proposed evidence update draft"
+  ],
+  "proposed_evidence_only": true,
+  "writes_observed_result": false,
+  "requires_human_review": true
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VGGT-like Demo Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; color: #20242a; background: #f7f8fa; }
+    .badge, .card { border: 1px solid #ccd3dd; border-radius: 6px; background: #fff; }
+    .badge { display: inline-block; padding: 4px 8px; margin-right: 6px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 16px; }
+    .card { padding: 14px; }
+  </style>
+</head>
+<body>
+  <h1>VGGT-like Demo Dashboard</h1>
+  <span class="badge">demo only</span>
+  <span class="badge">safe demo mode</span>
+  <span class="badge">requires human review</span>
+  <div class="grid">
+    <section class="card"><h2>Evidence</h2><p>Planned and fake entries only.</p></section>
+    <section class="card"><h2>Artifacts</h2><p>Metadata-only artifact summary.</p></section>
+    <section class="card"><h2>Route</h2><p>Route planning shown without success claims.</p></section>
+    <section class="card"><h2>Advisor Action</h2><p>Review evidence gaps before writing claims.</p></section>
+  </div>
+  <footer><p>Not an experiment result.</p></footer>
+</body>
+</html>

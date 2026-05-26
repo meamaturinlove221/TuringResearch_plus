@@ -1,0 +1,51 @@
+name: turingresearch.advisor_export_pdf_pptx
+
+version: 0.4.0
+
+design_status: skeleton
+
+project: TuringResearch Plus
+
+mcp_server: turingresearch-plus
+
+api_status: design_only_not_public_mcp
+
+default_enabled: false
+
+network_behavior: fake_or_fixture_default
+
+proposed_tool: advisor.export_review_pack
+
+input_model: AdvisorExportRequest
+
+output_model: AdvisorExportReport
+
+related_module: turing_research_plus.advisor_export
+
+required_tests:
+
+  - fake_default_workflow
+
+  - missing_credentials_or_source
+
+  - safety_denylist
+
+  - json_serialization
+
+  - markdown_export
+
+rules:
+
+  - Do not default to network access.
+
+  - Do not bypass permissions.
+
+  - Do not save secrets.
+
+  - Do not package raw data or SMPL-X model files.
+
+  - Do not mark remote artifacts as verified evidence.
+
+  - Do not promote planned work to observed evidence.
+
+implementation_status: planned

@@ -60,4 +60,3 @@ def design_experiment(hypothesis: Hypothesis, plan_id: str = "experiment-plan-1"
         ),
         evidence_refs=hypothesis.evidence_refs,
     )
-

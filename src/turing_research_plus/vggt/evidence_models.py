@@ -143,4 +143,3 @@ class VGGTEvidenceLedgerBuildInput(BaseModel):
     local_scan_summary_path: Path
     local_scan_artifact_index_path: Path
     local_scan_evidence_ledger_path: Path | None = None
-

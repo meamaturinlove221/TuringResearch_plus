@@ -31,4 +31,3 @@
 - No heavy layout parsing.
 - No external services.
 - No cross-machine sync.
-

@@ -1,0 +1,29 @@
+{
+
+  "project_id": "multimodal_model_eval_demo",
+
+  "status": "demo-only",
+
+  "title": "Multimodal model eval dashboard",
+
+  "cards": [
+
+    {"label": "Evidence", "value": "planned / fake-data / not-enough-evidence"},
+
+    {"label": "Artifacts", "value": "metadata only"},
+
+    {"label": "Paper", "value": "Evaluation paper scaffold for multimodal systems."},
+
+    {"label": "Safety", "value": "requires human review"}
+
+  ],
+
+  "read_only": true,
+
+  "no_secrets": true,
+
+  "no_raw_data": true,
+
+  "no_private_path": true
+
+}

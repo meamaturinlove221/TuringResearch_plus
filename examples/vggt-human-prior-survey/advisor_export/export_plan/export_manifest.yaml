@@ -1,0 +1,53 @@
+manifest_id: vggt_advisor_markdown_bundle_pdf_pptx_export_manifest
+
+source_bundle_id: vggt_advisor_markdown_bundle
+
+output_dir: examples\vggt-human-prior-survey\advisor_export\export_plan
+
+generated_binary_exports: false
+
+external_converter_called: false
+
+requires_human_review: true
+
+planned_formats:
+
+  - pdf
+
+  - pptx
+
+generated_files:
+
+  - advisor_pdf_export_plan.md
+
+  - advisor_pptx_outline.md
+
+  - export_manifest.yaml
+
+  - slide_section_mapping.md
+
+optional_adapters:
+
+  - future markdown-to-pdf adapter
+
+  - future markdown-to-pptx adapter
+
+safety_warnings:
+
+  - No real PDF was generated.
+
+  - No real PPTX was generated.
+
+  - No external converter or office tool was called.
+
+  - No fabricated charts, figures, or experiment results are included.
+
+  - Planned work remains planned and is not observed evidence.
+
+limitations:
+
+  - This package is an export plan and template package only.
+
+  - Human review is required before advisor delivery.
+
+  - Future binary adapters must preserve this manifest boundary.

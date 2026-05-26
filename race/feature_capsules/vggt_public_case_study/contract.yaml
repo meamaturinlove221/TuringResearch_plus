@@ -1,0 +1,24 @@
+schema_version: 0.1.0
+status: draft
+feature: vggt_public_case_study
+release_target: v0.7
+purpose: >-
+  Build a public-safe VGGT dogfooding case study outline without unsupported experiment claims.
+models:
+  primary: VGGTCaseStudyOutline, VGGTCaseStudyEvidenceMap, VGGTCaseStudySafetyReport
+commands:
+  - command: turing case-study vggt-build
+    tool: case_study.vggt_build
+    output: VGGTCaseStudyOutline
+safety:
+  default_network: false
+  requires_human_review: true
+  no_private_vggt_paths: true
+  no_experiment_execution: true
+  no_sparseconv_success_claim: true
+  no_planned_as_observed: true
+  no_raw_data: true
+non_goals:
+  - no VGGT experiment execution
+  - no private artifact packaging
+  - no final paper conclusion

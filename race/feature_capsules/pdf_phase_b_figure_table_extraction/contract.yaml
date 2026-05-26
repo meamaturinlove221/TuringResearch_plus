@@ -32,4 +32,3 @@ future_sync_adapters: non_goal
 notes:
   - OCR remains out of scope.
   - Do not implement cross-machine sync in Sprint 1.
-

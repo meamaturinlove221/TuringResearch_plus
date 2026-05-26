@@ -1,0 +1,50 @@
+workspace_id: public_demo_workspace
+workspace_name: Public Demo Workspace
+workspace_root: ..
+status: demo-only
+privacy_level: public-demo
+requires_human_review: true
+limitations:
+  - Demo-only workspace.
+  - Workspace index is not an evidence source.
+  - Project entries use fake metadata.
+projects:
+  - project_id: vggt_like_demo
+    project_name: VGGT-like Demo
+    project_type: vggt_like_experiment_project
+    project_root: ../projects/vggt_like_demo
+    docs_path: .
+    evidence_path: evidence_ledger.json
+    artifacts_path: artifact_index.md
+    advisor_pack_path: advisor_pack.md
+    routes_path: north_star.md
+    status: demo-only
+    privacy_level: public-demo
+    fake_demo: true
+    requires_human_review: true
+  - project_id: paper_survey_demo
+    project_name: Paper Survey Demo
+    project_type: paper_survey_project
+    project_root: ../projects/paper_survey_demo
+    docs_path: .
+    evidence_path: evidence_ledger.json
+    artifacts_path: artifact_index.md
+    advisor_pack_path: advisor_pack.md
+    routes_path: related_work.md
+    status: demo-only
+    privacy_level: public-demo
+    fake_demo: true
+    requires_human_review: true
+  - project_id: software_tooling_demo
+    project_name: Software Tooling Demo
+    project_type: software_tooling_project
+    project_root: ../projects/software_tooling_demo
+    docs_path: .
+    evidence_path: evidence_ledger.json
+    artifacts_path: artifact_index.md
+    advisor_pack_path: advisor_pack.md
+    routes_path: north_star.md
+    status: demo-only
+    privacy_level: public-demo
+    fake_demo: true
+    requires_human_review: true

@@ -55,4 +55,3 @@ def test_candidate_score_tool_returns_json_payload() -> None:
 
     assert payload["candidate_id"] == "candidate-1"
     assert payload["criteria"]["evidence_strength"] > 0
-

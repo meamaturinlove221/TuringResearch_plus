@@ -1,0 +1,59 @@
+name: Docs Pages dry run
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run_only:
+        description: Keep this workflow in dry-run mode.
+        required: true
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  docs-pages-dry-run:
+    name: Build docs-site dry-run artifact
+    runs-on: ubuntu-latest
+    if: ${{ inputs.dry_run_only == true }}
+
+    env:
+      TURINGRESEARCH_MODE: fake
+      TURINGRESEARCH_ENABLE_LIVE_TESTS: "0"
+      TURINGRESEARCH_ENABLE_WEB_LIVE: "0"
+      TURINGRESEARCH_ENABLE_APIFY_LIVE: "0"
+      TURINGRESEARCH_ENABLE_SFTP_LIVE: "0"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install docs dependencies
+        run: python -m pip install -e ".[dev]"
+
+      - name: Run docs deployment preflight
+        run: python -m pytest tests/workflow/test_docs_deployment_preflight.py -q
+
+      - name: Run docs deployment dry-run checks
+        run: python -m pytest tests/workflow/test_docs_deployment_dry_run.py -q
+
+      - name: Run public release hygiene
+        run: python -m pytest tests/contract/test_public_release_hygiene.py -q
+
+      - name: Upload docs dry-run artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: turingresearch-docs-site-dry-run
+          path: |
+            docs-site/dist/**
+            docs-site/dist_manifest.yaml
+            docs-site/preflight_report.md
+            docs-site/deployment_dry_run_report.md
+          if-no-files-found: error
+          retention-days: 7

@@ -41,4 +41,3 @@ def build_boundary_map(
             ),
         ],
     )
-

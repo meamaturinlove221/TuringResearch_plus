@@ -1,0 +1,45 @@
+schema_version: 0.1.0
+
+status: draft
+
+feature: tool_capability_manifest
+
+release_target: v0.6 Sprint 2
+
+purpose: >-
+
+  TuringResearch has many tools, adapters, exporters, and workflows; routing and public docs need a unified capability index.
+
+models:
+
+  primary: CapabilityManifest, CapabilityEntry, CapabilitySafetyLevel
+
+commands:
+
+  - command: turing capabilities export
+
+    tool: capabilities.export
+
+    output: CapabilityManifest
+
+safety:
+
+  default_network: false
+
+  requires_human_review: true
+
+  no_secrets: true
+
+  no_raw_data: true
+
+  no_private_model_files: true
+
+  no_planned_as_observed: true
+
+non_goals:
+
+  - no automatic tool execution
+
+  - no live discovery
+
+  - no marketplace publish

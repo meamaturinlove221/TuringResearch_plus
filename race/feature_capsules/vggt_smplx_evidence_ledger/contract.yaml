@@ -29,4 +29,3 @@ future_sync_adapters: non_goal
 notes:
   - Do not mark V120 or V121 local-observed without local evidence.
   - Do not implement cross-machine sync in Sprint 1.
-

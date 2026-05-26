@@ -1,0 +1,10 @@
+flowchart TB
+  A[Collect project context] --> B[Apply memory policy]
+  B --> C[Attach route spec and hard gates]
+  C --> D[Generate handoff manifest]
+  D --> E[Apply safety filter]
+  E --> F[Commit or package via Git transport]
+  F --> G[Remote review or pod consumes context]
+  G --> H[Structured outputs return]
+  H --> I[Run ingest and artifact audit]
+  I --> J[Proposed evidence updates]

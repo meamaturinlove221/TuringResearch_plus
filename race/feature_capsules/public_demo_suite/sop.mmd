@@ -1,0 +1,7 @@
+﻿flowchart TD
+  A[Read v0.5 scope] --> B[Load existing review artifacts]
+  B --> C[Build DemoSuiteReport]
+  C --> D[Validate safety boundaries]
+  D --> E[Export JSON and Markdown]
+  E --> F[Run fake/default tests]
+  F --> G[Human review]

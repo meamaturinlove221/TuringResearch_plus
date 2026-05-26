@@ -1,0 +1,76 @@
+bundle_id: vggt_research_knowledge_pack_v0_3_sprint2
+project_name: TuringResearch Plus
+topic: VGGT / SMPL-X Human Prior
+status: review-pack
+generated_by: Round 75
+requires_human_review: true
+claim_boundary:
+  - no_vggt_experiment_run
+  - no_modal_execution
+  - no_network_access
+  - no_final_paper_conclusion
+  - no_sparseconv3d_success_claim
+north_star: SMPL-X direct replacement -> SMPL-X feature encoding for VGGT
+status_labels:
+  observed:
+    - V129
+    - V900
+    - V930
+    - V999
+  local-observed:
+    - V770
+  planned:
+    - Modal SparseConv3D route
+    - SMPL-X voxel feature encoding
+  hard-blocked:
+    - V260
+  not-enough-evidence:
+    - V999-SparseConv3D
+    - modal_sparseconv_v0
+  requires-human-review:
+    - V120
+    - V121
+    - related work final claims
+    - advisor visual readiness
+source_files:
+  - docs/dogfooding-vggt-smplx.md
+  - docs/vggt-evidence-ledger.md
+  - docs/artifact-auditor.md
+  - docs/visual-evidence-auditor.md
+  - docs/advisor-pack-builder.md
+  - docs/experiment-route-dsl.md
+  - docs/hard-gate-library.md
+  - docs/failure-taxonomy-engine.md
+  - docs/paper-to-method-card.md
+  - docs/figure-to-architecture.md
+  - docs/related-work-positioning-generator.md
+  - docs/vault-graph-enhancement.md
+  - examples/vggt-human-prior-survey/local_scan_summary.md
+  - examples/vggt-human-prior-survey/local_scan_artifact_index.md
+  - examples/vggt-human-prior-survey/visual_evidence_audit_report.md
+  - examples/vggt-human-prior-survey/visual_evidence_missing_items.md
+  - examples/vggt-human-prior-survey/advisor_pack/advisor_summary.md
+  - examples/vggt-human-prior-survey/modal_sparseconv_route_pack/
+  - examples/vggt-human-prior-survey/related_work/
+  - examples/vggt-human-prior-survey/vault_graph/
+pack_files:
+  - README.md
+  - north_star.md
+  - current_state.md
+  - evidence_summary.md
+  - artifact_summary.md
+  - visual_readiness.md
+  - failure_taxonomy.md
+  - experiment_routes.md
+  - related_work_positioning.md
+  - method_taxonomy.md
+  - vault_graph.md
+  - advisor_brief.md
+  - next_actions.md
+  - manifest.yaml
+missing_inputs:
+  - examples/vggt-human-prior-survey/local_scan_evidence_ledger.json
+  - examples/vggt-human-prior-survey/local_scan_visual_inventory.md
+  - real sparse backend probe log
+  - predictions.npz or thin summary
+  - full-body / hairline / hand close-up visual boards

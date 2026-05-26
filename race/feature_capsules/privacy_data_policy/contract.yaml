@@ -1,0 +1,45 @@
+schema_version: 0.1.0
+
+status: draft
+
+feature: privacy_data_policy
+
+release_target: v0.6 Sprint 1
+
+purpose: >-
+
+  Multi-project workflows increase the risk of leaking private paths, raw data, credentials, model files, and unreleased results.
+
+models:
+
+  primary: PrivacyScanReport, DataPolicyRule, ReleaseGateDecision
+
+commands:
+
+  - command: turing privacy scan
+
+    tool: privacy.scan
+
+    output: PrivacyScanReport
+
+safety:
+
+  default_network: false
+
+  requires_human_review: true
+
+  no_secrets: true
+
+  no_raw_data: true
+
+  no_private_model_files: true
+
+  no_planned_as_observed: true
+
+non_goals:
+
+  - no destructive cleanup
+
+  - no automatic deletion
+
+  - no upload of scan results

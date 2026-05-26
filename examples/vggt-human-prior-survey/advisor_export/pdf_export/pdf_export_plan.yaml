@@ -1,0 +1,41 @@
+plan_id: vggt_advisor_markdown_bundle_real_pdf_export
+
+source_bundle_id: vggt_advisor_markdown_bundle
+
+output_filename: advisor_report.pdf
+
+backend: reportlab
+
+optional_backend: true
+
+requires_human_review: true
+
+sections:
+
+  - title
+
+  - current status
+
+  - evidence summary
+
+  - artifact readiness
+
+  - visual readiness
+
+  - failure summary
+
+  - next actions
+
+  - limitations
+
+  - requires human review
+
+safety_warnings:
+
+  - PDF export is optional and skipped when backend dependencies are missing.
+
+  - PDF content is derived from AdvisorMarkdownBundle source files.
+
+  - No charts, visual evidence, or experiment values are fabricated.
+
+  - Planned work remains planned and is not observed evidence.

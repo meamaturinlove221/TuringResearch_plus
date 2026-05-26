@@ -1,0 +1,24 @@
+schema_version: 0.1.0
+status: draft
+feature: advisor_real_pptx_export
+release_target: v0.7
+purpose: >-
+  Add optional advisor PPTX export from reviewed slide outlines without fabricated charts or claims.
+models:
+  primary: AdvisorPPTXExportPlan, AdvisorPPTXArtifactManifest, PPTXExportSafetyReport
+commands:
+  - command: turing advisor export-pptx
+    tool: advisor.export_pptx_optional
+    output: AdvisorPPTXArtifactManifest
+safety:
+  default_network: false
+  requires_human_review: true
+  optional_adapter: true
+  no_fake_charts: true
+  no_fake_result_values: true
+  no_secrets: true
+  no_raw_data: true
+non_goals:
+  - no default binary generation
+  - no generated charts without evidence
+  - no final paper or presentation claims

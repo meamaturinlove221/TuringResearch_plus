@@ -40,4 +40,3 @@ def quality_diversity_filter(
         rejected_duplicates=rejected,
         cluster_count=len(retained_by_signature),
     )
-

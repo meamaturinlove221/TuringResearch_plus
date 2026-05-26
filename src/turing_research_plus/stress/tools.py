@@ -64,4 +64,3 @@ def research_failure_mode_analyze(
         failure_modes=failure_modes,
         mitigations=mitigations,
     ).model_dump(mode="json")
-

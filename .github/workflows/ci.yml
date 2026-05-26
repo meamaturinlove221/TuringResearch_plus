@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  core-checks:
+    name: Unit and contract checks
+    runs-on: ubuntu-latest
+
+    env:
+      TURINGRESEARCH_ENABLE_LIVE_TESTS: "0"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install minimal dependencies
+        run: python -m pip install -e ".[dev]"
+
+      - name: Ruff check
+        run: python -m ruff check src tests
+
+      - name: Run unit tests
+        run: python -m pytest tests/unit -m "not live and not manual"
+
+      - name: Run contract tests
+        run: python -m pytest tests/contract -m "not live and not manual"
+
+      - name: Run name integrity
+        run: python -m pytest tests/contract/test_name_integrity.py -q
+
+      - name: Run privacy gate
+        run: python -m pytest tests/workflow/test_public_demo_privacy_gate.py -q
+
+  mypy-optional:
+    name: Optional mypy
+    runs-on: ubuntu-latest
+    continue-on-error: true
+
+    env:
+      TURINGRESEARCH_ENABLE_LIVE_TESTS: "0"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install typing dependencies
+        run: python -m pip install -e ".[dev]"
+
+      - name: Mypy optional
+        run: python -m mypy src

@@ -1,0 +1,6 @@
+flowchart TD
+    A[Inspect package metadata] --> B[Check CLI entrypoints]
+    B --> C[Validate MCP config examples]
+    C --> D[Run fake smoke checklist]
+    D --> E[Document install path]
+    E --> F[Human release review]

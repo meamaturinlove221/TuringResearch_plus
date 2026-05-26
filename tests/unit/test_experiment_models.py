@@ -61,4 +61,3 @@ def test_experiment_plan_converts_to_research_artifact() -> None:
 
     assert artifact.evidence
     assert "experiment_plan" in artifact.tags
-

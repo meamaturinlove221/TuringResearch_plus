@@ -1,0 +1,51 @@
+schema_version: 0.1.0
+
+status: draft
+
+feature: multi_project_workspace
+
+release_target: v0.6 Sprint 1
+
+purpose: >-
+
+  TuringResearch Plus can organize a single research line well, but v0.6 needs a safe way to track multiple research projects without mixing evidence.
+
+models:
+
+  primary: WorkspaceProject, WorkspaceRegistry, WorkspaceOverview
+
+commands:
+
+  - command: turing workspace list
+
+    tool: workspace.list
+
+    output: WorkspaceOverview
+
+  - command: turing workspace summarize
+
+    tool: workspace.summarize
+
+    output: WorkspaceSummary
+
+safety:
+
+  default_network: false
+
+  requires_human_review: true
+
+  no_secrets: true
+
+  no_raw_data: true
+
+  no_private_model_files: true
+
+  no_planned_as_observed: true
+
+non_goals:
+
+  - no SaaS workspace
+
+  - no cloud account system
+
+  - no automatic project discovery outside explicit roots

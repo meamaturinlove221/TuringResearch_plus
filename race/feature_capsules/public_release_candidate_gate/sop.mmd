@@ -1,0 +1,6 @@
+flowchart TD
+    A[Run full tests] --> B[Run privacy and quality gates]
+    B --> C[Audit docs and examples]
+    C --> D[Check package metadata]
+    D --> E[Build blocker list]
+    E --> F[Maintainer go/no-go]

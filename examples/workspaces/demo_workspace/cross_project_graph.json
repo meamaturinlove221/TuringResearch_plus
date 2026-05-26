@@ -1,0 +1,1929 @@
+{
+
+  "artifact_nodes": [
+
+    {
+
+      "confidence": 0.5,
+
+      "evidence_source": false,
+
+      "label": "sparse backend probe log",
+
+      "node_id": "artifact:vggt_human_prior:1",
+
+      "node_type": "artifact",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/artifact_plan"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.5,
+
+      "evidence_source": false,
+
+      "label": "summary artifact",
+
+      "node_id": "artifact:vggt_human_prior:2",
+
+      "node_type": "artifact",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/artifact_plan"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.5,
+
+      "evidence_source": false,
+
+      "label": "visual review artifact",
+
+      "node_id": "artifact:vggt_human_prior:3",
+
+      "node_type": "artifact",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/artifact_plan"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.5,
+
+      "evidence_source": false,
+
+      "label": "manifest artifact",
+
+      "node_id": "artifact:vggt_human_prior:4",
+
+      "node_type": "artifact",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/artifact_plan"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.5,
+
+      "evidence_source": false,
+
+      "label": "cleanup report",
+
+      "node_id": "artifact:vggt_human_prior:5",
+
+      "node_type": "artifact",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/artifact_plan"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.5,
+
+      "evidence_source": false,
+
+      "label": "summary artifact",
+
+      "node_id": "artifact:demo_medical_imaging:1",
+
+      "node_type": "artifact",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/artifact_plan"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.5,
+
+      "evidence_source": false,
+
+      "label": "visual review artifact",
+
+      "node_id": "artifact:demo_medical_imaging:2",
+
+      "node_type": "artifact",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/artifact_plan"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.5,
+
+      "evidence_source": false,
+
+      "label": "fake route plan",
+
+      "node_id": "artifact:demo_medical_imaging:3",
+
+      "node_type": "artifact",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/artifact_plan"
+
+      ],
+
+      "status": "requires-human-review"
+
+    }
+
+  ],
+
+  "claim_nodes": [
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "V260 remains hard-blocked.",
+
+      "node_id": "claim:vggt_human_prior:1",
+
+      "node_type": "claim",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/evidence_ledger"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "V999 / SparseConv3D remains not-enough-evidence.",
+
+      "node_id": "claim:vggt_human_prior:2",
+
+      "node_type": "claim",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/evidence_ledger"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "SparseConv3D success is not established.",
+
+      "node_id": "claim:vggt_human_prior:3",
+
+      "node_type": "claim",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/evidence_ledger"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.55,
+
+      "evidence_source": false,
+
+      "label": "No new observed experiment result is introduced by this workspace fixture.",
+
+      "node_id": "claim:vggt_human_prior:5",
+
+      "node_type": "claim",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/evidence_ledger"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "No observed clinical evidence.",
+
+      "node_id": "claim:demo_medical_imaging:1",
+
+      "node_type": "claim",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/evidence_ledger"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "No model performance claim.",
+
+      "node_id": "claim:demo_medical_imaging:3",
+
+      "node_type": "claim",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/evidence_ledger"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.55,
+
+      "evidence_source": false,
+
+      "label": "All examples require human review.",
+
+      "node_id": "claim:demo_medical_imaging:4",
+
+      "node_type": "claim",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/evidence_ledger"
+
+      ],
+
+      "status": "requires-human-review"
+
+    }
+
+  ],
+
+  "cross_project_edges": [
+
+    {
+
+      "confidence": 0.45,
+
+      "edge_type": "shares_method",
+
+      "evidence_transfer": false,
+
+      "rationale": "Both projects expose `advisor review` as a reusable pattern; this is not shared evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "method:vggt_human_prior:advisor_review",
+
+      "source_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "method:demo_medical_imaging:advisor_review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "edge_type": "shares_method",
+
+      "evidence_transfer": false,
+
+      "rationale": "Both projects expose `artifact review` as a reusable pattern; this is not shared evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "method:vggt_human_prior:artifact_review",
+
+      "source_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "method:demo_medical_imaging:artifact_review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "edge_type": "shares_method",
+
+      "evidence_transfer": false,
+
+      "rationale": "Both projects expose `route planning` as a reusable pattern; this is not shared evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "method:vggt_human_prior:route_planning",
+
+      "source_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "method:demo_medical_imaging:route_planning"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "edge_type": "shares_method",
+
+      "evidence_transfer": false,
+
+      "rationale": "Both projects expose `visual review` as a reusable pattern; this is not shared evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "method:vggt_human_prior:visual_review",
+
+      "source_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "method:demo_medical_imaging:visual_review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "edge_type": "shares_failure",
+
+      "evidence_transfer": false,
+
+      "rationale": "Both projects expose `experiment not run` as a reusable pattern; this is not shared evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "failure:vggt_human_prior:experiment_not_run",
+
+      "source_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "failure:demo_medical_imaging:experiment_not_run"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "edge_type": "shares_failure",
+
+      "evidence_transfer": false,
+
+      "rationale": "Both projects expose `not enough evidence` as a reusable pattern; this is not shared evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "failure:vggt_human_prior:not_enough_evidence",
+
+      "source_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "failure:demo_medical_imaging:not_enough_evidence"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "edge_type": "shares_artifact_pattern",
+
+      "evidence_transfer": false,
+
+      "rationale": "Both projects expose `summary artifact` as a reusable pattern; this is not shared evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "artifact:vggt_human_prior:2",
+
+      "source_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "artifact:demo_medical_imaging:1"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "edge_type": "shares_artifact_pattern",
+
+      "evidence_transfer": false,
+
+      "rationale": "Both projects expose `visual review artifact` as a reusable pattern; this is not shared evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "artifact:vggt_human_prior:3",
+
+      "source_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "artifact:demo_medical_imaging:2"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "edge_type": "shares_route_pattern",
+
+      "evidence_transfer": false,
+
+      "rationale": "Both projects expose `planned route` as a reusable pattern; this is not shared evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "route:vggt_human_prior:planned_route",
+
+      "source_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "route:demo_medical_imaging:planned_route"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "edge_type": "shares_route_pattern",
+
+      "evidence_transfer": false,
+
+      "rationale": "Both projects expose `planned route` as a reusable pattern; this is not shared evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "route:vggt_human_prior:planned_route",
+
+      "source_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "route:demo_medical_imaging:1"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "edge_type": "shares_route_pattern",
+
+      "evidence_transfer": false,
+
+      "rationale": "Both projects expose `planned route` as a reusable pattern; this is not shared evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "route:vggt_human_prior:planned_route",
+
+      "source_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "route:demo_medical_imaging:2"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "edge_type": "shares_route_pattern",
+
+      "evidence_transfer": false,
+
+      "rationale": "Both projects expose `planned route` as a reusable pattern; this is not shared evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "route:vggt_human_prior:planned_route",
+
+      "source_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "route:demo_medical_imaging:3"
+
+    },
+
+    {
+
+      "confidence": 0.4,
+
+      "edge_type": "reuses_template",
+
+      "evidence_transfer": false,
+
+      "rationale": "Potential reusable template: Planned route review template.",
+
+      "requires_human_review": true,
+
+      "source_id": "project:demo_medical_imaging",
+
+      "source_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "project:vggt_human_prior"
+
+    },
+
+    {
+
+      "confidence": 0.4,
+
+      "edge_type": "reuses_template",
+
+      "evidence_transfer": false,
+
+      "rationale": "Potential reusable template: Artifact pattern review template.",
+
+      "requires_human_review": true,
+
+      "source_id": "project:demo_medical_imaging",
+
+      "source_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "project:vggt_human_prior"
+
+    },
+
+    {
+
+      "confidence": 0.4,
+
+      "edge_type": "reuses_template",
+
+      "evidence_transfer": false,
+
+      "rationale": "Potential reusable template: Missing evidence review template.",
+
+      "requires_human_review": true,
+
+      "source_id": "project:demo_medical_imaging",
+
+      "source_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "project:vggt_human_prior"
+
+    },
+
+    {
+
+      "confidence": 0.6,
+
+      "edge_type": "missing_evidence",
+
+      "evidence_transfer": false,
+
+      "rationale": "Claim is explicitly missing, blocked, or not enough evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "project:vggt_human_prior",
+
+      "source_projects": [
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "claim:vggt_human_prior:1"
+
+    },
+
+    {
+
+      "confidence": 0.6,
+
+      "edge_type": "missing_evidence",
+
+      "evidence_transfer": false,
+
+      "rationale": "Claim is explicitly missing, blocked, or not enough evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "project:vggt_human_prior",
+
+      "source_projects": [
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "claim:vggt_human_prior:2"
+
+    },
+
+    {
+
+      "confidence": 0.6,
+
+      "edge_type": "missing_evidence",
+
+      "evidence_transfer": false,
+
+      "rationale": "Claim is explicitly missing, blocked, or not enough evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "project:vggt_human_prior",
+
+      "source_projects": [
+
+        "vggt_human_prior"
+
+      ],
+
+      "target_id": "claim:vggt_human_prior:3"
+
+    },
+
+    {
+
+      "confidence": 0.6,
+
+      "edge_type": "missing_evidence",
+
+      "evidence_transfer": false,
+
+      "rationale": "Claim is explicitly missing, blocked, or not enough evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "project:demo_medical_imaging",
+
+      "source_projects": [
+
+        "demo_medical_imaging"
+
+      ],
+
+      "target_id": "claim:demo_medical_imaging:1"
+
+    },
+
+    {
+
+      "confidence": 0.6,
+
+      "edge_type": "missing_evidence",
+
+      "evidence_transfer": false,
+
+      "rationale": "Claim is explicitly missing, blocked, or not enough evidence.",
+
+      "requires_human_review": true,
+
+      "source_id": "project:demo_medical_imaging",
+
+      "source_projects": [
+
+        "demo_medical_imaging"
+
+      ],
+
+      "target_id": "claim:demo_medical_imaging:3"
+
+    }
+
+  ],
+
+  "evidence_source": false,
+
+  "failure_nodes": [
+
+    {
+
+      "confidence": 0.55,
+
+      "evidence_source": false,
+
+      "label": "not enough evidence",
+
+      "node_id": "failure:vggt_human_prior:not_enough_evidence",
+
+      "node_type": "failure",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/failure-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.55,
+
+      "evidence_source": false,
+
+      "label": "hard blocked",
+
+      "node_id": "failure:vggt_human_prior:hard_blocked",
+
+      "node_type": "failure",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/failure-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.55,
+
+      "evidence_source": false,
+
+      "label": "missing artifacts",
+
+      "node_id": "failure:vggt_human_prior:missing_artifacts",
+
+      "node_type": "failure",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/failure-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.55,
+
+      "evidence_source": false,
+
+      "label": "experiment not run",
+
+      "node_id": "failure:vggt_human_prior:experiment_not_run",
+
+      "node_type": "failure",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/failure-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.55,
+
+      "evidence_source": false,
+
+      "label": "not enough evidence",
+
+      "node_id": "failure:demo_medical_imaging:not_enough_evidence",
+
+      "node_type": "failure",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/failure-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.55,
+
+      "evidence_source": false,
+
+      "label": "no real data",
+
+      "node_id": "failure:demo_medical_imaging:no_real_data",
+
+      "node_type": "failure",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/failure-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.55,
+
+      "evidence_source": false,
+
+      "label": "experiment not run",
+
+      "node_id": "failure:demo_medical_imaging:experiment_not_run",
+
+      "node_type": "failure",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/failure-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    }
+
+  ],
+
+  "limitations": [
+
+    "Cross-project graph is a pattern index, not an evidence source.",
+
+    "Evidence from one project is never applied to another project automatically.",
+
+    "All reusable patterns require project-specific human review."
+
+  ],
+
+  "method_nodes": [
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "route planning",
+
+      "node_id": "method:vggt_human_prior:route_planning",
+
+      "node_type": "method",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/method-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "artifact review",
+
+      "node_id": "method:vggt_human_prior:artifact_review",
+
+      "node_type": "method",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/method-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "visual review",
+
+      "node_id": "method:vggt_human_prior:visual_review",
+
+      "node_type": "method",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/method-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "advisor review",
+
+      "node_id": "method:vggt_human_prior:advisor_review",
+
+      "node_type": "method",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/method-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "sparseconv3d",
+
+      "node_id": "method:vggt_human_prior:sparseconv3d",
+
+      "node_type": "method",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/method-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "route planning",
+
+      "node_id": "method:demo_medical_imaging:route_planning",
+
+      "node_type": "method",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/method-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "artifact review",
+
+      "node_id": "method:demo_medical_imaging:artifact_review",
+
+      "node_type": "method",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/method-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "visual review",
+
+      "node_id": "method:demo_medical_imaging:visual_review",
+
+      "node_type": "method",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/method-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "advisor review",
+
+      "node_id": "method:demo_medical_imaging:advisor_review",
+
+      "node_type": "method",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/method-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "segmentation sanity review",
+
+      "node_id": "method:demo_medical_imaging:segmentation_sanity_review",
+
+      "node_type": "method",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/method-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "preprocessing check",
+
+      "node_id": "method:demo_medical_imaging:preprocessing_check",
+
+      "node_type": "method",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/method-patterns"
+
+      ],
+
+      "status": "requires-human-review"
+
+    }
+
+  ],
+
+  "missing_evidence_claims": [
+
+    "claim:vggt_human_prior:1",
+
+    "claim:vggt_human_prior:2",
+
+    "claim:vggt_human_prior:3",
+
+    "claim:demo_medical_imaging:1",
+
+    "claim:demo_medical_imaging:3"
+
+  ],
+
+  "project_nodes": [
+
+    {
+
+      "confidence": 0.8,
+
+      "evidence_source": false,
+
+      "label": "VGGT Human Prior Review Case",
+
+      "node_id": "project:vggt_human_prior",
+
+      "node_type": "project",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.8,
+
+      "evidence_source": false,
+
+      "label": "Demo Medical Imaging Project",
+
+      "node_id": "project:demo_medical_imaging",
+
+      "node_type": "project",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging"
+
+      ],
+
+      "status": "requires-human-review"
+
+    }
+
+  ],
+
+  "requires_human_review": true,
+
+  "reusable_templates": [
+
+    {
+
+      "applies_to_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "caveat": "Template reuse requires project-specific review and evidence.",
+
+      "requires_human_review": true,
+
+      "reusable_parts": [
+
+        "route status",
+
+        "hard gate placeholder",
+
+        "next action"
+
+      ],
+
+      "template_id": "planned_route_review_template",
+
+      "title": "Planned route review template"
+
+    },
+
+    {
+
+      "applies_to_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "caveat": "Template reuse requires project-specific review and evidence.",
+
+      "requires_human_review": true,
+
+      "reusable_parts": [
+
+        "small summary",
+
+        "visual checklist",
+
+        "manifest/hash policy"
+
+      ],
+
+      "template_id": "artifact_pattern_review_template",
+
+      "title": "Artifact pattern review template"
+
+    },
+
+    {
+
+      "applies_to_projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "caveat": "Template reuse requires project-specific review and evidence.",
+
+      "requires_human_review": true,
+
+      "reusable_parts": [
+
+        "missing evidence label",
+
+        "required action",
+
+        "review owner"
+
+      ],
+
+      "template_id": "missing_evidence_review_template",
+
+      "title": "Missing evidence review template"
+
+    }
+
+  ],
+
+  "route_nodes": [
+
+    {
+
+      "confidence": 0.55,
+
+      "evidence_source": false,
+
+      "label": "planned route",
+
+      "node_id": "route:vggt_human_prior:planned_route",
+
+      "node_type": "route",
+
+      "project_id": "vggt_human_prior",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://vggt_human_prior/experiment_routes"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.55,
+
+      "evidence_source": false,
+
+      "label": "planned route",
+
+      "node_id": "route:demo_medical_imaging:planned_route",
+
+      "node_type": "route",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/experiment_routes"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "planned route",
+
+      "node_id": "route:demo_medical_imaging:1",
+
+      "node_type": "route",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/experiment_routes"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "planned route",
+
+      "node_id": "route:demo_medical_imaging:2",
+
+      "node_type": "route",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/experiment_routes"
+
+      ],
+
+      "status": "requires-human-review"
+
+    },
+
+    {
+
+      "confidence": 0.45,
+
+      "evidence_source": false,
+
+      "label": "planned route",
+
+      "node_id": "route:demo_medical_imaging:3",
+
+      "node_type": "route",
+
+      "project_id": "demo_medical_imaging",
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/experiment_routes"
+
+      ],
+
+      "status": "requires-human-review"
+
+    }
+
+  ],
+
+  "shared_failures": [
+
+    {
+
+      "caveat": "Shared pattern is a reuse hint only, not shared evidence.",
+
+      "label": "experiment not run",
+
+      "node_ids": [
+
+        "failure:vggt_human_prior:experiment_not_run",
+
+        "failure:demo_medical_imaging:experiment_not_run"
+
+      ],
+
+      "pattern_id": "failure:experiment_not_run",
+
+      "projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/failure-patterns",
+
+        "workspace://vggt_human_prior/failure-patterns"
+
+      ]
+
+    },
+
+    {
+
+      "caveat": "Shared pattern is a reuse hint only, not shared evidence.",
+
+      "label": "not enough evidence",
+
+      "node_ids": [
+
+        "failure:vggt_human_prior:not_enough_evidence",
+
+        "failure:demo_medical_imaging:not_enough_evidence"
+
+      ],
+
+      "pattern_id": "failure:not_enough_evidence",
+
+      "projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/failure-patterns",
+
+        "workspace://vggt_human_prior/failure-patterns"
+
+      ]
+
+    }
+
+  ],
+
+  "shared_methods": [
+
+    {
+
+      "caveat": "Shared pattern is a reuse hint only, not shared evidence.",
+
+      "label": "advisor review",
+
+      "node_ids": [
+
+        "method:vggt_human_prior:advisor_review",
+
+        "method:demo_medical_imaging:advisor_review"
+
+      ],
+
+      "pattern_id": "method:advisor_review",
+
+      "projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/method-patterns",
+
+        "workspace://vggt_human_prior/method-patterns"
+
+      ]
+
+    },
+
+    {
+
+      "caveat": "Shared pattern is a reuse hint only, not shared evidence.",
+
+      "label": "artifact review",
+
+      "node_ids": [
+
+        "method:vggt_human_prior:artifact_review",
+
+        "method:demo_medical_imaging:artifact_review"
+
+      ],
+
+      "pattern_id": "method:artifact_review",
+
+      "projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/method-patterns",
+
+        "workspace://vggt_human_prior/method-patterns"
+
+      ]
+
+    },
+
+    {
+
+      "caveat": "Shared pattern is a reuse hint only, not shared evidence.",
+
+      "label": "route planning",
+
+      "node_ids": [
+
+        "method:vggt_human_prior:route_planning",
+
+        "method:demo_medical_imaging:route_planning"
+
+      ],
+
+      "pattern_id": "method:route_planning",
+
+      "projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/method-patterns",
+
+        "workspace://vggt_human_prior/method-patterns"
+
+      ]
+
+    },
+
+    {
+
+      "caveat": "Shared pattern is a reuse hint only, not shared evidence.",
+
+      "label": "visual review",
+
+      "node_ids": [
+
+        "method:vggt_human_prior:visual_review",
+
+        "method:demo_medical_imaging:visual_review"
+
+      ],
+
+      "pattern_id": "method:visual_review",
+
+      "projects": [
+
+        "demo_medical_imaging",
+
+        "vggt_human_prior"
+
+      ],
+
+      "requires_human_review": true,
+
+      "source_refs": [
+
+        "workspace://demo_medical_imaging/method-patterns",
+
+        "workspace://vggt_human_prior/method-patterns"
+
+      ]
+
+    }
+
+  ],
+
+  "workspace_id": "demo_workspace"
+
+}

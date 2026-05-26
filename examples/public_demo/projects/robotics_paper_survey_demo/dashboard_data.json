@@ -1,0 +1,29 @@
+{
+
+  "project_id": "robotics_paper_survey_demo",
+
+  "status": "demo-only",
+
+  "title": "Robotics paper survey dashboard",
+
+  "cards": [
+
+    {"label": "Evidence", "value": "planned / fake-data / not-enough-evidence"},
+
+    {"label": "Artifacts", "value": "metadata only"},
+
+    {"label": "Paper", "value": "Paper survey scaffold for robotics manipulation policies."},
+
+    {"label": "Safety", "value": "requires human review"}
+
+  ],
+
+  "read_only": true,
+
+  "no_secrets": true,
+
+  "no_raw_data": true,
+
+  "no_private_path": true
+
+}

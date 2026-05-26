@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software Tooling Demo Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; color: #20242a; background: #f7f8fa; }
+    .badge, .card { border: 1px solid #ccd3dd; border-radius: 6px; background: #fff; }
+    .badge { display: inline-block; padding: 4px 8px; margin-right: 6px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 16px; }
+    .card { padding: 14px; }
+  </style>
+</head>
+<body>
+  <h1>Software Tooling Demo Dashboard</h1>
+  <span class="badge">demo only</span>
+  <span class="badge">safe demo mode</span>
+  <span class="badge">requires human review</span>
+  <div class="grid">
+    <section class="card"><h2>Quality Gate</h2><p>Release readiness remains review-only.</p></section>
+    <section class="card"><h2>Plugin Safety</h2><p>Fake manifests are checked without execution.</p></section>
+    <section class="card"><h2>Artifacts</h2><p>Documentation summaries only.</p></section>
+    <section class="card"><h2>Advisor Action</h2><p>Choose blockers for a release checklist.</p></section>
+  </div>
+  <footer><p>Not an experiment result. Not a production deployment report.</p></footer>
+</body>
+</html>

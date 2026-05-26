@@ -28,4 +28,3 @@ future_sync_adapters: non_goal
 notes:
   - Review-ready is not promotion.
   - Do not implement cross-machine sync in Sprint 1.
-

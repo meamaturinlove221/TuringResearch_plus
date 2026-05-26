@@ -46,4 +46,3 @@ def research_hypothesis_portfolio_build(
     return service.hypothesis_portfolio_build(hypothesis_set, max_items=max_items).model_dump(
         mode="json"
     )
-

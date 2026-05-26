@@ -62,4 +62,3 @@ def test_result_schema_and_analyze_tools_return_json_payloads() -> None:
 
     assert schema_payload["fields"]
     assert analysis_payload["metrics_observed"]["metric_1"] == 0.3
-

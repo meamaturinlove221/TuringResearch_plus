@@ -38,4 +38,3 @@ references in default tests and are not read. They are marked omitted with
 - No write into VGGT directories.
 - No experiment success inference from filenames.
 - No cross-machine sync.
-

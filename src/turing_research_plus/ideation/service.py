@@ -55,4 +55,3 @@ class CreativeIdeationService:
             ideas=diversity.retained,
             diversity_report=diversity,
         )
-

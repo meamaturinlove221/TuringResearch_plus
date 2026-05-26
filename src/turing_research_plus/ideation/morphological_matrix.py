@@ -44,4 +44,3 @@ def build_morphological_matrix(
             ),
         ],
     )
-

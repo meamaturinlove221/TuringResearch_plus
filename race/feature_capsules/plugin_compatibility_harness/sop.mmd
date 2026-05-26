@@ -1,0 +1,6 @@
+flowchart TD
+    A[Load manifest metadata] --> B[Validate schemas]
+    B --> C[Check MCP mapping]
+    C --> D[Check capability entry]
+    D --> E[Check safety report]
+    E --> F[Emit compatibility report]

@@ -29,4 +29,3 @@ def build_portfolio(
         research_questions=questions,
         rationale="Selected highest-scoring falsifiable hypotheses with evidence refs.",
     )
-

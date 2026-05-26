@@ -1,0 +1,17 @@
+name: vault_graph_ontology
+status: scope_locked
+release_target: v0.3 Sprint 2
+proposed_tools:
+  - vault.graph_audit
+outputs:
+  - VaultGraphAuditReport
+  - OntologySOPResult
+required_tests:
+  - typed edge traversal
+  - missing evidence detection
+  - alias resolution SOP
+  - ontology export fixture
+rules:
+  - no evidence-free edge promotion
+  - graph outputs require audit trail
+  - ontology exports require human review

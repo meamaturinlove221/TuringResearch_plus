@@ -91,4 +91,3 @@ v0.2.0 Sprint 1, fifth implementation slice.
 Future Sync Adapters remain out of scope for this sprint. Handoff, NAS/SMB,
 SSH/SFTP, GitHub sync, and cloud object storage must wait for later adapter
 planning.
-

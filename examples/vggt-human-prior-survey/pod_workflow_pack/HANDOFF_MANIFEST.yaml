@@ -1,0 +1,27 @@
+{
+
+  "forbidden": [
+
+    ".env",
+
+    "API keys",
+
+    "raw data",
+
+    "SMPL-X body model files"
+
+  ],
+
+  "package_id": "vggt-modal-sparseconv-pod-pack-context",
+
+  "project_name": "TuringResearch Plus",
+
+  "remote_execution_allowed": false,
+
+  "requires_human_review": true,
+
+  "route_id": "modal_sparseconv_real_v0",
+
+  "transport": "git"
+
+}

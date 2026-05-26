@@ -1,0 +1,53 @@
+candidate_id: turingresearch-examples
+
+source_root: examples/split_repos/turingresearch-examples
+
+export_time: "2026-05-21T09:01:33.102599Z"
+
+dry_run_only: true
+
+creates_github_repo: false
+
+pushes_git: false
+
+included_files:
+
+  -
+
+    relative_path: examples_manifest.yaml
+
+    included: true
+
+    file_size: 1138
+
+    sha256: ba838f2a65380160bbbc5794d2048f91b2700e3c601643cdbcb3f9228351f2c1
+
+    omitted_reason: null
+
+    safety_warnings:
+
+      []
+
+  -
+
+    relative_path: README.md
+
+    included: true
+
+    file_size: 1301
+
+    sha256: db4f39711d3d59f0529cfa9cff130c1a77c5a276334746b06cbfd9d4092c0396
+
+    omitted_reason: null
+
+    safety_warnings:
+
+      - "policy-mention:private_advisor_feedback"
+
+omitted_files:
+
+  []
+
+safety_report_path: safety_report.md
+
+requires_human_review: true

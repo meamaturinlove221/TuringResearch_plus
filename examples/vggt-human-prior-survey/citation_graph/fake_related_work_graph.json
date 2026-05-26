@@ -1,0 +1,1005 @@
+{
+
+  "graph_id": "fake-vggt-related-work",
+
+  "seed_papers": [
+
+    {
+
+      "paper_id": "fake-vggt",
+
+      "title": "VGGT fake seed",
+
+      "year": 2025,
+
+      "authors": [],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [
+
+        "VGGT",
+
+        "human prior"
+
+      ],
+
+      "source_metadata": {},
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-smplx",
+
+      "title": "SMPL-X fake seed",
+
+      "year": 2019,
+
+      "authors": [],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [
+
+        "SMPL-X"
+
+      ],
+
+      "source_metadata": {},
+
+      "human_verified": false
+
+    }
+
+  ],
+
+  "nodes": [
+
+    {
+
+      "paper_id": "fake-vggt",
+
+      "title": "VGGT fake seed",
+
+      "year": 2025,
+
+      "authors": [],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [
+
+        "VGGT",
+
+        "human prior"
+
+      ],
+
+      "source_metadata": {},
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-smplx",
+
+      "title": "SMPL-X fake seed",
+
+      "year": 2019,
+
+      "authors": [],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [
+
+        "SMPL-X"
+
+      ],
+
+      "source_metadata": {},
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-vggt-ref-1",
+
+      "title": "Fake reference 1",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-vggt-ref-2",
+
+      "title": "Fake reference 2",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-vggt-ref-3",
+
+      "title": "Fake reference 3",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-vggt-cite-1",
+
+      "title": "Fake citation 1",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-vggt-cite-2",
+
+      "title": "Fake citation 2",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-vggt-cite-3",
+
+      "title": "Fake citation 3",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-smplx-ref-1",
+
+      "title": "Fake reference 1",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-smplx-ref-2",
+
+      "title": "Fake reference 2",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-smplx-ref-3",
+
+      "title": "Fake reference 3",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-smplx-cite-1",
+
+      "title": "Fake citation 1",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-smplx-cite-2",
+
+      "title": "Fake citation 2",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-smplx-cite-3",
+
+      "title": "Fake citation 3",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    }
+
+  ],
+
+  "edges": [
+
+    {
+
+      "source_id": "fake-vggt",
+
+      "target_id": "fake-vggt-ref-1",
+
+      "edge_type": "cites",
+
+      "evidence": "adapter citation edge"
+
+    },
+
+    {
+
+      "source_id": "fake-vggt",
+
+      "target_id": "fake-vggt-ref-2",
+
+      "edge_type": "cites",
+
+      "evidence": "adapter citation edge"
+
+    },
+
+    {
+
+      "source_id": "fake-vggt",
+
+      "target_id": "fake-vggt-ref-3",
+
+      "edge_type": "cites",
+
+      "evidence": "adapter citation edge"
+
+    },
+
+    {
+
+      "source_id": "fake-vggt-cite-1",
+
+      "target_id": "fake-vggt",
+
+      "edge_type": "cited_by",
+
+      "evidence": "adapter citation edge"
+
+    },
+
+    {
+
+      "source_id": "fake-vggt-cite-2",
+
+      "target_id": "fake-vggt",
+
+      "edge_type": "cited_by",
+
+      "evidence": "adapter citation edge"
+
+    },
+
+    {
+
+      "source_id": "fake-vggt-cite-3",
+
+      "target_id": "fake-vggt",
+
+      "edge_type": "cited_by",
+
+      "evidence": "adapter citation edge"
+
+    },
+
+    {
+
+      "source_id": "fake-smplx",
+
+      "target_id": "fake-smplx-ref-1",
+
+      "edge_type": "cites",
+
+      "evidence": "adapter citation edge"
+
+    },
+
+    {
+
+      "source_id": "fake-smplx",
+
+      "target_id": "fake-smplx-ref-2",
+
+      "edge_type": "cites",
+
+      "evidence": "adapter citation edge"
+
+    },
+
+    {
+
+      "source_id": "fake-smplx",
+
+      "target_id": "fake-smplx-ref-3",
+
+      "edge_type": "cites",
+
+      "evidence": "adapter citation edge"
+
+    },
+
+    {
+
+      "source_id": "fake-smplx-cite-1",
+
+      "target_id": "fake-smplx",
+
+      "edge_type": "cited_by",
+
+      "evidence": "adapter citation edge"
+
+    },
+
+    {
+
+      "source_id": "fake-smplx-cite-2",
+
+      "target_id": "fake-smplx",
+
+      "edge_type": "cited_by",
+
+      "evidence": "adapter citation edge"
+
+    },
+
+    {
+
+      "source_id": "fake-smplx-cite-3",
+
+      "target_id": "fake-smplx",
+
+      "edge_type": "cited_by",
+
+      "evidence": "adapter citation edge"
+
+    }
+
+  ],
+
+  "frontier_nodes": [
+
+    {
+
+      "paper_id": "fake-vggt-ref-3",
+
+      "title": "Fake reference 3",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-smplx-ref-3",
+
+      "title": "Fake reference 3",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-vggt-ref-2",
+
+      "title": "Fake reference 2",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-smplx-ref-2",
+
+      "title": "Fake reference 2",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-vggt-ref-1",
+
+      "title": "Fake reference 1",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-smplx-ref-1",
+
+      "title": "Fake reference 1",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-vggt-cite-3",
+
+      "title": "Fake citation 3",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-smplx-cite-3",
+
+      "title": "Fake citation 3",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-vggt-cite-2",
+
+      "title": "Fake citation 2",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    },
+
+    {
+
+      "paper_id": "fake-smplx-cite-2",
+
+      "title": "Fake citation 2",
+
+      "year": 2026,
+
+      "authors": [
+
+        "TuringResearch Fake Adapter"
+
+      ],
+
+      "citation_count": 0,
+
+      "is_open_access": false,
+
+      "topics": [],
+
+      "source_metadata": {
+
+        "provider": "semantic_scholar",
+
+        "retrieval_status": "retrieved"
+
+      },
+
+      "human_verified": false
+
+    }
+
+  ],
+
+  "expansion_depth": 1,
+
+  "filters": {
+
+    "min_year": null,
+
+    "max_year": null,
+
+    "open_access_only": false,
+
+    "min_citation_count": null
+
+  },
+
+  "source_adapter": "fake_semantic_scholar",
+
+  "retrieval_status": "fake",
+
+  "limitations": [
+
+    "Citation graph is not a complete related work review.",
+
+    "Live or fake retrieval is not human-verified by default."
+
+  ],
+
+  "requires_human_review": true
+
+}

@@ -20,4 +20,3 @@ def plan_scenarios(plan: ExperimentPlan) -> ScenarioPlan:
             "Revisit hypothesis boundary conditions.",
         ],
     )
-

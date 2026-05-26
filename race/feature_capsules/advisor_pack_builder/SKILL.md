@@ -62,4 +62,3 @@ evidence reporting, or review-ready boundaries.
 - Pack is evidence-linked.
 - Missing evidence is explicit.
 - Wording gates reject promotion claims.
-

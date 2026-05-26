@@ -133,4 +133,3 @@ class DecisionReport(BaseModel):
             evidence=evidence,
             tags=["convergence", "decision_report"],
         )
-

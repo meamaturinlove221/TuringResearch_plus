@@ -1,0 +1,1 @@
+﻿fixture placeholder for forbidden body model file, not a real model

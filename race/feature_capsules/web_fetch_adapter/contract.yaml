@@ -1,0 +1,19 @@
+name: web_fetch_adapter
+status: design_only
+release_target: v0.3 Sprint 3
+proposed_tools:
+  - web.fetch
+  - web.content
+outputs:
+  - WebFetchResult
+  - WebContentCacheRecord
+required_tests:
+  - fake adapter unit tests
+  - cache key tests
+  - source metadata tests
+  - no-network default tests
+rules:
+  - default tests do not access network
+  - live results are retrieved, not verified
+  - do not fetch restricted content
+  - do not bypass login or paywall

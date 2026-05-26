@@ -1,0 +1,479 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>VGGT Human Prior Survey Research Vault UI</title>
+
+  <style>
+
+:root {
+
+  color-scheme: light;
+
+  --bg: #f7f8fa;
+
+  --panel: #ffffff;
+
+  --text: #1f2937;
+
+  --muted: #5b6573;
+
+  --line: #d9dee7;
+
+  --accent: #215f9a;
+
+  --warn: #8a4b00;
+
+}
+
+* { box-sizing: border-box; }
+
+body {
+
+  margin: 0;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  line-height: 1.5;
+
+}
+
+header, main, footer { max-width: 1180px; margin: 0 auto; padding: 24px; }
+
+header { padding-top: 32px; }
+
+h1, h2, h3 { margin: 0 0 10px; }
+
+.meta, .boundary { color: var(--muted); }
+
+.badge {
+
+  display: inline-block;
+
+  border: 1px solid var(--line);
+
+  border-radius: 4px;
+
+  background: var(--panel);
+
+  padding: 2px 6px;
+
+  margin: 0 6px 6px 0;
+
+  font-size: 0.85rem;
+
+}
+
+.layout { display: grid; grid-template-columns: 220px 1fr; gap: 24px; }
+
+nav { position: sticky; top: 12px; align-self: start; display: grid; gap: 8px; }
+
+nav a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+
+section {
+
+  background: var(--panel);
+
+  border: 1px solid var(--line);
+
+  border-radius: 6px;
+
+  padding: 18px;
+
+  margin-bottom: 16px;
+
+}
+
+pre {
+
+  white-space: pre-wrap;
+
+  background: #f1f3f6;
+
+  border: 1px solid var(--line);
+
+  border-radius: 4px;
+
+  padding: 12px;
+
+}
+
+ul { padding-left: 22px; }
+
+.node-list { columns: 2; }
+
+@media (max-width: 760px) {
+
+  .layout { grid-template-columns: 1fr; }
+
+  nav { position: static; }
+
+  .node-list { columns: 1; }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>VGGT Human Prior Survey Research Vault UI</h1>
+
+    <p class="meta">local-first static vault browser - requires human review</p>
+
+    <span class="badge">No server</span>
+
+    <span class="badge">No login</span>
+
+    <span class="badge">No network</span>
+
+    <span class="badge">No graph database</span>
+
+    <span class="badge">Graph is not truth</span>
+
+  </header>
+
+  <main class="layout">
+
+    <nav aria-label="Vault sections"><a href="#artifact-nodes">Artifact Nodes</a>
+
+<a href="#claim-nodes">Claim Nodes</a>
+
+<a href="#concept-nodes">Concept Nodes</a>
+
+<a href="#failure-nodes">Failure Nodes</a>
+
+<a href="#method-nodes">Method Nodes</a>
+
+<a href="#paper-nodes">Paper Nodes</a>
+
+<a href="#route-nodes">Route Nodes</a>
+
+<a href="#source-vault-artifacts">Source Vault Artifacts</a><a href="#search-index">Search Index</a></nav>
+
+    <div>
+
+      <section id="graph-view">
+
+  <h2>Graph View</h2>
+
+  <p class="boundary">Graph view is review material, not final truth.</p>
+
+  <h3>Nodes</h3>
+
+  <ul class="node-list"><li id="node-vggt"><strong>VGGT</strong> <span class="badge">concept</span> confidence=0.50 status=<code>requires-human-review</code></li>
+
+<li id="node-smplx"><strong>SMPL-X</strong> <span class="badge">method</span> confidence=0.50 status=<code>requires-human-review</code></li>
+
+<li id="node-feature_adapter"><strong>feature adapter</strong> <span class="badge">method</span> confidence=0.50 status=<code>requires-human-review</code></li>
+
+<li id="node-sparseconv3d"><strong>SparseConv3D</strong> <span class="badge">method</span> confidence=0.35 status=<code>requires-human-review</code></li>
+
+<li id="node-neuralbody"><strong>NeuralBody</strong> <span class="badge">paper</span> confidence=0.50 status=<code>requires-human-review</code></li>
+
+<li id="node-humanram"><strong>HumanRAM</strong> <span class="badge">paper</span> confidence=0.50 status=<code>requires-human-review</code></li>
+
+<li id="node-raw_artifact_gap"><strong>raw artifact gap</strong> <span class="badge">artifact</span> confidence=0.40 status=<code>requires-human-review</code></li>
+
+<li id="node-sparseconv_success_claim"><strong>SparseConv3D success claim</strong> <span class="badge">claim</span> confidence=0.10 status=<code>requires-human-review</code></li>
+
+<li id="node-hairline_regression"><strong>hairline regression</strong> <span class="badge">failure</span> confidence=0.50 status=<code>requires-human-review</code></li>
+
+<li id="node-modal_sparseconv_route"><strong>modal_sparseconv_v0</strong> <span class="badge">route</span> confidence=0.40 status=<code>requires-human-review</code></li></ul>
+
+  <h3>Edges</h3>
+
+  <ul><li><code>smplx</code> -- <code>maps_to</code> --> <code>feature_adapter</code> (refs: fixture)</li>
+
+<li><code>feature_adapter</code> -- <code>uses</code> --> <code>vggt</code> (refs: fixture)</li>
+
+<li><code>neuralbody</code> -- <code>related_to</code> --> <code>sparseconv3d</code> (refs: missing source refs)</li>
+
+<li><code>humanram</code> -- <code>related_to</code> --> <code>feature_adapter</code> (refs: missing source refs)</li>
+
+<li><code>hairline_regression</code> -- <code>risks</code> --> <code>modal_sparseconv_route</code> (refs: missing source refs)</li>
+
+<li><code>raw_artifact_gap</code> -- <code>blocks</code> --> <code>sparseconv_success_claim</code> (refs: missing source refs)</li></ul>
+
+  <h3>Missing Edges</h3>
+
+  <ul><li>SparseConv3D success claim lacks evidence-bearing support edge</li>
+
+<li>Third-party paper links require real source refs before final use</li>
+
+<li>Artifact gap must be resolved before promotion</li></ul>
+
+  <h3>Requires Review Nodes</h3>
+
+  <ul><li><a href="#node-vggt">vggt</a></li>
+
+<li><a href="#node-smplx">smplx</a></li>
+
+<li><a href="#node-feature_adapter">feature_adapter</a></li>
+
+<li><a href="#node-sparseconv3d">sparseconv3d</a></li>
+
+<li><a href="#node-neuralbody">neuralbody</a></li>
+
+<li><a href="#node-humanram">humanram</a></li>
+
+<li><a href="#node-raw_artifact_gap">raw_artifact_gap</a></li>
+
+<li><a href="#node-sparseconv_success_claim">sparseconv_success_claim</a></li>
+
+<li><a href="#node-hairline_regression">hairline_regression</a></li>
+
+<li><a href="#node-modal_sparseconv_route">modal_sparseconv_route</a></li></ul>
+
+</section>
+
+      <section id="artifact-nodes">
+
+  <h2>Artifact Nodes</h2>
+
+  <p><span class="badge">requires-review</span></p>
+
+  <pre>- [[raw artifact gap]] (`raw_artifact_gap`) confidence=0.40 status=requires-human-review</pre>
+
+</section>
+
+<section id="claim-nodes">
+
+  <h2>Claim Nodes</h2>
+
+  <p><span class="badge">requires-review</span></p>
+
+  <pre>- [[SparseConv3D success claim]] (`sparseconv_success_claim`) confidence=0.10 status=requires-human-review</pre>
+
+</section>
+
+<section id="concept-nodes">
+
+  <h2>Concept Nodes</h2>
+
+  <p><span class="badge">requires-review</span></p>
+
+  <pre>- [[VGGT]] (`vggt`) confidence=0.50 status=requires-human-review</pre>
+
+</section>
+
+<section id="failure-nodes">
+
+  <h2>Failure Nodes</h2>
+
+  <p><span class="badge">requires-review</span></p>
+
+  <pre>- [[hairline regression]] (`hairline_regression`) confidence=0.50 status=requires-human-review</pre>
+
+</section>
+
+<section id="method-nodes">
+
+  <h2>Method Nodes</h2>
+
+  <p><span class="badge">requires-review</span></p>
+
+  <pre>- [[SMPL-X]] (`smplx`) confidence=0.50 status=requires-human-review
+
+- [[feature adapter]] (`feature_adapter`) confidence=0.50 status=requires-human-review
+
+- [[SparseConv3D]] (`sparseconv3d`) confidence=0.35 status=requires-human-review</pre>
+
+</section>
+
+<section id="paper-nodes">
+
+  <h2>Paper Nodes</h2>
+
+  <p><span class="badge">requires-review</span></p>
+
+  <pre>- [[NeuralBody]] (`neuralbody`) confidence=0.50 status=requires-human-review
+
+- [[HumanRAM]] (`humanram`) confidence=0.50 status=requires-human-review</pre>
+
+</section>
+
+<section id="route-nodes">
+
+  <h2>Route Nodes</h2>
+
+  <p><span class="badge">requires-review</span></p>
+
+  <pre>- [[modal_sparseconv_v0]] (`modal_sparseconv_route`) confidence=0.40 status=requires-human-review</pre>
+
+</section>
+
+<section id="source-vault-artifacts">
+
+  <h2>Source Vault Artifacts</h2>
+
+  <p><span class="badge">requires-review</span></p>
+
+  <pre>### edge_audit_report
+
+
+
+# Vault Graph Edge Audit Report
+
+
+
+Status: fixture / requires human review.
+
+
+
+## Findings
+
+
+
+- Evidence-bearing edges without source refs must remain blocked.
+
+- Low-confidence nodes must remain visible.
+
+- `SparseConv3D` remains planned / requires-real-experiment unless real evidence
+
+  appears in the evidence ledger.
+
+- Wikilinks are navigation aids, not proof.
+
+
+
+### vggt_method_taxonomy
+
+
+
+# VGGT Method Taxonomy
+
+
+
+Status: fixture / requires human review.
+
+
+
+## Concepts
+
+
+
+- [[VGGT]]
+
+- [[SMPL-X]]
+
+- [[feature adapter]]
+
+- [[SparseConv3D]]
+
+- [[tri-plane]]
+
+- [[voxel feature]]
+
+- [[token injection]]
+
+- [[point completion]]
+
+
+
+## Review Boundary
+
+
+
+This taxonomy is a TuringResearch fixture for graph and ontology tests. It is
+
+not a final knowledge graph and does not prove SparseConv3D success.
+
+
+
+### vggt_related_work_graph
+
+
+
+# VGGT Related Work Graph
+
+
+
+Status: fixture / requires human review.
+
+
+
+## Nodes
+
+
+
+- [[VGGT]]
+
+- [[SMPL-X]]
+
+- [[NeuralBody]]
+
+- [[HumanRAM]]
+
+- [[SparseConv3D]]
+
+- [[tri-plane]]
+
+- [[voxel feature]]
+
+- [[hairline regression]]
+
+- [[hand-object confusion]]
+
+- [[hard gate]]
+
+- [[failure taxonomy]]
+
+
+
+## Edges
+
+
+
+- [[NeuralBody]] -- `related_to` --&gt; [[SparseConv3D]]
+
+- [[HumanRAM]] -- `related_to` --&gt; [[tri-plane]]
+
+- [[SMPL-X]] -- `maps_to` --&gt; [[feature adapter]]
+
+- [[hard gate]] -- `blocks` --&gt; [[promotion]]
+
+
+
+All edges require source refs before final use.</pre>
+
+</section>
+
+      <section id="search-index">
+
+        <h2>Simple Static Search Index</h2>
+
+        <p class="boundary">Embedded JSON only. No remote search service is used.</p>
+
+        <script type="application/json" id="vault-search-index">[{&quot;entry_id&quot;: &quot;vggt&quot;, &quot;title&quot;: &quot;VGGT&quot;, &quot;node_type&quot;: &quot;concept&quot;, &quot;text&quot;: &quot;VGGT concept vault_graph requires-human-review&quot;, &quot;href&quot;: &quot;#node-vggt&quot;, &quot;requires_human_review&quot;: true}, {&quot;entry_id&quot;: &quot;smplx&quot;, &quot;title&quot;: &quot;SMPL-X&quot;, &quot;node_type&quot;: &quot;method&quot;, &quot;text&quot;: &quot;SMPL-X method vault_graph requires-human-review&quot;, &quot;href&quot;: &quot;#node-smplx&quot;, &quot;requires_human_review&quot;: true}, {&quot;entry_id&quot;: &quot;feature_adapter&quot;, &quot;title&quot;: &quot;feature adapter&quot;, &quot;node_type&quot;: &quot;method&quot;, &quot;text&quot;: &quot;feature adapter method vault_graph requires-human-review&quot;, &quot;href&quot;: &quot;#node-feature_adapter&quot;, &quot;requires_human_review&quot;: true}, {&quot;entry_id&quot;: &quot;sparseconv3d&quot;, &quot;title&quot;: &quot;SparseConv3D&quot;, &quot;node_type&quot;: &quot;method&quot;, &quot;text&quot;: &quot;SparseConv3D method vault_graph:planned requires-human-review&quot;, &quot;href&quot;: &quot;#node-sparseconv3d&quot;, &quot;requires_human_review&quot;: true}, {&quot;entry_id&quot;: &quot;neuralbody&quot;, &quot;title&quot;: &quot;NeuralBody&quot;, &quot;node_type&quot;: &quot;paper&quot;, &quot;text&quot;: &quot;NeuralBody paper related_work_fixture requires-human-review&quot;, &quot;href&quot;: &quot;#node-neuralbody&quot;, &quot;requires_human_review&quot;: true}, {&quot;entry_id&quot;: &quot;humanram&quot;, &quot;title&quot;: &quot;HumanRAM&quot;, &quot;node_type&quot;: &quot;paper&quot;, &quot;text&quot;: &quot;HumanRAM paper related_work_fixture requires-human-review&quot;, &quot;href&quot;: &quot;#node-humanram&quot;, &quot;requires_human_review&quot;: true}, {&quot;entry_id&quot;: &quot;raw_artifact_gap&quot;, &quot;title&quot;: &quot;raw artifact gap&quot;, &quot;node_type&quot;: &quot;artifact&quot;, &quot;text&quot;: &quot;raw artifact gap artifact edge_audit_report requires-human-review&quot;, &quot;href&quot;: &quot;#node-raw_artifact_gap&quot;, &quot;requires_human_review&quot;: true}, {&quot;entry_id&quot;: &quot;sparseconv_success_claim&quot;, &quot;title&quot;: &quot;SparseConv3D success claim&quot;, &quot;node_type&quot;: &quot;claim&quot;, &quot;text&quot;: &quot;SparseConv3D success claim claim edge_audit_report:not-established requires-human-review&quot;, &quot;href&quot;: &quot;#node-sparseconv_success_claim&quot;, &quot;requires_human_review&quot;: true}, {&quot;entry_id&quot;: &quot;hairline_regression&quot;, &quot;title&quot;: &quot;hairline regression&quot;, &quot;node_type&quot;: &quot;failure&quot;, &quot;text&quot;: &quot;hairline regression failure related_work_graph requires-human-review&quot;, &quot;href&quot;: &quot;#node-hairline_regression&quot;, &quot;requires_human_review&quot;: true}, {&quot;entry_id&quot;: &quot;modal_sparseconv_route&quot;, &quot;title&quot;: &quot;modal_sparseconv_v0&quot;, &quot;node_type&quot;: &quot;route&quot;, &quot;text&quot;: &quot;modal_sparseconv_v0 route route_specs requires-human-review&quot;, &quot;href&quot;: &quot;#node-modal_sparseconv_route&quot;, &quot;requires_human_review&quot;: true}]</script>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer>
+
+    This vault UI displays existing local graph artifacts only. It does not infer truth,
+
+    run experiments, upload data, or read private paths.
+
+  </footer>
+
+</body>
+
+</html>

@@ -93,4 +93,3 @@ def test_race_source_hygiene_check_tool_returns_json_payload() -> None:
 
     assert payload["decision"] == "allow"
     assert payload["gate"]["status"] == "passed"
-

@@ -1,0 +1,29 @@
+template_id: apify_content_extract
+status: template-only
+mode: fake-default
+actor_id: optional/content-extract
+live_enabled: false
+requires_token: false
+token_env: APIFY_TOKEN
+input:
+  url: https://example.com/public-article
+  source_type: public_article
+  public_or_authorized_only: true
+  extract_markdown: true
+output_contract:
+  fields:
+    - url
+    - title
+    - markdown
+    - content_hash
+    - source_metadata
+    - retrieved_at
+  human_verified: false
+  requires_human_review: true
+safety:
+  login_bypass: false
+  paywall_bypass: false
+  private_content_scraping: false
+  stores_cookies: false
+  automatic_evidence_promotion: false
+  no_key_behavior: graceful_skip

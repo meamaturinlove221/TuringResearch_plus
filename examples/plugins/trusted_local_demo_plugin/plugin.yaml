@@ -1,0 +1,24 @@
+plugin_id: trusted_local_demo_plugin
+name: Trusted Local Demo Plugin
+version: 0.1.0
+type: exporter
+entry_kind: manifest-only
+safety_level: public-demo
+status: disabled
+third_party: false
+executes_code: false
+required_permissions:
+  - read_demo_markdown
+  - export_artifacts
+config_schema:
+capabilities:
+  - capability_id: trusted_demo_export_manifest
+    name: Trusted Demo Export Manifest
+    category: exporter
+    description: Describe a trusted local demo export manifest without executing code.
+inputs:
+  - AdvisorMarkdownBundle
+outputs:
+  - ExportManifest
+author: TuringResearch Plus Demo
+license: Proprietary demo fixture

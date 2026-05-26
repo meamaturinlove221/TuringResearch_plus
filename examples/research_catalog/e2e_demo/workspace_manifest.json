@@ -1,0 +1,43 @@
+{
+  "workspace_id": "research-catalog-e2e-demo",
+  "status": "fake-demo",
+  "task_intent": "stress test unsafe claim review for demo research catalog",
+  "provided_inputs": [
+    "candidate claim or release surface"
+  ],
+  "evidence_refs": [
+    "evidence:demo-source-map"
+  ],
+  "artifact_refs": [
+    "artifact:catalog-report",
+    "artifact:route-spec"
+  ],
+  "related_work_refs": [
+    "paper:demo-a",
+    "paper:demo-b"
+  ],
+  "route_claims": [
+    "planned route only",
+    "demo only catalog report"
+  ],
+  "advisor_claims": [
+    "advisor note linked to evidence:demo-source-map"
+  ],
+  "plugin_permissions": [
+    "read_manifest"
+  ],
+  "text_blocks": [
+    "demo only workspace with human review boundary"
+  ],
+  "data_sensitivity": "demo",
+  "fake_demo_only": true,
+  "live_mode_enabled": false,
+  "safety": {
+    "no_agent_runtime": true,
+    "no_tool_execution": true,
+    "no_default_network": true,
+    "no_experiment_execution": true,
+    "no_evidence_ledger_mutation": true,
+    "requires_human_review": true
+  }
+}

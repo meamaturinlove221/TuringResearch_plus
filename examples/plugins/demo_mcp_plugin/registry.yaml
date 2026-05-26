@@ -1,0 +1,25 @@
+registry_id: demo_mcp_plugin_registry
+requires_human_review: true
+entries:
+  - plugin_id: demo_exporter_plugin
+    exposed_tool_name: mcp.demo_export
+    namespace: mcp
+    input_schema: DemoExportInput
+    output_schema: DemoExportOutput
+    safety_level: public-demo
+    default_enabled: false
+    live_required: false
+    requires_api_key: false
+    fake_mode_supported: true
+    third_party: true
+    permissions:
+      - read_demo_markdown
+      - write_demo_export_manifest
+    docs:
+      - docs/plugin-architecture.md
+      - docs/mcp-plugin-registry.md
+    tests:
+      - tests/workflow/test_mcp_plugin_registry_fake.py
+warnings:
+  - Demo registry only.
+  - No MCP server is started.

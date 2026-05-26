@@ -63,4 +63,3 @@ def test_hypothesis_debate_tool_returns_json_payload() -> None:
 
     assert payload["artifact_id"] == "hypothesis-1"
     assert payload["weaknesses"]
-

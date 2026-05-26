@@ -1,0 +1,28 @@
+{
+  "project_id": "vggt_like_demo",
+  "status": "demo-only",
+  "requires_human_review": true,
+  "entries": [
+    {
+      "evidence_id": "vggt-demo-intent",
+      "claim": "A geometry-first route can be tracked as a research plan.",
+      "status": "planned",
+      "source": "public demo placeholder",
+      "notes": "Planning entry only; not a measured result."
+    },
+    {
+      "evidence_id": "vggt-demo-artifact-summary",
+      "claim": "A small artifact summary can be reviewed without private payloads.",
+      "status": "fake-data",
+      "source": "public demo fixture",
+      "notes": "Metadata-only demonstration."
+    },
+    {
+      "evidence_id": "vggt-demo-success-claim",
+      "claim": "Route success is established.",
+      "status": "not-enough-evidence",
+      "source": "public demo guard",
+      "notes": "The demo intentionally blocks success language."
+    }
+  ]
+}

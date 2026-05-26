@@ -1,0 +1,44 @@
+{
+  "demo_id": "stress-convergence-e2e",
+  "fake_demo_only": true,
+  "does_not_execute_routes": true,
+  "requires_human_review": true,
+  "candidates": [
+    {
+      "candidate_id": "route-safe-docs-polish",
+      "stress_status": "pass",
+      "feasibility": 0.9,
+      "novelty": 0.72,
+      "resources": ["docs review", "dashboard check"]
+    },
+    {
+      "candidate_id": "route-live-provider-rush",
+      "stress_status": "fail",
+      "stress_blockers": [
+        "missing_evidence",
+        "fake_result_risk",
+        "overclaim",
+        "artifact_missing",
+        "unsafe_plugin",
+        "route_contradiction",
+        "advisor_pack_unsupported_claim"
+      ],
+      "feasibility": 0.82,
+      "novelty": 0.9,
+      "resources": ["live key", "provider review", "network gate"]
+    },
+    {
+      "candidate_id": "route-heavy-refactor",
+      "stress_status": "pass",
+      "feasibility": 0.5,
+      "novelty": 0.86,
+      "resources": [
+        "runtime refactor",
+        "docs migration",
+        "dashboard migration",
+        "new contract review",
+        "release coordination"
+      ]
+    }
+  ]
+}

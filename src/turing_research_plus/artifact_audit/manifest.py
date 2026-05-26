@@ -106,4 +106,3 @@ def _load_markdown_index(path: Path) -> ArtifactBundleManifest:
         source=str(path),
         records=records,
     )
-

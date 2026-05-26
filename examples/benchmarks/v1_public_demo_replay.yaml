@@ -1,0 +1,66 @@
+scenario_id: v1_public_demo_replay
+name: v1 Public Demo Replay
+root_path: examples/public_demo
+demo_only: true
+no_real_experiment: true
+network_required: false
+requires_human_review: true
+expected_outputs:
+  - README.md
+  - QUICKSTART.md
+  - demo_manifest.yaml
+  - demo_research_intent.md
+  - demo_evidence_ledger.json
+  - demo_artifact_index.md
+  - demo_visual_inventory.md
+  - demo_related_work.md
+  - demo_advisor_pack.md
+  - demo_dashboard.html
+  - demo_dashboard_refined.html
+  - dashboard/index.html
+  - projects/vggt_like_demo/evidence_ledger.json
+  - projects/vggt_like_demo/dashboard.html
+  - projects/vggt_like_demo/advisor_pack.md
+  - projects/vggt_like_demo/related_work.md
+  - projects/paper_survey_demo/evidence_ledger.json
+  - projects/paper_survey_demo/dashboard.html
+  - projects/paper_survey_demo/advisor_pack.md
+  - projects/paper_survey_demo/related_work.md
+  - projects/software_tooling_demo/evidence_ledger.json
+  - projects/software_tooling_demo/dashboard.html
+  - projects/software_tooling_demo/advisor_pack.md
+  - projects/software_tooling_demo/related_work.md
+steps:
+  - step_id: v1-public-demo-root
+    description: Check v1 public demo root and quickstart files.
+    expected_outputs:
+      - README.md
+      - QUICKSTART.md
+      - demo_manifest.yaml
+      - demo_evidence_ledger.json
+      - demo_advisor_pack.md
+      - demo_related_work.md
+  - step_id: v1-public-demo-dashboard
+    description: Check public demo dashboard outputs.
+    expected_outputs:
+      - dashboard/index.html
+      - demo_dashboard.html
+      - demo_dashboard_refined.html
+      - projects/vggt_like_demo/dashboard.html
+      - projects/paper_survey_demo/dashboard.html
+      - projects/software_tooling_demo/dashboard.html
+  - step_id: v1-public-demo-advisor-paper
+    description: Check advisor bundle and related-work demo outputs.
+    expected_outputs:
+      - projects/vggt_like_demo/advisor_pack.md
+      - projects/paper_survey_demo/advisor_pack.md
+      - projects/software_tooling_demo/advisor_pack.md
+      - projects/vggt_like_demo/related_work.md
+      - projects/paper_survey_demo/related_work.md
+      - projects/software_tooling_demo/related_work.md
+boundaries:
+  - demo only
+  - no real experiment
+  - no observed evidence generation
+  - no live adapters
+  - no plugin execution

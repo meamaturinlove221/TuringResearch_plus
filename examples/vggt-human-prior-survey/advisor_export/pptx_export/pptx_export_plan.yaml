@@ -1,0 +1,41 @@
+plan_id: vggt_advisor_markdown_bundle_real_pptx_export
+
+source_bundle_id: vggt_advisor_markdown_bundle
+
+output_filename: advisor_deck.pptx
+
+backend: python-pptx
+
+optional_backend: true
+
+requires_human_review: true
+
+slides:
+
+  - slide-01: Research North Star
+
+  - slide-02: Current Engineering State
+
+  - slide-03: Evidence Summary
+
+  - slide-04: Visual Readiness
+
+  - slide-05: Failure / Blockers
+
+  - slide-06: Related Work Position
+
+  - slide-07: Next Experiment Route
+
+  - slide-08: Advisor Ask / Decision Needed
+
+safety_warnings:
+
+  - PPTX export is optional and skipped when backend dependencies are missing.
+
+  - Deck content is derived from AdvisorMarkdownBundle source files.
+
+  - No fake charts, visual evidence, or experiment values are generated.
+
+  - Not-ready claims remain explicitly marked.
+
+  - Planned work remains planned and is not observed evidence.

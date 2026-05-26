@@ -62,4 +62,3 @@ Start with `vggt_smplx_evidence_ledger` contract promotion, model design, and
 tests. Keep `vggt.evidence_ledger_build`, `artifact.audit`,
 `visual.audit_evidence`, and `advisor.pack_build` as capsule-local proposals
 until a contracts-first round accepts or renames them.
-

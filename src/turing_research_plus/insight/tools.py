@@ -42,4 +42,3 @@ def research_problem_reformulate(
     service: DeepInsightService,
 ) -> dict[str, Any]:
     return service.problem_reformulate(gap_report).model_dump(mode="json")
-

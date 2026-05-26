@@ -1,0 +1,6 @@
+flowchart TD
+    A[Collect local reports] --> B[Build section index]
+    B --> C[Render static dashboard]
+    C --> D[Check required sections]
+    D --> E[Run no-overclaim gate]
+    E --> F[Human review]

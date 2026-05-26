@@ -1,0 +1,22 @@
+schema_version: 0.1.0
+status: draft
+feature: mcp_distribution_polish
+release_target: v0.7
+purpose: >-
+  Improve MCP install, smoke-test, and configuration readiness without requiring live services.
+models:
+  primary: MCPDistributionReport, MCPInstallChecklist, MCPConfigExampleReport
+commands:
+  - command: turing mcp doctor
+    tool: mcp.distribution_doctor
+    output: MCPDistributionReport
+safety:
+  default_network: false
+  requires_human_review: true
+  no_real_keys_in_examples: true
+  live_optional: true
+  no_secrets: true
+non_goals:
+  - no PyPI publication
+  - no hosted MCP service
+  - no live adapter requirement

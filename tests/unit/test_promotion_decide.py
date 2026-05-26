@@ -56,4 +56,3 @@ def test_promotion_decide_tool_returns_json_payload() -> None:
 
     assert payload["decision"] == "promote"
     assert payload["confidence"] == 0.8
-

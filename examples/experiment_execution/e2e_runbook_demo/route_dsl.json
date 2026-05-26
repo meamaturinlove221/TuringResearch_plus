@@ -1,0 +1,85 @@
+{
+  "route_id": "experiment-runbook-e2e",
+  "goal": "Plan a safe fake experiment review route.",
+  "context": "fake/demo only; this route plans review artifacts and does not execute experiments",
+  "status": "planned",
+  "allowed_inputs": [
+    "experiment intent",
+    "demo fixture manifest",
+    "review-only route notes"
+  ],
+  "forbidden_actions": [
+    "claim experiment completion",
+    "run GPU",
+    "run Modal",
+    "write observed result",
+    "execute remote command"
+  ],
+  "hard_gates": [
+    "no_automatic_execution",
+    "no_gpu",
+    "no_modal",
+    "proposed_evidence_only"
+  ],
+  "artifact_requirements": [
+    "intent summary",
+    "route DSL",
+    "hard gate checklist",
+    "artifact requirement table"
+  ],
+  "fallback_routes": [
+    "keep route blocked until human owner approves manual run"
+  ],
+  "final_states": [
+    "runbook generated",
+    "ingest contract generated",
+    "no experiment executed"
+  ],
+  "cleanup_requirements": [
+    "remove temporary demo bundle after review"
+  ],
+  "advisor_outputs": [
+    "safe runbook summary",
+    "ingest expectation summary"
+  ],
+  "stages": [
+    {
+      "id": "intent",
+      "name": "Intent Review",
+      "purpose": "Convert the experiment intent into a safe route DSL.",
+      "inputs": ["experiment intent"],
+      "outputs": ["route DSL"],
+      "hard_gates": ["no_automatic_execution"],
+      "failure_modes": ["intent claims execution"],
+      "fallback": "rewrite intent as planning-only",
+      "done_criteria": ["route DSL exists", "forbidden actions present"]
+    },
+    {
+      "id": "plan",
+      "name": "Runbook Planning",
+      "purpose": "Extract artifact requirements and hard gates.",
+      "inputs": ["route DSL"],
+      "outputs": ["runbook markdown", "hard gate checklist", "artifact requirement table"],
+      "hard_gates": ["no_gpu", "no_modal"],
+      "failure_modes": ["missing hard gate", "missing artifact requirement"],
+      "fallback": "block route until requirements are complete",
+      "done_criteria": ["runbook generated", "artifact table generated"]
+    },
+    {
+      "id": "ingest",
+      "name": "Ingest Expectation",
+      "purpose": "Define review-only ingest expectations for a future human-run bundle.",
+      "inputs": ["runbook markdown"],
+      "outputs": ["ingest expectation contract", "proposed evidence update draft"],
+      "hard_gates": ["proposed_evidence_only"],
+      "failure_modes": ["observed result write requested"],
+      "fallback": "keep proposed evidence updates out of ledger",
+      "done_criteria": ["ingest contract generated", "writes observed result is false"]
+    }
+  ],
+  "metadata": {
+    "fake_demo_only": true,
+    "does_not_execute": true,
+    "requires_human_review": true
+  }
+}

@@ -1,0 +1,19 @@
+name: apify_adapter
+status: design_only
+release_target: v0.3 Sprint 3
+proposed_tools:
+  - web.apify_run_optional
+  - web.search_optional
+outputs:
+  - ApifyResult
+  - WebFetchResult
+required_tests:
+  - fake Apify adapter tests
+  - missing token typed error tests
+  - live tests skipped by default
+  - source hygiene tests
+rules:
+  - APIFY_TOKEN is optional by default
+  - live tests require explicit opt-in
+  - do not bypass login or paywall
+  - do not copy upstream code

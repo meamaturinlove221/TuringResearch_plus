@@ -1,0 +1,23 @@
+schema_version: 0.1.0
+status: draft
+feature: dashboard_refinement
+release_target: v0.7
+purpose: >-
+  Refine static local dashboard readability without adding server, login, or live execution.
+models:
+  primary: RefinedDashboardBundle, DashboardSectionIndex, DashboardReadinessReport
+commands:
+  - command: turing dashboard render
+    tool: dashboard.refined_render
+    output: RefinedDashboardBundle
+safety:
+  default_network: false
+  requires_human_review: true
+  no_experiment_execution: true
+  no_fake_result_observed: true
+  no_secrets: true
+  no_raw_data: true
+non_goals:
+  - no SaaS
+  - no login
+  - no server requirement

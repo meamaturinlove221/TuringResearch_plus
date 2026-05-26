@@ -75,4 +75,3 @@ def test_hypothesis_portfolio_tool_returns_json_payload() -> None:
     assert len(payload["selected"]) == 2
     assert payload["research_questions"]
     assert payload["rationale"]
-

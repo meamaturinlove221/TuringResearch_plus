@@ -1,0 +1,39 @@
+site_id: turingresearch-docs-site
+status: public-navigation-polished
+round: 334
+source_of_truth: repository_markdown
+local_first: true
+deployment: none
+cloud_dependency: false
+large_frontend_framework: false
+private_data_required: false
+fake_links_allowed: false
+generation_strategy:
+  input_roots:
+    - README.md
+    - docs/
+    - examples/public_demo/
+    - split_ready/
+  output_mode: static_markdown_or_html
+  default_mode: markdown_navigation
+  generated_assets_required: false
+  external_links_required: false
+required_sections:
+  - overview
+  - quickstart
+  - concepts
+  - original_repo_parity
+  - public_demo
+  - docs_dashboard
+  - plugin_mcp
+  - split_repos
+  - security_privacy
+  - faq
+  - roadmap
+safety:
+  no_private_data: true
+  no_api_keys: true
+  no_raw_data: true
+  no_fake_deployment_claims: true
+  no_nonexistent_urls: true
+  human_review_required: true

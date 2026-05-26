@@ -90,4 +90,3 @@ def test_race_priority_score_tool_returns_json_payload() -> None:
 
     assert payload["priority"] == "P0"
     assert payload["priority_score"] == 0.865
-

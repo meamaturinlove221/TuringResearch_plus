@@ -1,0 +1,45 @@
+schema_version: 0.1.0
+
+status: draft
+
+feature: general_research_project_template
+
+release_target: v0.6 Sprint 1
+
+purpose: >-
+
+  The VGGT template is useful but domain-specific; v0.6 needs a reusable skeleton for new research directions.
+
+models:
+
+  primary: ResearchProjectTemplate, TemplateSection, TemplateManifest
+
+commands:
+
+  - command: turing project new
+
+    tool: project.template_generate
+
+    output: TemplateManifest
+
+safety:
+
+  default_network: false
+
+  requires_human_review: true
+
+  no_secrets: true
+
+  no_raw_data: true
+
+  no_private_model_files: true
+
+  no_planned_as_observed: true
+
+non_goals:
+
+  - no automatic literature review
+
+  - no observed evidence in template
+
+  - no private data copy

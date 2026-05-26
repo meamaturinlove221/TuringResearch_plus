@@ -1,0 +1,17 @@
+{
+  "task_description": "stress test unsafe claim review before public release",
+  "campaign_id": "stress_test",
+  "recommended_skill": "turingresearch-fusion-stress-test",
+  "confidence": 0.95,
+  "provided_inputs": [
+    "candidate claim or release surface"
+  ],
+  "missing_preconditions": [],
+  "ready_for_planning": true,
+  "fake_trace": true,
+  "does_not_execute": true,
+  "does_not_call_llm": true,
+  "does_not_use_network": true,
+  "does_not_mutate_evidence_ledger": true,
+  "requires_human_review": true
+}

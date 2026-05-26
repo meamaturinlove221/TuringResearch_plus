@@ -1,0 +1,34 @@
+{
+  "report_id": "research-catalog-e2e-report",
+  "workspace_id": "research-catalog-e2e-demo",
+  "status": "pass-with-review",
+  "campaign_id": "stress_test",
+  "recommended_skill": "turingresearch-fusion-stress-test",
+  "dashboard_groups": [
+    "campaigns",
+    "skills",
+    "vault",
+    "stress",
+    "experiment_runbooks",
+    "advisor_release"
+  ],
+  "stress_status": "pass",
+  "experiment_plan_status": "ready-for-human-run",
+  "artifact_requirements": [
+    "workspace manifest",
+    "vault context",
+    "catalog report",
+    "stress report",
+    "runbook summary",
+    "campaign route",
+    "skill handoff"
+  ],
+  "safety": {
+    "no_agent_runtime": true,
+    "no_tool_execution": true,
+    "no_default_network": true,
+    "no_experiment_execution": true,
+    "no_evidence_ledger_mutation": true,
+    "requires_human_review": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "paper_id": "fake-reference-e2e",
+  "title": "Fake Reference E2E Paper",
+  "url": "https://example.org/fake-reference-e2e",
+  "source_status": "fake-demo",
+  "requires_human_review": true,
+  "notes": [
+    "Used only for fake/default paper_reference E2E tests.",
+    "No citation is verified by this fixture.",
+    "No live provider query is required."
+  ]
+}

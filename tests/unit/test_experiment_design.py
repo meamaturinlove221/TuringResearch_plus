@@ -42,4 +42,3 @@ def test_experiment_design_tool_returns_json_payload() -> None:
     assert payload["controls"]
     assert payload["metrics"]
     assert payload["ablations"]
-

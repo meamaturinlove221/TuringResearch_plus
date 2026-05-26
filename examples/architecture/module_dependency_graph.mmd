@@ -1,0 +1,33 @@
+graph TD
+  core["core\nworkspace / evidence / privacy / quality / templates"]
+  paper["paper\nscholar / digest / method / citation / related work / writing"]
+  artifact["artifact\nartifact audit / handoff / remote metadata / run ingest"]
+  experiment["experiment\nroutes / hard gates / failures / run compare"]
+  dashboard_export["dashboard_export\nui / dashboard / advisor export / case study"]
+  plugins["plugins\nplugins / MCP plugins / skills / capabilities / safety"]
+  examples_cases["examples_cases\npublic demo / VGGT dogfooding / project templates"]
+  base["base package\nturing_research"]
+
+  paper --> core
+  paper --> base
+  artifact --> core
+  artifact --> base
+  experiment --> core
+  experiment --> artifact
+  dashboard_export --> experiment
+  dashboard_export --> artifact
+  dashboard_export --> core
+  plugins --> core
+  plugins -. two-way risk .-> plugins
+  examples_cases --> core
+  examples_cases --> paper
+  examples_cases --> artifact
+  examples_cases --> dashboard_export
+
+  plugin_manifest["plugins"]
+  mcp_registry["mcp_plugins"]
+  plugin_manifest <--> mcp_registry
+
+  advisor["advisor"]
+  vggt_case["vggt case helpers"]
+  advisor --> vggt_case

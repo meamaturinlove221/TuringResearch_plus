@@ -31,4 +31,3 @@ def analyze_constraints(plan: ExperimentPlan) -> ConstraintAnalysis:
         ],
         feasible=not blockers,
     )
-

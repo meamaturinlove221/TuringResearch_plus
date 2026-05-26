@@ -1,0 +1,27 @@
+{
+  "target_project": "TuringResearch reference parity demo",
+  "source_status": "fake-demo",
+  "compared_papers": [
+    {
+      "paper_id": "fake-reference-e2e-ref-1",
+      "title": "Fake reference 1",
+      "task": "requires-real-paper-review",
+      "representation": [
+        "requires-real-paper-review"
+      ],
+      "source_status": "fake-or-manual-note",
+      "evidence_refs": []
+    },
+    {
+      "paper_id": "fake-reference-e2e-ref-2",
+      "title": "Fake reference 2",
+      "task": "requires-real-paper-review",
+      "representation": [
+        "requires-real-paper-review"
+      ],
+      "source_status": "fake-or-manual-note",
+      "evidence_refs": []
+    }
+  ],
+  "requires_human_review": true
+}

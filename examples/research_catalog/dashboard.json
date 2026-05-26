@@ -1,0 +1,102 @@
+{
+  "dashboard_id": "research-catalog-v1.3",
+  "status": "public-demo",
+  "round": 278,
+  "local_first": true,
+  "dashboard_only": true,
+  "requires_human_review": true,
+  "no_agent_runtime": true,
+  "no_tool_execution": true,
+  "no_default_network": true,
+  "no_experiment_execution": true,
+  "no_evidence_ledger_mutation": true,
+  "groups": [
+    {
+      "id": "campaigns",
+      "title": "Campaigns",
+      "role": "Route the next research workflow decision.",
+      "items": [
+        "north_star",
+        "knowledge_acquisition",
+        "deep_insight",
+        "hypothesis_formation",
+        "convergence",
+        "stress_test",
+        "experiment_planning",
+        "artifact_audit",
+        "advisor_pack",
+        "public_release"
+      ],
+      "docs": ["docs/turingresearch-campaign-catalog.md", "docs/campaign-execution-trace.md"]
+    },
+    {
+      "id": "skills",
+      "title": "Skills",
+      "role": "Provide SOP handoff targets for campaigns.",
+      "items": [
+        "turingresearch-master-orchestrator",
+        "turingresearch-fusion-literature-survey",
+        "turingresearch-fusion-wiki-vault",
+        "turingresearch-fusion-stress-test",
+        "turingresearch-fusion-experiment-execution",
+        "turingresearch-qa-release"
+      ],
+      "docs": ["docs/research-catalog-skill-map.md", ".agents/ROUTING_TABLE.md"]
+    },
+    {
+      "id": "vault",
+      "title": "Vault / Ontology",
+      "role": "Organize concepts, claims, aliases, wiki views, and edge audits.",
+      "items": ["wiki export", "backlinks", "edge quality", "ontology SOP"],
+      "docs": ["docs/yogsoth-vault-parity.md", "docs/yogsoth-ontology-parity.md"]
+    },
+    {
+      "id": "stress",
+      "title": "Stress Tests",
+      "role": "Challenge claims, routes, plugin posture, privacy, and advisor output.",
+      "items": [
+        "missing evidence",
+        "fake result risk",
+        "overclaim",
+        "privacy leak",
+        "advisor pack unsupported claim"
+      ],
+      "docs": ["docs/yogsoth-stress-test-parity.md", "docs/research-route-stress-test.md"]
+    },
+    {
+      "id": "experiment_runbooks",
+      "title": "Experiment Runbooks",
+      "role": "Prepare human-run experiment plans and artifact requirements.",
+      "items": ["safe execution plan", "runbook", "artifact requirements", "ingest contract"],
+      "docs": [
+        "docs/yogsoth-experiment-execution-parity.md",
+        "docs/safe-experiment-execution-runbook.md"
+      ]
+    },
+    {
+      "id": "advisor_release",
+      "title": "Advisor / Public Release",
+      "role": "Package review material and gate public release posture.",
+      "items": ["advisor pack", "privacy gate", "release gate"],
+      "docs": ["docs/advisor-pack-builder.md", "docs/v1.0.0-public-launch-rc-report.md"]
+    }
+  ],
+  "edges": [
+    {"from": "campaigns", "to": "skills", "relation": "routes_to"},
+    {"from": "campaigns", "to": "vault", "relation": "organizes_context_with"},
+    {"from": "vault", "to": "stress", "relation": "feeds_claim_review"},
+    {"from": "stress", "to": "experiment_runbooks", "relation": "blocks_or_refines"},
+    {"from": "experiment_runbooks", "to": "advisor_release", "relation": "prepares_review_artifacts"},
+    {"from": "advisor_release", "to": "campaigns", "relation": "feeds_next_round"}
+  ],
+  "safety_boundaries": [
+    "dashboard only",
+    "no agent runtime",
+    "no automatic tool execution",
+    "no default network",
+    "no experiment execution",
+    "no Evidence Ledger mutation",
+    "no fake/demo result promotion",
+    "human review required"
+  ]
+}

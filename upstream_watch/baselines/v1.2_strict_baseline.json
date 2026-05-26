@@ -1,0 +1,943 @@
+{
+
+  "baseline_id": "v1.2-strict-baseline-2026-05-22",
+
+  "diff_mode": "initial-baseline-no-prior-machine-baseline",
+
+  "generated_at": "2026-05-21T17:39:39Z",
+
+  "policy": "baseline-created-only-without-prior-baseline",
+
+  "repositories": [
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "pthahnix-reference-split",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "Pthahnix/Neocortica-Scholar",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/Pthahnix/Neocortica-Scholar"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "pthahnix-reference-split",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "Pthahnix/Neocortica-Web",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/Pthahnix/Neocortica-Web"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "pthahnix-reference-split",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "Pthahnix/Neocortica-Session",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/Pthahnix/Neocortica-Session"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/de-anthropocentric-research-engine",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/de-anthropocentric-research-engine"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/literature-engine",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/literature-engine"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/.github",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/.github"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/hypothesis-formation",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/hypothesis-formation"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/experiment-execution",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/experiment-execution"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/context-management",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/context-management"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/north-star-crystallization",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/north-star-crystallization"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/convergence",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/convergence"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/web-browsing",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/web-browsing"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/knowledge-acquisition",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/knowledge-acquisition"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/literature-survey",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/literature-survey"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/stress-test",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/stress-test"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/semantic-scholar-mcp",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/semantic-scholar-mcp"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/creative-ideation",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/creative-ideation"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/deep-insight",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/deep-insight"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/subagent-spawning",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/subagent-spawning"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/knowledge-structuring",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/knowledge-structuring"
+
+    },
+
+    {
+
+      "default_branch": "",
+
+      "docs_files": [],
+
+      "file_count": 0,
+
+      "file_hashes": {},
+
+      "focus_file_count": 0,
+
+      "group": "yogsoth-ai",
+
+      "latest_commit_message": "",
+
+      "latest_commit_sha": "",
+
+      "latest_commit_time": "",
+
+      "markdown_files": [],
+
+      "mcp_config_files": [],
+
+      "package_files": [],
+
+      "repository_full_name": "yogsoth-ai/wiki-vault",
+
+      "required": false,
+
+      "root_files": [],
+
+      "skill_files": [],
+
+      "src_files": [],
+
+      "test_files": [],
+
+      "unresolved_reason": "HTTP 403: rate limit exceeded",
+
+      "url": "https://github.com/yogsoth-ai/wiki-vault"
+
+    }
+
+  ],
+
+  "scan_mode": "live-public-metadata-attempted",
+
+  "source": "public-github-api"
+
+}

@@ -1,0 +1,50 @@
+workspace_id: demo_workspace
+workspace_name: Demo Multi-project Workspace
+workspace_root: .
+status: active
+privacy_level: public-demo
+requires_human_review: true
+limitations:
+  - Demo workspace only.
+  - Workspace index is not an evidence source.
+  - No automatic data ingestion is performed.
+projects:
+  - project_id: vggt_human_prior
+    project_name: VGGT Human Prior Review Case
+    project_type: vggt_case_study
+    project_root: projects/vggt_human_prior
+    docs_path: docs
+    evidence_path: docs/evidence_ledger.md
+    artifacts_path: docs/artifact_plan.md
+    advisor_pack_path: docs/advisor_pack.md
+    routes_path: docs/experiment_routes.md
+    status: active
+    privacy_level: public-demo
+    fake_demo: true
+    requires_human_review: true
+    tags:
+      - vggt
+      - human-prior
+      - review-only
+    notes:
+      - Demo mirror of the VGGT review workflow; not a real experiment result.
+      - SparseConv3D success is not established.
+  - project_id: demo_medical_imaging
+    project_name: Demo Medical Imaging Project
+    project_type: demo_research
+    project_root: projects/demo_medical_imaging
+    docs_path: docs
+    evidence_path: docs/evidence_ledger.md
+    artifacts_path: docs/artifact_plan.md
+    advisor_pack_path: docs/advisor_pack.md
+    routes_path: docs/experiment_routes.md
+    status: demo-only
+    privacy_level: public-demo
+    fake_demo: true
+    requires_human_review: true
+    tags:
+      - medical-imaging
+      - fake-demo
+    notes:
+      - Synthetic demo project with no real patient data.
+      - Included only to prove multi-project indexing.

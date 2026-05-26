@@ -1,0 +1,19 @@
+﻿name: advisor_pdf_pptx_export
+version: 0.1.0
+status: scope_locked
+project: TuringResearch Plus
+release_target: v0.5
+input_model: TBD
+output_model: AdvisorBinaryExportReport
+proposed_command: turing advisor export
+proposed_tool: advisor.export_pdf_pptx
+default_enabled: false
+network_behavior: no_network_by_default
+requires_human_review: true
+safety:
+  no_complex_saas: true
+  no_user_system: true
+  no_cloud_deployment: true
+  no_automatic_paper_writing: true
+  no_unauthorized_data_upload: true
+  no_legacy_project_naming: true

@@ -73,4 +73,3 @@ class StressTestService:
             failure_modes=failure_modes,
             mitigations=mitigations,
         )
-

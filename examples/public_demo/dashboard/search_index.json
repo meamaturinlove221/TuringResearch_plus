@@ -1,0 +1,24 @@
+{
+  "status": "demo-only",
+  "requires_human_review": true,
+  "items": [
+    {
+      "project_id": "vggt_like_demo",
+      "title": "VGGT-like Demo",
+      "category": "experiment scaffold",
+      "path": "../projects/vggt_like_demo/README.md"
+    },
+    {
+      "project_id": "paper_survey_demo",
+      "title": "Paper Survey Demo",
+      "category": "paper survey scaffold",
+      "path": "../projects/paper_survey_demo/README.md"
+    },
+    {
+      "project_id": "software_tooling_demo",
+      "title": "Software Tooling Demo",
+      "category": "software tooling scaffold",
+      "path": "../projects/software_tooling_demo/README.md"
+    }
+  ]
+}

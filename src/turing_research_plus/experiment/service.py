@@ -57,4 +57,3 @@ class ExperimentExecutionService:
         """Analyze a dry-run result."""
 
         return analyze_result(plan, schema, raw_result=raw_result)
-

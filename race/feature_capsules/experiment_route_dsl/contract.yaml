@@ -1,0 +1,36 @@
+feature_name: experiment_route_dsl
+project: TuringResearch Plus
+status: capsule_draft
+release_target: v0.2.0_sprint_2
+implementation_status: skeleton_only
+source_inputs:
+  - docs/v0.2.0-sprint-2-final-scope.md
+  - docs/v0.2.0-sprint-2-implementation-order.md
+  - docs/v0.2.0-sprint-2-test-plan.md
+proposed_command: turing route compile
+proposed_tool:
+  name: experiment.route_compile
+  status: proposed_not_public_api
+  input_model: ExperimentRouteInput
+  output_model: ExperimentRouteSpec
+secondary_output_model: ControllerPromptDraft
+data_models:
+  - ExperimentRouteSpec
+  - ExperimentRouteStep
+  - RouteGateBinding
+  - RouteExpectedArtifact
+  - ControllerPromptDraft
+related_contracts:
+  - contracts/experiment_routes.yaml
+  - contracts/hard_gates.yaml
+  - contracts/failure_taxonomy.yaml
+required_tests:
+  - tests/unit/test_experiment_route_models.py
+  - tests/unit/test_experiment_route_compile.py
+  - tests/workflow/test_vggt_route_dsl_dry_run.py
+network_behavior: none
+local_path_behavior: fixture-only by default; explicit user paths remain read-only
+vgtt_execution_behavior: none
+notes:
+  - Do not promote planned route outcomes to observed evidence.
+  - Modal Real SparseConv3D remains planned until real evidence is available.

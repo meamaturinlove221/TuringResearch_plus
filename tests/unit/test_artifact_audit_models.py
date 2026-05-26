@@ -33,4 +33,3 @@ def test_audit_report_markdown_contains_records() -> None:
     )
 
     assert "a.json" in report.to_markdown()
-

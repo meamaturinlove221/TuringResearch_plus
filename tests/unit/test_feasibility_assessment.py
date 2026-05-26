@@ -40,4 +40,3 @@ def test_feasibility_tool_returns_json_payload() -> None:
 
     assert payload["feasible"] is True
     assert payload["notes"]
-

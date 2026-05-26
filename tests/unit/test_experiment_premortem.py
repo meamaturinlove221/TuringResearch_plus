@@ -60,4 +60,3 @@ def test_experiment_premortem_tool_returns_json_payload() -> None:
 
     assert payload["pass_fail"] == "fail"
     assert payload["failure_modes"]
-

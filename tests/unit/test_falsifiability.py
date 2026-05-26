@@ -65,4 +65,3 @@ def test_hypothesis_generate_and_operationalize_tools() -> None:
     assert generated_payload["hypotheses"][0]["falsifiability_criteria"]
     assert operationalized["variables"]["independent"]
     assert operationalized["experiment_readiness"] == "dry_run_ready"
-

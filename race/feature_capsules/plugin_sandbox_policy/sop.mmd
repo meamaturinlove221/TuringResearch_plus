@@ -1,0 +1,6 @@
+flowchart TD
+    A[Collect requested permissions] --> B[Apply default deny policy]
+    B --> C[Classify restricted permissions]
+    C --> D[Generate sandbox report]
+    D --> E[Human review]
+    E --> F[Allow trusted local plan only if approved]

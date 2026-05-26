@@ -1,0 +1,38 @@
+repo_id: turingresearch-plugins
+status: split-repo-skeleton-only
+flagship_repo: turingresearch
+core_framework_location: turing_research_plus.plugins
+purpose: plugin metadata catalog and contribution workflow
+requires_human_review: true
+plugin_defaults:
+  third_party_disabled_by_default: true
+  manifest_required: true
+  sandbox_policy_required: true
+  extension_safety_report_required: true
+  compatibility_report_required: true
+  execute_code_default: denied
+  secrets_access: forbidden
+  live_network_access: explicit_opt_in_only
+required_review_artifacts:
+  - plugin_manifest
+  - sandbox_policy_report
+  - extension_safety_report
+  - compatibility_report
+  - docs
+  - tests_or_test_plan
+forbidden_permissions:
+  - secrets_access
+  - core_tool_override
+  - execute_code_without_approved_future_sandbox
+  - shell_access_without_approved_future_sandbox
+release_blockers:
+  - missing_manifest
+  - missing_permissions
+  - missing_safety_level
+  - enabled_third_party_plugin
+  - failed_compatibility_report
+  - missing_human_review
+included_skeleton_files:
+  - README.md
+  - PLUGIN_POLICY.md
+  - plugins_manifest.yaml

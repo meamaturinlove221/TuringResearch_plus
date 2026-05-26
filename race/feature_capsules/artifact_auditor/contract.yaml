@@ -28,4 +28,3 @@ future_sync_adapters: non_goal
 notes:
   - Never infer VGGT success from file presence alone.
   - Do not implement cross-machine sync in Sprint 1.
-

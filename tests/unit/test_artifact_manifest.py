@@ -38,4 +38,3 @@ def test_json_manifest_records(tmp_path: Path) -> None:
 
     assert len(manifest.records) == 2
     assert manifest.records[1].included is False
-

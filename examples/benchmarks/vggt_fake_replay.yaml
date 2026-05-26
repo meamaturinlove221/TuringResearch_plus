@@ -1,0 +1,25 @@
+scenario_id: vggt_fake_replay
+name: VGGT Fake Replay
+root_path: examples/vggt-human-prior-survey/dogfooding_replay
+demo_only: true
+no_real_experiment: true
+network_required: false
+requires_human_review: true
+expected_outputs:
+  - replay_report.md
+  - replay_manifest.yaml
+  - replay_missing_items.md
+  - replay_next_actions.md
+steps:
+  - step_id: vggt-replay-files
+    description: Check VGGT fake replay artifacts.
+    expected_outputs:
+      - replay_report.md
+      - replay_manifest.yaml
+      - replay_missing_items.md
+      - replay_next_actions.md
+boundaries:
+  - replay only
+  - no VGGT execution
+  - no Modal execution
+  - no SparseConv3D success claim

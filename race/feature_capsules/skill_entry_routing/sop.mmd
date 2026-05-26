@@ -1,0 +1,9 @@
+flowchart TB
+  A[User Intent] --> B[ENTRY.md]
+  B --> C[Routing Table]
+  C --> D[Skill Target]
+  C --> E[Lane Target]
+  C --> F[Contract Target]
+  D --> G[SkillRoutingDecision]
+  E --> G
+  F --> G

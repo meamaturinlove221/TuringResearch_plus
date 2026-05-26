@@ -1,0 +1,27 @@
+bundle_id: vggt_advisor_markdown_bundle
+topic: VGGT / SMPL-X Human Prior
+status: markdown-source-ready
+requires_human_review: true
+generated_binary_exports: false
+future_exports:
+  - pdf
+  - pptx
+  - docx
+  - html
+files:
+  - README.md
+  - advisor_report_source.md
+  - slides_outline.md
+  - figure_list.md
+  - table_list.md
+  - evidence_refs.md
+  - limitations.md
+  - next_actions.md
+  - manifest.yaml
+boundaries:
+  - no_pdf_generated
+  - no_pptx_generated
+  - no_external_converter_called
+  - no_planned_as_observed
+  - no_fake_figures
+  - requires_human_review

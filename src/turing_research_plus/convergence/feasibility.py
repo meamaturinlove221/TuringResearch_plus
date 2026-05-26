@@ -31,4 +31,3 @@ def assess_feasibilities(candidates: list[ConvergenceCandidate]) -> list[Feasibi
     """Assess all candidate feasibilities."""
 
     return [assess_feasibility(candidate) for candidate in candidates]
-

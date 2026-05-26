@@ -137,4 +137,3 @@ class ArtifactAuditReport(BaseModel):
             lines.extend(["", "## Warnings"])
             lines.extend(f"- {warning}" for warning in self.warnings)
         return "\n".join(lines) + "\n"
-

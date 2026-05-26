@@ -1,0 +1,48 @@
+repo_id: turingresearch-examples
+pack_type: manual_creation_pack
+status: human-review-required
+round: 339
+source_bundle: split_ready/turingresearch-examples
+flagship_repo: turingresearch
+flagship_link_policy: placeholder-until-human-approved
+flagship_placeholder: TuringResearch main repository URL goes here after human publication approval
+creates_github_repo: false
+pushes_external_repo: false
+writes_real_url: false
+requires_human_confirmation: true
+manual_pack_files:
+  - README.md
+  - CREATE_REPO_MANUALLY.md
+  - PUSH_COMMANDS.md
+  - SAFETY_CHECKLIST.md
+  - manifest.yaml
+source_bundle_files:
+  - README.md
+  - QUICKSTART.md
+  - examples_manifest.yaml
+  - PRIVACY.md
+  - safety_report.md
+  - .gitignore
+intended_example_groups:
+  - public_demo
+  - project_templates
+  - demo_workspace
+  - dashboard_demo
+  - advisor_pack_demo
+  - paper_demo
+safety:
+  demo_only: true
+  no_raw_data: true
+  no_private_path: true
+  no_api_key: true
+  no_huge_artifact: true
+  no_unsupported_claim: true
+  main_repo_link_placeholder_only: true
+  no_nonexistent_real_url: true
+boundaries:
+  main_repo_remains_flagship: true
+  child_repo_is_optional_spoke: true
+  not_core_framework_source_repo: true
+  not_install_source: true
+  not_raw_data_repo: true
+  not_benchmark_result_repo: true

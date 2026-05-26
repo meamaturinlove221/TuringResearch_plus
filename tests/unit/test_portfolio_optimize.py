@@ -72,4 +72,3 @@ def test_portfolio_optimize_tool_and_steelman_tool() -> None:
 
     assert payload["final_recommendation"] == "candidate-promote"
     assert "candidate-reject" in steelman
-

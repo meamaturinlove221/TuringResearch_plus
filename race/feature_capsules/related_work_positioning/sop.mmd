@@ -1,0 +1,10 @@
+flowchart TB
+  A[PaperMethodCard] --> D[Positioning Generator]
+  B[CitationGraph] --> D
+  C[CollisionRiskReport] --> D
+  D --> E[Safe Claims]
+  D --> F[Unsafe Claims]
+  D --> G[Missing Evidence]
+  E --> H[RelatedWorkPositioningReport]
+  F --> H
+  G --> H

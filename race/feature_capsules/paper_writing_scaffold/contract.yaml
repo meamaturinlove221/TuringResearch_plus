@@ -1,0 +1,45 @@
+schema_version: 0.1.0
+
+status: draft
+
+feature: paper_writing_scaffold
+
+release_target: v0.6 Sprint 3
+
+purpose: >-
+
+  Paper digest and related-work reports need a safe path toward writing support without generating final paper conclusions.
+
+models:
+
+  primary: PaperWritingScaffold, SectionPlan, ClaimCheckReport
+
+commands:
+
+  - command: turing paper scaffold
+
+    tool: paper.writing_scaffold
+
+    output: PaperWritingScaffold
+
+safety:
+
+  default_network: false
+
+  requires_human_review: true
+
+  no_secrets: true
+
+  no_raw_data: true
+
+  no_private_model_files: true
+
+  no_planned_as_observed: true
+
+non_goals:
+
+  - no final paper generation
+
+  - no automatic submission
+
+  - no long copyrighted text copying

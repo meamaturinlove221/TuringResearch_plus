@@ -95,4 +95,3 @@ def _ideas_for_hypothesis(hypothesis: Hypothesis, index: int) -> list[IdeaCandid
             )
         )
     return ideas
-

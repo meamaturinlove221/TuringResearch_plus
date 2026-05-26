@@ -1,0 +1,88 @@
+site_title: TuringResearch Docs
+status: public-navigation-polished
+items:
+  - id: overview
+    title: Overview
+    page: pages/index.md
+    source_docs:
+      - ../README.md
+      - ../docs/public-showcase.md
+      - ../docs/original-repo-replication-progress-report.md
+  - id: quickstart
+    title: Quickstart
+    page: pages/quickstart.md
+    source_docs:
+      - ../docs/v1.0.0-quickstart.md
+      - ../docs/quickstart.md
+      - ../docs/v1.4.0-upgrade-guide.md
+  - id: concepts
+    title: Concepts
+    page: pages/concepts.md
+    source_docs:
+      - ../docs/architecture.md
+      - ../docs/research-os-positioning-v2.md
+      - ../docs/original-repo-production-parity-summary.md
+  - id: original_repo_parity
+    title: Original Repo Parity
+    page: pages/original-repo-parity.md
+    source_docs:
+      - ../docs/original-repo-parity-dashboard-v2.md
+      - ../docs/original-repo-replication-scorecard.md
+      - ../docs/v1.4.0-full-production-replay-report.md
+      - ../examples/public_demo/parity_dashboard_v2.json
+  - id: public_demo
+    title: Public Demo
+    page: pages/public-demo.md
+    source_docs:
+      - ../docs/public-demo-guide.md
+      - ../docs/v1.0.0-public-demo-walkthrough.md
+      - ../examples/public_demo/SHOWCASE.md
+  - id: docs_dashboard
+    title: Docs / Dashboard
+    page: pages/dashboard.md
+    source_docs:
+      - ../docs/docs-site-build-hardening.md
+      - ../docs/session-parity-dashboard.md
+      - ../docs/session-production-dashboard-v2.md
+      - ../docs/research-catalog-dashboard.md
+      - ../examples/session_runtime/session_parity_dashboard.json
+      - ../examples/session_runtime/session_production_dashboard_v2.json
+      - ../examples/research_catalog/dashboard.json
+  - id: plugin_mcp
+    title: Plugin / MCP
+    page: pages/plugins.md
+    source_docs:
+      - ../docs/plugin-guide.md
+      - ../docs/plugin-sandbox-policy.md
+      - ../docs/mcp-tool-parity-v1.3.md
+      - ../docs/mcp-tool-surface-v1.3.md
+  - id: split_repos
+    title: Split Repos
+    page: pages/split-repos.md
+    source_docs:
+      - ../docs/future-split-repos.md
+      - ../docs/split-ready-bundles.md
+      - ../docs/v1.0.0-split-readiness-summary.md
+      - ../docs/v1.5.0-final-scope.md
+  - id: security_privacy
+    title: Security / Privacy
+    page: pages/privacy.md
+    source_docs:
+      - ../docs/privacy-data-policy-layer.md
+      - ../docs/public-release-hardening.md
+      - ../docs/v1.4.0-security-audit.md
+      - ../docs/v1.4.0-privacy-audit.md
+  - id: faq
+    title: FAQ
+    page: pages/faq.md
+    source_docs:
+      - ../docs/faq.md
+      - ../docs/limitations.md
+      - ../docs/v1.4.0-known-limitations.md
+  - id: roadmap
+    title: Roadmap
+    page: pages/roadmap.md
+    source_docs:
+      - ../docs/v1.5.0-roadmap.md
+      - ../docs/v1.5.0-final-scope.md
+      - ../docs/v1.5.0-aris-still-deferred.md

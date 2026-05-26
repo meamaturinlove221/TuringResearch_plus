@@ -1,0 +1,65 @@
+status: manual-sync-policy
+round: 212
+flagship_repo: turingresearch
+source_of_truth: flagship
+automatic_sync: false
+external_push: false
+github_repo_creation: false
+requires_human_review: true
+sync_policy:
+  source_direction: flagship_to_spoke
+  spoke_role: public_demo_or_case_mirror
+  no_core_features_in_spokes: true
+  no_install_path_change: true
+  readme_backlink_required: true
+  issue_backflow_to_flagship: true
+  safety_checks_required: true
+sync_frequency:
+  before_public_rc: true
+  after_readme_or_quickstart_change: true
+  after_public_demo_change: true
+  after_case_study_change: true
+  after_security_or_privacy_policy_change: true
+  monthly_during_active_v1_1: true
+versioning:
+  default_status: unreleased
+  mirror_version_format: vX.Y.Z-sync.N
+  source_version_required: true
+  independent_feature_versions_allowed: false
+bundles:
+  - repo_id: turingresearch-vggt-case
+    path: split_ready/turingresearch-vggt-case
+    role: public-safe dogfooding case mirror
+    status: ready-after-human-approval
+    update_frequency: after_case_study_or_claim_safety_change
+    version_policy: source-derived
+    readme_backlink_required: true
+    issue_backflow: flagship
+    safety_gate: privacy_compliance_claim_safety
+  - repo_id: turingresearch-examples
+    path: split_ready/turingresearch-examples
+    role: public demo and template mirror
+    status: ready-after-human-approval
+    update_frequency: after_public_demo_or_template_change
+    version_policy: source-derived
+    readme_backlink_required: true
+    issue_backflow: flagship
+    safety_gate: public_demo_privacy_release_hygiene
+  - repo_id: turingresearch-plugins
+    path: split_ready/turingresearch-plugins
+    role: plugin policy and registry draft mirror
+    status: deferred-until-ecosystem-demand
+    update_frequency: after_plugin_policy_change
+    version_policy: source-derived
+    readme_backlink_required: true
+    issue_backflow: flagship
+    safety_gate: plugin_safety_review
+forbidden_content:
+  raw_data: true
+  private_paths: true
+  secrets: true
+  restricted_model_files: true
+  huge_artifacts: true
+  real_private_logs: true
+  unsupported_claims: true
+  fake_demo_as_observed: true

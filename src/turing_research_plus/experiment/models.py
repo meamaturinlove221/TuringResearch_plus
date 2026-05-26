@@ -132,4 +132,3 @@ class ExperimentResultAnalysis(BaseModel):
     conclusion: str = Field(min_length=1)
     evidence_refs: list[EvidenceRef] = Field(min_length=1)
     raw_result: dict[str, Any] = Field(default_factory=dict)
-

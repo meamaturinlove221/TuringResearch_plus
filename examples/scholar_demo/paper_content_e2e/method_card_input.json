@@ -1,0 +1,12 @@
+{
+  "paper_id": "fake-paper-content-e2e",
+  "title": "Cache-First Paper Content Fixture",
+  "source_type": "fake-or-manual-note",
+  "source_path": "examples/scholar_demo/paper_content_e2e/cached_paper.md",
+  "requires_real_paper_review": true,
+  "notes": [
+    "Generated as a method-card input scaffold.",
+    "Review-only; not verified citation evidence.",
+    "No automatic paper download or live provider query."
+  ]
+}

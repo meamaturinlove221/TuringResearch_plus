@@ -30,4 +30,3 @@
 - No image generation.
 - No image content inference beyond sidecar/metadata classification.
 - No cross-machine sync.
-

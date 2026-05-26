@@ -1,0 +1,44 @@
+repo_id: turingresearch-vggt-case
+pack_type: manual_creation_pack
+status: human-review-required
+round: 338
+source_bundle: split_ready/turingresearch-vggt-case
+flagship_repo: turingresearch
+flagship_link_policy: placeholder-until-human-approved
+flagship_placeholder: TuringResearch main repository URL goes here after human publication approval
+creates_github_repo: false
+pushes_external_repo: false
+writes_real_url: false
+requires_human_confirmation: true
+manual_pack_files:
+  - README.md
+  - CREATE_REPO_MANUALLY.md
+  - PUSH_COMMANDS.md
+  - SAFETY_CHECKLIST.md
+  - manifest.yaml
+source_bundle_files:
+  - README.md
+  - QUICKSTART.md
+  - CASE_STUDY.md
+  - CLAIM_SAFETY.md
+  - PRIVACY.md
+  - LICENSE_NOTE.md
+  - manifest.yaml
+  - safety_report.md
+  - .gitignore
+safety:
+  no_raw_data: true
+  no_smplx_files: true
+  no_private_path: true
+  no_unsupported_claim: true
+  no_secret: true
+  no_fake_success_claim: true
+  main_repo_link_placeholder_only: true
+  no_nonexistent_real_url: true
+boundaries:
+  main_repo_remains_flagship: true
+  child_repo_is_optional_spoke: true
+  not_vggt_experiment_source_repo: true
+  not_raw_data_repo: true
+  not_model_payload_repo: true
+  not_success_evidence_repo: true

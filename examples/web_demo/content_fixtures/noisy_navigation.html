@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Noisy Demo Page</title>
+    <style>
+      body { color: #111; }
+      .ad { display: none; }
+    </style>
+  </head>
+  <body>
+    <aside>Navigation block repeated repeated repeated.</aside>
+    <main>
+      <h1>Noisy Demo Page</h1>
+      <p>Primary content explains extraction should ignore script and style text.</p>
+      <p>Reviewers should inspect the extracted text before citing it.</p>
+    </main>
+    <script>
+      console.log("tracking-code-should-not-appear");
+    </script>
+  </body>
+</html>

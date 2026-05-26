@@ -1,0 +1,33 @@
+{
+  "report_id": "round-311-apify-fake-live-integration",
+  "mode": "fake",
+  "template_ids": [
+    "apify_project_page_fetch",
+    "apify_search_result_fetch",
+    "apify_content_extract"
+  ],
+  "actor_id": "optional/project-page-fetch",
+  "status": "dry-run",
+  "run_id": "fake-apify-run-001",
+  "live_enabled": false,
+  "network_used": false,
+  "requires_token": false,
+  "token_env": "APIFY_TOKEN",
+  "human_verified": false,
+  "requires_human_review": true,
+  "automatic_evidence_promotion": false,
+  "safety": {
+    "login_bypass": false,
+    "paywall_bypass": false,
+    "private_content_scraping": false,
+    "stores_cookies": false
+  },
+  "output_items": [
+    {
+      "url": "https://example.com/project-page",
+      "title": "Fake Apify result",
+      "text": "Fake Apify output; retrieved is not verified.",
+      "human_verified": false
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "provider": "generic",
+  "bucket_or_container": "vggt-review-artifacts",
+  "prefix": "modal-sparseconv-review",
+  "evidence_tags": [
+    "fixture",
+    "requires-human-review"
+  ],
+  "requires_human_review": true,
+  "objects": [
+    {
+      "key": "modal-sparseconv-review/review/final_status.json",
+      "size": 512,
+      "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "content_type": "application/json",
+      "evidence_tags": [
+        "run-status",
+        "review"
+      ]
+    },
+    {
+      "key": "modal-sparseconv-review/review/failure_report.md",
+      "size": 2048,
+      "hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "content_type": "text/markdown",
+      "evidence_tags": [
+        "failure",
+        "review"
+      ]
+    },
+    {
+      "key": "modal-sparseconv-review/review/artifact_index.md",
+      "size": 1024,
+      "hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "content_type": "text/markdown",
+      "evidence_tags": [
+        "artifact-index"
+      ]
+    },
+    {
+      "key": "modal-sparseconv-review/large/predictions.npz",
+      "size": 250000000,
+      "hash": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "content_type": "application/octet-stream",
+      "evidence_tags": [
+        "large-array"
+      ]
+    },
+    {
+      "key": "modal-sparseconv-review/private/SMPLX_model.pkl",
+      "size": 100000000,
+      "hash": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "content_type": "application/octet-stream",
+      "evidence_tags": [
+        "body-model"
+      ]
+    },
+    {
+      "key": "modal-sparseconv-review/.env",
+      "size": 128,
+      "hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "content_type": "text/plain",
+      "evidence_tags": [
+        "unsafe"
+      ]
+    }
+  ]
+}

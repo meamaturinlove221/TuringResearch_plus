@@ -1,0 +1,33 @@
+feature_name: failure_taxonomy_engine
+project: TuringResearch Plus
+status: capsule_draft
+release_target: v0.2.0_sprint_2
+implementation_status: skeleton_only
+source_inputs:
+  - docs/v0.2.0-sprint-2-final-scope.md
+  - docs/v0.2.0-sprint-2-risk-register.md
+  - docs/v0.2.0-sprint-2-test-plan.md
+proposed_command: turing failure analyze
+proposed_tool:
+  name: experiment.failure_analyze
+  status: proposed_not_public_api
+  input_model: FailureAnalysisInput
+  output_model: FailureAttributionReport
+data_models:
+  - FailureTaxonomy
+  - FailureCategory
+  - FailureInstance
+  - FailureAttributionReport
+  - FailureNextAction
+related_contracts:
+  - contracts/failure_taxonomy.yaml
+  - contracts/hard_gates.yaml
+required_tests:
+  - tests/unit/test_failure_taxonomy_models.py
+  - tests/unit/test_failure_taxonomy_engine.py
+  - tests/workflow/test_vggt_failure_taxonomy_dry_run.py
+network_behavior: none
+local_path_behavior: fixture-only by default
+notes:
+  - Keep hard-blocked, not-enough-evidence, and visual-not-ready distinct.
+  - Do not generate success claims.

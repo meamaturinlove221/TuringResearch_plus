@@ -1,0 +1,20 @@
+# Local/private files must not be committed to this case-study repository.
+.env
+.env.*
+local_project_links.yaml
+private_data/
+secrets/
+raw_data/
+data/
+datasets/
+checkpoints/
+models/
+*.pkl
+*.npz
+[Ss][Mm][Pp][Ll][Xx]_*
+*.ckpt
+*.pt
+*.pth
+*.onnx
+__pycache__/
+.pytest_cache/

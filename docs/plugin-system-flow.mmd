@@ -1,0 +1,13 @@
+flowchart TD
+    A[Plugin Manifest] --> B[Manifest Validator]
+    B --> C[Permission Policy]
+    C --> D[Sandbox Policy]
+    D --> E[Extension Safety Report]
+    E --> F[Compatibility Harness]
+    F --> G[MCP Plugin Registry]
+    G --> H[Capability Manifest]
+    H --> I[Disabled By Default Metadata]
+    I --> J[Human Review]
+    D --> K[Block execute_code by default]
+    D --> L[Block secrets access]
+    G --> M[No core tool override]

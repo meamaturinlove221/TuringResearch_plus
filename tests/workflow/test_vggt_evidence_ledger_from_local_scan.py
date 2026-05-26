@@ -29,4 +29,3 @@ def test_vggt_evidence_ledger_from_committed_local_scan() -> None:
     assert ledger.row_for("V120").status == VGGTEvidenceStatus.REQUIRES_HUMAN_REVIEW
     assert ledger.row_for("V121").status == VGGTEvidenceStatus.REQUIRES_HUMAN_REVIEW
     assert "V120" in ledger.to_markdown()
-

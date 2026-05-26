@@ -1,0 +1,8 @@
+flowchart TB
+  A[Public URL] --> B[Source Hygiene Check]
+  B --> C{Allowed?}
+  C -- no --> D[Blocked / Watch Only]
+  C -- yes --> E[Fake or Live WebFetchAdapter]
+  E --> F[Content Hash + Source Metadata]
+  F --> G[Cache Record]
+  G --> H[Human Review Boundary]

@@ -1,0 +1,50 @@
+flowchart TD
+    subgraph G1[Research OS overview]
+        A1[Research Project] --> A2[Workspace Registry]
+        A2 --> A3[Evidence Ledger]
+        A2 --> A4[Artifact Audit]
+        A2 --> A5[Route DSL]
+        A2 --> A6[Paper Intelligence]
+        A2 --> A7[Dashboard and Advisor Pack]
+        A2 --> A8[Privacy Quality Replay Gates]
+    end
+
+    subgraph G2[Evidence to Advisor flow]
+        B1[Research Intent] --> B2[Evidence Ledger]
+        B2 --> B3[Claim Safety]
+        B3 --> B4[Artifact Readiness]
+        B4 --> B5[Advisor Pack]
+        B5 --> B6[Human Review]
+    end
+
+    subgraph G3[Paper to Method Card flow]
+        C1[Paper Digest] --> C2[Three Pass Reading]
+        C2 --> C3[Method Card]
+        C3 --> C4[Architecture Notes]
+        C4 --> C5[Paper Scaffold]
+    end
+
+    subgraph G4[Experiment Route to Run Ingest flow]
+        D1[Route DSL] --> D2[Hard Gates]
+        D2 --> D3[Planned Run]
+        D3 --> D4[Run Ingest]
+        D4 --> D5[Failure Taxonomy]
+        D5 --> D6[Next Action]
+    end
+
+    subgraph G5[Plugin and Skill routing]
+        E1[Plugin Manifest] --> E2[Sandbox Policy]
+        E2 --> E3[Compatibility Harness]
+        E3 --> E4[MCP Registry]
+        E4 --> E5[Disabled By Default Tool Metadata]
+        E2 --> E6[Skill Catalog]
+    end
+
+    subgraph G6[VGGT dogfooding case]
+        F1[VGGT Research Intent] --> F2[Evidence Management]
+        F2 --> F3[Route Changes]
+        F3 --> F4[Failures and Blockers]
+        F4 --> F5[Advisor Pack]
+        F5 --> F6[Public Case Study Redaction]
+        F6 --> F7[What Not To Claim]
+    end

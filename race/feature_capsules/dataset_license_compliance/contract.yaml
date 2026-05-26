@@ -1,0 +1,23 @@
+schema_version: 0.1.0
+status: draft
+feature: dataset_license_compliance
+release_target: v0.7
+purpose: >-
+  Flag dataset and license risks before public examples, artifacts, or case studies are shared.
+models:
+  primary: DatasetLicenseReviewReport, LicenseRiskFinding, ReleaseUseRecommendation
+commands:
+  - command: turing release license-check
+    tool: release.dataset_license_check
+    output: DatasetLicenseReviewReport
+safety:
+  default_network: false
+  requires_human_review: true
+  no_legal_compliance_guarantee: true
+  no_license_bypass: true
+  no_raw_data: true
+  no_private_model_files: true
+non_goals:
+  - no legal advice
+  - no license bypass
+  - no automatic redistribution approval

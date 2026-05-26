@@ -1,0 +1,9 @@
+flowchart TB
+  evidence[local evidence ledger]
+  route[route DSL]
+  backend[Modal sparse backend probe]
+  adapter[voxel feature adapter]
+  gates[evaluation / hard gates]
+  advisor[advisor pack]
+  evidence --> route --> backend --> adapter --> gates --> advisor
+  review_notice[planned / requires-real-experiment / not executed by TuringResearch]

@@ -29,4 +29,3 @@
 - No final advisor approval.
 - No paper draft generation.
 - No cross-machine sync.
-

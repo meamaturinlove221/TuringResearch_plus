@@ -1,0 +1,24 @@
+feature_name: pod_workflow_pack
+project: TuringResearch Plus
+status: capsule_draft
+release_target: v0.3_sprint_1
+implementation_status: design_only
+proposed_command: turing pod workflow-pack
+proposed_tool:
+  name: context.pod_workflow_pack
+  status: proposed_not_public_api
+  input_model: PodWorkflowPackInput
+  output_model: PodWorkflowSpec
+related_contracts:
+  - contracts/pod_workflow.yaml
+  - contracts/run_ingest.yaml
+required_tests:
+  - tests/unit/test_pod_workflow_models.py
+  - tests/unit/test_structured_output_return_policy.py
+  - tests/workflow/test_pod_workflow_fixture.py
+network_behavior: none
+remote_execution_behavior: forbidden
+notes:
+  - Pod outputs are structured artifacts.
+  - TuringResearch does not control Modal or RunPod.
+  - Proposed evidence updates require review.

@@ -28,4 +28,3 @@ future_sync_adapters: non_goal
 notes:
   - Missing local visual inventory blocks visual readiness.
   - Do not implement cross-machine sync in Sprint 1.
-

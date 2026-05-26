@@ -123,4 +123,3 @@ def _risk_adjustment(risk: str) -> float:
     if risk == IdeaRisk.MEDIUM or risk == RiskLevel.MEDIUM:
         return 0.7
     return 0.45
-

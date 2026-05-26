@@ -1,0 +1,847 @@
+{
+
+  "capabilities": [
+
+    {
+
+      "capability_id": "evidence.ledger",
+
+      "category": "evidence",
+
+      "command": "turing evidence ledger",
+
+      "docs": [
+
+        "docs/vggt-evidence-ledger.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "EvidenceLedgerInput",
+
+      "live_mode": false,
+
+      "module": "turing_research_plus.vggt",
+
+      "name": "VGGT Evidence Ledger",
+
+      "output_model": "EvidenceLedgerReport",
+
+      "related_skills": [
+
+        "turingresearch-master-orchestrator"
+
+      ],
+
+      "required_env": [],
+
+      "safety_level": "local-review",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/workflow/test_vggt_sprint1_end_to_end_fake.py"
+
+      ],
+
+      "tool_name": "research.evidence_ledger"
+
+    },
+
+    {
+
+      "capability_id": "artifact.audit",
+
+      "category": "artifact",
+
+      "command": "turing artifact audit",
+
+      "docs": [
+
+        "docs/artifact-auditor.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "ArtifactAuditInput",
+
+      "live_mode": false,
+
+      "module": "turing_research_plus.artifact_audit",
+
+      "name": "Artifact Auditor",
+
+      "output_model": "ArtifactAuditReport",
+
+      "related_skills": [
+
+        "turingresearch-master-orchestrator"
+
+      ],
+
+      "required_env": [],
+
+      "safety_level": "local-review",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/unit/test_artifact_audit_models.py"
+
+      ],
+
+      "tool_name": "artifact.audit"
+
+    },
+
+    {
+
+      "capability_id": "visual.audit",
+
+      "category": "visual",
+
+      "command": "turing visual audit",
+
+      "docs": [
+
+        "docs/visual-evidence-auditor.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "VisualEvidenceInput",
+
+      "live_mode": false,
+
+      "module": "turing_research_plus.vggt",
+
+      "name": "Visual Evidence Auditor",
+
+      "output_model": "VisualEvidenceAuditReport",
+
+      "related_skills": [
+
+        "turingresearch-master-orchestrator"
+
+      ],
+
+      "required_env": [],
+
+      "safety_level": "local-review",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/workflow/test_vggt_visual_evidence_dry_run.py"
+
+      ],
+
+      "tool_name": "visual.audit"
+
+    },
+
+    {
+
+      "capability_id": "advisor.pack",
+
+      "category": "advisor",
+
+      "command": "turing advisor pack",
+
+      "docs": [
+
+        "docs/advisor-pack-builder.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "AdvisorPackBuildInput",
+
+      "live_mode": false,
+
+      "module": "turing_research_plus.advisor",
+
+      "name": "Advisor Pack Builder",
+
+      "output_model": "AdvisorPack",
+
+      "related_skills": [
+
+        "turingresearch-master-orchestrator"
+
+      ],
+
+      "required_env": [],
+
+      "safety_level": "local-review",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/unit/test_advisor_pack_builder.py"
+
+      ],
+
+      "tool_name": "advisor.pack_build"
+
+    },
+
+    {
+
+      "capability_id": "pdf.phase_b",
+
+      "category": "pdf",
+
+      "command": "turing pdf extract",
+
+      "docs": [
+
+        "docs/pdf_phase_b_figure_table_extraction.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "PDFAssetExtractionRequest",
+
+      "live_mode": false,
+
+      "module": "turing_research.pdf",
+
+      "name": "PDF Figure/Table Extraction",
+
+      "output_model": "PDFAssetExtractionReport",
+
+      "related_skills": [
+
+        "turingresearch-paper-figure-asset-pipeline"
+
+      ],
+
+      "required_env": [],
+
+      "safety_level": "local-review",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/workflow/test_pdf_phase_b_fixture.py"
+
+      ],
+
+      "tool_name": "pdf.extract_figures"
+
+    },
+
+    {
+
+      "capability_id": "paper.digest",
+
+      "category": "paper",
+
+      "command": "turing paper digest",
+
+      "docs": [
+
+        "docs/paper-digest-engine.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "PaperDigestRequest",
+
+      "live_mode": false,
+
+      "module": "turing_research_plus.paper_digest",
+
+      "name": "Paper Digest Engine",
+
+      "output_model": "PaperDigest",
+
+      "related_skills": [
+
+        "turingresearch-fusion-literature-survey"
+
+      ],
+
+      "required_env": [],
+
+      "safety_level": "local-review",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/unit/test_digest_builder.py"
+
+      ],
+
+      "tool_name": "paper.digest"
+
+    },
+
+    {
+
+      "capability_id": "citation.graph",
+
+      "category": "citation",
+
+      "command": "turing citation graph",
+
+      "docs": [
+
+        "docs/citation-graph-expansion.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "CitationGraphExpansionRequest",
+
+      "live_mode": true,
+
+      "module": "turing_research_plus.citation_graph",
+
+      "name": "Citation Graph Expansion",
+
+      "output_model": "CitationGraph",
+
+      "related_skills": [
+
+        "turingresearch-fusion-literature-survey"
+
+      ],
+
+      "required_env": [
+
+        "TURINGRESEARCH_ENABLE_LIVE_TESTS"
+
+      ],
+
+      "safety_level": "live-optional",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/unit/test_citation_graph_expander.py"
+
+      ],
+
+      "tool_name": "graph.citation_graph_expand"
+
+    },
+
+    {
+
+      "capability_id": "collision.risk",
+
+      "category": "collision",
+
+      "command": "turing paper collision-risk",
+
+      "docs": [
+
+        "docs/paper-collision-risk-detector.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "PaperComparisonInput",
+
+      "live_mode": false,
+
+      "module": "turing_research_plus.collision",
+
+      "name": "Paper Collision Risk Detector",
+
+      "output_model": "CollisionRiskReport",
+
+      "related_skills": [
+
+        "turingresearch-fusion-literature-survey"
+
+      ],
+
+      "required_env": [],
+
+      "safety_level": "local-review",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/unit/test_collision_risk_scoring.py"
+
+      ],
+
+      "tool_name": "research.collision_risk_detect"
+
+    },
+
+    {
+
+      "capability_id": "related_work.positioning",
+
+      "category": "related work",
+
+      "command": "turing paper position",
+
+      "docs": [
+
+        "docs/related-work-positioning-generator.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "RelatedWorkPositioningInput",
+
+      "live_mode": false,
+
+      "module": "turing_research_plus.related_work",
+
+      "name": "Related Work Positioning",
+
+      "output_model": "RelatedWorkPositioningReport",
+
+      "related_skills": [
+
+        "turingresearch-fusion-literature-survey"
+
+      ],
+
+      "required_env": [],
+
+      "safety_level": "local-review",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/unit/test_related_work_positioning.py"
+
+      ],
+
+      "tool_name": "paper.related_work_position"
+
+    },
+
+    {
+
+      "capability_id": "route.dsl",
+
+      "category": "route",
+
+      "command": "turing route compile",
+
+      "docs": [
+
+        "docs/experiment-route-dsl.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "ExperimentRouteSpec",
+
+      "live_mode": false,
+
+      "module": "turing_research_plus.experiment_route",
+
+      "name": "Experiment Route DSL",
+
+      "output_model": "CompiledExperimentRoute",
+
+      "related_skills": [
+
+        "turingresearch-fusion-experiment-execution"
+
+      ],
+
+      "required_env": [],
+
+      "safety_level": "local-review",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/unit/test_experiment_route_compiler.py"
+
+      ],
+
+      "tool_name": "research.route_compile"
+
+    },
+
+    {
+
+      "capability_id": "failure.taxonomy",
+
+      "category": "failure",
+
+      "command": "turing failure classify",
+
+      "docs": [
+
+        "docs/failure-taxonomy-engine.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "FailureAttributionInput",
+
+      "live_mode": false,
+
+      "module": "turing_research_plus.failure",
+
+      "name": "Failure Taxonomy Engine",
+
+      "output_model": "FailureAttributionReport",
+
+      "related_skills": [
+
+        "turingresearch-fusion-experiment-execution"
+
+      ],
+
+      "required_env": [],
+
+      "safety_level": "local-review",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/unit/test_failure_classifier.py"
+
+      ],
+
+      "tool_name": "research.failure_classify"
+
+    },
+
+    {
+
+      "capability_id": "dashboard.modal_run",
+
+      "category": "dashboard",
+
+      "command": "turing dashboard modal-run",
+
+      "docs": [
+
+        "docs/modal-run-dashboard.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "RunIngestReport",
+
+      "live_mode": false,
+
+      "module": "turing_research_plus.dashboard",
+
+      "name": "Modal Run Dashboard",
+
+      "output_model": "ModalRunDashboard",
+
+      "related_skills": [
+
+        "turingresearch-fusion-experiment-execution"
+
+      ],
+
+      "required_env": [],
+
+      "safety_level": "local-review",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/unit/test_run_dashboard_builder.py"
+
+      ],
+
+      "tool_name": "dashboard.modal_run"
+
+    },
+
+    {
+
+      "capability_id": "remote_artifacts.unified",
+
+      "category": "remote artifact",
+
+      "command": "turing remote-artifacts unify",
+
+      "docs": [
+
+        "docs/remote-artifact-integration.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "RemoteArtifactSourceBundle",
+
+      "live_mode": true,
+
+      "module": "turing_research_plus.remote_artifacts",
+
+      "name": "Remote Artifact Integration",
+
+      "output_model": "UnifiedRemoteArtifactReport",
+
+      "related_skills": [
+
+        "turingresearch-master-orchestrator"
+
+      ],
+
+      "required_env": [
+
+        "TURINGRESEARCH_ENABLE_LIVE_TESTS"
+
+      ],
+
+      "safety_level": "live-optional",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/workflow/test_remote_artifact_integration_fake.py"
+
+      ],
+
+      "tool_name": "remote_artifacts.unify"
+
+    },
+
+    {
+
+      "capability_id": "handoff.bundle",
+
+      "category": "handoff",
+
+      "command": "turing handoff bundle",
+
+      "docs": [
+
+        "docs/handoff-bundle-export-import.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "HandoffExportRequest",
+
+      "live_mode": false,
+
+      "module": "turing_research_plus.handoff",
+
+      "name": "Handoff Bundle Export / Import",
+
+      "output_model": "HandoffBundleManifest",
+
+      "related_skills": [
+
+        "turingresearch-master-orchestrator"
+
+      ],
+
+      "required_env": [],
+
+      "safety_level": "local-review",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/unit/test_handoff_exporter.py"
+
+      ],
+
+      "tool_name": "research.handoff_bundle_export"
+
+    },
+
+    {
+
+      "capability_id": "plugin.registry",
+
+      "category": "plugin",
+
+      "command": "turing plugins validate",
+
+      "docs": [
+
+        "docs/plugin-architecture.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "PluginManifest",
+
+      "live_mode": false,
+
+      "module": "turing_research_plus.plugins",
+
+      "name": "Plugin Architecture",
+
+      "output_model": "PluginValidationReport",
+
+      "related_skills": [
+
+        "turingresearch-qa-release"
+
+      ],
+
+      "required_env": [],
+
+      "safety_level": "local-review",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/unit/test_plugin_validator.py"
+
+      ],
+
+      "tool_name": "plugins.registry_validate"
+
+    },
+
+    {
+
+      "capability_id": "workspace.registry",
+
+      "category": "workspace",
+
+      "command": "turing workspace overview",
+
+      "docs": [
+
+        "docs/multi-project-workspace.md"
+
+      ],
+
+      "fake_mode": true,
+
+      "input_model": "Workspace",
+
+      "live_mode": false,
+
+      "module": "turing_research_plus.workspace",
+
+      "name": "Multi-project Workspace",
+
+      "output_model": "WorkspaceOverview",
+
+      "related_skills": [
+
+        "turingresearch-master-orchestrator"
+
+      ],
+
+      "required_env": [],
+
+      "safety_level": "local-review",
+
+      "status": "implemented_minimal",
+
+      "tests": [
+
+        "tests/unit/test_workspace_registry.py"
+
+      ],
+
+      "tool_name": "workspace.overview"
+
+    }
+
+  ],
+
+  "categories": [
+
+    "advisor",
+
+    "artifact",
+
+    "citation",
+
+    "collision",
+
+    "dashboard",
+
+    "evidence",
+
+    "failure",
+
+    "handoff",
+
+    "paper",
+
+    "pdf",
+
+    "plugin",
+
+    "related work",
+
+    "remote artifact",
+
+    "route",
+
+    "visual",
+
+    "workspace"
+
+  ],
+
+  "docs": [
+
+    "docs/tool-capability-manifest.md",
+
+    "docs/capability-index.md"
+
+  ],
+
+  "executes_tools": false,
+
+  "generated_from_static_catalog": true,
+
+  "manifest_id": "turingresearch_capabilities",
+
+  "project": "TuringResearch Plus",
+
+  "requires_human_review": true,
+
+  "starts_mcp_server": false,
+
+  "tests": [
+
+    "tests/workflow/test_capability_manifest_fake.py"
+
+  ],
+
+  "version": "0.1.0"
+
+}

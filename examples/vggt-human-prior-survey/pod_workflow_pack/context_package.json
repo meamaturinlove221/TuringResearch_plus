@@ -1,0 +1,33 @@
+{
+
+  "context_files": [
+
+    "PROJECT_CONTEXT.md",
+
+    "MEMORY.md",
+
+    "ROUTE_SPEC.yaml",
+
+    "HARD_GATES.md",
+
+    "ARTIFACT_REQUIREMENTS.md",
+
+    "FAILURE_TAXONOMY.md",
+
+    "ADVISOR_INTENT.md",
+
+    "HANDOFF_MANIFEST.yaml",
+
+    "README.md"
+
+  ],
+
+  "package_id": "vggt-modal-sparseconv-pod-pack-context",
+
+  "project_name": "TuringResearch Plus",
+
+  "requires_human_review": true,
+
+  "route_id": "modal_sparseconv_real_v0"
+
+}

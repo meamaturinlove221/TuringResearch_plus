@@ -1,0 +1,25 @@
+context_package_id: ctx-session-parity-demo
+route_id: route-session-parity
+source_machine_label: local-review-machine
+target_environment_label: linux-review-pod
+memory_bidirectional_sync: false
+proposed_updates_only: true
+requires_human_review: true
+release_blocker: false
+files:
+  - path: PROJECT_CONTEXT.md
+    role: durable_context
+    required: true
+    omitted: false
+  - path: MEMORY.md
+    role: durable_context
+    required: true
+    omitted: false
+  - path: ROUTE_SPEC.yaml
+    role: durable_context
+    required: true
+    omitted: false
+archive_safety:
+  release_blocker: false
+  blocked_paths:
+    - none

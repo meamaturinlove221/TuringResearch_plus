@@ -53,4 +53,3 @@ def test_claim_and_artifact_tools_return_json_payloads() -> None:
 
     assert claim_payload["pass_fail"] == "fail"
     assert artifact_payload["artifact_id"] == "artifact-1"
-

@@ -1,0 +1,9 @@
+flowchart TB
+  A[Public fetch/search request] --> B[Source Hygiene Check]
+  B --> C{Live enabled?}
+  C -- no --> D[FakeApifyAdapter]
+  C -- yes --> E[APIFY_TOKEN Check]
+  E --> F[ApifyAdapter]
+  D --> G[Source Metadata]
+  F --> G
+  G --> H[Cache + Human Review Boundary]

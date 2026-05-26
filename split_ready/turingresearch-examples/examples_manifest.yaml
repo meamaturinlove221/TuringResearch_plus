@@ -1,0 +1,63 @@
+repo_id: turingresearch-examples
+status: ready-to-copy-public-safe-bundle
+flagship_repo: turingresearch
+purpose: public-safe examples for TuringResearch
+requires_human_review: true
+ready_to_create_after_human_approval: true
+intended_example_groups:
+  - public_demo
+  - project_templates
+  - demo_workspace
+  - dashboard_demo
+  - paper_demo
+  - advisor_pack_demo
+included_files:
+  - path: README.md
+    role: public positioning and safety boundary
+    public_safe: true
+  - path: QUICKSTART.md
+    role: public-safe review path
+    public_safe: true
+  - path: examples_manifest.yaml
+    role: examples inventory and sync policy metadata
+    public_safe: true
+  - path: PRIVACY.md
+    role: privacy and public/demo data boundary
+    public_safe: true
+  - path: safety_report.md
+    role: final export safety report
+    public_safe: true
+  - path: .gitignore
+    role: accidental local payload guardrail
+    public_safe: true
+excluded_content:
+  private_vggt_files: true
+  raw_data: true
+  model_files: true
+  api_keys: true
+  huge_artifacts: true
+  real_private_logs: true
+  private_advisor_feedback: true
+  unsupported_claims: true
+safety_gates:
+  public_demo_tests_required: true
+  privacy_gate_required: true
+  secret_scan_required: true
+  raw_data_scan_required: true
+  model_payload_scan_required: true
+  human_review_required: true
+split_policy:
+  main_repo_remains_flagship: true
+  install_path_remains_in_main_repo: true
+  no_external_push_without_approval: true
+  no_github_repo_creation_without_approval: true
+  ready_for_manual_copy_after_review: true
+sync_policy:
+  flagship_is_source_of_truth: true
+  examples_are_fake_demo_by_default: true
+  no_independent_release_version_until_approved: true
+  do_not_hide_flagship_api_drift: true
+repository_creation:
+  creates_github_repo: false
+  pushes_git: false
+  ready_for_manual_copy_after_review: true

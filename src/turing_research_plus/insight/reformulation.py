@@ -40,4 +40,3 @@ def reformulate_problems(
         topic=gap_report.topic,
         problems=problems,
     )
-

@@ -25,4 +25,3 @@ __all__ = [
     "ScenarioPlan",
     "StatisticalComparisonPlan",
 ]
-

@@ -18,4 +18,3 @@ __all__ = [
     "artifact_audit",
     "audit_artifacts",
 ]
-

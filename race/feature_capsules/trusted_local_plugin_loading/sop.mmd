@@ -1,0 +1,6 @@
+flowchart TD
+    A[Read plugin manifest] --> B[Check trusted allowlist]
+    B --> C[Validate extension safety report]
+    C --> D[Build local load plan]
+    D --> E[Require human review]
+    E --> F[Keep disabled unless explicitly enabled]

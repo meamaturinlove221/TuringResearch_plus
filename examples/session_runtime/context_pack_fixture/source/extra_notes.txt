@@ -1,0 +1,1 @@
+This filename is intentionally unallowlisted and must not enter the generated context pack.

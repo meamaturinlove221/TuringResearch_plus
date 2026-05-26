@@ -1,0 +1,55 @@
+{
+  "host_label": "fake-vggt-remote",
+  "root_path": "/remote/vggt/review_bundle",
+  "artifacts": [
+    {
+      "path": "/remote/vggt/review_bundle/review/final_status.json",
+      "size": 512,
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source_type": "local_fixture"
+    },
+    {
+      "path": "/remote/vggt/review_bundle/review/failure_report.md",
+      "size": 2048,
+      "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "source_type": "local_fixture"
+    },
+    {
+      "path": "/remote/vggt/review_bundle/review/artifact_index.md",
+      "size": 1024,
+      "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "source_type": "local_fixture"
+    },
+    {
+      "path": "/remote/vggt/review_bundle/review/board_inventory.md",
+      "size": 1200,
+      "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "source_type": "local_fixture"
+    },
+    {
+      "path": "/remote/vggt/review_bundle/large/predictions.npz",
+      "size": 250000000,
+      "sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "source_type": "local_fixture"
+    },
+    {
+      "path": "/remote/vggt/review_bundle/private/SMPLX_model.pkl",
+      "size": 100000000,
+      "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "source_type": "local_fixture"
+    },
+    {
+      "path": "/remote/vggt/review_bundle/.env",
+      "size": 128,
+      "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "source_type": "local_fixture"
+    },
+    {
+      "path": "/remote/vggt/review_bundle/review/current_failure_link.md",
+      "size": 16,
+      "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+      "is_symlink": true,
+      "source_type": "local_fixture"
+    }
+  ]
+}

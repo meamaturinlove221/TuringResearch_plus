@@ -65,4 +65,3 @@ class ConvergenceService:
         """Promote, reject, or hold one candidate."""
 
         return decide_promotion(score, feasible=feasible)
-

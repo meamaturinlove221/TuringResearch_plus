@@ -1,0 +1,99 @@
+{
+  "dashboard_id": "original-repo-parity-v2",
+  "status": "public-demo",
+  "round": 323,
+  "summary": "Original repo parity progress dashboard for structural, runtime, production, and deferred status.",
+  "local_first": true,
+  "requires_human_review": true,
+  "no_live_network_required": true,
+  "no_core_runtime_added": true,
+  "no_unsafe_live_default": true,
+  "levels": ["structural", "runtime", "production", "deferred"],
+  "groups": [
+    {
+      "id": "session",
+      "title": "Neocortica Session",
+      "structural_parity": "complete",
+      "runtime_parity": "complete",
+      "production_parity": "complete-with-deferred-live-gaps",
+      "deferred": ["live SSH/SFTP by default", "remote command execution", "SSH/tmux/provision"],
+      "evidence_docs": [
+        "docs/session-runtime-gate-report.md",
+        "docs/session-production-parity-gate-report.md",
+        "docs/v1.4.0-full-production-replay-report.md"
+      ],
+      "boundary": "fake/default local runtime; no unsafe live default"
+    },
+    {
+      "id": "scholar",
+      "title": "Neocortica Scholar",
+      "structural_parity": "complete",
+      "runtime_parity": "complete",
+      "production_parity": "complete-fake-default",
+      "deferred": ["MinerU implementation", "OCR default", "automatic paper download", "live provider proof"],
+      "evidence_docs": [
+        "docs/scholar-production-parity-gate-report.md",
+        "docs/scholar-production-tool-list.md",
+        "docs/v1.4.0-full-production-replay-report.md"
+      ],
+      "boundary": "fake/default tools; no fake citation verified"
+    },
+    {
+      "id": "web",
+      "title": "Neocortica Web",
+      "structural_parity": "complete",
+      "runtime_parity": "complete",
+      "production_parity": "complete-fake-default",
+      "deferred": ["default live network", "private scraping", "cookie storage", "live Apify proof"],
+      "evidence_docs": [
+        "docs/web-production-parity-gate-report.md",
+        "docs/web-cache-manifest.md",
+        "docs/v1.4.0-full-production-replay-report.md"
+      ],
+      "boundary": "fake/default Web and Apify surfaces; no private scraping"
+    },
+    {
+      "id": "yogsoth",
+      "title": "yogsoth-ai",
+      "structural_parity": "complete",
+      "runtime_parity": "complete",
+      "production_parity": "complete-with-review",
+      "deferred": ["autonomous agent runtime", "automatic experiment execution", "final paper automation"],
+      "evidence_docs": [
+        "docs/yogsoth-production-parity-gate-report.md",
+        "docs/v1.4.0-yogsoth-production-summary.md",
+        "docs/v1.4.0-full-production-replay-report.md"
+      ],
+      "boundary": "deterministic review workflows; no fake result observed"
+    },
+    {
+      "id": "aris",
+      "title": "ARIS",
+      "structural_parity": "deferred",
+      "runtime_parity": "deferred",
+      "production_parity": "deferred",
+      "deferred": ["cross-model review", "proof-checker", "meta-optimize", "paper-claim-audit", "ARIS runtime"],
+      "evidence_docs": [
+        "docs/v1.4.0-aris-still-deferred.md",
+        "docs/aris-deferral-decision.md"
+      ],
+      "boundary": "future reference only"
+    }
+  ],
+  "overall": {
+    "structural_parity": "complete-for-original-repos",
+    "runtime_parity": "complete-for-fake-default-lanes",
+    "production_parity": "pass-with-review",
+    "aris_status": "deferred",
+    "unsafe_live_default": false
+  },
+  "rejected_unsafe_features": [
+    "unknown remote execution",
+    "automatic experiment execution",
+    "automatic observed result writes",
+    "fake/demo result promotion",
+    "paywall bypass",
+    "private content fetching",
+    "default network access"
+  ]
+}

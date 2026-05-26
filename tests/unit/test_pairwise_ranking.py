@@ -49,4 +49,3 @@ def test_pairwise_tool_returns_json_payload() -> None:
     assert payload[0]["winner_id"] == "candidate-high"
     assert payload[0]["left_id"]
     assert payload[0]["right_id"]
-

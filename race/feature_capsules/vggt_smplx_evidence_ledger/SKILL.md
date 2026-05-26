@@ -63,4 +63,3 @@ EvidenceRef preservation, or review-ready wording.
 - Contract draft approved.
 - Tests cover status boundaries.
 - Ledger output preserves evidence refs and review boundaries.
-

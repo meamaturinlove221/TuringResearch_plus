@@ -34,4 +34,3 @@ def test_artifact_audit_does_not_read_private_vggt_paths(tmp_path: Path) -> None
 
     assert report.records[0].included is False
     assert ArtifactSafetyFlag.PRIVATE_PATH_NOT_READ in report.records[0].safety_flags
-

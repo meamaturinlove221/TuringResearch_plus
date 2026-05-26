@@ -64,4 +64,3 @@ files, or board inventory used by later evidence and advisor outputs.
 - Audit report is deterministic.
 - Missing artifacts are explicit.
 - Evidence Ledger can reference audit outputs.
-

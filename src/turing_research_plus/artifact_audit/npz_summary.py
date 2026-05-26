@@ -82,4 +82,3 @@ def _parse_npy_header(data: bytes) -> tuple[tuple[int, ...], str]:
     shape = tuple(int(item) for item in header.get("shape", ()))
     dtype = str(header.get("descr", ""))
     return shape, dtype
-

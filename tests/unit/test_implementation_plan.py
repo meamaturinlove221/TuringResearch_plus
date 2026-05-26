@@ -43,4 +43,3 @@ def test_implementation_plan_tool_returns_json_payload() -> None:
 
     assert payload["dry_run"] is True
     assert payload["artifacts_to_create"]
-

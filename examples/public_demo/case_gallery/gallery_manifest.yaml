@@ -1,0 +1,92 @@
+gallery_id: public_demo_case_gallery
+status: demo-only
+source_of_truth: examples/public_demo
+requires_human_review: true
+published: false
+cases:
+  - case_id: vggt_public_safe_case
+    title: VGGT Public-safe Dogfooding Case
+    domain: 3D reconstruction research workflow
+    research_type: public-safe dogfooding case
+    demo_status: demo-only
+    privacy_level: public-safe-case
+    dashboard_link: ../projects/vggt_like_demo/dashboard.html
+    advisor_pack_link: ../projects/vggt_like_demo/advisor_pack.md
+    available_artifacts:
+      - public case study draft
+      - redaction report
+      - claim safety report
+      - split-ready bundle
+    limitations:
+      - Not a VGGT experiment source repository
+      - Does not claim SparseConv3D success
+      - Requires human review
+  - case_id: robotics_paper_survey_demo
+    title: Robotics Paper Survey Demo
+    domain: robotics manipulation
+    research_type: paper survey
+    demo_status: demo-only
+    privacy_level: public-demo
+    dashboard_link: ../projects/robotics_paper_survey_demo/dashboard_data.json
+    advisor_pack_link: ../projects/robotics_paper_survey_demo/advisor_pack.md
+    available_artifacts:
+      - evidence ledger
+      - artifact index
+      - related work scaffold
+      - route plan
+      - dashboard data
+    limitations:
+      - Fake/demo notes only
+      - No citation-grade claims
+      - Requires human review
+  - case_id: medical_imaging_experiment_demo
+    title: Medical Imaging Experiment Demo
+    domain: medical imaging
+    research_type: experiment planning
+    demo_status: demo-only
+    privacy_level: public-demo
+    dashboard_link: ../projects/medical_imaging_experiment_demo/dashboard_data.json
+    advisor_pack_link: ../projects/medical_imaging_experiment_demo/advisor_pack.md
+    available_artifacts:
+      - evidence ledger
+      - artifact index
+      - route plan
+      - dashboard data
+    limitations:
+      - No real patient data
+      - No medical advice
+      - Requires human review
+  - case_id: software_tooling_research_demo
+    title: Software Tooling Research Demo
+    domain: software tooling
+    research_type: tooling research workflow
+    demo_status: demo-only
+    privacy_level: public-demo
+    dashboard_link: ../projects/software_tooling_research_demo/dashboard_data.json
+    advisor_pack_link: ../projects/software_tooling_research_demo/advisor_pack.md
+    available_artifacts:
+      - evidence ledger
+      - artifact index
+      - route plan
+      - dashboard data
+    limitations:
+      - No private logs
+      - No telemetry
+      - Requires human review
+  - case_id: multimodal_model_eval_demo
+    title: Multimodal Model Eval Demo
+    domain: multimodal model evaluation
+    research_type: evaluation planning
+    demo_status: demo-only
+    privacy_level: public-demo
+    dashboard_link: ../projects/multimodal_model_eval_demo/dashboard_data.json
+    advisor_pack_link: ../projects/multimodal_model_eval_demo/advisor_pack.md
+    available_artifacts:
+      - evidence ledger
+      - artifact index
+      - route plan
+      - dashboard data
+    limitations:
+      - No real benchmark results
+      - No unsupported model claims
+      - Requires human review

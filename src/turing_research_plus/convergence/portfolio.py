@@ -96,4 +96,3 @@ def _confidence(score: CandidateScore) -> float:
     evidence = score.criteria["evidence_strength"]
     feasibility = score.criteria["feasibility"]
     return round((score.total_score + evidence + feasibility) / 3, 3)
-

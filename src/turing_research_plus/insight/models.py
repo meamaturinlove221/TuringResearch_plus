@@ -180,4 +180,3 @@ class DeepInsightResult(BaseModel):
     boundary_map: BoundaryMap
     sensitivity_report: SensitivityReport
     reformulated_problem_set: ReformulatedProblemSet
-

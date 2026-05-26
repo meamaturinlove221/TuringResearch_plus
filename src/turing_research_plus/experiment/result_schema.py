@@ -68,4 +68,3 @@ def analyze_result(
         evidence_refs=plan.evidence_refs,
         raw_result=raw,
     )
-

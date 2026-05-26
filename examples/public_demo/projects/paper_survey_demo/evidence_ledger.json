@@ -1,0 +1,28 @@
+{
+  "project_id": "paper_survey_demo",
+  "status": "demo-only",
+  "requires_human_review": true,
+  "entries": [
+    {
+      "evidence_id": "survey-demo-reading-plan",
+      "claim": "A three-pass reading plan can organize survey work.",
+      "status": "planned",
+      "source": "public demo placeholder",
+      "notes": "Planning only."
+    },
+    {
+      "evidence_id": "survey-demo-paper-note",
+      "claim": "A fake paper note can demonstrate review status fields.",
+      "status": "fake-data",
+      "source": "public demo fixture",
+      "notes": "Not citation-grade."
+    },
+    {
+      "evidence_id": "survey-demo-complete-survey",
+      "claim": "The survey is complete.",
+      "status": "not-enough-evidence",
+      "source": "public demo guard",
+      "notes": "The demo blocks final survey language."
+    }
+  ]
+}

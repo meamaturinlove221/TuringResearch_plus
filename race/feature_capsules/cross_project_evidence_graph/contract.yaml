@@ -1,0 +1,45 @@
+schema_version: 0.1.0
+
+status: draft
+
+feature: cross_project_evidence_graph
+
+release_target: v0.6 Sprint 1
+
+purpose: >-
+
+  Researchers need to see reusable patterns across projects without transferring proof from one project to another.
+
+models:
+
+  primary: CrossProjectEvidenceGraph, CrossProjectNode, CrossProjectEdge
+
+commands:
+
+  - command: turing workspace graph
+
+    tool: workspace.cross_project_graph
+
+    output: CrossProjectEvidenceGraph
+
+safety:
+
+  default_network: false
+
+  requires_human_review: true
+
+  no_secrets: true
+
+  no_raw_data: true
+
+  no_private_model_files: true
+
+  no_planned_as_observed: true
+
+non_goals:
+
+  - no graph database
+
+  - no automatic evidence promotion
+
+  - no private project scan

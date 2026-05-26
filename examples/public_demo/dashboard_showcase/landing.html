@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TuringResearch Dashboard Showcase</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --text: #17202a;
+      --muted: #5f6b7a;
+      --line: #d7dde5;
+      --accent: #006b5f;
+      --accent-soft: #e8f3f1;
+      --warn: #8a5a00;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      padding: 32px 28px 24px;
+    }
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .hero {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0;
+      margin: 0 0 8px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 2.25rem;
+      line-height: 1.12;
+    }
+    h2, h3 { margin: 0 0 10px; }
+    p, li { line-height: 1.55; }
+    .subtitle {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .badges { margin-top: 18px; }
+    .badge {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      background: #fbfcfd;
+      padding: 6px 10px;
+      margin: 0 8px 8px 0;
+      font-size: 0.92rem;
+    }
+    .badge.warning { border-left-color: var(--warn); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .card p { color: var(--muted); }
+    .links {
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    .safety {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      background: var(--accent-soft);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      padding: 18px 28px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <p class="eyebrow">Static dashboard showcase</p>
+      <h1>TuringResearch Dashboard Showcase</h1>
+      <p class="subtitle">A static, local-first product view for original repo parity, public demos, split readiness, and review-safe research workflows.</p>
+      <div class="badges" aria-label="showcase status">
+        <span class="badge">static-local-first-demo</span>
+        <span class="badge">fake/default workflows</span>
+        <span class="badge warning">human review required</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section aria-labelledby="showcase-sections">
+      <h2 id="showcase-sections">Showcase Map</h2>
+      <div class="grid">
+        <article class="card" id="project-pitch">
+          <h3>Project Pitch</h3>
+          <p>TuringResearch is a local-first Research OS for evidence-led research workflows, public-safe demos, and human-reviewed claim boundaries.</p>
+          <ul class="links">
+          <li>docs/public-showcase.md</li>
+          <li>README.md</li>
+          </ul>
+        </article>
+        <article class="card" id="quickstart">
+          <h3>Quickstart</h3>
+          <p>Start with fake/default workflows, inspect demo fixtures, and run local tests without credentials or network access.</p>
+          <ul class="links">
+          <li>docs-site/pages/quickstart.md</li>
+          <li>examples/public_demo/QUICKSTART.md</li>
+          </ul>
+        </article>
+        <article class="card" id="original-parity-status">
+          <h3>Original Parity Status</h3>
+          <p>v1.4 reached production parity for stable original repo surfaces while keeping unsafe live and ARIS features deferred.</p>
+          <ul class="links">
+          <li>docs/original-repo-parity-dashboard-v2.md</li>
+          <li>docs/v1.4.0-full-production-replay-report.md</li>
+          </ul>
+        </article>
+        <article class="card" id="public-demo">
+          <h3>Public Demo</h3>
+          <p>Demo-only fixtures show dashboard data, parity summaries, paper/web examples, and review reports without private data.</p>
+          <ul class="links">
+          <li>examples/public_demo/</li>
+          <li>docs/original-repo-replication-public-version.md</li>
+          </ul>
+        </article>
+        <article class="card" id="docs-site">
+          <h3>Docs Site</h3>
+          <p>The docs site is build-hardened and deployment-ready as a dry-run package, but no public deployment is performed here.</p>
+          <ul class="links">
+          <li>docs-site/</li>
+          <li>docs/v1.5.0-docs-sprint-gate-report.md</li>
+          </ul>
+        </article>
+        <article class="card" id="split-repo-readiness">
+          <h3>Split Repo Readiness</h3>
+          <p>Manual packs are prepared for case/demo child repos while the main repository remains the flagship install and docs entry.</p>
+          <ul class="links">
+          <li>split_manual/</li>
+          <li>docs/v1.5.0-split-sprint-gate-report.md</li>
+          </ul>
+        </article>
+        <article class="card" id="safety-boundary">
+          <h3>Safety Boundary</h3>
+          <p>The showcase is read-only, fake/default, privacy-first, and does not turn planned or demo outputs into observed evidence.</p>
+          <ul class="links">
+          <li>docs/v1.4.0-security-audit.md</li>
+          <li>docs/optional-live-safety-gate.md</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <section class="safety" aria-labelledby="safety-boundary">
+      <h2 id="safety-boundary">Safety Boundary</h2>
+      <ul>
+          <li>No default network access.</li>
+          <li>No live provider call.</li>
+          <li>No SSH or SFTP connection.</li>
+          <li>No remote command execution.</li>
+          <li>No credentials or private paths.</li>
+          <li>No raw data or restricted model payloads.</li>
+          <li>No automatic Evidence Ledger write.</li>
+          <li>No planned or demo output promoted to observed evidence.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    Static/local-first landing page. No analytics, no external assets, no live
+    provider calls, and no public deployment is performed by this file.
+  </footer>
+</body>
+</html>

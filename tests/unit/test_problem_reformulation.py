@@ -86,4 +86,3 @@ def test_full_deep_insight_run_returns_all_outputs() -> None:
     assert result.boundary_map.conditions
     assert result.sensitivity_report.assumptions
     assert result.reformulated_problem_set.problems
-

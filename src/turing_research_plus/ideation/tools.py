@@ -36,4 +36,3 @@ def research_idea_quality_diversity_filter(
     service: CreativeIdeationService,
 ) -> dict[str, Any]:
     return service.idea_quality_diversity_filter(generation).model_dump(mode="json")
-

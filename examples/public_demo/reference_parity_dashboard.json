@@ -1,0 +1,135 @@
+{
+  "dashboard_id": "reference-parity-v1.2",
+  "status": "public-demo",
+  "round": 251,
+  "summary": "Reference parity dashboard for TuringResearch v1.2 review surfaces.",
+  "local_first": true,
+  "requires_human_review": true,
+  "no_live_network_required": true,
+  "no_core_runtime_added": true,
+  "groups": [
+    {
+      "id": "neocortica",
+      "title": "Neocortica parity",
+      "items": [
+        {
+          "id": "reference-session",
+          "label": "Neocortica Session parity",
+          "status": "complete",
+          "evidence_doc": "docs/reference-session-parity.md",
+          "capabilities": [
+            "context pack manifest",
+            "archive safety",
+            "structured return manifest",
+            "platform compatibility notes"
+          ],
+          "boundary": "no SSH, no tmux, no remote command execution"
+        },
+        {
+          "id": "reference-scholar",
+          "label": "Neocortica Scholar parity",
+          "status": "complete",
+          "evidence_doc": "docs/reference-scholar-parity.md",
+          "capabilities": [
+            "source priority",
+            "tool list",
+            "MCP usage guide",
+            "fallback policy"
+          ],
+          "boundary": "no MinerU, no heavy OCR, no paywall bypass"
+        },
+        {
+          "id": "reference-web",
+          "label": "Neocortica Web parity",
+          "status": "complete",
+          "evidence_doc": "docs/reference-web-parity.md",
+          "capabilities": [
+            "web_fetching",
+            "web_content",
+            "Apify optional live guide",
+            "cache and source metadata"
+          ],
+          "boundary": "fake/default, no default networking, no cookies"
+        }
+      ]
+    },
+    {
+      "id": "yogsoth",
+      "title": "yogsoth-ai parity",
+      "items": [
+        {
+          "id": "campaign",
+          "label": "Campaign parity",
+          "status": "complete",
+          "evidence_doc": "docs/yogsoth-campaign-parity.md"
+        },
+        {
+          "id": "vault",
+          "label": "Vault / wiki / edge audit parity",
+          "status": "complete",
+          "evidence_doc": "docs/yogsoth-vault-parity.md"
+        },
+        {
+          "id": "ontology",
+          "label": "Ontology SOP parity",
+          "status": "complete",
+          "evidence_doc": "docs/yogsoth-ontology-parity.md"
+        },
+        {
+          "id": "stress-test",
+          "label": "Convergence / stress test parity",
+          "status": "complete",
+          "evidence_doc": "docs/yogsoth-stress-test-parity.md"
+        },
+        {
+          "id": "experiment-execution",
+          "label": "Experiment execution parity",
+          "status": "complete",
+          "evidence_doc": "docs/yogsoth-experiment-execution-parity.md"
+        },
+        {
+          "id": "research-catalog",
+          "label": "Research Catalog integration",
+          "status": "complete",
+          "evidence_doc": "docs/turingresearch-research-catalog.md"
+        }
+      ]
+    }
+  ],
+  "deferred": [
+    {
+      "id": "aris",
+      "label": "Deferred ARIS study",
+      "status": "deferred",
+      "target": "v1.3+ study",
+      "evidence_doc": "docs/aris-deferral-decision.md"
+    },
+    {
+      "id": "os-plugin-sandbox",
+      "label": "OS-level plugin sandbox",
+      "status": "deferred",
+      "target": "future design review"
+    },
+    {
+      "id": "live-provider-polish",
+      "label": "Default live provider workflows",
+      "status": "deferred",
+      "target": "explicit live-test round only"
+    }
+  ],
+  "rejected_unsafe_features": [
+    "unknown remote execution",
+    "automatic experiment execution",
+    "automatic observed result writes",
+    "fake/demo result promotion",
+    "paywall bypass",
+    "private content fetching",
+    "default network access"
+  ],
+  "future_roadmap": [
+    "v1.2 release candidate hardening",
+    "public docs polish",
+    "v1.3 ARIS study roadmap",
+    "optional live provider review"
+  ]
+}

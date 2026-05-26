@@ -1,0 +1,73 @@
+site_id: turingresearch-docs-site
+status: dry-run
+round: 335
+deployment_performed: false
+public_url: none
+requires_human_review: true
+dist_root: E:/TuringResearch/TuringResearch_plus/docs-site/dist
+build_status: pass_with_warnings
+files:
+  - path: case-study-gallery.html
+    kind: html
+    size_bytes: 1740
+    sha256: e1591fe175352db8261f80cd7097874176c6a5c2ac63ddec854839a202ec2f8e
+  - path: concepts.html
+    kind: html
+    size_bytes: 2293
+    sha256: 9868ef7873ed1e1069a22cb598e8b25ead276d7f75baa35c6e8606cfe6d4eb55
+  - path: dashboard.html
+    kind: html
+    size_bytes: 1965
+    sha256: afaa76d7f6997221d8c1179e9b3c0b9a5a877f984eefc78ea4652376b8e8da58
+  - path: faq.html
+    kind: html
+    size_bytes: 2106
+    sha256: 9610c98d4a8fc383c77061661b7315bb2c05b71388a36f8eaad3d58f39f67346
+  - path: index.html
+    kind: html
+    size_bytes: 2315
+    sha256: 52f39fdc13373795d6625b2ad54f93cd2db00143b919ee3d9d42d23551ddf4f5
+  - path: original-repo-parity.html
+    kind: html
+    size_bytes: 2564
+    sha256: 7dcf2ab971f6ee5bdf1495f82d3e161ac852f297133aeeb7fc7bc561e3169e9f
+  - path: plugins.html
+    kind: html
+    size_bytes: 1688
+    sha256: 1eeb59f0828053570c2be3c81567de756307a08e7f88a0266dee835031d90f99
+  - path: privacy.html
+    kind: html
+    size_bytes: 1731
+    sha256: 6d49e56bb236488fcadc92a67a6dab496627a515a7aea3b3d34fd19bc6d9fd7e
+  - path: public-demo.html
+    kind: html
+    size_bytes: 2317
+    sha256: 0a48c2589ae7fff0b514cac7ebb8d331f3f6892caf42e324339a424bc1d2c8cb
+  - path: quickstart.html
+    kind: html
+    size_bytes: 2206
+    sha256: 69cd75bade09b3a2a69511b3e8e7545e3695fe06d4898a160974d9049f1a02ef
+  - path: roadmap.html
+    kind: html
+    size_bytes: 2118
+    sha256: 0b6599e4ab1e51beb153108d51ee9b6792793c9d1e5febbc36733982fd3f9d07
+  - path: showcase.html
+    kind: html
+    size_bytes: 1666
+    sha256: ede74c91a2039c598f8101c00d6a3f743efec85d8e03fe692d7af7eb33ae1212
+  - path: site.css
+    kind: css
+    size_bytes: 1174
+    sha256: cbfdea921f3473152c816d3e9e8c2a7864f686b8b23da855e76cac727916b143
+  - path: split-repos.html
+    kind: html
+    size_bytes: 2259
+    sha256: a2994b47ced8f182cd044a4d7d1494bd10d52dbd183b07fce988fbb3f8f67c18
+safety:
+  no_secrets: true
+  no_private_paths: true
+  no_raw_data: true
+  no_restricted_model_payloads: true
+  no_fake_deployment_url: true
+  no_analytics: true
+  no_live_network: true

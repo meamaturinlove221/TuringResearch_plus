@@ -44,4 +44,3 @@ def test_scenario_plan_tool_returns_json_payload() -> None:
 
     assert payload["best_case"]
     assert payload["fallback_actions"]
-

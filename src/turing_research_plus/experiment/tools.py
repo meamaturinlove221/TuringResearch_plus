@@ -51,4 +51,3 @@ def research_result_analyze(
     raw_result: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     return service.result_analyze(plan, schema, raw_result=raw_result).model_dump(mode="json")
-

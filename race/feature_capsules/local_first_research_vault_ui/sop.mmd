@@ -1,0 +1,6 @@
+flowchart TD
+    A[Collect local workspace outputs] --> B[Run privacy gate]
+    B --> C[Build navigation index]
+    C --> D[Render static vault UI]
+    D --> E[Check graph review labels]
+    E --> F[Human review]

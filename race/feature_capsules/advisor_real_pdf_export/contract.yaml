@@ -1,0 +1,24 @@
+schema_version: 0.1.0
+status: draft
+feature: advisor_real_pdf_export
+release_target: v0.7
+purpose: >-
+  Add optional advisor PDF export from reviewed Markdown bundles without fabricating claims.
+models:
+  primary: AdvisorPDFExportPlan, AdvisorPDFArtifactManifest, PDFExportSafetyReport
+commands:
+  - command: turing advisor export-pdf
+    tool: advisor.export_pdf_optional
+    output: AdvisorPDFArtifactManifest
+safety:
+  default_network: false
+  requires_human_review: true
+  optional_adapter: true
+  no_fake_figures: true
+  no_fake_result_values: true
+  no_secrets: true
+  no_raw_data: true
+non_goals:
+  - no default binary generation
+  - no office or cloud converter call by default
+  - no final paper generation

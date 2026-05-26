@@ -1,0 +1,40 @@
+return_package_id: return-session-parity-demo
+context_package_id: ctx-session-parity-demo
+route_id: route-session-parity
+target_environment_label: linux-review-pod
+proposed_evidence_updates_only: true
+auto_apply_evidence_updates: false
+requires_human_review: true
+files:
+  - path: RETURN_MANIFEST.yaml
+    role: return_manifest
+    required: true
+    status: present
+  - path: RUN_STATUS.json
+    role: status_metadata
+    required: true
+    status: present
+  - path: FINAL_STATUS.json
+    role: status_metadata
+    required: true
+    status: present
+  - path: ARTIFACT_INDEX.md
+    role: review_markdown
+    required: true
+    status: present
+  - path: FAILURE_REPORT.md
+    role: review_markdown
+    required: true
+    status: present
+  - path: PROPOSED_EVIDENCE_UPDATES.json
+    role: proposed_evidence_updates
+    required: true
+    status: present
+  - path: ADVISOR_SUMMARY_DRAFT.md
+    role: review_markdown
+    required: true
+    status: present
+  - path: SHA256SUMS.txt
+    role: hash_manifest
+    required: true
+    status: present

@@ -68,4 +68,3 @@ def test_idea_tools_return_json_payloads() -> None:
 
     assert idea_payload["candidates"][0]["title"]
     assert "clinical triage" in cross_payload["candidates"][0]["title"]
-

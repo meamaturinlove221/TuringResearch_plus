@@ -120,4 +120,3 @@ def test_race_idea_extract_tool_returns_json_payload() -> None:
 
     assert payload["ideas"][0]["idea_id"].startswith("idea-")
     assert payload["ideas"][0]["evidence_refs"]
-

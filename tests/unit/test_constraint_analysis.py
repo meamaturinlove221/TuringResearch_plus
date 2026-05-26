@@ -60,4 +60,3 @@ def test_constraint_analyze_tool_returns_json_payload() -> None:
 
     assert payload["feasible"] is True
     assert payload["mitigation_options"]
-

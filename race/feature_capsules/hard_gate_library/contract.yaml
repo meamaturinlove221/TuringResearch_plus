@@ -1,0 +1,33 @@
+feature_name: hard_gate_library
+project: TuringResearch Plus
+status: capsule_draft
+release_target: v0.2.0_sprint_2
+implementation_status: skeleton_only
+source_inputs:
+  - docs/v0.2.0-sprint-2-final-scope.md
+  - docs/v0.2.0-sprint-2-risk-register.md
+  - docs/v0.2.0-sprint-2-test-plan.md
+proposed_command: turing gates validate
+proposed_tool:
+  name: experiment.hard_gate_validate
+  status: proposed_not_public_api
+  input_model: HardGateValidationInput
+  output_model: HardGateValidationReport
+data_models:
+  - GateSpec
+  - GateCondition
+  - GateInputRef
+  - GateResult
+  - HardGateValidationReport
+related_contracts:
+  - contracts/hard_gates.yaml
+  - contracts/vggt_evidence.yaml
+required_tests:
+  - tests/unit/test_hard_gate_models.py
+  - tests/unit/test_hard_gate_validation.py
+  - tests/workflow/test_sprint2_hard_gates_dry_run.py
+network_behavior: none
+local_path_behavior: fixture-only by default
+notes:
+  - Preserve planned versus observed labels.
+  - SparseConv3D success remains unclaimed without evidence.

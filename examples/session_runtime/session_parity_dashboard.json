@@ -1,0 +1,96 @@
+{
+  "dashboard_id": "session-parity-v1.3",
+  "status": "public-demo",
+  "round": 269,
+  "summary": "Neocortica-Session parity dashboard for v1.3 review surfaces.",
+  "local_first": true,
+  "requires_human_review": true,
+  "no_live_ssh_required": true,
+  "no_remote_command_execution": true,
+  "no_automatic_ledger_write": true,
+  "capabilities": [
+    {
+      "id": "preflight",
+      "label": "Session preflight",
+      "status": "fake-runnable",
+      "evidence_doc": "docs/session-preflight-runner.md",
+      "runtime_surface": "SessionPreflightRunner",
+      "safety_boundary": "local checks only; remote execution disabled"
+    },
+    {
+      "id": "context-pack",
+      "label": "Context pack builder",
+      "status": "fake-runnable",
+      "evidence_doc": "docs/context-pack-builder-runtime.md",
+      "runtime_surface": "ContextPackBuilder",
+      "safety_boundary": "safe context files only; secrets and raw data excluded"
+    },
+    {
+      "id": "fake-transfer",
+      "label": "Fake transfer",
+      "status": "fake-runnable",
+      "evidence_doc": "docs/optional-ssh-sftp-transfer-runner.md",
+      "runtime_surface": "FakeTransferRunner",
+      "safety_boundary": "local copy only; no live SSH"
+    },
+    {
+      "id": "optional-live-transfer",
+      "label": "Optional live transfer",
+      "status": "deferred-live-opt-in",
+      "evidence_doc": "docs/optional-ssh-sftp-transfer-runner.md",
+      "runtime_surface": "OptionalSFTPTransferGuard",
+      "safety_boundary": "requires explicit live-test environment gates"
+    },
+    {
+      "id": "return-verifier",
+      "label": "Return verifier",
+      "status": "fake-runnable",
+      "evidence_doc": "docs/remote-return-verifier-runtime.md",
+      "runtime_surface": "RemoteReturnVerifier",
+      "safety_boundary": "proposed updates only; no automatic ledger write"
+    },
+    {
+      "id": "workflow-replay",
+      "label": "Workflow replay",
+      "status": "fake-runnable",
+      "evidence_doc": "docs/pod-workflow-replay-runtime.md",
+      "runtime_surface": "PodWorkflowReplayRuntime",
+      "safety_boundary": "full fake chain; no remote command execution"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "remote-execution",
+      "label": "Remote execution orchestration",
+      "status": "deferred",
+      "reason": "unsafe by default; requires separate design and safety review"
+    },
+    {
+      "id": "ssh-tmux-provision",
+      "label": "SSH / tmux / provision",
+      "status": "deferred",
+      "reason": "not required for fake/default parity and not enabled by v1.3"
+    },
+    {
+      "id": "automatic-pod-cleanup",
+      "label": "Automatic pod cleanup",
+      "status": "deferred",
+      "reason": "would require live remote lifecycle ownership"
+    }
+  ],
+  "safety_boundaries": [
+    "no live SSH by default",
+    "no remote command execution",
+    "no automatic Evidence Ledger write",
+    "no default live network",
+    "no secrets in fixtures or reports",
+    "no raw data in context packs",
+    "no restricted model payloads",
+    "fake/demo results remain proposed-only"
+  ],
+  "future_roadmap": [
+    "full original parity replay gate",
+    "operator-facing session runtime docs",
+    "optional live transfer review in a dedicated live-test round"
+  ]
+}

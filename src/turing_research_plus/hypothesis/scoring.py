@@ -50,4 +50,3 @@ def _gap_score(confidence: float, evidence_count: int, index: int) -> float:
     evidence_bonus = min(0.2, evidence_count * 0.05)
     rank_penalty = min(0.2, index * 0.03)
     return round(min(1.0, max(0.0, confidence + evidence_bonus - rank_penalty)), 3)
-

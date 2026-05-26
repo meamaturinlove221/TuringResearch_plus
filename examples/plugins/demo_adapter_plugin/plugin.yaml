@@ -1,0 +1,23 @@
+plugin_id: demo_adapter_plugin
+name: Demo Adapter Plugin
+version: 0.1.0
+type: adapter
+entry_kind: manifest-only
+safety_level: public-demo
+status: disabled
+third_party: true
+executes_code: false
+required_permissions:
+  - read_demo_fixture
+config_schema:
+capabilities:
+  - capability_id: demo_fixture_adapter
+    name: Demo Fixture Adapter
+    category: adapter
+    description: Describe a fake adapter for public demo fixtures.
+inputs:
+  - DemoFixtureRequest
+outputs:
+  - DemoFixtureResult
+author: TuringResearch Plus Demo
+license: Proprietary demo fixture

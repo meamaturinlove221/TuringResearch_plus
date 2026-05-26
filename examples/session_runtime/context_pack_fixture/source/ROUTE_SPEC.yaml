@@ -1,0 +1,6 @@
+route_id: route-session-runtime-fake
+status: planned
+mode: fake_demo
+remote_execution_allowed: false
+live_network_allowed: false
+requires_human_review: true

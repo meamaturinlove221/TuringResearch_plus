@@ -85,4 +85,3 @@ class HypothesisFormationService:
         """Build a compact hypothesis portfolio."""
 
         return build_portfolio(hypothesis_set, max_items=max_items)
-

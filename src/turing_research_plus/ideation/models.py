@@ -156,4 +156,3 @@ class IdeaPortfolio(BaseModel):
             ],
             tags=["creative_ideation", "quality_diversity"],
         )
-

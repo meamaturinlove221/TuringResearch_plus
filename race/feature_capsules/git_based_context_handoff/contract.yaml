@@ -1,0 +1,24 @@
+feature_name: git_based_context_handoff
+project: TuringResearch Plus
+status: capsule_draft
+release_target: v0.3_sprint_1
+implementation_status: design_only
+proposed_command: turing context package
+proposed_tool:
+  name: context.git_handoff_package
+  status: proposed_not_public_api
+  input_model: ContextPackageBuildInput
+  output_model: ContextPackage
+related_contracts:
+  - contracts/git_context_handoff.yaml
+  - contracts/handoff_bundle.yaml
+required_tests:
+  - tests/unit/test_git_context_package_models.py
+  - tests/unit/test_git_context_safety_policy.py
+  - tests/workflow/test_git_context_handoff_fixture.py
+network_behavior: none
+remote_execution_behavior: forbidden
+notes:
+  - Git is transport only.
+  - MEMORY is summary-only and not bidirectionally synced by default.
+  - Do not include secrets, raw data, or SMPL-X body model files.

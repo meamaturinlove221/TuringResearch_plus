@@ -1,0 +1,28 @@
+template_id: apify_search_result_fetch
+status: template-only
+mode: fake-default
+actor_id: optional/search-result-fetch
+live_enabled: false
+requires_token: false
+token_env: APIFY_TOKEN
+input:
+  query: TuringResearch public demo
+  source_type: public_search_results
+  public_or_authorized_only: true
+  max_results: 5
+output_contract:
+  fields:
+    - url
+    - title
+    - snippet
+    - source_metadata
+    - retrieved_at
+  human_verified: false
+  requires_human_review: true
+safety:
+  login_bypass: false
+  paywall_bypass: false
+  private_content_scraping: false
+  stores_cookies: false
+  automatic_evidence_promotion: false
+  no_key_behavior: graceful_skip

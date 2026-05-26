@@ -1,0 +1,91 @@
+{
+  "route_id": "modal_sparseconv_v0",
+  "goal": "Plan a Modal Real SparseConv3D VGGT route without executing it.",
+  "context": "SMPL-X feature encoding route for VGGT dogfooding. This fixture is planned and requires a real experiment before any success claim.",
+  "status": "requires-real-experiment",
+  "allowed_inputs": [
+    "Evidence Ledger summary",
+    "Artifact Audit report",
+    "Visual Evidence report",
+    "Advisor Pack next actions"
+  ],
+  "forbidden_actions": [
+    "claim experiment completion",
+    "run VGGT",
+    "run Modal",
+    "read private D:/vggt paths",
+    "promote planned SparseConv3D success to observed"
+  ],
+  "stages": [
+    {
+      "id": "stage_1",
+      "name": "Preflight evidence check",
+      "purpose": "Confirm that route prerequisites are evidence-backed before backend planning.",
+      "inputs": ["VGGTEvidenceLedger", "ArtifactAuditReport"],
+      "outputs": ["preflight_gate_report"],
+      "hard_gates": ["no_promotion", "candidate_predictions_required", "sha256_required"],
+      "failure_modes": ["not-enough-evidence", "missing-assets"],
+      "fallback": "Keep route planned and request missing artifacts.",
+      "done_criteria": ["missing artifacts are explicit", "no success claim is made"]
+    },
+    {
+      "id": "stage_2",
+      "name": "Sparse backend probe planning",
+      "purpose": "Describe the real backend probe required for SparseConv3D without running it.",
+      "inputs": ["backend_plan", "artifact_requirements"],
+      "outputs": ["sparse_backend_probe_plan"],
+      "hard_gates": ["real_backend_required", "sparse_backend_probe_required", "not_report_only"],
+      "failure_modes": ["real-backend-unavailable", "report-only"],
+      "fallback": "Use failure taxonomy to record backend unavailability.",
+      "done_criteria": ["probe remains planned", "requires-real-experiment is preserved"]
+    },
+    {
+      "id": "stage_3",
+      "name": "Visual readiness planning",
+      "purpose": "Record visual proof requirements before advisor-facing promotion.",
+      "inputs": ["VisualEvidenceAuditReport"],
+      "outputs": ["visual_gate_report"],
+      "hard_gates": ["visual_board_required", "hairline_regression_checked", "hand_object_confusion_checked"],
+      "failure_modes": ["visual-proof-insufficient", "hairline-regression", "hand-object-confusion"],
+      "fallback": "Keep advisor visual readiness not-ready.",
+      "done_criteria": ["full body, hairline, and hand close-up proof are required"]
+    }
+  ],
+  "hard_gates": [
+    "no_promotion",
+    "real_backend_required",
+    "sparse_backend_probe_required",
+    "candidate_predictions_required",
+    "visual_board_required",
+    "cleanup_required"
+  ],
+  "fallback_routes": [
+    "keep SparseConv3D as next action",
+    "return to feature encoding evidence intake"
+  ],
+  "final_states": [
+    "planned",
+    "requires-real-experiment",
+    "not executed by TuringResearch"
+  ],
+  "artifact_requirements": [
+    "candidate predictions",
+    "visual board",
+    "npz diff",
+    "sha256 checksums",
+    "zip test log"
+  ],
+  "cleanup_requirements": [
+    "temporary bundle paths are not committed",
+    "private local links remain untracked"
+  ],
+  "advisor_outputs": [
+    "route summary",
+    "gate report",
+    "missing evidence list",
+    "next action list"
+  ],
+  "metadata": {
+    "status_note": "planned; requires-real-experiment; not executed by TuringResearch"
+  }
+}

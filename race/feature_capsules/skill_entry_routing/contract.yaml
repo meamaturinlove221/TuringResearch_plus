@@ -1,0 +1,15 @@
+name: skill_entry_routing
+status: scope_locked
+release_target: v0.3 Sprint 2
+proposed_tools:
+  - skills.route_query
+outputs:
+  - SkillRoutingDecision
+required_tests:
+  - ENTRY exists
+  - route targets exist
+  - stale names rejected
+rules:
+  - route selection does not execute code
+  - every route has skill and lane target
+  - old names are forbidden

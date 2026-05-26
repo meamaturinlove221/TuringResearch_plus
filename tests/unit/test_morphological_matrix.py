@@ -45,4 +45,3 @@ def test_morphological_matrix_tool_returns_json_payload() -> None:
 
     assert payload["hypothesis_link"] == "hypothesis-1"
     assert payload["axes"]
-
