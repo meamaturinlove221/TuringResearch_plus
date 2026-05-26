@@ -29,6 +29,7 @@ This ledger coordinates all single-window lane work for TuringResearch Plus.
 | 11 | `lanes/11_skills_lockdown.md` | complete | Locked repo-scoped skills before release freeze. |
 | 12 | `lanes/12_rc_final_verification.md` | complete | Verified v0.1.0 release candidate gates and GO decision. |
 | 13 | `lanes/13_v0.2_planning.md` | complete | Broke v0.2.0 roadmap into backlog, milestones, and risks. |
+| 360.1 | `lanes/360_1_open_source_rename_scope.md` | complete | Locked open source public naming scope around TuringResearch. |
 | 337.5 | `lanes/337_5_vggt_local_freshness_scan.md` | complete | Refreshed read-only VGGT local freshness scan metadata for public split review. |
 | 338.5 | `lanes/338_5_vggt_case_study_refresh.md` | complete | Refreshed public-safe VGGT case study and split-ready draft from local scan metadata. |
 | 343.5 | `lanes/343_5_split_pack_freshness_verification.md` | complete | Verified split-ready freshness and marked manual split pack as not ready. |
@@ -36,6 +37,8 @@ This ledger coordinates all single-window lane work for TuringResearch Plus.
 | 367.5 | `lanes/367_5_vggt_case_local_freshness_recheck.md` | complete | Rechecked VGGT case local freshness for v1.6 without running VGGT or changing split-manual claims. |
 
 ## Latest Update
+
+2026-05-26: Round 360.1 locked the Open Source Rename Scope. Read README, package metadata, v1.5 handoff/archive docs, v1.6 roadmap, original repo replication progress, repository strategy, and the Round 360 lane. Added `docs/open-source-rename-scope.md`, `docs/turingresearch-public-naming-policy.md`, `docs/public-name-migration-plan.md`, `docs/public-name-risk-register.md`, `docs/legacy-name-compatibility-policy.md`, and `lanes/360_1_open_source_rename_scope.md`. Decision: public brand target is TuringResearch; README/docs/release/package display names should migrate to TuringResearch in later public-docs rounds; Python import compatibility, package distribution name, CLI names, and MCP names remain until separate audits. No package rename, PyPI publication, tag, GitHub release, GitHub repository creation, or broad code rewrite was performed. Validation: name integrity and public release hygiene focused checks passed, `python -m ruff check .` passed, `python -m mypy src` passed, and `git diff --check` passed with only LF-to-CRLF working-copy warning.
 
 2026-05-26: Round 367 completed Split Final Safety Refresh for v1.6. Reviewed `split_ready/`, `split_manual/`, `docs/physical-split-execution-policy.md`, `docs/v1.5.0-split-sprint-gate-report.md`, and the Round 367.5 VGGT freshness recheck as conservative input. Added `docs/split-final-safety-refresh-v1.6.md`, `docs/split-final-blockers.md`, `tests/workflow/test_split_final_safety_refresh.py`, and `lanes/345_split_final_safety_refresh.md`. Decision: GO for final human review / NO-GO for automatic split execution. No external repository was created or pushed, no `git init` was run inside split packs, no real URL was written, no raw data or restricted model payload was copied, no SparseConv3D success claim was added, and the main TuringResearch repository remains the flagship. Validation: split final safety tests passed with 9 tests, split/manual freshness set passed with 36 tests, v1.5 security/privacy gate passed with 9 tests, public privacy/name/hygiene gate passed with 16 tests, compliance focused gate passed with 15 tests, `python -m ruff check .` passed, and `git diff --check` passed with only LF-to-CRLF working-copy warning.
 
@@ -5773,4 +5776,38 @@ Validation:
 - Public privacy/name/hygiene gate passed with 16 tests.
 - Compliance focused gate passed with 15 tests.
 - `python -m ruff check .` passed.
+- `git diff --check` passed with only LF-to-CRLF working-copy warning.
+
+## Round 360.1 - Open Source Rename Scope
+
+Status: completed.
+
+Summary:
+- Added `docs/open-source-rename-scope.md`.
+- Added `docs/turingresearch-public-naming-policy.md`.
+- Added `docs/public-name-migration-plan.md`.
+- Added `docs/public-name-risk-register.md`.
+- Added `docs/legacy-name-compatibility-policy.md`.
+- Added `lanes/360_1_open_source_rename_scope.md`.
+
+Decision:
+- public project name target: TuringResearch;
+- GitHub repo name target: `TuringResearch`;
+- README, docs, release, and package display names should migrate to
+  TuringResearch in later public-docs rounds;
+- Python import compatibility, package distribution name, CLI names, and MCP
+  names remain until separate compatibility audits.
+
+Non-actions:
+- No package rename.
+- No PyPI publication.
+- No tag creation.
+- No GitHub release publication.
+- No GitHub repository creation.
+- No broad code rewrite.
+
+Validation:
+- Name integrity and public release hygiene focused checks passed.
+- `python -m ruff check .` passed.
+- `python -m mypy src` passed.
 - `git diff --check` passed with only LF-to-CRLF working-copy warning.
