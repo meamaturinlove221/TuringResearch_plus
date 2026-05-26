@@ -9,6 +9,7 @@ REQUIRED_WORKFLOWS = [
     "ci.yml",
     "docs-check.yml",
     "privacy-gate.yml",
+    "release-artifact-dry-run.yml",
 ]
 
 
@@ -23,10 +24,13 @@ def test_ci_workflow_contains_required_checks() -> None:
     required = [
         "actions/checkout",
         "actions/setup-python",
-        'python -m pip install -e \".[dev]\"',
+        'python -m pip install -e ".[dev,pdf,mcp]"',
         "python -m ruff check src tests",
         "python -m pytest tests/unit",
         "python -m pytest tests/contract",
+        "test_package_metadata_v1_6.py",
+        "test_install_smoke_fake.py",
+        "test_release_artifact_manifest.py",
         "test_name_integrity.py",
         "test_public_demo_privacy_gate.py",
         "python -m mypy src",
@@ -42,11 +46,13 @@ def test_docs_and_privacy_workflows_are_fake_default() -> None:
         for workflow in ["docs-check.yml", "privacy-gate.yml"]
     )
 
-    assert "test_docs_site_build_fake.py" in combined
-    assert "test_v1_1_docs_dashboard_integration.py" in combined
+    assert "test_docs_site_build_hardening.py" in combined
+    assert "test_docs_deployment_preflight.py" in combined
+    assert "test_docs_deployment_dry_run.py" in combined
+    assert "test_docs_release_bundle.py" in combined
     assert "test_public_release_hygiene.py" in combined
-    assert "test_v1_security_privacy_gate.py" in combined
-    assert "test_v1_1_paper_demo_integration.py" in combined
+    assert "test_v1_5_security_privacy_gate.py" in combined
+    assert "test_release_artifact_manifest.py" in combined
     assert 'TURINGRESEARCH_ENABLE_LIVE_TESTS: "0"' in combined
 
 
@@ -62,6 +68,8 @@ def test_github_actions_do_not_publish_or_upload_private_data() -> None:
         "gh release",
         "git tag",
         "actions/upload-artifact",
+        "pypa/gh-action-pypi-publish",
+        "twine upload",
         "secrets.",
         "api_key",
         "token:",

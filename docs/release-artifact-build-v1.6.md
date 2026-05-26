@@ -54,6 +54,11 @@ The `dist/` directory is ignored by git. The local wheel is not committed.
 - package name: `turingresearch-plus`
 - public project name: TuringResearch
 
+The hash and size above record the Round 380 local build. Future dry-run builds
+may produce a different wheel hash because build metadata can vary by
+environment; release gates must still verify the wheel is readable and contains
+no forbidden files.
+
 ## Safety Scan
 
 The local wheel entry list was checked for forbidden release material:

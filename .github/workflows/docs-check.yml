@@ -7,13 +7,17 @@ on:
 permissions:
   contents: read
 
+env:
+  TURINGRESEARCH_MODE: "fake"
+  TURINGRESEARCH_ENABLE_LIVE_TESTS: "0"
+  TURINGRESEARCH_ENABLE_WEB_LIVE: "0"
+  TURINGRESEARCH_ENABLE_APIFY_LIVE: "0"
+  TURINGRESEARCH_ENABLE_SFTP_LIVE: "0"
+
 jobs:
   docs:
-    name: Docs and public entry checks
+    name: Docs build dry-run and public entry checks
     runs-on: ubuntu-latest
-
-    env:
-      TURINGRESEARCH_ENABLE_LIVE_TESTS: "0"
 
     steps:
       - name: Checkout
@@ -25,13 +29,19 @@ jobs:
           python-version: "3.11"
 
       - name: Install docs check dependencies
-        run: python -m pip install -e ".[dev]"
+        run: python -m pip install -e ".[dev,pdf,mcp]"
 
-      - name: Build docs site fake
-        run: python -m pytest tests/workflow/test_docs_site_build_fake.py -q
+      - name: Run docs site build hardening
+        run: python -m pytest tests/workflow/test_docs_site_build_hardening.py -q
 
-      - name: Run docs dashboard integration
-        run: python -m pytest tests/workflow/test_v1_1_docs_dashboard_integration.py -q
+      - name: Run docs deployment preflight
+        run: python -m pytest tests/workflow/test_docs_deployment_preflight.py -q
+
+      - name: Run docs deployment dry-run
+        run: python -m pytest tests/workflow/test_docs_deployment_dry_run.py -q
+
+      - name: Run docs release bundle dry-run
+        run: python -m pytest tests/workflow/test_docs_release_bundle.py -q
 
       - name: Run public release hygiene
         run: python -m pytest tests/contract/test_public_release_hygiene.py -q

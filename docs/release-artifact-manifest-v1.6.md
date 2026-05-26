@@ -16,6 +16,11 @@ not a publication record.
 | wheel-v1.6-local | wheel | built-local | `dist/turingresearch_plus-1.5.0rc0-py3-none-any.whl` | 745087 | `012b7b289386b5c2eae4e059c990ae8af56e16d5b983f32eada6e7ab318bc744` | Local wheel produced by `python -m pip wheel --no-deps --no-build-isolation -w dist .`. |
 | sdist-v1.6-local | sdist | skipped | n/a | 0 | n/a | Graceful skip: `python -m build` is unavailable in this environment and no network install was attempted. |
 
+The wheel hash records the Round 380 local build only. Rebuilding the wheel in a
+different release-candidate environment may produce a different hash; CI must
+validate readability and forbidden-file exclusions before any human publication
+decision.
+
 ## Wheel Contents Summary
 
 - zip_entries: `666`

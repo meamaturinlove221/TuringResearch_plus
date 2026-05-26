@@ -1,0 +1,52 @@
+name: Release artifact dry run
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  TURINGRESEARCH_MODE: "fake"
+  TURINGRESEARCH_ENABLE_LIVE_TESTS: "0"
+  TURINGRESEARCH_ENABLE_WEB_LIVE: "0"
+  TURINGRESEARCH_ENABLE_APIFY_LIVE: "0"
+  TURINGRESEARCH_ENABLE_SFTP_LIVE: "0"
+  TURINGRESEARCH_ENABLE_PLUGINS: "0"
+
+jobs:
+  release-artifact-dry-run:
+    name: Build local wheel dry-run
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install release dry-run dependencies
+        run: python -m pip install -e ".[dev,pdf,mcp]"
+
+      - name: Build wheel dry-run
+        run: python -m pip wheel --no-deps --no-build-isolation -w dist .
+
+      - name: Try sdist when build frontend exists
+        shell: bash
+        run: |
+          if python -m build --version > dist/build-frontend-version.txt 2>&1; then
+            python -m build --sdist --no-isolation --outdir dist
+          else
+            printf 'sdist skipped: python -m build unavailable\n' > dist/sdist-skip.txt
+          fi
+
+      - name: Run release artifact manifest tests
+        run: python -m pytest tests/workflow/test_release_artifact_manifest.py -q
+
+      - name: Run package install smoke tests
+        run: python -m pytest tests/workflow/test_install_smoke_fake.py -q
