@@ -6077,3 +6077,43 @@ Validation:
 - `python -m ruff check .` passed.
 - `python -m mypy src/turing_research_plus/live_safety` passed.
 - `git diff --check` passed with only LF-to-CRLF working-copy warning.
+
+## Round 377 - Optional Live Smoke Gate
+
+Status: completed.
+
+Summary:
+- Added `docs/v1.6.0-optional-live-smoke-gate-report.md`.
+- Added `docs/v1.6.0-optional-live-smoke-go-no-go.md`.
+- Added `tests/workflow/test_v1_6_optional_live_smoke_gate.py`.
+- Added `lanes/355_optional_live_smoke_gate.md`.
+- Integrated Round 373 through Round 376 into a v1.6 optional live smoke gate.
+
+Gate decision:
+- GO FOR OPTIONAL LIVE SMOKE RELEASE-CANDIDATE REVIEW.
+- NO-GO FOR DEFAULT LIVE.
+
+Gate checks:
+- scholar fake smoke pass;
+- web/apify fake smoke pass;
+- sftp fake smoke pass;
+- all live tests skipped by default;
+- redaction gate pass;
+- no secrets;
+- no default network.
+
+Safety:
+- No live provider request was made.
+- No SSH or SFTP connection was opened.
+- No remote command or remote delete was performed.
+- No raw live output is retained.
+- No automatic Evidence Ledger write is allowed.
+
+Validation:
+- Optional live smoke gate, fake smoke, and redaction tests passed with 23 tests.
+- Live smoke tests skipped as expected with 3 skipped live tests selected via
+  `-m live`.
+- v1.5 security/privacy, public release hygiene, and optional live safety tests
+  passed with 23 tests.
+- `python -m ruff check .` passed.
+- `git diff --check` passed with only LF-to-CRLF working-copy warning.
