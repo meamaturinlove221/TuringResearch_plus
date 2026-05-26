@@ -367,19 +367,21 @@ class SemanticScholarLiveAdapter:
     ) -> list[dict[str, object]]:
         current: Any = payload
         if payload_path is not None:
-            for item in payload_path:
+            for path_part in payload_path:
                 if not isinstance(current, dict):
                     return []
-                current = current.get(item, [])
+                current = current.get(path_part, [])
         if single:
-            current = [current]
-        if not isinstance(current, list):
+            raw_items: list[Any] = [current]
+        elif isinstance(current, list):
+            raw_items = [item for item in current]
+        else:
             return []
         papers: list[dict[str, object]] = []
-        for item in current:
-            if not isinstance(item, dict):
+        for raw_item in raw_items:
+            if not isinstance(raw_item, dict):
                 continue
-            paper = item.get(relation_key) if relation_key else item
+            paper = raw_item.get(relation_key) if relation_key else raw_item
             if isinstance(paper, dict):
                 papers.append(dict(paper))
         return papers
