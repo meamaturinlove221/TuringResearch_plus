@@ -32,9 +32,12 @@ This ledger coordinates all single-window lane work for TuringResearch Plus.
 | 337.5 | `lanes/337_5_vggt_local_freshness_scan.md` | complete | Refreshed read-only VGGT local freshness scan metadata for public split review. |
 | 338.5 | `lanes/338_5_vggt_case_study_refresh.md` | complete | Refreshed public-safe VGGT case study and split-ready draft from local scan metadata. |
 | 343.5 | `lanes/343_5_split_pack_freshness_verification.md` | complete | Verified split-ready freshness and marked manual split pack as not ready. |
+| 345 | `lanes/345_split_final_safety_refresh.md` | complete | Refreshed final split safety state before any future manual execution pack. |
 | 367.5 | `lanes/367_5_vggt_case_local_freshness_recheck.md` | complete | Rechecked VGGT case local freshness for v1.6 without running VGGT or changing split-manual claims. |
 
 ## Latest Update
+
+2026-05-26: Round 367 completed Split Final Safety Refresh for v1.6. Reviewed `split_ready/`, `split_manual/`, `docs/physical-split-execution-policy.md`, `docs/v1.5.0-split-sprint-gate-report.md`, and the Round 367.5 VGGT freshness recheck as conservative input. Added `docs/split-final-safety-refresh-v1.6.md`, `docs/split-final-blockers.md`, `tests/workflow/test_split_final_safety_refresh.py`, and `lanes/345_split_final_safety_refresh.md`. Decision: GO for final human review / NO-GO for automatic split execution. No external repository was created or pushed, no `git init` was run inside split packs, no real URL was written, no raw data or restricted model payload was copied, no SparseConv3D success claim was added, and the main TuringResearch repository remains the flagship. Validation: split final safety tests passed with 9 tests, split/manual freshness set passed with 36 tests, v1.5 security/privacy gate passed with 9 tests, public privacy/name/hygiene gate passed with 16 tests, compliance focused gate passed with 15 tests, `python -m ruff check .` passed, and `git diff --check` passed with only LF-to-CRLF working-copy warning.
 
 2026-05-26: Optional Round 367.5 rechecked VGGT Case Local Freshness on the VGGT desktop. Read the machine-local project-links status, refreshed `examples/vggt-human-prior-survey/local_scan_summary.md`, `local_scan_artifact_index.md`, and `local_scan_missing_items.md`, read `split_ready/turingresearch-vggt-case` and `split_manual/turingresearch-vggt-case`, and added `docs/vggt-case-local-freshness-recheck-v1.6.md` plus `lanes/367_5_vggt_case_local_freshness_recheck.md`. The decision is conservative: local VGGT metadata is fresh enough for human review, but `split_manual/turingresearch-vggt-case` remains a manual human-review pack and is not upgraded automatically. No VGGT command, experiment, viewer, local workspace mutation, raw data copy, restricted model payload copy, large artifact copy, external repository creation, backend completion claim, advisor pass, or promotion claim was added. Validation: local scan focused tests passed with 10 tests, split/case package tests passed with 18 tests, privacy/v1.6 docs gates passed with 26 tests, `python -m ruff check .` passed, and `git diff --check` passed with only LF-to-CRLF working-copy warnings.
 
@@ -5728,3 +5731,46 @@ Safety:
 - No secrets.
 - No private upload.
 - No ARIS implementation.
+
+## Round 367 - Split Final Safety Refresh
+
+Status: completed.
+
+Summary:
+- Added `docs/split-final-safety-refresh-v1.6.md`.
+- Added `docs/split-final-blockers.md`.
+- Added `tests/workflow/test_split_final_safety_refresh.py`.
+- Added `lanes/345_split_final_safety_refresh.md`.
+- Refreshed split-ready and split-manual safety state before any future final
+  split execution pack.
+
+Gate decision:
+- GO FOR FINAL HUMAN REVIEW.
+- NO-GO FOR AUTOMATIC SPLIT EXECUTION.
+
+Checked:
+- no secrets;
+- no raw data;
+- no private paths;
+- no restricted model payloads;
+- no fake URL;
+- no unsupported claims;
+- main repo remains flagship.
+
+Safety:
+- No external repository was created.
+- No external child repository was pushed.
+- No `git init` was run inside a split pack.
+- No real URL was written.
+- No raw VGGT data or restricted model payload was copied.
+- No SparseConv3D success claim was added.
+- No local metadata was promoted to public observed result evidence.
+
+Validation:
+- Split final safety tests passed with 9 tests.
+- Split manual pack and freshness gates passed in the 36-test split safety set.
+- v1.5 security/privacy gate passed with 9 tests.
+- Public privacy/name/hygiene gate passed with 16 tests.
+- Compliance focused gate passed with 15 tests.
+- `python -m ruff check .` passed.
+- `git diff --check` passed with only LF-to-CRLF working-copy warning.
