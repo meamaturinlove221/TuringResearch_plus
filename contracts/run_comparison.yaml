@@ -1,0 +1,77 @@
+name: run_comparison
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: run_comparison
+status: implemented_minimal
+release_target: v0.4.0
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >
+  Compare experiment runs at metadata/report level across boards, artifacts,
+  hard gates, failure categories, claimed improvements, unsupported claims, and
+  next actions.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >
+  Prevent board, visual, artifact, and dashboard metadata from being promoted
+  into unsupported run-to-run improvement claims.
+
+models:
+  board_ref: BoardRef
+  input: RunComparisonInput
+  output: RunComparisonReport
+
+run_comparison_report_fields:
+  - compared_runs
+  - available_boards
+  - missing_boards
+  - artifact_completeness
+  - visual_completeness
+  - hard_gate_summary
+  - failure_summary
+  - claimed_improvements
+  - unsupported_claims
+  - next_actions
+
+proposed_tools:
+  - name: experiment.run_compare
+    command: turing experiment compare-runs
+    status: local_helper_not_public_mcp
+    default_enabled: true
+
+safety_policy:
+  metadata_only: true
+  no_image_understanding: true
+  no_modal_execution: true
+  no_vggt_execution: true
+  no_network: true
+  no_private_vggt_path_read: true
+  no_planned_as_observed: true
+  no_sparseconv_success_without_backend_evidence: true
+  human_review_required: true
+
+vggt_rules:
+  v770_no_full_human_completion_claim: true
+  v129_keep_regression_warning: true
+  v260_hard_blocked_not_success: true
+  v999_long_run_not_promotion: true
+  sparseconv3d_success_requires_backend_evidence: true
+
+required_tests:
+  - tests/unit/test_run_compare_models.py
+  - tests/unit/test_board_index.py
+  - tests/unit/test_run_comparator.py
+  - tests/unit/test_run_compare_markdown.py
+  - tests/workflow/test_vggt_run_comparison_fixture.py

@@ -1,0 +1,59 @@
+name: turingresearch.citation_graph
+version: 0.2.0-alpha
+status: beta_feature_minimal
+description: Real-data-path citation graph expansion with fake and manual fallback.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+tools:
+  graph.citation_graph_expand:
+    tool_name: graph.citation_graph_expand
+    namespace: graph
+    input_model: CitationGraphRequest
+    output_model: CitationGraph
+    cache_behavior: adapter-level cache for live Semantic Scholar calls
+    network_behavior: fake/manual by default; live only with explicit opt-in
+    error_behavior: typed adapter errors are recorded as limitations
+    evidence_requirement: retrieval metadata is not human-verified evidence
+    required_tests:
+      - tests/unit/test_citation_graph_expander.py
+      - tests/workflow/test_citation_graph_fake_vggt_related_work.py
+      - tests/live/test_citation_graph_live_optional.py
+    implementation_status: implemented_minimal
+models:
+  CitationGraph:
+    required:
+      - graph_id
+      - seed_papers
+      - nodes
+      - edges
+      - frontier_nodes
+      - expansion_depth
+      - filters
+      - source_adapter
+      - retrieval_status
+      - limitations
+      - requires_human_review
+  edge_types:
+    - cites
+    - cited_by
+    - related
+    - same_author
+    - recommended
+    - manual_related
+rules:
+  - Default path must not call the network.
+  - Live mode requires Semantic Scholar live adapter opt-in.
+  - Citation graph output is not a complete related work review.
+  - Live retrieval does not imply human verification.
+  - No full text is downloaded.

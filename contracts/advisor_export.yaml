@@ -1,0 +1,97 @@
+name: advisor_export
+version: 0.2.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: advisor_export
+status: implemented_minimal
+release_target: v0.5.0
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >
+  Build a Markdown source bundle, plan-only PDF export spec, plan-only PPTX
+  outline, and export manifest for Advisor Pack delivery without generating
+  binary exports by default.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >
+  Prepare advisor-ready Markdown source material while preserving evidence
+  boundaries and avoiding fabricated figures, tables, or binary export claims.
+
+models:
+  request: AdvisorMarkdownBundleRequest
+  bundle: AdvisorMarkdownBundle
+  export_plan: AdvisorExportPlan
+  pdf_plan: AdvisorPdfExportPlan
+  pptx_plan: AdvisorPptxExportPlan
+  export_manifest: AdvisorExportManifest
+
+advisor_markdown_bundle_files:
+  - advisor_report_source.md
+  - slides_outline.md
+  - figure_list.md
+  - table_list.md
+  - evidence_refs.md
+  - limitations.md
+  - next_actions.md
+  - manifest.yaml
+
+future_exports:
+  - pdf
+  - pptx
+  - docx
+  - html
+
+round_93_plan_outputs:
+  - advisor_pdf_export_plan.md
+  - advisor_pptx_outline.md
+  - export_manifest.yaml
+  - slide_section_mapping.md
+
+proposed_tools:
+  - name: advisor.markdown_bundle_build
+    command: turing advisor markdown-bundle
+    status: local_helper_not_public_mcp
+    default_enabled: true
+  - name: advisor.pdf_export_plan
+    command: turing advisor pdf-plan
+    status: local_helper_not_public_mcp
+    default_enabled: true
+  - name: advisor.pptx_export_plan
+    command: turing advisor pptx-plan
+    status: local_helper_not_public_mcp
+    default_enabled: true
+  - name: advisor.export_manifest_build
+    command: turing advisor export-manifest
+    status: local_helper_not_public_mcp
+    default_enabled: true
+
+safety_policy:
+  no_pdf_generation: true
+  no_pptx_generation: true
+  no_external_converter: true
+  no_fake_figures: true
+  no_planned_as_observed: true
+  no_sparseconv_success_without_evidence: true
+  human_review_required: true
+  optional_binary_adapters_not_default: true
+
+required_tests:
+  - tests/unit/test_advisor_export_models.py
+  - tests/unit/test_advisor_markdown_bundle.py
+  - tests/unit/test_advisor_export_plan.py
+  - tests/unit/test_pdf_export_plan.py
+  - tests/unit/test_pptx_export_plan.py
+  - tests/unit/test_advisor_export_manifest.py
+  - tests/workflow/test_vggt_advisor_markdown_bundle.py
+  - tests/workflow/test_vggt_advisor_export_plan.py

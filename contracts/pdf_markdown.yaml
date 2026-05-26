@@ -1,9 +1,9 @@
-name: tulingresearch.pdf_markdown
+name: turingresearch.pdf_markdown
 version: 0.2.0
 status: draft
-description: PDF MCP namespace contracts for TulingResearch Plus.
-mcp_server: tulingresearch-plus
-project: TulingResearch Plus
+description: PDF MCP namespace contracts for TuringResearch Plus.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
 tool_contract_fields:
   - tool_name
   - namespace
@@ -77,32 +77,30 @@ tools:
     tool_name: pdf.extract_figures
     namespace: pdf
     input_model: PDFFigureExtractInput
-    output_model: PDFFigureExtractOutput
+    output_model: PDFAssetExtractionReport
     cache_behavior: writes local asset metadata cache under pdf/assets with hashed source identity
     network_behavior: none
     error_behavior: typed unsupported or extraction error
     evidence_requirement: figure provenance required with source PDF, page, and optional bbox
     required_tests:
-      - contract
-      - fixture fake test
+      - fixture PDF figure extraction
       - provenance metadata test
       - paper.figure_register integration contract
-    implementation_status: contract_only
+    implementation_status: implemented_minimal
   pdf.extract_tables:
     tool_name: pdf.extract_tables
     namespace: pdf
     input_model: PDFTableExtractInput
-    output_model: PDFTableExtractOutput
+    output_model: PDFAssetExtractionReport
     cache_behavior: writes local table metadata cache under pdf/tables with hashed source identity
     network_behavior: none
     error_behavior: typed unsupported or extraction error
     evidence_requirement: table provenance required with source PDF, page, and optional bbox
     required_tests:
-      - contract
-      - fixture fake test
+      - fixture PDF table extraction
       - markdown or csv serialization test
       - vault.ingest_source integration contract
-    implementation_status: contract_only
+    implementation_status: implemented_minimal
   pdf.ocr_pages:
     tool_name: pdf.ocr_pages
     namespace: pdf
@@ -120,17 +118,16 @@ tools:
     tool_name: pdf.sectionize
     namespace: pdf
     input_model: PDFSectionizeInput
-    output_model: PDFSectionizeOutput
+    output_model: PDFAssetExtractionReport
     cache_behavior: derived markdown section cache
     network_behavior: none
     error_behavior: typed parsing error
     evidence_requirement: section-to-page map and section tree evidence locators required
     required_tests:
-      - contract
       - section heading fixture
       - section tree fixture
       - page map compatibility regression
-    implementation_status: contract_only
+    implementation_status: implemented_minimal
   pdf.cache_lookup:
     tool_name: pdf.cache_lookup
     namespace: pdf
@@ -226,6 +223,54 @@ tools:
       markdown: string?
       output: PDFMarkdownOutput?
       error: PDFMarkdownError?
+  PDFAssetExtractionReport:
+    required:
+      - report_id
+      - source_pdf
+      - extracted_figures
+      - extracted_tables
+      - page_map
+      - section_tree
+      - extraction_warnings
+      - quality_score
+    fields:
+      report_id: string
+      source_pdf: local_path
+      extracted_figures: list[PDFExtractedFigure]
+      extracted_tables: list[PDFExtractedTable]
+      page_map: list[PDFAssetPageMapEntry]
+      section_tree: list[PDFSectionNode]
+      extraction_warnings: list[string]
+      quality_score: float
+      paper_registry_entries: list[object]?
+  PDFExtractedFigure:
+    required: [figure_id, source_pdf, page_number, extraction_status, warnings]
+    fields:
+      figure_id: string
+      source_pdf: local_path
+      page_number: integer
+      bbox: object?
+      output_path: local_path?
+      caption: string?
+      extraction_status: enum[extracted,not_found,skipped,error]
+      warnings: list[string]
+  PDFExtractedTable:
+    required:
+      - table_id
+      - source_pdf
+      - page_number
+      - extraction_format
+      - extraction_status
+      - warnings
+    fields:
+      table_id: string
+      source_pdf: local_path
+      page_number: integer
+      extraction_format: string
+      output_path: local_path?
+      markdown_table: string?
+      extraction_status: enum[extracted,not_found,skipped,error]
+      warnings: list[string]
   PdfMarkdownRequest:
     required: [source, options]
     fields:

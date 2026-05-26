@@ -1,0 +1,43 @@
+name: neocortica_scholar_parity
+description: Lightweight Scholar parity layer for paper source priority, tool list, MCP usage, and fallback policy.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+contract_id: neocortica_scholar_parity
+version: 1
+status: implemented
+release: v1.2.0
+round: 237
+owner: turingresearch-plus
+summary: >
+  Lightweight Scholar parity layer for paper source priority, public tool list,
+  MCP usage guide, and paper source fallback policy.
+public_api:
+  package: turing_research_plus.scholar_pipeline
+  modules:
+    - turing_research_plus.scholar_pipeline.source_priority
+    - turing_research_plus.scholar_pipeline.tool_list_export
+    - turing_research_plus.scholar_pipeline.mcp_usage_export
+    - turing_research_plus.scholar_pipeline.fallback_policy
+capabilities:
+  - .mcp.example.json style guide
+  - scholar tool list
+  - paper search priority
+  - cached markdown policy
+  - reference fallback policy
+  - SKILL usage guide export
+  - live/fake boundary
+safety:
+  default_network: false
+  mineru: false
+  heavy_ocr: false
+  automatic_full_paper_download: false
+  paywall_bypass: false
+  final_paper_conclusion: false
+  requires_human_review: true
+tests:
+  - tests/unit/test_scholar_source_priority.py
+  - tests/unit/test_scholar_tool_list_export.py
+  - tests/unit/test_scholar_mcp_usage_export.py
+  - tests/unit/test_scholar_fallback_policy.py
+  - tests/workflow/test_neocortica_scholar_parity_fake.py

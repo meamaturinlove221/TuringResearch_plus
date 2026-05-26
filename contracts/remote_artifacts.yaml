@@ -1,0 +1,71 @@
+name: remote_artifacts
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: remote_artifacts
+status: integration_gate
+release_target: v0.4.0
+api_status: local_python_helper_not_public_mcp
+default_enabled: false
+network_behavior: no_network_by_default
+description: >
+  Normalize GitHub Artifact Sync, SSH/SFTP Remote Reader, NAS/SMB Shared Store,
+  and Cloud Object Artifact Index outputs into one review-first remote artifact
+  report.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >
+  Provide one unified ArtifactRef and UnifiedRemoteArtifactReport surface for
+  downstream Artifact Auditor, Run Ingestor, Handoff Importer, Advisor Pack
+  inputs, and Evidence Ledger proposed updates.
+
+models:
+  artifact_ref: ArtifactRef
+  source: RemoteArtifactSource
+  output: UnifiedRemoteArtifactReport
+
+source_kinds:
+  - github
+  - ssh_sftp
+  - nas_smb
+  - cloud_object
+
+unified_remote_artifact_report_fields:
+  - sources
+  - normalized_artifacts
+  - duplicate_candidates
+  - selected_artifacts
+  - omitted_artifacts
+  - unsafe_artifacts
+  - proposed_imports
+  - evidence_tags
+  - requires_human_review
+
+safety_policy:
+  large_file_metadata_only: true
+  unsafe_files_intercepted: true
+  proposed_imports_only: true
+  no_evidence_ledger_auto_write: true
+  no_human_verified_remote_artifacts: true
+  no_default_network: true
+
+integration:
+  can_feed:
+    - artifact_audit
+    - run_ingest
+    - handoff_import
+    - advisor_pack_inputs
+    - evidence_proposed_updates
+  must_not_feed_as:
+    - observed_without_review
+    - verified_evidence

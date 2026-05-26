@@ -1,0 +1,43 @@
+name: turingresearch.apify_adapter
+version: 0.3.0
+status: implemented_minimal
+description: Contract for the optional Apify adapter behind fake-first web retrieval.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+api_status: local_python_adapter_not_public_mcp
+default_enabled: false
+network_behavior: fake_mode_default
+tool_contract_fields:
+  - name
+  - purpose
+  - input_model
+  - output_model
+  - timeout_policy
+  - retry_policy
+  - rate_limit_policy
+  - cache_behavior
+  - error_model
+  - fake_adapter_equivalent
+  - live_test_marker
+  - required_env_vars
+  - default_enabled
+proposed_tools:
+  - web.apify_run_optional
+adapter:
+  name: ApifyAdapter
+  purpose: Optional Apify-backed public page retrieval.
+  input_model: ApifyRunRequest
+  output_model: ApifyRunResult
+  fake_adapter_equivalent: FakeApifyAdapter
+  required_env_vars:
+    - APIFY_TOKEN
+  default_enabled: false
+  live_test_marker: live
+rules:
+  - Default tests must not access network.
+  - APIFY_TOKEN is optional outside explicit live mode.
+  - Live tests must be skipped by default.
+  - Live result means retrieved, not verified.
+  - Do not fetch restricted content.
+  - Do not bypass login or paywall.
+implementation_status: implemented_minimal

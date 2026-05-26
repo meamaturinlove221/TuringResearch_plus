@@ -1,0 +1,54 @@
+name: optional_remote_dry_run_plan
+version: 1
+status: implemented
+description: Review-only remote dry-run plan for manual Session pod attempts.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release: v1.4.0-planning
+round: 295
+owner: turingresearch-master-orchestrator
+
+scope:
+  implementation_type: dry-run plan generator
+  ssh: false
+  sftp: false
+  tmux: false
+  modal: false
+  remote_execution: false
+  dry_run_only: true
+  automatic_evidence_write: false
+  requires_human_review: true
+
+public_api:
+  package: turing_research_plus.session_runtime
+  modules:
+    - turing_research_plus.session_runtime.remote_dry_run_plan
+    - turing_research_plus.session_runtime.manual_execution_plan
+
+output:
+  preflight_result: true
+  files_to_transfer: true
+  forbidden_files_excluded: true
+  remote_target_placeholder: true
+  manual_commands: true
+  rollback_plan: true
+  return_artifact_requirements: true
+  human_confirmation_checklist: true
+
+safety:
+  fake_first: true
+  no_ssh: true
+  no_sftp: true
+  no_tmux: true
+  no_modal: true
+  no_remote_execution: true
+  no_secrets_logging: true
+  no_raw_data_transfer: true
+  no_automatic_ledger_write: true
+  commands_are_manual_references: true
+
+tests:
+  - tests/unit/test_remote_dry_run_plan.py
+  - tests/unit/test_manual_execution_plan.py
+  - tests/workflow/test_optional_remote_dry_run_plan_fake.py

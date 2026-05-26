@@ -1,0 +1,45 @@
+name: neocortica_session_parity
+description: Review-only Session parity layer for context packs, archive safety, structured returns, and platform notes.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+contract_id: neocortica_session_parity
+version: 1
+status: implemented
+release: v1.2.0
+round: 236
+owner: turingresearch-plus
+summary: >
+  Review-only parity layer for stable session/context/pod workflow concepts:
+  context pack manifest, archive path safety, structured return manifest, and
+  platform compatibility notes.
+public_api:
+  package: turing_research_plus.pod_lifecycle
+  modules:
+    - turing_research_plus.pod_lifecycle.session_context_pack
+    - turing_research_plus.pod_lifecycle.context_archive_safety
+    - turing_research_plus.pod_lifecycle.structured_return_manifest
+    - turing_research_plus.pod_lifecycle.platform_compat
+capabilities:
+  - context pack manifest
+  - structured return manifest
+  - dotfile exclusion policy
+  - path traversal guard
+  - shell metacharacter risk check
+  - Windows/Linux archive compatibility notes
+  - memory no-bidirectional-sync policy
+safety:
+  default_network: false
+  remote_command_execution: false
+  ssh_provision: false
+  tmux_attach: false
+  modal_execution: false
+  automatic_git_push: false
+  automatic_evidence_write: false
+  requires_human_review: true
+tests:
+  - tests/unit/test_session_context_pack.py
+  - tests/unit/test_context_archive_safety.py
+  - tests/unit/test_structured_return_manifest.py
+  - tests/unit/test_platform_compat.py
+  - tests/workflow/test_neocortica_session_parity_fake.py

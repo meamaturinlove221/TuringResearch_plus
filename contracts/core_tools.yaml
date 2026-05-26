@@ -1,9 +1,9 @@
-name: tulingresearch.core_tools
+name: turingresearch.core_tools
 version: 0.2.0
 status: draft
-description: Core MCP namespace contracts for TulingResearch Plus.
-mcp_server: tulingresearch-plus
-project: TulingResearch Plus
+description: Core MCP namespace contracts for TuringResearch Plus.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
 tool_contract_fields:
   - tool_name
   - namespace
@@ -34,7 +34,7 @@ tools:
     output_model: CoreHealthCheckOutput
     cache_behavior: none
     network_behavior: none
-    error_behavior: errors use TulingResearchError
+    error_behavior: errors use TuringResearchError
     evidence_requirement: none
     required_tests:
       - contract: status ok/degraded/unavailable

@@ -1,0 +1,37 @@
+name: turingresearch.ontology_sops
+version: 0.3.0
+status: implemented_minimal
+description: Contract for review-oriented ontology SOP outputs.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: offline_only
+tool_contract_fields:
+  - name
+  - purpose
+  - input_model
+  - output_model
+  - network_behavior
+  - evidence_requirement
+  - required_tests
+proposed_tools:
+  - vault.ontology_sop_run
+input_model: OntologySOPRequest
+output_model: OntologySOPResult
+supported_sops:
+  - seed-concept-search
+  - source-gathering
+  - concept-page-creation
+  - alias-resolution
+  - edge-batch-creation
+  - hierarchy-visualization
+  - gap-detection
+  - merge-candidates
+  - confidence-update
+  - ontology-export
+rules:
+  - SOP output is review material, not final ontology truth.
+  - Ontology exports require human review.
+  - Do not promote evidence-free edges.
+implementation_status: implemented_minimal

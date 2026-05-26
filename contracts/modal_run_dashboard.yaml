@@ -1,0 +1,65 @@
+name: modal_run_dashboard
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: modal_run_dashboard
+status: implemented_minimal
+release_target: v0.4.0
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >
+  Build a Markdown-first dashboard from already ingested Modal / experiment run
+  reports without running Modal, running VGGT, or promoting evidence.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >
+  Summarize run status, route id, candidates, backend status, hard gates,
+  artifact completeness, visual readiness, failure categories, next action, and
+  advisor readiness from Run Ingestor output.
+
+models:
+  input: RunIngestReport
+  output: RunDashboardReport
+
+proposed_tools:
+  - name: experiment.modal_dashboard_build
+    command: turing modal dashboard
+    status: local_helper_not_public_mcp
+    default_enabled: true
+
+status_badges:
+  - REVIEW_READY_NOT_PROMOTED
+  - HARD_BLOCKED
+  - ROUTE_EXHAUSTED
+  - FAILED
+  - PARTIAL
+  - NOT_ENOUGH_EVIDENCE
+  - REQUIRES_HUMAN_REVIEW
+
+safety_policy:
+  no_modal_execution: true
+  no_vggt_execution: true
+  no_network: true
+  no_private_vggt_path_read: true
+  dashboard_not_experiment_result: true
+  display_ingested_evidence_only: true
+  no_success_claim_without_evidence: true
+  human_review_required: true
+
+required_tests:
+  - tests/unit/test_dashboard_models.py
+  - tests/unit/test_run_dashboard_builder.py
+  - tests/unit/test_dashboard_markdown_render.py
+  - tests/unit/test_status_badges.py
+  - tests/workflow/test_vggt_run_dashboard_fixture.py

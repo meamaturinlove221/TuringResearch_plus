@@ -1,0 +1,68 @@
+name: dashboard_refinement
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: dashboard_refinement
+status: implemented_minimal
+release_target: v0.7
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+requires_human_review: true
+description: >-
+  Render refined local-first static dashboards with navigation, status cards,
+  filters, static search index, and safe demo badges without login, cloud
+  service, server requirement, or experiment execution.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >-
+  Improve review ergonomics for public demos and local research projects while
+  preserving the boundary that UI display is not experimental evidence.
+models:
+  - DashboardNavItem
+  - DashboardCard
+  - DashboardFilterOption
+  - DashboardSearchEntry
+  - RefinedDashboardBundle
+sections:
+  - project overview cards
+  - evidence status cards
+  - artifact completeness
+  - visual readiness
+  - route status
+  - failure board
+  - related work board
+  - advisor next action
+  - simple static search index
+  - safe demo mode badge
+safety:
+  server_required: false
+  login_required: false
+  cloud_deployed: false
+  network_required: false
+  ui_executed_experiment: false
+  safe_demo_mode: true
+  requires_human_review: true
+non_goals:
+  - no SaaS
+  - no login
+  - no cloud service
+  - no default networking
+  - no private VGGT path read
+  - no experiment result claim
+required_tests:
+  - tests/unit/test_ui_navigation.py
+  - tests/unit/test_ui_cards.py
+  - tests/unit/test_ui_filters.py
+  - tests/unit/test_ui_search_index.py
+  - tests/workflow/test_vggt_refined_dashboard_html.py

@@ -1,0 +1,72 @@
+name: turingresearch.web_fetch_adapter
+version: 0.3.0
+status: implemented_minimal
+description: Contract for optional Web Fetch, Web Content, and Apify adapters.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+api_status: local_python_adapter_not_public_mcp
+default_enabled: false
+network_behavior: fake_mode_default
+tool_contract_fields:
+  - name
+  - purpose
+  - input_model
+  - output_model
+  - timeout_policy
+  - retry_policy
+  - rate_limit_policy
+  - cache_behavior
+  - error_model
+  - fake_adapter_equivalent
+  - live_test_marker
+  - required_env_vars
+  - default_enabled
+proposed_tools:
+  - web.fetch
+  - web.content
+  - web.search_optional
+  - web.apify_run_optional
+adapters:
+  WebFetchAdapter:
+    purpose: Fetch one public source-hygiene-safe page.
+    fake_adapter_equivalent: FakeWebFetchAdapter
+    required_env_vars:
+      - APIFY_TOKEN
+    default_enabled: false
+    live_test_marker: live
+  WebContentAdapter:
+    purpose: Return cached or normalized public web content by source URL.
+    fake_adapter_equivalent: FakeWebContentAdapter
+    required_env_vars:
+      - APIFY_TOKEN
+    default_enabled: false
+    live_test_marker: live
+  ApifyAdapter:
+    purpose: Optional Apify-backed public web retrieval.
+    fake_adapter_equivalent: FakeApifyAdapter
+    required_env_vars:
+      - APIFY_TOKEN
+    default_enabled: false
+    live_test_marker: live
+source_metadata:
+  required:
+    - source_url
+    - retrieval_time
+    - content_hash
+    - provider
+    - human_verified
+  defaults:
+    human_verified: false
+cache_policy:
+  cache_key: hash_normalized_request_fields
+  raw_url_as_filename: false
+  include_source_hygiene_status: true
+rules:
+  - Default tests must not access network.
+  - APIFY_TOKEN is optional.
+  - Live tests must be skipped by default.
+  - Live result means retrieved, not verified.
+  - Do not fetch restricted content.
+  - Do not bypass login or paywall.
+  - Do not copy upstream implementation code.
+implementation_status: implemented_minimal

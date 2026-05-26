@@ -1,0 +1,53 @@
+name: experiment_route
+version: 0.2.0-draft
+status: capsule_contract
+description: Capsule-local contract for Experiment Route DSL.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields:
+  - proposed_tool
+  - input_model
+  - output_model
+  - network_behavior
+  - implementation_status
+implementation_status: implemented_minimal
+public_api: false
+proposed_tools:
+  experiment.route_compile:
+    proposed_tool: experiment.route_compile
+    status: proposed_not_public_api
+    input_model: ExperimentRouteCompileInput
+    output_model: ExperimentRouteSpec
+    secondary_output_model: ControllerPromptDraft
+    network_behavior: none
+    implementation_status: implemented_minimal
+models:
+  ExperimentRouteSpec:
+    required:
+      - route_id
+      - goal
+      - context
+      - allowed_inputs
+      - forbidden_actions
+      - stages
+      - hard_gates
+      - fallback_routes
+      - final_states
+      - artifact_requirements
+      - cleanup_requirements
+      - advisor_outputs
+  ExperimentRouteStage:
+    required:
+      - id
+      - name
+      - purpose
+      - inputs
+      - outputs
+      - hard_gates
+      - failure_modes
+      - fallback
+      - done_criteria
+rules:
+  - Route compile is planning only.
+  - Route compile must not run VGGT or Modal.
+  - Route compile must not claim experiment completion.

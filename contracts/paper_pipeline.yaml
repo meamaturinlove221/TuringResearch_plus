@@ -1,9 +1,9 @@
-name: tulingresearch.paper_pipeline
+name: turingresearch.paper_pipeline
 version: 0.2.0
 status: draft
-description: Paper MCP namespace contracts for TulingResearch Plus.
-mcp_server: tulingresearch-plus
-project: TulingResearch Plus
+description: Paper MCP namespace contracts for TuringResearch Plus.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
 tool_contract_fields:
   - tool_name
   - namespace
@@ -148,7 +148,16 @@ tools:
       draft_id: string
       experiment_report: ExperimentReport?
       dry_run: boolean
+  PDFAssetImport:
+    required: [PDFAssetExtractionReport, FigureAssetRegistry]
+    fields:
+      source: PDFAssetExtractionReport
+      registry_entries: list[PaperFigureRegisterOutput]
+      supported_asset_kinds:
+        - pdf_extracted_figure
+        - pdf_extracted_table
 rules:
   - Paper Draft is blocked when ExperimentReport is absent.
   - Article blocks must preserve EvidenceRef.
+  - PDF extracted figure and table assets must record original_pdf_source.
   - Paper tools are v0.1.0 minimal or dry-run implementations according to implementation_status.

@@ -1,0 +1,53 @@
+name: scholar_full_tool_surface
+version: 1
+status: implemented
+description: Fake/default Scholar tool surface for v1.3 Neocortica-Scholar parity.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release: v1.3.0-planning
+round: 271
+owner: turingresearch-master-orchestrator
+
+scope:
+  implementation_type: operator-facing Scholar tool surface
+  default_mode: fake
+  live_network: false
+  mineru: false
+  heavy_ocr: false
+  automatic_full_paper_download: false
+  paywall_bypass: false
+  final_paper_conclusion: false
+  requires_human_review: true
+
+public_api:
+  package: turing_research_plus.scholar_tools
+  modules:
+    - turing_research_plus.scholar_tools.paper_searching
+    - turing_research_plus.scholar_tools.paper_content
+    - turing_research_plus.scholar_tools.paper_reference
+    - turing_research_plus.scholar_tools.paper_reading
+    - turing_research_plus.scholar_tools.tool_surface
+
+tool_surface:
+  - scholar.paper_searching
+  - scholar.paper_content
+  - scholar.paper_reference
+  - scholar.paper_reading
+
+safety:
+  no_real_api_key_required: true
+  live_tests_skipped_by_default: true
+  cached_markdown_is_review_context: true
+  fake_adapter_outputs_are_not_observed_results: true
+  no_final_paper_claim: true
+  no_paywall_bypass: true
+  no_mineru: true
+
+tests:
+  - tests/unit/test_scholar_tool_surface.py
+  - tests/unit/test_paper_searching_tool.py
+  - tests/unit/test_paper_content_tool.py
+  - tests/unit/test_paper_reference_tool.py
+  - tests/unit/test_paper_reading_tool.py
+  - tests/workflow/test_scholar_full_tool_surface_fake.py

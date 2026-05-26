@@ -1,0 +1,78 @@
+name: case_api
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: case_api
+status: contract_draft
+release_target: v0.8 planning
+api_status: public_api_contract_draft
+default_enabled: true
+network_behavior: no_network
+description: >-
+  Draft public API contract for future case/example namespace boundaries. Case
+  APIs are demo-safe or evidence-reviewed and must not leak private data.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+module_name: turing_research_cases
+purpose: >-
+  Provide public demo project descriptors, case-study builders, benchmark
+  replay fixtures, and example packaging metadata.
+stability: experimental
+current_compatibility_namespace: turing_research_plus
+public_models:
+  - PublicDemoProject
+  - PublicCaseStudyDraft
+  - RedactionReport
+  - ClaimSafetyReport
+  - BenchmarkScenario
+  - BenchmarkReport
+public_functions_tools:
+  - public_demo_validate
+  - case_study_build_public_draft
+  - case_study_redact
+  - case_study_claim_guard
+  - benchmark_replay_run
+input_schema:
+  demo_project_root: local_path
+  case_study_source: local_or_demo_material
+  replay_scenario: local_yaml
+output_schema:
+  demo_validation_report: model
+  case_study_draft: markdown_or_model
+  redaction_report: RedactionReport
+  benchmark_report: BenchmarkReport
+internal_only_modules:
+  - private dogfooding notes
+  - fixture generation helpers
+  - local-only scan artifacts
+deprecated_aliases: []
+tests:
+  - tests/workflow/test_public_demo_suite.py
+  - tests/workflow/test_public_demo_expansion.py
+  - tests/unit/test_case_study_builder.py
+  - tests/unit/test_benchmark_report.py
+  - tests/contract/test_module_public_api_contracts.py
+docs:
+  - docs/module-public-api-contracts.md
+  - docs/public-demo-guide.md
+  - docs/vggt-case-study-public.md
+  - docs/case-study-maintenance.md
+safety:
+  no_network_by_default: true
+  demo_only_label_required: true
+  no_private_data: true
+  requires_human_review: true
+non_goals:
+  - no private artifact packaging
+  - no unsupported case-study success claim
+  - no fake result observed

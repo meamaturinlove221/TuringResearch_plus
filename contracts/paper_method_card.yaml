@@ -1,0 +1,51 @@
+name: paper_method_card
+version: 0.2.0-draft
+status: capsule_contract
+description: Capsule-local contract for Paper-to-Method Card.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields:
+  - proposed_tool
+  - input_model
+  - output_model
+  - network_behavior
+  - implementation_status
+implementation_status: implemented_minimal
+public_api: false
+proposed_tools:
+  paper.method_card_extract:
+    proposed_tool: paper.method_card_extract
+    status: proposed_not_public_api
+    input_model: PaperMethodCardInput
+    output_model: PaperMethodCard
+    network_behavior: none
+    implementation_status: implemented_minimal
+models:
+  PaperMethodCard:
+    required:
+      - paper_id
+      - title
+      - source_type
+      - task
+      - inputs
+      - outputs
+      - representation
+      - core_method
+      - architecture_components
+      - training_objective
+      - inference_pipeline
+      - key_figures
+      - key_tables
+      - what_to_borrow
+      - what_not_to_copy
+      - collision_risk
+      - mapping_to_vggt
+      - evidence_refs
+      - limitations
+      - requires_human_review
+rules:
+  - No network.
+  - No paper download.
+  - No citation fabrication.
+  - Fake/manual fixtures require human review.
+  - Method cards must not claim complete related-work reading without evidence.

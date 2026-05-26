@@ -1,0 +1,76 @@
+name: artifact_api
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: artifact_api
+status: contract_draft
+release_target: v0.8 planning
+api_status: public_api_contract_draft
+default_enabled: true
+network_behavior: no_network
+description: >-
+  Draft public API contract for future artifact namespace boundaries. Artifact
+  APIs remain metadata-first and safety-gated.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+module_name: turing_research_artifact
+purpose: >-
+  Provide artifact audit, handoff bundle, remote artifact metadata, remote
+  reader, shared/object store, and run ingest surfaces.
+stability: experimental
+current_compatibility_namespace: turing_research_plus
+public_models:
+  - ArtifactAuditReport
+  - HandoffManifest
+  - RemoteArtifactReport
+  - RunIngestReport
+  - ArtifactIndex
+public_functions_tools:
+  - artifact_audit
+  - handoff_bundle_export
+  - handoff_bundle_import_plan
+  - remote_artifacts_unify
+  - run_ingest_local_bundle
+input_schema:
+  artifact_root: local_path
+  manifest_path: optional_local_path
+  remote_source: optional_metadata_only
+output_schema:
+  artifact_report: ArtifactAuditReport
+  handoff_manifest: HandoffManifest
+  remote_report: RemoteArtifactReport
+  run_ingest_report: RunIngestReport
+internal_only_modules:
+  - live client internals
+  - fake client internals
+  - adapter safety implementation details
+deprecated_aliases: []
+tests:
+  - tests/unit/test_artifact_auditor.py
+  - tests/unit/test_handoff_exporter.py
+  - tests/unit/test_remote_artifact_safety.py
+  - tests/unit/test_run_ingest_models.py
+  - tests/contract/test_module_public_api_contracts.py
+docs:
+  - docs/module-public-api-contracts.md
+  - docs/artifact-auditor.md
+  - docs/remote-artifact-integration.md
+safety:
+  no_network_by_default: true
+  no_delete_or_overwrite: true
+  no_raw_data_packaging: true
+  requires_human_review: true
+non_goals:
+  - no automatic remote sync
+  - no automatic experiment execution
+  - no private model packaging

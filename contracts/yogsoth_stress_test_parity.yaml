@@ -1,0 +1,37 @@
+name: yogsoth_stress_test_parity
+version: 1
+status: implemented
+description: Deterministic convergence and stress-test parity layer for local research route review.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release_header:
+  contract_id: yogsoth_stress_test_parity
+  round: 246
+  status: implemented
+  owner: turingresearch-master-orchestrator
+
+scope:
+  parity_target: yogsoth-ai convergence and stress-test ideas
+  review_only: true
+  multi_agent_runtime: false
+  network_required: false
+
+scenarios:
+  - missing_evidence
+  - fake_result_risk
+  - overclaim
+  - artifact_missing
+  - weak_related_work
+  - unsafe_plugin
+  - privacy_leak
+  - route_contradiction
+  - advisor_pack_unsupported_claim
+
+safety:
+  no_multi_agent_runtime: true
+  no_network: true
+  no_experiment_execution: true
+  no_plugin_execution: true
+  no_release_action: true
+  requires_human_review: true

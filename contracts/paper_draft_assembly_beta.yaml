@@ -1,0 +1,58 @@
+name: paper_draft_assembly_beta
+version: 0.1.0
+status: beta
+description: Assemble review-only evidence-linked paper draft beta packages.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+tool_contract_fields: []
+contract_id: paper_draft_assembly_beta
+round: 222
+module: turing_research_plus.paper_write
+purpose: >
+  Assemble existing review-only paper scaffold and section skeleton files into
+  an evidence-linked beta draft package without generating a final paper.
+inputs:
+  scaffold_dir:
+    required_files:
+      - paper_outline.md
+      - related_work_skeleton.md
+      - method_section_skeleton.md
+      - experiment_section_skeleton.md
+      - result_table_missing_items.md
+      - evidence_gap_report.md
+      - citation_safety_report.md
+outputs:
+  draft_package:
+    required_sections:
+      - title candidates
+      - abstract placeholder
+      - introduction skeleton
+      - related work skeleton
+      - method skeleton
+      - experiment skeleton
+      - results blocked section
+      - limitations
+      - missing evidence report
+      - unsafe claim report
+      - citation status report
+exports:
+  markdown_files:
+    - paper_draft_beta.md
+    - missing_evidence_report.md
+    - unsafe_claim_report.md
+    - citation_status_report.md
+safety:
+  read_only_inputs: true
+  final_paper_generated: false
+  final_abstract_generated: false
+  final_results_generated: false
+  camera_ready_text_generated: false
+  fabricated_results_allowed: false
+  automatic_paper_download: false
+  human_review_required: true
+  fake_demo_to_observed_allowed: false
+tests:
+  - tests/unit/test_paper_draft_assembly.py
+  - tests/unit/test_paper_claim_guard.py
+  - tests/unit/test_citation_status_guard.py
+  - tests/workflow/test_vggt_paper_draft_beta_fake.py

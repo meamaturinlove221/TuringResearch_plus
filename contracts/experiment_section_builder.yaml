@@ -1,0 +1,53 @@
+name: experiment_section_builder
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: experiment_section_builder
+status: implemented_minimal
+release_target: v0.6 Sprint 3
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >-
+  Build review-only experiment section skeletons from route DSL, run ingest,
+  dashboard, and failure taxonomy artifacts without generating result values or
+  fabricated tables.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+required_fields:
+  - dataset_setup_placeholder
+  - baselines
+  - ablations
+  - metrics
+  - route_status
+  - run_status
+  - missing_result_tables
+  - failure_cases
+  - planned_experiments
+  - not_ready_claims
+safety:
+  generated_result_values: false
+  fabricated_tables: false
+  dashboard_treated_as_result: false
+  planned_equals_executed: false
+  requires_human_review: true
+non_goals:
+  - no final experiment prose
+  - no result value generation
+  - no figure or table fabrication
+  - no Modal execution
+  - no network access
+required_tests:
+  - tests/unit/test_experiment_section_builder.py
+  - tests/unit/test_result_table_guard.py
+  - tests/workflow/test_vggt_experiment_section_skeleton.py

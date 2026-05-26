@@ -1,0 +1,66 @@
+name: repo_split_dry_run
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: repo_split_dry_run
+status: implemented_minimal
+release_target: v0.9
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+requires_human_review: true
+description: >-
+  Dry-run exporter for future repository split candidates. It copies only
+  public-safe local files into a temporary/export directory and writes a split
+  manifest plus safety report. It never creates GitHub repositories and never
+  pushes git remotes.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+models:
+  - RepoSplitDryRunRequest
+  - RepoSplitDryRunResult
+  - RepoSplitManifest
+  - RepoSplitSafetyReport
+required_outputs:
+  - split_manifest.yaml
+  - safety_report.md
+safety:
+  public_safe_files_only: true
+  no_git_push: true
+  no_github_repo_creation: true
+  no_secrets: true
+  no_raw_data: true
+  no_smplx_files: true
+  no_private_paths: true
+  no_large_binary_payloads: true
+  requires_human_review: true
+allowed_default_suffixes:
+  - .md
+  - .yaml
+  - .yml
+  - .json
+  - .txt
+  - .mmd
+  - .html
+non_goals:
+  - no physical repository split
+  - no GitHub repository creation
+  - no git push
+  - no branch management
+  - no raw data packaging
+  - no model payload packaging
+  - no release publishing
+required_tests:
+  - tests/unit/test_repo_split_models.py
+  - tests/unit/test_repo_split_dry_run_exporter.py
+  - tests/unit/test_repo_split_safety.py
+  - tests/workflow/test_vggt_case_split_dry_run.py

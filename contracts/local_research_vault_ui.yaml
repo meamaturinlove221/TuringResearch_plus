@@ -1,0 +1,78 @@
+name: local_research_vault_ui
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: local_research_vault_ui
+status: implemented_minimal
+release_target: v0.7
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+requires_human_review: true
+description: >-
+  Generate a local-first static research vault UI for browsing vault graph,
+  method taxonomy, related work, evidence nodes, missing edges, and review
+  markers without a server, login system, network access, or graph database.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >-
+  Let researchers inspect local graph review artifacts and evidence gaps from a
+  static HTML page while preserving that graph views are navigation and review
+  aids, not final truth.
+models:
+  - ResearchVaultUIBundle
+  - VaultUISection
+  - VaultSearchEntry
+  - VaultUISafetyReport
+  - VaultGraphView
+required_sections:
+  - concept nodes
+  - paper nodes
+  - method nodes
+  - artifact nodes
+  - claim nodes
+  - failure nodes
+  - route nodes
+  - missing edges
+  - requires review nodes
+  - optional wikilinks
+local_helpers:
+  - helper_name: vault.ui_build_local
+    input_model: VaultGraph
+    output_model: ResearchVaultUIBundle
+    cache_behavior: writes local static HTML only
+    network_behavior: no_network
+    error_behavior: validation errors returned as data
+    evidence_requirement: existing vault graph artifacts only
+    implementation_status: implemented_minimal
+safety:
+  no_server: true
+  no_login: true
+  no_network: true
+  no_graph_database: true
+  no_private_path_read: true
+  graph_not_truth: true
+  requires_human_review: true
+non_goals:
+  - no SaaS
+  - no login
+  - no cloud service
+  - no network
+  - no graph database
+  - no truth inference
+required_tests:
+  - tests/unit/test_vault_ui_models.py
+  - tests/unit/test_static_vault_ui.py
+  - tests/unit/test_vault_graph_view.py
+  - tests/unit/test_vault_search_index.py
+  - tests/workflow/test_vggt_vault_ui_fake.py

@@ -1,0 +1,43 @@
+name: heavy_pdf_backend_slot
+version: 1
+status: interface_only
+description: Optional interface slot for future MinerU or arxiv2md heavy PDF backend.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release: v1.4.0-planning
+round: 305
+owner: turingresearch-master-orchestrator
+
+scope:
+  implementation_type: interface slot only
+  default_mode: disabled
+  mineru_implemented: false
+  arxiv2md_implemented: false
+  heavy_backend_enabled_by_default: false
+  ocr_default: false
+  large_pdf_processing: false
+  dependency_added: false
+  requires_human_review: true
+
+public_api:
+  package: turing_research_plus.scholar_pipeline
+  module: turing_research_plus.scholar_pipeline.heavy_pdf_backend_slot
+  exported_symbols:
+    - HeavyPdfBackendKind
+    - HeavyPdfBackendRequest
+    - HeavyPdfBackendSlot
+    - HeavyPdfBackendStatus
+    - build_heavy_pdf_backend_slot
+    - render_heavy_pdf_backend_slot
+
+safety:
+  mineru_not_implemented: true
+  heavy_backend_disabled_by_default: true
+  no_ocr_default: true
+  no_large_pdf_processing: true
+  no_heavy_dependency: true
+  future_backend_only: true
+
+tests:
+  - tests/unit/test_heavy_pdf_backend_slot.py

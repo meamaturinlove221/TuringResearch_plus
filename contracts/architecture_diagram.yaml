@@ -1,0 +1,44 @@
+name: architecture_diagram
+version: 0.2.0-draft
+status: capsule_contract
+description: Capsule-local contract for Figure-to-Architecture text diagrams.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields:
+  - proposed_tool
+  - input_model
+  - output_model
+  - network_behavior
+  - implementation_status
+implementation_status: implemented_minimal
+public_api: false
+proposed_tools:
+  paper.figure_to_architecture:
+    proposed_tool: paper.figure_to_architecture
+    status: proposed_not_public_api
+    input_model: FigureToArchitectureInput
+    output_model: ArchitectureDiagramSpec
+    network_behavior: none
+    implementation_status: implemented_minimal
+models:
+  ArchitectureDiagramSpec:
+    required:
+      - diagram_id
+      - title
+      - source_type
+      - source_ref
+      - nodes
+      - edges
+      - groups
+      - inputs
+      - outputs
+      - mapping_notes
+      - export_formats
+      - limitations
+      - requires_human_review
+rules:
+  - No image model calls.
+  - No third-party graph API calls.
+  - No network.
+  - Fixture-derived diagrams require human review.
+  - Unsupported edges must remain explicit.

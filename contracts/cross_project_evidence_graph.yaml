@@ -1,0 +1,80 @@
+name: cross_project_evidence_graph
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: cross_project_evidence_graph
+status: implemented_minimal
+release_target: v0.6 Sprint 1
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >-
+  Build a review-only cross-project evidence graph that highlights reusable
+  methods, failures, artifact patterns, and route templates without
+  transferring evidence between projects.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >-
+  Compare multiple research projects in a local workspace and surface reusable
+  patterns while keeping claims, artifacts, methods, failures, and routes scoped
+  to their source project.
+models:
+  cross_project_evidence_graph:
+    required:
+      - workspace_id
+      - project_nodes
+      - claim_nodes
+      - artifact_nodes
+      - method_nodes
+      - failure_nodes
+      - route_nodes
+      - cross_project_edges
+      - shared_methods
+      - shared_failures
+      - reusable_templates
+      - requires_human_review
+  cross_project_edge:
+    required:
+      - source_id
+      - target_id
+      - edge_type
+      - rationale
+      - requires_human_review
+      - evidence_transfer
+  comparison:
+    supports:
+      - shared_methods
+      - shared_failures
+      - shared_artifact_patterns
+      - shared_route_patterns
+      - claims_missing_evidence
+safety:
+  default_network: false
+  reads_private_projects: false
+  reads_private_vggt: false
+  evidence_source: false
+  evidence_transfer: false
+  requires_human_review: true
+  no_automatic_evidence_application: true
+  no_graph_database: true
+non_goals:
+  - no graph database
+  - no automatic evidence promotion
+  - no private project scan
+  - no automatic claim validation
+required_tests:
+  - tests/unit/test_cross_project_models.py
+  - tests/unit/test_cross_project_evidence_graph.py
+  - tests/unit/test_cross_project_comparator.py
+  - tests/unit/test_cross_project_markdown_export.py
+  - tests/workflow/test_cross_project_workspace_fake.py

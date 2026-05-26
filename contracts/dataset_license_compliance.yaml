@@ -1,0 +1,74 @@
+name: dataset_license_compliance
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: dataset_license_compliance
+status: implemented_minimal
+release_target: v0.7
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+requires_human_review: true
+description: >-
+  Local dataset, model, paper, and code license compliance checklist for
+  research projects. It records license status, use restrictions, redistribution
+  risk, publication risk, missing license information, and human-review
+  requirements without providing legal advice.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >-
+  Help project owners review whether data, models, papers, and code can be
+  bundled, cited, reused, or published. The assistant only produces checklists
+  and risk hints; it does not download license text or make legal conclusions.
+models:
+  - ComplianceAsset
+  - ComplianceFinding
+  - ComplianceReport
+  - ComplianceRiskLevel
+  - LicenseStatus
+compliance_report_required_fields:
+  - datasets
+  - models
+  - papers
+  - code_repos
+  - licenses
+  - usage_restrictions
+  - redistribution_risk
+  - publication_risk
+  - missing_license_info
+  - requires_human_review
+vggt_related_policy:
+  smplx_model_files: license restricted / not bundled
+  raw_dataset: not public packaged by default
+  third_party_paper_figures: requires reuse permission review
+  github_code_missing_license: unknown until reviewed
+  legal_advice: false
+safety:
+  no_network: true
+  no_license_download: true
+  no_restricted_data_packaging: true
+  no_legal_advice: true
+  no_private_path_read: true
+  requires_human_review: true
+non_goals:
+  - no legal advice
+  - no automatic license download
+  - no restricted data bundling
+  - no public release approval
+required_tests:
+  - tests/unit/test_compliance_models.py
+  - tests/unit/test_license_registry.py
+  - tests/unit/test_dataset_registry.py
+  - tests/unit/test_model_registry.py
+  - tests/unit/test_compliance_risk_checker.py
+  - tests/workflow/test_vggt_compliance_fake.py

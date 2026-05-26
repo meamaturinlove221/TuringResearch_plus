@@ -1,9 +1,9 @@
-name: tulingresearch.error_schema
+name: turingresearch.error_schema
 version: 0.2.0
 status: draft
 description: Shared error schema for MCP contracts and workflow results.
-mcp_server: tulingresearch-plus
-project: TulingResearch Plus
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
 tool_contract_fields:
   - tool_name
   - namespace
@@ -16,7 +16,7 @@ tool_contract_fields:
   - required_tests
   - implementation_status
 types:
-  TulingResearchError:
+  TuringResearchError:
     required: [code, message, severity]
     fields:
       code: string

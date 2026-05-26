@@ -1,0 +1,76 @@
+name: advisor_pptx_export
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: advisor_pptx_export
+status: implemented_minimal
+release_target: v0.7.0
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >
+  Optional Advisor Markdown Bundle to PPTX export path. The exporter produces a
+  review deck only when an optional local backend is available; otherwise it
+  returns a skipped report without failing default tests.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >
+  Produce user-reviewable advisor slide decks from existing Markdown bundle
+  source files while preserving limitations, not-ready markers, and human-review
+  requirements.
+
+models:
+  plan: AdvisorRealPptxExportPlan
+  slide: AdvisorPptxSlide
+  result: AdvisorPptxExportResult
+  backend: AdvisorPptxBackend
+  status: AdvisorPptxExportStatus
+
+local_helpers:
+  - helper_name: advisor.pptx_export_optional
+    input_model: AdvisorMarkdownBundle
+    output_model: AdvisorPptxExportResult
+    cache_behavior: local_files_only
+    network_behavior: no_network
+    error_behavior: graceful_skip_when_backend_missing
+    evidence_requirement: existing_advisor_markdown_bundle_only
+    implementation_status: implemented_minimal
+
+required_deck_sections:
+  - Research North Star
+  - Current Engineering State
+  - Evidence Summary
+  - Visual Readiness
+  - Failure / Blockers
+  - Related Work Position
+  - Next Experiment Route
+  - Advisor Ask / Decision Needed
+
+safety_policy:
+  input_is_advisor_markdown_bundle: true
+  optional_backend_only: true
+  graceful_skip_without_backend: true
+  no_network: true
+  no_fake_figures: true
+  no_fake_tables: true
+  no_fake_result_values: true
+  no_planned_as_observed: true
+  not_ready_markers_required: true
+  no_default_private_path_read: true
+  human_review_required: true
+
+required_tests:
+  - tests/unit/test_advisor_pptx_models.py
+  - tests/unit/test_advisor_pptx_export_plan.py
+  - tests/unit/test_advisor_pptx_template.py
+  - tests/workflow/test_advisor_pptx_export_optional.py

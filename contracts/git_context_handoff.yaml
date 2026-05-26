@@ -1,0 +1,83 @@
+name: turingresearch.git_context_handoff
+version: 0.3.0-draft
+status: design_draft
+description: Draft contract for Git-based context handoff packages.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+api_status: design_only_not_public_mcp
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+models:
+  ContextPackage:
+    required:
+      - package_id
+      - project_name
+      - source_machine_label
+      - created_at
+      - package_files
+      - route_ref
+      - handoff_manifest_ref
+      - memory_policy
+      - safety_policy
+      - manual_review_required
+    files:
+      - PROJECT_CONTEXT.md
+      - MEMORY.md
+      - ROUTE_SPEC.yaml
+      - HARD_GATES.md
+      - ARTIFACT_REQUIREMENTS.md
+      - FAILURE_TAXONOMY.md
+      - ADVISOR_INTENT.md
+      - HANDOFF_MANIFEST.yaml
+      - README.md
+  MemoryPolicy:
+    required:
+      - allowed_content
+      - forbidden_content
+      - bidirectional_sync
+      - source_of_truth
+      - review_required
+    rules:
+      - MEMORY is a safe summary, not the only truth.
+      - MEMORY is not bidirectionally synced by default.
+      - Evidence Ledger and structured reports remain source of truth.
+  GitTransportPolicy:
+    required:
+      - transport
+      - branch_or_bundle_ref
+      - allowed_files
+      - forbidden_files
+      - dotfile_policy
+      - remote_execution_allowed
+    defaults:
+      transport: git
+      remote_execution_allowed: false
+  HandoffSafetyPolicy:
+    forbidden:
+      - API keys
+      - .env
+      - raw data
+      - SMPL-X body model files
+      - cache folders
+      - secret dotfiles
+    large_file_policy: manifest_and_sha256_only
+required_tests:
+  - tests/unit/test_git_context_package_models.py
+  - tests/unit/test_git_context_safety_policy.py
+  - tests/workflow/test_git_context_handoff_fixture.py
+implementation_status: design_only
+rules:
+  - Do not copy upstream scripts.
+  - Do not transfer full Codex or ChatGPT sessions.
+  - Do not execute remote code.
+  - Use Git as transport only.
+  - Keep v0.2 Handoff Bundle and Run Ingestor as structured foundations.

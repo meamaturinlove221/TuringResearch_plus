@@ -1,9 +1,9 @@
-name: tulingresearch.vggt_evidence
+name: turingresearch.vggt_evidence
 version: 0.2.0
 status: draft
-description: Capsule-local VGGT / SMPL-X evidence ledger contract for TulingResearch Plus.
-mcp_server: tulingresearch-plus
-project: TulingResearch Plus
+description: Capsule-local VGGT / SMPL-X evidence ledger contract for TuringResearch Plus.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
 tool_contract_fields:
   - tool_name
   - namespace

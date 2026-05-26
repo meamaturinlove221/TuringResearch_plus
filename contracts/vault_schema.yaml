@@ -1,9 +1,9 @@
-name: tulingresearch.vault_schema
+name: turingresearch.vault_schema
 version: 0.3.0
 status: draft
-description: Vault MCP namespace and memory schema contracts for TulingResearch Plus.
-mcp_server: tulingresearch-plus
-project: TulingResearch Plus
+description: Vault MCP namespace and memory schema contracts for TuringResearch Plus.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
 tool_contract_fields:
   - tool_name
   - namespace

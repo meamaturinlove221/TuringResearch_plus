@@ -1,0 +1,100 @@
+name: turingresearch.scholar_pipeline
+version: 0.3.0-draft
+status: implemented_minimal
+description: Cache-first scholar and paper pipeline refinement.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+tools:
+  paper.search_pipeline:
+    tool_name: paper.search_pipeline
+    namespace: paper
+    input_model: ScholarPipelineRequest
+    output_model: ScholarPipelineResult
+    cache_behavior: local_cache_first
+    network_behavior: no_network_by_default_live_optional
+    error_behavior: typed_result_limitations
+    evidence_requirement: source_metadata_and_human_review_boundary
+    required_tests:
+      - tests/unit/test_scholar_search_priority.py
+      - tests/workflow/test_vggt_scholar_pipeline_fake.py
+    implementation_status: implemented_minimal
+  paper.reference_pipeline:
+    tool_name: paper.reference_pipeline
+    namespace: paper
+    input_model: ReferencePipelineRequest
+    output_model: ReferencePipelineResult
+    cache_behavior: cached_markdown_fallback
+    network_behavior: no_network_by_default_live_optional
+    error_behavior: unknown_requires_human_review
+    evidence_requirement: reference_source_and_human_review_boundary
+    required_tests:
+      - tests/unit/test_reference_pipeline_fallback.py
+    implementation_status: implemented_minimal
+  paper.three_pass_reading_plan:
+    tool_name: paper.three_pass_reading_plan
+    namespace: paper
+    input_model: ThreePassReadingPlanInput
+    output_model: ThreePassReadingPlan
+    cache_behavior: deterministic_template
+    network_behavior: none
+    error_behavior: validation_error
+    evidence_requirement: requires_real_paper_review
+    required_tests:
+      - tests/unit/test_three_pass_reading_plan.py
+    implementation_status: implemented_minimal
+models:
+  ScholarPipelineRequest:
+    required:
+      - query
+    optional:
+      - paper_id
+      - cached_markdown_path
+      - known_arxiv_url
+      - manual_fallback
+      - live_enabled
+      - dry_run
+  ScholarPipelineResult:
+    required:
+      - query
+      - source_priority
+      - selected_source
+      - status
+      - papers
+      - limitations
+      - requires_human_review
+  ReferencePipelineResult:
+    required:
+      - source
+      - references
+      - pagination_used
+      - fallback_used
+      - limitations
+      - requires_human_review
+source_priority:
+  - cached_markdown
+  - arxiv
+  - semantic_scholar
+  - unpaywall_placeholder
+  - manual
+reference_priority:
+  - semantic_scholar
+  - cached_markdown
+  - manual
+  - unknown
+rules:
+  - Default tests must not access network.
+  - Live adapter use is optional and must not fail when API keys are absent.
+  - Cached Markdown is not automatically human verified.
+  - Three-pass reading templates do not replace real paper review.
+  - MinerU and OCR-heavy conversion are out of scope.

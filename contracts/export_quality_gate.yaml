@@ -1,0 +1,71 @@
+name: export_quality_gate
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: export_quality_gate
+status: implemented_minimal
+release_target: v0.7.0
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >
+  Local quality gate for Advisor Markdown, PDF, PPTX, and dashboard export
+  outputs. The gate checks safety, evidence boundaries, skipped-output reasons,
+  and missing files without adding new export formats.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >
+  Verify that export artifacts remain review-safe and do not fabricate claims,
+  results, evidence references, figures, or binary output status.
+
+models:
+  request: ExportQualityGateRequest
+  report: ExportQualityReport
+  file_audit: ExportFileAudit
+  finding: ExportAuditFinding
+
+local_helpers:
+  - helper_name: advisor.export_quality_gate
+    input_model: ExportQualityGateRequest
+    output_model: ExportQualityReport
+    cache_behavior: local_files_only
+    network_behavior: no_network
+    error_behavior: report_findings_without_deleting_files
+    evidence_requirement: existing_export_outputs_only
+    implementation_status: implemented_minimal
+
+quality_checks:
+  - no unsafe claims
+  - no planned-as-observed
+  - no missing evidence refs
+  - no fake result
+  - no broken figure refs
+  - no missing limitations
+  - no old naming
+  - no secrets
+  - output files exist or skipped reason recorded
+
+safety_policy:
+  no_network: true
+  no_file_deletion: true
+  no_new_export_format: true
+  no_fake_figures: true
+  no_fake_results: true
+  no_planned_as_observed: true
+  skipped_outputs_require_reason: true
+  human_review_required: true
+
+required_tests:
+  - tests/unit/test_export_quality_gate.py
+  - tests/unit/test_export_audit.py
+  - tests/workflow/test_vggt_export_quality_gate.py

@@ -1,0 +1,33 @@
+name: docs_site_builder
+version: 0.1.0
+status: experimental
+description: Build local-first static HTML docs from repository Markdown.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+tool_contract_fields: []
+contract_id: docs_site_builder
+module: turing_research_plus.docs_site
+purpose: build local-first static HTML docs from repository Markdown
+inputs:
+  nav_yaml: docs-site/nav.yaml
+  manifest_yaml: docs-site/site_manifest.yaml
+  markdown_pages: docs-site/pages/*.md
+outputs:
+  static_html: docs-site/output/*.html
+  css: docs-site/output/site.css
+requirements:
+  no_network: true
+  no_node: true
+  no_large_frontend_framework: true
+  local_first: true
+  relative_links: true
+  build_output_ignored_by_default: true
+safety:
+  no_private_data_required: true
+  no_fake_external_links: true
+  requires_human_review: true
+tests:
+  - tests/unit/test_docs_site_models.py
+  - tests/unit/test_docs_site_nav.py
+  - tests/unit/test_docs_site_builder.py
+  - tests/workflow/test_docs_site_build_fake.py

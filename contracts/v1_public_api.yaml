@@ -1,0 +1,281 @@
+name: v1_public_api
+version: 1.0.0
+description: v1 public API surface freeze contract for modular namespace facades.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: v1_public_api
+status: freeze_draft
+release_target: v1.0
+api_status: public_api_freeze
+default_enabled: true
+network_behavior: no_network_by_default
+tool_contract_fields: []
+compatibility_namespace: turing_research_plus
+allowed_stability:
+  - stable
+  - beta
+  - experimental
+  - internal
+  - deprecated
+
+modules:
+  - id: core
+    namespace: turing_research_core
+    stability: beta
+    compatibility_namespace: turing_research_plus
+    public_models:
+      - Workspace
+      - WorkspaceOverview
+      - WorkspaceProject
+      - PrivacyScanReport
+      - QualityReport
+      - ResearchProjectTemplate
+    public_functions_tools:
+      - load_workspace_registry
+      - scan_privacy_paths
+      - generate_research_project_template
+    stable_surfaces:
+      - evidence status semantics
+      - workspace/project summary DTOs
+      - privacy report DTOs
+      - quality report DTOs
+      - project template schema
+    beta_surfaces:
+      - facade namespace exports
+      - project context helper APIs
+    experimental_surfaces: []
+    internal_only_modules:
+      - ledger internals
+      - north_star service internals
+      - case-specific vggt helpers
+    deprecated_aliases: []
+    docs:
+      - docs/v1.0.0-public-api.md
+      - docs/v1.0.0-api-stability-matrix.md
+      - docs/module-public-api-contracts.md
+    tests:
+      - tests/contract/test_v1_public_api_surface.py
+      - tests/contract/test_new_namespace_imports.py
+      - tests/contract/test_legacy_namespace_compat.py
+
+  - id: paper
+    namespace: turing_research_paper
+    stability: experimental
+    compatibility_namespace: turing_research_plus
+    public_models:
+      - PaperDigest
+      - PaperMethodCard
+      - PaperScaffold
+      - RelatedWorkDraftSkeleton
+      - DeepReviewReport
+    public_functions_tools:
+      - build_paper_digest
+      - build_vggt_paper_scaffold
+    stable_surfaces: []
+    beta_surfaces:
+      - paper scaffold DTOs after review
+      - deep review DTOs after review
+    experimental_surfaces:
+      - related work draft helpers
+      - method and experiment section skeleton builders
+      - case-specific paper scaffold helpers
+    internal_only_modules:
+      - internal template helpers
+      - fake fixture builders
+      - case-specific VGGT scaffold helpers
+    deprecated_aliases: []
+    docs:
+      - docs/v1.0.0-public-api.md
+      - docs/v1.0.0-api-stability-matrix.md
+      - docs/paper-writing-scaffold.md
+    tests:
+      - tests/contract/test_v1_public_api_surface.py
+      - tests/contract/test_new_namespace_imports.py
+
+  - id: artifact
+    namespace: turing_research_artifact
+    stability: experimental
+    compatibility_namespace: turing_research_plus
+    public_models:
+      - ArtifactAuditReport
+      - HandoffBundleManifest
+      - RunIngestReport
+      - UnifiedRemoteArtifactReport
+    public_functions_tools:
+      - artifact_audit
+      - build_unified_remote_artifact_report
+    stable_surfaces: []
+    beta_surfaces:
+      - artifact audit DTOs after review
+      - handoff metadata after review
+    experimental_surfaces:
+      - remote artifact metadata adapters
+      - run ingest reports
+    internal_only_modules:
+      - live client internals
+      - fake client internals
+      - adapter safety implementation details
+    deprecated_aliases: []
+    docs:
+      - docs/v1.0.0-public-api.md
+      - docs/v1.0.0-api-stability-matrix.md
+      - docs/artifact-auditor.md
+    tests:
+      - tests/contract/test_v1_public_api_surface.py
+      - tests/contract/test_new_namespace_imports.py
+
+  - id: experiment
+    namespace: turing_research_experiment
+    stability: beta
+    compatibility_namespace: turing_research_plus
+    public_models:
+      - ExperimentRouteSpec
+      - HardGateValidationReport
+      - FailureAttributionReport
+    public_functions_tools:
+      - compile_experiment_route
+      - validate_hard_gates
+    stable_surfaces:
+      - route DSL summary schema
+      - hard gate semantics after review
+      - planned vs executed boundary
+    beta_surfaces:
+      - facade namespace exports
+      - failure taxonomy reports
+    experimental_surfaces:
+      - run comparison helpers
+      - run dashboard layer
+    internal_only_modules:
+      - execution adapters
+      - live modal internals
+      - fake fixture builders
+    deprecated_aliases: []
+    docs:
+      - docs/v1.0.0-public-api.md
+      - docs/v1.0.0-api-stability-matrix.md
+      - docs/experiment-route-dsl.md
+    tests:
+      - tests/contract/test_v1_public_api_surface.py
+      - tests/contract/test_new_namespace_imports.py
+
+  - id: dashboard
+    namespace: turing_research_dashboard
+    stability: experimental
+    compatibility_namespace: turing_research_plus
+    public_models:
+      - DashboardCard
+      - AdvisorMarkdownBundle
+      - ExportQualityReport
+      - PublicCaseStudyDraft
+      - ResearchVaultUIBundle
+    public_functions_tools:
+      - build_static_dashboard
+      - export_advisor_pdf_optional
+      - export_advisor_pptx_optional
+    stable_surfaces: []
+    beta_surfaces:
+      - static dashboard DTOs after review
+      - export quality report DTOs after review
+    experimental_surfaces:
+      - optional PDF/PPTX backend rendering
+      - vault UI rendering
+      - case-study export helpers
+    internal_only_modules:
+      - HTML template helpers
+      - optional backend adapter internals
+      - VGGT-specific fixture builders
+    deprecated_aliases: []
+    docs:
+      - docs/v1.0.0-public-api.md
+      - docs/v1.0.0-api-stability-matrix.md
+      - docs/dashboard-guide.md
+    tests:
+      - tests/contract/test_v1_public_api_surface.py
+      - tests/contract/test_new_namespace_imports.py
+
+  - id: plugins
+    namespace: turing_research_plugins
+    stability: experimental
+    compatibility_namespace: turing_research_plus
+    public_models:
+      - PluginManifest
+      - PluginRegistry
+      - MCPPluginRegistry
+      - CapabilityManifest
+      - ExtensionSafetyReport
+    public_functions_tools:
+      - load_plugin_manifest
+      - validate_plugin_manifest
+    stable_surfaces:
+      - plugin manifest schema after review
+      - permission declaration semantics after review
+    beta_surfaces:
+      - MCP plugin registry schema after review
+      - capability manifest schema after review
+    experimental_surfaces:
+      - trusted local loading reports
+      - compatibility harness internals
+      - sandbox policy internals
+    internal_only_modules:
+      - dynamic import internals
+      - test fixture plugins
+      - optional future sandbox probes
+    deprecated_aliases: []
+    docs:
+      - docs/v1.0.0-public-api.md
+      - docs/v1.0.0-api-stability-matrix.md
+      - docs/plugin-guide.md
+    tests:
+      - tests/contract/test_v1_public_api_surface.py
+      - tests/contract/test_new_namespace_imports.py
+
+  - id: cases
+    namespace: turing_research_cases
+    stability: experimental
+    compatibility_namespace: turing_research_plus
+    public_models:
+      - BenchmarkReport
+      - BenchmarkScenario
+      - CaseStudyDraft
+      - CaseStudyRedactionReport
+      - CaseStudyClaimSafetyReport
+    public_functions_tools:
+      - run_benchmark_scenario
+      - build_vggt_public_case_study
+    stable_surfaces: []
+    beta_surfaces:
+      - public demo metadata after review
+      - benchmark replay report schema after review
+    experimental_surfaces:
+      - case-study builder helpers
+      - split export examples
+    internal_only_modules:
+      - private dogfooding notes
+      - fixture generation helpers
+      - local-only scan artifacts
+    deprecated_aliases: []
+    docs:
+      - docs/v1.0.0-public-api.md
+      - docs/v1.0.0-api-stability-matrix.md
+      - docs/public-demo-guide.md
+    tests:
+      - tests/contract/test_v1_public_api_surface.py
+      - tests/contract/test_new_namespace_imports.py
+
+deprecated_apis:
+  - name: legacy turing_research_plus direct implementation imports
+    status: deprecated_later_not_removed
+    replacement: target namespace facades such as turing_research_core.public_api
+    removal_before_v1: false
+    notes: >-
+      The compatibility namespace remains importable through v1.0. Deprecation
+      may be introduced only after migration docs and tests cover both paths.
+
+public_api_rules:
+  no_internal_helpers_public: true
+  experimental_not_stable: true
+  deprecated_requires_replacement: true
+  compatibility_namespace_required: true
+  target_namespace_import_required: true
+  no_network_import_side_effects: true
+  no_plugin_execution_on_import: true

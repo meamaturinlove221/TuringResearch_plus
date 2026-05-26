@@ -1,0 +1,72 @@
+name: paper_digest
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: paper_digest
+status: implemented_minimal
+release_target: v0.4.0
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >
+  Build conservative PaperDigest reports from local notes or cached paper
+  content using an expanded three-pass reading scaffold.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >
+  Produce paper_digest, method_card bridge, related_work_notes, and
+  collision_notes without claiming complete paper reading.
+
+models:
+  input: PaperDigestInput
+  output: PaperDigest
+  bridge_output: PaperMethodCard
+
+paper_digest_fields:
+  - paper_id
+  - title
+  - source_status
+  - pass1_summary
+  - pass2_notes
+  - pass3_deep_notes
+  - method_contribution
+  - figures_to_inspect
+  - equations_to_inspect
+  - experiment_table_notes
+  - what_to_borrow
+  - what_not_to_copy
+  - collision_notes
+  - related_work_positioning
+  - requires_human_review
+
+proposed_tools:
+  - name: paper.digest_build
+    command: turing paper digest
+    status: local_helper_not_public_mcp
+    default_enabled: true
+
+safety_policy:
+  no_default_network: true
+  no_full_text_download: true
+  no_long_text_copy: true
+  no_fabricated_citation: true
+  no_complete_review_claim_from_fixture: true
+  fake_digest_requires_human_review: true
+  missing_real_source_requires_real_paper: true
+
+required_tests:
+  - tests/unit/test_paper_digest_models.py
+  - tests/unit/test_three_pass_reading.py
+  - tests/unit/test_digest_builder.py
+  - tests/unit/test_digest_to_method_card.py
+  - tests/workflow/test_vggt_paper_digest_fixture.py

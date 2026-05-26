@@ -1,9 +1,9 @@
 ---
-name: tulingresearch-paper-sop-graph-generator
-description: Use when generating TulingResearch Plus SOP graph skeletons or Mermaid workflow diagrams.
+name: turingresearch-paper-sop-graph-generator
+description: Use when generating TuringResearch Plus SOP graph skeletons or Mermaid workflow diagrams.
 ---
 
-# TulingResearch Plus Skill: tulingresearch-paper-sop-graph-generator
+# TuringResearch Plus Skill: turingresearch-paper-sop-graph-generator
 
 ## Role
 
@@ -15,19 +15,19 @@ Use this skill when work touches the owner lane, related contracts, modules, tes
 
 ## Inputs
 
-- User request naming `tulingresearch-paper-sop-graph-generator` or the matching TulingResearch Plus lane.
+- User request naming `turingresearch-paper-sop-graph-generator` or the matching TuringResearch Plus lane.
 - Existing contracts, Pydantic models, tests, docs, and ledger entries.
 - Fake-service or dry-run fixtures when workflow behavior is involved.
 
 ## Outputs
 
-- Updated TulingResearch Plus files in the listed required paths.
+- Updated TuringResearch Plus files in the listed required paths.
 - Passing focused tests and release-safe documentation updates.
 - Ledger updates in `lanes/00_master_ledger.md` and the owner lane.
 
 ## Required files
 
-- `src/tuling_research_plus/sop/`
+- `src/turing_research_plus/sop/`
 - `sop_graphs/`
 
 ## Related contracts
@@ -46,11 +46,11 @@ Use this skill when work touches the owner lane, related contracts, modules, tes
 
 ## Rules / constraints
 
-- Project display name is TulingResearch Plus.
-- Core package is `tuling_research` and Plus package is `tuling_research_plus`.
-- MCP server name is `tulingresearch-plus`.
-- Skill names must use the `tulingresearch-` prefix.
-- Keep work inside `TulingResearch/TulingResearch_plus`.
+- Project display name is TuringResearch Plus.
+- Core package is `turing_research` and Plus package is `turing_research_plus`.
+- MCP server name is `turingresearch-plus`.
+- Skill names must use the `turingresearch-` prefix.
+- Keep work inside `TuringResearch/TuringResearch_plus`.
 - Do not require real network access, external API keys, or live service calls in tests.
 - Preserve EvidenceRef, ResearchArtifact, BudgetGate, and StateLedger boundaries when relevant.
 - Use service protocols or adapters for external APIs.
@@ -61,4 +61,4 @@ Use this skill when work touches the owner lane, related contracts, modules, tes
 - Implementation status: `locked`.
 - Release requirement: `release-critical`.
 - Related tests pass or a release blocker is explicitly recorded.
-- Documentation and contracts remain aligned with current TulingResearch Plus naming.
+- Documentation and contracts remain aligned with current TuringResearch Plus naming.

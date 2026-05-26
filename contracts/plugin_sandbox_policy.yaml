@@ -1,0 +1,71 @@
+name: plugin_sandbox_policy
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: plugin_sandbox_policy
+status: implemented_minimal
+release_target: v0.7
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+requires_human_review: true
+description: >-
+  Define plugin sandbox policy decisions, permission gates, risk reports, and
+  future sandbox requirements without implementing an OS-level sandbox.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >-
+  Provide a policy layer for v0.7 trusted local plugin loading before any
+  runtime plugin execution or OS sandbox implementation is considered.
+permissions:
+  - read_project_files
+  - write_project_files
+  - network_access
+  - live_api_access
+  - remote_read
+  - remote_write
+  - execute_code
+  - shell_access
+  - secrets_access
+  - artifact_export
+default_rules:
+  execute_code: denied
+  shell_access: denied
+  secrets_access: denied
+  remote_write: denied
+  network_access: explicit_only
+  write_project_files: explicit_only
+  read_project_files: scoped_only
+models:
+  - PluginSandboxPolicy
+  - SandboxPermissionDecision
+  - PluginSandboxRiskReport
+  - FutureSandboxRoadmap
+safety:
+  implements_os_sandbox: false
+  executes_plugin_code: false
+  loads_unknown_code: false
+  default_network: false
+  requires_human_review: true
+  release_blocker_supported: true
+  future_sandbox_requirement_supported: true
+non_goals:
+  - no OS-level sandbox
+  - no plugin execution
+  - no network access
+  - no unknown code loading
+required_tests:
+  - tests/unit/test_plugin_sandbox_policy.py
+  - tests/unit/test_plugin_permission_gate.py
+  - tests/unit/test_plugin_risk_report.py
+  - tests/workflow/test_plugin_sandbox_policy_fake.py

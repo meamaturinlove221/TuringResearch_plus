@@ -1,0 +1,82 @@
+name: research_project_template
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: research_project_template
+status: implemented_minimal
+release_target: v0.6 Sprint 1
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >
+  Generate typed reusable research project templates for VGGT-like experiment,
+  paper survey, experiment-heavy, software tooling, and mixed research projects
+  without producing observed evidence or real citations.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >
+  Generalize the VGGT-derived project template into safe reusable research
+  skeletons with placeholder sections, planned evidence status, and human
+  review requirements.
+
+template_types:
+  - vggt_like_experiment_project
+  - paper_survey_project
+  - experiment_heavy_project
+  - software_tooling_project
+  - mixed_research_project
+
+generated_files:
+  - README.md
+  - docs/north_star.md
+  - docs/research_questions.md
+  - docs/evidence_ledger.md
+  - docs/artifact_plan.md
+  - docs/experiment_routes.md
+  - docs/related_work.md
+  - docs/failure_taxonomy.md
+  - docs/advisor_pack.md
+  - lanes/00_master_ledger.md
+  - contracts/README.md
+  - examples/README.md
+  - race/feature_capsules/README.md
+
+models:
+  template: ResearchProjectTemplate
+  section: ResearchTemplateSection
+  request: ResearchProjectTemplateRequest
+  manifest: ResearchProjectTemplateManifest
+
+proposed_tools:
+  - name: project.research_template_generate
+    command: turing project new
+    status: local_helper_not_public_mcp
+    default_enabled: true
+
+safety_policy:
+  no_network: true
+  no_private_vggt_path_read: true
+  no_real_citations: true
+  no_false_research_conclusions: true
+  no_observed_evidence_generated: true
+  no_planned_as_observed: true
+  requires_human_review: true
+  human_review_required: true
+
+required_tests:
+  - tests/unit/test_research_project_template_schema.py
+  - tests/unit/test_template_registry.py
+  - tests/unit/test_research_type_templates.py
+  - tests/unit/test_project_template_renderers.py
+  - tests/workflow/test_generate_vggt_like_project_template.py
+  - tests/workflow/test_generate_generic_research_project_template.py

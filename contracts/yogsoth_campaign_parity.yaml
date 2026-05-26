@@ -1,0 +1,41 @@
+name: yogsoth_campaign_parity
+version: 1
+status: implemented
+description: Review-only campaign strategy book, preconditions, and execution plan parity layer.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release_header:
+  contract_id: yogsoth_campaign_parity
+  round: 243
+  status: implemented
+  owner: turingresearch-master-orchestrator
+
+scope:
+  parity_target: yogsoth-ai campaign routing and strategy book ideas
+  implementation_type: static review-only campaign catalog parity
+  complex_agent_runtime: false
+
+campaigns:
+  required:
+    - north_star
+    - knowledge_acquisition
+    - deep_insight
+    - hypothesis
+    - ideation
+    - convergence
+    - stress_test
+    - experiment_execution
+    - public_release
+  aliases:
+    hypothesis: hypothesis_formation
+    ideation: creative_ideation
+    experiment_execution: experiment_planning
+
+safety:
+  does_not_execute: true
+  does_not_call_llm: true
+  does_not_use_network: true
+  replaces_master_orchestrator: false
+  requires_human_review: true
+  fake_demo_not_observed: true

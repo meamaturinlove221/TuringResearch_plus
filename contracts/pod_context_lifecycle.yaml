@@ -1,0 +1,94 @@
+name: pod_context_lifecycle
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: pod_context_lifecycle
+status: implemented_minimal
+release_target: v1.0
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+requires_human_review: true
+description: >-
+  Review-only safety plan for durable pod context packages and structured pod
+  output returns. It validates preflight, transfer, return metadata, and memory
+  conflict policy without executing remote commands.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+models:
+  - PodContextLifecycle
+  - PodMemoryPolicy
+  - PodTransferPolicy
+  - PodReturnVerification
+  - PodConflictPolicy
+  - PodLifecycleSafetyReport
+required_lifecycle_fields:
+  - context_package_id
+  - source_machine_label
+  - target_environment_label
+  - route_id
+  - memory_policy
+  - transfer_policy
+  - preflight_checks
+  - forbidden_files
+  - structured_output_requirements
+  - return_verification
+  - conflict_policy
+  - requires_human_review
+durable_context_files:
+  - PROJECT_CONTEXT.md
+  - MEMORY.md
+  - ROUTE_SPEC.yaml
+structured_output_requirements:
+  - RETURN_MANIFEST.yaml
+  - RUN_STATUS.json
+  - FINAL_STATUS.json
+  - ARTIFACT_INDEX.md
+  - FAILURE_REPORT.md
+  - PROPOSED_EVIDENCE_UPDATES.json
+  - ADVISOR_SUMMARY_DRAFT.md
+  - SHA256SUMS.txt
+safety_checks:
+  forbidden_dotfiles: true
+  env_files_forbidden: true
+  api_keys_forbidden: true
+  local_project_links_forbidden: true
+  smplx_model_files_forbidden: true
+  raw_data_forbidden: true
+  huge_npz_forbidden: true
+  shell_metacharacter_risk: true
+  unsafe_archive_paths_forbidden: true
+  path_traversal_forbidden: true
+  missing_return_manifest_blocks: true
+policies:
+  git_based_context_transfer: true
+  durable_context_package: true
+  pod_output_structured_files: true
+  no_bidirectional_memory_sync: true
+  dotfile_handling_safety: true
+  shell_injection_awareness: true
+  windows_tar_linux_unpack_note: true
+  return_metadata_validation: true
+non_goals:
+  - no remote command execution
+  - no tmux launch
+  - no SSH provision
+  - no Modal execution
+  - no automatic git push
+  - no automatic Evidence Ledger write
+  - no bidirectional memory sync
+required_tests:
+  - tests/unit/test_pod_lifecycle_models.py
+  - tests/unit/test_pod_context_preflight.py
+  - tests/unit/test_pod_transfer_policy.py
+  - tests/unit/test_pod_return_verifier.py
+  - tests/workflow/test_pod_context_lifecycle_fake.py

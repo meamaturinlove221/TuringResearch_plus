@@ -1,0 +1,29 @@
+name: turingresearch.related_work_positioning
+version: 0.3.0
+status: implemented_minimal
+description: Contract for conservative related-work positioning from method cards, citation graph, and collision risk.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+api_status: local_python_adapter_not_public_mcp
+default_enabled: true
+network_behavior: offline_default
+tool_contract_fields:
+  - name
+  - purpose
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_model
+  - evidence_requirement
+  - required_tests
+proposed_tools:
+  - paper.related_work_position
+input_model: RelatedWorkPositioningInput
+output_model: RelatedWorkPositioningReport
+rules:
+  - Do not generate final paper paragraphs.
+  - Do not claim definitive novelty or no collision.
+  - Fake fixtures require human review.
+  - Every safe claim must remain conservative.
+implementation_status: implemented_minimal

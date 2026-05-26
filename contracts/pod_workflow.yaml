@@ -1,0 +1,65 @@
+name: turingresearch.pod_workflow
+version: 0.3.0-draft
+status: design_draft
+description: Draft contract for pod workflow context delivery and structured output return.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+api_status: design_only_not_public_mcp
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+models:
+  PodWorkflowSpec:
+    required:
+      - workflow_id
+      - context_package_ref
+      - route_spec_ref
+      - allowed_actions
+      - forbidden_actions
+      - expected_outputs
+      - hard_gates
+      - return_policy
+      - manual_review_required
+    forbidden_actions:
+      - remote code execution by TuringResearch
+      - default network execution
+      - direct VGGT project mutation
+      - secret exfiltration
+  StructuredOutputReturn:
+    required_files:
+      - RUN_STATUS.json
+      - FINAL_STATUS.json
+      - ARTIFACT_INDEX.md
+      - FAILURE_REPORT.md
+      - PROPOSED_EVIDENCE_UPDATES.json
+      - ADVISOR_SUMMARY_DRAFT.md
+      - SHA256SUMS.txt
+    import_policy:
+      - validate sha256
+      - run artifact audit
+      - run ingest report
+      - generate proposed evidence updates
+      - do not overwrite Evidence Ledger automatically
+  HandoffSafetyPolicy:
+    inherits: contracts/handoff_bundle.yaml
+    extra_rules:
+      - pod output must be auditable
+      - report-only output is not promotion-ready
+      - planned cannot be written as observed
+required_tests:
+  - tests/unit/test_pod_workflow_models.py
+  - tests/unit/test_structured_output_return_policy.py
+  - tests/workflow/test_pod_workflow_fixture.py
+implementation_status: design_only
+rules:
+  - TuringResearch does not control Modal or RunPod.
+  - Git handoff is transport, not an experiment executor.
+  - Pod outputs require human review before ledger promotion.

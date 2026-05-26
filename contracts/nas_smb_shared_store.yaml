@@ -1,0 +1,94 @@
+name: nas_smb_shared_store
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: nas_smb_shared_store
+status: implemented_minimal
+release_target: v0.4.0
+api_status: local_python_helper_not_public_mcp
+default_enabled: false
+network_behavior: local_mounted_path_only
+description: >
+  Index selected metadata and small review files from an already mounted NAS or
+  SMB path without mounting shares, handling credentials, deleting files, moving
+  files, or treating shared artifacts as verified evidence.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >
+  Support read-only local mount scanning for shared artifact stores used by
+  VGGT review workflows and remote artifact handoff.
+
+models:
+  input: SharedStoreScanRequest
+  output: SharedStoreReport
+  file_ref: SharedStoreFileRef
+
+proposed_tools:
+  - name: artifact.shared_store_index
+    command: turing artifact shared-store-index
+    status: local_helper_not_public_mcp
+    default_enabled: false
+
+shared_store_report_fields:
+  - mount_label
+  - root_path
+  - scan_status
+  - lock_status
+  - selected_files
+  - omitted_files
+  - large_files
+  - unsafe_files
+  - proposed_imports
+  - requires_human_review
+
+status_labels:
+  scan:
+    - indexed
+    - root-missing
+    - blocked
+    - error
+  lock:
+    - not-required
+    - lock-present
+    - lock-missing
+    - lock-unreadable
+  file:
+    - selected
+    - omitted
+    - large-metadata-only
+    - unsafe
+
+safety_policy:
+  read_only: true
+  no_delete: true
+  no_move: true
+  no_overwrite: true
+  no_credential_handling: true
+  no_auto_mount: true
+  large_file_metadata_only: true
+  raw_data_omitted_by_default: true
+  smplx_model_files_unsafe: true
+  manifest_sha256_relative_paths: true
+  proposed_imports_only: true
+  human_review_required: true
+
+integration:
+  can_feed:
+    - artifact_audit
+    - run_ingest
+    - handoff_bundle
+    - evidence_proposed_updates
+    - advisor_pack_inputs
+  must_not_feed_as:
+    - observed_without_review
+    - verified_evidence

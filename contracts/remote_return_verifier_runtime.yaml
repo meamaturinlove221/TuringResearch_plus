@@ -1,0 +1,51 @@
+name: remote_return_verifier_runtime
+version: 1
+status: implemented
+description: Structured return verifier for fake or remote session outputs.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release: v1.3.0-planning
+round: 267
+owner: turingresearch-master-orchestrator
+
+scope:
+  implementation_type: local return verifier
+  remote_execution: false
+  live_network: false
+  auto_write_evidence_ledger: false
+  proposed_updates_only: true
+  requires_human_review: true
+
+required_return_files:
+  - RUN_STATUS.json
+  - FINAL_STATUS.json
+  - ARTIFACT_INDEX.md
+  - FAILURE_REPORT.md
+  - PROPOSED_EVIDENCE_UPDATES.json
+  - SHA256SUMS.txt
+
+public_api:
+  package: turing_research_plus.session_runtime
+  modules:
+    - turing_research_plus.session_runtime.return_verifier
+    - turing_research_plus.session_runtime.return_manifest
+    - turing_research_plus.session_runtime.proposed_updates
+    - turing_research_plus.session_runtime.return_safety
+
+safety:
+  do_not_trust_remote_claims: true
+  no_auto_ledger_write: true
+  fake_result_observed_promotion: false
+  missing_artifact_reported: true
+  unsafe_file_blocked: true
+  checksum_mismatch_blocked: true
+  remote_command_execution: false
+  default_network: false
+
+tests:
+  - tests/unit/test_return_verifier_runtime.py
+  - tests/unit/test_return_manifest.py
+  - tests/unit/test_proposed_updates.py
+  - tests/unit/test_return_safety.py
+  - tests/workflow/test_remote_return_verifier_fake.py

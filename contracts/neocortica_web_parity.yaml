@@ -1,0 +1,38 @@
+name: neocortica_web_parity
+description: Fake/default Web parity layer for web fetching, web content, Apify guidance, and MCP boundaries.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+contract_id: neocortica_web_parity
+version: 1
+status: implemented
+release: v1.2.0
+round: 238
+owner: turingresearch-plus
+summary: >
+  Fake/default web parity layer for web_fetching, web_content, optional Apify
+  usage guidance, cache/source metadata, and MCP config boundaries.
+public_api:
+  package: turing_research_plus.web
+  modules:
+    - turing_research_plus.web.web_fetching_tool
+    - turing_research_plus.web.web_content_tool
+    - turing_research_plus.web.apify_usage_export
+capabilities:
+  - web_fetching
+  - web_content
+  - optional Apify live usage guide
+  - cache/source metadata reuse
+  - .mcp.example.json fake/live boundary
+safety:
+  default_network: false
+  paywall_bypass: false
+  private_content_fetch: false
+  cookie_storage: false
+  real_key_required: false
+  requires_human_review: true
+tests:
+  - tests/unit/test_web_content_tool.py
+  - tests/unit/test_web_fetching_tool.py
+  - tests/unit/test_apify_usage_export.py
+  - tests/workflow/test_neocortica_web_parity_fake.py

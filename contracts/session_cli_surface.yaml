@@ -1,0 +1,53 @@
+name: session_cli_surface
+version: 1
+status: implemented
+description: Fake/default Session runtime CLI surface for local production parity.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release: v1.4.0-planning
+round: 292
+owner: turingresearch-master-orchestrator
+
+scope:
+  implementation_type: local cli surface
+  fake_default: true
+  remote_execution: false
+  live_ssh_default: false
+  live_network_default: false
+  automatic_evidence_write: false
+  requires_human_review: true
+
+entrypoints:
+  module: turing_research_plus.session_runtime.cli
+  function: main
+  console_script: turingresearch-session
+
+commands:
+  - session preflight
+  - session pack
+  - session transfer --fake
+  - session verify-return
+  - session replay
+  - session report
+
+public_api:
+  package: turing_research_plus.session_runtime
+  modules:
+    - turing_research_plus.session_runtime.cli
+    - turing_research_plus.session_runtime.commands
+    - turing_research_plus.session_runtime.cli_report
+
+safety:
+  live_ssh_disabled_by_default: true
+  remote_command_execution: false
+  secrets_logging: false
+  automatic_evidence_ledger_write: false
+  proposed_updates_only: true
+  no_default_networking: true
+  dry_run_default: true
+
+tests:
+  - tests/unit/test_session_cli_commands.py
+  - tests/workflow/test_session_cli_surface_fake.py
+  - tests/contract/test_session_cli_entrypoints.py

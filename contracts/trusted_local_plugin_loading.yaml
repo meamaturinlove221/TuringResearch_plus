@@ -1,0 +1,62 @@
+name: trusted_local_plugin_loading
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: trusted_local_plugin_loading
+status: implemented_minimal
+release_target: v0.7
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+requires_human_review: true
+description: >-
+  Load trusted local plugin manifests as metadata only, validate the manifest,
+  apply trust policy, run extension safety checks, and expose capabilities as
+  disabled-by-default declarations.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >-
+  Provide a safe bridge from v0.6 manifest-only plugins to v0.7 trusted local
+  plugin metadata loading without executing arbitrary third-party code.
+models:
+  - PluginTrustDecision
+  - PluginLoadingReport
+  - LocalPlugin
+  - ExposedPluginCapability
+trust_policy:
+  built_in_demo_plugin: allowed
+  workspace_local_plugin: requires_explicit_trusted_flag
+  third_party_plugin: disabled_by_default
+  execute_code_permission: blocked
+  network_access: requires_explicit_live_flag
+  secrets_access: forbidden
+safety:
+  executes_plugin_code: false
+  loads_dynamic_entrypoint: false
+  writes_system_directories: false
+  overrides_core_tools: false
+  saves_secrets: false
+  exposes_capabilities_disabled_by_default: true
+  requires_human_review: true
+non_goals:
+  - no arbitrary third-party Python execution
+  - no dynamic entrypoint loading
+  - no default network access
+  - no system directory writes
+  - no core tool override
+required_tests:
+  - tests/unit/test_plugin_loader.py
+  - tests/unit/test_plugin_trust_policy.py
+  - tests/unit/test_local_plugin.py
+  - tests/unit/test_demo_plugins.py
+  - tests/workflow/test_trusted_local_plugin_loading_fake.py

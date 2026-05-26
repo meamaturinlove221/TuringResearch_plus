@@ -1,0 +1,87 @@
+name: turingresearch.semantic_scholar_live
+version: 0.2.0-alpha
+status: beta_adapter_minimal
+description: Optional Semantic Scholar live adapter contract for v0.2 beta.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+default_enabled: false
+network_behavior: live_optional_fake_default
+tool_contract_fields:
+  - name
+  - purpose
+  - input_model
+  - output_model
+  - timeout_policy
+  - retry_policy
+  - rate_limit_policy
+  - cache_behavior
+  - error_model
+  - fake_adapter_equivalent
+  - live_test_marker
+  - required_env_vars
+  - default_enabled
+adapter:
+  name: SemanticScholarLiveAdapter
+  module: turing_research_plus.adapters.semantic_scholar
+  protocol: turing_research_plus.adapters.protocols.SemanticScholarAdapter
+  fake_adapter_equivalent: FakeSemanticScholarAdapter
+  provider: semantic_scholar
+  required_env_vars:
+    - SEMANTIC_SCHOLAR_API_KEY
+  live_test_env:
+    - TURINGRESEARCH_ENABLE_LIVE_TESTS=1
+operations:
+  paper_lookup_by_title:
+    input_model: SemanticScholarPaperLookup
+    output_model: SemanticScholarPaperResult
+    endpoint: /paper/search
+    implementation_status: implemented_optional_live
+  paper_lookup_by_id:
+    input_model: SemanticScholarPaperIdLookup
+    output_model: SemanticScholarPaperResult
+    endpoint: /paper/{paper_id}
+    implementation_status: implemented_optional_live
+  paper_batch:
+    input_model: SemanticScholarPaperBatchLookup
+    output_model: SemanticScholarPaperResult
+    endpoint: /paper/batch
+    implementation_status: implemented_optional_live
+  references:
+    input_model: SemanticScholarPaperListLookup
+    output_model: SemanticScholarPaperResult
+    endpoint: /paper/{paper_id}/references
+    implementation_status: implemented_optional_live
+  citations:
+    input_model: SemanticScholarPaperListLookup
+    output_model: SemanticScholarPaperResult
+    endpoint: /paper/{paper_id}/citations
+    implementation_status: implemented_optional_live
+  recommendations:
+    input_model: SemanticScholarRecommendationLookup
+    output_model: SemanticScholarPaperResult
+    endpoint: /recommendations/v1/papers/forpapers
+    implementation_status: optional_minimal
+  author:
+    input_model: SemanticScholarAuthorLookup
+    output_model: SemanticScholarAuthorResult
+    endpoint: /author/{author_id}
+    implementation_status: optional_minimal
+policies:
+  timeout_policy: AdapterTimeoutPolicy
+  retry_policy: AdapterRetryPolicy
+  retry_status: policy_recorded_minimal_retry_not_looping
+  rate_limit_policy: RateLimitPolicy
+  rate_limit_status: placeholder_typed_error
+  cache_behavior: sha256 adapter cache keys with no raw query or URL filenames
+  error_model: AdapterError
+  live_test_marker: live
+  live_tests_default: skipped
+  no_key_behavior: typed missing_api_key error or pytest skip
+  result_verification: live result status is retrieved, never human_verified by default
+rules:
+  - Default tests must not call the network.
+  - Live calls require context.live_enabled true, context.dry_run false, and SEMANTIC_SCHOLAR_API_KEY.
+  - TURINGRESEARCH_ENABLE_LIVE_TESTS=1 is required for live tests.
+  - Live results must not be written as paper conclusions.
+  - The adapter does not download full text.
+  - The adapter does not copy long paper text into repository artifacts.

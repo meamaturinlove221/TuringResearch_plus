@@ -1,0 +1,47 @@
+name: optional_sftp_transfer_runner
+version: 1
+status: implemented
+description: Fake-first optional SSH/SFTP context pack transfer runner.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release: v1.3.0-planning
+round: 266
+owner: turingresearch-master-orchestrator
+
+scope:
+  implementation_type: fake-first transfer runner
+  default_mode: fake
+  live_sftp_opt_in_env: TURINGRESEARCH_ENABLE_LIVE_TESTS
+  credential_env: TURINGRESEARCH_SFTP_CREDENTIAL
+  remote_execution: false
+  remote_delete: false
+  secrets_logging: false
+  requires_human_review: true
+
+public_api:
+  package: turing_research_plus.session_runtime
+  modules:
+    - turing_research_plus.session_runtime.transfer_runner
+    - turing_research_plus.session_runtime.fake_transfer
+    - turing_research_plus.session_runtime.sftp_transfer_optional
+    - turing_research_plus.session_runtime.transfer_report
+
+safety:
+  fake_mode_default: true
+  live_mode_requires_env: true
+  no_password_in_repo: true
+  no_secrets_logging: true
+  no_remote_command_execution: true
+  no_remote_delete: true
+  remote_write_scope: explicit_transfer_target_only
+  path_traversal_blocked: true
+  automatic_evidence_write: false
+  proposed_updates_only: true
+
+tests:
+  - tests/unit/test_transfer_runner.py
+  - tests/unit/test_fake_transfer.py
+  - tests/unit/test_transfer_report.py
+  - tests/workflow/test_optional_sftp_transfer_fake.py
+  - tests/live/test_optional_sftp_transfer_live_skipped_by_default.py

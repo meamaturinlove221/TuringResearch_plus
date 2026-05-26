@@ -1,0 +1,27 @@
+name: turingresearch.skill_routing
+version: 0.3.0
+status: implemented_minimal
+description: Contract for local skill entry and routing recommendations.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: offline_only
+tool_contract_fields:
+  - name
+  - purpose
+  - input_model
+  - output_model
+  - network_behavior
+  - evidence_requirement
+  - required_tests
+proposed_tools:
+  - skills.route_query
+input_model: SkillRoutingQuery
+output_model: SkillRoutingDecision
+rules:
+  - Routing recommendations must not execute skills.
+  - Unknown routes fall back to turingresearch-master-orchestrator.
+  - Skill names must use the turingresearch prefix.
+  - Old project naming is forbidden.
+implementation_status: implemented_minimal

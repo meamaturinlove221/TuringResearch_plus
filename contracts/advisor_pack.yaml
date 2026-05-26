@@ -1,0 +1,71 @@
+name: turingresearch.advisor_pack
+version: 0.2.0
+status: draft
+description: Capsule-local advisor pack builder contract for TuringResearch Plus.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+api_status: capsule_local_not_public_mcp
+proposed_tools:
+  advisor.pack_build:
+    command: tuling advisor pack
+    input_model: AdvisorPackBuildInput
+    output_model: AdvisorPack
+    implementation_status: implemented_minimal
+    public_api_status: proposed_not_frozen
+    cache_behavior: read committed local scan and report files only
+    network_behavior: none
+    error_behavior: missing inputs are recorded in AdvisorPack.missing_inputs
+    evidence_requirement: observed claims must come from evidence ledger or local scan files
+    required_tests:
+      - tests/unit/test_advisor_pack_models.py
+      - tests/unit/test_advisor_pack_builder.py
+      - tests/unit/test_advisor_pack_sections.py
+      - tests/workflow/test_vggt_advisor_pack_from_sprint1_artifacts.py
+models:
+  AdvisorPack:
+    required:
+      - advisor_goal
+      - current_route_summary
+      - what_changed_since_last_update
+      - observed_evidence
+      - limitations
+      - blockers
+      - visual_readiness
+      - not_ready_claims
+      - next_actions
+      - suggested_advisor_message
+      - required_human_review
+  AdvisorPackSection:
+    required:
+      - section_id
+      - title
+      - status
+      - body
+  AdvisorMissingEvidenceItem:
+    required:
+      - item
+      - status
+      - reason
+      - next_action
+rules:
+  - This contract does not add a public MCP namespace in Round 40.
+  - Advisor Pack Builder writes Markdown only.
+  - Do not generate PPTX or PDF.
+  - Do not read private VGGT paths.
+  - Do not run VGGT code.
+  - Do not fabricate experiment or visual results.
+  - Do not describe V260 as a successful route.
+  - Do not describe V999 long-run route status as final target achievement.
+  - Do not claim SparseConv3D success without evidence ledger proof.
+  - Keep Modal Real SparseConv3D as planned or next action unless evidence exists.

@@ -1,82 +1,137 @@
-name: tulingresearch.live_adapters
-version: 0.1.0
-status: draft
-description: Live adapter protocol contracts for TulingResearch Plus v0.2.0 planning.
-mcp_server: tulingresearch-plus
-project: TulingResearch Plus
+name: turingresearch.live_adapters
+version: 0.2.0-alpha
+status: beta_contract_draft
+description: Live adapter protocol contracts for TuringResearch Plus v0.2 beta.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+default_enabled: false
+network_behavior: fake_mode_default
 tool_contract_fields:
-  - protocol
+  - name
+  - purpose
   - input_model
   - output_model
   - timeout_policy
   - retry_policy
   - rate_limit_policy
+  - cache_behavior
   - error_model
-  - cache_integration
-  - live_test_marker
   - fake_adapter_equivalent
+  - live_test_marker
+  - required_env_vars
+  - default_enabled
 adapters:
   SemanticScholarAdapter:
-    protocol: tuling_research_plus.adapters.protocols.SemanticScholarAdapter
+    name: SemanticScholarAdapter
+    purpose: Optional live paper lookup and citation metadata retrieval.
+    protocol: turing_research_plus.adapters.protocols.SemanticScholarAdapter
     input_model: SemanticScholarPaperLookup
     output_model: SemanticScholarPaperResult
     timeout_policy: AdapterTimeoutPolicy
     retry_policy: AdapterRetryPolicy
     rate_limit_policy: RateLimitPolicy
+    cache_behavior: semantic_scholar/paper_lookup with hashed cache keys
     error_model: AdapterError
-    cache_integration: AdapterCachePolicy namespace semantic_scholar/paper_lookup
-    live_test_marker: live
     fake_adapter_equivalent: FakeSemanticScholarAdapter
-    implementation_status: protocol_only
+    live_test_marker: live
+    required_env_vars:
+      - SEMANTIC_SCHOLAR_API_KEY
+    default_enabled: false
+    implementation_status: optional_live_adapter_minimal
+    live_contract: contracts/semantic_scholar_live.yaml
   ArxivAdapter:
-    protocol: tuling_research_plus.adapters.protocols.ArxivAdapter
+    name: ArxivAdapter
+    purpose: Optional arXiv search and metadata retrieval.
+    protocol: turing_research_plus.adapters.protocols.ArxivAdapter
     input_model: ArxivQuery
     output_model: ArxivSearchResult
     timeout_policy: AdapterTimeoutPolicy
     retry_policy: AdapterRetryPolicy
     rate_limit_policy: RateLimitPolicy
+    cache_behavior: arxiv/search with hashed cache keys
     error_model: AdapterError
-    cache_integration: AdapterCachePolicy namespace arxiv/search
-    live_test_marker: live
     fake_adapter_equivalent: FakeArxivAdapter
-    implementation_status: protocol_only
-  ApifyWebAdapter:
-    protocol: tuling_research_plus.adapters.protocols.ApifyWebAdapter
+    live_test_marker: live
+    required_env_vars: []
+    default_enabled: false
+    implementation_status: fake_adapter_ready_live_not_implemented
+  WebSearchAdapter:
+    name: WebSearchAdapter
+    purpose: Optional public web search for source discovery.
+    protocol: turing_research_plus.adapters.protocols.WebSearchAdapter
+    input_model: WebSearchRequest
+    output_model: WebSearchResult
+    timeout_policy: AdapterTimeoutPolicy
+    retry_policy: AdapterRetryPolicy
+    rate_limit_policy: RateLimitPolicy
+    cache_behavior: web/search with hashed cache keys
+    error_model: AdapterError
+    fake_adapter_equivalent: FakeWebSearchAdapter
+    live_test_marker: live
+    required_env_vars:
+      - APIFY_TOKEN
+    default_enabled: false
+    implementation_status: fake_adapter_ready_live_not_implemented
+  WebFetchAdapter:
+    name: WebFetchAdapter
+    purpose: Optional public web page fetch with source hygiene metadata.
+    protocol: turing_research_plus.adapters.protocols.WebFetchAdapter
     input_model: WebFetchRequest
     output_model: WebFetchResult
     timeout_policy: AdapterTimeoutPolicy
     retry_policy: AdapterRetryPolicy
     rate_limit_policy: RateLimitPolicy
+    cache_behavior: web/fetch with hashed cache keys
     error_model: AdapterError
-    cache_integration: AdapterCachePolicy namespace apify/web_fetch
+    fake_adapter_equivalent: FakeWebFetchAdapter
     live_test_marker: live
-    fake_adapter_equivalent: FakeApifyWebAdapter
-    implementation_status: protocol_only
+    required_env_vars:
+      - APIFY_TOKEN
+    default_enabled: false
+    implementation_status: fake_adapter_ready_live_not_implemented
   OpenAICompatibleLLMAdapter:
-    protocol: tuling_research_plus.adapters.protocols.OpenAICompatibleLLMAdapter
+    name: OpenAICompatibleLLMAdapter
+    purpose: Optional OpenAI-compatible LLM completion adapter for future assisted workflows.
+    protocol: turing_research_plus.adapters.protocols.OpenAICompatibleLLMAdapter
     input_model: LLMCompletionRequest
     output_model: LLMCompletionResult
     timeout_policy: AdapterTimeoutPolicy
     retry_policy: AdapterRetryPolicy
     rate_limit_policy: RateLimitPolicy
+    cache_behavior: openai_compatible/completion, write-through disabled by default
     error_model: AdapterError
-    cache_integration: AdapterCachePolicy namespace openai_compatible/completion write_through false
-    live_test_marker: live
     fake_adapter_equivalent: FakeOpenAICompatibleLLMAdapter
-    implementation_status: protocol_only
+    live_test_marker: live
+    required_env_vars:
+      - OPENAI_API_KEY
+    default_enabled: false
+    implementation_status: fake_adapter_ready_live_not_implemented
   PDFConverterAdapter:
-    protocol: tuling_research_plus.adapters.protocols.PDFConverterAdapter
+    name: PDFConverterAdapter
+    purpose: Replaceable local PDF converter adapter for optional converter backends.
+    protocol: turing_research_plus.adapters.protocols.PDFConverterAdapter
     input_model: PDFConversionRequest
     output_model: PDFConversionResult
     timeout_policy: AdapterTimeoutPolicy
     retry_policy: AdapterRetryPolicy
     rate_limit_policy: RateLimitPolicy
+    cache_behavior: pdf/converter with hashed cache keys
     error_model: AdapterError
-    cache_integration: AdapterCachePolicy namespace pdf/converter
-    live_test_marker: manual
     fake_adapter_equivalent: FakePDFConverterAdapter
-    implementation_status: protocol_only
+    live_test_marker: manual
+    required_env_vars: []
+    default_enabled: false
+    implementation_status: fake_adapter_ready_live_not_implemented
 types:
+  SourceMetadata:
+    required: [provider, retrieval_time, human_verified]
+    fields:
+      provider: string
+      source_id: string?
+      url: string?
+      retrieval_time: datetime
+      human_verified: false
+      license: string?
   AdapterTimeoutPolicy:
     required: [connect_seconds, read_seconds, total_seconds]
     fields:
@@ -98,7 +153,7 @@ types:
   AdapterError:
     required: [code, message, retryable]
     fields:
-      code: enum[missing_api_key,timeout,rate_limited,retry_exhausted,provider_error,invalid_response,unsupported,source_hygiene_blocked]
+      code: enum[missing_api_key,timeout,rate_limited,retry_exhausted,provider_error,invalid_response,unsupported,source_hygiene_blocked,live_disabled]
       message: string
       retryable: boolean
       provider: string?
@@ -112,9 +167,12 @@ types:
       cache_key_fields: list[string]
       write_through: boolean
 rules:
-  - This contract defines protocols only and does not mark live adapters done.
-  - No live adapter may run in default tests.
-  - Live tests must use the live or manual pytest marker and require explicit environment opt-in.
-  - Missing API keys must produce typed AdapterError data, not default test failures.
-  - Fake adapter equivalents must exist before live adapter behavior is wired into workflows.
-  - Adapter outputs that feed research conclusions must preserve EvidenceRef-compatible metadata.
+  - Default enabled must be false for every live adapter.
+  - Default tests must use fake adapters only.
+  - Live tests must be marked live or manual and require explicit environment opt-in.
+  - Missing API keys must return typed AdapterError data or skip live tests, not fail default tests.
+  - Every live adapter must have a fake adapter equivalent.
+  - Live results must not be automatically human-verified.
+  - Live results must include source metadata and retrieval time.
+  - Outputs feeding research conclusions must preserve EvidenceRef-compatible metadata.
+  - Adapter cache implementations must hash cache keys and must not use raw URLs or prompts as filenames.

@@ -1,9 +1,9 @@
-name: tulingresearch.race_features
+name: turingresearch.race_features
 version: 0.2.0
 status: draft
-description: Race Mode MCP namespace contracts for TulingResearch Plus.
-mcp_server: tulingresearch-plus
-project: TulingResearch Plus
+description: Race Mode MCP namespace contracts for TuringResearch Plus.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
 tool_contract_fields:
   - tool_name
   - namespace

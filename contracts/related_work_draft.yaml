@@ -1,0 +1,53 @@
+name: related_work_draft
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: related_work_draft
+status: implemented_minimal
+release_target: v0.6 Sprint 3
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >-
+  Build review-only related-work draft skeletons from related-work positioning,
+  collision-risk reports, and paper digest fixtures without generating final
+  paper paragraphs or fabricated citations.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+required_fields:
+  - feed_forward_geometry
+  - human_prior_smplx
+  - neural_body_sparse_voxel
+  - triplane_rasterized_pose_feature
+  - vggt_human_extensions
+  - difference_from_our_route
+  - requires_review_list
+  - unsafe_claims_list
+  - citations
+  - citation_safety
+safety:
+  generated_camera_ready_text: false
+  fabricated_citations: false
+  fixture_citations_are_final: false
+  every_citation_has_source_status: true
+  requires_human_review: true
+non_goals:
+  - no final related-work paragraphs
+  - no citation fabrication
+  - no claim of completed human review
+  - no paper download
+  - no network access
+required_tests:
+  - tests/unit/test_related_work_builder.py
+  - tests/unit/test_citation_safety.py
+  - tests/workflow/test_vggt_related_work_draft_skeleton.py

@@ -1,0 +1,42 @@
+name: campaign_execution_trace
+version: 1
+status: implemented
+description: Fake campaign execution trace generator for review-only campaign catalog parity.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release_header:
+  contract_id: campaign_execution_trace
+  round: 277
+  status: implemented
+  owner: turingresearch-master-orchestrator
+
+scope:
+  implementation_type: fake execution trace
+  complex_agent_runtime: false
+  automatic_tool_execution: false
+  network_required: false
+
+trace:
+  required_steps:
+    - route_campaign
+    - check_preconditions
+    - prepare_handoff
+    - record_proposed_outputs
+    - human_review_gate
+  required_flags:
+    fake_trace: true
+    does_not_execute: true
+    does_not_call_llm: true
+    does_not_use_network: true
+    does_not_mutate_evidence_ledger: true
+    replaces_master_orchestrator: false
+    requires_human_review: true
+
+safety:
+  no_agent_runtime: true
+  no_tool_execution: true
+  no_llm_call: true
+  no_network: true
+  no_evidence_ledger_mutation: true
+  fake_demo_not_observed: true

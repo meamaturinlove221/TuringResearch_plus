@@ -1,0 +1,57 @@
+name: session_preflight_runner
+version: 1
+status: implemented
+description: Local-only session preflight runner for v1.3 Session runtime parity.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release: v1.3.0-planning
+round: 264
+owner: turingresearch-master-orchestrator
+
+scope:
+  implementation_type: local preflight runner
+  remote_execution: false
+  live_network: false
+  creates_files: false
+  deletes_files: false
+  requires_human_review: true
+
+public_api:
+  package: turing_research_plus.session_runtime
+  modules:
+    - turing_research_plus.session_runtime.models
+    - turing_research_plus.session_runtime.preflight_runner
+    - turing_research_plus.session_runtime.environment_check
+    - turing_research_plus.session_runtime.session_lookup
+    - turing_research_plus.session_runtime.report
+
+preflight_checks:
+  - project root exists
+  - context source exists
+  - output directory safe
+  - forbidden files absent
+  - memory policy valid
+  - platform compatibility
+  - no shell metacharacter risk
+  - no secrets
+  - no raw data unless explicitly allowed
+  - remote execution disabled by default
+
+safety:
+  default_network: false
+  remote_command_execution: false
+  ssh_provision: false
+  tmux_attach: false
+  modal_execution: false
+  automatic_git_push: false
+  automatic_evidence_write: false
+  no_bidirectional_memory_sync: true
+  proposed_updates_only: true
+
+tests:
+  - tests/unit/test_session_runtime_models.py
+  - tests/unit/test_session_preflight_runner.py
+  - tests/unit/test_session_environment_check.py
+  - tests/unit/test_session_lookup.py
+  - tests/workflow/test_session_preflight_fake.py

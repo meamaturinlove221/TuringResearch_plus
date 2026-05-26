@@ -1,0 +1,39 @@
+name: convergence_decision_report
+version: 1
+status: implemented
+description: Deterministic convergence decision report for comparing routes and explaining route selection.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release_header:
+  contract_id: convergence_decision_report
+  round: 282
+  status: implemented
+  owner: turingresearch-master-orchestrator
+
+scope:
+  implementation_type: local deterministic report builder
+  compares_routes: true
+  scores_candidates: true
+  explains_selection: true
+  executes_route: false
+  agent_runtime: false
+
+report:
+  required_sections:
+    - ranked_candidates
+    - scoring_matrix
+    - pairwise_comparison
+    - feasibility_notes
+    - rejected_candidates
+    - steelman_for_rejected
+    - final_recommendation
+    - confidence
+    - next_actions
+
+safety:
+  requires_human_review: true
+  no_route_execution: true
+  no_network: true
+  no_evidence_ledger_mutation: true
+  no_fake_result_promotion: true

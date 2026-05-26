@@ -1,0 +1,63 @@
+name: lightweight_dashboard
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: lightweight_dashboard
+status: implemented_minimal
+release_target: v0.5.0
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >
+  Build a static HTML and Markdown dashboard from existing local review
+  artifacts without requiring a server, login, cloud deployment, or JavaScript.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >
+  Make v0.4 review artifacts easier to inspect while preserving evidence
+  boundaries and human-review markers.
+
+models:
+  request: StaticDashboardRequest
+  output: StaticDashboardSpec
+
+sections:
+  - project overview
+  - evidence status
+  - artifact completeness
+  - visual readiness
+  - run dashboard
+  - related work
+  - failure taxonomy
+  - advisor next actions
+
+proposed_tools:
+  - name: ui.dashboard_local
+    command: turing ui dashboard
+    status: local_helper_not_public_mcp
+    default_enabled: true
+
+safety_policy:
+  no_login: true
+  no_server: true
+  no_complex_js: true
+  no_network: true
+  no_private_vggt_path_read: true
+  ui_not_experiment_result: true
+  human_review_required: true
+
+required_tests:
+  - tests/unit/test_ui_models.py
+  - tests/unit/test_static_dashboard.py
+  - tests/unit/test_html_render.py
+  - tests/workflow/test_vggt_dashboard_html_fixture.py

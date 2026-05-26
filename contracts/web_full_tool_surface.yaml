@@ -1,0 +1,53 @@
+name: web_full_tool_surface
+version: 1
+status: implemented
+description: Fake/default Web tool surface for v1.3 Neocortica-Web parity.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release: v1.3.0-planning
+round: 273
+owner: turingresearch-master-orchestrator
+
+scope:
+  implementation_type: operator-facing Web tool surface
+  default_mode: fake
+  default_network: false
+  optional_apify: true
+  stores_cookies: false
+  paywall_bypass: false
+  private_content_fetching: false
+  automatic_evidence_promotion: false
+  requires_human_review: true
+
+public_api:
+  package: turing_research_plus.web_tools
+  modules:
+    - turing_research_plus.web_tools.web_fetching
+    - turing_research_plus.web_tools.web_content
+    - turing_research_plus.web_tools.web_cache
+    - turing_research_plus.web_tools.source_metadata
+    - turing_research_plus.web_tools.tool_surface
+
+tool_surface:
+  - web.web_fetching
+  - web.web_content
+  - web.cache
+  - web.source_metadata
+  - web.apify_optional
+
+safety:
+  fake_mode_default: true
+  live_tests_skipped_by_default: true
+  no_real_api_key_required_for_fake: true
+  no_cookie_storage: true
+  no_private_content_fetching: true
+  no_paywall_bypass: true
+  retrieved_content_not_verified_evidence: true
+  requires_human_review: true
+
+tests:
+  - tests/unit/test_web_tool_surface.py
+  - tests/unit/test_web_fetching_tool_surface.py
+  - tests/unit/test_web_content_tool_surface.py
+  - tests/workflow/test_web_full_tool_surface_fake.py

@@ -1,0 +1,66 @@
+name: project_template
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: project_template
+status: implemented_minimal
+release_target: v0.5.0
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >
+  Generate a local research project skeleton with standard docs, contracts,
+  lanes, examples, and feature capsule folders without reading private data or
+  claiming experiment results.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >
+  Provide a repeatable starting structure for new research directions while
+  preserving evidence boundaries and human-review requirements.
+
+models:
+  request: ProjectTemplateRequest
+  file: ProjectTemplateFile
+  result: ProjectTemplateResult
+
+generated_files:
+  - README.md
+  - docs/north_star.md
+  - docs/evidence_ledger.md
+  - docs/artifact_plan.md
+  - docs/experiment_routes.md
+  - docs/related_work.md
+  - docs/advisor_pack.md
+  - lanes/00_master_ledger.md
+  - examples/README.md
+  - contracts/README.md
+  - race/feature_capsules/README.md
+
+proposed_tools:
+  - name: research.project_template_generate
+    command: turing project template-generate
+    status: local_helper_not_public_mcp
+    default_enabled: true
+
+safety_policy:
+  no_network: true
+  no_private_vggt_path_read: true
+  no_experiment_results_generated: true
+  no_planned_as_observed: true
+  no_secrets_or_raw_data: true
+  human_review_required: true
+
+required_tests:
+  - tests/unit/test_project_template_models.py
+  - tests/unit/test_project_template_generator.py
+  - tests/workflow/test_new_research_project_template.py

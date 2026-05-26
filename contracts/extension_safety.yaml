@@ -1,0 +1,68 @@
+name: extension_safety
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: extension_safety
+status: implemented_minimal
+release_target: v0.6 Sprint 2
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >-
+  Validate extension manifests and requested permissions for plugins, MCP
+  plugins, skills, and adapters without executing third-party code.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >-
+  Provide a unified extension safety gate before enabling, exposing, exporting,
+  or packaging extension surfaces.
+extension_kinds:
+  - plugin
+  - mcp_plugin
+  - skill
+  - adapter
+permissions:
+  - read_local_files
+  - write_local_files
+  - network_access
+  - live_api
+  - remote_read
+  - remote_write
+  - execute_code
+  - export_artifacts
+  - package_release
+default_rules:
+  third_party_default_disabled: true
+  execute_code_default: forbidden
+  network_access_explicit: true
+  remote_write_default: forbidden
+  secrets_access: forbidden
+  raw_data_access: restricted
+  manifest_required: true
+  safety_report_required: true
+safety:
+  executes_extension_code: false
+  loads_third_party_code: false
+  grants_runtime_permissions: false
+  requires_human_review: true
+non_goals:
+  - no encryption system
+  - no permission system
+  - no sandbox runtime
+  - no third-party code execution
+required_tests:
+  - tests/unit/test_extension_safety_models.py
+  - tests/unit/test_permission_policy.py
+  - tests/unit/test_extension_validator.py
+  - tests/unit/test_extension_safety_report.py
+  - tests/workflow/test_extension_safety_fake_plugins.py

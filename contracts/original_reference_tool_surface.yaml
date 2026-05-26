@@ -1,0 +1,106 @@
+name: original_reference_tool_surface
+version: 1
+status: audit
+description: Tool surface audit contract for original reference parity coverage.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release: v1.3.0-planning
+round: 261
+owner: turingresearch-master-orchestrator
+
+scope:
+  purpose: >
+    Record which original reference tool surfaces are covered by local Python,
+    MCP stdio, config/docs, policy-only, missing, deferred, or rejected
+    surfaces.
+  adds_runtime_behavior: false
+  starts_mcp_server: false
+  default_network: false
+  default_remote_execution: false
+
+surface_types:
+  - mcp-stdio
+  - local-python
+  - config-docs
+  - policy-only
+  - missing
+  - deferred
+  - rejected
+
+neocortica_session:
+  required_surfaces:
+    - preflight
+    - context_pack
+    - transfer
+    - launch
+    - return_manifest
+    - memory_policy
+  covered_local_python:
+    - preflight
+    - context_pack
+    - return_manifest
+    - memory_policy
+  policy_only:
+    - transfer
+    - launch
+
+neocortica_scholar:
+  required_surfaces:
+    - paper_search
+    - paper_content
+    - paper_reference
+    - paper_reading
+    - cached_markdown
+    - fallback_policy
+  covered_local_python:
+    - paper_search
+    - paper_content
+    - paper_reference
+    - paper_reading
+    - cached_markdown
+    - fallback_policy
+  deferred:
+    - heavy_pdf_fallback
+
+neocortica_web:
+  required_surfaces:
+    - web_fetching
+    - web_content
+    - apify_optional
+    - cache
+    - source_metadata
+  covered_local_python:
+    - web_fetching
+    - web_content
+    - apify_optional
+    - cache
+    - source_metadata
+
+yogsoth:
+  required_surfaces:
+    - campaign_routing
+    - research_catalog
+    - vault
+    - ontology
+    - convergence
+    - stress_test
+    - experiment_execution
+  covered_local_python:
+    - campaign_routing
+    - vault
+    - ontology
+    - convergence
+    - stress_test
+    - experiment_execution
+  config_docs:
+    - research_catalog
+
+safety:
+  no_real_key: true
+  live_mode_opt_in: true
+  no_default_network: true
+  no_remote_command_execution: true
+  no_automatic_experiment_execution: true
+  no_fake_result_as_observed: true
+  no_aris_runtime: true

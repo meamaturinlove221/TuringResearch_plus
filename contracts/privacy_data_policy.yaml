@@ -1,0 +1,79 @@
+name: privacy_data_policy
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: privacy_data_policy
+status: implemented_minimal
+release_target: v0.6 Sprint 1
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >-
+  Provide a read-only privacy and data safety gate for workspaces, handoff
+  bundles, remote artifacts, public demos, and advisor exports.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >-
+  Detect likely secrets, private data paths, raw data, private model files,
+  huge payloads, personal paths, and private advisor feedback before release or
+  handoff.
+safety_levels:
+  - public-demo
+  - internal-research
+  - private-research
+  - restricted-data
+  - secret-forbidden
+models:
+  privacy_scan_report:
+    required:
+      - scanned_paths
+      - findings
+      - severity
+      - recommended_action
+      - redaction_possible
+      - release_blocker
+      - requires_human_review
+  privacy_finding:
+    detects:
+      - .env
+      - API key pattern
+      - tokens
+      - private_data
+      - local_project_links.yaml
+      - raw data
+      - SMPL-X model files
+      - huge npz
+      - personal path
+      - private advisor feedback
+      - licensed model files
+safety:
+  default_network: false
+  reads_private_vggt: false
+  deletes_files: false
+  overwrites_files: false
+  redaction_is_proposed_only: true
+  requires_human_review: true
+  release_blocker_for_secret_or_restricted_data: true
+non_goals:
+  - no encryption system
+  - no permission system
+  - no automatic deletion
+  - no automatic redaction overwrite
+  - no upload of scan results
+required_tests:
+  - tests/unit/test_privacy_models.py
+  - tests/unit/test_privacy_policy.py
+  - tests/unit/test_privacy_scanner.py
+  - tests/unit/test_redaction_rules.py
+  - tests/unit/test_privacy_report.py
+  - tests/workflow/test_public_demo_privacy_gate.py

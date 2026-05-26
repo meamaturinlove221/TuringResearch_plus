@@ -1,0 +1,54 @@
+name: turingresearch.visual_evidence
+version: 0.2.0
+status: draft
+description: Capsule-local visual evidence dry-run contract for TuringResearch Plus.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+api_status: capsule_local_not_public_mcp
+proposed_tools:
+  visual.audit_evidence:
+    command: tuling audit visual
+    input_model: VisualEvidenceAuditInput
+    output_model: VisualEvidenceAuditReport
+    implementation_status: dry_run_artifact
+    public_api_status: proposed_not_frozen
+    cache_behavior: read committed visual dry-run artifacts only
+    network_behavior: none
+    error_behavior: missing visual inventory is recorded as missing / requires-human-review
+    evidence_requirement: visual readiness requires source artifact provenance
+    required_tests:
+      - tests/workflow/test_vggt_visual_evidence_dry_run.py
+models:
+  VisualEvidenceAuditReport:
+    required:
+      - report_id
+      - read_only
+      - visual_readiness
+      - missing_visual_evidence
+      - not_ready_claims
+      - warnings
+  VisualEvidenceScorecard:
+    required:
+      - report_id
+      - read_only
+      - network_used
+      - vggt_code_run
+      - advisor_ready_visual_proof
+      - overall_status
+rules:
+  - Round 42 treats the Visual Evidence Auditor as a dry-run artifact surface.
+  - Missing `local_scan_visual_inventory.md` blocks visual readiness.
+  - Mask, delta, heatmap, or proxy boards are not advisor-ready proof.
+  - Full body, hairline, and hand close-up evidence are required before promotion.
+  - Do not run VGGT code and do not read private VGGT paths.

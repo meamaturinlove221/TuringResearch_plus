@@ -1,9 +1,9 @@
 ---
-name: tulingresearch-core-reproduction
-description: Use when maintaining the minimal TulingResearch Core MCP tool loop.
+name: turingresearch-core-reproduction
+description: Use when maintaining the minimal TuringResearch Core MCP tool loop.
 ---
 
-# TulingResearch Plus Skill: tulingresearch-core-reproduction
+# TuringResearch Plus Skill: turingresearch-core-reproduction
 
 ## Role
 
@@ -15,22 +15,22 @@ Use this skill when work touches the owner lane, related contracts, modules, tes
 
 ## Inputs
 
-- User request naming `tulingresearch-core-reproduction` or the matching TulingResearch Plus lane.
+- User request naming `turingresearch-core-reproduction` or the matching TuringResearch Plus lane.
 - Existing contracts, Pydantic models, tests, docs, and ledger entries.
 - Fake-service or dry-run fixtures when workflow behavior is involved.
 
 ## Outputs
 
-- Updated TulingResearch Plus files in the listed required paths.
+- Updated TuringResearch Plus files in the listed required paths.
 - Passing focused tests and release-safe documentation updates.
 - Ledger updates in `lanes/00_master_ledger.md` and the owner lane.
 
 ## Required files
 
-- `src/tuling_research/mcp_server.py`
-- `src/tuling_research/scholar/`
-- `src/tuling_research/web/`
-- `src/tuling_research/session/`
+- `src/turing_research/mcp_server.py`
+- `src/turing_research/scholar/`
+- `src/turing_research/web/`
+- `src/turing_research/session/`
 
 ## Related contracts
 
@@ -50,11 +50,11 @@ Use this skill when work touches the owner lane, related contracts, modules, tes
 
 ## Rules / constraints
 
-- Project display name is TulingResearch Plus.
-- Core package is `tuling_research` and Plus package is `tuling_research_plus`.
-- MCP server name is `tulingresearch-plus`.
-- Skill names must use the `tulingresearch-` prefix.
-- Keep work inside `TulingResearch/TulingResearch_plus`.
+- Project display name is TuringResearch Plus.
+- Core package is `turing_research` and Plus package is `turing_research_plus`.
+- MCP server name is `turingresearch-plus`.
+- Skill names must use the `turingresearch-` prefix.
+- Keep work inside `TuringResearch/TuringResearch_plus`.
 - Do not require real network access, external API keys, or live service calls in tests.
 - Preserve EvidenceRef, ResearchArtifact, BudgetGate, and StateLedger boundaries when relevant.
 - Use service protocols or adapters for external APIs.
@@ -65,4 +65,24 @@ Use this skill when work touches the owner lane, related contracts, modules, tes
 - Implementation status: `locked`.
 - Release requirement: `release-critical`.
 - Related tests pass or a release blocker is explicitly recorded.
-- Documentation and contracts remain aligned with current TulingResearch Plus naming.
+- Documentation and contracts remain aligned with current TuringResearch Plus naming.
+
+## Round 240 SOP Parity
+
+- `workflow`: web fetch
+- `when_to_use`: maintain local/fake web fetch, web content, Apify usage, MCP
+  manifest checks, or source metadata surfaces.
+- `inputs`: public URL or local fixture, source hygiene status, fake/live flags,
+  cache policy, and provider-specific config.
+- `outputs`: typed fetch/content result, source metadata, limitations, cache
+  key/hash, and human-review boundary.
+- `safety`: default mode must not network, bypass paywalls, fetch private
+  content, store cookies, or require real keys.
+- `non-goals`: no default live web access, no private scraping, no verified
+  evidence claim from fetched content.
+- `handoff`: record retrieval status, graceful skip behavior, source hygiene,
+  and whether live mode was explicitly disabled.
+- `tests`: web fetch, web content, Apify usage, MCP config, and name integrity
+  tests.
+- `related_docs`: `docs/web-fetching-usage-guide.md`,
+  `docs/web-content-usage-guide.md`, `docs/apify-usage-guide.md`.

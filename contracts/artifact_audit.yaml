@@ -1,9 +1,9 @@
-name: tulingresearch.artifact_audit
+name: turingresearch.artifact_audit
 version: 0.2.0
 status: draft
-description: Capsule-local artifact audit contract for TulingResearch Plus.
-mcp_server: tulingresearch-plus
-project: TulingResearch Plus
+description: Capsule-local artifact audit contract for TuringResearch Plus.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
 tool_contract_fields:
   - tool_name
   - namespace

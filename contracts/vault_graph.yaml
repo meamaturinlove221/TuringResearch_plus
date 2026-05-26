@@ -1,0 +1,27 @@
+name: turingresearch.vault_graph
+version: 0.3.0
+status: implemented_minimal
+description: Contract for lightweight vault graph enhancement and edge audit.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: offline_only
+tool_contract_fields:
+  - name
+  - purpose
+  - input_model
+  - output_model
+  - network_behavior
+  - evidence_requirement
+  - required_tests
+proposed_tools:
+  - vault.graph_audit
+input_model: VaultGraph
+output_model: VaultGraphAuditReport
+rules:
+  - Do not treat graph output as final truth.
+  - Evidence-bearing edges require source refs.
+  - Low-confidence and human-review nodes must be reported.
+  - No graph database is required.
+implementation_status: implemented_minimal

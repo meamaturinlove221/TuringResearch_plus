@@ -1,9 +1,9 @@
 ---
-name: tulingresearch-cache-and-ledger
+name: turingresearch-cache-and-ledger
 description: Use when changing shared cache, failure ledger, BudgetGate, or StateLedger foundations.
 ---
 
-# TulingResearch Plus Skill: tulingresearch-cache-and-ledger
+# TuringResearch Plus Skill: turingresearch-cache-and-ledger
 
 ## Role
 
@@ -15,21 +15,21 @@ Use this skill when work touches the owner lane, related contracts, modules, tes
 
 ## Inputs
 
-- User request naming `tulingresearch-cache-and-ledger` or the matching TulingResearch Plus lane.
+- User request naming `turingresearch-cache-and-ledger` or the matching TuringResearch Plus lane.
 - Existing contracts, Pydantic models, tests, docs, and ledger entries.
 - Fake-service or dry-run fixtures when workflow behavior is involved.
 
 ## Outputs
 
-- Updated TulingResearch Plus files in the listed required paths.
+- Updated TuringResearch Plus files in the listed required paths.
 - Passing focused tests and release-safe documentation updates.
 - Ledger updates in `lanes/00_master_ledger.md` and the owner lane.
 
 ## Required files
 
-- `src/tuling_research/cache/`
-- `src/tuling_research_plus/budget/`
-- `src/tuling_research_plus/ledger/`
+- `src/turing_research/cache/`
+- `src/turing_research_plus/budget/`
+- `src/turing_research_plus/ledger/`
 
 ## Related contracts
 
@@ -51,11 +51,11 @@ Use this skill when work touches the owner lane, related contracts, modules, tes
 
 ## Rules / constraints
 
-- Project display name is TulingResearch Plus.
-- Core package is `tuling_research` and Plus package is `tuling_research_plus`.
-- MCP server name is `tulingresearch-plus`.
-- Skill names must use the `tulingresearch-` prefix.
-- Keep work inside `TulingResearch/TulingResearch_plus`.
+- Project display name is TuringResearch Plus.
+- Core package is `turing_research` and Plus package is `turing_research_plus`.
+- MCP server name is `turingresearch-plus`.
+- Skill names must use the `turingresearch-` prefix.
+- Keep work inside `TuringResearch/TuringResearch_plus`.
 - Do not require real network access, external API keys, or live service calls in tests.
 - Preserve EvidenceRef, ResearchArtifact, BudgetGate, and StateLedger boundaries when relevant.
 - Use service protocols or adapters for external APIs.
@@ -66,4 +66,24 @@ Use this skill when work touches the owner lane, related contracts, modules, tes
 - Implementation status: `locked`.
 - Release requirement: `release-critical`.
 - Related tests pass or a release blocker is explicitly recorded.
-- Documentation and contracts remain aligned with current TulingResearch Plus naming.
+- Documentation and contracts remain aligned with current TuringResearch Plus naming.
+
+## Round 240 SOP Parity
+
+- `workflow`: artifact audit
+- `when_to_use`: audit artifacts, evidence references, ledgers, manifests,
+  export bundles, or privacy-sensitive file readiness.
+- `inputs`: artifact paths, manifests, evidence ledger entries, privacy policy,
+  expected hashes, and export criteria.
+- `outputs`: artifact audit report, missing evidence notes, privacy findings,
+  release blockers, and proposed remediation.
+- `safety`: do not include raw data, secrets, private local paths, restricted
+  model files, or fake observed results.
+- `non-goals`: no deletion of user files, no automatic upload, no evidence
+  fabrication, no private-data export.
+- `handoff`: record included/excluded files, blockers, warnings, and required
+  human review.
+- `tests`: artifact audit, privacy scanner, export quality, and regression gate
+  tests.
+- `related_docs`: `docs/artifact-auditor.md`,
+  `docs/privacy-data-policy-layer.md`, `docs/export-quality-gate.md`.

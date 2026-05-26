@@ -1,9 +1,9 @@
-name: tulingresearch.artifact_schema
+name: turingresearch.artifact_schema
 version: 0.2.0
 status: draft
-description: TulingResearch Plus research artifact and evidence schema.
-mcp_server: tulingresearch-plus
-project: TulingResearch Plus
+description: TuringResearch Plus research artifact and evidence schema.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
 tool_contract_fields:
   - tool_name
   - namespace

@@ -1,0 +1,45 @@
+name: hard_gates
+version: 0.2.0-draft
+status: capsule_contract
+description: Capsule-local contract for reusable hard gate validation.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields:
+  - proposed_tool
+  - input_model
+  - output_model
+  - network_behavior
+  - implementation_status
+implementation_status: implemented_minimal
+public_api: false
+proposed_tools:
+  experiment.hard_gate_validate:
+    proposed_tool: experiment.hard_gate_validate
+    status: proposed_not_public_api
+    input_model: HardGateValidationInput
+    output_model: HardGateValidationReport
+    network_behavior: none
+    implementation_status: implemented_minimal
+required_gates:
+  - not_report_only
+  - not_fast_return
+  - not_identity_copy
+  - not_fallback_only
+  - no_promotion
+  - no_strict_registry
+  - no_v50_modification
+  - real_backend_required
+  - candidate_predictions_required
+  - visual_board_required
+  - npz_diff_required
+  - sha256_required
+  - zip_test_clean
+  - cleanup_required
+  - sparse_backend_probe_required
+  - smplx_alignment_risk_logged
+  - hairline_regression_checked
+  - hand_object_confusion_checked
+rules:
+  - Missing evidence must not pass.
+  - Planned work must not be promoted to observed.
+  - SparseConv3D success requires real evidence.

@@ -1,0 +1,84 @@
+name: dashboard_api
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: dashboard_api
+status: contract_draft
+release_target: v0.8 planning
+api_status: public_api_contract_draft
+default_enabled: true
+network_behavior: no_network
+description: >-
+  Draft public API contract for future dashboard/export namespace boundaries.
+  Dashboard surfaces remain local-first and do not convert displays into
+  research evidence.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+module_name: turing_research_dashboard
+purpose: >-
+  Provide static dashboards, future local dashboard DTOs, advisor exports,
+  export quality gates, case-study exports, and vault UI views.
+stability: experimental
+current_compatibility_namespace: turing_research_plus
+public_models:
+  - DashboardDocument
+  - DashboardCard
+  - AdvisorMarkdownBundle
+  - PDFExportPlan
+  - PPTXExportPlan
+  - ExportQualityReport
+  - PublicCaseStudyDraft
+  - ResearchVaultUIBundle
+public_functions_tools:
+  - dashboard_render_static
+  - dashboard_project_render
+  - advisor_pdf_export_optional
+  - advisor_pptx_export_optional
+  - export_quality_audit
+  - case_study_build_public_draft
+  - vault_ui_render_static
+input_schema:
+  project_summary: local_model
+  advisor_bundle: optional_local_bundle
+  dashboard_inputs: local_or_demo_data
+output_schema:
+  html_output: local_file_or_string
+  markdown_output: local_file_or_string
+  export_plan: model
+  quality_report: ExportQualityReport
+internal_only_modules:
+  - HTML template helpers
+  - optional backend adapter internals
+  - VGGT-specific fixture builders
+deprecated_aliases: []
+tests:
+  - tests/unit/test_static_dashboard.py
+  - tests/unit/test_ui_cards.py
+  - tests/unit/test_export_quality_gate.py
+  - tests/unit/test_case_study_builder.py
+  - tests/unit/test_static_vault_ui.py
+  - tests/contract/test_module_public_api_contracts.py
+docs:
+  - docs/module-public-api-contracts.md
+  - docs/dashboard-refinement.md
+  - docs/advisor-real-pdf-export.md
+  - docs/advisor-real-pptx-export.md
+safety:
+  no_network_by_default: true
+  no_login_or_saas: true
+  optional_backends_skip_gracefully: true
+  display_is_not_evidence: true
+non_goals:
+  - no cloud dashboard
+  - no forced PDF/PPTX dependency
+  - no fake result observed

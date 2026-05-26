@@ -1,0 +1,46 @@
+name: turingresearch.github_artifact_sync
+version: 0.4.0
+status: implemented_minimal
+description: Contract for fake-default GitHub artifact metadata and selected small-file sync.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+api_status: local_python_helper_not_public_mcp
+default_enabled: false
+network_behavior: fake_mode_default
+tool_contract_fields:
+  - name
+  - purpose
+  - input_model
+  - output_model
+  - timeout_policy
+  - retry_policy
+  - rate_limit_policy
+  - cache_behavior
+  - error_model
+  - fake_adapter_equivalent
+  - live_test_marker
+  - required_env_vars
+  - default_enabled
+proposed_tools:
+  - artifact.github_sync
+input_model: GitHubArtifactSyncRequest
+output_model: GitHubArtifactSyncReport
+supported_sources:
+  - local_fixture
+  - release_asset
+  - workflow_artifact
+  - private_repo_index
+  - manual_index
+required_env_vars:
+  - GITHUB_TOKEN
+  - TURINGRESEARCH_ENABLE_LIVE_TESTS
+rules:
+  - Default tests must not access network.
+  - GITHUB_TOKEN is optional outside explicit live mode.
+  - Live tests must be skipped by default.
+  - Live results are retrieved, not verified.
+  - Do not download raw data.
+  - Do not download SMPL-X model files.
+  - Do not automatically overwrite Evidence Ledger.
+  - Only generate proposed imports.
+implementation_status: implemented_minimal

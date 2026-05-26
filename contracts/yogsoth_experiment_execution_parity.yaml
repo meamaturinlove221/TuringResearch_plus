@@ -1,0 +1,37 @@
+name: yogsoth_experiment_execution_parity
+version: 1
+status: implemented
+description: Safe experiment execution planning parity layer with runbooks and artifact requirements.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release_header:
+  contract_id: yogsoth_experiment_execution_parity
+  round: 247
+  status: implemented
+  owner: turingresearch-master-orchestrator
+
+scope:
+  parity_target: yogsoth-ai experiment-execution planning ideas
+  review_only: true
+  automatic_execution: false
+  remote_execution: false
+  modal_call: false
+  gpu_call: false
+  writes_observed_result: false
+
+capabilities:
+  execution_plan: true
+  runbook: true
+  artifact_requirements: true
+  run_ingest_contract: true
+  hard_gate_summary: true
+
+safety:
+  no_auto_experiment: true
+  no_remote_execution: true
+  no_modal: true
+  no_gpu: true
+  no_observed_result_write: true
+  proposed_evidence_only: true
+  requires_human_review: true

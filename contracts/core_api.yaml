@@ -1,0 +1,80 @@
+name: core_api
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: core_api
+status: contract_draft
+release_target: v0.8 planning
+api_status: public_api_contract_draft
+default_enabled: true
+network_behavior: no_network
+description: >-
+  Draft public API contract for future core namespace boundaries. This contract
+  does not move code or mark experimental helpers as stable.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+module_name: turing_research_core
+purpose: >-
+  Provide shared local-first research OS primitives for workspaces, evidence
+  status, privacy gates, quality gates, project templates, and shared models.
+stability: beta
+current_compatibility_namespace: turing_research_plus
+public_models:
+  - Workspace
+  - WorkspaceProject
+  - WorkspaceOverview
+  - PrivacyScanReport
+  - QualityReport
+  - ResearchProjectTemplate
+public_functions_tools:
+  - workspace_load
+  - workspace_overview
+  - workspace_project_context
+  - privacy_scan_paths
+  - quality_gate_public_demo
+  - project_template_generate
+input_schema:
+  workspace_root: local_path
+  project_id: optional_string
+  safety_level: optional_enum
+  template_type: optional_enum
+output_schema:
+  workspace_overview: markdown_or_model
+  privacy_report: PrivacyScanReport
+  quality_report: QualityReport
+  generated_project: local_file_manifest
+internal_only_modules:
+  - ledger internals
+  - north_star service internals
+  - case-specific vggt helpers
+deprecated_aliases: []
+tests:
+  - tests/unit/test_workspace_models.py
+  - tests/unit/test_workspace_registry.py
+  - tests/unit/test_privacy_scanner.py
+  - tests/unit/test_quality_metrics.py
+  - tests/unit/test_project_template_generator.py
+  - tests/contract/test_module_public_api_contracts.py
+docs:
+  - docs/module-public-api-contracts.md
+  - docs/module-public-api-surface.md
+  - docs/package-namespace-target-layout.md
+safety:
+  no_network_by_default: true
+  requires_human_review: true
+  no_private_path_read_by_default: true
+  fake_demo_boundary_required: true
+non_goals:
+  - no repository split in this contract
+  - no removal of turing_research_plus compatibility
+  - no observed evidence promotion

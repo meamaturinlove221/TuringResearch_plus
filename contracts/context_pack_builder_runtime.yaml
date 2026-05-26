@@ -1,0 +1,66 @@
+name: context_pack_builder_runtime
+version: 1
+status: implemented
+description: Local-only safe context pack builder for v1.3 Session runtime parity.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release: v1.3.0-planning
+round: 265
+owner: turingresearch-master-orchestrator
+
+scope:
+  implementation_type: local context pack builder
+  output_format: directory
+  remote_execution: false
+  live_network: false
+  creates_files: true
+  deletes_files: false
+  requires_human_review: true
+
+public_api:
+  package: turing_research_plus.session_runtime
+  modules:
+    - turing_research_plus.session_runtime.context_pack_builder
+    - turing_research_plus.session_runtime.context_manifest
+    - turing_research_plus.session_runtime.archive_writer
+    - turing_research_plus.session_runtime.archive_safety
+
+required_context_files:
+  - PROJECT_CONTEXT.md
+  - MEMORY.md
+  - ROUTE_SPEC.yaml
+  - HARD_GATES.md
+  - ARTIFACT_REQUIREMENTS.md
+  - FAILURE_TAXONOMY.md
+  - HANDOFF_MANIFEST.yaml
+  - SHA256SUMS.txt
+
+excluded_by_default:
+  - .env
+  - API key values
+  - local_project_links.yaml
+  - raw data
+  - restricted model files
+  - huge npz payloads
+  - private paths
+  - hidden dotfiles unless explicitly allowlisted
+
+safety:
+  default_network: false
+  remote_command_execution: false
+  ssh_provision: false
+  tmux_attach: false
+  modal_execution: false
+  automatic_git_push: false
+  automatic_evidence_write: false
+  no_bidirectional_memory_sync: true
+  proposed_updates_only: true
+  fake_result_observed_promotion: false
+
+tests:
+  - tests/unit/test_context_pack_builder_runtime.py
+  - tests/unit/test_context_manifest.py
+  - tests/unit/test_archive_writer.py
+  - tests/unit/test_archive_safety_runtime.py
+  - tests/workflow/test_context_pack_builder_fake.py

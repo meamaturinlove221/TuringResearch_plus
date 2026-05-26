@@ -1,0 +1,68 @@
+name: campaign_catalog
+version: 1.0.0
+description: Static campaign catalog and routing contract for v1.0 prelaunch.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+status: implemented_minimal
+network_behavior: no_network
+tool_contract_fields: []
+default_enabled: true
+
+campaign_ids:
+  - north_star
+  - knowledge_acquisition
+  - deep_insight
+  - hypothesis_formation
+  - creative_ideation
+  - convergence
+  - stress_test
+  - experiment_planning
+  - artifact_audit
+  - advisor_pack
+  - public_release
+
+required_fields:
+  - purpose
+  - when_to_use
+  - preconditions
+  - recommended_skills
+  - required_inputs
+  - expected_outputs
+  - safety_notes
+  - fake_live_boundary
+  - docs
+  - tests
+
+router:
+  input: task_description
+  output:
+    - recommended_campaign
+    - recommended_skill
+    - ranked_campaigns
+    - ranked_skills
+    - confidence
+    - rationale
+  boundaries:
+    - does_not_execute
+    - does_not_call_llm
+    - does_not_use_network
+    - does_not_replace_master_orchestrator
+
+safety:
+  no_upstream_code_copied: true
+  fake_mode_default: true
+  live_mode_required: explicit_opt_in
+  no_default_network: true
+  no_private_data: true
+  requires_human_review: true
+
+docs:
+  - docs/turingresearch-campaign-catalog.md
+  - docs/campaign-routing-table.md
+  - docs/campaign-preconditions.md
+  - docs/campaign-to-skill-map.md
+
+tests:
+  - tests/unit/test_campaign_catalog_models.py
+  - tests/unit/test_campaign_catalog.py
+  - tests/unit/test_campaign_router.py

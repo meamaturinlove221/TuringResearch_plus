@@ -1,0 +1,57 @@
+name: turingresearch.collision_risk
+version: 0.2.0-alpha
+status: beta_feature_minimal
+description: Conservative paper collision risk detector for VGGT positioning.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+tools:
+  research.collision_risk_detect:
+    tool_name: research.collision_risk_detect
+    namespace: research
+    input_model: PaperComparisonInput
+    output_model: CollisionRiskReport
+    cache_behavior: no cache required for local fixture comparison
+    network_behavior: offline by default; no live citation graph unless separately enabled
+    error_behavior: missing evidence is reported, not treated as no-collision proof
+    evidence_requirement: fake/manual method cards require human review
+    required_tests:
+      - tests/unit/test_collision_models.py
+      - tests/unit/test_overlap_matrix.py
+      - tests/unit/test_collision_risk_scoring.py
+      - tests/unit/test_safe_claims.py
+      - tests/workflow/test_vggt_collision_risk_fake_related_work.py
+    implementation_status: implemented_minimal
+models:
+  CollisionRiskReport:
+    required:
+      - target_project
+      - compared_papers
+      - overlap_matrix
+      - risk_scores
+      - safe_claims
+      - unsafe_claims
+      - positioning_notes
+      - missing_evidence
+      - requires_human_review
+  risk_levels:
+    - low
+    - medium
+    - high
+    - unknown
+rules:
+  - No definitive no-collision claim without real paper evidence.
+  - Safe claims must stay conservative.
+  - Unsafe claims must explain why they are unsafe.
+  - Fake method cards are not complete paper reading.
+  - The detector does not copy long paper text.

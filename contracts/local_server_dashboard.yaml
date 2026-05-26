@@ -1,0 +1,36 @@
+name: local_server_dashboard
+version: 0.1.0
+status: experimental
+description: Read-only localhost dashboard for public demo summaries.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+tool_contract_fields: []
+contract_id: local_server_dashboard
+module: turing_research_plus.local_server
+purpose: read-only localhost dashboard for public demo summaries
+inputs:
+  public_demo_dir: examples/public_demo
+outputs:
+  routes:
+    - /
+    - /dashboard
+    - /project
+    - /evidence
+    - /artifacts
+    - /paper
+    - /advisor
+    - /health
+requirements:
+  localhost_only: true
+  read_only: true
+  no_login: true
+  no_cloud_deployment: true
+  no_default_networking: true
+  no_uploads: true
+  no_command_execution: true
+  no_private_vggt_path: true
+  no_secret_display: true
+tests:
+  - tests/unit/test_local_server_models.py
+  - tests/unit/test_local_server_routes.py
+  - tests/workflow/test_local_server_dashboard_fake.py

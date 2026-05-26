@@ -1,0 +1,72 @@
+name: turingresearch.run_ingest
+version: 0.2.0-alpha
+status: beta_feature_minimal
+description: Modal and local experiment run ingestion contract.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+tools:
+  research.run_ingest:
+    tool_name: research.run_ingest
+    namespace: research
+    input_model: RunIngestRequest
+    output_model: RunIngestReport
+    cache_behavior: no cache required for local bundle ingestion
+    network_behavior: offline; does not run Modal
+    error_behavior: missing artifacts and unknown status are recorded in report
+    evidence_requirement: generates proposed evidence updates only
+    required_tests:
+      - tests/unit/test_run_ingest_models.py
+      - tests/unit/test_modal_status_parser.py
+      - tests/unit/test_local_bundle_ingestor.py
+      - tests/unit/test_run_ingest_report_builder.py
+      - tests/workflow/test_vggt_modal_run_ingest_fixture.py
+    implementation_status: implemented_minimal
+models:
+  RunIngestReport:
+    required:
+      - run_id
+      - route_id
+      - source_type
+      - source_path
+      - status
+      - duration
+      - backend_status
+      - candidates
+      - best_candidate
+      - artifacts
+      - missing_artifacts
+      - hard_gate_results
+      - failure_categories
+      - evidence_updates
+      - advisor_pack_inputs
+      - requires_human_review
+  source_types:
+    - modal_fixture
+    - modal_export
+    - local_vggt_bundle
+    - thin_review_bundle
+    - manual_summary
+  statuses:
+    - REVIEW_READY_NOT_PROMOTED
+    - ROUTE_EXHAUSTED_WITH_FAILURE_ANALYSIS
+    - HARD_BLOCKED
+    - RUN_FAILED
+    - PARTIAL
+    - UNKNOWN
+rules:
+  - Do not run Modal.
+  - Do not read private VGGT paths by default.
+  - Do not claim SparseConv3D success without real sparse backend log and required artifacts.
+  - Do not automatically modify Evidence Ledger.
+  - Generate proposed evidence updates only.

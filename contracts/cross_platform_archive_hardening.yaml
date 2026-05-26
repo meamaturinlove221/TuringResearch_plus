@@ -1,0 +1,54 @@
+name: cross_platform_archive_hardening
+version: 1
+status: implemented
+description: Cross-platform archive member validation for Session context and return packs.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release: v1.4.0-planning
+round: 294
+owner: turingresearch-master-orchestrator
+
+scope:
+  implementation_type: archive safety hardening
+  unpack_execution: false
+  remote_execution: false
+  live_network: false
+  auto_write_evidence_ledger: false
+  validates_before_ingest: true
+  requires_human_review: true
+
+public_api:
+  package: turing_research_plus.session_runtime
+  modules:
+    - turing_research_plus.session_runtime.archive_platform
+    - turing_research_plus.session_runtime.dotfile_policy
+    - turing_research_plus.session_runtime.path_normalization
+    - turing_research_plus.session_runtime.unpack_safety
+
+coverage:
+  windows_path_to_posix: true
+  path_traversal_block: true
+  dotfile_denylist: true
+  allowlist_dotfile_policy: true
+  no_same_owner_note: true
+  symlink_handling_policy: true
+  checksum_before_ingest: true
+  return_archive_validation: true
+
+safety:
+  destructive_unpack: false
+  same_owner_unpack_default: false
+  symlink_unpack_default: false
+  private_paths_allowed: false
+  raw_data_allowed: false
+  restricted_model_payload_allowed: false
+  checksum_mismatch_allowed: false
+  automatic_evidence_write: false
+
+tests:
+  - tests/unit/test_archive_platform.py
+  - tests/unit/test_dotfile_policy.py
+  - tests/unit/test_path_normalization.py
+  - tests/unit/test_unpack_safety.py
+  - tests/workflow/test_cross_platform_archive_hardening.py

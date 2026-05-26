@@ -1,0 +1,54 @@
+name: method_section_builder
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: method_section_builder
+status: implemented_minimal
+release_target: v0.6 Sprint 3
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >-
+  Build review-only method section skeletons from method card fixtures,
+  architecture diagrams, and route DSL specs without claiming method
+  verification or final contributions.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+required_fields:
+  - problem_setting
+  - overview
+  - smplx_feature_encoding
+  - vggt_integration
+  - route_variants
+  - hard_gates
+  - implementation_notes
+  - limitations
+  - figure_placeholders
+  - evidence_refs
+safety:
+  claims_experiment_verified: false
+  generated_final_contribution_claims: false
+  fabricates_figures: false
+  fabricates_experiments: false
+  requires_human_review: true
+non_goals:
+  - no final method prose
+  - no final contribution claims
+  - no experiment verification claims
+  - no figure fabrication
+  - no network access
+required_tests:
+  - tests/unit/test_method_section_builder.py
+  - tests/unit/test_method_templates.py
+  - tests/unit/test_figure_linker.py
+  - tests/workflow/test_vggt_method_section_skeleton.py

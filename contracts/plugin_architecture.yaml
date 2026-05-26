@@ -1,0 +1,70 @@
+name: plugin_architecture
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: plugin_architecture
+status: implemented_minimal
+release_target: v0.6 Sprint 2
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+requires_human_review: true
+description: >-
+  Define manifest-only plugin architecture for tools, skills, adapters,
+  exporters, workflows, validators, and renderers without loading or executing
+  untrusted plugin code.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >-
+  Provide a safe extension boundary based on plugin manifests, registries, and
+  validation reports.
+plugin_manifest_required_fields:
+  - plugin_id
+  - name
+  - version
+  - type
+  - entry_kind
+  - capabilities
+  - required_permissions
+  - config_schema
+  - inputs
+  - outputs
+  - safety_level
+  - status
+plugin_types:
+  - adapter
+  - exporter
+  - workflow
+  - skill
+  - validator
+  - renderer
+safety:
+  requires_human_review: true
+  executes_plugin_code: false
+  loads_unknown_python_entrypoint: false
+  validates_manifest_only: true
+  third_party_default_disabled: true
+  permissions_required: true
+  safety_level_required: true
+  no_network_by_default: true
+non_goals:
+  - no plugin marketplace publishing
+  - no automatic plugin install
+  - no untrusted code execution
+  - no dynamic Python import
+required_tests:
+  - tests/unit/test_plugin_models.py
+  - tests/unit/test_plugin_manifest.py
+  - tests/unit/test_plugin_registry.py
+  - tests/unit/test_plugin_validator.py
+  - tests/workflow/test_plugin_registry_fake.py

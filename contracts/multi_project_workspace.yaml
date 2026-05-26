@@ -1,0 +1,80 @@
+name: multi_project_workspace
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: multi_project_workspace
+status: implemented_minimal
+release_target: v0.6 Sprint 1
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >-
+  Provide a local, read-only registry for multiple research projects without
+  treating the workspace index as evidence.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >-
+  Let TuringResearch Plus manage multiple fake/demo or reviewed project cases
+  through explicit local registry files while preserving project boundaries and
+  human review.
+models:
+  workspace:
+    required:
+      - workspace_id
+      - projects
+      - requires_human_review
+  workspace_project:
+    required:
+      - project_id
+      - project_type
+      - project_root
+      - docs_path
+      - evidence_path
+      - artifacts_path
+      - advisor_pack_path
+      - routes_path
+      - status
+      - privacy_level
+      - requires_human_review
+  project_index:
+    supports:
+      - list_projects
+      - get_project_by_id
+      - summarize_project_state
+      - export_workspace_overview_markdown
+      - mark_missing_paths
+      - no_automatic_data_ingestion
+tools:
+  - name: workspace.load
+    command: turing workspace load
+    output: ProjectIndex
+  - name: workspace.overview
+    command: turing workspace overview
+    output: WorkspaceOverview
+  - name: workspace.overview_markdown
+    command: turing workspace overview-md
+    output: Markdown
+safety:
+  default_network: false
+  reads_private_vggt: false
+  uploads_data: false
+  auto_ingests_data: false
+  evidence_source: false
+  requires_human_review: true
+  no_planned_as_observed: true
+  fake_demo_project_required_for_demo: true
+non_goals:
+  - no SaaS workspace
+  - no cloud user system
+  - no automatic project discovery outside explicit registry roots
+  - no evidence promotion

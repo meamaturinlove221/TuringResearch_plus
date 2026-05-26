@@ -1,0 +1,32 @@
+name: dashboard_data_api
+version: 0.1.0
+status: experimental
+description: Read-only dashboard data API for static and local server dashboards.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+tool_contract_fields: []
+contract_id: dashboard_data_api
+module: turing_research_plus.dashboard_api
+purpose: read-only dashboard data API for static and local server dashboards
+inputs:
+  public_demo_dir: examples/public_demo
+outputs:
+  project_summary: DashboardProjectSummary
+  evidence_summary: DashboardEvidenceSummary
+  artifact_summary: DashboardArtifactSummary
+  paper_summary: DashboardPaperSummary
+  json_export: DashboardDataBundle
+requirements:
+  read_only: true
+  no_secrets: true
+  no_raw_data: true
+  no_private_path: true
+  supports_json_export: true
+  supports_dashboard_rendering: true
+  supports_public_demo: true
+tests:
+  - tests/unit/test_dashboard_data_models.py
+  - tests/unit/test_dashboard_project_summary.py
+  - tests/unit/test_dashboard_evidence_summary.py
+  - tests/unit/test_dashboard_artifact_summary.py
+  - tests/workflow/test_dashboard_data_api_public_demo.py

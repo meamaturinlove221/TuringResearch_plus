@@ -1,0 +1,60 @@
+name: paper_writing_scaffold
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: paper_writing_scaffold
+status: implemented_minimal
+release_target: v0.6 Sprint 3
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >-
+  Build review-only paper writing scaffolds from existing evidence, method
+  cards, related work notes, and experiment route plans without generating final
+  paper conclusions.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >-
+  Organize paper outlines, section status, evidence requirements, missing
+  experiments, and unsafe claims for human drafting.
+required_fields:
+  - title_candidates
+  - abstract_status
+  - introduction_plan
+  - related_work_plan
+  - method_plan
+  - experiment_plan
+  - results_status
+  - limitation_plan
+  - evidence_requirements
+  - missing_experiments
+  - unsafe_claims
+  - requires_human_review
+safety:
+  generates_final_results: false
+  generates_final_abstract: false
+  fabricates_experiment_values: false
+  planned_experiments_stay_in_experiment_plan: true
+  unsafe_claims_blocked: true
+  requires_human_review: true
+non_goals:
+  - no final paper generation
+  - no automatic submission
+  - no long copyrighted text copying
+  - no citation fabrication
+required_tests:
+  - tests/unit/test_paper_write_models.py
+  - tests/unit/test_paper_scaffold.py
+  - tests/unit/test_paper_section_status.py
+  - tests/unit/test_paper_evidence_linker.py
+  - tests/workflow/test_vggt_paper_scaffold_fake.py

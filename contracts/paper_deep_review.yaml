@@ -1,0 +1,77 @@
+name: paper_deep_review
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: paper_deep_review
+status: implemented_minimal
+release_target: v0.7
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+requires_human_review: true
+description: >-
+  Build paper deep-review checklists from local PaperDigest outputs, emphasizing
+  human review, figure/table/equation inspection, implementation questions,
+  reproduction blockers, and claim verification without generating final paper
+  conclusions.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >-
+  Upgrade paper digest scaffolds into citation-grade review checklists while
+  keeping fake/manual fixtures blocked from final related-work use.
+models:
+  - DeepReviewItem
+  - DeepReviewReport
+  - DeepReviewStatus
+required_fields:
+  - paper identity
+  - reading status
+  - figures to inspect
+  - equations to inspect
+  - tables to inspect
+  - implementation questions
+  - reproduction blockers
+  - relation to our project
+  - claims requiring verification
+  - notes for advisor
+  - requires_human_review
+local_helpers:
+  - helper_name: paper.deep_review
+    input_model: PaperDigest
+    output_model: DeepReviewReport
+    cache_behavior: local_report_only
+    network_behavior: no_network
+    error_behavior: validation errors returned as data
+    evidence_requirement: existing paper digest or manual notes only
+    implementation_status: implemented_minimal
+safety:
+  no_default_network: true
+  no_pdf_download: true
+  no_long_text_copy: true
+  no_fabricated_equations: true
+  no_final_conclusions: true
+  fake_fixture_not_citation_grade: true
+  requires_human_review: true
+non_goals:
+  - no final paper conclusions
+  - no automatic related-work prose
+  - no citation fabrication
+  - no paywall bypass
+  - no PDF download
+required_tests:
+  - tests/unit/test_paper_deep_review_models.py
+  - tests/unit/test_deep_review_builder.py
+  - tests/unit/test_figure_checklist.py
+  - tests/unit/test_equation_checklist.py
+  - tests/unit/test_reproduction_questions.py
+  - tests/workflow/test_vggt_paper_deep_review_fixture.py

@@ -1,0 +1,47 @@
+name: return_import_human_confirmation
+version: 1
+status: implemented
+description: Human confirmation packet for structured return import review.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release: v1.4.0-planning
+round: 296
+owner: turingresearch-master-orchestrator
+
+scope:
+  implementation_type: human confirmation packet
+  consumes_return_verifier: true
+  auto_write_evidence_ledger: false
+  proposed_updates_only: true
+  remote_claims_trusted: false
+  requires_human_review: true
+
+decision_statuses:
+  - accept
+  - reject
+  - partial_accept
+  - requires_more_review
+  - unsafe_blocked
+
+public_api:
+  package: turing_research_plus.session_runtime
+  modules:
+    - turing_research_plus.session_runtime.human_confirmation
+    - turing_research_plus.session_runtime.import_decision
+    - turing_research_plus.session_runtime.ledger_proposal
+
+safety:
+  no_auto_ledger_write: true
+  no_remote_claim_trust: true
+  fake_result_observed_promotion: false
+  proposed_only_packet: true
+  unsafe_return_blocks_import: true
+  checksum_mismatch_blocks_import: true
+  human_review_required: true
+
+tests:
+  - tests/unit/test_human_confirmation.py
+  - tests/unit/test_import_decision.py
+  - tests/unit/test_ledger_proposal.py
+  - tests/workflow/test_return_import_human_confirmation_fake.py

@@ -1,9 +1,9 @@
 ---
-name: tulingresearch-qa-release
-description: Use when validating TulingResearch Plus tests, linting, typing, packaging, or release readiness.
+name: turingresearch-qa-release
+description: Use when validating TuringResearch Plus tests, linting, typing, packaging, or release readiness.
 ---
 
-# TulingResearch Plus Skill: tulingresearch-qa-release
+# TuringResearch Plus Skill: turingresearch-qa-release
 
 ## Role
 
@@ -15,13 +15,13 @@ Use this skill when work touches the owner lane, related contracts, modules, tes
 
 ## Inputs
 
-- User request naming `tulingresearch-qa-release` or the matching TulingResearch Plus lane.
+- User request naming `turingresearch-qa-release` or the matching TuringResearch Plus lane.
 - Existing contracts, Pydantic models, tests, docs, and ledger entries.
 - Fake-service or dry-run fixtures when workflow behavior is involved.
 
 ## Outputs
 
-- Updated TulingResearch Plus files in the listed required paths.
+- Updated TuringResearch Plus files in the listed required paths.
 - Passing focused tests and release-safe documentation updates.
 - Ledger updates in `lanes/00_master_ledger.md` and the owner lane.
 
@@ -52,11 +52,11 @@ Use this skill when work touches the owner lane, related contracts, modules, tes
 
 ## Rules / constraints
 
-- Project display name is TulingResearch Plus.
-- Core package is `tuling_research` and Plus package is `tuling_research_plus`.
-- MCP server name is `tulingresearch-plus`.
-- Skill names must use the `tulingresearch-` prefix.
-- Keep work inside `TulingResearch/TulingResearch_plus`.
+- Project display name is TuringResearch Plus.
+- Core package is `turing_research` and Plus package is `turing_research_plus`.
+- MCP server name is `turingresearch-plus`.
+- Skill names must use the `turingresearch-` prefix.
+- Keep work inside `TuringResearch/TuringResearch_plus`.
 - Do not require real network access, external API keys, or live service calls in tests.
 - Preserve EvidenceRef, ResearchArtifact, BudgetGate, and StateLedger boundaries when relevant.
 - Use service protocols or adapters for external APIs.
@@ -67,4 +67,24 @@ Use this skill when work touches the owner lane, related contracts, modules, tes
 - Implementation status: `locked`.
 - Release requirement: `release-critical`.
 - Related tests pass or a release blocker is explicitly recorded.
-- Documentation and contracts remain aligned with current TulingResearch Plus naming.
+- Documentation and contracts remain aligned with current TuringResearch Plus naming.
+
+## Round 240 SOP Parity
+
+- `workflow`: release gate
+- `when_to_use`: run go/no-go, regression, privacy/security, docs, package,
+  branch, release note, or public launch checks.
+- `inputs`: target release scope, changed files, contracts, docs, test matrix,
+  security/privacy policies, and known limitations.
+- `outputs`: gate report, blockers, test summary, release notes, known
+  limitations, and final human actions.
+- `safety`: do not publish, tag, push, create child repos, or run live tests
+  unless explicitly approved by the round.
+- `non-goals`: no automatic PyPI release, GitHub release, default live tests,
+  secret upload, or hidden release action.
+- `handoff`: record decision, blockers, tests run, push status, and suggested
+  commit message.
+- `tests`: full pytest, mypy, name integrity, privacy/security gate, release
+  contracts, and targeted pre-push checks.
+- `related_docs`: `docs/v1.1.0-full-regression-report.md`,
+  `docs/v1.1.0-release-notes.md`, `docs/v1.1.0-test-summary.md`.

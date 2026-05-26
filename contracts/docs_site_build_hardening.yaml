@@ -1,0 +1,49 @@
+name: docs_site_build_hardening
+version: 1
+status: implemented
+description: Local docs-site build hardening with link checks, source validation, and static export manifest.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release: v1.5.0-planning
+round: 333
+owner: turingresearch-master-orchestrator
+
+scope:
+  implementation_type: local docs-site hardening
+  deployment_performed: false
+  live_network: false
+  analytics_enabled: false
+  private_data_required: false
+  requires_human_review: true
+
+public_api:
+  package: turing_research_plus.docs_site
+  modules:
+    - turing_research_plus.docs_site.link_checker
+    - turing_research_plus.docs_site.build_report
+    - turing_research_plus.docs_site.static_export
+
+coverage:
+  broken_link_report: true
+  missing_page_report: true
+  orphan_page_report: true
+  nav_validation: true
+  static_export_manifest: true
+  no_private_path_scan: true
+
+safety:
+  no_deployment: true
+  no_real_url: true
+  no_private_path_publish: true
+  no_secret_publish: true
+  no_raw_data_publish: true
+  no_analytics: true
+  no_live_fetch: true
+  no_aris_implementation: true
+
+tests:
+  - tests/unit/test_docs_site_link_checker.py
+  - tests/unit/test_docs_site_build_report.py
+  - tests/unit/test_docs_site_static_export.py
+  - tests/workflow/test_docs_site_build_hardening.py

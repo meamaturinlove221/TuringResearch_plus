@@ -1,0 +1,118 @@
+name: ssh_sftp_remote_reader
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: ssh_sftp_remote_reader
+status: implemented_minimal
+release_target: v0.4.0
+api_status: local_python_helper_not_public_mcp
+default_enabled: false
+network_behavior: fake_mode_default
+description: >
+  Read selected metadata and small review files from an SSH/SFTP-visible remote
+  artifact surface without executing remote commands, writing remote files, or
+  treating remote artifacts as verified evidence.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >
+  Read selected metadata and small review files from an SSH/SFTP-visible remote
+  artifact surface without executing remote commands, writing remote files, or
+  treating remote artifacts as verified evidence.
+
+models:
+  input: RemoteReaderRequest
+  output: RemoteReaderReport
+  artifact: RemoteArtifactRecord
+  selected_file: RemoteSelectedFile
+  omitted_file: RemoteOmittedFile
+
+proposed_tools:
+  - name: artifact.sftp_read_optional
+    command: turing artifact sftp-read
+    status: local_helper_not_public_mcp
+    default_enabled: false
+
+source_types:
+  - local_fixture
+  - fake_sftp
+  - sftp
+  - manual_index
+
+status_labels:
+  - indexed
+  - selected
+  - omitted
+  - retrieved
+  - live-disabled
+  - missing-credential
+  - error
+
+remote_reader_report_fields:
+  - host_label
+  - root_path
+  - scanned_paths
+  - selected_files
+  - omitted_files
+  - errors
+  - safety_warnings
+  - proposed_imports
+  - requires_human_review
+
+timeout_policy:
+  default_seconds: 15
+  live_tests_seconds: 30
+
+credential_policy:
+  required_env_vars:
+    - TURINGRESEARCH_ENABLE_LIVE_TESTS
+  optional_env_vars:
+    - TURINGRESEARCH_SFTP_CREDENTIAL
+  no_credential_behavior: missing-credential
+  no_secret_storage: true
+
+live_test_policy:
+  marker: live
+  default_behavior: skipped
+  enable_env_var: TURINGRESEARCH_ENABLE_LIVE_TESTS
+  required_credential_env_var: TURINGRESEARCH_SFTP_CREDENTIAL
+
+safety_policy:
+  default_fake_mode: true
+  no_remote_commands: true
+  no_remote_delete: true
+  no_remote_write: true
+  no_forbidden_path_read: true
+  no_env_or_secret_read: true
+  large_file_metadata_only: true
+  symlink_requires_review: true
+  no_credential_in_repo: true
+  no_raw_data: true
+  no_smplx_model_files: true
+  no_evidence_overwrite: true
+  proposed_imports_only: true
+  live_result_not_verified: true
+
+cache_behavior:
+  default: none
+  future: may cache metadata hashes only
+
+integration:
+  can_feed:
+    - artifact_audit
+    - run_ingest
+    - handoff_bundle
+    - evidence_proposed_updates
+    - advisor_pack_inputs
+  must_not_feed_as:
+    - observed_without_review
+    - verified_evidence

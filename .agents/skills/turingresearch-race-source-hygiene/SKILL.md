@@ -1,9 +1,9 @@
 ---
-name: tulingresearch-race-source-hygiene
+name: turingresearch-race-source-hygiene
 description: Use when maintaining public-source, license, NDA, private, or leak gates for Race Mode.
 ---
 
-# TulingResearch Plus Skill: tulingresearch-race-source-hygiene
+# TuringResearch Plus Skill: turingresearch-race-source-hygiene
 
 ## Role
 
@@ -15,19 +15,19 @@ Use this skill when work touches the owner lane, related contracts, modules, tes
 
 ## Inputs
 
-- User request naming `tulingresearch-race-source-hygiene` or the matching TulingResearch Plus lane.
+- User request naming `turingresearch-race-source-hygiene` or the matching TuringResearch Plus lane.
 - Existing contracts, Pydantic models, tests, docs, and ledger entries.
 - Fake-service or dry-run fixtures when workflow behavior is involved.
 
 ## Outputs
 
-- Updated TulingResearch Plus files in the listed required paths.
+- Updated TuringResearch Plus files in the listed required paths.
 - Passing focused tests and release-safe documentation updates.
 - Ledger updates in `lanes/00_master_ledger.md` and the owner lane.
 
 ## Required files
 
-- `src/tuling_research_plus/race/source_hygiene.py`
+- `src/turing_research_plus/race/source_hygiene.py`
 - `docs/race_mode.md`
 
 ## Related contracts
@@ -45,11 +45,11 @@ Use this skill when work touches the owner lane, related contracts, modules, tes
 
 ## Rules / constraints
 
-- Project display name is TulingResearch Plus.
-- Core package is `tuling_research` and Plus package is `tuling_research_plus`.
-- MCP server name is `tulingresearch-plus`.
-- Skill names must use the `tulingresearch-` prefix.
-- Keep work inside `TulingResearch/TulingResearch_plus`.
+- Project display name is TuringResearch Plus.
+- Core package is `turing_research` and Plus package is `turing_research_plus`.
+- MCP server name is `turingresearch-plus`.
+- Skill names must use the `turingresearch-` prefix.
+- Keep work inside `TuringResearch/TuringResearch_plus`.
 - Do not require real network access, external API keys, or live service calls in tests.
 - Preserve EvidenceRef, ResearchArtifact, BudgetGate, and StateLedger boundaries when relevant.
 - Use service protocols or adapters for external APIs.
@@ -60,4 +60,4 @@ Use this skill when work touches the owner lane, related contracts, modules, tes
 - Implementation status: `locked`.
 - Release requirement: `release-critical`.
 - Related tests pass or a release blocker is explicitly recorded.
-- Documentation and contracts remain aligned with current TulingResearch Plus naming.
+- Documentation and contracts remain aligned with current TuringResearch Plus naming.

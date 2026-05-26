@@ -1,0 +1,54 @@
+name: benchmark_replay
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: benchmark_replay
+status: implemented_minimal
+release_target: v0.6 Sprint 3
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >-
+  Run local demo-only replay checks for public demo, VGGT fake replay,
+  multi-project workspace, and paper assembly outputs without executing real
+  experiments.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+required_fields:
+  - scenario_id
+  - steps
+  - expected_outputs
+  - actual_outputs
+  - missing_outputs
+  - status
+  - duration
+  - warnings
+  - regression_flags
+safety:
+  demo_only: true
+  no_real_experiment: true
+  no_network: true
+  creates_observed_evidence: false
+  requires_human_review: true
+non_goals:
+  - no real benchmark claims
+  - no private data replay
+  - no live network dependency
+  - no experiment execution
+required_tests:
+  - tests/unit/test_benchmark_models.py
+  - tests/unit/test_replay_runner.py
+  - tests/unit/test_benchmark_scenarios.py
+  - tests/unit/test_benchmark_report.py
+  - tests/workflow/test_public_demo_replay.py
+  - tests/workflow/test_vggt_fake_replay_benchmark.py

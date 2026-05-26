@@ -1,0 +1,32 @@
+name: yogsoth_vault_parity
+version: 1
+status: implemented
+description: Review-only wiki vault, backlink, dangling link, and edge audit parity layer.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release_header:
+  contract_id: yogsoth_vault_parity
+  round: 244
+  status: implemented
+  owner: turingresearch-master-orchestrator
+
+scope:
+  parity_target: yogsoth-ai wiki-vault edge audit wikilink ideas
+  graph_database: false
+  review_only: true
+
+capabilities:
+  wikilink_export: true
+  backlinks: true
+  dangling_links: true
+  missing_edges: true
+  weak_edges: true
+  requires_review_nodes: true
+  graph_summary: true
+
+safety:
+  requires_human_review: true
+  graph_is_not_final_truth: true
+  no_live_service: true
+  no_external_graph_database: true

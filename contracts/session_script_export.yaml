@@ -1,0 +1,48 @@
+name: session_script_export
+version: 1
+status: implemented
+description: Safe shell script equivalent export for Session runtime production parity.
+mcp_server: turingresearch-plus
+project: TuringResearch Plus
+tool_contract_fields: []
+release: v1.4.0-planning
+round: 293
+owner: turingresearch-master-orchestrator
+
+scope:
+  implementation_type: shell script equivalent export
+  exports_scripts: true
+  executes_scripts: false
+  remote_execution: false
+  live_ssh_default: false
+  automatic_evidence_write: false
+  requires_human_review: true
+
+scripts:
+  - preflight.sh
+  - build-context-pack.sh
+  - fake-transfer.sh
+  - verify-return.sh
+  - workflow-replay.sh
+
+public_api:
+  package: turing_research_plus.session_runtime
+  modules:
+    - turing_research_plus.session_runtime.script_exporter
+    - turing_research_plus.session_runtime.script_safety
+    - turing_research_plus.session_runtime.sop_export
+
+safety:
+  shellcheck_style_notes: true
+  secrets: false
+  unquoted_variables: false
+  destructive_commands: false
+  remote_execution_default: false
+  live_steps_commented_manual: true
+  scripts_executed_during_export: false
+  automatic_evidence_ledger_write: false
+
+tests:
+  - tests/unit/test_session_script_exporter.py
+  - tests/unit/test_session_script_safety.py
+  - tests/workflow/test_session_script_export_fake.py

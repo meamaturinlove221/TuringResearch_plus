@@ -1,0 +1,79 @@
+name: turingresearch.handoff_bundle
+version: 0.2.0-alpha
+status: beta_feature_minimal
+description: Controlled handoff bundle export/import contract for moving review artifacts between machines.
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+tools:
+  research.handoff_bundle_export:
+    tool_name: research.handoff_bundle_export
+    namespace: research
+    input_model: HandoffExportRequest
+    output_model: HandoffBundleManifest
+    cache_behavior: no cache; writes a local review bundle
+    network_behavior: offline only; no NAS, SSH, GitHub sync, or cloud storage
+    error_behavior: unsafe or missing files are omitted and recorded in manifest
+    evidence_requirement: status labels must be conservative and manual review remains required
+    required_tests:
+      - tests/unit/test_handoff_models.py
+      - tests/unit/test_handoff_manifest.py
+      - tests/unit/test_handoff_safety.py
+      - tests/unit/test_handoff_exporter.py
+      - tests/workflow/test_vggt_handoff_bundle_fixture.py
+    implementation_status: implemented_minimal
+  research.handoff_bundle_import:
+    tool_name: research.handoff_bundle_import
+    namespace: research
+    input_model: HandoffImportRequest
+    output_model: HandoffBundleImportReport
+    cache_behavior: no cache; validates a local review bundle
+    network_behavior: offline only; does not fetch external artifacts
+    error_behavior: missing, unsafe, and sha256 mismatch files are recorded in import report
+    evidence_requirement: generates proposed updates only; does not overwrite Evidence Ledger
+    required_tests:
+      - tests/unit/test_handoff_importer.py
+      - tests/workflow/test_vggt_handoff_bundle_fixture.py
+    implementation_status: implemented_minimal
+models:
+  HandoffBundleManifest:
+    required:
+      - bundle_id
+      - project_name
+      - source_machine_label
+      - export_time
+      - bundle_type
+      - included_files
+      - omitted_files
+      - sha256
+      - evidence_tags
+      - status_labels
+      - safety_warnings
+      - manual_review_required
+  allowed_status_labels:
+    - observed
+    - planned
+    - fake-data
+    - failed
+    - hard-blocked
+    - requires-real-paper
+    - requires-real-experiment
+    - requires-human-review
+    - local-observed
+    - not-enough-evidence
+rules:
+  - Do not include raw datasets, secrets, cache folders, or SMPL-X body model files.
+  - NPZ payloads default to summary-only handoff.
+  - Preserve relative paths for included files.
+  - Import validates manifest and sha256 but does not overwrite local ledgers.
+  - Handoff is not NAS, SSH, GitHub artifact sync, or cloud storage.

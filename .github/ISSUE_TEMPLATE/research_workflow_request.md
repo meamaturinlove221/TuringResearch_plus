@@ -1,6 +1,6 @@
 ---
 name: Research workflow request
-about: Request or discuss a TulingResearch Plus research workflow
+about: Request or discuss a TuringResearch Plus research workflow
 title: "[Workflow]: "
 labels: research-workflow
 assignees: ""
@@ -25,6 +25,9 @@ Mention budget, offline requirements, fake-mode needs, or source restrictions.
 ## Source Hygiene
 
 Confirm that no private papers, restricted datasets, leaked roadmaps, NDA content, proprietary code, or incompatible-license implementation details are included.
+
+Confirm that no real credentials, raw data, private model files, or private
+project path configs are included.
 
 ## Acceptance Criteria
 

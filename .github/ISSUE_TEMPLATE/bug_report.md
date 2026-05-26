@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report a reproducible TulingResearch Plus bug
+about: Report a reproducible TuringResearch Plus bug
 title: "[Bug]: "
 labels: bug
 assignees: ""
@@ -10,19 +10,6 @@ assignees: ""
 
 Describe the bug.
 
-## Environment
-
-- TulingResearch Plus version:
-- Python version:
-- OS:
-- Install command:
-
-## Reproduction
-
-```powershell
-# paste minimal commands
-```
-
 ## Expected Behavior
 
 What should happen?
@@ -31,10 +18,52 @@ What should happen?
 
 What happened instead?
 
-## Logs Or Output
+## Reproduction Steps
 
-Paste only non-secret logs. Do not include API keys, private data, private papers, or restricted datasets.
+1.
+2.
+3.
 
-## Source Hygiene
+## Environment
 
-Does this report include only public, user-owned, or authorized material?
+- TuringResearch Plus version:
+- Python version:
+- OS:
+- Install command:
+- Command run:
+- Package install mode: editable / wheel / other
+- Live mode enabled: yes / no
+- Plugins enabled: yes / no
+
+## Data Sensitivity
+
+- Data used: public demo / public data / private data / unknown
+- Does this require `examples/public_demo/` only? yes / no
+- Does this require live adapters? yes / no
+- Does this require private project files? yes / no
+
+## Public-safe Reproduction
+
+```powershell
+# paste minimal commands that do not include secrets or private paths
+```
+
+## Screenshots / Logs Optional
+
+Attach screenshots or logs only if they are public-safe.
+
+## Safety / Privacy Notes
+
+- Do not upload API keys, tokens, `.env` files, or credentials.
+- Do not upload raw data.
+- Do not upload SMPL-X model files or other restricted model payloads.
+- Do not upload private local paths or private advisor feedback.
+- Redact logs before posting.
+
+## Checklist
+
+- [ ] I did not include secrets or API keys.
+- [ ] I did not include raw data.
+- [ ] I did not include restricted model files.
+- [ ] I did not include private local paths.
+- [ ] I did not mark fake/demo output as observed research evidence.

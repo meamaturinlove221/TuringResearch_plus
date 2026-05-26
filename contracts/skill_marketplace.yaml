@@ -1,0 +1,72 @@
+name: skill_marketplace
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: skill_marketplace
+status: implemented_minimal
+release_target: v0.6 Sprint 2
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+description: >-
+  Provide a local, browsable, filterable skill marketplace layout for
+  TuringResearch repo skills without publishing or installing remote skills.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >-
+  Align `.agents/skills` with a reviewable local catalog for docs, routing,
+  capability references, and future marketplace planning.
+entry_required_fields:
+  - skill_name
+  - path
+  - category
+  - status
+  - docs
+  - tests
+  - related_contracts
+  - related_lanes
+  - related_modules
+categories:
+  - orchestration
+  - evidence
+  - artifact
+  - visual
+  - advisor
+  - pdf
+  - paper
+  - web
+  - remote
+  - route
+  - failure
+  - dashboard
+  - workspace
+  - plugin
+  - release
+safety:
+  local_only: true
+  remote_publish: false
+  remote_install: false
+  executes_skills: false
+  requires_turingresearch_prefix: true
+  requires_human_review: true
+non_goals:
+  - no online marketplace
+  - no skill upload
+  - no remote install
+  - no automatic agent runtime
+required_tests:
+  - tests/unit/test_skill_market_models.py
+  - tests/unit/test_skill_catalog.py
+  - tests/unit/test_skill_categories.py
+  - tests/unit/test_skill_market_markdown_export.py
+  - tests/contract/test_skill_marketplace_integrity.py

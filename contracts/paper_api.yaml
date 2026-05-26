@@ -1,0 +1,82 @@
+name: paper_api
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: paper_api
+status: contract_draft
+release_target: v0.8 planning
+api_status: public_api_contract_draft
+default_enabled: true
+network_behavior: no_network
+description: >-
+  Draft public API contract for future paper namespace boundaries. Paper
+  helpers remain review-first and must not generate final conclusions.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+module_name: turing_research_paper
+purpose: >-
+  Provide paper reading, digest, method-card, related-work, citation safety,
+  paper scaffold, section builder, and deep review surfaces.
+stability: experimental
+current_compatibility_namespace: turing_research_plus
+public_models:
+  - PaperDigest
+  - PaperMethodCard
+  - CitationGraph
+  - CollisionRiskReport
+  - RelatedWorkDraftSkeleton
+  - PaperScaffold
+  - DeepReviewReport
+public_functions_tools:
+  - paper_digest_build
+  - paper_method_card_extract
+  - related_work_draft_build_vggt
+  - method_section_build_vggt
+  - experiment_section_build_vggt
+  - paper_scaffold_build_vggt
+  - paper_deep_review_build
+input_schema:
+  paper_metadata: local_or_fake_metadata
+  method_cards: optional_list
+  evidence_refs: optional_list
+  citation_status: source_status_required
+output_schema:
+  paper_digest: PaperDigest
+  section_skeleton: markdown_or_model
+  citation_safety_report: model
+  deep_review_report: DeepReviewReport
+internal_only_modules:
+  - internal template helpers
+  - fake fixture builders
+  - case-specific VGGT scaffold helpers
+deprecated_aliases: []
+tests:
+  - tests/unit/test_paper_scaffold.py
+  - tests/unit/test_method_section_builder.py
+  - tests/unit/test_related_work_builder.py
+  - tests/unit/test_experiment_section_builder.py
+  - tests/unit/test_deep_review_builder.py
+  - tests/contract/test_module_public_api_contracts.py
+docs:
+  - docs/module-public-api-contracts.md
+  - docs/paper-writing-scaffold.md
+  - docs/paper-deep-review-mode.md
+safety:
+  no_network_by_default: true
+  requires_human_review: true
+  final_conclusion_blocked: true
+  citation_grade_required_for_claims: true
+non_goals:
+  - no final paper writing
+  - no fabricated citations
+  - no planned result promoted to observed

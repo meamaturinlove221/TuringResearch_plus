@@ -1,0 +1,64 @@
+name: plugin_compatibility
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: plugin_compatibility
+status: implemented_minimal
+release_target: v0.7
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+requires_human_review: true
+description: >-
+  Validate plugin manifest, capability ids, MCP mapping, declared permissions,
+  docs/tests metadata, naming, and sandbox policy compatibility without running
+  plugin code.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >-
+  Provide a review-only compatibility harness before any plugin is considered
+  for documentation, registry listing, MCP mapping, or future trusted loading.
+models:
+  - PluginCompatibilityFinding
+  - PluginCompatibilityMatrix
+  - PluginCompatibilityReport
+checks:
+  - manifest_schema_valid
+  - capability_ids_valid
+  - required_permissions_declared
+  - safety_policy_satisfied
+  - mcp_mapping_valid
+  - docs_present
+  - tests_declared
+  - no_core_tool_override
+  - no_old_project_naming
+  - no_forbidden_permission
+safety:
+  executes_plugin_code: false
+  loads_entrypoint: false
+  starts_mcp_server: false
+  enables_plugin: false
+  network_access: false
+  requires_human_review: true
+  compatibility_is_not_safety_approval: true
+non_goals:
+  - no plugin execution
+  - no automatic plugin enablement
+  - no runtime sandbox implementation
+  - no registry promotion
+  - no live service calls
+required_tests:
+  - tests/unit/test_plugin_compatibility.py
+  - tests/unit/test_plugin_compat_test_runner.py
+  - tests/unit/test_plugin_compat_report.py
+  - tests/workflow/test_demo_plugin_compatibility.py

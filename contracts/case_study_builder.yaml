@@ -1,0 +1,81 @@
+name: case_study_builder
+version: 0.1.0
+project: TuringResearch Plus
+mcp_server: turingresearch-plus
+contract: case_study_builder
+status: implemented_minimal
+release_target: v0.7
+api_status: local_python_helper_not_public_mcp
+default_enabled: true
+network_behavior: no_network
+requires_human_review: true
+description: >-
+  Build sanitized public case study drafts from local review artifacts while
+  redacting private paths, restricted data references, model file references,
+  private advisor feedback, and unsupported experiment claims.
+tool_contract_fields:
+  - tool_name
+  - namespace
+  - input_model
+  - output_model
+  - cache_behavior
+  - network_behavior
+  - error_behavior
+  - evidence_requirement
+  - required_tests
+  - implementation_status
+
+purpose: >-
+  Convert VGGT dogfooding material into a public-review draft that explains how
+  TuringResearch Plus organized evidence, routes, failures, advisor communication,
+  and remaining human work without publishing, leaking private data, or claiming
+  unsupported success.
+models:
+  - CaseStudyDraft
+  - CaseStudySection
+  - CaseStudyRedactionReport
+  - CaseStudyClaimSafetyReport
+required_sections:
+  - problem background
+  - why TuringResearch was useful
+  - route changes
+  - evidence management
+  - failures and blockers
+  - advisor pack
+  - what remains human work
+  - what not to claim
+redaction_surface:
+  - private local paths
+  - raw data
+  - model files
+  - advisor private feedback
+  - unsupported experiment claims
+  - non-public artifacts
+local_helpers:
+  - helper_name: case_study.vggt_build
+    input_model: local research knowledge pack
+    output_model: CaseStudyDraft
+    cache_behavior: reads committed local review artifacts
+    network_behavior: no_network
+    error_behavior: validation errors returned as data
+    evidence_requirement: existing research knowledge pack only
+    implementation_status: implemented_minimal
+safety:
+  no_publish: true
+  no_marketing_overclaim: true
+  no_success_claim_without_evidence: true
+  no_sparseconv3d_success_claim: true
+  no_private_path_leak: true
+  no_network: true
+  requires_human_review: true
+non_goals:
+  - no publishing
+  - no final paper conclusion
+  - no private artifact packaging
+  - no experiment execution
+required_tests:
+  - tests/unit/test_case_study_models.py
+  - tests/unit/test_case_study_builder.py
+  - tests/unit/test_case_study_redactor.py
+  - tests/unit/test_case_study_claim_guard.py
+  - tests/workflow/test_vggt_public_case_study_fake.py
