@@ -1,17 +1,12 @@
-# TulingResearch Plus
+# TuringResearch
 
-TulingResearch Plus is a Python, MCP-first research workflow engine for evidence-backed literature work, idea capture, feature planning, experiment design, and paper pipeline dry-runs.
+TuringResearch is a Python, MCP-first research workflow engine for evidence-backed literature work, idea capture, feature planning, experiment design, artifact auditing, advisor reporting, and paper pipeline dry-runs.
 
-It is built as one repository with two Python packages:
-
-- `tuling_research`: Core tools for local cache, sessions, content lookup, PDF Markdown, and the local MCP smoke server.
-- `tuling_research_plus`: Plus workflows for survey, semantic graph, vault, context, Race Mode, SOP, experiment, and paper pipelines.
-
-MCP server name: `tulingresearch-plus`.
+It is built as a local-first research operating system: default workflows run with fake services, dry-run adapters, local fixtures, explicit evidence records, and public-safe artifact boundaries.
 
 ## Python MCP-First Design
 
-TulingResearch Plus treats MCP tools as the public boundary. Contracts live in `contracts/`, Pydantic models define stable payloads, and implementations stay behind service protocols or adapters. External APIs are adapterized, network tests are mocked, and default workflows run in dry-run or fake-service mode.
+TuringResearch treats MCP tools as the public boundary. Contracts live in `contracts/`, Pydantic models define stable payloads, and implementations stay behind service protocols or adapters. External APIs are adapterized, network tests are mocked, and default workflows run in dry-run or fake-service mode.
 
 The local MCP smoke module is:
 
@@ -26,13 +21,15 @@ Console entry points:
 
 Both call `tuling_research.mcp_server:main`.
 
+> Public project name: **TuringResearch**. Some package or compatibility names may still preserve historical internal names during the migration period.
+
 ## Single Window, Multiple Lanes
 
-The project is designed for single-window multi-agent style development. Parallel work is coordinated through:
+The project is designed for single-window multi-lane development. Parallel work is coordinated through:
 
 - `lanes/`: lane ledgers and release-candidate state.
 - `contracts/`: stable tool and artifact contracts.
-- `.agents/skills/`: Codex-compatible repo-scoped skills with `tulingresearch-` names.
+- `.agents/skills/`: Codex-compatible repo-scoped skills.
 
 This keeps architecture, implementation, QA, and release work in one repository without splitting context or package ownership.
 
@@ -45,7 +42,7 @@ The Core layer provides local deterministic tools:
 - `core.web_content`
 - `core.session_list`
 
-The Core package is `tuling_research`.
+The Core package is currently `tuling_research` for compatibility.
 
 ## PDF Input To Markdown
 
@@ -56,7 +53,7 @@ Phase A supports local PDF paths through `tuling_research.pdf`:
 - `pdf.cache_lookup`
 - `pdf.markdown_content`
 
-The output model is `PDFMarkdownOutput`, including markdown path, page map, quality score, warnings, and cache-hit state. Heavy OCR and complex layout parsing are outside `v0.1.0`.
+The output model is `PDFMarkdownOutput`, including markdown path, page map, quality score, warnings, and cache-hit state. Heavy OCR and complex layout parsing are not enabled by default.
 
 ## Depth-Gated Literature Survey
 
@@ -72,7 +69,7 @@ The Vault is a local markdown knowledge graph with typed entities, typed edges, 
 
 ## Hypothesis-To-Experiment Workflow
 
-TulingResearch Plus can dry-run a research chain from validated gaps to hypotheses, idea portfolios, convergence decisions, stress tests, experiment plans, constraint analysis, scenario plans, implementation plans, result schemas, and dry-run result analysis.
+TuringResearch can dry-run a research chain from validated gaps to hypotheses, idea portfolios, convergence decisions, stress tests, experiment plans, constraint analysis, scenario plans, implementation plans, result schemas, and dry-run result analysis.
 
 ## Race Mode Idea Capture
 
@@ -80,7 +77,7 @@ Race Mode turns public or authorized notes into IdeaCards, priority scores, feat
 
 ## Feature Capsule Workflow
 
-Feature Capsules are self-contained implementation planning bundles. A capsule includes a problem statement, user story, contract, skill skeleton, tests, docs, and SOP graph. `v0.1.0` generates minimal skeletons only.
+Feature Capsules are self-contained implementation planning bundles. A capsule includes a problem statement, user story, contract, skill skeleton, tests, docs, and SOP graph.
 
 ## SOP Graph Generator
 
@@ -90,9 +87,28 @@ The SOP graph generator creates Mermaid graphs and SOP documents for campaign, f
 
 The paper pipeline includes DocFlow Article Blocks, figure registry, caption generation, missing-evidence reports, draft gate, and LaTeX export. Full paper drafts are blocked until required artifacts, especially `ExperimentReport`, are present.
 
+## Authorized Academic Showcase
+
+TuringResearch includes an attributed academic workflow showcase based on materials authorized by the original developer of the reference projects. The showcase demonstrates how research-agent workflows can be organized into evidence ledgers, artifact audits, campaign catalogs, paper pipelines, session handoffs, and public-safe reports.
+
+Showcase materials currently live under:
+
+```text
+examples/original-author-showcase/
+```
+
+The showcase contains public-safe summaries and adapted workflow documents for:
+
+- Neocortica-Session: session / pod / Git-context workflow, pod lifecycle SOP, context transfer safety.
+- Neocortica-Scholar: scholar tool surface, paper pipeline, three-pass reading, MCP env-block notes.
+- Neocortica-Web: web fetch/content workflow, Apify optional-live pattern, cache and metadata notes.
+- yogsoth-ai research-engine materials: campaign catalog, vault/ontology, stress/convergence/experiment runbook patterns.
+
+Code is not migrated from upstream into TuringResearch implementation modules. Upstream materials are used as authorized academic workflow outputs, attributed references, and public-safe product demonstrations.
+
 ## Codex-Compatible Skills
 
-Repo-scoped skills live under `.agents/skills/tulingresearch-*/SKILL.md`. They document owner lanes, related contracts, required tests, constraints, and done criteria for single-window coordinated development.
+Repo-scoped skills live under `.agents/skills/`. They document owner lanes, related contracts, required tests, constraints, and done criteria for single-window coordinated development.
 
 ## Quickstart
 
@@ -121,8 +137,9 @@ See `docs/examples.md` and `examples/` for release-candidate examples:
 - `examples/smplx-feature-adapter-hypothesis/`
 - `examples/citation-graph-demo/`
 - `examples/pdf-to-markdown-demo/`
+- `examples/original-author-showcase/`
 
-Each example has `input/`, `expected_outputs/`, `fake_run_config.yaml`, and workflow tests.
+Each example uses explicit input/output artifacts, fake-run configuration, workflow tests, or public-safe summaries.
 
 ## Safety / Source Hygiene
 
@@ -132,11 +149,12 @@ Each example has `input/`, `expected_outputs/`, `fake_run_config.yaml`, and work
 - Network tests are mocked.
 - Live/manual tests are skipped by default.
 - STDIO MCP mode does not write logs to stdout.
+- Secrets, `.env`, private paths, raw data, SMPL-X assets, and unauthorized third-party PDFs must not be included in public examples.
 
 ## Roadmap
 
-`v0.1.0` focuses on local contracts, dry-run workflows, fake adapters, examples, CI, and release readiness. Future work can add live adapters, richer PDF parsing, heavier workflow automation, public package publishing, and production deployment after the current contracts remain stable.
+The current release line focuses on public naming, original-author showcase migration, docs readiness, optional-live safety, packaging readiness, and release preparation. Future work can add live adapters, richer PDF parsing, heavier workflow automation, public package publishing, and production deployment after the current contracts remain stable.
 
 ## References
 
-TulingResearch Plus is inspired by public research-tooling ideas and workflow patterns, including Neocortica and Yogsoth AI references. They are references only; this project, packages, MCP server, tools, skills, and documentation use the TulingResearch naming system.
+TuringResearch is inspired by public research-tooling ideas and workflow patterns, including Neocortica and yogsoth-ai references. Authorized academic showcase materials preserve attribution and are not presented as untracked original TuringResearch inventions.
