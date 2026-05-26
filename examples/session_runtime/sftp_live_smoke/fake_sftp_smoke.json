@@ -1,0 +1,15 @@
+{
+  "mode": "fake",
+  "transfer_id": "sftp-fake-smoke",
+  "package_id": "ctx-sftp-fake-smoke",
+  "source_dir": "examples/session_runtime/context_pack_fixture/source",
+  "fake_target_dir": "<temporary-local-target>",
+  "remote_target": "/explicit/reviewed/target",
+  "live_enabled": false,
+  "requires_password": false,
+  "requires_key_path": false,
+  "remote_command_execution": false,
+  "remote_delete": false,
+  "transfer_target_explicit": true,
+  "requires_human_review": true
+}

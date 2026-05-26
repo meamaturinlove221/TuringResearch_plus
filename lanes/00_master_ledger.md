@@ -6016,3 +6016,35 @@ Validation:
   passed with 22 tests.
 - `python -m ruff check .` passed.
 - `git diff --check` passed with only LF-to-CRLF working-copy warning.
+
+## Round 375 - SFTP Optional Live Smoke
+
+Status: completed.
+
+Summary:
+- Added `docs/sftp-optional-live-smoke.md`.
+- Added `examples/session_runtime/sftp_live_smoke/`.
+- Added `tests/workflow/test_sftp_fake_smoke.py`.
+- Added `tests/live/test_sftp_live_smoke_skipped_by_default.py`.
+- Added `lanes/353_sftp_optional_live_smoke.md`.
+- Added SFTP fake/local smoke and skipped-live coverage for v1.6 optional live
+  smoke readiness.
+
+Safety:
+- Fake smoke passes without password or key path.
+- Live smoke is skipped by default.
+- Live smoke requires explicit environment opt-in.
+- No remote command is allowed.
+- No remote delete is allowed.
+- Transfer target must be explicit.
+- No SSH or SFTP connection is opened in default tests.
+
+Validation:
+- SFTP fake smoke passed with 3 tests.
+- SFTP live smoke skipped as expected with 1 skipped live test selected via
+  `-m live`.
+- SFTP live env/skipped policy passed with 4 tests.
+- v1.5 security/privacy, public release hygiene, and SFTP live env tests passed
+  with 22 tests.
+- `python -m ruff check .` passed.
+- `git diff --check` passed with only LF-to-CRLF working-copy warning.
