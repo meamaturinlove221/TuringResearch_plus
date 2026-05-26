@@ -6336,3 +6336,41 @@ Safety:
 Validation:
 - Roadmap updated.
 - Pre-push checks passed.
+
+## Round 390 - Final v1.6 Handoff
+
+Status: completed.
+
+Summary:
+- Updated `docs/v1.6.0-final-archive.md`.
+- Updated `docs/v1.6.0-handoff.md`.
+- Updated `docs/v1.6.0-what-is-ready.md`.
+- Updated `docs/v1.6.0-what-is-not-ready.md`.
+- Updated `docs/v1.6.0-next-human-actions.md`.
+- Added `lanes/368_v1.6_final_handoff.md`.
+
+Final status:
+- docs deployment ready for human review, not deployed;
+- split manual pack ready for final human review, no child repo created;
+- optional live smoke ready as opt-in/skipped, no live run;
+- package readiness local/install review ready;
+- release artifact local review bundle only, no upload;
+- public launch checklist ready for maintainer decision;
+- ARIS deferred and study-only.
+
+Decision:
+- `READY FOR HUMAN RELEASE-CANDIDATE REVIEW / NO-GO FOR AUTOMATIC PUBLICATION`.
+
+Safety:
+- No tag.
+- No GitHub release publication.
+- No PyPI publication.
+- No GitHub Pages deployment.
+- No split repository creation.
+- No live provider execution.
+- No remote command execution.
+- No ARIS implementation.
+
+Validation:
+- Final smoke tests passed.
+- Pre-push checks passed.
