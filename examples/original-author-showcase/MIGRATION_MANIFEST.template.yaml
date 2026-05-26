@@ -1,0 +1,18 @@
+# Template for every migrated showcase item.
+# Copy this file to MIGRATION_MANIFEST.yaml and fill one entry per item.
+
+items:
+  - id: example-item-id
+    local_path: examples/original-author-showcase/example/README.md
+    upstream_repository: owner/repository
+    upstream_path: README.md
+    upstream_commit: UNKNOWN
+    upstream_url: https://github.com/owner/repository/blob/main/README.md
+    migration_type: summarized_with_attribution
+    authorization_status: user_reported_authorized_by_original_developer
+    attribution_required: true
+    license_note: preserve upstream license and add authorization note
+    public_safety_status: pending_review
+    private_data_risk: low
+    secrets_scan_status: pending
+    notes: Replace this example with a real item.
