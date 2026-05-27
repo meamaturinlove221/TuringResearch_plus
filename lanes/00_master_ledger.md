@@ -6466,3 +6466,31 @@ Decision:
 Future route:
 - Future migration must require concrete upstream files such as paper PDF,
   arXiv link, BibTeX, DOI, publication page, or author-provided manuscript.
+
+## Round 394R - PR #2 Community Intake Integration Only
+
+Status: completed.
+
+Summary:
+- Reviewed Round 393 community intake gate documents.
+- Reviewed local git refs for PR #2, `origin/main`, and
+  `release/v1.6.0-rc`.
+- Confirmed PR #1 is excluded from this integration decision.
+- Confirmed PR #2 can be integrated only if it remains community-docs only.
+- Confirmed PR #2 must not modify `src/`, `tests/`, CI, release files, package
+  metadata, README, changelog, or version files.
+- Added `docs/pr2-community-intake-integration-decision.md`.
+- Added `docs/pr2-post-merge-test-plan.md`.
+- Added `docs/pr2-friend-contribution-first-pr-guide.md`.
+- Added `lanes/394R_pr2_only_integration.md`.
+
+Decision:
+- `GO FOR PR #2 COMMUNITY-DOCS INTEGRATION REVIEW`.
+- `NO-GO FOR PR #1, CODE, TEST, CI, RELEASE, OR PUBLIC VISIBILITY CHANGES`.
+
+Next:
+- If maintainers choose to integrate PR #2 into a release line, keep the diff
+  limited to community docs and rerun the post-merge test plan.
+- Friends may submit Markdown-only idea or skill proposal PRs after the intake
+  surface exists on the target branch.
+- Implementation must happen later in a separate maintainer/Codex branch.
