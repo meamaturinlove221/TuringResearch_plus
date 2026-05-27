@@ -1,0 +1,63 @@
+<svg width="420" height="420" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="halo" x1="70" y1="45" x2="350" y2="365" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E9F7FF"/>
+      <stop offset="0.45" stop-color="#FFF3FB"/>
+      <stop offset="1" stop-color="#FFFBEA"/>
+    </linearGradient>
+    <linearGradient id="hairBlue" x1="90" y1="70" x2="120" y2="365" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#86D9FF"/>
+      <stop offset="1" stop-color="#D7F2FF"/>
+    </linearGradient>
+    <linearGradient id="hairPink" x1="320" y1="70" x2="295" y2="365" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFB4DA"/>
+      <stop offset="1" stop-color="#FFE2F1"/>
+    </linearGradient>
+    <linearGradient id="hairGold" x1="210" y1="88" x2="210" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF0A6"/>
+      <stop offset="1" stop-color="#FFF8D1"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="420" height="420" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#BEC7E8" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+  <rect width="420" height="420" rx="84" fill="#FCFDFF"/>
+  <circle cx="210" cy="205" r="152" fill="url(#halo)"/>
+  <path d="M77 120C61 103 54 87 56 69" stroke="#8ED6FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M101 83C95 68 96 55 105 43" stroke="#C6B6FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M319 84C329 69 333 55 330 42" stroke="#FFB6D9" stroke-width="4" stroke-linecap="round"/>
+  <path d="M344 119C360 104 368 88 368 70" stroke="#FFE28B" stroke-width="4" stroke-linecap="round"/>
+  <g filter="url(#shadow)">
+    <circle cx="130" cy="119" r="34" fill="#F8FCFF" stroke="#7F8CA5" stroke-width="3"/>
+    <circle cx="290" cy="119" r="34" fill="#FFF8FC" stroke="#7F8CA5" stroke-width="3"/>
+    <path d="M112 107C98 94 93 82 96 66" stroke="#86D9FF" stroke-width="5" stroke-linecap="round"/>
+    <path d="M146 108C159 95 164 81 164 66" stroke="#FFE28B" stroke-width="5" stroke-linecap="round"/>
+    <path d="M272 108C258 95 253 81 254 66" stroke="#FFB6D9" stroke-width="5" stroke-linecap="round"/>
+    <path d="M307 108C322 96 329 82 329 68" stroke="#B9E7C9" stroke-width="5" stroke-linecap="round"/>
+    <path d="M120 144C91 173 86 208 99 237C110 260 110 280 99 303C88 328 92 348 107 361" stroke="url(#hairBlue)" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M98 151C68 181 62 215 76 247C86 269 88 294 79 316C72 333 77 350 91 363" stroke="#E1F4FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M300 144C329 173 334 208 321 237C310 260 310 280 321 303C332 328 328 348 313 361" stroke="url(#hairPink)" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M322 151C352 181 358 215 344 247C334 269 332 294 341 316C348 333 343 350 329 363" stroke="#FFE3F0" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M210 89C153 89 118 126 118 181C118 238 156 280 210 280C264 280 302 238 302 181C302 126 267 89 210 89Z" fill="#FFFFFF" stroke="#7F8CA5" stroke-width="3"/>
+    <path d="M136 124C153 100 181 90 210 90C240 90 268 100 284 124C272 119 260 120 248 124C235 128 224 130 210 130C196 130 185 128 172 124C160 120 148 119 136 124Z" fill="url(#hairGold)" stroke="#7F8CA5" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M155 126C164 144 160 164 149 180" stroke="#86D9FF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M183 126C187 146 184 166 174 182" stroke="#C6B6FF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M210 128C210 148 207 166 201 183" stroke="#FFE28B" stroke-width="4" stroke-linecap="round"/>
+    <path d="M237 126C233 146 236 166 247 182" stroke="#FFB6D9" stroke-width="4" stroke-linecap="round"/>
+    <path d="M264 126C255 144 260 164 271 180" stroke="#B9E7C9" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="176" cy="185" r="5" fill="#525969"/>
+    <circle cx="244" cy="185" r="5" fill="#525969"/>
+    <path d="M203 205C207 209 214 209 218 205" stroke="#525969" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="160" cy="205" rx="10" ry="6" fill="#FFD9E8" opacity="0.9"/>
+    <ellipse cx="260" cy="205" rx="10" ry="6" fill="#FFD9E8" opacity="0.9"/>
+    <path d="M188 248C188 237 197 230 210 230C223 230 232 237 232 248V280H188V248Z" fill="#FFFFFF" stroke="#7F8CA5" stroke-width="3"/>
+    <path d="M188 255C197 263 205 266 210 266C215 266 223 263 232 255" stroke="#DDE8FF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M188 256C176 250 170 242 166 232" stroke="#7F8CA5" stroke-width="3" stroke-linecap="round"/>
+    <path d="M232 256C244 250 250 242 254 232" stroke="#7F8CA5" stroke-width="3" stroke-linecap="round"/>
+    <path d="M198 280V309" stroke="#7F8CA5" stroke-width="3" stroke-linecap="round"/>
+    <path d="M222 280V309" stroke="#7F8CA5" stroke-width="3" stroke-linecap="round"/>
+    <path d="M186 311C195 315 202 315 210 310" stroke="#7F8CA5" stroke-width="3" stroke-linecap="round"/>
+    <path d="M210 310C218 315 226 315 234 311" stroke="#7F8CA5" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="210" y="392" text-anchor="middle" font-family="ui-rounded, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="21" font-weight="700" fill="#647087">TuringResearch</text>
+</svg>
