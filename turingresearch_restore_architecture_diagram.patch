@@ -1,0 +1,134 @@
+diff --git a/README.md b/README.md
+--- a/README.md
++++ b/README.md
+@@ -78,22 +78,54 @@ TuringResearch focuses on research workflow infrastructure:
+
+ ## Architecture
+
+ ```mermaid
+-flowchart LR
+-    A[Research Intent] --> B[Evidence Ledger]
+-    B --> C[Literature / Method Cards]
+-    C --> D[Gap & Hypothesis Tree]
+-    D --> E[Experiment Route Compiler]
+-    E --> F[Artifact Auditor]
+-    F --> G[Advisor Pack Builder]
+-    G --> H[Next Sprint]
+-
+-    I[Community Ideas] --> J[Skill / Feature Capsule Intake]
+-    J --> D
+-
+-    K[Reference Projects] --> C
+-    K --> E
++flowchart TB
++    %% TuringResearch Architecture
++    %% Goal: keep the README diagram faithful to the earlier Research OS design.
++
++    A["User / Advisor Intent<br/>research goal · constraints · non-goals"] --> B["Research Intake Layer<br/>North Star · blockers · route context"]
++    A2["Community Ideas / Skill Proposals<br/>docs-only intake"] --> B
++    A3["Reference Projects / Public Sources<br/>papers · repos · docs"] --> C
++    A4["Experiment Bundles / Local Artifacts<br/>logs · boards · reports · manifests"] --> F
++
++    B --> C["Paper & Source Structuring<br/>survey plan · method cards · related work"]
++    C --> D["Gap / Hypothesis Layer<br/>gap analysis · hypothesis tree · collision risk"]
++    D --> E["Experiment Route Compiler<br/>route tree · hard gates · Codex prompt"]
++
++    E --> F["Artifact & Evidence Auditor<br/>bundle audit · claim checks · missing files"]
++    F --> G["Evidence Ledger<br/>observed · planned · fake-data · needs-real-paper · needs-real-experiment"]
++    G --> H["Advisor Pack Builder<br/>summary · architecture · boundaries · next actions"]
++    H --> I["Sprint / Roadmap Decision<br/>priority · risk · implementation order"]
++
++    I --> B
++
++    subgraph Safety["Safety & Honesty Gates"]
++        S1["No fake benchmark"]
++        S2["No unsupported paper claim"]
++        S3["No private data / secrets"]
++        S4["No planned-as-done promotion"]
++    end
++
++    C --> Safety
++    E --> Safety
++    F --> Safety
++    H --> Safety
++
++    subgraph Outputs["Public-safe Outputs"]
++        O1["README / docs"]
++        O2["workflow manuals"]
++        O3["feature capsules"]
++        O4["skill proposals"]
++        O5["release checklists"]
++    end
++
++    H --> Outputs
++    I --> Outputs
+ ```
+
+ The repository is intentionally **docs-first, evidence-first, and contract-first**.
+diff --git a/README_CN.md b/README_CN.md
+--- a/README_CN.md
++++ b/README_CN.md
+@@ -78,22 +78,54 @@ TuringResearch 主要关注科研工作流基础设施：
+
+ ## 架构
+
+ ```mermaid
+-flowchart LR
+-    A[Research Intent] --> B[Evidence Ledger]
+-    B --> C[Literature / Method Cards]
+-    C --> D[Gap & Hypothesis Tree]
+-    D --> E[Experiment Route Compiler]
+-    E --> F[Artifact Auditor]
+-    F --> G[Advisor Pack Builder]
+-    G --> H[Next Sprint]
+-
+-    I[Community Ideas] --> J[Skill / Feature Capsule Intake]
+-    J --> D
+-
+-    K[Reference Projects] --> C
+-    K --> E
++flowchart TB
++    %% TuringResearch 架构图
++    %% 目标：恢复之前 Research OS 式的主流程，而不是简化成一条线。
++
++    A["用户 / 导师意图<br/>研究目标 · 约束 · 非目标"] --> B["Research Intake Layer<br/>North Star · blocker · 路线上下文"]
++    A2["社区 Idea / Skill Proposal<br/>只收文档，不收代码"] --> B
++    A3["参考项目 / 公开来源<br/>论文 · 仓库 · 文档"] --> C
++    A4["实验包 / 本地产物<br/>日志 · 图板 · 报告 · manifest"] --> F
++
++    B --> C["Paper & Source Structuring<br/>调研计划 · 方法卡 · related work"]
++    C --> D["Gap / Hypothesis Layer<br/>gap 分析 · 假设树 · 撞题风险"]
++    D --> E["Experiment Route Compiler<br/>路线树 · 硬门 · Codex prompt"]
++
++    E --> F["Artifact & Evidence Auditor<br/>bundle 审计 · claim 检查 · 缺失文件"]
++    F --> G["Evidence Ledger<br/>observed · planned · fake-data · 需真论文 · 需真实验"]
++    G --> H["Advisor Pack Builder<br/>摘要 · 架构 · 边界 · 下一步"]
++    H --> I["Sprint / Roadmap Decision<br/>优先级 · 风险 · 实现顺序"]
++
++    I --> B
++
++    subgraph Safety["安全与诚实门控"]
++        S1["不伪造 benchmark"]
++        S2["不写无来源论文结论"]
++        S3["不泄露私有数据 / secrets"]
++        S4["不把 planned 包装成 done"]
++    end
++
++    C --> Safety
++    E --> Safety
++    F --> Safety
++    H --> Safety
++
++    subgraph Outputs["公开安全输出"]
++        O1["README / docs"]
++        O2["workflow manuals"]
++        O3["feature capsules"]
++        O4["skill proposals"]
++        O5["release checklists"]
++    end
++
++    H --> Outputs
++    I --> Outputs
+ ```
+
+ 本仓库刻意采用 **文档优先、证据优先、合同优先** 的方式。
