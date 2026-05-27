@@ -6550,3 +6550,30 @@ Decision:
   concrete publication package with exact source paths and commit.
 - Create a new tracking issue if the team wants durable follow-up for
   reference-docs-only usage and blocked publication migration.
+
+## Round 397R - TuringResearch Public Naming Final Sweep
+
+Status: completed.
+
+Summary:
+- Checked public-facing naming across README, docs, docs-site, examples,
+  split-ready/manual surfaces, package metadata, MCP example config, changelog,
+  and version.
+- Confirmed the public project name is TuringResearch.
+- Confirmed `examples/original-author-showcase/` is absent on this branch.
+- Confirmed PR #1 showcase semantics are excluded from the public launch prep
+  line.
+- Confirmed upstream references must use Reference / Inspiration / Related
+  Projects wording only.
+- Confirmed compatibility package/import names remain compatibility surfaces,
+  not public branding.
+- Added `docs/public-naming-final-sweep-v1.7.md`.
+- Added `docs/legacy-name-compatibility-final.md`.
+- Added `docs/github-rename-readiness.md`.
+- Added `docs/upstream-reference-wording-check.md`.
+- Added `lanes/397R_public_naming_final_sweep.md`.
+
+Decision:
+- `GO FOR PUBLIC NAMING FINAL SWEEP`.
+- `NO-GO FOR PR #1 SHOWCASE SEMANTICS`.
+- `NO-GO FOR ACADEMIC PUBLICATION MIGRATION CLAIMS`.
