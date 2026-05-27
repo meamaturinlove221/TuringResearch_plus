@@ -6629,3 +6629,35 @@ Boundary:
 - No public/private visibility change.
 - No PR #1 merge.
 - No release/tag/PyPI/Pages/split repo action.
+
+## Round 400R - First Public Release Candidate After PR1 NO-GO
+
+Status: completed.
+
+Summary:
+- Prepared first TuringResearch public release candidate documents after PR #1
+  NO-GO.
+- Added highlights, install/quickstart, community intake, upstream reference,
+  safety boundary, known limitations, and roadmap.
+- Added GitHub release draft for public v1.7 RC.
+- Added final public release checklist.
+- Added post-public-release monitoring plan.
+- Updated `VERSION` to `1.7.0rc0`.
+- Updated `CHANGELOG.md`.
+- Added `docs/turingresearch-public-release-candidate.md`.
+- Added `docs/github-release-draft-public-v1.7.md`.
+- Added `docs/public-release-checklist-final.md`.
+- Added `docs/post-public-release-monitoring.md`.
+- Added `lanes/400R_first_public_release_candidate.md`.
+
+Boundary:
+- No GitHub Release created.
+- No tag created.
+- No PyPI publish.
+- No GitHub Pages deployment.
+- No split repository creation.
+- No PR #1 merge.
+- No ARIS implementation.
+- No automatic remote execution.
+- No fake benchmark.
+- No migrated academic publication claim.

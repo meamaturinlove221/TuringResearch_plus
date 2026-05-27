@@ -4,6 +4,39 @@ All notable changes to TuringResearch are documented in this file.
 
 The format follows Keep a Changelog style.
 
+## [1.7.0-rc] - 2026-05-28
+
+### Added
+
+- First public release candidate documents for TuringResearch.
+- Public GitHub release draft for v1.7 RC.
+- Final public release checklist.
+- Post-public-release monitoring plan.
+- GitHub repository rename manual pack.
+- Open-source safety gate after PR #1 NO-GO.
+- Public naming final sweep.
+- Upstream reference-docs-only decision.
+
+### Changed
+
+- Version marker advanced to `1.7.0rc0`.
+- Upstream materials are framed as Reference / Inspiration / Related Projects
+  only.
+- Community idea / skill intake is documented as docs-only and maintainer
+  reviewed.
+
+### Known limitations
+
+- No GitHub Release is created automatically.
+- No tag is created automatically.
+- No PyPI publication is performed.
+- No GitHub Pages deployment is performed.
+- No split repository is created automatically.
+- No PR #1 showcase content is included.
+- No migrated academic publication is claimed.
+- No fake benchmark is claimed.
+- ARIS remains unimplemented.
+
 ## [1.6.0-rc] - 2026-05-26
 
 ### Added
