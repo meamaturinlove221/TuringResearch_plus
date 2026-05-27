@@ -6577,3 +6577,32 @@ Decision:
 - `GO FOR PUBLIC NAMING FINAL SWEEP`.
 - `NO-GO FOR PR #1 SHOWCASE SEMANTICS`.
 - `NO-GO FOR ACADEMIC PUBLICATION MIGRATION CLAIMS`.
+
+## Round 398R - Open Source Safety Gate After PR1 NO-GO
+
+Status: completed.
+
+Summary:
+- Ran the public-launch safety gate focused on PR #1 exclusion and open-source
+  hygiene.
+- Confirmed `.env` is absent.
+- Confirmed credential-like hits are placeholders or policy wording, not
+  committed payloads.
+- Confirmed `examples/original-author-showcase/` is absent.
+- Confirmed misleading Academic Showcase wording appears only in no-go /
+  forbidden wording docs.
+- Confirmed upstream reference wording is honest and reference-only.
+- Confirmed README does not claim VGGT or SparseConv3D success.
+- Added `docs/open-source-safety-gate-v1.7.md`.
+- Added `docs/open-source-blockers-v1.7.md`.
+- Added `docs/open-source-go-no-go-v1.7.md`.
+- Added `lanes/398R_open_source_safety_gate.md`.
+
+Result:
+- `PUBLIC_GO_AFTER_MANUAL_FIX`.
+
+Manual fixes before `PUBLIC_GO`:
+- Decide whether to include PR #2 community intake docs.
+- Confirm repository visibility manually.
+- Confirm release/tag/PyPI/Pages/split repo actions manually.
+- Rerun gates after any final merge or README change.
