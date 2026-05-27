@@ -6494,3 +6494,31 @@ Next:
 - Friends may submit Markdown-only idea or skill proposal PRs after the intake
   surface exists on the target branch.
 - Implementation must happen later in a separate maintainer/Codex branch.
+
+## Round 395R - Upstream Academic Publication Audit
+
+Status: completed.
+
+Summary:
+- Audited Pthahnix/Neocortica repositories, Pthahnix profile repo, and visible
+  yogsoth-ai repositories for concrete academic publication artifacts.
+- Treated README, SKILL.md, examples, showcase, SOP, workflow docs, source code,
+  MCP tool docs, and ordinary usage guides as non-publication materials.
+- Found no accepted paper PDF, manuscript, arXiv link, DOI record, BibTeX,
+  publication page, accepted paper page, proceedings link, thesis, technical
+  report, academic poster/slides, or author-provided academic output package.
+- Added `docs/upstream-academic-publication-audit.md`.
+- Added `docs/upstream-publication-search-log.md`.
+- Added `docs/upstream-publication-candidates.md`.
+- Added `docs/upstream-publication-no-go-report.md`.
+- Added `lanes/395R_upstream_academic_publication_audit.md`.
+
+Decision:
+- `NO_PUBLICATION_FOUND`.
+- Do not merge PR #1.
+- Do not generate showcase as a substitute for publication migration.
+- Do not modify README.
+
+Next:
+- Contact the upstream author for a concrete academic-output package if
+  publication migration remains desired.
