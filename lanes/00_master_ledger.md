@@ -6522,3 +6522,31 @@ Decision:
 Next:
 - Contact the upstream author for a concrete academic-output package if
   publication migration remains desired.
+
+## Round 396R - Reference Docs Only Decision
+
+Status: completed.
+
+Summary:
+- Read the upstream publication audit, publication no-go report, PR #1 no-go
+  report, and community intake gate report.
+- Decided upstream materials should be framed as Upstream Reference Docs /
+  Workflow Inspiration.
+- Decided not to use Academic Showcase Migration wording.
+- Confirmed papers should not be migrated because no publication package was
+  found.
+- Confirmed README should only use inspiration/reference wording and must not
+  claim academic outputs.
+- Confirmed PR #1 does not enter the mainline.
+- Added `docs/upstream-reference-docs-policy.md`.
+- Added `docs/no-upstream-publication-found-decision.md`.
+- Added `docs/reference-only-upstream-usage-plan.md`.
+- Added `docs/readme-upstream-reference-wording.md`.
+- Added `lanes/396R_reference_docs_only_decision.md`.
+
+Decision:
+- Upstream material can still be referenced as docs/tool/workflow inspiration.
+- If publication migration is desired, contact the upstream author for a
+  concrete publication package with exact source paths and commit.
+- Create a new tracking issue if the team wants durable follow-up for
+  reference-docs-only usage and blocked publication migration.
