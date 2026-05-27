@@ -6606,3 +6606,26 @@ Manual fixes before `PUBLIC_GO`:
 - Confirm repository visibility manually.
 - Confirm release/tag/PyPI/Pages/split repo actions manually.
 - Rerun gates after any final merge or README change.
+
+## Round 399R - GitHub Repo Rename Manual Pack
+
+Status: completed.
+
+Summary:
+- Prepared a manual pack for renaming the GitHub repository to TuringResearch.
+- Added repository public settings checklist.
+- Added final GitHub About section wording.
+- Added final GitHub topics guidance.
+- Added post-rename link check plan.
+- Added `docs/github-repo-rename-manual-pack.md`.
+- Added `docs/github-repo-public-settings-checklist.md`.
+- Added `docs/github-about-section-final.md`.
+- Added `docs/github-topics-final.md`.
+- Added `docs/post-rename-link-check-plan.md`.
+- Added `lanes/399R_github_repo_rename_manual_pack.md`.
+
+Boundary:
+- No GitHub rename executed.
+- No public/private visibility change.
+- No PR #1 merge.
+- No release/tag/PyPI/Pages/split repo action.
