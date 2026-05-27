@@ -6440,3 +6440,29 @@ Recommendation:
 - If a friend submits first, ask for one Markdown-only idea or skill proposal
   under `community/ideas/<github-username>/` or
   `community/skills/<github-username>/`.
+
+## Round 392R - PR #1 NO-GO and Closure Plan
+
+Status: completed.
+
+Summary:
+- Reviewed PR #1 diff from local git refs.
+- Confirmed PR #1 adds showcase examples, summaries, templates, and a README
+  change rather than concrete academic publication materials.
+- Confirmed `examples/original-author-showcase` is not accepted as academic
+  publication migration.
+- Added `docs/pr1-authorized-showcase-no-go.md`.
+- Added `docs/pr1-closure-plan.md`.
+- Added `docs/upstream-academic-output-definition.md`.
+- Added `lanes/392R_pr1_no_go_closure.md`.
+
+Decision:
+- `PR #1 is NO-GO.`
+- `Do not merge PR #1.`
+- Recommend closing PR #1 after a clear review comment.
+- Do not delete the PR branch unless the user explicitly approves branch
+  deletion.
+
+Future route:
+- Future migration must require concrete upstream files such as paper PDF,
+  arXiv link, BibTeX, DOI, publication page, or author-provided manuscript.
