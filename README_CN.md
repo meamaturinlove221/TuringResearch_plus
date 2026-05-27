@@ -63,22 +63,9 @@
 
 ## 架构
 
-```mermaid
-flowchart LR
-    A[Research Intent] --> B[Evidence Ledger]
-    B --> C[Literature / Method Cards]
-    C --> D[Gap & Hypothesis Tree]
-    D --> E[Experiment Route Compiler]
-    E --> F[Artifact Auditor]
-    F --> G[Advisor Pack Builder]
-    G --> H[Next Sprint]
-
-    I[Community Ideas] --> J[Skill / Feature Capsule Intake]
-    J --> D
-
-    K[Reference Projects] --> C
-    K --> E
-```
+<p align="center">
+  <img src="assets/turingresearch_architecture_overview.svg" alt="TuringResearch Architecture" width="100%">
+</p>
 
 这个仓库坚持三件事：
 
