@@ -96,29 +96,7 @@ README 里不能把 planned 写成已经验证的科研成果。
 
 ---
 
-## 仓库结构
 
-```text
-TuringResearch_plus/
-├─ assets/                     # 吉祥物和视觉资源
-├─ community/                  # idea / skill proposal 入口
-├─ docs/                       # 说明书、策略、release、路线文档
-├─ examples/                   # public-safe 示例和 fake-mode demos
-├─ lanes/                      # round 级别 ledger 和 decision log
-├─ src/                        # Python 包
-│  ├─ tuling_research/         # 历史实现包
-│  ├─ tuling_research_plus/    # 历史 plus 包
-│  ├─ turing_research/         # 公开拼写兼容别名
-│  └─ turing_research_plus/    # 公开拼写兼容别名
-├─ tests/                      # contract / workflow tests
-├─ pyproject.toml
-├─ README.md
-└─ README_CN.md
-```
-
-项目公开名称统一写 **TuringResearch**。旧的 `tuling_*` 路径继续保留，避免破坏已有代码；新的 `turing_*` 路径用于对外展示和新用户使用。
-
----
 
 ## 快速开始
 
@@ -143,7 +121,7 @@ python -m tuling_research.mcp_server --manifest
 tulingresearch-plus-mcp --health-check
 ```
 
-默认工作流应当不依赖 live API key。
+
 
 ---
 
@@ -154,30 +132,6 @@ tulingresearch-plus-mcp --health-check
 3. **Artifact review**：检查输出包和结论是否匹配。  
 4. **导师汇报生成**：整理范围、证据、失败原因和下一步。  
 5. **社区 idea intake**：允许朋友提交 idea / skill 文档，不改实现代码。  
-
----
-
-## 安全边界
-
-TuringResearch 不应该：
-
-- 伪造 benchmark；
-- 无来源地声称论文结论；
-- 默认调用 live API；
-- 泄露私有路径、token、`.env`、cookie 或日志；
-- 分发受限数据或模型资产；
-- 把参考项目的想法包装成未署名原创；
-- 把 planning-only 工作流写成 production-ready。
-
-宁可保守写 `planned`，也不要把没完成的东西包装成 `done`。
-
----
-
-## 参考项目
-
-部分公开项目给了 TuringResearch 工作流设计和文档结构上的启发。它们应该被理解为 **reference / inspiration**，不是被静默迁移的论文成果，也不是隐藏实现来源。
-
-如果一个模块受到上游项目影响，文档里应该诚实说明。
 
 ---
 
