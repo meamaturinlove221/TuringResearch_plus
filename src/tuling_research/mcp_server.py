@@ -1,4 +1,4 @@
-"""STDIO-safe MCP smoke server surface for TulingResearch Plus."""
+"""STDIO-safe MCP smoke server surface for TuringResearch Plus."""
 
 from __future__ import annotations
 
@@ -36,7 +36,7 @@ def core_health_check() -> dict[str, Any]:
 
     result = HealthCheckResult(
         status="ok",
-        package="tuling_research",
+        package="turing_research",
         version=__version__,
         tools=[tool.name for tool in list_core_tools()],
     )
@@ -123,7 +123,8 @@ def build_stdio_manifest() -> dict[str, Any]:
 
     return {
         "server_name": MCP_SERVER_NAME,
-        "package": "tuling_research",
+        "package": "turing_research",
+        "legacy_package": "tuling_research",
         "version": __version__,
         "transport": "stdio",
         "tools": list_registered_tools(),
@@ -137,7 +138,7 @@ def main(argv: list[str] | None = None) -> int:
     Operational logs go to stderr to preserve STDIO MCP safety.
     """
 
-    parser = argparse.ArgumentParser(description="TulingResearch Plus local MCP smoke server.")
+    parser = argparse.ArgumentParser(description="TuringResearch Plus local MCP smoke server.")
     parser.add_argument(
         "--manifest",
         action="store_true",
@@ -158,7 +159,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     sys.stderr.write(
-        "tulingresearch-plus local stdio smoke module imported; no network server started.\n"
+        "turingresearch-plus local stdio smoke module imported; no network server started.\n"
     )
     return 0
 
