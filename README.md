@@ -96,29 +96,7 @@ No section in this README should imply that a planned module has already produce
 
 ---
 
-## Repository layout
 
-```text
-TuringResearch_plus/
-├─ assets/                     # mascot and visual assets
-├─ community/                  # idea and skill proposal intake
-├─ docs/                       # manuals, policies, release docs, route reports
-├─ examples/                   # public-safe examples and fake-mode demos
-├─ lanes/                      # round-by-round ledgers and decision records
-├─ src/                        # Python packages
-│  ├─ tuling_research/         # historical implementation package
-│  ├─ tuling_research_plus/    # historical plus package
-│  ├─ turing_research/         # canonical public alias
-│  └─ turing_research_plus/    # canonical public alias
-├─ tests/                      # contract and workflow tests
-├─ pyproject.toml
-├─ README.md
-└─ README_CN.md
-```
-
-The public project spelling is **TuringResearch**. The older `tuling_*` module paths are kept for backward compatibility, while the `turing_*` aliases are available for new users.
-
----
 
 ## Quickstart
 
@@ -159,29 +137,6 @@ Typical workflows this project is designed to support:
 
 ---
 
-## Safety boundaries
-
-TuringResearch should not:
-
-- fake benchmark results;
-- claim paper conclusions without sources;
-- call live APIs by default;
-- publish private paths, tokens, `.env`, cookies, or logs;
-- redistribute restricted data or model assets;
-- present reference-project ideas as untracked original output;
-- mark planning-only workflows as production-ready.
-
-The project prefers a boring but honest `planned` label over an impressive but false `done` label.
-
----
-
-## Reference projects
-
-Some public projects inspired parts of this repository’s workflow design and documentation style. They should be treated as **reference / inspiration**, not as silently migrated academic publications or hidden implementation sources.
-
-When a reference project influences a module, the documentation should say so plainly and avoid overclaiming.
-
----
 
 ## Roadmap
 
