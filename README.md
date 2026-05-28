@@ -96,8 +96,6 @@ No section in this README should imply that a planned module has already produce
 
 ---
 
-
-
 ## Quickstart
 
 ```bash
@@ -121,7 +119,7 @@ python -m tuling_research.mcp_server --manifest
 tulingresearch-plus-mcp --health-check
 ```
 
-Default workflows should be safe to run without live API keys.
+Default tests do not require real API keys or live network access. Default workflows should be safe to run without live API keys.
 
 ---
 
@@ -136,7 +134,6 @@ Typical workflows this project is designed to support:
 5. **Community idea intake** — let trusted collaborators submit idea/skill documents without changing code.
 
 ---
-
 
 ## Roadmap
 
