@@ -21,6 +21,14 @@
   <a href="#安全边界">安全边界</a>
 </p>
 
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.11%2B-blue" />
+  <img alt="MCP first" src="https://img.shields.io/badge/MCP-first-7C3AED" />
+  <img alt="Local first" src="https://img.shields.io/badge/local--first-by%20default-16A34A" />
+  <img alt="Dry run" src="https://img.shields.io/badge/dry--run-safe%20by%20default-F59E0B" />
+  <img alt="Status" src="https://img.shields.io/badge/status-public%20RC-0EA5E9" />
+</p>
+
 ---
 
 ## 为什么需要 TuringResearch
@@ -91,21 +99,24 @@ README 里不能把 planned 写成已经验证的科研成果。
 ## 仓库结构
 
 ```text
-TuringResearch/
+TuringResearch_plus/
 ├─ assets/                     # 吉祥物和视觉资源
 ├─ community/                  # idea / skill proposal 入口
 ├─ docs/                       # 说明书、策略、release、路线文档
 ├─ examples/                   # public-safe 示例和 fake-mode demos
 ├─ lanes/                      # round 级别 ledger 和 decision log
 ├─ src/                        # Python 包
-│  ├─ turing_research/
-│  └─ turing_research_plus/
+│  ├─ tuling_research/         # 历史实现包
+│  ├─ tuling_research_plus/    # 历史 plus 包
+│  ├─ turing_research/         # 公开拼写兼容别名
+│  └─ turing_research_plus/    # 公开拼写兼容别名
 ├─ tests/                      # contract / workflow tests
+├─ pyproject.toml
 ├─ README.md
 └─ README_CN.md
 ```
 
-改名期间可能仍保留历史包名兼容。
+项目公开名称统一写 **TuringResearch**。旧的 `tuling_*` 路径继续保留，避免破坏已有代码；新的 `turing_*` 路径用于对外展示和新用户使用。
 
 ---
 
@@ -121,7 +132,15 @@ python -m pytest
 可选 MCP smoke check：
 
 ```bash
+python -m turing_research.mcp_server --manifest
+turingresearch-plus-mcp --health-check
+```
+
+改名过渡期仍保留旧命令：
+
+```bash
 python -m tuling_research.mcp_server --manifest
+tulingresearch-plus-mcp --health-check
 ```
 
 默认工作流应当不依赖 live API key。
