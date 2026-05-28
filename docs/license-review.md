@@ -1,4 +1,4 @@
-# TulingResearch Plus License Review
+# TuringResearch Plus License Review
 
 Date: 2026-05-20
 
@@ -11,7 +11,7 @@ This review covers the `v0.1.0` release candidate source tree, examples, contrac
 `pyproject.toml` currently declares:
 
 ```toml
-license = {{ text = "Proprietary" }}
+license = { text = "Proprietary" }
 ```
 
 ## Dependency Notes
@@ -30,7 +30,7 @@ Optional extras:
 
 ## Source Reuse Policy
 
-TulingResearch Plus may reference public project ideas at concept/workflow level, but it must not copy incompatible-license implementation code. References to Neocortica and Yogsoth AI are inspiration/reference context only.
+TuringResearch Plus may reference public project ideas at concept/workflow level, but it must not copy incompatible-license implementation code. References to Neocortica and Yogsoth AI are inspiration/reference context only.
 
 ## Release Decision
 
