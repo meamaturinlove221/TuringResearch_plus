@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-  <img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-blue" />
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.11%2B-blue" />
   <img alt="MCP first" src="https://img.shields.io/badge/MCP-first-7C3AED" />
   <img alt="Local first" src="https://img.shields.io/badge/local--first-by%20default-16A34A" />
   <img alt="Dry run" src="https://img.shields.io/badge/dry--run-safe%20by%20default-F59E0B" />
@@ -99,21 +99,24 @@ No section in this README should imply that a planned module has already produce
 ## Repository layout
 
 ```text
-TuringResearch/
+TuringResearch_plus/
 ├─ assets/                     # mascot and visual assets
 ├─ community/                  # idea and skill proposal intake
 ├─ docs/                       # manuals, policies, release docs, route reports
 ├─ examples/                   # public-safe examples and fake-mode demos
 ├─ lanes/                      # round-by-round ledgers and decision records
 ├─ src/                        # Python packages
-│  ├─ turing_research/
-│  └─ turing_research_plus/
+│  ├─ tuling_research/         # historical implementation package
+│  ├─ tuling_research_plus/    # historical plus package
+│  ├─ turing_research/         # canonical public alias
+│  └─ turing_research_plus/    # canonical public alias
 ├─ tests/                      # contract and workflow tests
+├─ pyproject.toml
 ├─ README.md
 └─ README_CN.md
 ```
 
-Historical package names may still exist for compatibility during the rename period.
+The public project spelling is **TuringResearch**. The older `tuling_*` module paths are kept for backward compatibility, while the `turing_*` aliases are available for new users.
 
 ---
 
@@ -126,10 +129,18 @@ python -m pip install -e .[dev]
 python -m pytest
 ```
 
-Optional local MCP smoke check:
+Optional local MCP smoke checks:
+
+```bash
+python -m turing_research.mcp_server --manifest
+turingresearch-plus-mcp --health-check
+```
+
+Legacy commands remain available during the rename period:
 
 ```bash
 python -m tuling_research.mcp_server --manifest
+tulingresearch-plus-mcp --health-check
 ```
 
 Default workflows should be safe to run without live API keys.
