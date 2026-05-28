@@ -36,7 +36,7 @@ def core_health_check() -> dict[str, Any]:
 
     result = HealthCheckResult(
         status="ok",
-        package="turing_research",
+        package="tuling_research",
         version=__version__,
         tools=[tool.name for tool in list_core_tools()],
     )
@@ -123,8 +123,7 @@ def build_stdio_manifest() -> dict[str, Any]:
 
     return {
         "server_name": MCP_SERVER_NAME,
-        "package": "turing_research",
-        "legacy_package": "tuling_research",
+        "package": "tuling_research",
         "version": __version__,
         "transport": "stdio",
         "tools": list_registered_tools(),
