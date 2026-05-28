@@ -3,14 +3,14 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tulingresearch-plus"
+name = "turingresearch-plus"
 version = "0.1.0"
-description = "TulingResearch Plus MCP-first research workflow engine skeleton."
+description = "TuringResearch Plus MCP-first research workflow engine skeleton."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "Proprietary" }
 authors = [
-  { name = "TulingResearch" }
+  { name = "TuringResearch" }
 ]
 dependencies = [
   "pydantic>=2.7",
@@ -19,6 +19,8 @@ dependencies = [
 ]
 
 [project.scripts]
+turingresearch-plus = "turing_research.mcp_server:main"
+turingresearch-plus-mcp = "turing_research.mcp_server:main"
 tulingresearch-plus = "tuling_research.mcp_server:main"
 tulingresearch-plus-mcp = "tuling_research.mcp_server:main"
 
@@ -49,7 +51,7 @@ package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["tuling_research*", "tuling_research_plus*"]
+include = ["tuling_research*", "tuling_research_plus*", "turing_research*", "turing_research_plus*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -76,7 +78,7 @@ ignore = []
 [tool.mypy]
 python_version = "3.11"
 mypy_path = "src"
-packages = ["tuling_research", "tuling_research_plus"]
+packages = ["tuling_research", "tuling_research_plus", "turing_research", "turing_research_plus"]
 plugins = ["pydantic.mypy"]
 strict = false
 warn_unreachable = true
